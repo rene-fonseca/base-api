@@ -63,111 +63,110 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/Object.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/collection/List.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;base/collection/Array.h&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;base/collection/Association.h&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;base/net/NetworkException.h&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;base/net/InetAddress.h&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;base/communication/EUI64.h&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_inet_interface.html">   34</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_inet_interface.html">InetInterface</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_string.html">String</a> name;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> address;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> netmask;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> broadcast;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> destination;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> metric = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="class_e_u_i64.html">EUI64</a> ethernet;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">enum</span> Flag {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    UP = 1,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    LOOPBACK = 2,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    POINT_TO_POINT = 4,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    BROADCAST = 8,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    MULTICAST = 16,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    DYNAMIC = 32</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  };</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_array.html">Array&lt;Association&lt;String, unsigned int&gt;</a> &gt; getInterfaceNames() noexcept;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_list.html">List&lt;InetInterface&gt;</a> getInterfaces();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIndexByName(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIndexByAddress(<span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; address);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> getName(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_inet_address.html">InetAddress</a> getAddress(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>() noexcept;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>(<span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; address) noexcept;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>(<span class="keyword">const</span> <a class="code" href="class_inet_interface.html">InetInterface</a>&amp; copy) noexcept;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIndex() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> index;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getName() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> name;</div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_inet_interface.html#ae06e69350549345ad5d68dfec5ab3df6">  130</a></span>&#160;  }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getFlags() const noexcept</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> flags;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="class_inet_interface.html#aa4b55eb603c893b50f72f57f3e704cc7">  138</a></span>&#160;  }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getAddress() const noexcept</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> address;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a68d026c0411dd7f207adf6a967f465ba">  146</a></span>&#160;  }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getNetmask() const noexcept</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> netmask;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a7e05b96f5031c647149ec167d30f46c8">  154</a></span>&#160;  }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getBroadcast() const noexcept</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> broadcast;</div>
-<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a58f7831308eea130e3bf366289c72ac2">  162</a></span>&#160;  }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getDestination() const noexcept</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> destination;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a13ae01c762aba465376824beccff74af">  170</a></span>&#160;  }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_e_u_i64.html">EUI64</a>&amp; getEthernetAddress() const noexcept</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> ethernet;</div>
-<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a1cd45662e78a01118cd9b5e47142c519">  178</a></span>&#160;  }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getMetric() const noexcept</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> metric;</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="class_inet_interface.html#aba060b92c976c4154b9b4648eadf066a">  186</a></span>&#160;  }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;};</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;base/collection/ArrayMap.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;base/net/NetworkException.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;base/net/InetAddress.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;base/communication/EUI64.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_inet_interface.html">   33</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_inet_interface.html">InetInterface</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_string.html">String</a> name;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> address;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> netmask;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> broadcast;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="class_inet_address.html">InetAddress</a> destination;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> metric = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_e_u_i64.html">EUI64</a> ethernet;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">enum</span> Flag {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    UP = 1,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    LOOPBACK = 2,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    POINT_TO_POINT = 4,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    BROADCAST = 8,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    MULTICAST = 16,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    DYNAMIC = 32</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_array_map.html">ArrayMap&lt;String, unsigned int&gt;</a> getInterfaceNames();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_list.html">List&lt;InetInterface&gt;</a> getInterfaces();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIndexByName(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIndexByAddress(<span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; address);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> getName(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_inet_address.html">InetAddress</a> getAddress(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>() noexcept;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>(<span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; address) noexcept;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="class_inet_interface.html">InetInterface</a>(<span class="keyword">const</span> <a class="code" href="class_inet_interface.html">InetInterface</a>&amp; copy) noexcept;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getIndex() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> index;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getName() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">return</span> name;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_inet_interface.html#ae06e69350549345ad5d68dfec5ab3df6">  129</a></span>&#160;  }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getFlags() const noexcept</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> flags;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_inet_interface.html#aa4b55eb603c893b50f72f57f3e704cc7">  137</a></span>&#160;  }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getAddress() const noexcept</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> address;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a68d026c0411dd7f207adf6a967f465ba">  145</a></span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getNetmask() const noexcept</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> netmask;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a7e05b96f5031c647149ec167d30f46c8">  153</a></span>&#160;  }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getBroadcast() const noexcept</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> broadcast;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a58f7831308eea130e3bf366289c72ac2">  161</a></span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; getDestination() const noexcept</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">return</span> destination;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a13ae01c762aba465376824beccff74af">  169</a></span>&#160;  }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_e_u_i64.html">EUI64</a>&amp; getEthernetAddress() const noexcept</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> ethernet;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_inet_interface.html#a1cd45662e78a01118cd9b5e47142c519">  177</a></span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getMetric() const noexcept</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">return</span> metric;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_inet_interface.html#aba060b92c976c4154b9b4648eadf066a">  185</a></span>&#160;  }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;};</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
-<div class="ttc" id="aclass_inet_interface_html"><div class="ttname"><a href="class_inet_interface.html">InetInterface</a></div><div class="ttdoc">Internet Protocol network interface.</div><div class="ttdef"><b>Definition:</b> InetInterface.h:34</div></div>
+<div class="ttc" id="aclass_array_map_html"><div class="ttname"><a href="class_array_map.html">ArrayMap</a></div><div class="ttdoc">Association of value with value.</div><div class="ttdef"><b>Definition:</b> ArrayMap.h:33</div></div>
+<div class="ttc" id="aclass_inet_interface_html"><div class="ttname"><a href="class_inet_interface.html">InetInterface</a></div><div class="ttdoc">Internet Protocol network interface.</div><div class="ttdef"><b>Definition:</b> InetInterface.h:33</div></div>
 <div class="ttc" id="aclass_e_u_i64_html"><div class="ttname"><a href="class_e_u_i64.html">EUI64</a></div><div class="ttdoc">IEEE EUI-64 identifier.</div><div class="ttdef"><b>Definition:</b> EUI64.h:33</div></div>
 <div class="ttc" id="aclass_list_html"><div class="ttname"><a href="class_list.html">List</a></div><div class="ttdoc">List collection.</div><div class="ttdef"><b>Definition:</b> List.h:45</div></div>
-<div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array</a></div><div class="ttdoc">Array collection.</div><div class="ttdef"><b>Definition:</b> Array.h:40</div></div>
 <div class="ttc" id="aclass_inet_address_html"><div class="ttname"><a href="class_inet_address.html">InetAddress</a></div><div class="ttdoc">Internet Protocol address.</div><div class="ttdef"><b>Definition:</b> InetAddress.h:38</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

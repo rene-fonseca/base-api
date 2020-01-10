@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    : value(_value)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (!value) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      _throw <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_reference_counted_object_1_1_reference_impl.html">ReferenceCountedObject::ReferenceImpl</a>(*value).<a class="code" href="class_reference_counted_object_1_1_reference_impl.html#a6055c2676280a1944e596fd2eecde3d2">addReference</a>();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
@@ -112,7 +112,7 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_protected_reference.html#a33beb7df42969eac18e83ca368946905">  100</a></span>&#160;  {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    POLY* result = <span class="keyword">dynamic_cast&lt;</span>POLY*<span class="keyword">&gt;</span>(value);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (!result) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      _throw <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
@@ -122,7 +122,7 @@ $(function() {
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">const</span> POLY* result = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>POLY*<span class="keyword">&gt;</span>(value);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> (!result) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      _throw <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>

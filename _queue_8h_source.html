@@ -139,7 +139,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="class_queue.html#afdc2524810d351828d4982d410c813a2">Value</a> <a class="code" href="class_queue_1_1_queue_impl.html#a1f8444e6bac5598540d7fdfe8d76ac7b">pop</a>()</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">if</span> (!size) {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_invalid_node.html">InvalidNode</a>(<span class="stringliteral">&quot;Queue is empty.&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        _throw <a class="code" href="class_invalid_node.html">InvalidNode</a>(<span class="stringliteral">&quot;Queue is empty.&quot;</span>, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <a class="code" href="class_single_linked_node.html">Node</a>* temp = first;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      first = first-&gt;<a class="code" href="class_single_linked_node.html#ab0128b41cffed72e0c723f33922861ff">getNext</a>();</div>

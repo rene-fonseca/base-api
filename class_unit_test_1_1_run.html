@@ -56,10 +56,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afc2dd093181e84e7ce95b7f9f143c145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_1_1_run.html#afc2dd093181e84e7ce95b7f9f143c145">onException</a> (<a class="el" href="class_exception.html">Exception</a> *exception)</td></tr>
-<tr class="separator:afc2dd093181e84e7ce95b7f9f143c145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54bb8cffffa4564156fb6b600fde0a39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_1_1_run.html#a54bb8cffffa4564156fb6b600fde0a39">onException</a> (const <a class="el" href="class_exception.html">Exception</a> *exception)</td></tr>
+<tr class="separator:a54bb8cffffa4564156fb6b600fde0a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8121f36161950522eebd65c19431870f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_1_1_run.html#a8121f36161950522eebd65c19431870f">onPrint</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
 <tr class="separator:a8121f36161950522eebd65c19431870f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56f0da30be31bd5e9d5cbdaf35a8fde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_1_1_run.html#ad56f0da30be31bd5e9d5cbdaf35a8fde">onPrintIssue</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
+<tr class="separator:ad56f0da30be31bd5e9d5cbdaf35a8fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9d5f6a313d4428ab699c2f2ac4a6252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_1_1_run.html#ac9d5f6a313d4428ab699c2f2ac4a6252">onPassed</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
 <tr class="separator:ac9d5f6a313d4428ab699c2f2ac4a6252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd3909869e9915f713f9ec6e5d4ee5fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_1_1_run.html#acd3909869e9915f713f9ec6e5d4ee5fe">onFailed</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
@@ -191,8 +193,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>exceptions</b
 
 </div>
 </div>
-<a id="afc2dd093181e84e7ce95b7f9f143c145"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc2dd093181e84e7ce95b7f9f143c145">&#9670;&nbsp;</a></span>onException()</h2>
+<a id="a54bb8cffffa4564156fb6b600fde0a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54bb8cffffa4564156fb6b600fde0a39">&#9670;&nbsp;</a></span>onException()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +202,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>exceptions</b
         <tr>
           <td class="memname">void UnitTest::Run::onException </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_exception.html">Exception</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_exception.html">Exception</a> *&#160;</td>
           <td class="paramname"><em>exception</em></td><td>)</td>
           <td></td>
         </tr>
@@ -314,6 +316,35 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>exceptions</b
       <table class="memname">
         <tr>
           <td class="memname">void UnitTest::Run::onPrint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>what</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>line</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Called on explicit print request. </p>
+
+</div>
+</div>
+<a id="ad56f0da30be31bd5e9d5cbdaf35a8fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56f0da30be31bd5e9d5cbdaf35a8fde">&#9670;&nbsp;</a></span>onPrintIssue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitTest::Run::onPrintIssue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>what</em>, </td>

@@ -100,8 +100,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a46bd7ab603780d903f2f80f7b5f9b0c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_association.html">Association</a>&lt; <a class="el" href="class_string.html">String</a>, unsigned int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_interface.html#a46bd7ab603780d903f2f80f7b5f9b0c9">getInterfaceNames</a> () noexcept</td></tr>
-<tr class="separator:a46bd7ab603780d903f2f80f7b5f9b0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41abd4fcd1a12c2f87a79ba0662f206f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_array_map.html">ArrayMap</a>&lt; <a class="el" href="class_string.html">String</a>, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_interface.html#a41abd4fcd1a12c2f87a79ba0662f206f">getInterfaceNames</a> ()</td></tr>
+<tr class="separator:a41abd4fcd1a12c2f87a79ba0662f206f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f95e0a1d9e04bdbad8f9613e7cbb378"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_list.html">List</a>&lt; <a class="el" href="class_inet_interface.html">InetInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_interface.html#a7f95e0a1d9e04bdbad8f9613e7cbb378">getInterfaces</a> ()</td></tr>
 <tr class="separator:a7f95e0a1d9e04bdbad8f9613e7cbb378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83ea5667c38be712dc229a8e5b8bd301"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_interface.html#a83ea5667c38be712dc229a8e5b8bd301">getIndexByName</a> (const <a class="el" href="class_string.html">String</a> &amp;name)</td></tr>
@@ -117,6 +117,8 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Internet Protocol network interface. </p>
 <p>This class represents an Internet Protocol network interface.</p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2server_8cpp-example.html#_a8">testsuite/server.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9ec61d2bc487ebb59ed356564bfb892c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ec61d2bc487ebb59ed356564bfb892c">&#9670;&nbsp;</a></span>InetInterface() <span class="overload">[1/4]</span></h2>
@@ -398,6 +400,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the index of the network interface. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2server_8cpp-example.html#a10">testsuite/server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -455,8 +459,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a46bd7ab603780d903f2f80f7b5f9b0c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46bd7ab603780d903f2f80f7b5f9b0c9">&#9670;&nbsp;</a></span>getInterfaceNames()</h2>
+<a id="a41abd4fcd1a12c2f87a79ba0662f206f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41abd4fcd1a12c2f87a79ba0662f206f">&#9670;&nbsp;</a></span>getInterfaceNames()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -465,7 +469,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_array.html">Array</a>&lt;<a class="el" href="class_association.html">Association</a>&lt;<a class="el" href="class_string.html">String</a>, unsigned int&gt; &gt; InetInterface::getInterfaceNames </td>
+          <td class="memname">static <a class="el" href="class_array_map.html">ArrayMap</a>&lt;<a class="el" href="class_string.html">String</a>, unsigned int&gt; InetInterface::getInterfaceNames </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -473,7 +477,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -504,6 +508,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns all of the Internet Protocol network interfaces of the host. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2server_8cpp-example.html#a4">testsuite/server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -583,6 +589,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the name of the specified interface. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2server_8cpp-example.html#a11">testsuite/server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>

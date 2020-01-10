@@ -483,7 +483,7 @@ $(function() {
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        }</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;      }</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      <span class="keywordflow">if</span> (!child) {</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        _throw <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      }</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      <span class="keywordflow">return</span> *child-&gt;<a class="code" href="class_hash_table_1_1_node.html#ab7d1fb381824f529fa380b4143f4a736">getValue</a>();</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    }</div>
@@ -498,7 +498,7 @@ $(function() {
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        child = child-&gt;getNext();</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;      }</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;      <span class="keywordflow">if</span> (!child) {</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        _throw <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00565"></a><span class="lineno"><a class="line" href="class_hash_table_1_1_hash_table_impl.html#aa4012d5ce612c67d6d7ed3fb8e3ef265">  565</a></span>&#160;      }</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;      <span class="keywordflow">return</span> child-&gt;<a class="code" href="class_node.html#a3f4d4035a7fc7cd5b2c9af35ee771264">getValue</a>();</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    }</div>
@@ -559,7 +559,7 @@ $(function() {
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;      <a class="code" href="class_node.html">Node</a>** bucket = <a class="code" href="class_hash_table_1_1_hash_table_impl.html#aa133e36572beeea8be282eb5b6e1d381">getBuckets</a>() + (hash &amp; mask);</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;      <a class="code" href="class_node.html">Node</a>* child = *bucket;</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;      <span class="keywordflow">if</span> (!child) {</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        _throw <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;      }</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;      <span class="keywordflow">if</span> ((child-&gt;getHash() == hash) &amp;&amp; (child-&gt;getKey() == key)) {</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        *bucket = child-&gt;getNext(); <span class="comment">// unlink first node (next could be 0)</span></div>
@@ -571,7 +571,7 @@ $(function() {
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;          child = child-&gt;getNext();</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        }</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="keywordflow">if</span> (!child) {</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;          _throw <a class="code" href="class_invalid_key.html">InvalidKey</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        }</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        parent-&gt;<a class="code" href="class_hash_table_1_1_node.html#a586683e35037373e8258a52669042a5b">setNext</a>(child-&gt;getNext()); <span class="comment">// unlink node from linked list</span></div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;      }</div>
@@ -629,7 +629,7 @@ $(function() {
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <a class="code" href="class_pointer.html">Pointer</a> <a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#aab98be7afca311b368419a9476a7bd2a">next</a>()</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    {</div>
 <div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="class_hash_table_1_1_hash_table_enumerator.html#a8a0915a852b99e9719575c36bc756375">  727</a></span>&#160;      <span class="keywordflow">if</span> (!numberOfElements) {</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_end_of_enumeration.html">EndOfEnumeration</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        _throw <a class="code" href="class_end_of_enumeration.html">EndOfEnumeration</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;      }</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;      <span class="keywordflow">while</span> (!node) {</div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        ++bucket;</div>
@@ -676,7 +676,7 @@ $(function() {
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <a class="code" href="class_pointer.html">Pointer</a> <a class="code" href="class_hash_table_1_1_hash_table_value_enumerator.html#af1c8a3a24ca077f7ff2e792fc98ab393">next</a>()</div>
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    {</div>
 <div class="line"><a name="l00797"></a><span class="lineno"><a class="line" href="class_hash_table_1_1_hash_table_value_enumerator.html#a76710523cd87598d44ae4a76c1e5952a">  797</a></span>&#160;      <span class="keywordflow">if</span> (!numberOfElements) {</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_end_of_enumeration.html">EndOfEnumeration</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        _throw <a class="code" href="class_end_of_enumeration.html">EndOfEnumeration</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;      }</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;      <span class="keywordflow">while</span> (!node) {</div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        ++bucket;</div>
@@ -848,25 +848,37 @@ $(function() {
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;  {</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hash_table.html#a983089b255fe498148f31eacad5433c8">impl</a>-&gt;getSize() != 0;</div>
 <div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;  }</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;};</div>
-<div class="line"><a name="l01061"></a><span class="lineno"><a class="line" href="class_hash_table.html#a507907cd75c2e8aeb3bb738bda5cbc97"> 1061</a></span>&#160; </div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> KEY, <span class="keyword">class</span> VALUE&gt;</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(</div>
-<div class="line"><a name="l01067"></a><span class="lineno"><a class="line" href="class_hash_table.html#a21124abc33c37fef05b2d8e63811794c"> 1067</a></span>&#160;  <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream,</div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_hash_table.html">HashTable&lt;KEY, VALUE&gt;</a>&amp; value) {</div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;  <span class="keyword">typename</span> <a class="code" href="class_hash_table_1_1_hash_table_enumerator.html">HashTable&lt;KEY, VALUE&gt;::ReadEnumerator</a> enu = value.<a class="code" href="class_hash_table.html#abf2b001a375c38072953a77a4f1ad206">getReadEnumerator</a>();</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;{&#39;</span>;</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;  <span class="keywordflow">while</span> (enu.<a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#a8a0915a852b99e9719575c36bc756375">hasNext</a>()) {</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    stream &lt;&lt; *enu.<a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#aab98be7afca311b368419a9476a7bd2a">next</a>();</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keywordflow">if</span> (enu.<a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#a8a0915a852b99e9719575c36bc756375">hasNext</a>()) {</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;      stream &lt;&lt; <span class="charliteral">&#39;;&#39;</span>;</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    }</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;  }</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;}&#39;</span>;</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;  <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;}</div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160; </div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;  </div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_hash_table.html">HashTable</a>&amp; <a class="code" href="class_hash_table.html#a6d584f8f3ed32af45963ba5ca6fd2f60">operator&lt;&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_hash_table.html#ae3d9810ec31fd839ed99e0c343be71c9">HashTableAssociation</a>&amp; value)</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;  {</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    <a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(value);</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;  }</div>
+<div class="line"><a name="l01067"></a><span class="lineno"><a class="line" href="class_hash_table.html#a21124abc33c37fef05b2d8e63811794c"> 1067</a></span>&#160;  </div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_hash_table.html">HashTable</a>&amp; <a class="code" href="class_hash_table.html#a6d584f8f3ed32af45963ba5ca6fd2f60">operator&lt;&lt;</a>(<a class="code" href="class_association.html">HashTableAssociation</a>&amp;&amp; value)</div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;  {</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    <a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(moveObject(value));</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l01073"></a><span class="lineno"><a class="line" href="class_hash_table.html#a6d584f8f3ed32af45963ba5ca6fd2f60"> 1073</a></span>&#160;  }</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;};</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160; </div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> KEY, <span class="keyword">class</span> VALUE&gt;</div>
+<div class="line"><a name="l01080"></a><span class="lineno"><a class="line" href="class_hash_table.html#aaf11dfdfaa342a9761e9e77df89016c9"> 1080</a></span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_hash_table.html#aaf11dfdfaa342a9761e9e77df89016c9">operator&lt;&lt;</a>(</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;  <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream,</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_hash_table.html">HashTable&lt;KEY, VALUE&gt;</a>&amp; value) {</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;  <span class="keyword">typename</span> <a class="code" href="class_hash_table_1_1_hash_table_enumerator.html">HashTable&lt;KEY, VALUE&gt;::ReadEnumerator</a> enu = value.<a class="code" href="class_hash_table.html#abf2b001a375c38072953a77a4f1ad206">getReadEnumerator</a>();</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;{&#39;</span>;</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;  <span class="keywordflow">while</span> (enu.<a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#a8a0915a852b99e9719575c36bc756375">hasNext</a>()) {</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    stream &lt;&lt; *enu.<a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#aab98be7afca311b368419a9476a7bd2a">next</a>();</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    <span class="keywordflow">if</span> (enu.<a class="code" href="class_hash_table_1_1_hash_table_enumerator.html#a8a0915a852b99e9719575c36bc756375">hasNext</a>()) {</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;      stream &lt;&lt; <span class="charliteral">&#39;;&#39;</span>;</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    }</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;  }</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;  <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;}</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160; </div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_hash_table_1_1_hash_table_value_enumerator_html_af1c8a3a24ca077f7ff2e792fc98ab393"><div class="ttname"><a href="class_hash_table_1_1_hash_table_value_enumerator.html#af1c8a3a24ca077f7ff2e792fc98ab393">HashTable::HashTableValueEnumerator::next</a></div><div class="ttdeci">Pointer next()</div><div class="ttdef"><b>Definition:</b> HashTable.h:806</div></div>
 <div class="ttc" id="aclass_hash_table_html_a9168dac440b79ef7050bba47a4337154"><div class="ttname"><a href="class_hash_table.html#a9168dac440b79ef7050bba47a4337154">HashTable::copyOnWrite</a></div><div class="ttdeci">void copyOnWrite()</div><div class="ttdef"><b>Definition:</b> HashTable.h:843</div></div>
@@ -920,8 +932,9 @@ $(function() {
 <div class="ttc" id="aclass_hash_table_1_1_node_html_a586683e35037373e8258a52669042a5b"><div class="ttname"><a href="class_hash_table_1_1_node.html#a586683e35037373e8258a52669042a5b">HashTable::Node::setNext</a></div><div class="ttdeci">void setNext(Node *node) noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:193</div></div>
 <div class="ttc" id="aclass_hash_table_html_a29700754ae124a0c474eab2cbb5527b9"><div class="ttname"><a href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">HashTable::hasKey</a></div><div class="ttdeci">bool hasKey(const Key &amp;key) const noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:922</div></div>
 <div class="ttc" id="aclass_element_html"><div class="ttname"><a href="class_element.html">Element</a></div><div class="ttdoc">DOM element node.</div><div class="ttdef"><b>Definition:</b> Element.h:31</div></div>
-<div class="ttc" id="aclass_math_html_a496749d8bb6b41bee3f20254f21dc76b"><div class="ttname"><a href="class_math.html#a496749d8bb6b41bee3f20254f21dc76b">Math::iLog2</a></div><div class="ttdeci">static unsigned int iLog2(unsigned int value) noexcept</div><div class="ttdef"><b>Definition:</b> Math.h:1887</div></div>
+<div class="ttc" id="aclass_math_html_a496749d8bb6b41bee3f20254f21dc76b"><div class="ttname"><a href="class_math.html#a496749d8bb6b41bee3f20254f21dc76b">Math::iLog2</a></div><div class="ttdeci">static unsigned int iLog2(unsigned int value) noexcept</div><div class="ttdef"><b>Definition:</b> Math.h:1888</div></div>
 <div class="ttc" id="aclass_enumerator_html_a530c1a07ef694d5cc2eb69e3cf484f81"><div class="ttname"><a href="class_enumerator.html#a530c1a07ef694d5cc2eb69e3cf484f81">Enumerator::Value</a></div><div class="ttdeci">TRAITS::Value Value</div><div class="ttdef"><b>Definition:</b> Enumeration.h:119</div></div>
+<div class="ttc" id="aclass_hash_table_html_a6d584f8f3ed32af45963ba5ca6fd2f60"><div class="ttname"><a href="class_hash_table.html#a6d584f8f3ed32af45963ba5ca6fd2f60">HashTable::operator&lt;&lt;</a></div><div class="ttdeci">HashTable &amp; operator&lt;&lt;(const HashTableAssociation &amp;value)</div><div class="ttdef"><b>Definition:</b> HashTable.h:1073</div></div>
 <div class="ttc" id="aclass_hash_table_1_1_node_html_a8e9239008047c35e03ebe98179c8e694"><div class="ttname"><a href="class_hash_table_1_1_node.html#a8e9239008047c35e03ebe98179c8e694">HashTable::Node::getKeyValue</a></div><div class="ttdeci">const Association&lt; Key, Value &gt; &amp; getKeyValue() const noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:145</div></div>
 <div class="ttc" id="aclass_hash_table_1_1_hash_table_enumerator_html_a8a0915a852b99e9719575c36bc756375"><div class="ttname"><a href="class_hash_table_1_1_hash_table_enumerator.html#a8a0915a852b99e9719575c36bc756375">HashTable::HashTableEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:727</div></div>
 <div class="ttc" id="aclass_allocator_html_abbfd194591389976896abc85ce1f1872"><div class="ttname"><a href="class_allocator.html#abbfd194591389976896abc85ce1f1872">Allocator::getElements</a></div><div class="ttdeci">TYPE * getElements() noexcept</div><div class="ttdef"><b>Definition:</b> Allocator.h:427</div></div>
@@ -939,7 +952,7 @@ $(function() {
 <div class="ttc" id="aclass_hash_table_html_a983feb9ae0f53eff64478c1d31ff3e45"><div class="ttname"><a href="class_hash_table.html#a983feb9ae0f53eff64478c1d31ff3e45">HashTable::ValueEnumerator</a></div><div class="ttdeci">HashTableValueEnumerator&lt; EnumeratorTraits&lt; Value &gt; &gt; ValueEnumerator</div><div class="ttdef"><b>Definition:</b> HashTable.h:831</div></div>
 <div class="ttc" id="aclass_hash_table_1_1_hash_table_impl_html_a7c6006f411dc14d845cc02a15204c013"><div class="ttname"><a href="class_hash_table_1_1_hash_table_impl.html#a7c6006f411dc14d845cc02a15204c013">HashTable::HashTableImpl::add</a></div><div class="ttdeci">void add(const Key &amp;key, const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashTable.h:583</div></div>
 <div class="ttc" id="aclass_hash_table_1_1_node_html_ab7d1fb381824f529fa380b4143f4a736"><div class="ttname"><a href="class_hash_table_1_1_node.html#ab7d1fb381824f529fa380b4143f4a736">HashTable::Node::getValue</a></div><div class="ttdeci">Value &amp; getValue() noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:161</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:899</div></div>
+<div class="ttc" id="aclass_hash_table_html_aaf11dfdfaa342a9761e9e77df89016c9"><div class="ttname"><a href="class_hash_table.html#aaf11dfdfaa342a9761e9e77df89016c9">HashTable::operator&lt;&lt;</a></div><div class="ttdeci">HashTable &amp; operator&lt;&lt;(HashTableAssociation &amp;&amp;value)</div><div class="ttdef"><b>Definition:</b> HashTable.h:1080</div></div>
 <div class="ttc" id="aclass_hash_table_html_ad15272399a2e9802e4a774c3c952432f"><div class="ttname"><a href="class_hash_table.html#ad15272399a2e9802e4a774c3c952432f">HashTable::getValue</a></div><div class="ttdeci">const Value &amp; getValue(const Key &amp;key) const</div><div class="ttdef"><b>Definition:</b> HashTable.h:957</div></div>
 <div class="ttc" id="aclass_hash_table_1_1_node_html_a4d701de2a7455ad211d67eb980c1b3bc"><div class="ttname"><a href="class_hash_table_1_1_node.html#a4d701de2a7455ad211d67eb980c1b3bc">HashTable::Node::getHash</a></div><div class="ttdeci">unsigned long getHash() const noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:137</div></div>
 <div class="ttc" id="aclass_hash_table_1_1_hash_table_enumerator_html_aab98be7afca311b368419a9476a7bd2a"><div class="ttname"><a href="class_hash_table_1_1_hash_table_enumerator.html#aab98be7afca311b368419a9476a7bd2a">HashTable::HashTableEnumerator::next</a></div><div class="ttdeci">Pointer next()</div><div class="ttdef"><b>Definition:</b> HashTable.h:736</div></div>

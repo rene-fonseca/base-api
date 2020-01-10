@@ -145,6 +145,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> () noexcept<
 <tr class="separator:a507907cd75c2e8aeb3bb738bda5cbc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21124abc33c37fef05b2d8e63811794c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a21124abc33c37fef05b2d8e63811794c">operator bool</a> () const noexcept</td></tr>
 <tr class="separator:a21124abc33c37fef05b2d8e63811794c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d584f8f3ed32af45963ba5ca6fd2f60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hash_table.html">HashTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a6d584f8f3ed32af45963ba5ca6fd2f60">operator&lt;&lt;</a> (const <a class="el" href="class_hash_table.html#ae3d9810ec31fd839ed99e0c343be71c9">HashTableAssociation</a> &amp;value)</td></tr>
+<tr class="separator:a6d584f8f3ed32af45963ba5ca6fd2f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf11dfdfaa342a9761e9e77df89016c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hash_table.html">HashTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#aaf11dfdfaa342a9761e9e77df89016c9">operator&lt;&lt;</a> (<a class="el" href="class_hash_table.html#ae3d9810ec31fd839ed99e0c343be71c9">HashTableAssociation</a> &amp;&amp;value)</td></tr>
+<tr class="separator:aaf11dfdfaa342a9761e9e77df89016c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -167,6 +171,8 @@ class HashTable&lt; KEY, VALUE &gt;</h3>
 <p><a class="el" href="class_hash.html" title="Hash function object.">Hash</a> table collection. </p>
 <p>A hash table implementation.</p>
 <dl class="section version"><dt>Version</dt><dd>1.2 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#_a66">testsuite/eval.cpp</a>, <a class="el" href="testsuite_2_hash_table_8cpp-example.html#_a1">testsuite/HashTable.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#_a18">testsuite/ls.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae3d9810ec31fd839ed99e0c343be71c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3d9810ec31fd839ed99e0c343be71c9">&#9670;&nbsp;</a></span>HashTableAssociation</h2>
@@ -890,6 +896,64 @@ template&lt;class KEY , class VALUE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns true is non-empty. </p>
+
+</div>
+</div>
+<a id="a6d584f8f3ed32af45963ba5ca6fd2f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d584f8f3ed32af45963ba5ca6fd2f60">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class KEY , class VALUE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hash_table.html">HashTable</a>&amp; <a class="el" href="class_hash_table.html">HashTable</a>&lt; KEY, VALUE &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_hash_table.html#ae3d9810ec31fd839ed99e0c343be71c9">HashTableAssociation</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds value. </p>
+
+</div>
+</div>
+<a id="aaf11dfdfaa342a9761e9e77df89016c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf11dfdfaa342a9761e9e77df89016c9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class KEY , class VALUE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_hash_table.html">HashTable</a>&amp; <a class="el" href="class_hash_table.html">HashTable</a>&lt; KEY, VALUE &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_hash_table.html#ae3d9810ec31fd839ed99e0c343be71c9">HashTableAssociation</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds value. </p>
 
 </div>
 </div>

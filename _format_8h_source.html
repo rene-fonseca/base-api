@@ -137,7 +137,7 @@ $(function() {
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>&amp; getArg(MemorySize i)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordflow">if</span> (!INLINE_ASSERT(i &lt; numberOfArgs)) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_out_of_range.html">OutOfRange</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        _throw <a class="code" href="class_out_of_range.html">OutOfRange</a>();</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">return</span> args[i];</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
@@ -160,7 +160,7 @@ $(function() {
 <div class="ttc" id="aclass_format_1_1_subst_html"><div class="ttname"><a href="class_format_1_1_subst.html">Format::Subst</a></div><div class="ttdef"><b>Definition:</b> Format.h:103</div></div>
 <div class="ttc" id="aclass_memory_span_html"><div class="ttname"><a href="class_memory_span.html">MemorySpan</a></div><div class="ttdef"><b>Definition:</b> Primitives.h:817</div></div>
 <div class="ttc" id="aclass_any_value_html"><div class="ttname"><a href="class_any_value.html">AnyValue</a></div><div class="ttdoc">Any value.</div><div class="ttdef"><b>Definition:</b> AnyValue.h:34</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:899</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:932</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

@@ -86,25 +86,32 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    INVALID_ACCESS</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  };</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>() noexcept {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(type) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message, type) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_d_o_m_exception.html#a320a456803bc066e3eb98c3bccf0f1b7">   78</a></span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>() noexcept</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_d_o_m_exception.html#a8ab7c342cd1e741a9f94a224e325cc75">   64</a></span>&#160;  </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html">DOMException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_d_o_m_exception.html#a31604327d8b588f153063d5a9ca2d1df">   71</a></span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(type)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_d_o_m_exception.html#a320a456803bc066e3eb98c3bccf0f1b7">   81</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_exception.html#a320a456803bc066e3eb98c3bccf0f1b7">DOMException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message, type)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_exception_html_ad133b1e91d7cbd56143bcfc1e8759c50"><div class="ttname"><a href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception::Exception</a></div><div class="ttdeci">Exception() noexcept</div></div>
+<div class="ttc" id="aclass_d_o_m_exception_html_a320a456803bc066e3eb98c3bccf0f1b7"><div class="ttname"><a href="class_d_o_m_exception.html#a320a456803bc066e3eb98c3bccf0f1b7">DOMException::DOMException</a></div><div class="ttdeci">DOMException(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> DOMException.h:81</div></div>
 <div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
 <div class="ttc" id="aclass_d_o_m_exception_html_a2bbe13b78de9fcf90f7426795f6737b6"><div class="ttname"><a href="class_d_o_m_exception.html#a2bbe13b78de9fcf90f7426795f6737b6">DOMException::Cause</a></div><div class="ttdeci">Cause</div><div class="ttdef"><b>Definition:</b> DOMException.h:43</div></div>
 <div class="ttc" id="aclass_d_o_m_exception_html"><div class="ttname"><a href="class_d_o_m_exception.html">DOMException</a></div><div class="ttdoc">DOM exception.</div><div class="ttdef"><b>Definition:</b> DOMException.h:28</div></div>

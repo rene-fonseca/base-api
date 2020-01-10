@@ -120,13 +120,13 @@ $(function() {
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (getDefine_COM_AZURE_DEV__BASE__DEBUG() != define_COM_AZURE_DEV__BASE__DEBUG) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;_COM_AZURE_DEV__BASE__DEBUG symbol mismatch detected for Base Framework.&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      _throw <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;_COM_AZURE_DEV__BASE__DEBUG symbol mismatch detected for Base Framework.&quot;</span>);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">if</span> (getDefine_DEBUG() != define_DEBUG) {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;DEBUG, _DEBUG, or _COM_AZURE_DEV__BASE__DEBUG symbol mismatch detected for Base Framework.&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      _throw <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;DEBUG, _DEBUG, or _COM_AZURE_DEV__BASE__DEBUG symbol mismatch detected for Base Framework.&quot;</span>);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (getDynamicObjectSize() != <span class="keyword">sizeof</span>(<a class="code" href="class_dynamic_object.html">DynamicObject</a>)) {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;DynamicObject mismatch detected for Base Framework.&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      _throw <a class="code" href="class_exception.html">Exception</a>(<span class="stringliteral">&quot;DynamicObject mismatch detected for Base Framework.&quot;</span>);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>

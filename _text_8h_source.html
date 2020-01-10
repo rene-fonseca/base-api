@@ -77,7 +77,7 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_text.html">Text</a>(<a class="code" href="class_node.html">Node</a> node)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    : <a class="code" href="class_character_data.html">CharacterData</a>(node) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_node.html#aa54866b6c55527f3db0384692db1a467">NodeType</a> type = node.<a class="code" href="class_node.html#a301032dbd2ec47e77c8534226c085fa6">getType</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_node.html#aa54866b6c55527f3db0384692db1a467">NodeType</a> type = node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    bassert(</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (type == TEXT_NODE) || (type == CDATA_SECTION_NODE),</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
@@ -86,7 +86,7 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_text.html">Text</a>(<a class="code" href="class_character_data.html">CharacterData</a> node)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    : <a class="code" href="class_character_data.html">CharacterData</a>(node) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_node.html#aa54866b6c55527f3db0384692db1a467">NodeType</a> type = node.<a class="code" href="class_node.html#a301032dbd2ec47e77c8534226c085fa6">getType</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_node.html#aa54866b6c55527f3db0384692db1a467">NodeType</a> type = node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    bassert(</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      (type == TEXT_NODE) || (type == CDATA_SECTION_NODE),</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
@@ -100,10 +100,10 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:307</div></div>
 <div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:45</div></div>
+<div class="ttc" id="aclass_node_html_a8fad79f65f64fc6c150574e023eb043f"><div class="ttname"><a href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">Node::getType</a></div><div class="ttdeci">NodeType getType() const</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">DOM node.</div><div class="ttdef"><b>Definition:</b> Node.h:39</div></div>
 <div class="ttc" id="aclass_text_html"><div class="ttname"><a href="class_text.html">Text</a></div><div class="ttdoc">DOM text node.</div><div class="ttdef"><b>Definition:</b> Text.h:43</div></div>
 <div class="ttc" id="aclass_node_html_aa54866b6c55527f3db0384692db1a467"><div class="ttname"><a href="class_node.html#aa54866b6c55527f3db0384692db1a467">Node::NodeType</a></div><div class="ttdeci">NodeType</div><div class="ttdef"><b>Definition:</b> Node.h:45</div></div>
-<div class="ttc" id="aclass_node_html_a301032dbd2ec47e77c8534226c085fa6"><div class="ttname"><a href="class_node.html#a301032dbd2ec47e77c8534226c085fa6">Node::getType</a></div><div class="ttdeci">NodeType getType() const noexcept</div></div>
 <div class="ttc" id="aclass_character_data_html"><div class="ttname"><a href="class_character_data.html">CharacterData</a></div><div class="ttdoc">DOM character data node.</div><div class="ttdef"><b>Definition:</b> CharacterData.h:30</div></div>
 <div class="ttc" id="aclass_cast_exception_html"><div class="ttname"><a href="class_cast_exception.html">CastException</a></div><div class="ttdoc">Cast exception.</div><div class="ttdef"><b>Definition:</b> CastException.h:28</div></div>
 <!-- HTML footer for doxygen 1.8.17-->

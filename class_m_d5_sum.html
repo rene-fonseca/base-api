@@ -92,6 +92,8 @@ Static Public Attributes</h2></td></tr>
 <div class="line">fout &lt;&lt; <span class="stringliteral">&quot;message digest: &quot;</span> &lt;&lt; checksum.<a class="code" href="class_m_d5_sum.html#ad9253c330e1dab99122b733fbf94ec9c">getValue</a>() &lt;&lt; ENDL;</div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_s_h_a1.html" title="SHA-1 message-digest.">SHA1</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#_a16">testsuite/digest.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4740acc1e9f153c1cb4928b6d8596e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4740acc1e9f153c1cb4928b6d8596e0">&#9670;&nbsp;</a></span>MD5Sum()</h2>
@@ -195,6 +197,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the message digest encoded in hex. This is only valid after <a class="el" href="class_m_d5_sum.html#af2248adca7e382a913fb551a19e70a2b">pushEnd()</a> has been invoked. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a19">testsuite/digest.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -241,6 +245,8 @@ Static Public Attributes</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_push_interface.html#a938e5de881940780738c4ae8cf0e878c">PushInterface</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a17">testsuite/digest.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -269,6 +275,8 @@ Static Public Attributes</h2></td></tr>
 <p>This function should be invoked when the entire message has been pushed. Do NOT use <a class="el" href="class_m_d5_sum.html#a21fe590d3673e600d652cd135e4b63d9">push()</a> after invoking this function. </p>
 
 <p>Reimplemented from <a class="el" href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">PushInterface</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a18">testsuite/digest.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -321,7 +329,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aclass_m_d5_sum_html_a21fe590d3673e600d652cd135e4b63d9"><div class="ttname"><a href="class_m_d5_sum.html#a21fe590d3673e600d652cd135e4b63d9">MD5Sum::push</a></div><div class="ttdeci">MemorySize push(const uint8 *buffer, MemorySize size)</div></div>
-<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:328</div></div>
+<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:340</div></div>
 <div class="ttc" id="aclass_m_d5_sum_html_af2248adca7e382a913fb551a19e70a2b"><div class="ttname"><a href="class_m_d5_sum.html#af2248adca7e382a913fb551a19e70a2b">MD5Sum::pushEnd</a></div><div class="ttdeci">void pushEnd()</div></div>
 <div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
 <div class="ttc" id="aclass_m_d5_sum_html"><div class="ttname"><a href="class_m_d5_sum.html">MD5Sum</a></div><div class="ttdoc">MD5 message-digest.</div><div class="ttdef"><b>Definition:</b> MD5Sum.h:44</div></div>

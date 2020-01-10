@@ -84,24 +84,31 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    INVALID_METHOD </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  };</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>() noexcept {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491af901fcc3aa37033630f519d62d29a074">   59</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept : <a class="code" href="class_r_m_i_exception.html#a0d5293b04bcdf620ae5930607425270c">RMIException</a>(message) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491ac0a23a38819240cd455440cd75b2c19e">   60</a></span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491af878caa8fb70e6f53ddcfda28f8cc54a">   61</a></span>&#160;  </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491a50b974c71ce6d397ed1ea1411ab800bd">   67</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept : <a class="code" href="class_r_m_i_exception.html#a0d5293b04bcdf620ae5930607425270c">RMIException</a>(type) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    : <a class="code" href="class_r_m_i_exception.html#a0d5293b04bcdf620ae5930607425270c">RMIException</a>(message, type) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_orb_exception.html#a5238e475c1119ae3a43f9ac41df939a6">   78</a></span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>() noexcept</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491ac0a23a38819240cd455440cd75b2c19e">   60</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491af878caa8fb70e6f53ddcfda28f8cc54a">   61</a></span>&#160;    : <a class="code" href="class_r_m_i_exception.html#a0d5293b04bcdf620ae5930607425270c">RMIException</a>(message)</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_orb_exception.html#a103c0d68f4ab56606bf487ef7c9bc354">   62</a></span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491aefe26053f0531aa4692aea0b6005e2ca">   63</a></span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491aa307e5b4030ff8ff9310b8cffaead41d">   64</a></span>&#160;  </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html">OrbException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_orb_exception.html#a5d76e1057764130c0142de50d2ad0e95">   71</a></span>&#160;    : <a class="code" href="class_r_m_i_exception.html#a0d5293b04bcdf620ae5930607425270c">RMIException</a>(type)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_orb_exception.html#a5238e475c1119ae3a43f9ac41df939a6">   81</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_orb_exception.html#a5238e475c1119ae3a43f9ac41df939a6">OrbException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    : <a class="code" href="class_r_m_i_exception.html#a0d5293b04bcdf620ae5930607425270c">RMIException</a>(message, type)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_orb_exception_html_a5238e475c1119ae3a43f9ac41df939a6"><div class="ttname"><a href="class_orb_exception.html#a5238e475c1119ae3a43f9ac41df939a6">OrbException::OrbException</a></div><div class="ttdeci">OrbException(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> OrbException.h:81</div></div>
 <div class="ttc" id="aclass_orb_exception_html"><div class="ttname"><a href="class_orb_exception.html">OrbException</a></div><div class="ttdoc">Object Request Broker (ORB) exception.</div><div class="ttdef"><b>Definition:</b> OrbException.h:28</div></div>
 <div class="ttc" id="aclass_r_m_i_exception_html"><div class="ttname"><a href="class_r_m_i_exception.html">RMIException</a></div><div class="ttdoc">Remote Method Invocation (RMI) exception.</div><div class="ttdef"><b>Definition:</b> RMIException.h:28</div></div>
 <div class="ttc" id="aclass_orb_exception_html_ad5b5c8608abd2a54edb99da72242f491"><div class="ttname"><a href="class_orb_exception.html#ad5b5c8608abd2a54edb99da72242f491">OrbException::Causes</a></div><div class="ttdeci">Causes</div><div class="ttdef"><b>Definition:</b> OrbException.h:43</div></div>

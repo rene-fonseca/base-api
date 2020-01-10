@@ -205,7 +205,7 @@ $(function() {
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">void</span> ensureUnmodified()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (owner &amp;&amp; (modificationId != owner-&gt;iteratorModificationId)) {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_iterator_exception.html">IteratorException</a>(<span class="stringliteral">&quot;Iterator used after owner modification.&quot;</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      _throw <a class="code" href="class_iterator_exception.html">IteratorException</a>(<span class="stringliteral">&quot;Iterator used after owner modification.&quot;</span>);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    b.ensureUnmodified();</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// nullptr allowed</span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span> (a.owner != b.owner) {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_iterator_exception.html">IteratorException</a>(<span class="stringliteral">&quot;Comparison of iterators belonging to different owners.&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      _throw <a class="code" href="class_iterator_exception.html">IteratorException</a>(<span class="stringliteral">&quot;Comparison of iterators belonging to different owners.&quot;</span>);</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>

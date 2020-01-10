@@ -71,8 +71,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade8fb9eb42577374370a032b5c926c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94a639e3ddb19fbefa645170409a5913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_input_stream.html#a94a639e3ddb19fbefa645170409a5913">reset</a> () noexcept</td></tr>
 <tr class="separator:a94a639e3ddb19fbefa645170409a5913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc384f1c748ebc20f7c4f1116bf2da2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_input_stream.html#afdc384f1c748ebc20f7c4f1116bf2da2">read</a> (void *buffer, unsigned int size) noexcept</td></tr>
-<tr class="separator:afdc384f1c748ebc20f7c4f1116bf2da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7c9562ff8f32d177c3107919b7c8c5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_input_stream.html#a7e7c9562ff8f32d177c3107919b7c8c5">read</a> (void *buffer, unsigned int size)</td></tr>
+<tr class="separator:a7e7c9562ff8f32d177c3107919b7c8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ad6295d7ec2d7655093c3348c09ee5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sound_input_stream.html#a18ad6295d7ec2d7655093c3348c09ee5">~SoundInputStream</a> () noexcept</td></tr>
 <tr class="separator:a18ad6295d7ec2d7655093c3348c09ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -275,14 +275,11 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afdc384f1c748ebc20f7c4f1116bf2da2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdc384f1c748ebc20f7c4f1116bf2da2">&#9670;&nbsp;</a></span>read()</h2>
+<a id="a7e7c9562ff8f32d177c3107919b7c8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7c9562ff8f32d177c3107919b7c8c5">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int SoundInputStream::read </td>
@@ -302,11 +299,6 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Fills the specified buffer with bytes from the stream. In blocking mode the method does not return until all bytes have been read. In non-blocking mode the total bytes read may be any number below or equal to the requested number of bytes. Attempting to read beyond the end of a stream in blocking mode results in an <a class="el" href="class_end_of_file.html" title="End of file exception.">EndOfFile</a> exception.</p>
 <dl class="params"><dt>Parameters</dt><dd>

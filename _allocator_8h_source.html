@@ -377,7 +377,7 @@ $(function() {
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;              <a class="code" href="class_allocator.html#ae93cf2303eeacc5a8702708db35723b7">release</a>(original.buffer, original.size);</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;              leaky.clear();</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            _rethrow;</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;          }</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        }</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keyword">auto</span> buffer = <a class="code" href="class_allocator.html#a9f8fd463eafe0ccb225a4d856efb5245">resize</a>(original.buffer, copy.size, original.size);</div>
@@ -543,7 +543,7 @@ $(function() {
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;              <a class="code" href="class_allocator.html#a4f34ee97bb316d2ed2c16d4d56a3ab1d">attach</a>(original); <span class="comment">// not modified</span></div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;              leaky.clear();</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;              <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;              _rethrow;</div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            }</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;          }</div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;          <a class="code" href="class_allocator.html#a4c0660fcd321962c7a9db4d7859fada2">initializeByMove</a>(temp, original.buffer, original.buffer + size); <span class="comment">// we still need to destroy</span></div>
@@ -600,7 +600,7 @@ $(function() {
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            <a class="code" href="class_allocator.html#ae93cf2303eeacc5a8702708db35723b7">release</a>(original.buffer, original.size); <span class="comment">// could throw - but would indicate heap corruption</span></div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            leaky.clear();</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;          }</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;          <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;          _rethrow;</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        }</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;      }</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;      <a class="code" href="class_allocator.html#ae93cf2303eeacc5a8702708db35723b7">release</a>(original.buffer, original.size); <span class="comment">// could throw - but would indicate heap corruption</span></div>

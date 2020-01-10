@@ -75,6 +75,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pushEnd</b> (
 <div class="textblock"><p>Push interface. </p>
 <p>Low-level push interface for in-memory IO.</p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2http_8cpp-example.html#_a10">testsuite/http.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3bc540ecf0d7100b86ba0e71770985fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bc540ecf0d7100b86ba0e71770985fc">&#9670;&nbsp;</a></span>flush()</h2>
@@ -147,7 +149,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pushEnd</b> (
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes pushed. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_c_r_c32.html#a8e1d4677020c3155e6ab88880311ea33">CRC32</a>, <a class="el" href="class_adler32.html#aebe0bd8aed92381c8cfdaf9de38d49d8">Adler32</a>, <a class="el" href="class_s_h_a256.html#a76725e3845159484afb2f38a5368f736">SHA256</a>, <a class="el" href="class_s_h_a512.html#aa9b8101e9f75165b63b36de83b29a367">SHA512</a>, <a class="el" href="class_s_h_a384.html#a07f54e5f0d355a4db5acaf69e031e319">SHA384</a>, <a class="el" href="class_s_h_a1.html#a490bb399dba1de9db5a45342833009c4">SHA1</a>, <a class="el" href="class_b_zip2_deflater.html#ab7fe7db86f706e9a6d3c91cc129e3810">BZip2Deflater</a>, <a class="el" href="class_z_lib_deflater.html#a8b3d4147404fdcc019934036a2471482">ZLibDeflater</a>, <a class="el" href="class_b_zip2_inflater.html#a889a96aafbeecf204e2458d64f869818">BZip2Inflater</a>, <a class="el" href="class_m_d5_sum.html#a21fe590d3673e600d652cd135e4b63d9">MD5Sum</a>, <a class="el" href="class_z_lib_inflater.html#a125b616c3f40acca781f6107d13033ae">ZLibInflater</a>, and <a class="el" href="class_local_connection.html#aefa4ba6ca79fe80e81fba89f4f21a346">LocalConnection</a>.</p>
+<p>Implemented in <a class="el" href="class_c_r_c32.html#a8e1d4677020c3155e6ab88880311ea33">CRC32</a>, <a class="el" href="class_adler32.html#aebe0bd8aed92381c8cfdaf9de38d49d8">Adler32</a>, <a class="el" href="class_s_h_a256.html#a76725e3845159484afb2f38a5368f736">SHA256</a>, <a class="el" href="class_s_h_a512.html#aa9b8101e9f75165b63b36de83b29a367">SHA512</a>, <a class="el" href="class_s_h_a384.html#a07f54e5f0d355a4db5acaf69e031e319">SHA384</a>, <a class="el" href="class_s_h_a1.html#a490bb399dba1de9db5a45342833009c4">SHA1</a>, <a class="el" href="class_b_zip2_deflater.html#ab7fe7db86f706e9a6d3c91cc129e3810">BZip2Deflater</a>, <a class="el" href="class_z_lib_deflater.html#a8b3d4147404fdcc019934036a2471482">ZLibDeflater</a>, <a class="el" href="class_b_zip2_inflater.html#a889a96aafbeecf204e2458d64f869818">BZip2Inflater</a>, <a class="el" href="class_z_lib_inflater.html#a125b616c3f40acca781f6107d13033ae">ZLibInflater</a>, <a class="el" href="class_m_d5_sum.html#a21fe590d3673e600d652cd135e4b63d9">MD5Sum</a>, and <a class="el" href="class_local_connection.html#aefa4ba6ca79fe80e81fba89f4f21a346">LocalConnection</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2http_8cpp-example.html#a35">testsuite/http.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -175,7 +179,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pushEnd</b> (
 </div><div class="memdoc">
 <p>This method should be invoked when the end has been reached. This method may be ignored by some implementations. </p>
 
-<p>Reimplemented in <a class="el" href="class_s_h_a256.html#a9c7e2699562e83cefad0a14d1e136b0d">SHA256</a>, <a class="el" href="class_s_h_a512.html#a7d98fefb82a9a575d7ee8073438bbded">SHA512</a>, <a class="el" href="class_s_h_a384.html#a1d4ffecbad744ed52fc23e019d43fa84">SHA384</a>, <a class="el" href="class_s_h_a1.html#ae882e7e0a21d97e723d8752fdfcb3d41">SHA1</a>, <a class="el" href="class_c_r_c32.html#a98dbbaf0f066811071a3a744947fdc5f">CRC32</a>, <a class="el" href="class_b_zip2_deflater.html#ad4e3648567d28a601ffd1646e84966ba">BZip2Deflater</a>, <a class="el" href="class_z_lib_deflater.html#a1cda128e6a2fc2f5db9be7696116b019">ZLibDeflater</a>, <a class="el" href="class_b_zip2_inflater.html#a3ddeb935fe7d0887d78b1aa280773ac1">BZip2Inflater</a>, <a class="el" href="class_m_d5_sum.html#af2248adca7e382a913fb551a19e70a2b">MD5Sum</a>, <a class="el" href="class_z_lib_inflater.html#a5f2d8e85160c93d998c16903f6fd74e7">ZLibInflater</a>, and <a class="el" href="class_local_connection.html#a5a26bfef9fcc84c2270bcdd663087764">LocalConnection</a>.</p>
+<p>Reimplemented in <a class="el" href="class_s_h_a256.html#a9c7e2699562e83cefad0a14d1e136b0d">SHA256</a>, <a class="el" href="class_s_h_a512.html#a7d98fefb82a9a575d7ee8073438bbded">SHA512</a>, <a class="el" href="class_s_h_a384.html#a1d4ffecbad744ed52fc23e019d43fa84">SHA384</a>, <a class="el" href="class_s_h_a1.html#ae882e7e0a21d97e723d8752fdfcb3d41">SHA1</a>, <a class="el" href="class_c_r_c32.html#a98dbbaf0f066811071a3a744947fdc5f">CRC32</a>, <a class="el" href="class_b_zip2_deflater.html#ad4e3648567d28a601ffd1646e84966ba">BZip2Deflater</a>, <a class="el" href="class_z_lib_deflater.html#a1cda128e6a2fc2f5db9be7696116b019">ZLibDeflater</a>, <a class="el" href="class_b_zip2_inflater.html#a3ddeb935fe7d0887d78b1aa280773ac1">BZip2Inflater</a>, <a class="el" href="class_z_lib_inflater.html#a5f2d8e85160c93d998c16903f6fd74e7">ZLibInflater</a>, <a class="el" href="class_m_d5_sum.html#af2248adca7e382a913fb551a19e70a2b">MD5Sum</a>, and <a class="el" href="class_local_connection.html#a5a26bfef9fcc84c2270bcdd663087764">LocalConnection</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a11">testsuite/digest.cpp</a>, and <a class="el" href="testsuite_2http_8cpp-example.html#a36">testsuite/http.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>

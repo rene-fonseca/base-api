@@ -66,12 +66,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac56d4c36cea7eb6cb6eb4345692f5245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302759fad00cb6566c8159d669535cae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#a302759fad00cb6566c8159d669535cae">isIdentifier</a> (const <a class="el" href="class_string.html">String</a> &amp;name) const noexcept</td></tr>
 <tr class="separator:a302759fad00cb6566c8159d669535cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6324ca938f4edd342f7eee11c7554bfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#a6324ca938f4edd342f7eee11c7554bfc">getConstant</a> (unsigned int id) const noexcept</td></tr>
-<tr class="separator:a6324ca938f4edd342f7eee11c7554bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac27510e324e696d188e7c2df40e1e853"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#ac27510e324e696d188e7c2df40e1e853">getVariable</a> (unsigned int id) const noexcept</td></tr>
-<tr class="separator:ac27510e324e696d188e7c2df40e1e853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affd591d9961d0c18cf9184ddab8c4144"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#affd591d9961d0c18cf9184ddab8c4144">getFunction</a> (unsigned int id) const noexcept</td></tr>
-<tr class="separator:affd591d9961d0c18cf9184ddab8c4144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec492799df521354cb57088b53decef1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#aec492799df521354cb57088b53decef1">getConstant</a> (unsigned int id) const noexcept</td></tr>
+<tr class="separator:aec492799df521354cb57088b53decef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5dcb41bf2a58fb26a4f799f4c5294c2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#ac5dcb41bf2a58fb26a4f799f4c5294c2">getVariable</a> (unsigned int id) const noexcept</td></tr>
+<tr class="separator:ac5dcb41bf2a58fb26a4f799f4c5294c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986ff6dab168f162cfa9f64163647b89"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#a986ff6dab168f162cfa9f64163647b89">getFunction</a> (unsigned int id) const noexcept</td></tr>
+<tr class="separator:a986ff6dab168f162cfa9f64163647b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af493aacf974ac5d0af7403f2eddddbac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_expression_evaluator_1_1_node.html">ExpressionEvaluator::Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#af493aacf974ac5d0af7403f2eddddbac">getNode</a> (const <a class="el" href="class_string.html">String</a> &amp;name) const</td></tr>
 <tr class="separator:af493aacf974ac5d0af7403f2eddddbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a747924ab28c0376cfbbdc4a6a50bd1b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_provider.html#a747924ab28c0376cfbbdc4a6a50bd1b3">~ExpressionProvider</a> () noexcept</td></tr>
@@ -93,6 +93,8 @@ Protected Attributes</h2></td></tr>
 <p>The expression provider is responsible for mapping identifiers into constants, variables, and functions.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_expression_parser.html" title="Expression parser.">ExpressionParser</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#_a56">testsuite/eval.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a45a5b1136c0dffc21e4c16c0f303b505"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45a5b1136c0dffc21e4c16c0f303b505">&#9670;&nbsp;</a></span>ExpressionProvider()</h2>
@@ -147,8 +149,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6324ca938f4edd342f7eee11c7554bfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6324ca938f4edd342f7eee11c7554bfc">&#9670;&nbsp;</a></span>getConstant()</h2>
+<a id="aec492799df521354cb57088b53decef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec492799df521354cb57088b53decef1">&#9670;&nbsp;</a></span>getConstant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +159,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_string.html">String</a> ExpressionProvider::getConstant </td>
+          <td class="memname">const <a class="el" href="class_string.html">String</a>&amp; ExpressionProvider::getConstant </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -174,8 +176,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="affd591d9961d0c18cf9184ddab8c4144"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affd591d9961d0c18cf9184ddab8c4144">&#9670;&nbsp;</a></span>getFunction()</h2>
+<a id="a986ff6dab168f162cfa9f64163647b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986ff6dab168f162cfa9f64163647b89">&#9670;&nbsp;</a></span>getFunction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +186,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_string.html">String</a> ExpressionProvider::getFunction </td>
+          <td class="memname">const <a class="el" href="class_string.html">String</a>&amp; ExpressionProvider::getFunction </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -226,8 +228,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac27510e324e696d188e7c2df40e1e853"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac27510e324e696d188e7c2df40e1e853">&#9670;&nbsp;</a></span>getVariable()</h2>
+<a id="ac5dcb41bf2a58fb26a4f799f4c5294c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5dcb41bf2a58fb26a4f799f4c5294c2">&#9670;&nbsp;</a></span>getVariable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,7 +238,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_string.html">String</a> ExpressionProvider::getVariable </td>
+          <td class="memname">const <a class="el" href="class_string.html">String</a>&amp; ExpressionProvider::getVariable </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -313,6 +315,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a57">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -355,6 +359,8 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">arguments</td><td>The number of arguments taken by the function. </td></tr>
   </table>
   </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a58">testsuite/eval.cpp</a>.</dd>
 </dl>
 
 </div>

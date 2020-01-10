@@ -110,6 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2330b8b246d28e165fad4460d5ede848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af877c3473770e9471f8d5ddf1377f16e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack.html#af877c3473770e9471f8d5ddf1377f16e">removeAll</a> () noexcept</td></tr>
 <tr class="separator:af877c3473770e9471f8d5ddf1377f16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a11840961e3fda6bb32d561e6f4b00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stack.html">Stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack.html#a95a11840961e3fda6bb32d561e6f4b00">operator&lt;&lt;</a> (const TYPE &amp;value)</td></tr>
+<tr class="separator:a95a11840961e3fda6bb32d561e6f4b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8bd40690bc52b73d6b7a4f7d868281"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stack.html">Stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack.html#a9e8bd40690bc52b73d6b7a4f7d868281">operator&lt;&lt;</a> (TYPE &amp;&amp;value)</td></tr>
+<tr class="separator:a9e8bd40690bc52b73d6b7a4f7d868281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -148,6 +152,8 @@ class Stack&lt; TYPE &gt;</h3>
 <p><a class="el" href="class_stack.html" title="Stack collection.">Stack</a> collection. </p>
 <p>A stack is a last-in-first-out data structure. This class is implemented as a linked list.</p>
 <dl class="section version"><dt>Version</dt><dd>1.1 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_stack_8cpp-example.html#_a1">testsuite/Stack.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a45ee221feb1195c19f209fa5e2a4cfa8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45ee221feb1195c19f209fa5e2a4cfa8">&#9670;&nbsp;</a></span>Stack() <span class="overload">[1/3]</span></h2>
@@ -345,6 +351,64 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the stack is empty. </p>
+
+</div>
+</div>
+<a id="a95a11840961e3fda6bb32d561e6f4b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a11840961e3fda6bb32d561e6f4b00">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_stack.html">Stack</a>&amp; <a class="el" href="class_stack.html">Stack</a>&lt; TYPE &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const TYPE &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pushes value. </p>
+
+</div>
+</div>
+<a id="a9e8bd40690bc52b73d6b7a4f7d868281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8bd40690bc52b73d6b7a4f7d868281">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_stack.html">Stack</a>&amp; <a class="el" href="class_stack.html">Stack</a>&lt; TYPE &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">TYPE &amp;&amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pushes value. </p>
 
 </div>
 </div>

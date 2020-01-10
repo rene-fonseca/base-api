@@ -79,102 +79,102 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">float</span> getEpsilon() noexcept;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> <span class="comment">/*constexpr*/</span> <span class="keywordtype">float</span> getInfinity() noexcept</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__COMPILER == _COM_AZURE_DEV__BASE__COMPILER_MSC)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> __builtin_huge_valf();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> 1 / 0.f;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">static</span> <span class="comment">/*constexpr*/</span> <span class="keywordtype">float</span> getNaN() noexcept</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__COMPILER == _COM_AZURE_DEV__BASE__COMPILER_MSC)</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> __builtin_nanf(<span class="stringliteral">&quot;0&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> 0 / 0.f;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>() noexcept</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>(<span class="keywordtype">float</span> _value) noexcept</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_float.html#a83e59f8f5b04a1c150976110fff6ae34">   81</a></span>&#160;    : value(_value)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>(<span class="keyword">const</span> <a class="code" href="class_float.html">Float</a>&amp; copy) noexcept</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    : value(copy.value)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_float.html#a896ce0044b319dfd2123f4054ba17d0e">   91</a></span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_float.html">Float</a>&amp; assign) noexcept</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    value = assign.<a class="code" href="class_float.html#a623ac5f87c53a5e25b3d85768a448944">value</a>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_float.html#a4ae1c5c5a0da21a1128c203dc889b998">   99</a></span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>&amp; operator=(<span class="keywordtype">float</span> value) noexcept</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_float.html#a99d78e25572a6873ae8e1bcb687362ab">  107</a></span>&#160;    this-&gt;value = value;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">float</span> getValue() const noexcept</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  {</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_float.html#a0172885e8d3c01c88da73efaf36e5f7a">  116</a></span>&#160;    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setValue(<span class="keywordtype">float</span> value) noexcept</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_float.html#a27537fd2a3b25ef3d10077fa5bf75db7">  125</a></span>&#160;  {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    this-&gt;value = value;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isNegative() const noexcept</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ada163b540bf75302ae0703cd5131903e">isNegative</a>();</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_float.html#a330c24bf98c8542c61f4cdcec142f772">  135</a></span>&#160;  }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">float</span> getSign() const noexcept</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ada163b540bf75302ae0703cd5131903e">isNegative</a>() ? -1.0f : 1.0f;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_float.html#a879b1c05d5a8d2029bb30d602565b2b6">  143</a></span>&#160;  }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isOrdinary() const noexcept</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a3cb0d0d0cc410c9a731cfc7c42e5238d">isOrdinary</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_float.html#a5f0d0065fba0e469b4937b70d8c3e384">  151</a></span>&#160;  }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isInfinity() const noexcept</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a162008554f474b27211a281fc1c236f2">isInfinity</a>();</div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_float.html#a78742235d16bf19ca79313d0b71a0d2e">  159</a></span>&#160;  }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isNaN() const noexcept</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ad15b6200615e5af9019c55c1422e5bc2">isNaN</a>();</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_float.html#a6e2f547ef3f233838842f47af30f205d">  167</a></span>&#160;  }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isQuiteNaN() const noexcept</div>
-<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_float.html#aae8e8f2728246bc0f4d20e3f05a212cc">  175</a></span>&#160;  {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a0132394a6d8a4dc6388a010cd3045dca">isQuiteNaN</a>();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isSignalingNaN() const noexcept</div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_float.html#ad2a2e43069efc721b62595a514a44398">  185</a></span>&#160;  {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a384ac40b4c98b8e5a4731b176914a9cf">isSignalingNaN</a>();</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> float() const noexcept</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_float.html#a13d9780a5e19513c8fa02d613935a9d2">  195</a></span>&#160;  }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;};</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">static</span> <span class="comment">/*constexpr*/</span> <span class="keywordtype">float</span> getInfinity() noexcept</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__COMPILER == _COM_AZURE_DEV__BASE__COMPILER_MSC)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> __builtin_huge_valf();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 1 / 0.f;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">static</span> <span class="comment">/*constexpr*/</span> <span class="keywordtype">float</span> getNaN() noexcept</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_float.html#aad4e019ebe4f99c6a242607229c16837">   60</a></span>&#160;  {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__COMPILER == _COM_AZURE_DEV__BASE__COMPILER_MSC)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> __builtin_nanf(<span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> 0 / 0.f;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>() noexcept</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>(<span class="keywordtype">float</span> _value) noexcept</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_float.html#a83e59f8f5b04a1c150976110fff6ae34">   82</a></span>&#160;    : value(_value)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>(<span class="keyword">const</span> <a class="code" href="class_float.html">Float</a>&amp; copy) noexcept</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    : value(copy.value)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_float.html#a896ce0044b319dfd2123f4054ba17d0e">   92</a></span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_float.html">Float</a>&amp; assign) noexcept</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    value = assign.<a class="code" href="class_float.html#a623ac5f87c53a5e25b3d85768a448944">value</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_float.html#a4ae1c5c5a0da21a1128c203dc889b998">  100</a></span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_float.html">Float</a>&amp; operator=(<span class="keywordtype">float</span> value) noexcept</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_float.html#a99d78e25572a6873ae8e1bcb687362ab">  108</a></span>&#160;    this-&gt;value = value;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">float</span> getValue() const noexcept</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_float.html#a0172885e8d3c01c88da73efaf36e5f7a">  117</a></span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setValue(<span class="keywordtype">float</span> value) noexcept</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_float.html#a27537fd2a3b25ef3d10077fa5bf75db7">  126</a></span>&#160;  {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    this-&gt;value = value;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isNegative() const noexcept</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ada163b540bf75302ae0703cd5131903e">isNegative</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="class_float.html#a330c24bf98c8542c61f4cdcec142f772">  136</a></span>&#160;  }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">float</span> getSign() const noexcept</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ada163b540bf75302ae0703cd5131903e">isNegative</a>() ? -1.0f : 1.0f;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_float.html#a879b1c05d5a8d2029bb30d602565b2b6">  144</a></span>&#160;  }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isOrdinary() const noexcept</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a3cb0d0d0cc410c9a731cfc7c42e5238d">isOrdinary</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_float.html#a5f0d0065fba0e469b4937b70d8c3e384">  152</a></span>&#160;  }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isInfinity() const noexcept</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a162008554f474b27211a281fc1c236f2">isInfinity</a>();</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_float.html#a78742235d16bf19ca79313d0b71a0d2e">  160</a></span>&#160;  }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isNaN() const noexcept</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ad15b6200615e5af9019c55c1422e5bc2">isNaN</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_float.html#a6e2f547ef3f233838842f47af30f205d">  168</a></span>&#160;  }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isQuiteNaN() const noexcept</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="class_float.html#aae8e8f2728246bc0f4d20e3f05a212cc">  176</a></span>&#160;  {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a0132394a6d8a4dc6388a010cd3045dca">isQuiteNaN</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isSignalingNaN() const noexcept</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="class_float.html#ad2a2e43069efc721b62595a514a44398">  186</a></span>&#160;  {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html">FloatingPoint::ToFloat</a>(value).<a class="code" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a384ac40b4c98b8e5a4731b176914a9cf">isSignalingNaN</a>();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> float() const noexcept</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_float.html#a13d9780a5e19513c8fa02d613935a9d2">  196</a></span>&#160;  }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;};</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_float_html"><div class="ttname"><a href="class_float.html">Float</a></div><div class="ttdoc">Float.</div><div class="ttdef"><b>Definition:</b> Float.h:29</div></div>
 <div class="ttc" id="astruct_floating_point_1_1_i_e_e_e754_single_precision_html_a162008554f474b27211a281fc1c236f2"><div class="ttname"><a href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#a162008554f474b27211a281fc1c236f2">FloatingPoint::IEEE754SinglePrecision::isInfinity</a></div><div class="ttdeci">bool isInfinity() const noexcept</div><div class="ttdef"><b>Definition:</b> FloatingPoint.h:550</div></div>

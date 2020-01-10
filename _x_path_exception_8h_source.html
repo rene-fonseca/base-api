@@ -68,25 +68,31 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_x_path_exception.html">   28</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_x_path_exception.html">XPathException</a> : <span class="keyword">public</span> <a class="code" href="class_transformer_exception.html">TransformerException</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>() noexcept {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    : <a class="code" href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException</a>(message) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept : <a class="code" href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException</a>(type) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_x_path_exception.html#ab246bd74c6aa83c5002ab89a86ce6f1c">   51</a></span>&#160;  </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    : <a class="code" href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException</a>(message, type) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_x_path_exception.html#a19ea92e2e45cc7a44624aa82d863931b">   60</a></span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>() noexcept</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    : <a class="code" href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException</a>(message)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_x_path_exception.html#ab8052b7d63f7db7468bb5b334938b8a4">   45</a></span>&#160;  </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html">XPathException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_x_path_exception.html#ab246bd74c6aa83c5002ab89a86ce6f1c">   52</a></span>&#160;    : <a class="code" href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException</a>(type)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_x_path_exception.html#a19ea92e2e45cc7a44624aa82d863931b">   62</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_x_path_exception.html#a19ea92e2e45cc7a44624aa82d863931b">XPathException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    : <a class="code" href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException</a>(message, type)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_x_path_exception_html_a19ea92e2e45cc7a44624aa82d863931b"><div class="ttname"><a href="class_x_path_exception.html#a19ea92e2e45cc7a44624aa82d863931b">XPathException::XPathException</a></div><div class="ttdeci">XPathException(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> XPathException.h:62</div></div>
 <div class="ttc" id="aclass_x_path_exception_html"><div class="ttname"><a href="class_x_path_exception.html">XPathException</a></div><div class="ttdoc">XPath exception.</div><div class="ttdef"><b>Definition:</b> XPathException.h:28</div></div>
 <div class="ttc" id="aclass_transformer_exception_html_ad722486bbe6899104b5c29bf1136517e"><div class="ttname"><a href="class_transformer_exception.html#ad722486bbe6899104b5c29bf1136517e">TransformerException::TransformerException</a></div><div class="ttdeci">TransformerException() noexcept</div><div class="ttdef"><b>Definition:</b> TransformerException.h:46</div></div>
 <div class="ttc" id="aclass_transformer_exception_html"><div class="ttname"><a href="class_transformer_exception.html">TransformerException</a></div><div class="ttdoc">Transformer exception.</div><div class="ttdef"><b>Definition:</b> TransformerException.h:29</div></div>

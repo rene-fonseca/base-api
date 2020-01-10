@@ -61,8 +61,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a03abb151c17891816e13c9548d8b8543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03c332206eda30c9c5d01490795d40a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a03c332206eda30c9c5d01490795d40a3">registerModule</a> (const std::initializer_list&lt; const char * &gt; &amp;info, const <a class="el" href="class_string.html">String</a> &amp;consumer=<a class="el" href="class_string.html">String</a>())</td></tr>
 <tr class="separator:a03c332206eda30c9c5d01490795d40a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ca0d5625565b4c9d88c3204ee55d2c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a2ca0d5625565b4c9d88c3204ee55d2c6">registerModule</a> (const <a class="el" href="class_string.html">String</a> &amp;id, const <a class="el" href="class_string.html">String</a> &amp;consumer=<a class="el" href="class_string.html">String</a>(), const <a class="el" href="class_string.html">String</a> &amp;url=<a class="el" href="class_string.html">String</a>())</td></tr>
-<tr class="separator:a2ca0d5625565b4c9d88c3204ee55d2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3ec92c7d83c42b7850401e89dcc5c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#aaa3ec92c7d83c42b7850401e89dcc5c6">registerModule</a> (const <a class="el" href="class_string.html">String</a> &amp;id, const <a class="el" href="class_string.html">String</a> &amp;consumer=<a class="el" href="class_string.html">String</a>(), const <a class="el" href="class_string.html">String</a> &amp;url=<a class="el" href="class_string.html">String</a>(), const <a class="el" href="class_string.html">String</a> &amp;license=<a class="el" href="class_string.html">String</a>(), const <a class="el" href="class_string.html">String</a> &amp;description=<a class="el" href="class_string.html">String</a>())</td></tr>
+<tr class="separator:aaa3ec92c7d83c42b7850401e89dcc5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17b1ffe8467eff4a968f46aae2c00901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a17b1ffe8467eff4a968f46aae2c00901">loadModules</a> ()</td></tr>
 <tr class="separator:a17b1ffe8467eff4a968f46aae2c00901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad25d4b5fef27f8673d1102c8032d98b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#aad25d4b5fef27f8673d1102c8032d98b">traverseModules</a> (const <a class="el" href="class_string.html">String</a> &amp;pattern=&quot;*&quot;)</td></tr>
@@ -171,8 +171,8 @@ static <a class="el" href="class_module_manager.html">ModuleManager</a> &amp;&#1
 
 </div>
 </div>
-<a id="a2ca0d5625565b4c9d88c3204ee55d2c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ca0d5625565b4c9d88c3204ee55d2c6">&#9670;&nbsp;</a></span>registerModule() <span class="overload">[2/2]</span></h2>
+<a id="aaa3ec92c7d83c42b7850401e89dcc5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3ec92c7d83c42b7850401e89dcc5c6">&#9670;&nbsp;</a></span>registerModule() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +193,19 @@ static <a class="el" href="class_module_manager.html">ModuleManager</a> &amp;&#1
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
-          <td class="paramname"><em>url</em> = <code><a class="el" href="class_string.html">String</a>()</code>&#160;</td>
+          <td class="paramname"><em>url</em> = <code><a class="el" href="class_string.html">String</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>license</em> = <code><a class="el" href="class_string.html">String</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>description</em> = <code><a class="el" href="class_string.html">String</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

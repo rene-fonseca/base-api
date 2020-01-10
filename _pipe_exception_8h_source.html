@@ -68,26 +68,33 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_pipe_exception.html">   28</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_pipe_exception.html">PipeException</a> : <span class="keyword">public</span> <a class="code" href="class_i_o_exception.html">IOException</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>() noexcept {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept : <a class="code" href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException</a>(message) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept : <a class="code" href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException</a>(type) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    : <a class="code" href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException</a>(message, type) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_pipe_exception.html#a338b00166860ca985d830a3f4d0001d0">   61</a></span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>() noexcept</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    : <a class="code" href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException</a>(message)</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_pipe_exception.html#a0b9a9eda94d3acd12c3d933984cd5275">   45</a></span>&#160;  {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html">PipeException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_pipe_exception.html#a0766a206900fca6e8bcf90cec118c93f">   54</a></span>&#160;    : <a class="code" href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException</a>(type)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_pipe_exception.html#a338b00166860ca985d830a3f4d0001d0">   64</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe_exception.html#a338b00166860ca985d830a3f4d0001d0">PipeException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    : <a class="code" href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException</a>(message, type)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_i_o_exception_html"><div class="ttname"><a href="class_i_o_exception.html">IOException</a></div><div class="ttdoc">IO exception.</div><div class="ttdef"><b>Definition:</b> IOException.h:32</div></div>
 <div class="ttc" id="aclass_i_o_exception_html_a7081fa07c0648f4aa41620747ed1d921"><div class="ttname"><a href="class_i_o_exception.html#a7081fa07c0648f4aa41620747ed1d921">IOException::IOException</a></div><div class="ttdeci">IOException() noexcept</div></div>
+<div class="ttc" id="aclass_pipe_exception_html_a338b00166860ca985d830a3f4d0001d0"><div class="ttname"><a href="class_pipe_exception.html#a338b00166860ca985d830a3f4d0001d0">PipeException::PipeException</a></div><div class="ttdeci">PipeException(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> PipeException.h:64</div></div>
 <div class="ttc" id="aclass_pipe_exception_html"><div class="ttname"><a href="class_pipe_exception.html">PipeException</a></div><div class="ttdoc">Pipe exception.</div><div class="ttdef"><b>Definition:</b> PipeException.h:28</div></div>
 <div class="ttc" id="aclass_type_html"><div class="ttname"><a href="class_type.html">Type</a></div><div class="ttdoc">Type identity.</div><div class="ttdef"><b>Definition:</b> Type.h:31</div></div>
 <!-- HTML footer for doxygen 1.8.17-->

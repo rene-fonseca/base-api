@@ -83,37 +83,39 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    bassert(guard.tryExclusiveLock(), <a class="code" href="class_concurrency_exception.html">ConcurrencyException</a>(<span class="keyword">this</span>));</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_single_exclusive_synchronize.html#a32516221c0860fa28b75d1266131e6a7">~SingleExclusiveSynchronize</a>() noexcept {</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize.html#ab276e8e977bc6ca1839221025db5ecfb">   61</a></span>&#160;    guard.releaseLock();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_single_exclusive_synchronize.html#a32516221c0860fa28b75d1266131e6a7">~SingleExclusiveSynchronize</a>() noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize.html#ab276e8e977bc6ca1839221025db5ecfb">   61</a></span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    guard.releaseLock();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">  Optimized version of SingleExclusiveSynchronize intended for single threaded</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">  applications.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  </span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize.html#a32516221c0860fa28b75d1266131e6a7">   71</a></span>&#160;<span class="comment">  @short Unsafe exclusive synchronization.</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">  @version 1.0</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html">   76</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&lt;<a class="code" href="class_unsafe.html">Unsafe</a>&gt; {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>(<span class="keyword">const</span> <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&amp; copy) noexcept;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&amp; assign) noexcept;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> POLY&gt;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html#a4f759ce2d3df45cffdb4fee7fe84455c">   89</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">explicit</span> <a class="code" href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html#a4f759ce2d3df45cffdb4fee7fe84455c">SingleExclusiveSynchronize</a>(<span class="keyword">const</span> POLY&amp; guard) noexcept {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">  Optimized version of SingleExclusiveSynchronize intended for single threaded</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  applications.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize.html#a32516221c0860fa28b75d1266131e6a7">   71</a></span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">  @short Unsafe exclusive synchronization.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">  @version 1.0</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&lt;<a class="code" href="class_unsafe.html">Unsafe</a>&gt; {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>(<span class="keyword">const</span> <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&amp; copy) noexcept;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a>&amp; assign) noexcept;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> POLY&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html#a4f759ce2d3df45cffdb4fee7fe84455c">   90</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">explicit</span> <a class="code" href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html#a4f759ce2d3df45cffdb4fee7fe84455c">SingleExclusiveSynchronize</a>(<span class="keyword">const</span> POLY&amp; guard) noexcept</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_single_exclusive_synchronize_3_01_unsafe_01_4_html_a4f759ce2d3df45cffdb4fee7fe84455c"><div class="ttname"><a href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html#a4f759ce2d3df45cffdb4fee7fe84455c">SingleExclusiveSynchronize&lt; Unsafe &gt;::SingleExclusiveSynchronize</a></div><div class="ttdeci">SingleExclusiveSynchronize(const POLY &amp;guard) noexcept</div><div class="ttdef"><b>Definition:</b> SingleExclusiveSynchronize.h:89</div></div>
+<div class="ttc" id="aclass_single_exclusive_synchronize_3_01_unsafe_01_4_html_a4f759ce2d3df45cffdb4fee7fe84455c"><div class="ttname"><a href="class_single_exclusive_synchronize_3_01_unsafe_01_4.html#a4f759ce2d3df45cffdb4fee7fe84455c">SingleExclusiveSynchronize&lt; Unsafe &gt;::SingleExclusiveSynchronize</a></div><div class="ttdeci">SingleExclusiveSynchronize(const POLY &amp;guard) noexcept</div><div class="ttdef"><b>Definition:</b> SingleExclusiveSynchronize.h:90</div></div>
 <div class="ttc" id="aclass_unsafe_html"><div class="ttname"><a href="class_unsafe.html">Unsafe</a></div><div class="ttdoc">Select no synchronization.</div><div class="ttdef"><b>Definition:</b> Synchronizeable.h:35</div></div>
 <div class="ttc" id="aclass_single_exclusive_synchronize_html"><div class="ttname"><a href="class_single_exclusive_synchronize.html">SingleExclusiveSynchronize</a></div><div class="ttdoc">Exclusive synchronization.</div><div class="ttdef"><b>Definition:</b> SingleExclusiveSynchronize.h:32</div></div>
 <div class="ttc" id="aclass_single_exclusive_synchronize_html_a32516221c0860fa28b75d1266131e6a7"><div class="ttname"><a href="class_single_exclusive_synchronize.html#a32516221c0860fa28b75d1266131e6a7">SingleExclusiveSynchronize::~SingleExclusiveSynchronize</a></div><div class="ttdeci">~SingleExclusiveSynchronize() noexcept</div><div class="ttdef"><b>Definition:</b> SingleExclusiveSynchronize.h:71</div></div>

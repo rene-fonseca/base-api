@@ -78,12 +78,14 @@ class Synchronize&lt; LOCK &gt;</h3>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  <span class="keyword">typedef</span> <a class="code" href="class_unsafe.html">DefaultLock</a> LOCK;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> myFirstMethod() const noexcept {</div>
+<div class="line">  <span class="keywordtype">void</span> myFirstMethod() const noexcept</div>
+<div class="line">  {</div>
 <div class="line">    SynchronizeShared();</div>
 <div class="line">    <span class="comment">// do something as long as it doesn&#39;t modify the object</span></div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> mySecondMethod() noexcept {</div>
+<div class="line">  <span class="keywordtype">void</span> mySecondMethod() noexcept</div>
+<div class="line">  {</div>
 <div class="line">    SynchronizeExclusive();</div>
 <div class="line">    <span class="comment">// do modification of object</span></div>
 <div class="line">  }</div>

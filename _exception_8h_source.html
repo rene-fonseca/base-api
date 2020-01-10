@@ -69,7 +69,7 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_exception.html">   39</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_exception.html">Exception</a> {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_exception.html#a640e7cf7849cf000c9b2fa118c12e4a0">   43</a></span>&#160;  <span class="keyword">typedef</span> void (*ExceptionHandler)(<a class="code" href="class_exception.html">Exception</a>* exception);</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_exception.html#a95eff7221f091d76d5d5b340d3f488dd">   43</a></span>&#160;  <span class="keyword">typedef</span> void (*ExceptionHandler)(<span class="keyword">const</span> <a class="code" href="class_exception.html">Exception</a>* exception);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> dumpExceptions;</div>
@@ -87,9 +87,9 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_exception_1_1_hook.html">   67</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_exception_1_1_hook.html">Hook</a> {};</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> onThrow(<a class="code" href="class_exception.html">Exception</a>&amp; exception) noexcept;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> onThrow(<span class="keyword">const</span> <a class="code" href="class_exception.html">Exception</a>&amp; exception) noexcept;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> rethrow();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  [[noreturn]] <span class="keyword">static</span> <span class="keywordtype">void</span> rethrow();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_exception.html#ae697709b2c1c33f5bfe49fd47ecee4fe">   76</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_exception.html#ae697709b2c1c33f5bfe49fd47ecee4fe">getDumpExceptions</a>() noexcept</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  {</div>
@@ -230,77 +230,118 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordflow">return</span> moveObject(e);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">inline</span> TYPE&amp;&amp; operator*(<span class="keyword">const</span> <a class="code" href="class_exception_1_1_hook.html">Exception::Hook</a>&amp;&amp; hook, TYPE&amp;&amp; exception)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EXCEPTION&gt;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">inline</span> EXCEPTION&amp;&amp; operator*(<a class="code" href="class_exception_1_1_hook.html">Exception::Hook</a>&amp;&amp; hook, EXCEPTION&amp;&amp; exception)</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  static_assert(std::is_base_of&lt;Exception, TYPE&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <a class="code" href="class_exception.html#a8499d306713bcc9a86ac6602e16dda78">Exception::onThrow</a>(exception);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  static_assert(std::is_base_of&lt;Exception, EXCEPTION&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <a class="code" href="class_exception.html#a705c900723e43741a94b23046e11d295">Exception::onThrow</a>(exception);</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordflow">return</span> moveObject(exception);</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EXCEPTION&gt;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> throwthis(EXCEPTION&amp;&amp; e)</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;{</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  static_assert(std::is_base_of&lt;Exception, EXCEPTION&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <a class="code" href="class_exception.html#a8499d306713bcc9a86ac6602e16dda78">Exception::onThrow</a>(e); <span class="comment">// does not throw</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordflow">throw</span> moveObject(e); <span class="comment">// throw std::forward(e);</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">#define throwit Exception::Hook() * // fake keyword</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> rethrow()</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <a class="code" href="class_exception.html#a5080062ccbbc5bb7ce4e4bdc2883f943">Exception::rethrow</a>(); <span class="comment">// does throw</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <span class="comment">// throw; // throwing in handler</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">#define rethrowit Exception::rethrow() // fake keyword</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor">#define _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE() \</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">  Type getThisType() const noexcept override \</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="preprocessor">  { \</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">    return Type::getType(*this); \</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">  }</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="class_new_exception.html">  369</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_new_exception.html">NewException</a> {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pendingExceptions = <a class="code" href="class_exception.html#ac34b429be790c2c5c1b0f5a87922f871">Exception::getPendingExceptions</a>();</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno"><a class="line" href="class_new_exception.html#a6ce456da3ff968ec4db7781bb3e2000b">  376</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_new_exception.html#a6ce456da3ff968ec4db7781bb3e2000b">isNewException</a>() const noexcept</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">return</span> pendingExceptions != <a class="code" href="class_exception.html#ac34b429be790c2c5c1b0f5a87922f871">Exception::getPendingExceptions</a>();</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;};</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="class_dump_stack_on_exception.html">  383</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dump_stack_on_exception.html">DumpStackOnException</a> {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  ~<a class="code" href="class_dump_stack_on_exception.html">DumpStackOnException</a>() noexcept;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;};</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EXCEPTION&gt;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> EXCEPTION&amp; operator*(<a class="code" href="class_exception_1_1_hook.html">Exception::Hook</a>&amp;&amp; hook, <span class="keyword">const</span> EXCEPTION&amp; exception)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  static_assert(std::is_base_of&lt;Exception, EXCEPTION&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <a class="code" href="class_exception.html#a705c900723e43741a94b23046e11d295">Exception::onThrow</a>(exception);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keywordflow">return</span> exception;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EXCEPTION&gt;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> throwthis(EXCEPTION&amp;&amp; e)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;{</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  static_assert(std::is_base_of&lt;Exception, EXCEPTION&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <a class="code" href="class_exception.html#a705c900723e43741a94b23046e11d295">Exception::onThrow</a>(e); <span class="comment">// does not throw</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">throw</span> moveObject(e); <span class="comment">// throw std::forward(e);</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="class_throw_exception.html">  358</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_throw_exception.html">ThrowException</a> {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> onException(<span class="keyword">const</span> <span class="keywordtype">char</span>* who, <span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line) noexcept;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_throw_exception.html">ThrowException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* who, <span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line) noexcept</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    onException(who, file, line);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;};</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EXCEPTION&gt;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">inline</span> EXCEPTION&amp; operator*(<a class="code" href="class_throw_exception.html">ThrowException</a>&amp;&amp; t, EXCEPTION&amp;&amp; exception)</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  static_assert(std::is_base_of&lt;Exception, EXCEPTION&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  <a class="code" href="class_exception.html#a705c900723e43741a94b23046e11d295">Exception::onThrow</a>(exception);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordflow">return</span> moveObject(exception);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;}</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> EXCEPTION&gt;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> EXCEPTION&amp; operator*(<a class="code" href="class_throw_exception.html">ThrowException</a>&amp;&amp; t, <span class="keyword">const</span> EXCEPTION&amp; exception)</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  static_assert(std::is_base_of&lt;Exception, EXCEPTION&gt;(), <span class="stringliteral">&quot;Only Exception derived types may be thrown.&quot;</span>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <a class="code" href="class_exception.html#a705c900723e43741a94b23046e11d295">Exception::onThrow</a>(exception);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keywordflow">return</span> exception;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">#if defined(_COM_AZURE_DEV__BASE__ANY_DEBUG)</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor">#  define _throw \</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">  base::ThrowException::onException(_COM_AZURE_DEV__BASE__PRETTY_FUNCTION, __FILE__, __LINE__); \</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">  throw Exception::Hook() * // fake keyword</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#  define _rethrow \</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">  base::ThrowException::onException(_COM_AZURE_DEV__BASE__PRETTY_FUNCTION, __FILE__, __LINE__); \</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">  Exception::rethrow() // fake keyword</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="preprocessor">#  define _throw throw Exception::Hook() * // fake keyword</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="preprocessor">#  define _rethrow Exception::rethrow() // fake keyword</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="preprocessor">#define _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE() \</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">  Type getThisType() const noexcept override \</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">  { \</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">    return Type::getType(*this); \</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">  }</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="class_new_exception.html">  413</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_new_exception.html">NewException</a> {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pendingExceptions = <a class="code" href="class_exception.html#ac34b429be790c2c5c1b0f5a87922f871">Exception::getPendingExceptions</a>();</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="class_new_exception.html#a6ce456da3ff968ec4db7781bb3e2000b">  420</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_new_exception.html#a6ce456da3ff968ec4db7781bb3e2000b">isNewException</a>() const noexcept</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">return</span> pendingExceptions != <a class="code" href="class_exception.html#ac34b429be790c2c5c1b0f5a87922f871">Exception::getPendingExceptions</a>();</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;};</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="class_dump_stack_on_exception.html">  427</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_dump_stack_on_exception.html">DumpStackOnException</a> {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  ~<a class="code" href="class_dump_stack_on_exception.html">DumpStackOnException</a>() noexcept;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;};</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_throw_exception_html"><div class="ttname"><a href="class_throw_exception.html">ThrowException</a></div><div class="ttdef"><b>Definition:</b> Exception.h:358</div></div>
 <div class="ttc" id="aclass_exception_html_a2e7f0ef3b153c3773a97283582769a12"><div class="ttname"><a href="class_exception.html#a2e7f0ef3b153c3773a97283582769a12">Exception::getError</a></div><div class="ttdeci">unsigned int getError() const noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:195</div></div>
 <div class="ttc" id="aclass_exception_html_a3cfa1b2c2d170fd1d3684ce4fe75c0e9"><div class="ttname"><a href="class_exception.html#a3cfa1b2c2d170fd1d3684ce4fe75c0e9">Exception::setError</a></div><div class="ttdeci">void setError(unsigned int error) noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:203</div></div>
 <div class="ttc" id="aclass_exception_1_1_hook_html"><div class="ttname"><a href="class_exception_1_1_hook.html">Exception::Hook</a></div><div class="ttdef"><b>Definition:</b> Exception.h:67</div></div>
-<div class="ttc" id="aclass_new_exception_html_a6ce456da3ff968ec4db7781bb3e2000b"><div class="ttname"><a href="class_new_exception.html#a6ce456da3ff968ec4db7781bb3e2000b">NewException::isNewException</a></div><div class="ttdeci">bool isNewException() const noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:376</div></div>
+<div class="ttc" id="aclass_new_exception_html_a6ce456da3ff968ec4db7781bb3e2000b"><div class="ttname"><a href="class_new_exception.html#a6ce456da3ff968ec4db7781bb3e2000b">NewException::isNewException</a></div><div class="ttdeci">bool isNewException() const noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:420</div></div>
 <div class="ttc" id="aclass_exception_html_ae7f91d6e14c618eced28194595e89b61"><div class="ttname"><a href="class_exception.html#ae7f91d6e14c618eced28194595e89b61">Exception::setType</a></div><div class="ttdeci">void setType(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:240</div></div>
 <div class="ttc" id="aclass_exception_html_ac34b429be790c2c5c1b0f5a87922f871"><div class="ttname"><a href="class_exception.html#ac34b429be790c2c5c1b0f5a87922f871">Exception::getPendingExceptions</a></div><div class="ttdeci">static unsigned int getPendingExceptions() noexcept</div></div>
 <div class="ttc" id="aclass_exception_html_a0715020a681113d0c9e87dbbfa87152d"><div class="ttname"><a href="class_exception.html#a0715020a681113d0c9e87dbbfa87152d">Exception::setCause</a></div><div class="ttdeci">void setCause(unsigned int cause) noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:187</div></div>
 <div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
-<div class="ttc" id="aclass_new_exception_html"><div class="ttname"><a href="class_new_exception.html">NewException</a></div><div class="ttdef"><b>Definition:</b> Exception.h:369</div></div>
+<div class="ttc" id="aclass_new_exception_html"><div class="ttname"><a href="class_new_exception.html">NewException</a></div><div class="ttdef"><b>Definition:</b> Exception.h:413</div></div>
+<div class="ttc" id="aclass_exception_html_a705c900723e43741a94b23046e11d295"><div class="ttname"><a href="class_exception.html#a705c900723e43741a94b23046e11d295">Exception::onThrow</a></div><div class="ttdeci">static void onThrow(const Exception &amp;exception) noexcept</div></div>
 <div class="ttc" id="aclass_exception_html_ae17f55eb7e165df4781e41ddf42e3f2d"><div class="ttname"><a href="class_exception.html#ae17f55eb7e165df4781e41ddf42e3f2d">Exception::setDumpExceptions</a></div><div class="ttdeci">static void setDumpExceptions(bool _dumpExceptions) noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:82</div></div>
 <div class="ttc" id="aclass_exception_html_a9652608a1505ce83cadadd2f1a7de73d"><div class="ttname"><a href="class_exception.html#a9652608a1505ce83cadadd2f1a7de73d">Exception::setExceptionHandler</a></div><div class="ttdeci">static ExceptionHandler setExceptionHandler(ExceptionHandler _exceptionHandler) noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:88</div></div>
-<div class="ttc" id="aclass_exception_html_a5080062ccbbc5bb7ce4e4bdc2883f943"><div class="ttname"><a href="class_exception.html#a5080062ccbbc5bb7ce4e4bdc2883f943">Exception::rethrow</a></div><div class="ttdeci">static void rethrow()</div></div>
 <div class="ttc" id="aclass_exception_html_ae697709b2c1c33f5bfe49fd47ecee4fe"><div class="ttname"><a href="class_exception.html#ae697709b2c1c33f5bfe49fd47ecee4fe">Exception::getDumpExceptions</a></div><div class="ttdeci">static bool getDumpExceptions() noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:76</div></div>
-<div class="ttc" id="aclass_dump_stack_on_exception_html"><div class="ttname"><a href="class_dump_stack_on_exception.html">DumpStackOnException</a></div><div class="ttdef"><b>Definition:</b> Exception.h:383</div></div>
+<div class="ttc" id="aclass_dump_stack_on_exception_html"><div class="ttname"><a href="class_dump_stack_on_exception.html">DumpStackOnException</a></div><div class="ttdef"><b>Definition:</b> Exception.h:427</div></div>
 <div class="ttc" id="aclass_exception_html_aa3ecb11cf4127b476dda8a5a1178ed6c"><div class="ttname"><a href="class_exception.html#aa3ecb11cf4127b476dda8a5a1178ed6c">Exception::setMessage</a></div><div class="ttdeci">void setMessage(const char *message) noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:221</div></div>
 <div class="ttc" id="aclass_type_html"><div class="ttname"><a href="class_type.html">Type</a></div><div class="ttdoc">Type identity.</div><div class="ttdef"><b>Definition:</b> Type.h:31</div></div>
 <div class="ttc" id="aclass_exception_html_a1276e9cb93984055580283f5a864f8e4"><div class="ttname"><a href="class_exception.html#a1276e9cb93984055580283f5a864f8e4">Exception::getMessage</a></div><div class="ttdeci">const char * getMessage() const noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:213</div></div>
 <div class="ttc" id="aclass_exception_1_1_stack_trace_html"><div class="ttname"><a href="class_exception_1_1_stack_trace.html">Exception::StackTrace</a></div><div class="ttdef"><b>Definition:</b> Exception.h:252</div></div>
-<div class="ttc" id="aclass_exception_html_a8499d306713bcc9a86ac6602e16dda78"><div class="ttname"><a href="class_exception.html#a8499d306713bcc9a86ac6602e16dda78">Exception::onThrow</a></div><div class="ttdeci">static void onThrow(Exception &amp;exception) noexcept</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

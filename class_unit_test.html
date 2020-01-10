@@ -98,8 +98,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af60ff39ca8ae52dc50b32667fcfe7aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#af60ff39ca8ae52dc50b32667fcfe7aae">onException</a> (<a class="el" href="class_exception.html">Exception</a> *exception)</td></tr>
-<tr class="separator:af60ff39ca8ae52dc50b32667fcfe7aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79ed3ab0da2e0d1a714964c51f6aaa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#aa79ed3ab0da2e0d1a714964c51f6aaa2">onException</a> (const <a class="el" href="class_exception.html">Exception</a> *exception)</td></tr>
+<tr class="separator:aa79ed3ab0da2e0d1a714964c51f6aaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67ddaff817b55a624741d32550052f4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#a67ddaff817b55a624741d32550052f4b">UnitTest</a> ()</td></tr>
 <tr class="separator:a67ddaff817b55a624741d32550052f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1c41bb0d43b51a6fdcc7d62db2845ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#ab1c41bb0d43b51a6fdcc7d62db2845ba">setName</a> (const <a class="el" href="class_string.html">String</a> &amp;name)</td></tr>
@@ -136,6 +136,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ae0e471fa5f03b4502b1ad993b4b28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06f80a84a6a381fbc1721a95ac60eda2"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#a06f80a84a6a381fbc1721a95ac60eda2">getTimeout</a> () const noexcept</td></tr>
 <tr class="separator:a06f80a84a6a381fbc1721a95ac60eda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c52b6cabfd49393c7182fe78ff55a8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#a36c52b6cabfd49393c7182fe78ff55a8">hasExternalDependency</a> () const noexcept</td></tr>
+<tr class="separator:a36c52b6cabfd49393c7182fe78ff55a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89ed67aaf9e6f4b1e7b9873c581db042"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#a89ed67aaf9e6f4b1e7b9873c581db042">getRepeats</a> () const noexcept</td></tr>
 <tr class="separator:a89ed67aaf9e6f4b1e7b9873c581db042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe1f68e247825474e74a1ccb258b2aa"><td class="memItemLeft" align="right" valign="top">virtual uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#abbe1f68e247825474e74a1ccb258b2aa">getLimitIO</a> () const noexcept</td></tr>
@@ -199,6 +201,8 @@ const typedef <a class="el" href="class_unit_test_1_1___not_here.html">_NotHere<
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aadc9d8ea48f48e28cff9458c4325f140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#aadc9d8ea48f48e28cff9458c4325f140">onPrint</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
 <tr class="separator:aadc9d8ea48f48e28cff9458c4325f140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad11d518c20c7bf8b5c2a8eba2c710d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#a9ad11d518c20c7bf8b5c2a8eba2c710d">onPrintIssue</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
+<tr class="separator:a9ad11d518c20c7bf8b5c2a8eba2c710d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb7c6e9263afe73b59ee958c359ae0bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#abb7c6e9263afe73b59ee958c359ae0bd">onPassed</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
 <tr class="separator:abb7c6e9263afe73b59ee958c359ae0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63499a0b1de19886559a12e102664060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test.html#a63499a0b1de19886559a12e102664060">onFailed</a> (const <a class="el" href="class_string.html">String</a> &amp;what, unsigned int line=0)</td></tr>
@@ -791,6 +795,32 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a36c52b6cabfd49393c7182fe78ff55a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c52b6cabfd49393c7182fe78ff55a8">&#9670;&nbsp;</a></span>hasExternalDependency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UnitTest::hasExternalDependency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Use TEST_EXTERNAL to tag test as having external dependencies. </p>
+
+</div>
+</div>
 <a id="aa18388249ebe020c18c108b04fbcb69b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa18388249ebe020c18c108b04fbcb69b">&#9670;&nbsp;</a></span>isInDevelopment()</h2>
 
@@ -860,8 +890,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af60ff39ca8ae52dc50b32667fcfe7aae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af60ff39ca8ae52dc50b32667fcfe7aae">&#9670;&nbsp;</a></span>onException()</h2>
+<a id="aa79ed3ab0da2e0d1a714964c51f6aaa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79ed3ab0da2e0d1a714964c51f6aaa2">&#9670;&nbsp;</a></span>onException()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -869,7 +899,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UnitTest::onException </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_exception.html">Exception</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_exception.html">Exception</a> *&#160;</td>
           <td class="paramname"><em>exception</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1018,6 +1048,43 @@ Protected Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void UnitTest::onPrint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>what</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>line</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called on explicit print request. </p>
+
+</div>
+</div>
+<a id="a9ad11d518c20c7bf8b5c2a8eba2c710d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad11d518c20c7bf8b5c2a8eba2c710d">&#9670;&nbsp;</a></span>onPrintIssue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitTest::onPrintIssue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>what</em>, </td>

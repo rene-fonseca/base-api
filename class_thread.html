@@ -229,6 +229,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">};</div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_runnable.html" title="Base class of active objects.">Runnable</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.3 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2echod_8cpp-example.html#_a4">testsuite/echod.cpp</a>, and <a class="el" href="testsuite_2_thread_8cpp-example.html#_a6">testsuite/Thread.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5e0db4daf53f02c3de48bb3010a39bcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e0db4daf53f02c3de48bb3010a39bcd">&#9670;&nbsp;</a></span>Identifier</h2>
@@ -629,6 +631,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the thread object associated with the executing thread. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2echod_8cpp-example.html#a5">testsuite/echod.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -889,6 +893,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the thread has been asked to terminate. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2echod_8cpp-example.html#a6">testsuite/echod.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -908,6 +914,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>The calling thread waits for the thread complete. Several threads are allowed to be waiting for the same thread to complete. A thread will block indefinitely if it tries to join itself. The resources associated with the thread context may linger for some time until the operating system desides its time to release them. It is, however, legal to destroy the thread object after <a class="el" href="class_thread.html#ad730e1928b006885b731efd88be0e478">join()</a> has returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>The method returns false if the thread has not been started and otherwise true. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2echod_8cpp-example.html#a21">testsuite/echod.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -940,6 +948,8 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">microseconds</td><td>The desired time in microseconds to make the thread sleep. The value must be within the domain from 0 to 999999999. </td></tr>
   </table>
   </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ping_8cpp-example.html#a30">testsuite/ping.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -1095,6 +1105,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Sets thread name. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_thread_8cpp-example.html#a2">testsuite/Thread.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1146,6 +1158,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Starts the thread. The underlying context of execution is allocated here and not in the thread constructor. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2echod_8cpp-example.html#a19">testsuite/echod.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1172,6 +1186,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Asks the thread to terminate as soon as possible. This does not block the executing thread. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2echod_8cpp-example.html#a20">testsuite/echod.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1198,6 +1214,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Relinquishes the time slot of currently executing thread voluntarily without blocking. Notifies the scheduler that the current thread is willing to release its time slice to other threads of the same or higher priority. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_thread_8cpp-example.html#a4">testsuite/Thread.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>

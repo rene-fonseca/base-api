@@ -45,7 +45,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_expression_parser-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ExpressionParser Class Reference</div>  </div>
+<div class="title">ExpressionParser Class Reference<div class="ingroups"><a class="el" href="group__math.html">Math</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -68,8 +68,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acc392ed3f3252d72d8ae9192a5066eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3eea2c5e28efe469d1fa63419a97f21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_parser.html#ac3eea2c5e28efe469d1fa63419a97f21">setAutoRegister</a> (bool value) noexcept</td></tr>
 <tr class="separator:ac3eea2c5e28efe469d1fa63419a97f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b5acb554aa9c259d7df0eed3feb202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hash_table.html">HashTable</a>&lt; <a class="el" href="class_string.html">String</a>, <a class="el" href="struct_expression_evaluator_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_parser.html#a30b5acb554aa9c259d7df0eed3feb202">getUnknowns</a> () const noexcept</td></tr>
-<tr class="separator:a30b5acb554aa9c259d7df0eed3feb202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2feab2ea4d7586962788e8568a28b68"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_hash_table.html">HashTable</a>&lt; <a class="el" href="class_string.html">String</a>, <a class="el" href="struct_expression_evaluator_1_1_node.html">Node</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_parser.html#af2feab2ea4d7586962788e8568a28b68">getUnknowns</a> () const noexcept</td></tr>
+<tr class="separator:af2feab2ea4d7586962788e8568a28b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a171e543c80d8473f074dcc984fdf2e57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_parser.html#a171e543c80d8473f074dcc984fdf2e57">hasUnknowns</a> () const noexcept</td></tr>
 <tr class="separator:a171e543c80d8473f074dcc984fdf2e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a072282d187b7bc661a369d2f008fc7b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expression_parser.html#a072282d187b7bc661a369d2f008fc7b1">getString</a> () const</td></tr>
@@ -129,6 +129,8 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="class_expression_evaluator.html" title="Expression evaluator.">ExpressionEvaluator</a></dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#_a59">testsuite/eval.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a47f0b36ec3a18a917afa7cb121411c96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47f0b36ec3a18a917afa7cb121411c96">&#9670;&nbsp;</a></span>ExpressionParser()</h2>
@@ -250,6 +252,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the result of the parser. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a72">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -268,11 +272,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Builds string expression from internal representation. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a64">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a30b5acb554aa9c259d7df0eed3feb202"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30b5acb554aa9c259d7df0eed3feb202">&#9670;&nbsp;</a></span>getUnknowns()</h2>
+<a id="af2feab2ea4d7586962788e8568a28b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2feab2ea4d7586962788e8568a28b68">&#9670;&nbsp;</a></span>getUnknowns()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +287,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_hash_table.html">HashTable</a>&lt;<a class="el" href="class_string.html">String</a>, <a class="el" href="struct_expression_evaluator_1_1_node.html">Node</a>&gt; ExpressionParser::getUnknowns </td>
+          <td class="memname">const <a class="el" href="class_hash_table.html">HashTable</a>&lt;<a class="el" href="class_string.html">String</a>, <a class="el" href="struct_expression_evaluator_1_1_node.html">Node</a>&gt;&amp; ExpressionParser::getUnknowns </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -294,6 +300,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the unknowns. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a67">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -320,6 +328,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the expression contains unknowns. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a65">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -338,6 +348,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Parses the specified arithmetic expression representation. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a61">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -470,6 +482,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Sets the auto-register mode. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2eval_8cpp-example.html#a60">testsuite/eval.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>

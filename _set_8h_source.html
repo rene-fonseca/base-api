@@ -229,7 +229,7 @@ $(function() {
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">auto</span> node = elements.<a class="code" href="class_ordered_binary_tree.html#a9852ae64a5f01a88c06ffef4ed7af56d">find</a>(key);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">if</span> (!node) {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_invalid_key.html">InvalidKey</a>();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      _throw <a class="code" href="class_invalid_key.html">InvalidKey</a>();</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> node-&gt;getValue();</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
@@ -260,24 +260,36 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  {</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> ReadIterator();</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">  283</a></span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_set.html">Set&lt;TYPE&gt;</a>&amp; value)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;{</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keyword">typename</span> <a class="code" href="class_set_1_1_set_enumerator.html">Set&lt;TYPE&gt;::ReadEnumerator</a> enu = value.<a class="code" href="class_set.html#a7c5b1e37d5741aa1944e40e9a141ef03">getReadEnumerator</a>();</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;{&#39;</span>;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordflow">while</span> (enu.hasNext()) {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    stream &lt;&lt; *enu.next();</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span> (enu.hasNext()) {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      stream &lt;&lt; <span class="charliteral">&#39;;&#39;</span>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;}&#39;</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_set.html">Set</a>&amp; <a class="code" href="class_set.html#a53c8ff55e2c01339b10ab9ada5860026">operator&lt;&lt;</a>(<span class="keyword">const</span> KEY&amp; key)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="class_set.html#a1cd4ecfccd26519386e1cf1cf5b914c1">add</a>(key);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_set.html">Set</a>&amp; <a class="code" href="class_set.html#a53c8ff55e2c01339b10ab9ada5860026">operator&lt;&lt;</a>(KEY&amp;&amp; key)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="class_set.html#a1cd4ecfccd26519386e1cf1cf5b914c1">add</a>(moveObject(key));</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="class_set.html#a53c8ff55e2c01339b10ab9ada5860026">  288</a></span>&#160;  }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;};</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">  297</a></span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_set.html">Set&lt;TYPE&gt;</a>&amp; value)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keyword">typename</span> <a class="code" href="class_set_1_1_set_enumerator.html">Set&lt;TYPE&gt;::ReadEnumerator</a> enu = value.<a class="code" href="class_set.html#a7c5b1e37d5741aa1944e40e9a141ef03">getReadEnumerator</a>();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;{&#39;</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordflow">while</span> (enu.hasNext()) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    stream &lt;&lt; *enu.next();</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">if</span> (enu.hasNext()) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      stream &lt;&lt; <span class="charliteral">&#39;;&#39;</span>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_ordered_binary_tree_html_a12ed7ab9876d7eb6cd386af4b54100b2"><div class="ttname"><a href="class_ordered_binary_tree.html#a12ed7ab9876d7eb6cd386af4b54100b2">OrderedBinaryTree::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> OrderedBinaryTree.h:176</div></div>
 <div class="ttc" id="aclass_set_html_a9335bf06c67827d0a4888d9db0d37146"><div class="ttname"><a href="class_set.html#a9335bf06c67827d0a4888d9db0d37146">Set::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> Set.h:124</div></div>
@@ -288,12 +300,13 @@ $(function() {
 <div class="ttc" id="aclass_set_html_a3e0305f9d31da9fde751b95d8701d653"><div class="ttname"><a href="class_set.html#a3e0305f9d31da9fde751b95d8701d653">Set::hasKey</a></div><div class="ttdeci">bool hasKey(const KEY &amp;key) const noexcept</div><div class="ttdef"><b>Definition:</b> Set.h:150</div></div>
 <div class="ttc" id="aclass_set_html_a0c8d9474472345e16b4145efd4e5a420"><div class="ttname"><a href="class_set.html#a0c8d9474472345e16b4145efd4e5a420">Set::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Set.h:116</div></div>
 <div class="ttc" id="aclass_collection_html"><div class="ttname"><a href="class_collection.html">Collection</a></div><div class="ttdoc">Base class for all collections.</div><div class="ttdef"><b>Definition:</b> Collection.h:32</div></div>
-<div class="ttc" id="aclass_set_html_affac6dbb4d96cc54fd029bfcf02803f9"><div class="ttname"><a href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">Set::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Set&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Set.h:283</div></div>
+<div class="ttc" id="aclass_set_html_affac6dbb4d96cc54fd029bfcf02803f9"><div class="ttname"><a href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">Set::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Set&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Set.h:297</div></div>
 <div class="ttc" id="aclass_enumerator_html"><div class="ttname"><a href="class_enumerator.html">Enumerator</a></div><div class="ttdoc">Enumeration interface for modifying access.</div><div class="ttdef"><b>Definition:</b> Enumeration.h:109</div></div>
 <div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
 <div class="ttc" id="aclass_ordered_binary_tree_html_aaa0cd88d48556f3de62b48fe9b297c48"><div class="ttname"><a href="class_ordered_binary_tree.html#aaa0cd88d48556f3de62b48fe9b297c48">OrderedBinaryTree::remove</a></div><div class="ttdeci">void remove(Node *node)</div><div class="ttdef"><b>Definition:</b> OrderedBinaryTree.h:447</div></div>
 <div class="ttc" id="aclass_ordered_binary_tree_html_ab56856f13a492ab8bc92f78716448b35"><div class="ttname"><a href="class_ordered_binary_tree.html#ab56856f13a492ab8bc92f78716448b35">OrderedBinaryTree::add2</a></div><div class="ttdeci">Value * add2(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> OrderedBinaryTree.h:378</div></div>
 <div class="ttc" id="aclass_iterator_html"><div class="ttname"><a href="class_iterator.html">Iterator</a></div><div class="ttdoc">Iterator interface.</div><div class="ttdef"><b>Definition:</b> Iterator.h:80</div></div>
+<div class="ttc" id="aclass_set_html_a53c8ff55e2c01339b10ab9ada5860026"><div class="ttname"><a href="class_set.html#a53c8ff55e2c01339b10ab9ada5860026">Set::operator&lt;&lt;</a></div><div class="ttdeci">Set &amp; operator&lt;&lt;(const KEY &amp;key)</div><div class="ttdef"><b>Definition:</b> Set.h:288</div></div>
 <div class="ttc" id="aclass_ordered_binary_tree_html_a22c1fe8716c99a26f909b5346b82526f"><div class="ttname"><a href="class_ordered_binary_tree.html#a22c1fe8716c99a26f909b5346b82526f">OrderedBinaryTree::removeByPredicate</a></div><div class="ttdeci">MemorySize removeByPredicate(PREDICATE predicate)</div><div class="ttdef"><b>Definition:</b> OrderedBinaryTree.h:537</div></div>
 <div class="ttc" id="aclass_set_1_1_set_enumerator_html"><div class="ttname"><a href="class_set_1_1_set_enumerator.html">Set::SetEnumerator</a></div><div class="ttdef"><b>Definition:</b> Set.h:57</div></div>
 <div class="ttc" id="aclass_ordered_binary_tree_html_a49f734045edf2bf453ab5bc261fc80db"><div class="ttname"><a href="class_ordered_binary_tree.html#a49f734045edf2bf453ab5bc261fc80db">OrderedBinaryTree&lt; Listener * &gt;::Node</a></div><div class="ttdeci">BinaryTree&lt; Listener * &gt;::Node Node</div><div class="ttdef"><b>Definition:</b> OrderedBinaryTree.h:50</div></div>

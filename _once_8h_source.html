@@ -67,33 +67,33 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_once.html">   41</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_once.html">Once</a> : <span class="keyword">public</span> <a class="code" href="class_automation_object.html">AutomationObject</a> {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="class_spin_lock.html">SpinLock</a> <a class="code" href="class_spin_lock.html">Guard</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="class_spin_lock.html">Guard</a> guard;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="class_event.html">Event</a>* <span class="keyword">event</span> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> waiting = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">bool</span> mask = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">bool</span> getTokenImpl();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="class_once.html">Once</a>() noexcept;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> getToken()</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> mask &amp;&amp; getTokenImpl();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> relinquishToken() noexcept;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_once.html#aec4b94b8bbecb0c2b99338210808bc97">   82</a></span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_once.html">   42</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_once.html">Once</a> : <span class="keyword">public</span> <a class="code" href="class_automation_object.html">AutomationObject</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="class_spin_lock.html">SpinLock</a> <a class="code" href="class_spin_lock.html">Guard</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="class_spin_lock.html">Guard</a> guard;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="class_event.html">Event</a>* <span class="keyword">event</span> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> waiting = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> mask = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> getTokenImpl();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="class_once.html">Once</a>() noexcept;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> getToken()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> mask &amp;&amp; getTokenImpl();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> relinquishToken() noexcept;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_once.html#aec4b94b8bbecb0c2b99338210808bc97">   83</a></span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_automation_object_html"><div class="ttname"><a href="class_automation_object.html">AutomationObject</a></div><div class="ttdoc">Pure automation object.</div><div class="ttdef"><b>Definition:</b> AutomationObject.h:29</div></div>
 <div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdoc">Event signaling mechanism.</div><div class="ttdef"><b>Definition:</b> Event.h:33</div></div>
-<div class="ttc" id="aclass_once_html"><div class="ttname"><a href="class_once.html">Once</a></div><div class="ttdoc">Once synchronization object.</div><div class="ttdef"><b>Definition:</b> Once.h:41</div></div>
+<div class="ttc" id="aclass_once_html"><div class="ttname"><a href="class_once.html">Once</a></div><div class="ttdoc">Once synchronization object.</div><div class="ttdef"><b>Definition:</b> Once.h:42</div></div>
 <div class="ttc" id="aclass_spin_lock_html"><div class="ttname"><a href="class_spin_lock.html">SpinLock</a></div><div class="ttdoc">Spin lock (fast).</div><div class="ttdef"><b>Definition:</b> SpinLock.h:32</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

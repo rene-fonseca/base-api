@@ -136,6 +136,10 @@ const <a class="el" href="class_ordered_binary_tree.html">Tree</a> &amp;&#160;</
 <tr class="memitem:afbb9eb069e143c3c5270bcff4e4a83e0"><td class="memItemLeft" align="right" valign="top"><a id="afbb9eb069e143c3c5270bcff4e4a83e0"></a>
 <a class="el" href="class_prefix_order_iterator.html">ReadIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
 <tr class="separator:afbb9eb069e143c3c5270bcff4e4a83e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c8ff55e2c01339b10ab9ada5860026"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_set.html">Set</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_set.html#a53c8ff55e2c01339b10ab9ada5860026">operator&lt;&lt;</a> (const KEY &amp;key)</td></tr>
+<tr class="separator:a53c8ff55e2c01339b10ab9ada5860026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8123b5169ed11322d6d8379552e76f2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_set.html">Set</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_set.html#a8123b5169ed11322d6d8379552e76f2f">operator&lt;&lt;</a> (KEY &amp;&amp;key)</td></tr>
+<tr class="separator:a8123b5169ed11322d6d8379552e76f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -152,6 +156,8 @@ class Set&lt; KEY &gt;</h3>
 <p><a class="el" href="class_set.html" title="Set collection.">Set</a> collection. </p>
 <p><a class="el" href="class_set.html" title="Set collection.">Set</a> collection implemented using an ordered binary tree.</p>
 <dl class="section version"><dt>Version</dt><dd>1.1 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_set_8cpp-example.html#_a1">testsuite/Set.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3c9e760c26e50ec731ea665d0d6eb558"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c9e760c26e50ec731ea665d0d6eb558">&#9670;&nbsp;</a></span>Enumerator</h2>
@@ -461,6 +467,64 @@ template&lt;class KEY &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the collection is empty. </p>
+
+</div>
+</div>
+<a id="a53c8ff55e2c01339b10ab9ada5860026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c8ff55e2c01339b10ab9ada5860026">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class KEY &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_set.html">Set</a>&amp; <a class="el" href="class_set.html">Set</a>&lt; KEY &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const KEY &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds value. </p>
+
+</div>
+</div>
+<a id="a8123b5169ed11322d6d8379552e76f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8123b5169ed11322d6d8379552e76f2f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class KEY &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_set.html">Set</a>&amp; <a class="el" href="class_set.html">Set</a>&lt; KEY &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">KEY &amp;&amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds value. </p>
 
 </div>
 </div>

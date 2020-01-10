@@ -56,10 +56,43 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a9e688b0a0af79575435a2a6c8b0426a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbcbfebf8f6161d8d98f28b30d3f4620"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#afbcbfebf8f6161d8d98f28b30d3f4620">isGlobalStateInGoodCondition</a> () noexcept</td></tr>
 <tr class="separator:afbcbfebf8f6161d8d98f28b30d3f4620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2625b25f2a82dee0e3ef2865bef8d2b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#a2625b25f2a82dee0e3ef2865bef8d2b9">notImplemented</a> (const char *who)</td></tr>
+<tr class="separator:a2625b25f2a82dee0e3ef2865bef8d2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca872560101313066b10047a02190b71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#aca872560101313066b10047a02190b71">notSupported</a> (const char *who)</td></tr>
+<tr class="separator:aca872560101313066b10047a02190b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00cd38fe8d229a4c67f506d9242eb72c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#a00cd38fe8d229a4c67f506d9242eb72c">corruption</a> (const char *who)</td></tr>
+<tr class="separator:a00cd38fe8d229a4c67f506d9242eb72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_runtime.html">Runtime</a> helper functions. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a00cd38fe8d229a4c67f506d9242eb72c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00cd38fe8d229a4c67f506d9242eb72c">&#9670;&nbsp;</a></span>corruption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Runtime::corruption </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>who</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Triggers failure due to corruption. </p>
+
+</div>
+</div>
 <a id="a9e688b0a0af79575435a2a6c8b0426a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e688b0a0af79575435a2a6c8b0426a1">&#9670;&nbsp;</a></span>isGlobalDestruction()</h2>
 
@@ -135,6 +168,60 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if global initialization or destruction is in progress. </p>
+
+</div>
+</div>
+<a id="a2625b25f2a82dee0e3ef2865bef8d2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2625b25f2a82dee0e3ef2865bef8d2b9">&#9670;&nbsp;</a></span>notImplemented()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Runtime::notImplemented </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>who</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Triggers failure due to unimplemented method/feature. </p>
+
+</div>
+</div>
+<a id="aca872560101313066b10047a02190b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca872560101313066b10047a02190b71">&#9670;&nbsp;</a></span>notSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Runtime::notSupported </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>who</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Triggers failure due to unsupported method/feature. </p>
 
 </div>
 </div>

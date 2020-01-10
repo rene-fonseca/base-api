@@ -83,69 +83,80 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    : <a class="code" href="class_sequence_iterator.html">SequenceIterator&lt;TRAITS&gt;</a>(value), dimension(_dimension) {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">operator++</a>() noexcept {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ++this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> <a class="code" href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">operator++</a>(<span class="keywordtype">int</span>) noexcept {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> result(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ++this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">   61</a></span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">operator--</a>() noexcept {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    --this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#ae6a2df67790bf71e8fd34e0330d477ca">   69</a></span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> <a class="code" href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">operator--</a>(<span class="keywordtype">int</span>) noexcept {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> result(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    --this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">   78</a></span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#a7c9dc9edb5eb3dda4732dc024af1597a">operator+=</a>(Distance distance) noexcept {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> += distance;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#ac09e3197d835e22c71d70618a616cbc8">   86</a></span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#a716f4911ccad3939c8b30e6eb4745b6d">operator-=</a>(Distance distance) noexcept {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> -= distance;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#a7c9dc9edb5eb3dda4732dc024af1597a">   95</a></span>&#160;  }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">inline</span> ElementIterator getFirst() const noexcept {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> ElementIterator(this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>, dimension.<a class="code" href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">getWidth</a>());</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">inline</span> ElementIterator getEnd() const noexcept {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> ElementIterator(this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> + dimension.<a class="code" href="class_dimension.html#a87715df3294d56a6996c1ed0b4549d5d">getSize</a>(), dimension.<a class="code" href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">getWidth</a>());</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#a716f4911ccad3939c8b30e6eb4745b6d">  103</a></span>&#160;  }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">inline</span> ElementIterator operator[](<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index) <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> ElementIterator(this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> + this-&gt;columns * index, dimension.<a class="code" href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">getWidth</a>());</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TRAITS&gt;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> <a class="code" href="class_matrix4x4.html#ad41cbbe649d0fffc005ebd226ec72abe">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a>&amp; left, <span class="keywordtype">int</span> right) noexcept {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> result(left);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">return</span> result += right;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TRAITS&gt;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> <a class="code" href="class_matrix4x4.html#a73d692a423f115a3347da0acc763608f">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a>&amp; left, <span class="keywordtype">int</span> right) noexcept {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> result(left);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">return</span> result -= right;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">operator++</a>() noexcept</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ++this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> <a class="code" href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">operator++</a>(<span class="keywordtype">int</span>) noexcept</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">   61</a></span>&#160;    <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> result(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ++this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">operator--</a>() noexcept</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#ae6a2df67790bf71e8fd34e0330d477ca">   70</a></span>&#160;  {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    --this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> <a class="code" href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">operator--</a>(<span class="keywordtype">int</span>) noexcept</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">   80</a></span>&#160;    <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a> result(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    --this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#a7c9dc9edb5eb3dda4732dc024af1597a">operator+=</a>(Distance distance) noexcept</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#ac09e3197d835e22c71d70618a616cbc8">   89</a></span>&#160;  {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> += distance;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator</a>&amp; <a class="code" href="class_matrix_column_iterator.html#a716f4911ccad3939c8b30e6eb4745b6d">operator-=</a>(Distance distance) noexcept</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#a7c9dc9edb5eb3dda4732dc024af1597a">   99</a></span>&#160;    this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> -= distance;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">inline</span> ElementIterator getFirst() const noexcept</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> ElementIterator(this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a>, dimension.<a class="code" href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">getWidth</a>());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_matrix_column_iterator.html#a716f4911ccad3939c8b30e6eb4745b6d">  108</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_interleaved_iterator.html">ElementIterator</a> getEnd() const noexcept</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_interleaved_iterator.html">ElementIterator</a>(this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> + dimension.<a class="code" href="class_dimension.html#a87715df3294d56a6996c1ed0b4549d5d">getSize</a>(), dimension.<a class="code" href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">getWidth</a>());</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">inline</span> ElementIterator operator[](<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> ElementIterator(this-&gt;<a class="code" href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">element</a> + this-&gt;columns * index, dimension.<a class="code" href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">getWidth</a>());</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TRAITS&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> <a class="code" href="class_matrix4x4.html#ad41cbbe649d0fffc005ebd226ec72abe">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a>&amp; left, <span class="keywordtype">int</span> right) noexcept</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> result(left);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> result += right;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TRAITS&gt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> <a class="code" href="class_matrix4x4.html#a73d692a423f115a3347da0acc763608f">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a>&amp; left, <span class="keywordtype">int</span> right) noexcept</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="class_matrix_column_iterator.html">MatrixColumnIterator&lt;TRAITS&gt;</a> result(left);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">return</span> result -= right;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_matrix_column_iterator_html_a716f4911ccad3939c8b30e6eb4745b6d"><div class="ttname"><a href="class_matrix_column_iterator.html#a716f4911ccad3939c8b30e6eb4745b6d">MatrixColumnIterator::operator-=</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator-=(Distance distance) noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:103</div></div>
+<div class="ttc" id="aclass_matrix_column_iterator_html_a716f4911ccad3939c8b30e6eb4745b6d"><div class="ttname"><a href="class_matrix_column_iterator.html#a716f4911ccad3939c8b30e6eb4745b6d">MatrixColumnIterator::operator-=</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator-=(Distance distance) noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:108</div></div>
 <div class="ttc" id="aclass_dimension_html_a3c0bfde1dd79a96c18b8102d2b281b36"><div class="ttname"><a href="class_dimension.html#a3c0bfde1dd79a96c18b8102d2b281b36">Dimension::getWidth</a></div><div class="ttdeci">unsigned int getWidth() const noexcept</div><div class="ttdef"><b>Definition:</b> Dimension.h:159</div></div>
 <div class="ttc" id="aclass_sequence_iterator_html"><div class="ttname"><a href="class_sequence_iterator.html">SequenceIterator</a></div><div class="ttdoc">Iterator of elements of a sequence.</div><div class="ttdef"><b>Definition:</b> SequenceIterator.h:28</div></div>
-<div class="ttc" id="aclass_matrix_column_iterator_html_a7c9dc9edb5eb3dda4732dc024af1597a"><div class="ttname"><a href="class_matrix_column_iterator.html#a7c9dc9edb5eb3dda4732dc024af1597a">MatrixColumnIterator::operator+=</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator+=(Distance distance) noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:95</div></div>
+<div class="ttc" id="aclass_matrix_column_iterator_html_a7c9dc9edb5eb3dda4732dc024af1597a"><div class="ttname"><a href="class_matrix_column_iterator.html#a7c9dc9edb5eb3dda4732dc024af1597a">MatrixColumnIterator::operator+=</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator+=(Distance distance) noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:99</div></div>
 <div class="ttc" id="aclass_interleaved_iterator_html"><div class="ttname"><a href="class_interleaved_iterator.html">InterleavedIterator</a></div><div class="ttdoc">Iterator of interleaved elements within a sequence.</div><div class="ttdef"><b>Definition:</b> InterleavedIterator.h:27</div></div>
 <div class="ttc" id="aclass_matrix4x4_html_a73d692a423f115a3347da0acc763608f"><div class="ttname"><a href="class_matrix4x4.html#a73d692a423f115a3347da0acc763608f">Matrix4x4::operator-</a></div><div class="ttdeci">Matrix4x4&lt; TYPE &gt; operator-(const Matrix4x4&lt; TYPE &gt; &amp;left, const Matrix4x4&lt; TYPE &gt; &amp;right) noexcept</div><div class="ttdef"><b>Definition:</b> Matrix4x4.h:670</div></div>
 <div class="ttc" id="aclass_matrix_column_iterator_html_afa016fd715d1ed9846362073f2b0eb5c"><div class="ttname"><a href="class_matrix_column_iterator.html#afa016fd715d1ed9846362073f2b0eb5c">MatrixColumnIterator::operator++</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator++() noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:61</div></div>
@@ -153,7 +164,7 @@ $(function() {
 <div class="ttc" id="aclass_dimension_html"><div class="ttname"><a href="class_dimension.html">Dimension</a></div><div class="ttdoc">Dimension.</div><div class="ttdef"><b>Definition:</b> Dimension.h:27</div></div>
 <div class="ttc" id="aclass_dimension_html_a87715df3294d56a6996c1ed0b4549d5d"><div class="ttname"><a href="class_dimension.html#a87715df3294d56a6996c1ed0b4549d5d">Dimension::getSize</a></div><div class="ttdeci">unsigned long long getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Dimension.h:175</div></div>
 <div class="ttc" id="aclass_reference_html"><div class="ttname"><a href="class_reference.html">Reference</a></div><div class="ttdoc">Automation pointer that counts the number of references to an object.</div><div class="ttdef"><b>Definition:</b> Reference.h:25</div></div>
-<div class="ttc" id="aclass_matrix_column_iterator_html_aa72fcdd52030b90b574fb4cad4907959"><div class="ttname"><a href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">MatrixColumnIterator::operator--</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator--() noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:78</div></div>
+<div class="ttc" id="aclass_matrix_column_iterator_html_aa72fcdd52030b90b574fb4cad4907959"><div class="ttname"><a href="class_matrix_column_iterator.html#aa72fcdd52030b90b574fb4cad4907959">MatrixColumnIterator::operator--</a></div><div class="ttdeci">MatrixColumnIterator &amp; operator--() noexcept</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:80</div></div>
 <div class="ttc" id="aclass_pointer_html"><div class="ttname"><a href="class_pointer.html">Pointer</a></div><div class="ttdoc">Simple pointer.</div><div class="ttdef"><b>Definition:</b> Pointer.h:32</div></div>
 <div class="ttc" id="aclass_matrix_column_iterator_html"><div class="ttname"><a href="class_matrix_column_iterator.html">MatrixColumnIterator</a></div><div class="ttdoc">Matrix column iterator.</div><div class="ttdef"><b>Definition:</b> MatrixColumnIterator.h:31</div></div>
 <div class="ttc" id="aclass_sequence_iterator_html_ac28e6452fdacfa283e8f7951f42de82a"><div class="ttname"><a href="class_sequence_iterator.html#ac28e6452fdacfa283e8f7951f42de82a">SequenceIterator::element</a></div><div class="ttdeci">Pointer element</div><div class="ttdef"><b>Definition:</b> SequenceIterator.h:50</div></div>

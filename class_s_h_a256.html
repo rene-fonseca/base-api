@@ -95,6 +95,8 @@ Static Public Attributes</h2></td></tr>
 <div class="line">fout &lt;&lt; <span class="stringliteral">&quot;message digest: &quot;</span> &lt;&lt; checksum.<a class="code" href="class_s_h_a256.html#af368418e1a16c1a07aa8321d9772879c">getValue</a>() &lt;&lt; ENDL;</div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_m_d5_sum.html" title="MD5 message-digest.">MD5Sum</a> <a class="el" href="class_s_h_a1.html" title="SHA-1 message-digest.">SHA1</a> <a class="el" href="class_s_h_a384.html" title="SHA-384 message-digest.">SHA384</a> <a class="el" href="class_s_h_a512.html" title="SHA-512 message-digest.">SHA512</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#_a3">testsuite/digest.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aca9f9e18f0fcec4403f7ba7a34d7d997"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca9f9e18f0fcec4403f7ba7a34d7d997">&#9670;&nbsp;</a></span>SHA256()</h2>
@@ -198,6 +200,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the message digest encoded in hex. This is only valid after <a class="el" href="class_s_h_a256.html#a9c7e2699562e83cefad0a14d1e136b0d">pushEnd()</a> has been invoked. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a25">testsuite/digest.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -244,6 +248,8 @@ Static Public Attributes</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_push_interface.html#a938e5de881940780738c4ae8cf0e878c">PushInterface</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a23">testsuite/digest.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -272,6 +278,8 @@ Static Public Attributes</h2></td></tr>
 <p>This function should be invoked when the entire message has been pushed. Do NOT use <a class="el" href="class_s_h_a256.html#a76725e3845159484afb2f38a5368f736">push()</a> after invoking this function. </p>
 
 <p>Reimplemented from <a class="el" href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">PushInterface</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2digest_8cpp-example.html#a24">testsuite/digest.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -346,7 +354,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:328</div></div>
+<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:340</div></div>
 <div class="ttc" id="aclass_s_h_a256_html_a76725e3845159484afb2f38a5368f736"><div class="ttname"><a href="class_s_h_a256.html#a76725e3845159484afb2f38a5368f736">SHA256::push</a></div><div class="ttdeci">MemorySize push(const uint8 *buffer, MemorySize size)</div></div>
 <div class="ttc" id="aclass_s_h_a256_html_a9c7e2699562e83cefad0a14d1e136b0d"><div class="ttname"><a href="class_s_h_a256.html#a9c7e2699562e83cefad0a14d1e136b0d">SHA256::pushEnd</a></div><div class="ttdeci">void pushEnd() noexcept</div></div>
 <div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>

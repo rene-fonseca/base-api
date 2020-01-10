@@ -1161,302 +1161,308 @@ $(function() {
 <div class="line"><a name="l01871"></a><span class="lineno"> 1871</span>&#160; </div>
 <div class="line"><a name="l01875"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html"> 1875</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> cancel();</div>
 <div class="line"><a name="l01876"></a><span class="lineno"> 1876</span>&#160;    </div>
-<div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a></div>
-<div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160;      getWritePacketsRequest() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01882"></a><span class="lineno"> 1882</span>&#160;    </div>
-<div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a></div>
-<div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;      getWriteFixedPacketsRequest() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;    </div>
-<div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a></div>
-<div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;      getWriteDataRequest() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;    </div>
-<div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a>&amp; request);</div>
-<div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160; </div>
-<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a>&amp; request);</div>
+<div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a> getWritePacketsRequest() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160;    </div>
+<div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a> getWriteFixedPacketsRequest() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;    </div>
+<div class="line"><a name="l01891"></a><span class="lineno"> 1891</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a> getWriteDataRequest() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l01892"></a><span class="lineno"> 1892</span>&#160;    </div>
+<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a>&amp; request);</div>
+<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160; </div>
+<div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a>&amp; request);</div>
+<div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160; </div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a>&amp; request);</div>
 <div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160; </div>
-<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a>&amp; request);</div>
-<div class="line"><a name="l01913"></a><span class="lineno"> 1913</span>&#160; </div>
-<div class="line"><a name="l01917"></a><span class="lineno"> 1917</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l01918"></a><span class="lineno"> 1918</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a>&amp; request);</div>
-<div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160; </div>
-<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;      <a class="code" href="class_allocator.html">Allocator&lt;IsochronousWriteRequest&gt;</a>&amp; request);</div>
-<div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160; </div>
-<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a> dequeue();</div>
-<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;    </div>
-<div class="line"><a name="l01941"></a><span class="lineno"> 1941</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> wait(</div>
-<div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds);</div>
-<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;  };</div>
-<div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a>&amp; request);</div>
+<div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160; </div>
+<div class="line"><a name="l01916"></a><span class="lineno"> 1916</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_allocator.html">Allocator&lt;IsochronousWriteRequest&gt;</a>&amp; request);</div>
+<div class="line"><a name="l01917"></a><span class="lineno"> 1917</span>&#160; </div>
+<div class="line"><a name="l01923"></a><span class="lineno"> 1923</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a> dequeue();</div>
+<div class="line"><a name="l01924"></a><span class="lineno"> 1924</span>&#160;    </div>
+<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> wait(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds);</div>
+<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;  };</div>
+<div class="line"><a name="l01935"></a><span class="lineno"> 1935</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l01936"></a><span class="lineno"> 1936</span>&#160;  </div>
+<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadPacketsRequestImpl&gt;</a></div>
+<div class="line"><a name="l01941"></a><span class="lineno"> 1941</span>&#160;    getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_packets_request.html">IsochronousReadPacketsRequest</a>&amp; request) noexcept</div>
+<div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;  {</div>
+<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160;  }</div>
 <div class="line"><a name="l01945"></a><span class="lineno"> 1945</span>&#160;  </div>
-<div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadPacketsRequestImpl&gt;</a></div>
-<div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_packets_request.html">IsochronousReadPacketsRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;  }</div>
-<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;  </div>
-<div class="line"><a name="l01957"></a><span class="lineno"> 1957</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadFixedPacketsRequestImpl&gt;</a></div>
-<div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;  getContext(IsochronousReadFixedPacketsRequest&amp; request) noexcept {</div>
-<div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;  }</div>
-<div class="line"><a name="l01961"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#af015e900ceb9d4b3b3b843d7256803e2"> 1961</a></span>&#160;  </div>
-<div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadFixedDataRequestImpl&gt;</a></div>
-<div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html">IsochronousReadFixedDataRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;  }</div>
-<div class="line"><a name="l01969"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a2d5e3071eaed7f81a613182dc8dafc39"> 1969</a></span>&#160;  </div>
-<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadRequestImpl&gt;</a></div>
-<div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_request.html">IsochronousReadRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l01975"></a><span class="lineno"> 1975</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l01976"></a><span class="lineno"> 1976</span>&#160;  }</div>
-<div class="line"><a name="l01977"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#ad5264906abe32d555a85bb2fe178af87"> 1977</a></span>&#160;  </div>
-<div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWritePacketsRequestImpl&gt;</a></div>
-<div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l01984"></a><span class="lineno"> 1984</span>&#160;  }</div>
-<div class="line"><a name="l01985"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a37055629f1c3eaac1a049b9102b0cb1f"> 1985</a></span>&#160;  </div>
-<div class="line"><a name="l01989"></a><span class="lineno"> 1989</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteFixedPacketsRequestImpl&gt;</a></div>
-<div class="line"><a name="l01990"></a><span class="lineno"> 1990</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l01991"></a><span class="lineno"> 1991</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l01992"></a><span class="lineno"> 1992</span>&#160;  }</div>
-<div class="line"><a name="l01993"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a2b0fc3feedad70a92097f4469690bfcb"> 1993</a></span>&#160;  </div>
-<div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteDataRequestImpl&gt;</a></div>
-<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l01999"></a><span class="lineno"> 1999</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l02000"></a><span class="lineno"> 2000</span>&#160;  }</div>
-<div class="line"><a name="l02001"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a73866105e36872bba349532f48bc0a56"> 2001</a></span>&#160;  </div>
-<div class="line"><a name="l02005"></a><span class="lineno"> 2005</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteRequestImpl&gt;</a></div>
-<div class="line"><a name="l02006"></a><span class="lineno"> 2006</span>&#160;  getContext(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a>&amp; request) noexcept {</div>
-<div class="line"><a name="l02007"></a><span class="lineno"> 2007</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
-<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;  }</div>
-<div class="line"><a name="l02009"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#add587883aa75d47fc03f3ca71fe5f901"> 2009</a></span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l02010"></a><span class="lineno"> 2010</span>&#160;  </div>
-<div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a> {</div>
-<div class="line"><a name="l02012"></a><span class="lineno"> 2012</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l02013"></a><span class="lineno"> 2013</span>&#160;    </div>
-<div class="line"><a name="l02015"></a><span class="lineno"> 2015</span>&#160;    <a class="code" href="class_reference.html">Reference&lt;IsochronousReadChannelImpl&gt;</a> readChannel;</div>
-<div class="line"><a name="l02016"></a><span class="lineno"> 2016</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l02017"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#aa842b4747ba8f41b29276d43a17a8fb8"> 2017</a></span>&#160; </div>
-<div class="line"><a name="l02021"></a><span class="lineno"> 2021</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>() noexcept</div>
-<div class="line"><a name="l02022"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html"> 2022</a></span>&#160;      : readChannel(new <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IsochronousReadChannelImpl</a>()) {</div>
-<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;    }</div>
-<div class="line"><a name="l02024"></a><span class="lineno"> 2024</span>&#160;    </div>
-<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>(</div>
-<div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IsochronousReadChannelImpl</a>* _readChannel) noexcept</div>
-<div class="line"><a name="l02030"></a><span class="lineno"> 2030</span>&#160;      : readChannel(_readChannel)</div>
-<div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;    {</div>
-<div class="line"><a name="l02032"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#aad1b1975baca7c25a7487b6c1cf40ae2"> 2032</a></span>&#160;      <span class="keywordflow">if</span> (!_readChannel) {</div>
-<div class="line"><a name="l02033"></a><span class="lineno"> 2033</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02034"></a><span class="lineno"> 2034</span>&#160;      }</div>
-<div class="line"><a name="l02035"></a><span class="lineno"> 2035</span>&#160;    }</div>
-<div class="line"><a name="l02036"></a><span class="lineno"> 2036</span>&#160;    </div>
-<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;    <span class="keyword">inline</span> IsochronousReadChannel(<span class="keyword">const</span> IsochronousReadChannel&amp; copy) noexcept</div>
-<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;      : readChannel(copy.readChannel) {</div>
-<div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;    }</div>
-<div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160; </div>
-<div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;    <span class="keyword">inline</span> IsochronousReadChannel&amp; operator=(<span class="keyword">const</span> IsochronousReadChannel&amp; assign) noexcept {</div>
+<div class="line"><a name="l01949"></a><span class="lineno"> 1949</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadFixedPacketsRequestImpl&gt;</a></div>
+<div class="line"><a name="l01950"></a><span class="lineno"> 1950</span>&#160;    getContext(IsochronousReadFixedPacketsRequest&amp; request) noexcept</div>
+<div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;  {</div>
+<div class="line"><a name="l01952"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#af015e900ceb9d4b3b3b843d7256803e2"> 1952</a></span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;  }</div>
+<div class="line"><a name="l01954"></a><span class="lineno"> 1954</span>&#160;  </div>
+<div class="line"><a name="l01958"></a><span class="lineno"> 1958</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadFixedDataRequestImpl&gt;</a></div>
+<div class="line"><a name="l01959"></a><span class="lineno"> 1959</span>&#160;    getContext(IsochronousReadFixedDataRequest&amp; request) noexcept</div>
+<div class="line"><a name="l01960"></a><span class="lineno"> 1960</span>&#160;  {</div>
+<div class="line"><a name="l01961"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a2d5e3071eaed7f81a613182dc8dafc39"> 1961</a></span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;  }</div>
+<div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;  </div>
+<div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousReadRequestImpl&gt;</a></div>
+<div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;    getContext(IsochronousReadRequest&amp; request) noexcept</div>
+<div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;  {</div>
+<div class="line"><a name="l01970"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#ad5264906abe32d555a85bb2fe178af87"> 1970</a></span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;  }</div>
+<div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;  </div>
+<div class="line"><a name="l01976"></a><span class="lineno"> 1976</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWritePacketsRequestImpl&gt;</a></div>
+<div class="line"><a name="l01977"></a><span class="lineno"> 1977</span>&#160;    getContext(IsochronousWritePacketsRequest&amp; request) noexcept</div>
+<div class="line"><a name="l01978"></a><span class="lineno"> 1978</span>&#160;  {</div>
+<div class="line"><a name="l01979"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a37055629f1c3eaac1a049b9102b0cb1f"> 1979</a></span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01980"></a><span class="lineno"> 1980</span>&#160;  }</div>
+<div class="line"><a name="l01981"></a><span class="lineno"> 1981</span>&#160;  </div>
+<div class="line"><a name="l01985"></a><span class="lineno"> 1985</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteFixedPacketsRequestImpl&gt;</a></div>
+<div class="line"><a name="l01986"></a><span class="lineno"> 1986</span>&#160;    getContext(IsochronousWriteFixedPacketsRequest&amp; request) noexcept</div>
+<div class="line"><a name="l01987"></a><span class="lineno"> 1987</span>&#160;  {</div>
+<div class="line"><a name="l01988"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a2b0fc3feedad70a92097f4469690bfcb"> 1988</a></span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01989"></a><span class="lineno"> 1989</span>&#160;  }</div>
+<div class="line"><a name="l01990"></a><span class="lineno"> 1990</span>&#160;  </div>
+<div class="line"><a name="l01994"></a><span class="lineno"> 1994</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteDataRequestImpl&gt;</a></div>
+<div class="line"><a name="l01995"></a><span class="lineno"> 1995</span>&#160;    getContext(IsochronousWriteDataRequest&amp; request) noexcept {</div>
+<div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l01997"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#a73866105e36872bba349532f48bc0a56"> 1997</a></span>&#160;  }</div>
+<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;  </div>
+<div class="line"><a name="l02002"></a><span class="lineno"> 2002</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteRequestImpl&gt;</a></div>
+<div class="line"><a name="l02003"></a><span class="lineno"> 2003</span>&#160;    getContext(IsochronousWriteRequest&amp; request) noexcept</div>
+<div class="line"><a name="l02004"></a><span class="lineno"> 2004</span>&#160;  {</div>
+<div class="line"><a name="l02005"></a><span class="lineno"> 2005</span>&#160;    <span class="keywordflow">return</span> request.context;</div>
+<div class="line"><a name="l02006"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#add587883aa75d47fc03f3ca71fe5f901"> 2006</a></span>&#160;  }</div>
+<div class="line"><a name="l02007"></a><span class="lineno"> 2007</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160;  </div>
+<div class="line"><a name="l02009"></a><span class="lineno"> 2009</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API IsochronousReadChannel {</div>
+<div class="line"><a name="l02010"></a><span class="lineno"> 2010</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160;    </div>
+<div class="line"><a name="l02013"></a><span class="lineno"> 2013</span>&#160;    <a class="code" href="class_reference.html">Reference&lt;IsochronousReadChannelImpl&gt;</a> readChannel;</div>
+<div class="line"><a name="l02014"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common.html#aa842b4747ba8f41b29276d43a17a8fb8"> 2014</a></span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l02015"></a><span class="lineno"> 2015</span>&#160; </div>
+<div class="line"><a name="l02019"></a><span class="lineno"> 2019</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>() noexcept</div>
+<div class="line"><a name="l02020"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html"> 2020</a></span>&#160;      : readChannel(new <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IsochronousReadChannelImpl</a>())</div>
+<div class="line"><a name="l02021"></a><span class="lineno"> 2021</span>&#160;    {</div>
+<div class="line"><a name="l02022"></a><span class="lineno"> 2022</span>&#160;    }</div>
+<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;    </div>
+<div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IsochronousReadChannelImpl</a>* _readChannel)</div>
+<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;      : readChannel(_readChannel)</div>
+<div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;    {</div>
+<div class="line"><a name="l02030"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#aad1b1975baca7c25a7487b6c1cf40ae2"> 2030</a></span>&#160;      <span class="keywordflow">if</span> (!_readChannel) {</div>
+<div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;        _throw <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;      }</div>
+<div class="line"><a name="l02033"></a><span class="lineno"> 2033</span>&#160;    }</div>
+<div class="line"><a name="l02034"></a><span class="lineno"> 2034</span>&#160;    </div>
+<div class="line"><a name="l02038"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ae97dcfd7e0d06f17e2735815252de665"> 2038</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ae97dcfd7e0d06f17e2735815252de665">IsochronousReadChannel</a>(<span class="keyword">const</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>&amp; copy) noexcept</div>
+<div class="line"><a name="l02039"></a><span class="lineno"> 2039</span>&#160;      : readChannel(copy.readChannel)</div>
+<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;    {</div>
+<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;    }</div>
+<div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160; </div>
+<div class="line"><a name="l02046"></a><span class="lineno"> 2046</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IsochronousReadChannel</a>&amp; assign) noexcept</div>
+<div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;    {</div>
 <div class="line"><a name="l02048"></a><span class="lineno"> 2048</span>&#160;      readChannel = assign.readChannel;</div>
-<div class="line"><a name="l02049"></a><span class="lineno"> 2049</span>&#160;      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02049"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ab34080f68048e0e205e5813fe4c0f43a"> 2049</a></span>&#160;      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;    }</div>
-<div class="line"><a name="l02051"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ab34080f68048e0e205e5813fe4c0f43a"> 2051</a></span>&#160;    </div>
-<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;    <span class="keyword">inline</span> uint64 getSubchannels() {</div>
-<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getSubchannels();</div>
-<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;    }</div>
-<div class="line"><a name="l02058"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ac90285987c25d867b091d02fc2afcf40"> 2058</a></span>&#160;    </div>
-<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> cancel() {</div>
-<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;      readChannel-&gt;cancel();</div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;    }</div>
-<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;    </div>
-<div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> close() {</div>
-<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;      readChannel = <span class="keyword">new</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IsochronousReadChannelImpl</a>();</div>
-<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;    }</div>
-<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160; </div>
-<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;    <span class="keyword">inline</span> IsochronousReadPacketsRequest</div>
-<div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;      getReadPacketsRequest() const noexcept {</div>
-<div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getReadPacketsRequest();</div>
-<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;    }</div>
-<div class="line"><a name="l02080"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a21f0bf4a4c4ab72180a0a3783f1b7db5"> 2080</a></span>&#160;    </div>
-<div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_packets_request.html">IsochronousReadFixedPacketsRequest</a></div>
-<div class="line"><a name="l02085"></a><span class="lineno"> 2085</span>&#160;      getReadFixedPacketsRequest() const noexcept {</div>
-<div class="line"><a name="l02086"></a><span class="lineno"> 2086</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getReadFixedPacketsRequest();</div>
-<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;    }</div>
-<div class="line"><a name="l02088"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4e61b1ddcc287476a7538bc5c7b29199"> 2088</a></span>&#160;    </div>
-<div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html">IsochronousReadFixedDataRequest</a></div>
-<div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;      getReadFixedDataRequest() const noexcept {</div>
-<div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getReadFixedDataRequest();</div>
-<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;    }</div>
-<div class="line"><a name="l02096"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4281f5918f2812fac3c682a1e3aec766"> 2096</a></span>&#160; </div>
-<div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_request.html">IsochronousReadRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;      readChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;    }</div>
-<div class="line"><a name="l02104"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a9480cdbb61266d393b3013a224ab35b5"> 2104</a></span>&#160;    </div>
-<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_packets_request.html">IsochronousReadPacketsRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;      readChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02111"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a0e787409967f944c6f532e30eddc216e"> 2111</a></span>&#160;    }</div>
-<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;    </div>
-<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_packets_request.html">IsochronousReadFixedPacketsRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;      readChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02119"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a639d85fe3dd87c3ec7548679294d20f6"> 2119</a></span>&#160;    }</div>
-<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    </div>
-<div class="line"><a name="l02124"></a><span class="lineno"> 2124</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html">IsochronousReadFixedDataRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;      readChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02127"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a5720c8c363bab04a9ce434151d25cd13"> 2127</a></span>&#160;    }</div>
-<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;    </div>
-<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;      <a class="code" href="class_allocator.html">Allocator&lt;IsochronousReadRequest&gt;</a>&amp; request) {</div>
-<div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;      readChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02135"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4a743e0a6aefced9bc5872df0c9ea61d"> 2135</a></span>&#160;    }</div>
-<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;    </div>
-<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_request.html">IsochronousReadRequest</a> dequeue() {</div>
-<div class="line"><a name="l02143"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a17aa2cb579c16e8d39bc73892974c6bc"> 2143</a></span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;dequeue();</div>
-<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;    }</div>
-<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    </div>
-<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dequeue(</div>
-<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> requests,</div>
-<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds) {</div>
-<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;dequeue(requests, microseconds);</div>
-<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;    }</div>
-<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;    </div>
-<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> wait(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds) {</div>
-<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;wait(microseconds);</div>
-<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;    }</div>
-<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;  };</div>
-<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;  </div>
-<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API IsochronousWriteChannel {</div>
-<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;    </div>
-<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;    <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteChannelImpl&gt;</a> writeChannel;</div>
-<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l02179"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#af8fabad30f01312dd33591193afef301"> 2179</a></span>&#160; </div>
-<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>() noexcept</div>
-<div class="line"><a name="l02184"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html"> 2184</a></span>&#160;      : writeChannel(new <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IsochronousWriteChannelImpl</a>()) {</div>
-<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;    }</div>
-<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160; </div>
-<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>(</div>
-<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IsochronousWriteChannelImpl</a>* _writeChannel) noexcept</div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;      : writeChannel(_writeChannel)</div>
-<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;    {</div>
-<div class="line"><a name="l02194"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#adefe957ec535db37ebfc4dfbf16c96e8"> 2194</a></span>&#160;      <span class="keywordflow">if</span> (!_writeChannel) {</div>
-<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;      }</div>
-<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;    }</div>
-<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160; </div>
-<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;    <span class="keyword">inline</span> IsochronousWriteChannel(<span class="keyword">const</span> IsochronousWriteChannel&amp; copy) noexcept</div>
-<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;      : writeChannel(copy.writeChannel) {</div>
-<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;    }</div>
-<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160; </div>
-<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;    <span class="keyword">inline</span> IsochronousWriteChannel&amp; operator=(<span class="keyword">const</span> IsochronousWriteChannel&amp; assign) noexcept</div>
-<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;    {</div>
-<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;      writeChannel = assign.writeChannel;</div>
-<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l02213"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a52caa5f6bcb6e22c5c5973865a5d9d24"> 2213</a></span>&#160;    }</div>
-<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160; </div>
-<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;    <span class="keyword">inline</span> uint64 getSubchannels()</div>
-<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;    {</div>
-<div class="line"><a name="l02220"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a56e2c8aab9cebdb08a739c800e4f3bd4"> 2220</a></span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getSubchannels();</div>
-<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;    }</div>
-<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160; </div>
-<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> cancel()</div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;    {</div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;      writeChannel-&gt;cancel();</div>
-<div class="line"><a name="l02229"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a01320bb5b7cc0d00353333beaefed84a"> 2229</a></span>&#160;    }</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;    </div>
-<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> close()</div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;    {</div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;      writeChannel = <span class="keyword">new</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IsochronousWriteChannelImpl</a>();</div>
-<div class="line"><a name="l02237"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a3e1d773e9e70534a24acb1600a367cdd"> 2237</a></span>&#160;    }</div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;    </div>
-<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a></div>
-<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;      getWritePacketsRequest() const noexcept {</div>
-<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getWritePacketsRequest();</div>
-<div class="line"><a name="l02245"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a50527dbcd292cf550c1fc4ab8162efe3"> 2245</a></span>&#160;    }</div>
-<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;    </div>
-<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a></div>
-<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;      getWriteFixedPacketsRequest() const noexcept {</div>
-<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getWriteFixedPacketsRequest();</div>
-<div class="line"><a name="l02254"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a553771c8537bf2e98078a3d41d15c57e"> 2254</a></span>&#160;    }</div>
-<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;    </div>
-<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a> getWriteDataRequest() const noexcept {</div>
-<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getWriteDataRequest();</div>
-<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;    }</div>
-<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;    </div>
-<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;      IsochronousWriteRequest&amp; request) {</div>
-<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;    }</div>
-<div class="line"><a name="l02270"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#ae1389bd528059f2a0bb67171ddf07d41"> 2270</a></span>&#160; </div>
-<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02277"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#ae8d817afbcea08f6040f2d12ac54a28c"> 2277</a></span>&#160;    }</div>
-<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160; </div>
-<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02285"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#acdafd6579272d1ef0d779959e9914a82"> 2285</a></span>&#160;    }</div>
-<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160; </div>
-<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a>&amp; request) {</div>
-<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02293"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a2f7466045b619473c15d086dac4b24f6"> 2293</a></span>&#160;    }</div>
-<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160; </div>
-<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
-<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;      <a class="code" href="class_allocator.html">Allocator&lt;IsochronousWriteRequest&gt;</a>&amp; request) {</div>
-<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
-<div class="line"><a name="l02301"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a3ca82086177adc54f0f233a3c94830b6"> 2301</a></span>&#160;    }</div>
-<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;    </div>
-<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a> dequeue() {</div>
-<div class="line"><a name="l02309"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#af3236de90cb2b5189b63c42383b6cf84"> 2309</a></span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;dequeue();</div>
-<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;    }</div>
-<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;    </div>
-<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> wait(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds) {</div>
-<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;wait(microseconds);</div>
-<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;    }</div>
-<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;  };</div>
-<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160; </div>
-<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API IsochronousChannelListener {</div>
-<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;    </div>
-<div class="line"><a name="l02339"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_channel_listener.html"> 2339</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onIsochronousPacket(</div>
-<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;      <span class="keyword">const</span> uint8* buffer,</div>
-<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size) noexcept = 0;</div>
-<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;  };</div>
-<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160; </div>
-<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html">FunctionControlProtocolListener</a> {</div>
-<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;    </div>
-<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onFCPRequest(</div>
-<div class="line"><a name="l02358"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html"> 2358</a></span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> nodeId,</div>
-<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;      <span class="keyword">const</span> uint8* buffer,</div>
-<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size) noexcept = 0;</div>
-<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160; </div>
-<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onFCPResponse(</div>
-<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> nodeId,</div>
-<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;      <span class="keyword">const</span> uint8* buffer,</div>
-<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size) noexcept = 0;</div>
-<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;  };</div>
-<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;};</div>
-<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160; </div>
-<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160;    </div>
+<div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;    <span class="keyword">inline</span> uint64 getSubchannels()</div>
+<div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;    {</div>
+<div class="line"><a name="l02057"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ac90285987c25d867b091d02fc2afcf40"> 2057</a></span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getSubchannels();</div>
+<div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160;    }</div>
+<div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;    </div>
+<div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> cancel()</div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;    {</div>
+<div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;      readChannel-&gt;cancel();</div>
+<div class="line"><a name="l02066"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4041350a282c64d7814f91b4400d577b"> 2066</a></span>&#160;    }</div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    </div>
+<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> close()</div>
+<div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;    {</div>
+<div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;      readChannel = <span class="keyword">new</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IsochronousReadChannelImpl</a>();</div>
+<div class="line"><a name="l02074"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ae77d7ba7b16f01a22f0deec38c46d1e5"> 2074</a></span>&#160;    }</div>
+<div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160; </div>
+<div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_packets_request.html">IsochronousReadPacketsRequest</a> getReadPacketsRequest() const noexcept</div>
+<div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160;    {</div>
+<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getReadPacketsRequest();</div>
+<div class="line"><a name="l02082"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a21f0bf4a4c4ab72180a0a3783f1b7db5"> 2082</a></span>&#160;    }</div>
+<div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;    </div>
+<div class="line"><a name="l02087"></a><span class="lineno"> 2087</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_packets_request.html">IsochronousReadFixedPacketsRequest</a> getReadFixedPacketsRequest() const noexcept</div>
+<div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;    {</div>
+<div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getReadFixedPacketsRequest();</div>
+<div class="line"><a name="l02090"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4e61b1ddcc287476a7538bc5c7b29199"> 2090</a></span>&#160;    }</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;    </div>
+<div class="line"><a name="l02095"></a><span class="lineno"> 2095</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html">IsochronousReadFixedDataRequest</a> getReadFixedDataRequest() const noexcept</div>
+<div class="line"><a name="l02096"></a><span class="lineno"> 2096</span>&#160;    {</div>
+<div class="line"><a name="l02097"></a><span class="lineno"> 2097</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;getReadFixedDataRequest();</div>
+<div class="line"><a name="l02098"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4281f5918f2812fac3c682a1e3aec766"> 2098</a></span>&#160;    }</div>
+<div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160; </div>
+<div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_request.html">IsochronousReadRequest</a>&amp; request)</div>
+<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;    {</div>
+<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;      readChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02106"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a9480cdbb61266d393b3013a224ab35b5"> 2106</a></span>&#160;    }</div>
+<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;    </div>
+<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_packets_request.html">IsochronousReadPacketsRequest</a>&amp; request)</div>
+<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;    {</div>
+<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;      readChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02114"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a0e787409967f944c6f532e30eddc216e"> 2114</a></span>&#160;    }</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;    </div>
+<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_packets_request.html">IsochronousReadFixedPacketsRequest</a>&amp; request)</div>
+<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;    {</div>
+<div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;      readChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02122"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a639d85fe3dd87c3ec7548679294d20f6"> 2122</a></span>&#160;    }</div>
+<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;    </div>
+<div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html">IsochronousReadFixedDataRequest</a>&amp; request)</div>
+<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;    {</div>
+<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;      readChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02130"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a5720c8c363bab04a9ce434151d25cd13"> 2130</a></span>&#160;    }</div>
+<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;    </div>
+<div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(<a class="code" href="class_allocator.html">Allocator&lt;IsochronousReadRequest&gt;</a>&amp; request)</div>
+<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;    {</div>
+<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;      readChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02138"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a4a743e0a6aefced9bc5872df0c9ea61d"> 2138</a></span>&#160;    }</div>
+<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;    </div>
+<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_read_request.html">IsochronousReadRequest</a> dequeue()</div>
+<div class="line"><a name="l02146"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#a17aa2cb579c16e8d39bc73892974c6bc"> 2146</a></span>&#160;    {</div>
+<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;dequeue();</div>
+<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;    }</div>
+<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;    </div>
+<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dequeue(</div>
+<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> requests,</div>
+<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds)</div>
+<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;    {</div>
+<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;dequeue(requests, microseconds);</div>
+<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;    }</div>
+<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;    </div>
+<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> wait(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds) {</div>
+<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;      <span class="keywordflow">return</span> readChannel-&gt;wait(microseconds);</div>
+<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;    }</div>
+<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;  };</div>
+<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;  </div>
+<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API IsochronousWriteChannel {</div>
+<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;    </div>
+<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;    <a class="code" href="class_reference.html">Reference&lt;IsochronousWriteChannelImpl&gt;</a> writeChannel;</div>
+<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l02184"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#af8fabad30f01312dd33591193afef301"> 2184</a></span>&#160; </div>
+<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>() noexcept</div>
+<div class="line"><a name="l02189"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html"> 2189</a></span>&#160;      : writeChannel(new <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IsochronousWriteChannelImpl</a>())</div>
+<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    {</div>
+<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;    }</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160; </div>
+<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>(<a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IsochronousWriteChannelImpl</a>* _writeChannel)</div>
+<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;      : writeChannel(_writeChannel)</div>
+<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;    {</div>
+<div class="line"><a name="l02199"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#adefe957ec535db37ebfc4dfbf16c96e8"> 2199</a></span>&#160;      <span class="keywordflow">if</span> (!_writeChannel) {</div>
+<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;        _throw <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;      }</div>
+<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;    }</div>
+<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160; </div>
+<div class="line"><a name="l02207"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a9ffb99df3d95d357ef2ec5c28477b8d9"> 2207</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a9ffb99df3d95d357ef2ec5c28477b8d9">IsochronousWriteChannel</a>(<span class="keyword">const</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>&amp; copy) noexcept</div>
+<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;      : writeChannel(copy.writeChannel)</div>
+<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;    {</div>
+<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;    }</div>
+<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160; </div>
+<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IsochronousWriteChannel</a>&amp; assign) noexcept</div>
+<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;    {</div>
+<div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;      writeChannel = assign.writeChannel;</div>
+<div class="line"><a name="l02218"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a52caa5f6bcb6e22c5c5973865a5d9d24"> 2218</a></span>&#160;      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;    }</div>
+<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160; </div>
+<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;    <span class="keyword">inline</span> uint64 getSubchannels()</div>
+<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;    {</div>
+<div class="line"><a name="l02226"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a56e2c8aab9cebdb08a739c800e4f3bd4"> 2226</a></span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getSubchannels();</div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;    }</div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160; </div>
+<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> cancel()</div>
+<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;    {</div>
+<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;      writeChannel-&gt;cancel();</div>
+<div class="line"><a name="l02235"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a01320bb5b7cc0d00353333beaefed84a"> 2235</a></span>&#160;    }</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    </div>
+<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> close()</div>
+<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;    {</div>
+<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;      writeChannel = <span class="keyword">new</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IsochronousWriteChannelImpl</a>();</div>
+<div class="line"><a name="l02243"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a3e1d773e9e70534a24acb1600a367cdd"> 2243</a></span>&#160;    }</div>
+<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;    </div>
+<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a></div>
+<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;      getWritePacketsRequest() const noexcept {</div>
+<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getWritePacketsRequest();</div>
+<div class="line"><a name="l02251"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a50527dbcd292cf550c1fc4ab8162efe3"> 2251</a></span>&#160;    }</div>
+<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;    </div>
+<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a></div>
+<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;      getWriteFixedPacketsRequest() const noexcept {</div>
+<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getWriteFixedPacketsRequest();</div>
+<div class="line"><a name="l02260"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a553771c8537bf2e98078a3d41d15c57e"> 2260</a></span>&#160;    }</div>
+<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;    </div>
+<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a> getWriteDataRequest() const noexcept {</div>
+<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;getWriteDataRequest();</div>
+<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;    }</div>
+<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;    </div>
+<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
+<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;      IsochronousWriteRequest&amp; request) {</div>
+<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;    }</div>
+<div class="line"><a name="l02276"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#ae1389bd528059f2a0bb67171ddf07d41"> 2276</a></span>&#160; </div>
+<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
+<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IsochronousWritePacketsRequest</a>&amp; request) {</div>
+<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02283"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#ae8d817afbcea08f6040f2d12ac54a28c"> 2283</a></span>&#160;    }</div>
+<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160; </div>
+<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
+<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IsochronousWriteFixedPacketsRequest</a>&amp; request) {</div>
+<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02291"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#acdafd6579272d1ef0d779959e9914a82"> 2291</a></span>&#160;    }</div>
+<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160; </div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
+<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;      <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IsochronousWriteDataRequest</a>&amp; request) {</div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02299"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a2f7466045b619473c15d086dac4b24f6"> 2299</a></span>&#160;    }</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160; </div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> queue(</div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;      <a class="code" href="class_allocator.html">Allocator&lt;IsochronousWriteRequest&gt;</a>&amp; request) {</div>
+<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;queue(request);</div>
+<div class="line"><a name="l02307"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a3ca82086177adc54f0f233a3c94830b6"> 2307</a></span>&#160;    }</div>
+<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;    </div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html">IsochronousWriteRequest</a> dequeue() {</div>
+<div class="line"><a name="l02315"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#af3236de90cb2b5189b63c42383b6cf84"> 2315</a></span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;dequeue();</div>
+<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;    }</div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;    </div>
+<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> wait(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> microseconds) {</div>
+<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;      <span class="keywordflow">return</span> writeChannel-&gt;wait(microseconds);</div>
+<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;    }</div>
+<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;  };</div>
+<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160; </div>
+<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API IsochronousChannelListener {</div>
+<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;    </div>
+<div class="line"><a name="l02345"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_isochronous_channel_listener.html"> 2345</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onIsochronousPacket(</div>
+<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;      <span class="keyword">const</span> uint8* buffer,</div>
+<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size) noexcept = 0;</div>
+<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;  };</div>
+<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160; </div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html">FunctionControlProtocolListener</a> {</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;    </div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onFCPRequest(</div>
+<div class="line"><a name="l02364"></a><span class="lineno"><a class="line" href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html"> 2364</a></span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> nodeId,</div>
+<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;      <span class="keyword">const</span> uint8* buffer,</div>
+<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size) noexcept = 0;</div>
+<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160; </div>
+<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onFCPResponse(</div>
+<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> nodeId,</div>
+<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;      <span class="keyword">const</span> uint8* buffer,</div>
+<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size) noexcept = 0;</div>
+<div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;  };</div>
+<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;};</div>
+<div class="line"><a name="l02381"></a><span class="lineno"> 2381</span>&#160; </div>
+<div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_data_request_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request.html">IEEE1394Common::IsochronousWriteDataRequest</a></div><div class="ttdoc">Isochronous write data request.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:1507</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_packets_request_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_packets_request.html">IEEE1394Common::IsochronousReadPacketsRequest</a></div><div class="ttdoc">Isochronous read packets request.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:660</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_channel_impl_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_channel_impl.html">IEEE1394Common::IsochronousReadChannelImpl</a></div><div class="ttdoc">Isochronous read channel.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:1776</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_channel_impl_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_channel_impl.html">IEEE1394Common::IsochronousWriteChannelImpl</a></div><div class="ttdoc">Isochronous write channel.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:1875</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_html_a0480845090843662a519401897f07862"><div class="ttname"><a href="class_i_e_e_e1394_common.html#a0480845090843662a519401897f07862">IEEE1394Common::Speed</a></div><div class="ttdeci">Speed</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:87</div></div>
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IEEE1394Common::IsochronousWriteChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2184</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IEEE1394Common::IsochronousWriteChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2189</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_packets_request_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html">IEEE1394Common::IsochronousWritePacketsRequest</a></div><div class="ttdoc">Isochronous write packets request.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:1279</div></div>
-<div class="ttc" id="astruct_big_endian_3_01uint32_01_4_html"><div class="ttname"><a href="struct_big_endian_3_01uint32_01_4.html">BigEndian&lt; uint32 &gt;</a></div><div class="ttdef"><b>Definition:</b> ByteOrder.h:491</div></div>
+<div class="ttc" id="astruct_big_endian_3_01uint32_01_4_html"><div class="ttname"><a href="struct_big_endian_3_01uint32_01_4.html">BigEndian&lt; uint32 &gt;</a></div><div class="ttdef"><b>Definition:</b> ByteOrder.h:501</div></div>
 <div class="ttc" id="aclass_allocator_html"><div class="ttname"><a href="class_allocator.html">Allocator</a></div><div class="ttdoc">Allocator.</div><div class="ttdef"><b>Definition:</b> Allocator.h:37</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html">IEEE1394Common::IsochronousWriteFixedPacketsRequest</a></div><div class="ttdoc">Isochronous write fixed packets request.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:1393</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_html_a46b0c0543a3c18f5cc1a9a7c15414796a5713e6ebf4fef0b24df572747ee700fe"><div class="ttname"><a href="class_i_e_e_e1394_common.html#a46b0c0543a3c18f5cc1a9a7c15414796a5713e6ebf4fef0b24df572747ee700fe">IEEE1394Common::READ_PACKETS_REQUEST</a></div><div class="ttdeci">@ READ_PACKETS_REQUEST</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:57</div></div>
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_function_control_protocol_listener_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html">IEEE1394Common::FunctionControlProtocolListener</a></div><div class="ttdoc">Function Control Protocol (FCP) listener.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2358</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_function_control_protocol_listener_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html">IEEE1394Common::FunctionControlProtocolListener</a></div><div class="ttdoc">Function Control Protocol (FCP) listener.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2364</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_html_aa1fc7d264d602d8375e45a5cc9f3f1f2"><div class="ttname"><a href="class_i_e_e_e1394_common.html#aa1fc7d264d602d8375e45a5cc9f3f1f2">IEEE1394Common::IsochronousRequestStatus</a></div><div class="ttdeci">IsochronousRequestStatus</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:66</div></div>
 <div class="ttc" id="aclass_reference_html_a025b60110a97f53871373f9f46a0d0ae"><div class="ttname"><a href="class_reference.html#a025b60110a97f53871373f9f46a0d0ae">Reference::isValid</a></div><div class="ttdeci">bool isValid() const noexcept</div><div class="ttdef"><b>Definition:</b> Reference.h:329</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_data_request_impl_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_data_request_impl.html">IEEE1394Common::IsochronousWriteDataRequestImpl</a></div><div class="ttdoc">Isochronous write data request context.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:620</div></div>
@@ -1472,8 +1478,10 @@ $(function() {
 <div class="ttc" id="aclass_i_e_e_e1394_common_html"><div class="ttname"><a href="class_i_e_e_e1394_common.html">IEEE1394Common</a></div><div class="ttdoc">Common IEEE 1394 types.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:32</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_request_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_request.html">IEEE1394Common::IsochronousReadRequest</a></div><div class="ttdoc">Isochronous read request.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:1124</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_request_impl_html_a38934df0d951f11cf7e12fbe21f07999"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_request_impl.html#a38934df0d951f11cf7e12fbe21f07999">IEEE1394Common::IsochronousWriteRequestImpl::setBuffer</a></div><div class="ttdeci">void setBuffer(const uint8 *buffer, unsigned int size, unsigned int numberOfPackets)</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_channel_html_ae97dcfd7e0d06f17e2735815252de665"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ae97dcfd7e0d06f17e2735815252de665">IEEE1394Common::IsochronousReadChannel::IsochronousReadChannel</a></div><div class="ttdeci">IsochronousReadChannel(IsochronousReadChannelImpl *_readChannel)</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2038</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_packets_request_impl_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request_impl.html">IEEE1394Common::IsochronousWritePacketsRequestImpl</a></div><div class="ttdoc">Isochronous write packets request context.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:600</div></div>
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IEEE1394Common::IsochronousReadChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2022</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_channel_html_a9ffb99df3d95d357ef2ec5c28477b8d9"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html#a9ffb99df3d95d357ef2ec5c28477b8d9">IEEE1394Common::IsochronousWriteChannel::IsochronousWriteChannel</a></div><div class="ttdeci">IsochronousWriteChannel(IsochronousWriteChannelImpl *_writeChannel)</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2207</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IEEE1394Common::IsochronousReadChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2020</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request_impl_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request_impl.html">IEEE1394Common::IsochronousWriteFixedPacketsRequestImpl</a></div><div class="ttdoc">Isochronous write fixed packets request context.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:610</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_html_a6132a01802bb6b1b355e055f89e11d72"><div class="ttname"><a href="class_i_e_e_e1394_common.html#a6132a01802bb6b1b355e055f89e11d72">IEEE1394Common::TransactionCode</a></div><div class="ttdeci">TransactionCode</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:137</div></div>

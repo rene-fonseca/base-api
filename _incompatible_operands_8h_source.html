@@ -68,26 +68,32 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_incompatible_operands.html">IncompatibleOperands</a> : <span class="keyword">public</span> <a class="code" href="class_exception.html">Exception</a> {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>() noexcept {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">   46</a></span>&#160;  </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(type) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html#afa5b15febf3988a34e06305b19cb1890">   54</a></span>&#160;  </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message, type) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html#ad453324cb34d0972be64f4fceeb9ed67">   63</a></span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>() noexcept</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message)</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">   46</a></span>&#160;  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html#afa5b15febf3988a34e06305b19cb1890">   55</a></span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(type)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_incompatible_operands.html#ad453324cb34d0972be64f4fceeb9ed67">   65</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_incompatible_operands.html#ad453324cb34d0972be64f4fceeb9ed67">IncompatibleOperands</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    : <a class="code" href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception</a>(message, type)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_exception_html_ad133b1e91d7cbd56143bcfc1e8759c50"><div class="ttname"><a href="class_exception.html#ad133b1e91d7cbd56143bcfc1e8759c50">Exception::Exception</a></div><div class="ttdeci">Exception() noexcept</div></div>
+<div class="ttc" id="aclass_incompatible_operands_html_ad453324cb34d0972be64f4fceeb9ed67"><div class="ttname"><a href="class_incompatible_operands.html#ad453324cb34d0972be64f4fceeb9ed67">IncompatibleOperands::IncompatibleOperands</a></div><div class="ttdeci">IncompatibleOperands(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> IncompatibleOperands.h:65</div></div>
 <div class="ttc" id="aclass_incompatible_operands_html_a6596a8fee0ca95f788ea10fb2b12ef96"><div class="ttname"><a href="class_incompatible_operands.html#a6596a8fee0ca95f788ea10fb2b12ef96">IncompatibleOperands::IncompatibleOperands</a></div><div class="ttdeci">IncompatibleOperands() noexcept</div><div class="ttdef"><b>Definition:</b> IncompatibleOperands.h:46</div></div>
 <div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
 <div class="ttc" id="aclass_incompatible_operands_html"><div class="ttname"><a href="class_incompatible_operands.html">IncompatibleOperands</a></div><div class="ttdoc">Incompatible operands exception.</div><div class="ttdef"><b>Definition:</b> IncompatibleOperands.h:29</div></div>

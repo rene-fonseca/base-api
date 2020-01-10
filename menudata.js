@@ -28,11 +28,14 @@ var menudata={children:[
 {text:"Namespace Members",url:"namespacemembers.html",children:[
 {text:"All",url:"namespacemembers.html",children:[
 {text:"e",url:"namespacemembers.html#index_e"},
+{text:"f",url:"namespacemembers.html#index_f"},
 {text:"g",url:"namespacemembers.html#index_g"},
 {text:"i",url:"namespacemembers.html#index_i"},
 {text:"l",url:"namespacemembers.html#index_l"},
 {text:"p",url:"namespacemembers.html#index_p"},
-{text:"s",url:"namespacemembers.html#index_s"}]},
+{text:"s",url:"namespacemembers.html#index_s"},
+{text:"t",url:"namespacemembers.html#index_t"}]},
+{text:"Functions",url:"namespacemembers_func.html"},
 {text:"Variables",url:"namespacemembers_vars.html",children:[
 {text:"e",url:"namespacemembers_vars.html#index_e"},
 {text:"g",url:"namespacemembers_vars.html#index_g"},
@@ -188,4 +191,5 @@ var menudata={children:[
 {text:"w",url:"functions_eval_w.html#index_w"},
 {text:"x",url:"functions_eval_x.html#index_x"},
 {text:"y",url:"functions_eval_y.html#index_y"}]},
-{text:"Related Functions",url:"functions_rela.html"}]}]}]}
+{text:"Related Functions",url:"functions_rela.html"}]}]},
+{text:"Examples",url:"examples.html"}]}

@@ -94,7 +94,7 @@ $(function() {
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    POLY* temp = <span class="keyword">dynamic_cast&lt;</span>POLY*<span class="keyword">&gt;</span>(value);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (!temp) {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      _throw <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> *temp;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> TYPE&amp; <a class="code" href="class_indirect.html#ad39671601ed838cbf4cf6fea6b7455ee">getValue</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">if</span> (!value) {</div>
-<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_indirect.html#a5316323b36a93acab1504ba3ed6ea37c">  207</a></span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_indirect.html#a5316323b36a93acab1504ba3ed6ea37c">  207</a></span>&#160;      _throw <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> *value;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">const</span> POLY* result = <span class="keyword">dynamic_cast&lt;</span>POLY*<span class="keyword">&gt;</span>(value);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">if</span> (!result) {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      _throw <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> *result;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  }</div>
@@ -181,7 +181,7 @@ $(function() {
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keyword">inline</span> TYPE* <a class="code" href="class_indirect.html#aba0c363f223c6793b1b36bea6ccd4982">operator-&gt;</a>()</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  {</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">if</span> (!value) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      _throw <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> value;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
@@ -189,7 +189,7 @@ $(function() {
 <div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="class_indirect.html#aba0c363f223c6793b1b36bea6ccd4982">  240</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> TYPE* <a class="code" href="class_indirect.html#aba0c363f223c6793b1b36bea6ccd4982">operator-&gt;</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">  </span>{</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (!value) {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      _throw <a class="code" href="class_null_pointer.html">NullPointer</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> value;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  }</div>

@@ -71,9 +71,9 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_i_e_e_e1394_impl.html">IEEE1394Impl</a>* getDefault() noexcept;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasBeenReset() <span class="keyword">const</span> noexcept = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasBeenReset() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> acknowledgeReset() noexcept = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> acknowledgeReset() = 0;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> resetBus() = 0;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
@@ -85,9 +85,9 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> close() = 0;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getLocalId() <span class="keyword">const</span> noexcept = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getLocalId() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getNumberOfNodes() <span class="keyword">const</span> noexcept = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getNumberOfNodes() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getStatus() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
@@ -141,13 +141,13 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IEEE1394Common::IsochronousWriteChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2184</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_write_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_write_channel.html">IEEE1394Common::IsochronousWriteChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2189</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_impl_html"><div class="ttname"><a href="class_i_e_e_e1394_impl.html">IEEE1394Impl</a></div><div class="ttdoc">IEEE 1394 implementation.</div><div class="ttdef"><b>Definition:</b> IEEE1394Impl.h:29</div></div>
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_function_control_protocol_listener_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html">IEEE1394Common::FunctionControlProtocolListener</a></div><div class="ttdoc">Function Control Protocol (FCP) listener.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2358</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_function_control_protocol_listener_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_function_control_protocol_listener.html">IEEE1394Common::FunctionControlProtocolListener</a></div><div class="ttdoc">Function Control Protocol (FCP) listener.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2364</div></div>
 <div class="ttc" id="aclass_reference_counted_object_html"><div class="ttname"><a href="class_reference_counted_object.html">ReferenceCountedObject</a></div><div class="ttdoc">Reference counted object.</div><div class="ttdef"><b>Definition:</b> ReferenceCountedObject.h:50</div></div>
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_channel_listener_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_channel_listener.html">IEEE1394Common::IsochronousChannelListener</a></div><div class="ttdoc">Isochronous channel listener.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2339</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_channel_listener_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_channel_listener.html">IEEE1394Common::IsochronousChannelListener</a></div><div class="ttdoc">Isochronous channel listener.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2345</div></div>
 <div class="ttc" id="aclass_i_e_e_e1394_common_html"><div class="ttname"><a href="class_i_e_e_e1394_common.html">IEEE1394Common</a></div><div class="ttdoc">Common IEEE 1394 types.</div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:32</div></div>
-<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IEEE1394Common::IsochronousReadChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2022</div></div>
+<div class="ttc" id="aclass_i_e_e_e1394_common_1_1_isochronous_read_channel_html"><div class="ttname"><a href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html">IEEE1394Common::IsochronousReadChannel</a></div><div class="ttdef"><b>Definition:</b> IEEE1394Common.h:2020</div></div>
 <div class="ttc" id="aclass_e_u_i64_html"><div class="ttname"><a href="class_e_u_i64.html">EUI64</a></div><div class="ttdoc">IEEE EUI-64 identifier.</div><div class="ttdef"><b>Definition:</b> EUI64.h:33</div></div>
 <div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array</a></div><div class="ttdoc">Array collection.</div><div class="ttdef"><b>Definition:</b> Array.h:40</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
