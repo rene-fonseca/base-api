@@ -71,22 +71,26 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_document.html">Document</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_entity_decl.html#a01b6eae5b6218495a6cdae8789f44348">   35</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_entity_decl.html#a01b6eae5b6218495a6cdae8789f44348">EntityDecl</a>(<span class="keywordtype">void</span>* context) noexcept : <a class="code" href="class_declaration.html#afe496fc95c11c2df19719ca7b03cb242">Declaration</a>(context) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_entity_decl.html">EntityDecl</a>(<a class="code" href="class_node.html">Node</a> node) : <a class="code" href="class_declaration.html">Declaration</a>(node) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    bassert(</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == ENTITY_DECL_NODE),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_entity_decl.html#a01b6eae5b6218495a6cdae8789f44348">   35</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_entity_decl.html#a01b6eae5b6218495a6cdae8789f44348">EntityDecl</a>(<span class="keywordtype">void</span>* context) noexcept</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : <a class="code" href="class_declaration.html#afe496fc95c11c2df19719ca7b03cb242">Declaration</a>(context)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_entity_decl.html">EntityDecl</a>(<a class="code" href="class_node.html">Node</a> node)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    : <a class="code" href="class_declaration.html">Declaration</a>(node)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    bassert(</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == ENTITY_DECL_NODE),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:307</div></div>
-<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:45</div></div>
+<div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:325</div></div>
+<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:47</div></div>
 <div class="ttc" id="aclass_node_html_a8fad79f65f64fc6c150574e023eb043f"><div class="ttname"><a href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">Node::getType</a></div><div class="ttdeci">NodeType getType() const</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">DOM node.</div><div class="ttdef"><b>Definition:</b> Node.h:39</div></div>
 <div class="ttc" id="aclass_declaration_html_afe496fc95c11c2df19719ca7b03cb242"><div class="ttname"><a href="class_declaration.html#afe496fc95c11c2df19719ca7b03cb242">Declaration::Declaration</a></div><div class="ttdeci">Declaration(void *context) noexcept</div><div class="ttdef"><b>Definition:</b> Declaration.h:35</div></div>

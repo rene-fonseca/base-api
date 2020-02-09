@@ -72,145 +72,192 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_allocator.html">Allocator&lt;const void*&gt;</a> frames; <span class="comment">// we use void* over MemorySize since debugger can show symbols</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> getUseStandardOut() noexcept;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> setUseStandardOut(<span class="keywordtype">bool</span> useStandardOut) noexcept;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; getErrorStream() noexcept;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_stack_frame.html">StackFrame</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="class_stack_frame.html">StackFrame</a>(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; stackTrace);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; assign);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> getHash(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; stackTrace) noexcept;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> getHash() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> getHash(frames.getSpan());</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a> getTrace() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> frames.getSpan();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">inline</span> MemorySize getSize() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isEmpty() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> frames.<a class="code" href="class_allocator.html#a1c7b6b71819eebb96af7b9236dc60884">isEmpty</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* getFrame(MemorySize index) <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (index &gt;= frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>()) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_stack_frame.html#a2ebfd756da79807cd4b515aa3db4cbbb">   79</a></span>&#160;    <span class="keywordflow">return</span> frames.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>()[index];</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  MemoryDiff find(<span class="keyword">const</span> <span class="keywordtype">void</span>* address) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  MemoryDiff findLast(<span class="keyword">const</span> <span class="keywordtype">void</span>* address) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">void</span> stripUntil(MemorySize index) noexcept;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  MemorySize stripUntil(<span class="keyword">const</span> <span class="keywordtype">void</span>* ip) noexcept;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span>* getStackFrame() noexcept;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  static <span class="keywordtype">void</span>* getCaller() noexcept;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> doesSupportStackTrace() noexcept</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#if (defined(_COM_AZURE_DEV__BASE__NO_STACK_TRACE))</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> getUseStandardOut() noexcept;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_stack_frame.html#a5d768b25804f5c3dd3b2929e27c78a77">   43</a></span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> setUseStandardOut(<span class="keywordtype">bool</span> useStandardOut) noexcept;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; getErrorStream() noexcept;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="class_stack_frame.html">StackFrame</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_stack_frame.html">StackFrame</a>(const <a class="code" href="class_const_span.html">ConstSpan</a>&lt;const <span class="keywordtype">void</span>*&gt;&amp; stackTrace);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; operator=(const <a class="code" href="class_const_span.html">ConstSpan</a>&lt;const <span class="keywordtype">void</span>*&gt;&amp; assign);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  static <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> getHash(const <a class="code" href="class_const_span.html">ConstSpan</a>&lt;const <span class="keywordtype">void</span>*&gt;&amp; stackTrace) noexcept;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  inline <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> getHash() const noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> getHash(frames.getSpan());</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a> getTrace() const noexcept</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> frames.getSpan();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">inline</span> MemorySize getSize() const noexcept</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> isEmpty() const noexcept</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> frames.<a class="code" href="class_allocator.html#a1c7b6b71819eebb96af7b9236dc60884">isEmpty</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* getFrame(MemorySize index) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (index &gt;= frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>()) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_stack_frame.html#a2ebfd756da79807cd4b515aa3db4cbbb">   89</a></span>&#160;    <span class="keywordflow">return</span> frames.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>()[index];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  MemoryDiff find(<span class="keyword">const</span> <span class="keywordtype">void</span>* address) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  MemoryDiff findLast(<span class="keyword">const</span> <span class="keywordtype">void</span>* address) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">void</span> stripUntil(MemorySize index) noexcept;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  MemorySize stripUntil(<span class="keyword">const</span> <span class="keywordtype">void</span>* ip) noexcept;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  static <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getStack(const <span class="keywordtype">void</span>** dest, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skip = 1, <span class="keywordtype">bool</span> trim = true);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span>* getStackFrame() noexcept;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  static <a class="code" href="class_stack_frame.html">StackFrame</a> getStack(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skip = 1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> levels = 32, <span class="keywordtype">bool</span> trim = true);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">bool</span> operator==(const <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; compare) const noexcept</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>() != compare.getSize()) {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">for</span> (MemorySize i = 0; i &lt; frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>(); ++i) {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>()[i] != compare.frames.getElements()[i]) {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; compare) <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> !(operator==(compare));</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; compare) <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>() != compare.getSize()) {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span> (MemorySize i = 0; i &lt; frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>(); ++i) {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>()[i] != compare[i]) {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; compare) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  static <span class="keywordtype">void</span>* getCaller() noexcept;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  static <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getStack(const <span class="keywordtype">void</span>** dest, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skip = 1, <span class="keywordtype">bool</span> trim = true);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  static <a class="code" href="class_stack_frame.html">StackFrame</a> getStack(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skip = 1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> levels = 32, <span class="keywordtype">bool</span> trim = true);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">bool</span> operator==(const <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; compare) const noexcept</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>() != compare.getSize()) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">for</span> (MemorySize i = 0; i &lt; frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>(); ++i) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>()[i] != compare.frames.getElements()[i]) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="class_stack_frame.html#a0a5b9e4ab4a3d12afda27444ce15eb38">  154</a></span>&#160;  }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; compare) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> !(operator==(compare));</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; compare) <span class="keyword">const</span> noexcept</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> !(operator==(compare));</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> !frames.<a class="code" href="class_allocator.html#a1c7b6b71819eebb96af7b9236dc60884">isEmpty</a>();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> dump(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skip = 1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> levels = 32);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    FLAG_SHOW_ADDRESS = 1 &lt;&lt; 0,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    FLAG_SHOW_MODULE = 1 &lt;&lt; 1,</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    FLAG_INDENT = 1 &lt;&lt; 2,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    FLAG_COMPACT = 1 &lt;&lt; 3,</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    FLAG_FULL_PATH = 1 &lt;&lt; 4,</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    FLAG_USE_COLORS = 1 &lt;&lt; 5,</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    FLAG_STRIP_NAMESPACE = 1 &lt;&lt; 6,</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    FLAG_TRIM_SYSTEM = 1 &lt;&lt; 7,</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    FLAG_DEFAULT = FLAG_COMPACT | FLAG_SHOW_ADDRESS | FLAG_SHOW_MODULE | FLAG_INDENT | FLAG_TRIM_SYSTEM</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  };</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> toStream(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; stackTrace, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = FLAG_DEFAULT);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;};</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; value);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="class_hash_3_01_stack_frame_01_4.html">  201</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_hash.html">Hash</a>&lt;<a class="code" href="class_stack_frame.html">StackFrame</a>&gt; {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> operator()(<span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; value) noexcept</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> value.<a class="code" href="class_stack_frame.html#a5da0ad61f4750dd6b434ecc0a8ec3d4c">getHash</a>();</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>() != compare.getSize()) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_stack_frame.html#af72d4df01c9807d61d48de243c4e7521">  168</a></span>&#160;    <span class="keywordflow">for</span> (MemorySize i = 0; i &lt; frames.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>(); ++i) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="keywordflow">if</span> (frames.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>()[i] != compare[i]) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="class_stack_frame.html#a6b0d4322b68fef268f3ffcbd513c141f">  174</a></span>&#160;  }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; compare) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> !(operator==(compare));</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> !frames.<a class="code" href="class_allocator.html#a1c7b6b71819eebb96af7b9236dc60884">isEmpty</a>();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> dump(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> skip = 1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> levels = 32);</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_stack_frame.html#aa5eaf1d5d8d50c9d51801c6dcc2f1ce8">  194</a></span>&#160;  </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    FLAG_SHOW_ADDRESS = 1 &lt;&lt; 0, <span class="comment">// Show address.</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    FLAG_SHOW_MODULE = 1 &lt;&lt; 1, <span class="comment">// Show module.</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    FLAG_INDENT = 1 &lt;&lt; 2, <span class="comment">//&lt; Indent.</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    FLAG_COMPACT = 1 &lt;&lt; 3, <span class="comment">//&lt; Only show.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    FLAG_FULL_PATH = 1 &lt;&lt; 4, <span class="comment">//&lt; Show full path for module.</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    FLAG_USE_COLORS = 1 &lt;&lt; 5, <span class="comment">//&lt; Use ANSI colors.</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    FLAG_USE_COLORS_IF_ANSI_TERMINAL = 1 &lt;&lt; 6, <span class="comment">//&lt; Use ANSI colors if supported by stream.</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    FLAG_STRIP_NAMESPACE = 1 &lt;&lt; 7, <span class="comment">//&lt; base namespace.</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    FLAG_TRIM_SYSTEM = 1 &lt;&lt; 8, <span class="comment">// Skip system functions.</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    FLAG_DEFAULT = FLAG_COMPACT | FLAG_SHOW_ADDRESS | FLAG_SHOW_MODULE | FLAG_INDENT | FLAG_TRIM_SYSTEM</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  };</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; toStream(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream,</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                      <span class="keyword">const</span> <a class="code" href="class_const_span.html">ConstSpan&lt;const void*&gt;</a>&amp; stackTrace,</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = FLAG_DEFAULT);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;};</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; value);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="class_hash_3_01_stack_frame_01_4.html">  219</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_hash.html">Hash</a>&lt;<a class="code" href="class_stack_frame.html">StackFrame</a>&gt; {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> operator()(<span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackFrame</a>&amp; value) noexcept</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> value.<a class="code" href="class_stack_frame.html#a5da0ad61f4750dd6b434ecc0a8ec3d4c">getHash</a>();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;};</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">// TAG: refactor to use StackTrace </span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_stack_frame.html">StackFrame</a> <a class="code" href="class_stack_frame.html">StackTrace</a>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="class_formatted_stack_trace.html">  232</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_formatted_stack_trace.html">FormattedStackTrace</a> {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackTrace</a>&amp; stackTrace;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 0;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="class_formatted_stack_trace.html#ade7834bd8953bf7c5130f6cb2f6cf7ca">  240</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_formatted_stack_trace.html#ade7834bd8953bf7c5130f6cb2f6cf7ca">FormattedStackTrace</a>(<span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackTrace</a>&amp; _stackTrace, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _flags = StackTrace::FLAG_DEFAULT) noexcept</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    : stackTrace(_stackTrace), flags(_flags)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="class_formatted_stack_trace.html#a8396876c3763fe8da8e6f0172db34b61">  246</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_formatted_stack_trace.html#a8396876c3763fe8da8e6f0172db34b61">getFlags</a>() const noexcept</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">return</span> flags;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="class_formatted_stack_trace.html#a673b7fea5c88d533d466d2d9e8ad2184">  252</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> <span class="keyword">const</span> <a class="code" href="class_stack_frame.html">StackTrace</a>&amp;() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">return</span> stackTrace;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;};</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_formatted_stack_trace.html">FormattedStackTrace</a>&amp; stackTrace)</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_stack_frame.html#a136cf4d85db44b4ae6cbe241c034c45c">StackTrace::toStream</a>(stream, <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_stack_frame.html">StackTrace</a>&amp;<span class="keyword">&gt;</span>(stackTrace).getTrace(), stackTrace.<a class="code" href="class_formatted_stack_trace.html#a8396876c3763fe8da8e6f0172db34b61">getFlags</a>());</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_hash_html"><div class="ttname"><a href="class_hash.html">Hash</a></div><div class="ttdoc">Hash function object.</div><div class="ttdef"><b>Definition:</b> Hash.h:30</div></div>
+<div class="ttc" id="aclass_formatted_stack_trace_html_a8396876c3763fe8da8e6f0172db34b61"><div class="ttname"><a href="class_formatted_stack_trace.html#a8396876c3763fe8da8e6f0172db34b61">FormattedStackTrace::getFlags</a></div><div class="ttdeci">unsigned int getFlags() const noexcept</div><div class="ttdef"><b>Definition:</b> StackFrame.h:246</div></div>
 <div class="ttc" id="aclass_allocator_html"><div class="ttname"><a href="class_allocator.html">Allocator&lt; const void * &gt;</a></div></div>
 <div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
 <div class="ttc" id="aclass_allocator_html_a813f826a7bcf0ab06e9dafa5cc0730f4"><div class="ttname"><a href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">Allocator::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Allocator.h:533</div></div>
 <div class="ttc" id="aclass_stack_frame_html"><div class="ttname"><a href="class_stack_frame.html">StackFrame</a></div><div class="ttdef"><b>Definition:</b> StackFrame.h:25</div></div>
 <div class="ttc" id="aclass_allocator_html_abbfd194591389976896abc85ce1f1872"><div class="ttname"><a href="class_allocator.html#abbfd194591389976896abc85ce1f1872">Allocator::getElements</a></div><div class="ttdeci">TYPE * getElements() noexcept</div><div class="ttdef"><b>Definition:</b> Allocator.h:427</div></div>
+<div class="ttc" id="aclass_formatted_stack_trace_html_ade7834bd8953bf7c5130f6cb2f6cf7ca"><div class="ttname"><a href="class_formatted_stack_trace.html#ade7834bd8953bf7c5130f6cb2f6cf7ca">FormattedStackTrace::FormattedStackTrace</a></div><div class="ttdeci">FormattedStackTrace(const StackTrace &amp;_stackTrace, unsigned int _flags=StackTrace::FLAG_DEFAULT) noexcept</div><div class="ttdef"><b>Definition:</b> StackFrame.h:240</div></div>
 <div class="ttc" id="aclass_stack_frame_html_a5da0ad61f4750dd6b434ecc0a8ec3d4c"><div class="ttname"><a href="class_stack_frame.html#a5da0ad61f4750dd6b434ecc0a8ec3d4c">StackFrame::getHash</a></div><div class="ttdeci">static unsigned long getHash(const ConstSpan&lt; const void * &gt; &amp;stackTrace) noexcept</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:932</div></div>
+<div class="ttc" id="aclass_formatted_stack_trace_html"><div class="ttname"><a href="class_formatted_stack_trace.html">FormattedStackTrace</a></div><div class="ttdef"><b>Definition:</b> StackFrame.h:232</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
 <div class="ttc" id="aclass_const_span_html"><div class="ttname"><a href="class_const_span.html">ConstSpan</a></div><div class="ttdef"><b>Definition:</b> Heap.h:90</div></div>
+<div class="ttc" id="aclass_stack_frame_html_a136cf4d85db44b4ae6cbe241c034c45c"><div class="ttname"><a href="class_stack_frame.html#a136cf4d85db44b4ae6cbe241c034c45c">StackFrame::toStream</a></div><div class="ttdeci">static FormatOutputStream &amp; toStream(FormatOutputStream &amp;stream, const ConstSpan&lt; const void * &gt; &amp;stackTrace, unsigned int flags=FLAG_DEFAULT)</div></div>
 <div class="ttc" id="aclass_allocator_html_a1c7b6b71819eebb96af7b9236dc60884"><div class="ttname"><a href="class_allocator.html#a1c7b6b71819eebb96af7b9236dc60884">Allocator::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> Allocator.h:549</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

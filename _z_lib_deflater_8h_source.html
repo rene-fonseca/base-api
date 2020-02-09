@@ -87,32 +87,33 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span>* context = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  State state = RUNNING;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="class_z_lib_deflater.html">ZLibDeflater</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="class_z_lib_deflater.html">ZLibDeflater</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> compressionLevel);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_deflater.html#a9f71ce104b4c12cc6b122bb76aabe17f">atEnd</a>() const noexcept</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> state == ENDED;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_deflater.html#a9fe85eedd3ce3b5f68052d25edb531c1">flush</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  MemorySize <a class="code" href="class_push_interface.html#a938e5de881940780738c4ae8cf0e878c">push</a>(<span class="keyword">const</span> uint8* buffer, MemorySize size);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">pushEnd</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  MemorySize <a class="code" href="class_pull_interface.html#a2e58b6ca05052127a2e4d5ed523f9b9a">pull</a>(uint8* buffer, MemorySize size);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="class_z_lib_deflater.html">ZLibDeflater</a>() noexcept;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isSupported() noexcept;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="class_z_lib_deflater.html">ZLibDeflater</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="class_z_lib_deflater.html">ZLibDeflater</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> compressionLevel);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  inline <span class="keywordtype">bool</span> atEnd() const noexcept</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> state == ENDED;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_deflater.html#a9fe85eedd3ce3b5f68052d25edb531c1">flush</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  MemorySize <a class="code" href="class_push_interface.html#a938e5de881940780738c4ae8cf0e878c">push</a>(<span class="keyword">const</span> uint8* buffer, MemorySize size);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">pushEnd</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  MemorySize <a class="code" href="class_pull_interface.html#a2e58b6ca05052127a2e4d5ed523f9b9a">pull</a>(uint8* buffer, MemorySize size);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="class_z_lib_deflater.html">ZLibDeflater</a>() noexcept;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_push_interface_html_a9c1e62e52fd979bd14586b50336402f4"><div class="ttname"><a href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">PushInterface::pushEnd</a></div><div class="ttdeci">virtual void pushEnd()</div></div>
 <div class="ttc" id="aclass_allocator_html"><div class="ttname"><a href="class_allocator.html">Allocator&lt; uint8 &gt;</a></div></div>
-<div class="ttc" id="aclass_deflater_html_a9f71ce104b4c12cc6b122bb76aabe17f"><div class="ttname"><a href="class_deflater.html#a9f71ce104b4c12cc6b122bb76aabe17f">Deflater::atEnd</a></div><div class="ttdeci">virtual bool atEnd() const =0</div></div>
 <div class="ttc" id="aclass_deflater_html_a9fe85eedd3ce3b5f68052d25edb531c1"><div class="ttname"><a href="class_deflater.html#a9fe85eedd3ce3b5f68052d25edb531c1">Deflater::flush</a></div><div class="ttdeci">virtual void flush()=0</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
 <div class="ttc" id="aclass_deflater_html"><div class="ttname"><a href="class_deflater.html">Deflater</a></div><div class="ttdoc">Deflater push stream interface.</div><div class="ttdef"><b>Definition:</b> Deflater.h:30</div></div>

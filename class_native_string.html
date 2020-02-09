@@ -50,21 +50,46 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5052e27a89fa03b35bde16f79b821327"><td class="memItemLeft" align="right" valign="top"><a id="a5052e27a89fa03b35bde16f79b821327"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NativeString</b> (const char *_value) noexcept</td></tr>
+<tr class="memitem:a5052e27a89fa03b35bde16f79b821327"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_native_string.html#a5052e27a89fa03b35bde16f79b821327">NativeString</a> (const char *_value) noexcept</td></tr>
 <tr class="separator:a5052e27a89fa03b35bde16f79b821327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb7b833d5ec769d3b38fba7285c0eee7"><td class="memItemLeft" align="right" valign="top"><a id="adb7b833d5ec769d3b38fba7285c0eee7"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getValue</b> () const noexcept</td></tr>
+<tr class="memitem:adb7b833d5ec769d3b38fba7285c0eee7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_native_string.html#adb7b833d5ec769d3b38fba7285c0eee7">getValue</a> () const noexcept</td></tr>
 <tr class="separator:adb7b833d5ec769d3b38fba7285c0eee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a077779cf16805ffb383bdef19e826dcd"><td class="memItemLeft" align="right" valign="top"><a id="a077779cf16805ffb383bdef19e826dcd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator const char *</b> () const noexcept</td></tr>
+<tr class="memitem:a077779cf16805ffb383bdef19e826dcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_native_string.html#a077779cf16805ffb383bdef19e826dcd">operator const char *</a> () const noexcept</td></tr>
 <tr class="separator:a077779cf16805ffb383bdef19e826dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9b1e3802545887ea61ce9127387166b"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_native_string.html#af9b1e3802545887ea61ce9127387166b">getLength</a> () const noexcept</td></tr>
 <tr class="separator:af9b1e3802545887ea61ce9127387166b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native string. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5052e27a89fa03b35bde16f79b821327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5052e27a89fa03b35bde16f79b821327">&#9670;&nbsp;</a></span>NativeString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeString::NativeString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes the string. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="af9b1e3802545887ea61ce9127387166b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9b1e3802545887ea61ce9127387166b">&#9670;&nbsp;</a></span>getLength()</h2>
 
@@ -88,6 +113,58 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getValue</b> 
 </table>
 </div><div class="memdoc">
 <p>Returns the length of the string. </p>
+
+</div>
+</div>
+<a id="adb7b833d5ec769d3b38fba7285c0eee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7b833d5ec769d3b38fba7285c0eee7">&#9670;&nbsp;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* NativeString::getValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the string. </p>
+
+</div>
+</div>
+<a id="a077779cf16805ffb383bdef19e826dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a077779cf16805ffb383bdef19e826dcd">&#9670;&nbsp;</a></span>operator const char *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeString::operator const char * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the string. </p>
 
 </div>
 </div>

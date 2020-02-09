@@ -39,11 +39,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_file-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">File Class Reference<div class="ingroups"><a class="el" href="group__io.html">IO</a></div></div>  </div>
@@ -55,13 +53,8 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_file_8h_source.html">base/io/File.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="class_object.html">Object</a>, and <a class="el" href="class_asynchronous_i_o_stream.html">AsynchronousIOStream</a>.</p>
+<p>Inherits <a class="el" href="class_resource.html">Resource</a>, and <a class="el" href="class_asynchronous_i_o_stream.html">AsynchronousIOStream</a>.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_1_1_file_handle.html">FileHandle</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:adb1db6815e6eeb9b39c76da4a541ae18"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#adb1db6815e6eeb9b39c76da4a541ae18">Access</a> { <a class="el" href="class_file.html#adb1db6815e6eeb9b39c76da4a541ae18acc0d80fbceb1a41384a750f864c526ec">READ</a>, 
@@ -121,6 +114,12 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ac99190ca22e4316fc454aaedc6380fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08dad5a30da0a45397e05706f098f169"><td class="memItemLeft" align="right" valign="top"><a id="a08dad5a30da0a45397e05706f098f169"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Encoding</b> { <b>ENCODING_RAW</b>, 
+<b>ENCODING_ASCII</b>, 
+<b>ENCODING_UTF8</b>, 
+<b>ENCODING_UTF8_ISO</b>
+ }</td></tr>
+<tr class="separator:a08dad5a30da0a45397e05706f098f169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -128,10 +127,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a51dc22c62ddf2fbeef8335300fc8e56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc9381ddfe8095986945e5da42796923"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#abc9381ddfe8095986945e5da42796923">File</a> (const <a class="el" href="class_string.html">String</a> &amp;path, <a class="el" href="class_file.html#adb1db6815e6eeb9b39c76da4a541ae18">Access</a> access, unsigned int options)</td></tr>
 <tr class="separator:abc9381ddfe8095986945e5da42796923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5496f9460007f6dc2423b024cc8c2d34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a5496f9460007f6dc2423b024cc8c2d34">File</a> (const <a class="el" href="class_file.html">File</a> &amp;copy) noexcept</td></tr>
-<tr class="separator:a5496f9460007f6dc2423b024cc8c2d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae99479208afc15cd61cdc6efa41fd699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_file.html">File</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#ae99479208afc15cd61cdc6efa41fd699">operator=</a> (const <a class="el" href="class_file.html">File</a> &amp;assign) noexcept</td></tr>
-<tr class="separator:ae99479208afc15cd61cdc6efa41fd699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83cbce54d6c3b8c2f417b51f6b3f488c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a83cbce54d6c3b8c2f417b51f6b3f488c">close</a> ()</td></tr>
 <tr class="separator:a83cbce54d6c3b8c2f417b51f6b3f488c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea197d0a55584443af0c8a0e6ed2c6aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#aea197d0a55584443af0c8a0e6ed2c6aa">isClosed</a> () const noexcept</td></tr>
@@ -175,6 +170,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a10c4b6c94d6a298be6604774144552d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa36123e54912bf16e4e0ee700519f98a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#aa36123e54912bf16e4e0ee700519f98a">write</a> (const uint8 *buffer, unsigned int size, bool nonblocking=false)</td></tr>
 <tr class="separator:aa36123e54912bf16e4e0ee700519f98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ad776e43673fe64cde89b77b67b914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a70ad776e43673fe64cde89b77b67b914">getHandle</a> () const noexcept</td></tr>
+<tr class="separator:a70ad776e43673fe64cde89b77b67b914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea790e0f36f6002b703be9f0af34886c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#aea790e0f36f6002b703be9f0af34886c">asyncCancel</a> ()</td></tr>
 <tr class="separator:aea790e0f36f6002b703be9f0af34886c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d4a5f36cad661a9f7c983fede34daa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_asynchronous_read_operation.html">AsynchronousReadOperation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a7d4a5f36cad661a9f7c983fede34daa0">read</a> (uint8 *buffer, unsigned int bytesToRead, unsigned long long offset, <a class="el" href="class_asynchronous_read_event_listener.html">AsynchronousReadEventListener</a> *listener)</td></tr>
@@ -183,6 +180,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15ef8a333d9f48f625cc72dfc55425f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac704ebdf5f57d7a1c5ddf409d797fb69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#ac704ebdf5f57d7a1c5ddf409d797fb69">~File</a> ()</td></tr>
 <tr class="separator:ac704ebdf5f57d7a1c5ddf409d797fb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_resource.html">Resource</a></td></tr>
+<tr class="memitem:a916d6696c1c7b1e17b1c7cc2ebdcdd3e inherit pub_methods_class_resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a916d6696c1c7b1e17b1c7cc2ebdcdd3e">getDescription</a> () const</td></tr>
+<tr class="separator:a916d6696c1c7b1e17b1c7cc2ebdcdd3e inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec668a244fd79d0e9dc8f70c3936e7e2 inherit pub_methods_class_resource"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#aec668a244fd79d0e9dc8f70c3936e7e2">setDescription</a> (const <a class="el" href="class_string.html">String</a> &amp;description)</td></tr>
+<tr class="separator:aec668a244fd79d0e9dc8f70c3936e7e2 inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5598b07ed9e571ce7320b11c6826e9ee inherit pub_methods_class_resource"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a5598b07ed9e571ce7320b11c6826e9ee">getResourceId</a> () const</td></tr>
+<tr class="separator:a5598b07ed9e571ce7320b11c6826e9ee inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4383d49ffb694fa722df35f5b1fbcd inherit pub_methods_class_resource"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#afc4383d49ffb694fa722df35f5b1fbcd">getCreatedById</a> () const</td></tr>
+<tr class="separator:afc4383d49ffb694fa722df35f5b1fbcd inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc33b9816f44f8c3af5d194a492a9ed inherit pub_methods_class_resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">AnyReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a6fc33b9816f44f8c3af5d194a492a9ed">getHandle</a> () const noexcept</td></tr>
+<tr class="separator:a6fc33b9816f44f8c3af5d194a492a9ed inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7a747396c1fd25bbd94b70099fed58 inherit pub_methods_class_resource"><td class="memTemplParams" colspan="2">template&lt;class TYPE &gt; </td></tr>
+<tr class="memitem:a9b7a747396c1fd25bbd94b70099fed58 inherit pub_methods_class_resource"><td class="memTemplItemLeft" align="right" valign="top">TYPE &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_resource.html#a9b7a747396c1fd25bbd94b70099fed58">getInternalHandle</a> () const</td></tr>
+<tr class="separator:a9b7a747396c1fd25bbd94b70099fed58 inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc46af0f04fbe0b1ab406f0cdb4a4a36 inherit pub_methods_class_resource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#abc46af0f04fbe0b1ab406f0cdb4a4a36">operator bool</a> () const noexcept</td></tr>
+<tr class="separator:abc46af0f04fbe0b1ab406f0cdb4a4a36 inherit pub_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_asynchronous_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_asynchronous_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_asynchronous_stream.html">AsynchronousStream</a></td></tr>
 <tr class="memitem:a00325387f12b55b5ad47e3487dcd7f7b inherit pub_methods_class_asynchronous_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asynchronous_stream.html#a00325387f12b55b5ad47e3487dcd7f7b">~AsynchronousStream</a> () noexcept(false)</td></tr>
 <tr class="separator:a00325387f12b55b5ad47e3487dcd7f7b inherit pub_methods_class_asynchronous_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,19 +204,26 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c8c8469c9005e9ae95c2bfa9c0ce5ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a6c8c8469c9005e9ae95c2bfa9c0ce5ef">changeOwner</a> (const <a class="el" href="class_string.html">String</a> &amp;path, const <a class="el" href="class_trustee.html">Trustee</a> &amp;owner, const <a class="el" href="class_trustee.html">Trustee</a> &amp;group, bool followLink=true)</td></tr>
 <tr class="separator:a6c8c8469c9005e9ae95c2bfa9c0ce5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4720054734b36cdc3be2f516a7d7bf"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#afe4720054734b36cdc3be2f516a7d7bf">createFile</a> (const <a class="el" href="class_string.html">String</a> &amp;path, const uint8 *buffer, MemorySize size)</td></tr>
+<tr class="separator:afe4720054734b36cdc3be2f516a7d7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b067960207c9822be8b86a1a2b2464"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#ab2b067960207c9822be8b86a1a2b2464">createFile</a> (const <a class="el" href="class_string.html">String</a> &amp;path, const <a class="el" href="class_string.html">String</a> &amp;text)</td></tr>
+<tr class="separator:ab2b067960207c9822be8b86a1a2b2464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5eec63f46ff6d8a6b7bedc40ee1f82"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_validified_result.html">Validified</a>&lt; <a class="el" href="class_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a5e5eec63f46ff6d8a6b7bedc40ee1f82">readFile</a> (const <a class="el" href="class_string.html">String</a> &amp;path, Encoding encoding=ENCODING_UTF8)</td></tr>
+<tr class="separator:a5e5eec63f46ff6d8a6b7bedc40ee1f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_asynchronous_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_asynchronous_stream')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_asynchronous_stream.html">AsynchronousStream</a></td></tr>
 <tr class="memitem:a15d1fdceec4fb0153dc05ebf57ee1c35 inherit pub_static_methods_class_asynchronous_stream"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asynchronous_stream.html#a15d1fdceec4fb0153dc05ebf57ee1c35">asyncTest</a> () noexcept</td></tr>
 <tr class="separator:a15d1fdceec4fb0153dc05ebf57ee1c35 inherit pub_static_methods_class_asynchronous_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a70ad776e43673fe64cde89b77b67b914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file.html#a70ad776e43673fe64cde89b77b67b914">getHandle</a> () const noexcept</td></tr>
-<tr class="separator:a70ad776e43673fe64cde89b77b67b914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_resource')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_resource.html">Resource</a></td></tr>
+<tr class="memitem:a9d8368a62a48df58deb4babc26f80f77 inherit pro_attribs_class_resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">AnyReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a9d8368a62a48df58deb4babc26f80f77">handle</a></td></tr>
+<tr class="separator:a9d8368a62a48df58deb4babc26f80f77 inherit pro_attribs_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_file.html" title="File.">File</a>. </p>
 <p>A file.</p>
-<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.1 </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ftp_8cpp-example.html#_a20">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#_a13">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2xsltprocessor_8cpp-example.html#_a5">testsuite/xsltprocessor.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -379,7 +399,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51dc22c62ddf2fbeef8335300fc8e56a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51dc22c62ddf2fbeef8335300fc8e56a">&#9670;&nbsp;</a></span>File() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a51dc22c62ddf2fbeef8335300fc8e56a">&#9670;&nbsp;</a></span>File() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +425,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="abc9381ddfe8095986945e5da42796923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc9381ddfe8095986945e5da42796923">&#9670;&nbsp;</a></span>File() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9381ddfe8095986945e5da42796923">&#9670;&nbsp;</a></span>File() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,33 +467,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5496f9460007f6dc2423b024cc8c2d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5496f9460007f6dc2423b024cc8c2d34">&#9670;&nbsp;</a></span>File() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">File::File </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_file.html">File</a> &amp;&#160;</td>
-          <td class="paramname"><em>copy</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Initialize a new file object from other file object. </p>
-
-</div>
-</div>
 <a id="ac704ebdf5f57d7a1c5ddf409d797fb69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac704ebdf5f57d7a1c5ddf409d797fb69">&#9670;&nbsp;</a></span>~File()</h2>
 
@@ -488,7 +481,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destroys the file handle. </p>
+<p>Destroys the file. </p>
 
 </div>
 </div>
@@ -589,6 +582,88 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab2b067960207c9822be8b86a1a2b2464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b067960207c9822be8b86a1a2b2464">&#9670;&nbsp;</a></span>createFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool File::createFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a file from the given string. Saves the raw bytes.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true on success. </dd></dl>
+
+</div>
+</div>
+<a id="afe4720054734b36cdc3be2f516a7d7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4720054734b36cdc3be2f516a7d7bf">&#9670;&nbsp;</a></span>createFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool File::createFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8 *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a file from the given string. Saves the raw bytes.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true on succefss. </dd></dl>
+
+</div>
+</div>
 <a id="af87fa862de707575b8badd044a5af80e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af87fa862de707575b8badd044a5af80e">&#9670;&nbsp;</a></span>flush()</h2>
 
@@ -661,11 +736,11 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the operating system handle to the stream. </p>
+<p>Returns the OS handle. </p>
 
 <p>Implements <a class="el" href="class_asynchronous_i_o_stream.html#ad02e765fc3bddec9bca2cb49d59ee4c1">AsynchronousIOStream</a>.</p>
 
@@ -880,33 +955,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae99479208afc15cd61cdc6efa41fd699"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae99479208afc15cd61cdc6efa41fd699">&#9670;&nbsp;</a></span>operator=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_file.html">File</a>&amp; File::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_file.html">File</a> &amp;&#160;</td>
-          <td class="paramname"><em>assign</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Assignment of file object. </p>
-
-</div>
-</div>
 <a id="a10c4b6c94d6a298be6604774144552d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10c4b6c94d6a298be6604774144552d0">&#9670;&nbsp;</a></span>read() <span class="overload">[1/3]</span></h2>
 
@@ -1030,6 +1078,50 @@ template&lt;class TYPE &gt; </div>
 <p>If another process has acquired an exclusive lock on part of the file region to be read, the read request will block until the lock has been released.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 if the end of the file has been reached (or if requested to read 0 bytes). </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2xsltprocessor_8cpp-example.html#a10">testsuite/xsltprocessor.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e5eec63f46ff6d8a6b7bedc40ee1f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5eec63f46ff6d8a6b7bedc40ee1f82">&#9670;&nbsp;</a></span>readFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_validified_result.html">Validified</a>&lt;<a class="el" href="class_string.html">String</a>&gt; File::readFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Encoding&#160;</td>
+          <td class="paramname"><em>encoding</em> = <code>ENCODING_UTF8</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads bytes from file to string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The file path. </td></tr>
+    <tr><td class="paramname">encoding</td><td>The encoding. Defaults to UTF-8 <a class="el" href="class_unicode.html">Unicode</a>. </td></tr>
+  </table>
+  </dd>
 </dl>
 
 </div>

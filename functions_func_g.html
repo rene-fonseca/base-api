@@ -52,6 +52,9 @@ $(function() {
 <li>gcd()
 : <a class="el" href="class_math.html#aa8a8c9b242128efa1610ef174de9de70">Math</a>
 </li>
+<li>get()
+: <a class="el" href="class_translation.html#ae3be14e6824983fd360ed7e71172ba38">Translation</a>
+</li>
 <li>getACE()
 : <a class="el" href="class_access_control_list.html#a75a04e0da9635a0c12cc407a911945a7">AccessControlList</a>
 </li>
@@ -89,7 +92,7 @@ $(function() {
 : <a class="el" href="class_unit_test.html#af480fc226490df7334cb453ac98b9b5a">UnitTest</a>
 </li>
 <li>getAngle()
-: <a class="el" href="class_complex.html#ada60a26460eb36354cf5fd48234c639e">Complex</a>
+: <a class="el" href="class_complex.html#a174a94ad2e2aebdaf2d93bd42099f82b">Complex&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector2_d.html#a1352d0d3400f9ed2c31ce324d1d543ea">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#a3f9730ea1b4ec4a4962aee748f394939">Vector3D&lt; TYPE &gt;</a>
 </li>
@@ -101,6 +104,9 @@ $(function() {
 </li>
 <li>getArchitecture()
 : <a class="el" href="class_architecture.html#a49fbefedca5c1bf49b043306ae86055c">Architecture</a>
+</li>
+<li>getArchitectureAsString()
+: <a class="el" href="class_architecture.html#a64bb32dfa058cdba6c5aec7491cb42db">Architecture</a>
 </li>
 <li>getArgumentNumber()
 : <a class="el" href="class_argument_exception.html#a2df611a43a0c0742b433b83648586fbe">ArgumentException</a>
@@ -126,6 +132,7 @@ $(function() {
 <li>getAt()
 : <a class="el" href="class_array.html#a0aa8f960a7ba1714f8a978f811f056d3">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_bit_set.html#af4c7983793ad2f6e18be1d3dab9279bb">BitSet</a>
+, <a class="el" href="class_matrix4x4.html#a9cc3e032e9f34f43e44e044778c4751e">Matrix4x4&lt; TYPE &gt;</a>
 , <a class="el" href="class_matrix.html#a79884f76aff5bf0dfccce46189c704fe">Matrix&lt; TYPE &gt;</a>
 , <a class="el" href="class_object_model_1_1_array.html#a372f695dcc0d065b1421578f63864a73">ObjectModel::Array</a>
 , <a class="el" href="class_string.html#aa03aad3ca8990015e26057e00027a5de">String</a>
@@ -258,7 +265,7 @@ $(function() {
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html#a0ad4839524c1d2899a1c67824618edd0">IEEE1394Common::IsochronousWritePacketsRequest</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_request_impl.html#a61abac9dbf2d602575d4dad48559387a">IEEE1394Common::IsochronousWriteRequestImpl</a>
 , <a class="el" href="class_string.html#a53ccd30320712c5bbe4c09aea22396cf">String</a>
-, <a class="el" href="class_wide_string.html#a9d064c2586a5df3424101ddb0889e187">WideString</a>
+, <a class="el" href="class_wide_string.html#a2d347bbf52f8212b534294a366d5c32b">WideString</a>
 </li>
 <li>getBufferSize()
 : <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html#a48fa6e120ded4fea04c0a498e1f22fb8">IEEE1394Common::IsochronousReadFixedDataRequest</a>
@@ -269,7 +276,7 @@ $(function() {
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html#a2b3c1c73723718cdea350b4a5391fba5">IEEE1394Common::IsochronousWriteFixedPacketsRequest</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html#a6909e55f30807057537f51e78ea4ab3d">IEEE1394Common::IsochronousWritePacketsRequest</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_request_impl.html#acf22b247e463ba30c414d4925ac6b46f">IEEE1394Common::IsochronousWriteRequestImpl</a>
-, <a class="el" href="class_pipe.html#a771ef376dad62057f941ae45b29b51d7">Pipe</a>
+, <a class="el" href="class_pipe.html#a82908afeb1c8e43430c36c877c1f9df8">Pipe</a>
 </li>
 <li>getBusId()
 : <a class="el" href="class_i_e_e_e1394_common.html#ab16e6e4cfb163354d78526201142459b">IEEE1394Common</a>
@@ -294,10 +301,16 @@ $(function() {
 , <a class="el" href="class_guid.html#a817ff7b7be1821a1feb35e54b30f6355">Guid</a>
 , <a class="el" href="class_mapped_file.html#a036ef6121cc7321f1f728f02c096e08c">MappedFile</a>
 , <a class="el" href="class_shared_memory.html#a47652c999583139ed1db2b9bc13486b3">SharedMemory</a>
-, <a class="el" href="class_string.html#a7368cb86d241d490186b3f01a17323be">String</a>
+, <a class="el" href="class_string.html#a0ab66e05c049be3d08a20cd38839a6a3">String</a>
 </li>
 <li>getByteSize()
 : <a class="el" href="class_allocator.html#a9c768ee51637b1a97cf7e00bf455c15b">Allocator&lt; TYPE &gt;</a>
+</li>
+<li>getBytesRead()
+: <a class="el" href="class_profiler_1_1_i_o_read_task.html#ad42cd8157dba8a4f002d45380a7a63bc">Profiler::IOReadTask</a>
+</li>
+<li>getBytesWritten()
+: <a class="el" href="class_profiler_1_1_i_o_write_task.html#a8efdb31d1925eb509b4a15d5b36ae505">Profiler::IOWriteTask</a>
 </li>
 <li>getCaller()
 : <a class="el" href="class_stack_frame.html#a6895fe8d15084d06566c724063dfbb3a">StackFrame</a>
@@ -384,6 +397,10 @@ $(function() {
 <li>getConsumer()
 : <a class="el" href="class_module.html#aa7564ef19e4959072517670148c1e67a">Module</a>
 </li>
+<li>getContainer()
+: <a class="el" href="class_string.html#aec1f18c022fb1cbcd6b3f25e1da846df">String</a>
+, <a class="el" href="class_wide_string.html#a406c40524e6e0a6e35407fabec8c39a6">WideString</a>
+</li>
 <li>getContenders()
 : <a class="el" href="class_i_e_e_e1394.html#a593ec6b7de3b4fb29ffa10e723ea1a64">IEEE1394</a>
 </li>
@@ -402,6 +419,10 @@ $(function() {
 <li>getCount()
 : <a class="el" href="class_barrier.html#a12c56bf3c674e6fc1e1a5552b44d5aef">Barrier</a>
 </li>
+<li>getCreatedById()
+: <a class="el" href="class_resource.html#afc4383d49ffb694fa722df35f5b1fbcd">Resource</a>
+, <a class="el" href="class_resource_handle.html#a384c01db623794410607feeebca9f52a">ResourceHandle</a>
+</li>
 <li>getCSRKeyType()
 : <a class="el" href="class_i_e_e_e1394.html#a96f0c3f8ef26a147bfb03e41ad565d1a">IEEE1394</a>
 </li>
@@ -410,6 +431,7 @@ $(function() {
 </li>
 <li>getCurrent()
 : <a class="el" href="class_parser.html#a013f2d122eb497642f24e8d61374866d">Parser</a>
+, <a class="el" href="class_translation.html#a84cccb4e316d17b15feb339c0b16dbf4">Translation</a>
 </li>
 <li>getCurrentFolder()
 : <a class="el" href="class_file_system.html#a1ab6d3ee9d4278c4fffb90a13c532067">FileSystem</a>
@@ -492,6 +514,8 @@ $(function() {
 <li>getDescription()
 : <a class="el" href="class_i_e_e_e1394.html#a2a8d1ffe90ca24bb1ac328a7d6131439">IEEE1394</a>
 , <a class="el" href="class_module.html#a2b5a3c45b7a53bb46892d1d8d30b8453">Module</a>
+, <a class="el" href="class_resource.html#a916d6696c1c7b1e17b1c7cc2ebdcdd3e">Resource</a>
+, <a class="el" href="class_resource_handle.html#ae920264d05a9ee97610cd1a849ae87cd">ResourceHandle</a>
 , <a class="el" href="class_unit_test.html#af7b549a2fa2ed54958dab13959078eac">UnitTest</a>
 </li>
 <li>getDestination()
@@ -501,11 +525,17 @@ $(function() {
 : <a class="el" href="class_matrix4x4.html#a55eab11ab67d208dd83f5d3706e4e706">Matrix4x4&lt; TYPE &gt;</a>
 , <a class="el" href="class_matrix.html#a59721b9058e65f8cbe0829eb0e41415d">Matrix&lt; TYPE &gt;</a>
 </li>
+<li>getDeviceInfoBool()
+: <a class="el" href="class_open_c_l.html#af63ad2ecc69786a92e9509182a48b3fd">OpenCL</a>
+</li>
+<li>getDeviceInfoUInt()
+: <a class="el" href="class_open_c_l.html#a1591ad0e3d9edcdb4a15bd4759aa9023">OpenCL</a>
+</li>
 <li>getDeviceName()
 : <a class="el" href="class_open_c_l.html#ac1c863d88328d9ec576d064cd443a6ad">OpenCL</a>
 </li>
 <li>getDevices()
-: <a class="el" href="class_open_c_l.html#a746098743133ad54b56d8867c05c2db7">OpenCL</a>
+: <a class="el" href="class_open_c_l.html#aaeb78161811f01869546fcd815284968">OpenCL</a>
 </li>
 <li>getDigest()
 : <a class="el" href="class_s_h_a384.html#a1a1b79af576aa5992ec525e597b58395">SHA384</a>
@@ -535,6 +565,9 @@ $(function() {
 <li>getDocumentType()
 : <a class="el" href="class_declaration.html#a0af1ffaeba1b611ae102d4a9206a45b0">Declaration</a>
 , <a class="el" href="class_document.html#ada7992399ecad89a4aca803fcf234559">Document</a>
+</li>
+<li>getDomain()
+: <a class="el" href="class_socket.html#a5a09e4068518080e86782ed29888ca1e">Socket</a>
 </li>
 <li>getDontRoute()
 : <a class="el" href="class_socket.html#a4b4ce2d806a71ee53e03d1cbd0e347e4">Socket</a>
@@ -571,7 +604,7 @@ $(function() {
 , <a class="el" href="class_buffered_input_stream.html#a7188bb7b5e8ccc3209aa830c8c8fd781">BufferedInputStream</a>
 , <a class="el" href="class_string.html#a2c52656e2c5dc1f48aeb8e5ae95c7b29">String</a>
 , <a class="el" href="class_vector.html#a0ab62c3e2457879df8d714a1b02e906e">Vector&lt; TYPE &gt;</a>
-, <a class="el" href="class_wide_string.html#add0ad8f6495f1e5aacba785989b98fda">WideString</a>
+, <a class="el" href="class_wide_string.html#a4fd037f7ec5e4dc0ba6ed5d978ab5050">WideString</a>
 </li>
 <li>getEncoder()
 : <a class="el" href="class_lisa_encoding.html#afb901a14f0e75004276d5f738ad219aa">LisaEncoding</a>
@@ -586,6 +619,7 @@ $(function() {
 <li>getEnd()
 : <a class="el" href="class_file_region.html#a9e748fe01b304571d3ef1fd3375ff368">FileRegion</a>
 , <a class="el" href="class_string.html#a066d94d9b9096d93a0070fb31e02fe01">String</a>
+, <a class="el" href="class_wide_string.html#ae74f2c34f576fa1896439f425b04f72a">WideString</a>
 </li>
 <li>getEndIterator()
 : <a class="el" href="class_allocator.html#a935b917d758a6f0b3943ce0359348acb">Allocator&lt; TYPE &gt;</a>
@@ -595,11 +629,14 @@ $(function() {
 , <a class="el" href="class_wide_string.html#a85373f51d040c4cfec7fe9b25da2d111">WideString</a>
 </li>
 <li>getEndPoint()
-: <a class="el" href="class_local_connection.html#a088c67fcc8a909dd190960f94c188a58">LocalConnection</a>
+: <a class="el" href="class_inet_end_point.html#adc0b152d600e2a0066fb480fed72c985">InetEndPoint</a>
+, <a class="el" href="class_local_connection.html#a088c67fcc8a909dd190960f94c188a58">LocalConnection</a>
 , <a class="el" href="class_local_connection_factory.html#afcbd276bcdbcd4a17d0e68c248d01065">LocalConnectionFactory</a>
 , <a class="el" href="class_orb_connection.html#a08b95e36e05fd7f1f34ac002b0fc3716">OrbConnection</a>
 , <a class="el" href="class_orb_connection_factory.html#a23b046a567bc474ba580d495484bef45">OrbConnectionFactory</a>
 , <a class="el" href="class_orb_identifier.html#aae68d81d4e10e0771bbfd7e06b4adf09">OrbIdentifier</a>
+, <a class="el" href="class_socket.html#a0de135ca6947066d94a4be8ddfc63f7d">Socket</a>
+, <a class="el" href="class_stream_socket.html#a38a35c78de5dba1235fa882aa06bf872">StreamSocket</a>
 </li>
 <li>getEndReadIterator()
 : <a class="el" href="class_allocator.html#af08c8b1e0f049a1a176860aae10e6ee3">Allocator&lt; TYPE &gt;</a>
@@ -683,7 +720,8 @@ $(function() {
 : <a class="el" href="class_application.html#a49e73de7bf8414ca05023e42dcae457d">Application</a>
 </li>
 <li>getExponent()
-: <a class="el" href="struct_floating_point_1_1_i_e_e_e754_double_precision.html#a4351ad5a4db7a4165d844c085cc5a4b3">FloatingPoint::IEEE754DoublePrecision</a>
+: <a class="el" href="struct_floating_point_1_1_i_b_m_extended_precision.html#abed1650e247de95dcd761e4e766fe408">FloatingPoint::IBMExtendedPrecision</a>
+, <a class="el" href="struct_floating_point_1_1_i_e_e_e754_double_precision.html#a4351ad5a4db7a4165d844c085cc5a4b3">FloatingPoint::IEEE754DoublePrecision</a>
 , <a class="el" href="struct_floating_point_1_1_i_e_e_e754_single_precision.html#ae479e5e3d291ec63725f12710adad223">FloatingPoint::IEEE754SinglePrecision</a>
 , <a class="el" href="struct_floating_point_1_1_i_e_e_e_extended_double_precision128.html#aa88913edd4b8722eb7397d0c93f46a2d">FloatingPoint::IEEEExtendedDoublePrecision128</a>
 , <a class="el" href="struct_floating_point_1_1_i_e_e_e_extended_double_precision96.html#af1ee5e51636d4f5f003f0f9c6741ad7c">FloatingPoint::IEEEExtendedDoublePrecision96</a>
@@ -758,6 +796,7 @@ $(function() {
 , <a class="el" href="class_argument_parser_1_1_option.html#a2dd64fceada65dac063171997a70dcbb">ArgumentParser::Option</a>
 , <a class="el" href="class_file_descriptor.html#a91368691eac6b4a139cf9acde411d8d9">FileDescriptor</a>
 , <a class="el" href="class_format_output_stream.html#a020102e8c3560a9af8d0db23a0a10f6b">FormatOutputStream</a>
+, <a class="el" href="class_formatted_stack_trace.html#a8396876c3763fe8da8e6f0172db34b61">FormattedStackTrace</a>
 , <a class="el" href="class_inet_interface.html#a68d026c0411dd7f207adf6a967f465ba">InetInterface</a>
 , <a class="el" href="class_invocation_result.html#aa851f06a133fe44b9b28833a0c9addf8">InvocationResult</a>
 , <a class="el" href="class_menu.html#a7f97f0f664a0d3a18d1ee5396807c601">Menu</a>
@@ -843,8 +882,6 @@ $(function() {
 <li>getGranularity()
 : <a class="el" href="class_mapped_file.html#a7dd2785252752024d12a11661af41b48">MappedFile</a>
 , <a class="el" href="class_shared_memory.html#a82e672cc82dd6adca71e5b66a2799f1b">SharedMemory</a>
-, <a class="el" href="class_string_output_stream.html#aa41cc3cc1f28e6a8691601e3287b1008">StringOutputStream</a>
-, <a class="el" href="class_wide_string_output_stream.html#a9ed9428c1aa893a47696d0c7d9fb4128">WideStringOutputStream</a>
 </li>
 <li>getGray()
 : <a class="el" href="class_color.html#abf4e7642c10bb002c2ff8ce90a49bed2">Color</a>
@@ -871,8 +908,8 @@ $(function() {
 , <a class="el" href="class_file.html#a70ad776e43673fe64cde89b77b67b914">File</a>
 , <a class="el" href="class_file_descriptor.html#a7a781a70a840a64bf80d42c0df2b7989">FileDescriptor</a>
 , <a class="el" href="class_handle.html#abce0094b47545e56227429b18127d845">Handle</a>
-, <a class="el" href="class_mapped_file.html#ac175ff2bb26b61e8809c24b75963db5f">MappedFile</a>
 , <a class="el" href="class_menu.html#a8d262ff0853dcf08fb3f36e2d97c9f74">Menu</a>
+, <a class="el" href="class_resource.html#a6fc33b9816f44f8c3af5d194a492a9ed">Resource</a>
 , <a class="el" href="class_socket.html#ae7cd1298d3c53a61c157b267994d6217">Socket</a>
 </li>
 <li>getHash()
@@ -947,7 +984,7 @@ $(function() {
 : <a class="el" href="class_dynamic_linker.html#ab9747560f3c1ed6fabdf57a1dc8df94c">DynamicLinker</a>
 </li>
 <li>getImaginary()
-: <a class="el" href="class_complex.html#a2c13ea3b50f6226dc10f4f0baff8f7f8">Complex</a>
+: <a class="el" href="class_complex.html#ad80c274223f3be8777b8a29c50fcb390">Complex&lt; TYPE &gt;</a>
 </li>
 <li>getImpact()
 : <a class="el" href="class_unit_test.html#a97326fee34d88f90fff154c3b3b62ec2">UnitTest</a>
@@ -999,6 +1036,9 @@ $(function() {
 </li>
 <li>getInterfaces()
 : <a class="el" href="class_inet_interface.html#a7f95e0a1d9e04bdbad8f9613e7cbb378">InetInterface</a>
+</li>
+<li>getInternalHandle()
+: <a class="el" href="class_resource.html#a9b7a747396c1fd25bbd94b70099fed58">Resource</a>
 </li>
 <li>getInternalSubset()
 : <a class="el" href="class_document_type.html#af6c5c762cefd2359b89466f2bd339610">DocumentType</a>
@@ -1070,6 +1110,9 @@ $(function() {
 </li>
 <li>getKeywords()
 : <a class="el" href="class_i_e_e_e1394.html#a33adfc158f505eedb7ce7143dfca2527">IEEE1394</a>
+</li>
+<li>getKind()
+: <a class="el" href="class_socket.html#a7b9446a5847a161e3c178d66a8ed762f">Socket</a>
 </li>
 <li>getL1Norm()
 : <a class="el" href="class_matrix4x4.html#a7cc3ef1d4e8891652710275520a4dfe2">Matrix4x4&lt; TYPE &gt;</a>
@@ -1144,9 +1187,6 @@ $(function() {
 : <a class="el" href="class_socket.html#a5dc6f0da9b725b4aa0cdcd9475b21e04">Socket</a>
 , <a class="el" href="class_stream_socket.html#a7ad787c43c98b0fd0055bc2fbaae3d21">StreamSocket</a>
 </li>
-<li>getLink()
-: <a class="el" href="class_file_system.html#a31f4dd14318fe36015b81b0113975208">FileSystem</a>
-</li>
 <li>getLinkActiveNodes()
 : <a class="el" href="class_i_e_e_e1394.html#a6e03e0c52179a16b0ccdcdf8b24f36d4">IEEE1394</a>
 </li>
@@ -1156,6 +1196,9 @@ $(function() {
 <li>getLinks()
 : <a class="el" href="class_file_info.html#a4ba71449942c2b70ce410fbfde65e240">FileInfo</a>
 , <a class="el" href="class_folder_info.html#a27fb7b882ecb7d9195375f003e1caca0">FolderInfo</a>
+</li>
+<li>getLinkTarget()
+: <a class="el" href="class_file_system.html#a3393867186238281b4ae9f84503ac17e">FileSystem</a>
 </li>
 <li>getLiveMicroseconds()
 : <a class="el" href="class_timer.html#ab82c0b645c7b797b2a970812dc3617e3">Timer</a>
@@ -1173,6 +1216,11 @@ $(function() {
 </li>
 <li>getLocale()
 : <a class="el" href="class_locale.html#a03575fb3f9e21ffb970fcb542c4c8df8">Locale</a>
+</li>
+<li>getLocalEndPoint()
+: <a class="el" href="class_server_socket.html#a285a6ca57dd68084b827c0c26d1012dc">ServerSocket</a>
+, <a class="el" href="class_socket.html#a9a93928a63baeb7463d4c3043ee23205">Socket</a>
+, <a class="el" href="class_stream_socket.html#a67b766dec33c609d4f44c9e7d8d87783">StreamSocket</a>
 </li>
 <li>getLocaleSpecific()
 : <a class="el" href="class_locale.html#a9ed649ec245c34d6f058b74d3de46853">Locale</a>
@@ -1344,10 +1392,13 @@ $(function() {
 </li>
 <li>getModules()
 : <a class="el" href="class_linker_manager.html#a7491710f539d69bb22f7f46ef26aeeb8">LinkerManager</a>
-, <a class="el" href="class_module_manager.html#a1581a3a89a981d614f35458ca3748696">ModuleManager</a>
+, <a class="el" href="class_module_manager.html#a143337f2b6338a66cd7e23a8659a849e">ModuleManager</a>
+</li>
+<li>getModulesCSV()
+: <a class="el" href="class_module_manager.html#acd183d2753dd9e2a159d196c0ea9903c">ModuleManager</a>
 </li>
 <li>getModulus()
-: <a class="el" href="class_complex.html#a1cb2a7179dcdc513db38fdf09365f49b">Complex</a>
+: <a class="el" href="class_complex.html#a149db6b09c0079fc15b67c194d465d15">Complex&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector2_d.html#a92fcf8481e0600e6b48c3a0c6f613fcf">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#aca878ed3cdfb181dc0f25d5adeeaf59c">Vector3D&lt; TYPE &gt;</a>
 </li>
@@ -1414,7 +1465,7 @@ $(function() {
 : <a class="el" href="class_double.html#a85d080d90a177da66f423347e54e2b0e">Double</a>
 , <a class="el" href="class_float.html#a1102f546b4a495e724f1a3b1e12d6f49">Float</a>
 , <a class="el" href="class_long_double.html#afa739e66e8c5b5ac09e86695d63ba113">LongDouble</a>
-, <a class="el" href="class_math.html#afa2e6a29394301b338c291a8dcaa1b44">Math</a>
+, <a class="el" href="class_math.html#a98219d01918edd4e140b5b73cd3ff2db">Math</a>
 </li>
 <li>getNanoseconds()
 : <a class="el" href="class_timer_1_1_elapsed_time.html#acb90593e55b4929d9a37938ecd15122a">Timer::ElapsedTime</a>
@@ -1424,7 +1475,7 @@ $(function() {
 </li>
 <li>getNext()
 : <a class="el" href="class_double_linked_node.html#a009788e31b994017bfe9f587c253ab63">DoubleLinkedNode&lt; TYPE &gt;</a>
-, <a class="el" href="class_hash_set_1_1_node.html#a2ee7eb1508ceaef2fb0fb822f6ccf13c">HashSet&lt; TYPE &gt;::Node</a>
+, <a class="el" href="class_hash_set_1_1_node.html#a71102edc1b9f77d483be9c7ca01b286b">HashSet&lt; TYPE &gt;::Node</a>
 , <a class="el" href="class_hash_table_1_1_node.html#af441948b16fd947c6d05d084e4dd23ed">HashTable&lt; KEY, VALUE &gt;::Node</a>
 , <a class="el" href="class_orb_buffer.html#a40f39b3b6aa55d2a7c485dfd83c45046">OrbBuffer</a>
 , <a class="el" href="class_single_linked_node.html#ab0128b41cffed72e0c723f33922861ff">SingleLinkedNode&lt; TYPE &gt;</a>
@@ -1480,6 +1531,9 @@ $(function() {
 </li>
 <li>getNSS()
 : <a class="el" href="class_urn.html#a391deb884d999e73e1b43bd23add9daa">Urn</a>
+</li>
+<li>getNullPointer()
+: <a class="el" href="class_runtime.html#aa08dc2ee198f71520948c87a0077fc26">Runtime</a>
 </li>
 <li>getNumberOfAcculumatorAlphaBits()
 : <a class="el" href="class_open_g_l_context_impl.html#ac7d945c151b5de98ef99692c1c0bc8ec">OpenGLContextImpl</a>
@@ -1649,6 +1703,9 @@ $(function() {
 <li>getOutputBufferSize()
 : <a class="el" href="class_serial_port.html#a66e1480d0acb5bdb51ba42aa5affd293">SerialPort</a>
 </li>
+<li>getOutputStream()
+: <a class="el" href="class_filter_output_stream.html#a010cf4af10e847d4ae34d667ef6de047">FilterOutputStream</a>
+</li>
 <li>getOwner()
 : <a class="el" href="class_access_control_list.html#a7e0c198619ab0750655d9f2257f8ac5b">AccessControlList</a>
 , <a class="el" href="classextension_1_1_registry_key.html#a8d156cb1f854d7e8de664b93a7bf96ec">extension::RegistryKey</a>
@@ -1668,6 +1725,7 @@ $(function() {
 </li>
 <li>getParent()
 : <a class="el" href="class_binary_node.html#a57e93511081e06f09e10c50138c05cbb">BinaryNode&lt; TYPE &gt;</a>
+, <a class="el" href="class_file_system.html#a6f1179e5e484d1299a8ccb6969292168">FileSystem</a>
 , <a class="el" href="class_folder_info.html#ab338a8bcd3789a915e91177c7341dfe4">FolderInfo</a>
 , <a class="el" href="class_node.html#ab4a34265d0d0836f5d95dcd0cbfe3aaf">Node</a>
 , <a class="el" href="class_thread.html#a9c5a8d6d41de19f123f8ce7c193adac0">Thread</a>
@@ -1705,6 +1763,9 @@ $(function() {
 </li>
 <li>getPendingExceptions()
 : <a class="el" href="class_exception.html#ac34b429be790c2c5c1b0f5a87922f871">Exception</a>
+</li>
+<li>getPerformanceCounters()
+: <a class="el" href="class_thread.html#abf6c6609a15db4ff587c5677725fd63d">Thread</a>
 </li>
 <li>getPermissions()
 : <a class="el" href="class_access_control_entry.html#adb738e117f23894b6166f02726484067">AccessControlEntry</a>
@@ -1864,7 +1925,7 @@ $(function() {
 : <a class="el" href="class_hash_table.html#ace29cbe23404b44d36d813c3c2434ccf">HashTable&lt; KEY, VALUE &gt;</a>
 </li>
 <li>getReal()
-: <a class="el" href="class_complex.html#a0b8ff03bf373dddf2a987b77dac466d4">Complex</a>
+: <a class="el" href="class_complex.html#a6ab8c9aadfd0d34faab5e2ca0ca3e86a">Complex&lt; TYPE &gt;</a>
 </li>
 <li>getRealBase()
 : <a class="el" href="class_format_output_stream.html#afed205c76930e9fedf905a1938a5d8d1">FormatOutputStream</a>
@@ -1892,7 +1953,6 @@ $(function() {
 : <a class="el" href="class_any_value.html#af02506c0a1d5320b775f0b9ece3869f5">AnyValue</a>
 , <a class="el" href="class_local_connection.html#a7adb0dfbe6d5f20d609fe0ba1f543ddc">LocalConnection</a>
 , <a class="el" href="class_orb_connection.html#a31c9048cb43d8af4ea5fbdc2a40c812a">OrbConnection</a>
-, <a class="el" href="class_socket.html#a24cd5ec5cdc72b10195e06062ede65b7">Socket</a>
 </li>
 <li>getReferences()
 : <a class="el" href="class_reference_counter.html#a594c4721c69ada19630fb36df0b291ea">ReferenceCounter&lt; TYPE &gt;</a>
@@ -1904,6 +1964,7 @@ $(function() {
 </li>
 <li>getRelativePath()
 : <a class="el" href="class_debug.html#a42fce9db66745a5d99ec37d29871374f">Debug</a>
+, <a class="el" href="class_file_system.html#a67f9a0d9da65533c3402696745e5bdc4">FileSystem</a>
 </li>
 <li>getRelease()
 : <a class="el" href="class_system_information.html#a4dc188e185f6e73c8d0b2dbb35e021ec">SystemInformation</a>
@@ -1927,14 +1988,21 @@ $(function() {
 <li>getRepresentationType()
 : <a class="el" href="class_any_value.html#a2ca406dd032d42dbcfd982fd27a91692">AnyValue</a>
 </li>
+<li>getResourceId()
+: <a class="el" href="class_resource.html#a5598b07ed9e571ce7320b11c6826e9ee">Resource</a>
+, <a class="el" href="class_resource_handle.html#ac7422e22183e1d4e96b9fd3db1fe35bc">ResourceHandle</a>
+</li>
 <li>getResourceLimit()
 : <a class="el" href="class_operating_system.html#a6e9a7ad9801e468f5555223e639034b1">OperatingSystem</a>
 </li>
+<li>getResources()
+: <a class="el" href="class_resource_handle.html#acdc9c7ed0a0f3e03e3e0deb0afe5e13c">ResourceHandle</a>
+</li>
 <li>getResponse()
-: <a class="el" href="class_h_t_t_p_s_request.html#ac75c979e7ac96590f8c9e951fc0513ed">HTTPSRequest</a>
+: <a class="el" href="class_h_t_t_p_s_request.html#a2c4b70f6859a755c42f03a973868a822">HTTPSRequest</a>
 </li>
 <li>getResponseHeader()
-: <a class="el" href="class_h_t_t_p_s_request.html#a9e89a92e6d4bcdf0756d168f67862318">HTTPSRequest</a>
+: <a class="el" href="class_h_t_t_p_s_request.html#af1495f7eddecebb363cd3464d5061478">HTTPSRequest</a>
 </li>
 <li>getResponseType()
 : <a class="el" href="class_orb_response.html#a224bc46cfdf2796f4d428be02f589e5d">OrbResponse</a>
@@ -1950,7 +2018,7 @@ $(function() {
 : <a class="el" href="class_binary_node.html#a6c7acacc5ce397691ed529caf4d6e2b6">BinaryNode&lt; TYPE &gt;</a>
 </li>
 <li>getRoot()
-: <a class="el" href="class_binary_tree_1_1_binary_tree_impl.html#aea4fa2633c4e86df9a9184388040e2e9">BinaryTree&lt; TYPE &gt;::BinaryTreeImpl</a>
+: <a class="el" href="class_binary_tree_1_1_binary_tree_impl.html#ae3e56f5e14429cd850887b2bcab31397">BinaryTree&lt; TYPE &gt;::BinaryTreeImpl</a>
 , <a class="el" href="class_binary_tree.html#ac48098a4658bb154fe3b3770a45744ae">BinaryTree&lt; TYPE &gt;</a>
 </li>
 <li>getRootNode()
@@ -2077,7 +2145,7 @@ $(function() {
 , <a class="el" href="class_vector.html#aae75af7b32e3baf2a4eb638dcccf7ce8">Vector&lt; TYPE &gt;</a>
 </li>
 <li>getSkeleton()
-: <a class="el" href="class_orb_skeleton_manager.html#acb02051051a647fc20954e0074cb9b6c">OrbSkeletonManager</a>
+: <a class="el" href="class_orb_skeleton_manager.html#ab13ea7397d8d6c5395e2758d13a8cff6">OrbSkeletonManager</a>
 </li>
 <li>getSource()
 : <a class="el" href="class_unit_test.html#ab8b9386c9582911adbbee5b4621d6284">UnitTest</a>
@@ -2092,7 +2160,7 @@ $(function() {
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_request_impl.html#ad69ff27f6d8995e33ac27eacba2c630e">IEEE1394Common::IsochronousWriteRequestImpl</a>
 </li>
 <li>getSqrModulus()
-: <a class="el" href="class_complex.html#a400469f43757a5774da666e34549c2d4">Complex</a>
+: <a class="el" href="class_complex.html#adf8c3c9d24b54c0a94f7e76d0fc4639f">Complex&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector2_d.html#aa3ca80534d1c08bb91e1fe1b3d4784e1">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#a194bbeba2fad6fd2d58bec4ce2f1d1be">Vector3D&lt; TYPE &gt;</a>
 </li>
@@ -2100,7 +2168,7 @@ $(function() {
 : <a class="el" href="class_matrix4x4.html#a13cf48d4096f7f3ec91626cde51b6c8b">Matrix4x4&lt; TYPE &gt;</a>
 </li>
 <li>getStack()
-: <a class="el" href="class_stack_frame.html#ada61fd6913a764240132bd725c572cf1">StackFrame</a>
+: <a class="el" href="class_stack_frame.html#ade6fa705e2815bcbcc596317538ae909">StackFrame</a>
 </li>
 <li>getStackFrame()
 : <a class="el" href="class_profiler_1_1_profiler_impl.html#aaa725bca77c4af4868cfe04553a1cc7f">Profiler::ProfilerImpl</a>
@@ -2161,9 +2229,11 @@ $(function() {
 , <a class="el" href="class_expression_parser.html#a072282d187b7bc661a369d2f008fc7b1">ExpressionParser</a>
 , <a class="el" href="classextension_1_1_registry_key.html#a068df79b338322489e482bd5c567a177">extension::RegistryKey</a>
 , <a class="el" href="class_object_model_1_1_object.html#a98d7e1f515eeb6fbcdbef2a1bf7ce3c1">ObjectModel::Object</a>
-, <a class="el" href="class_shared_strings.html#a5087100f954aa52e058b88594491f448">SharedStrings</a>
-, <a class="el" href="class_string_output_stream.html#ac7da39327261de7ff1bbd3c0585cacb3">StringOutputStream</a>
+, <a class="el" href="class_shared_strings.html#a174f7493953e93418eeb34634a6bc9f9">SharedStrings</a>
+, <a class="el" href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">StringOutputStream</a>
+, <a class="el" href="class_string_output_stream_wrapper.html#a91b62b1487581167b90239c3aec139c5">StringOutputStreamWrapper</a>
 , <a class="el" href="class_wide_string_output_stream.html#ae3eebfae6741d4440f18f326e0476bf0">WideStringOutputStream</a>
+, <a class="el" href="class_wide_string_output_stream_wrapper.html#a15baec3c359cac506f692e1606111ad0">WideStringOutputStreamWrapper</a>
 </li>
 <li>getStringLength()
 : <a class="el" href="class_unicode.html#a058430880b330abbf1126954ee631e0f">Unicode</a>
@@ -2220,6 +2290,9 @@ $(function() {
 <li>getTarget()
 : <a class="el" href="class_processing_instruction.html#a44965a8a32b6dbf126578121c0e4950e">ProcessingInstruction</a>
 </li>
+<li>getTask()
+: <a class="el" href="class_profiler_1_1_task.html#abe296a392551a7bdf123e7e0ff4382c0">Profiler::Task</a>
+</li>
 <li>getTcpDeferAccept()
 : <a class="el" href="class_socket.html#af3024b736cf1987819ec496fcfad8cc9">Socket</a>
 </li>
@@ -2245,6 +2318,9 @@ $(function() {
 <li>getTestByPattern()
 : <a class="el" href="class_unit_test_manager.html#adaeb371f7fd16d91d1ec02215d9092ee">UnitTestManager</a>
 </li>
+<li>getTestFolder()
+: <a class="el" href="class_unit_test_manager.html#aff44656e2ef73d4551c3583903454a65">UnitTestManager</a>
+</li>
 <li>getTests()
 : <a class="el" href="class_unit_test_manager.html#a50f61762c405de9d74b5ee81793cef12">UnitTestManager</a>
 </li>
@@ -2267,11 +2343,17 @@ $(function() {
 <li>getThread()
 : <a class="el" href="class_thread.html#a434138c70c246635b7e5b66c432f55b0">Thread</a>
 </li>
+<li>getThreadId()
+: <a class="el" href="class_thread.html#aa590b64a3f1ae1c58e6d872c5d5875c1">Thread</a>
+</li>
 <li>getThreadName()
-: <a class="el" href="class_thread.html#ab17ef2b5de5427e6a6161c59449bf2d4">Thread</a>
+: <a class="el" href="class_thread.html#a6a16331c358daab996598eafb633cd91">Thread</a>
 </li>
 <li>getThreads()
 : <a class="el" href="class_thread_pool.html#a9853efd11893a028cebbd08a70a58d8e">ThreadPool</a>
+</li>
+<li>getThreadSimpleId()
+: <a class="el" href="class_thread.html#a9a9c85c9dd357d9fc8a412647a7a4627">Thread</a>
 </li>
 <li>getTime()
 : <a class="el" href="class_date.html#a59fbab715263f5c1f3f8c4cf6f74c4ff">Date</a>
@@ -2361,7 +2443,7 @@ $(function() {
 : <a class="el" href="class_type.html#ac9f63851f5fac5a9433a5c637bc8e6e9">Type</a>
 </li>
 <li>getTypename()
-: <a class="el" href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo</a>
+: <a class="el" href="class_type_info.html#a53c5aac48dc4bca5f782969179d87602">TypeInfo</a>
 </li>
 <li>getTypeOfValue()
 : <a class="el" href="classextension_1_1_registry_key.html#a7fb957ac07a1b0112cbcc0565c74768b">extension::RegistryKey</a>
@@ -2471,11 +2553,14 @@ $(function() {
 : <a class="el" href="class_string.html#ab2bcd0444709a6803a75b4dd188c30ac">String</a>
 </li>
 <li>getUTF8StringLength()
-: <a class="el" href="class_unicode.html#a926a15112f219a962cc6dd74246fc28b">Unicode</a>
+: <a class="el" href="class_unicode.html#a07af37f51214dd2bc29601de52ae771a">Unicode</a>
 </li>
 <li>getValidation()
 : <a class="el" href="class_x_m_l_default_reader.html#a89fa72d88008267cac74649d3f790701">XMLDefaultReader</a>
 , <a class="el" href="class_x_m_l_reader.html#a27abc33db16317a202369518b7b4ddda">XMLReader</a>
+</li>
+<li>getValidUnicode()
+: <a class="el" href="class_wide_string.html#acfbca21a92eef665168366d004e708ed">WideString</a>
 </li>
 <li>getValidUTF8()
 : <a class="el" href="class_string.html#a9444dd901da0bd6f14747f5e1222211b">String</a>
@@ -2483,11 +2568,10 @@ $(function() {
 <li>getValue()
 : <a class="el" href="class_adler32.html#afabb942ec98cdee19dbe96ff2eba2ea9">Adler32</a>
 , <a class="el" href="class_array_map.html#a49674e8ff5ab8da41c4018767ac91474">ArrayMap&lt; KEY, VALUE &gt;</a>
-, <a class="el" href="class_array_ownership_pointer.html#a032646ed4a1b185463bb6c3cc3023e87">ArrayOwnershipPointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_association.html#a050be404827aa03483a8e55b80ea3a03">Association&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_attribute.html#ac6be8a14cdc7ee36d42423e35b8b04c3">Attribute</a>
 , <a class="el" href="class_attributes_1_1_attribute.html#abb2dfc9106f2b3cac4eabf66426db9a4">Attributes::Attribute</a>
-, <a class="el" href="class_binary_node.html#a73fd9f731034b7862244b5b75d48986c">BinaryNode&lt; TYPE &gt;</a>
+, <a class="el" href="class_binary_node.html#a93ca83fcedcc6f3513583e70a0b4ecc7">BinaryNode&lt; TYPE &gt;</a>
 , <a class="el" href="class_cache.html#abb8fe77b017f24060828edc7bd4405d3">Cache&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_cache_provider.html#a75a4bf8d27703d5d8c578c23bce787e4">CacheProvider&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_character.html#af64a0e8bd6c3987390db365e69c1d517">Character</a>
@@ -2510,11 +2594,13 @@ $(function() {
 , <a class="el" href="class_literal.html#a43f3054a87b1213dd4010b32a5e7a949">Literal</a>
 , <a class="el" href="class_long_double.html#a4634ae64304b28ce2bf67b8ca39f01f4">LongDouble</a>
 , <a class="el" href="class_long_integer.html#a7b69d50a82a846a7645b0ea1cedc10e8">LongInteger</a>
-, <a class="el" href="class_map.html#add8aa9c02caf2e48851f454413bba038">Map&lt; KEY, VALUE &gt;</a>
+, <a class="el" href="class_map.html#afccd1cd1e0ff5e216cdfc62298585c30">Map&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_m_d5_sum.html#ad9253c330e1dab99122b733fbf94ec9c">MD5Sum</a>
+, <a class="el" href="class_native_string.html#adb7b833d5ec769d3b38fba7285c0eee7">NativeString</a>
+, <a class="el" href="class_native_wide_string.html#ac86651a8fc2e7e4e1eef854cc0dfa714">NativeWideString</a>
 , <a class="el" href="class_node.html#a3f4d4035a7fc7cd5b2c9af35ee771264">Node</a>
 , <a class="el" href="class_object_model_1_1_object.html#a2ed19e6466770507c603bf02bc57738e">ObjectModel::Object</a>
-, <a class="el" href="class_ownership_pointer.html#a9e2f92067999ab322d7e6841d0544c65">OwnershipPointer&lt; TYPE &gt;</a>
+, <a class="el" href="class_ownership_pointer.html#a14db2784e092a167d3909fbf93ce06a8">OwnershipPointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_pointer.html#a34ebe9fe542c59c006521c39cb60d92e">Pointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_privilege.html#a2aeec5171860fe7863fbcbda360c4bd2">Privilege</a>
 , <a class="el" href="class_reference.html#adfcb4ecead94fb362174ed7c6fe7b8bf">Reference&lt; TYPE &gt;</a>
@@ -2630,6 +2716,12 @@ $(function() {
 , <a class="el" href="class_vector2_d.html#a95ce82a325e44e32b581e60bec8af0f4">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#a5770b0ce30f6a34bf31bb72c4d4256bd">Vector3D&lt; TYPE &gt;</a>
 </li>
+<li>getXML()
+: <a class="el" href="class_object_model.html#a2059047fa126351f065018e9625a9753">ObjectModel</a>
+</li>
+<li>getXPath()
+: <a class="el" href="class_document.html#a3d849ebaae80ad7c3adfb812ee140efd">Document</a>
+</li>
 <li>getXRotation()
 : <a class="el" href="class_matrix4x4.html#a6be7492506501c1b15ddb8e576f3d4ec">Matrix4x4&lt; TYPE &gt;</a>
 </li>
@@ -2662,7 +2754,7 @@ $(function() {
 : <a class="el" href="class_vector3_d.html#a46995e6682e4e6e0d494a00c7a104518">Vector3D&lt; TYPE &gt;</a>
 </li>
 <li>getZero()
-: <a class="el" href="class_math.html#a05691934df26632063ba4cb01d15e09a">Math</a>
+: <a class="el" href="class_math.html#a7743e8f3d92fec02d822e654d7024508">Math</a>
 </li>
 <li>getZRotation()
 : <a class="el" href="class_matrix4x4.html#ab403cc86275b0aaea88f688745b0b250">Matrix4x4&lt; TYPE &gt;</a>
@@ -2677,7 +2769,7 @@ $(function() {
 : <a class="el" href="class_group.html#a3a9c3669dfc582ea94abebf28b4af7d3">Group</a>
 </li>
 <li>GroupException()
-: <a class="el" href="class_group_1_1_group_exception.html#aa6fa4281d9251558c9b95ddfcae19fe9">Group::GroupException</a>
+: <a class="el" href="class_group_1_1_group_exception.html#a20bee5c1f65189431a56b4ecd199bcfd">Group::GroupException</a>
 </li>
 <li>grow()
 : <a class="el" href="class_hash_set_1_1_hash_set_impl.html#a18defaabc3f1cc8a41cdc8e53ac4d8a8">HashSet&lt; TYPE &gt;::HashSetImpl</a>

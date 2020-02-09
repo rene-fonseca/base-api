@@ -122,8 +122,9 @@ $(function() {
 , <a class="el" href="class_i_e_e_e1394_impl.html#afb6238bd1785e69f4c7967dbbc755013">IEEE1394Impl</a>
 , <a class="el" href="class_input_stream.html#a2c0b6371ed955ae0b60eb742798656f5">InputStream</a>
 , <a class="el" href="class_linux_raw_i_e_e_e1394.html#aa92522d18f17f2392465666660e314e0">LinuxRawIEEE1394</a>
-, <a class="el" href="class_lisa_encoding_1_1_lisa_decoder.html#a84375af644962070a2837f0603a78002">LisaEncoding::LisaDecoder</a>
+, <a class="el" href="class_lisa_encoding_1_1_lisa_decoder.html#a8cac06d14076f2c5e0dcefd021e306af">LisaEncoding::LisaDecoder</a>
 , <a class="el" href="class_little_endian_decoder.html#add27a0368fbc6119568d7f073ba78a7c">LittleEndianDecoder</a>
+, <a class="el" href="class_memory_input_stream.html#a55dbf9418cef4fe1bfead8f865d826c0">MemoryInputStream</a>
 , <a class="el" href="class_orb_decoder.html#a61b1123ca4a665a1cc4dd675ba4080be">OrbDecoder</a>
 , <a class="el" href="class_parser.html#a2005e87aec4f2cc98b2e4f82af896381">Parser</a>
 , <a class="el" href="class_pipe.html#a0bf272be91be3d60b1653cee49899bb4">Pipe</a>
@@ -182,6 +183,9 @@ $(function() {
 <li>readExternal()
 : <a class="el" href="class_externalizable.html#ab1d5272ca96a30c36f6ba18246a355f4">Externalizable</a>
 </li>
+<li>readFile()
+: <a class="el" href="class_file.html#a5e5eec63f46ff6d8a6b7bedc40ee1f82">File</a>
+</li>
 <li>readFloat()
 : <a class="el" href="class_primitive_input_stream.html#ac0359f8cd061d791241c4eeee6eba954">PrimitiveInputStream</a>
 </li>
@@ -201,7 +205,14 @@ $(function() {
 </li>
 <li>ReadIterator
 : <a class="el" href="class_file_reader.html#a4278ab600fb8aa9011a0091dcfc54118">FileReader</a>
+, <a class="el" href="class_ordered_binary_tree_1_1_read_iterator.html#a4dd0ed71cd910743fcc15757e6867127">OrderedBinaryTree&lt; TYPE, KEY &gt;::ReadIterator</a>
 , <a class="el" href="class_wide_string.html#adca11500daf6ec90011564f68455c640">WideString</a>
+</li>
+<li>readLine()
+: <a class="el" href="class_line_reader.html#abb435ec8e267f6a484e19a58f7aaf6a8">LineReader</a>
+</li>
+<li>readLines()
+: <a class="el" href="class_line_reader.html#aaa5cffab38a6311867d3970af44280e1">LineReader</a>
 </li>
 <li>readLongDouble()
 : <a class="el" href="class_primitive_input_stream.html#ae3aaf18f8b62f3d72777064f89af7c75">PrimitiveInputStream</a>
@@ -248,6 +259,9 @@ $(function() {
 <li>READY
 : <a class="el" href="class_i_e_e_e1394_common.html#aa1fc7d264d602d8375e45a5cc9f3f1f2adfdee6f2f65f9f0d9b14ecca9cdd6a1b">IEEE1394Common</a>
 </li>
+<li>real
+: <a class="el" href="class_complex.html#a9eb2392b17eff99843ef3c4a90cc0af8">Complex&lt; TYPE &gt;</a>
+</li>
 <li>realBase
 : <a class="el" href="class_format_output_stream_1_1_context.html#a5179528be15d19161d0cc4ec94262999">FormatOutputStream::Context</a>
 </li>
@@ -288,7 +302,8 @@ $(function() {
 : <a class="el" href="class_any_value.html#afef2d29a2bbd06ce2b25735e95e7ee7cad6cb3a9e764661f08e494f4b616d52ea">AnyValue</a>
 </li>
 <li>Reference
-: <a class="el" href="class_iterator.html#ab632d8df5e994df220cac96c4a7e31a5">Iterator&lt; TRAITS &gt;</a>
+: <a class="el" href="class_enumerator.html#a1e075f88ec10c4efa26d1bb9f38a7182">Enumerator&lt; TRAITS &gt;</a>
+, <a class="el" href="class_iterator.html#ab632d8df5e994df220cac96c4a7e31a5">Iterator&lt; TRAITS &gt;</a>
 </li>
 <li>REFERENCE
 : <a class="el" href="class_orb_response.html#aa3ac28deb121f578d82f5c7cc32522a6a12d2f8ab44874e41ed2c0b9e27c91e82">OrbResponse</a>
@@ -416,8 +431,7 @@ $(function() {
 , <a class="el" href="class_synchronizeable_3_01_unsafe_01_4.html#a3b4fde4ef1c59fe468604cef264bd2ea">Synchronizeable&lt; Unsafe &gt;</a>
 </li>
 <li>relinquishOwnership()
-: <a class="el" href="class_array_ownership_pointer.html#a192f153bcfd72153d93d8f5fe13d6d3e">ArrayOwnershipPointer&lt; TYPE &gt;</a>
-, <a class="el" href="class_ownership_pointer.html#a1a77b0500c547b8e95912fa2f0938c42">OwnershipPointer&lt; TYPE &gt;</a>
+: <a class="el" href="class_ownership_pointer.html#a1a77b0500c547b8e95912fa2f0938c42">OwnershipPointer&lt; TYPE &gt;</a>
 </li>
 <li>relinquishReadAccess()
 : <a class="el" href="class_sound_device.html#a0e57d6405bd6f63fb9cd506953a62523">SoundDevice</a>
@@ -443,7 +457,7 @@ $(function() {
 </li>
 <li>remove()
 : <a class="el" href="class_access_control_list.html#ab49ec6ad6653ca15229ea2ce4d2dea5c">AccessControlList</a>
-, <a class="el" href="class_array.html#a0961bed50ec1df25521ed996947669f8">Array&lt; TYPE &gt;</a>
+, <a class="el" href="class_array.html#ae488060aa8f0c709e23ec3ba77eb43c1">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_cache.html#abd35ed567e84753d8a8b81e4e454209c">Cache&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_event_dispatcher.html#afd8adbf9c884784c1d79480c4f89bfbc">EventDispatcher&lt; SENDER, LISTENER &gt;</a>
 , <a class="el" href="class_hash_set_1_1_hash_set_impl.html#a014e9d62eb757311ec0db43405047cd0">HashSet&lt; TYPE &gt;::HashSetImpl</a>
@@ -458,7 +472,7 @@ $(function() {
 , <a class="el" href="class_multiple_sockets.html#a47de88d4080eb4bd20ce0446ea85a682">MultipleSockets</a>
 , <a class="el" href="class_orb_scheme.html#a393a16d73e06466921b3a616ff7a1cef">OrbScheme</a>
 , <a class="el" href="class_orb_skeleton_manager.html#a5d6f5bbac112c86d408f230e257d2fe4">OrbSkeletonManager</a>
-, <a class="el" href="class_ordered_binary_tree.html#ad514cd993c1cb559d2f6400476f019c8">OrderedBinaryTree&lt; TYPE, KEY &gt;</a>
+, <a class="el" href="class_ordered_binary_tree.html#aaa0cd88d48556f3de62b48fe9b297c48">OrderedBinaryTree&lt; TYPE, KEY &gt;</a>
 , <a class="el" href="class_set.html#a35a7b4823c633a4b3894206a3cc77622">Set&lt; KEY &gt;</a>
 , <a class="el" href="class_string.html#ab8134b73c7462b4d4e0491b84b19cc26">String</a>
 , <a class="el" href="class_wide_string.html#aa32e2ceb1b93bc50aee432ccdf407e5a">WideString</a>
@@ -479,6 +493,7 @@ $(function() {
 , <a class="el" href="class_list.html#a7202389bb336ce65bcfcca42c28946e4">List&lt; TYPE &gt;</a>
 , <a class="el" href="class_map.html#ab3973c088b31e601c15b291af69a6f89">Map&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_ordered_binary_tree.html#a850bccfd6a424ab47eba6b6d71fc7833">OrderedBinaryTree&lt; TYPE, KEY &gt;</a>
+, <a class="el" href="class_priority_queue.html#a40f2829e54e516ee2a2840c38fa80683">PriorityQueue&lt; VALUE, PRIORITY, LOCK &gt;</a>
 , <a class="el" href="class_set.html#ab3e22762f53f7c6e21f4b2a178b29019">Set&lt; KEY &gt;</a>
 , <a class="el" href="class_stack.html#af877c3473770e9471f8d5ddf1377f16e">Stack&lt; TYPE &gt;</a>
 , <a class="el" href="class_stack_1_1_stack_impl.html#a6ad62866213e18cd0e05f83fb6961fd3">Stack&lt; TYPE &gt;::StackImpl</a>
@@ -533,6 +548,9 @@ $(function() {
 <li>renderingContextHandle
 : <a class="el" href="class_open_g_l_context_impl.html#ae761b12d5dee5c0ff210598d05ca8c95">OpenGLContextImpl</a>
 </li>
+<li>RenderingTask()
+: <a class="el" href="class_profiler_1_1_rendering_task.html#a6a0c9484d7492d2a294f729735498782">Profiler::RenderingTask</a>
+</li>
 <li>REPEAT_HEADER
 : <a class="el" href="class_memory_dump.html#abca912e18918f07445c5b1a077ba081aa9314cdb6bd7ba88bb2916563150fc0c2">MemoryDump</a>
 </li>
@@ -554,9 +572,6 @@ $(function() {
 <li>Representation
 : <a class="el" href="class_any_value.html#afef2d29a2bbd06ce2b25735e95e7ee7c">AnyValue</a>
 </li>
-<li>representation
-: <a class="el" href="class_read_write_lock.html#a8e80f297c047cdeb276516159b8d852c">ReadWriteLock</a>
-</li>
 <li>REQUEST_REFUSED
 : <a class="el" href="class_operating_system.html#a552dd99466ccc088526cdf651dca421daf55ad0dcbfb3fd25d1ed3d03984875c3">OperatingSystem</a>
 </li>
@@ -568,7 +583,7 @@ $(function() {
 </li>
 <li>reset()
 : <a class="el" href="class_barrier.html#a1cd9f4447e17de7300a3555b61aff0f1">Barrier</a>
-, <a class="el" href="class_bit_set.html#ada901010fa1bd8ab31448ed13e30521b">BitSet</a>
+, <a class="el" href="class_bit_set.html#a8590e18cc944c01bd498b55b13e6bb52">BitSet</a>
 , <a class="el" href="class_event.html#a149bd3fe9d4ab548a17d684b30283c87">Event</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html#aa996c388a24978310e1eff9ae508d7c4">IEEE1394Common::IsochronousReadFixedDataRequest</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_packets_request.html#a0fce7673f492dcb3dafdfe100faccde8">IEEE1394Common::IsochronousReadFixedPacketsRequest</a>
@@ -638,14 +653,24 @@ $(function() {
 <li>RESOURCE_STACK
 : <a class="el" href="class_operating_system.html#a7e3074344d085bfbffd04e2de73e83d0a78623a74d7c51ec0b0af0ca4e2c0dd23">OperatingSystem</a>
 </li>
+<li>ResourceCreateTask()
+: <a class="el" href="class_profiler_1_1_resource_create_task.html#afd39c950e57f2d3926dde28eab0d8781">Profiler::ResourceCreateTask</a>
+</li>
 <li>ResourceException()
-: <a class="el" href="class_resource_exception.html#af13ab5948c614d7846b90ad90dfacf54">ResourceException</a>
+: <a class="el" href="class_resource_exception.html#ae5edf4cec5cc79cd166925104327dba9">ResourceException</a>
+</li>
+<li>ResourceHandle()
+: <a class="el" href="class_resource_handle.html#a6b3050ad07d3b5e529e84e522e5774d3">ResourceHandle</a>
 </li>
 <li>ResponseCode
 : <a class="el" href="class_i_e_e_e1394_common.html#a3a405eaa310858e829323255e3083aca">IEEE1394Common</a>
 </li>
 <li>ResponseType
 : <a class="el" href="class_orb_response.html#aa3ac28deb121f578d82f5c7cc32522a6">OrbResponse</a>
+</li>
+<li>restart()
+: <a class="el" href="class_string_output_stream_wrapper.html#ab85be54e0c7ac552d35bc470a9a044d8">StringOutputStreamWrapper</a>
+, <a class="el" href="class_wide_string_output_stream_wrapper.html#a640005c061d93a53ec69a8c65e48053d">WideStringOutputStreamWrapper</a>
 </li>
 <li>RESTRICT
 : <a class="el" href="class_file.html#add12d3667cdc2a0435d71d8c57373deaae2520a2268622e0ab55cbe808d1d81b6">File</a>
@@ -763,11 +788,17 @@ $(function() {
 <li>RING
 : <a class="el" href="class_serial_port.html#a10319854fdaa0f7287583999144b03c4a59714e7cf31290b71b9131ffe3c4e8cb">SerialPort</a>
 </li>
+<li>RISCV32
+: <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6f15ac3861cc4696d0dbcb41fc2762c5">Architecture</a>
+</li>
+<li>RISCV64
+: <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaf504eb76aa892070c02e27d0ca2d2ab4">Architecture</a>
+</li>
 <li>RLSD
 : <a class="el" href="class_serial_port.html#a10319854fdaa0f7287583999144b03c4a7a130c5a7c360e7a18bc16936cb37606">SerialPort</a>
 </li>
 <li>RMIException()
-: <a class="el" href="class_r_m_i_exception.html#adff1d739c07aa55479c3d364484019c8">RMIException</a>
+: <a class="el" href="class_r_m_i_exception.html#abe3097d315425508adbc0dbe2fa4ac8e">RMIException</a>
 </li>
 <li>rol()
 : <a class="el" href="class_math.html#aeb3ef7df264c40d9135b1775f084ef1b">Math</a>
@@ -798,7 +829,7 @@ $(function() {
 , <a class="el" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aeb95125d01df2aaccce74e63f3eaab02">FolderInfo</a>
 </li>
 <li>round()
-: <a class="el" href="class_math.html#a35fa42eddbe5a7a4bda35760fd290ca1">Math</a>
+: <a class="el" href="class_math.html#a9682ee5ee954da42355d0381bfb7c4a5">Math</a>
 </li>
 <li>roundToDay()
 : <a class="el" href="class_timer_1_1_elapsed_time.html#ae29c1e4bffa11c189f40a00300e28668">Timer::ElapsedTime</a>

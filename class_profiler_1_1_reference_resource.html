@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Base Framework: Pipe::PipeHandle Class Reference</title>
+<title>Base Framework: Profiler::ReferenceResource Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,32 +38,28 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="class_pipe.html">Pipe</a></li><li class="navelem"><a class="el" href="class_pipe_1_1_pipe_handle.html">PipeHandle</a></li>  </ul>
+<li class="navelem"><a class="el" href="class_profiler.html">Profiler</a></li><li class="navelem"><a class="el" href="class_profiler_1_1_reference_resource.html">ReferenceResource</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="class_pipe_1_1_pipe_handle-members.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="class_profiler_1_1_reference_resource-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Pipe::PipeHandle Class Reference</div>  </div>
+<div class="title">Profiler::ReferenceResource Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Inherits <a class="el" href="class_handle.html">Handle</a>.</p>
+<p><code>#include &lt;<a class="el" href="_profiler_8h_source.html">base/Profiler.h</a>&gt;</code></p>
+
+<p>Inherits <a class="el" href="class_reference_counted_object.html">ReferenceCountedObject</a>.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_class_handle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_handle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_handle.html">Handle</a></td></tr>
-<tr class="memitem:a42435f6bfb9bf44b254393e0e7998af1 inherit pub_methods_class_handle"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_handle.html#a42435f6bfb9bf44b254393e0e7998af1">Handle</a> () noexcept</td></tr>
-<tr class="separator:a42435f6bfb9bf44b254393e0e7998af1 inherit pub_methods_class_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a68efb07db45619530e29f169afe81 inherit pub_methods_class_handle"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_handle.html#a54a68efb07db45619530e29f169afe81">Handle</a> (<a class="el" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a> _handle) noexcept</td></tr>
-<tr class="separator:a54a68efb07db45619530e29f169afe81 inherit pub_methods_class_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce0094b47545e56227429b18127d845 inherit pub_methods_class_handle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_handle.html#abce0094b47545e56227429b18127d845">getHandle</a> () const noexcept</td></tr>
-<tr class="separator:abce0094b47545e56227429b18127d845 inherit pub_methods_class_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a468248a9be5edc701d148873677109aa inherit pub_methods_class_handle"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_handle.html#a468248a9be5edc701d148873677109aa">isValid</a> () const noexcept</td></tr>
-<tr class="separator:a468248a9be5edc701d148873677109aa inherit pub_methods_class_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab755c0824ca03dee49879d3b58945d45 inherit pub_methods_class_handle"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_handle.html#ab755c0824ca03dee49879d3b58945d45">~Handle</a> ()</td></tr>
-<tr class="separator:ab755c0824ca03dee49879d3b58945d45 inherit pub_methods_class_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a15631e77ba5e4ea40a7f4d8a6b80cd91"><td class="memItemLeft" align="right" valign="top"><a id="a15631e77ba5e4ea40a7f4d8a6b80cd91"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ReferenceResource</b> (unsigned int _resourceId) noexcept</td></tr>
+<tr class="separator:a15631e77ba5e4ea40a7f4d8a6b80cd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_reference_counted_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_reference_counted_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_reference_counted_object.html">ReferenceCountedObject</a></td></tr>
 <tr class="memitem:a6975e32f31c6fff623b42a008fe856a1 inherit pub_methods_class_reference_counted_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counted_object.html#a6975e32f31c6fff623b42a008fe856a1">ReferenceCountedObject</a> () noexcept</td></tr>
 <tr class="separator:a6975e32f31c6fff623b42a008fe856a1 inherit pub_methods_class_reference_counted_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,8 +85,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ad15a90a5710a2b5085c37089342e1c17 inherit pub_methods_class_dynamic_object"><td class="memItemLeft" align="right" valign="top"><a id="ad15a90a5710a2b5085c37089342e1c17"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>_COM_AZURE_DEV__BASE__OVERRIDE_ALLOC</b> ()</td></tr>
 <tr class="separator:ad15a90a5710a2b5085c37089342e1c17 inherit pub_methods_class_dynamic_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab638f3d5362ad27ad48df21cf377034c"><td class="memItemLeft" align="right" valign="top"><a id="ab638f3d5362ad27ad48df21cf377034c"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>resourceId</b> = 0</td></tr>
+<tr class="separator:ab638f3d5362ad27ad48df21cf377034c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac683d573ccd31a3a74a9ac926239d1f3"><td class="memItemLeft" align="right" valign="top"><a id="ac683d573ccd31a3a74a9ac926239d1f3"></a>
+<a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
+<tr class="separator:ac683d573ccd31a3a74a9ac926239d1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b8c35f0212632daa765d02196c861b"><td class="memItemLeft" align="right" valign="top"><a id="a39b8c35f0212632daa765d02196c861b"></a>
+<a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
+<tr class="separator:a39b8c35f0212632daa765d02196c861b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_reference.html" title="Automation pointer that counts the number of references to an object.">Reference</a> counted resource context. </p>
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

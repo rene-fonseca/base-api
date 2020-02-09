@@ -98,38 +98,41 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_element_decl.html#a83b899b57023e7d5daac9af054e14e48ac124782490e8cc2d4ff7eb6af3465108">   62</a></span>&#160;    PLUS </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  };</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_element_decl.html">ElementDecl</a>(<a class="code" href="class_node.html">Node</a> node) : <a class="code" href="class_declaration.html">Declaration</a>(node) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    bassert(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == ELEMENT_DECL_NODE),</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_element_decl.html">ElementDecl</a>(<a class="code" href="class_declaration.html">Declaration</a> node)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    : <a class="code" href="class_declaration.html">Declaration</a>(node) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    bassert(</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == ELEMENT_DECL_NODE),</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    );</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  ValueType getValueType() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_node.html#a0c3de53a3545b46846a7036eed80704f">hasAttributes</a>() const noexcept;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="class_attribute_decl.html">AttributeDecl</a> getFirstAttribute() noexcept;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_element_decl.html">ElementDecl</a>(<a class="code" href="class_node.html">Node</a> node)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    : <a class="code" href="class_declaration.html">Declaration</a>(node)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    bassert(</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == ELEMENT_DECL_NODE),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_element_decl.html">ElementDecl</a>(<a class="code" href="class_declaration.html">Declaration</a> node)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    : <a class="code" href="class_declaration.html">Declaration</a>(node)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    bassert(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == ELEMENT_DECL_NODE),</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  ValueType getValueType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_node.html#a0c3de53a3545b46846a7036eed80704f">hasAttributes</a>() const noexcept;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="class_attribute_decl.html">AttributeDecl</a> getFirstAttribute() noexcept;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_node_html_a0c3de53a3545b46846a7036eed80704f"><div class="ttname"><a href="class_node.html#a0c3de53a3545b46846a7036eed80704f">Node::hasAttributes</a></div><div class="ttdeci">bool hasAttributes() const noexcept</div></div>
 <div class="ttc" id="aclass_element_decl_html_a5ac7af83f9cd3e5dc896725cc4f96e97"><div class="ttname"><a href="class_element_decl.html#a5ac7af83f9cd3e5dc896725cc4f96e97">ElementDecl::Content</a></div><div class="ttdeci">Content</div><div class="ttdef"><b>Definition:</b> ElementDecl.h:50</div></div>
 <div class="ttc" id="aclass_element_decl_html_a83b899b57023e7d5daac9af054e14e48"><div class="ttname"><a href="class_element_decl.html#a83b899b57023e7d5daac9af054e14e48">ElementDecl::Occurrence</a></div><div class="ttdeci">Occurrence</div><div class="ttdef"><b>Definition:</b> ElementDecl.h:58</div></div>
 <div class="ttc" id="aclass_element_decl_html_a83b899b57023e7d5daac9af054e14e48abf56bf4cd0a7360eea07c31603b9d0f3"><div class="ttname"><a href="class_element_decl.html#a83b899b57023e7d5daac9af054e14e48abf56bf4cd0a7360eea07c31603b9d0f3">ElementDecl::STAR</a></div><div class="ttdeci">@ STAR</div><div class="ttdef"><b>Definition:</b> ElementDecl.h:61</div></div>
 <div class="ttc" id="aclass_element_decl_html_a5ac7af83f9cd3e5dc896725cc4f96e97a403713d853e6867d750b69e3ac585230"><div class="ttname"><a href="class_element_decl.html#a5ac7af83f9cd3e5dc896725cc4f96e97a403713d853e6867d750b69e3ac585230">ElementDecl::CONTENT_ELEMENT</a></div><div class="ttdeci">@ CONTENT_ELEMENT</div><div class="ttdef"><b>Definition:</b> ElementDecl.h:52</div></div>
-<div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:307</div></div>
+<div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:325</div></div>
 <div class="ttc" id="aclass_attribute_decl_html"><div class="ttname"><a href="class_attribute_decl.html">AttributeDecl</a></div><div class="ttdoc">XML attribute declaration node.</div><div class="ttdef"><b>Definition:</b> AttributeDecl.h:30</div></div>
-<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:45</div></div>
+<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:47</div></div>
 <div class="ttc" id="aclass_element_decl_html_a1f6c807f804e47812b7fa8f7aa7a9199ac1afd4127b08ce3b22c68d52cbeaee02"><div class="ttname"><a href="class_element_decl.html#a1f6c807f804e47812b7fa8f7aa7a9199ac1afd4127b08ce3b22c68d52cbeaee02">ElementDecl::EMPTY</a></div><div class="ttdeci">@ EMPTY</div><div class="ttdef"><b>Definition:</b> ElementDecl.h:43</div></div>
 <div class="ttc" id="aclass_node_html_a8fad79f65f64fc6c150574e023eb043f"><div class="ttname"><a href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">Node::getType</a></div><div class="ttdeci">NodeType getType() const</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">DOM node.</div><div class="ttdef"><b>Definition:</b> Node.h:39</div></div>

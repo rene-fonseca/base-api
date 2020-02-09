@@ -200,104 +200,109 @@ $(function() {
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  {</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> date;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">  306</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">addBias</a>(int64 bias) noexcept</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    date += bias;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">int</span> getMillisecond() const noexcept;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">int</span> getSecond() const noexcept;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordtype">int</span> getMinute() const noexcept;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordtype">int</span> getHour() const noexcept;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordtype">int</span> getDay() const noexcept;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordtype">int</span> getDayOfWeek() const noexcept;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordtype">int</span> getDayOfYear() const noexcept;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  <span class="keywordtype">int</span> getMonth() const noexcept;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <span class="keywordtype">int</span> getYear() const noexcept;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <span class="keywordtype">int</span> getUTCSecond() const noexcept;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  <span class="keywordtype">int</span> getUTCMinute() const noexcept;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  <span class="keywordtype">int</span> getUTCHour() const noexcept;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordtype">int</span> getUTCDay() const noexcept;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="keywordtype">int</span> getUTCDayOfWeek() const noexcept;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <span class="keywordtype">int</span> getUTCDayOfYear() const noexcept;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <span class="keywordtype">int</span> getUTCMonth() const noexcept;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordtype">int</span> getUTCYear() const noexcept;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordtype">int</span> getJulianDay() const noexcept;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  </div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <span class="keywordtype">void</span> split(DateTime&amp; time, <span class="keywordtype">bool</span> local = false) const noexcept;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_string_output_stream.html">format</a>(</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    const <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>,</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordtype">bool</span> local = true) const;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <a class="code" href="class_wide_string.html">WideString</a> <a class="code" href="class_string_output_stream.html">format</a>(</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    const <a class="code" href="class_wide_string.html">WideString</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>,</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordtype">bool</span> local = true) const;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;};</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; operator&lt;&lt;(</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream,</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  const <a class="code" href="class_date.html">Date</a>&amp; date);</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;template&lt;&gt;</div>
-<div class="line"><a name="l00438"></a><span class="lineno"><a class="line" href="class_is_uninitializeable_3_01_date_01_4.html">  438</a></span>&#160;class <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; : public <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;int64&gt; {</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;};</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="class_hash_3_01_date_01_4.html">  442</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_hash.html">Hash</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; {</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> operator()(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; value) noexcept</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  {</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <a class="code" href="class_hash.html">Hash&lt;int64&gt;</a> hash;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">return</span> hash(value.<a class="code" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a>());</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  }</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;};</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  </div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="class_date.html#a5f0e43ef8351feb6e569c98d6369de08">  304</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">return</span> date != 0;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">  312</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">addBias</a>(int64 bias) noexcept</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    date += bias;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">int</span> getMillisecond() const noexcept;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordtype">int</span> getSecond() const noexcept;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordtype">int</span> getMinute() const noexcept;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordtype">int</span> getHour() const noexcept;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordtype">int</span> getDay() const noexcept;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordtype">int</span> getDayOfWeek() const noexcept;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keywordtype">int</span> getDayOfYear() const noexcept;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <span class="keywordtype">int</span> getMonth() const noexcept;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keywordtype">int</span> getYear() const noexcept;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  <span class="keywordtype">int</span> getUTCSecond() const noexcept;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordtype">int</span> getUTCMinute() const noexcept;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <span class="keywordtype">int</span> getUTCHour() const noexcept;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="keywordtype">int</span> getUTCDay() const noexcept;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="keywordtype">int</span> getUTCDayOfWeek() const noexcept;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  <span class="keywordtype">int</span> getUTCDayOfYear() const noexcept;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keywordtype">int</span> getUTCMonth() const noexcept;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keywordtype">int</span> getUTCYear() const noexcept;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keywordtype">int</span> getJulianDay() const noexcept;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">void</span> split(DateTime&amp; time, <span class="keywordtype">bool</span> local = false) const noexcept;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_string_output_stream.html">format</a>(</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    const <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>,</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">bool</span> local = true) const;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <a class="code" href="class_wide_string.html">WideString</a> <a class="code" href="class_string_output_stream.html">format</a>(</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    const <a class="code" href="class_wide_string.html">WideString</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>,</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordtype">bool</span> local = true) const;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;};</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; operator&lt;&lt;(</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream,</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  const <a class="code" href="class_date.html">Date</a>&amp; date);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;template&lt;&gt;</div>
+<div class="line"><a name="l00444"></a><span class="lineno"><a class="line" href="class_is_uninitializeable_3_01_date_01_4.html">  444</a></span>&#160;class <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; : public <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;int64&gt; {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;};</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00448"></a><span class="lineno"><a class="line" href="class_hash_3_01_date_01_4.html">  448</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_hash.html">Hash</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; {</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> operator()(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; value) noexcept</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="class_hash.html">Hash&lt;int64&gt;</a> hash;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">return</span> hash(value.<a class="code" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a>());</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  }</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;};</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_hash_html"><div class="ttname"><a href="class_hash.html">Hash</a></div><div class="ttdoc">Hash function object.</div><div class="ttdef"><b>Definition:</b> Hash.h:30</div></div>
 <div class="ttc" id="aclass_date_html_ae78acd132704a26355d5f6f926fc75f5"><div class="ttname"><a href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">Date::getDaysOfYear</a></div><div class="ttdeci">static int getDaysOfYear(int year) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:159</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_a9f68575a15757475412b8fd8ac98fded"><div class="ttname"><a href="struct_date_1_1_date_time.html#a9f68575a15757475412b8fd8ac98fded">Date::DateTime::year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> Date.h:123</div></div>
 <div class="ttc" id="aclass_date_html_a1f287427944b9549912b8f8870bf2580"><div class="ttname"><a href="class_date.html#a1f287427944b9549912b8f8870bf2580">Date::Constants</a></div><div class="ttdeci">Constants</div><div class="ttdef"><b>Definition:</b> Date.h:44</div></div>
-<div class="ttc" id="aclass_date_html_a5b885bd0bac83e1a670921a163ee7d2a"><div class="ttname"><a href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">Date::addBias</a></div><div class="ttdeci">void addBias(int64 bias) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:306</div></div>
+<div class="ttc" id="aclass_date_html_a5b885bd0bac83e1a670921a163ee7d2a"><div class="ttname"><a href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">Date::addBias</a></div><div class="ttdeci">void addBias(int64 bias) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:312</div></div>
 <div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_a5cfd1d57a06ac5d65426ca62dcee0826"><div class="ttname"><a href="struct_date_1_1_date_time.html#a5cfd1d57a06ac5d65426ca62dcee0826">Date::DateTime::month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> Date.h:124</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html"><div class="ttname"><a href="struct_date_1_1_date_time.html">Date::DateTime</a></div><div class="ttdef"><b>Definition:</b> Date.h:122</div></div>
 <div class="ttc" id="aclass_date_html_a6218352737d8f154fcc3eebe9a7dfa42"><div class="ttname"><a href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">Date::operator=</a></div><div class="ttdeci">Date &amp; operator=(const Date &amp;assign) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:288</div></div>
 <div class="ttc" id="aclass_date_html_afee858b535b4478ebcc2c9d04c19f19c"><div class="ttname"><a href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">Date::getValue</a></div><div class="ttdeci">int64 getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:298</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_acc8f5fcd9155c6b0d94c390633f174fc"><div class="ttname"><a href="struct_date_1_1_date_time.html#acc8f5fcd9155c6b0d94c390633f174fc">Date::DateTime::week</a></div><div class="ttdeci">int week</div><div class="ttdef"><b>Definition:</b> Date.h:128</div></div>
-<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:99</div></div>
+<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_ae85def92d492c99e4462c51bb02ad5e5"><div class="ttname"><a href="struct_date_1_1_date_time.html#ae85def92d492c99e4462c51bb02ad5e5">Date::DateTime::day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> Date.h:125</div></div>
 <div class="ttc" id="aclass_date_html_a54d09b9384d51d0fb41408d9ca0656fb"><div class="ttname"><a href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">Date::Date</a></div><div class="ttdeci">Date(const Date &amp;copy) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:280</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_a4c44a8648f41413df4b3e11a87cf881e"><div class="ttname"><a href="struct_date_1_1_date_time.html#a4c44a8648f41413df4b3e11a87cf881e">Date::DateTime::minute</a></div><div class="ttdeci">int minute</div><div class="ttdef"><b>Definition:</b> Date.h:130</div></div>
-<div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:208</div></div>
+<div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:205</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_a135f0107dbe6eb722abeadcd7d44decf"><div class="ttname"><a href="struct_date_1_1_date_time.html#a135f0107dbe6eb722abeadcd7d44decf">Date::DateTime::second</a></div><div class="ttdeci">int second</div><div class="ttdef"><b>Definition:</b> Date.h:131</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_a64b04f741e069cf585cad851e6af39c0"><div class="ttname"><a href="struct_date_1_1_date_time.html#a64b04f741e069cf585cad851e6af39c0">Date::DateTime::millisecond</a></div><div class="ttdeci">int millisecond</div><div class="ttdef"><b>Definition:</b> Date.h:132</div></div>
 <div class="ttc" id="aclass_date_html_a3356060cc600cf227aeed83605ff97d0"><div class="ttname"><a href="class_date.html#a3356060cc600cf227aeed83605ff97d0">Date::Date</a></div><div class="ttdeci">Date(int64 _date) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:267</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_afca27b571ebd3c64a8a8516b2a37ee1e"><div class="ttname"><a href="struct_date_1_1_date_time.html#afca27b571ebd3c64a8a8516b2a37ee1e">Date::DateTime::weekday</a></div><div class="ttdeci">int weekday</div><div class="ttdef"><b>Definition:</b> Date.h:126</div></div>
 <div class="ttc" id="astruct_date_1_1_date_time_html_a25717751c15907f04dcd59090cfcd2f5"><div class="ttname"><a href="struct_date_1_1_date_time.html#a25717751c15907f04dcd59090cfcd2f5">Date::DateTime::hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> Date.h:129</div></div>
 <div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Date and time.</div><div class="ttdef"><b>Definition:</b> Date.h:34</div></div>
-<div class="ttc" id="aclass_is_uninitializeable_html"><div class="ttname"><a href="class_is_uninitializeable.html">IsUninitializeable</a></div><div class="ttdef"><b>Definition:</b> Functor.h:121</div></div>
+<div class="ttc" id="aclass_is_uninitializeable_html"><div class="ttname"><a href="class_is_uninitializeable.html">IsUninitializeable</a></div><div class="ttdef"><b>Definition:</b> Functor.h:125</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

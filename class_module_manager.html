@@ -65,8 +65,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa3ec92c7d83c42b7850401e89dcc5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17b1ffe8467eff4a968f46aae2c00901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a17b1ffe8467eff4a968f46aae2c00901">loadModules</a> ()</td></tr>
 <tr class="separator:a17b1ffe8467eff4a968f46aae2c00901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad25d4b5fef27f8673d1102c8032d98b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#aad25d4b5fef27f8673d1102c8032d98b">traverseModules</a> (const <a class="el" href="class_string.html">String</a> &amp;pattern=&quot;*&quot;)</td></tr>
-<tr class="separator:aad25d4b5fef27f8673d1102c8032d98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143337f2b6338a66cd7e23a8659a849e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_object_model_1_1_value.html">ObjectModel::Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a143337f2b6338a66cd7e23a8659a849e">getModules</a> (const <a class="el" href="class_string.html">String</a> &amp;pattern=&quot;*&quot;)</td></tr>
+<tr class="separator:a143337f2b6338a66cd7e23a8659a849e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd183d2753dd9e2a159d196c0ea9903c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#acd183d2753dd9e2a159d196c0ea9903c">getModulesCSV</a> (const <a class="el" href="class_string.html">String</a> &amp;pattern=&quot;*&quot;)</td></tr>
+<tr class="separator:acd183d2753dd9e2a159d196c0ea9903c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbeba098c176c37beef7bf86d25b4d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a4dbeba098c176c37beef7bf86d25b4d3">traverseModules</a> (<a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;stream, const <a class="el" href="class_string.html">String</a> &amp;pattern=&quot;*&quot;, bool colors=true)</td></tr>
+<tr class="separator:a4dbeba098c176c37beef7bf86d25b4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1581a3a89a981d614f35458ca3748696"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_module.html">Module</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module_manager.html#a1581a3a89a981d614f35458ca3748696">getModules</a> () const</td></tr>
 <tr class="separator:a1581a3a89a981d614f35458ca3748696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -99,7 +103,7 @@ static <a class="el" href="class_module_manager.html">ModuleManager</a> &amp;&#1
 </div>
 </div>
 <a id="a1581a3a89a981d614f35458ca3748696"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1581a3a89a981d614f35458ca3748696">&#9670;&nbsp;</a></span>getModules()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1581a3a89a981d614f35458ca3748696">&#9670;&nbsp;</a></span>getModules() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,6 +125,44 @@ static <a class="el" href="class_module_manager.html">ModuleManager</a> &amp;&#1
 </table>
 </div><div class="memdoc">
 <p>Returns all the registered modules. </p>
+
+</div>
+</div>
+<a id="a143337f2b6338a66cd7e23a8659a849e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143337f2b6338a66cd7e23a8659a849e">&#9670;&nbsp;</a></span>getModules() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_reference.html">Reference</a>&lt;<a class="el" href="class_object_model_1_1_value.html">ObjectModel::Value</a>&gt; ModuleManager::getModules </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em> = <code>&quot;*&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Runs the modules matching the given pattern as object model. </p>
+
+</div>
+</div>
+<a id="acd183d2753dd9e2a159d196c0ea9903c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd183d2753dd9e2a159d196c0ea9903c">&#9670;&nbsp;</a></span>getModulesCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> ModuleManager::getModulesCSV </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em> = <code>&quot;*&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Runs the modules matching the given pattern as CSV. </p>
 
 </div>
 </div>
@@ -218,8 +260,8 @@ static <a class="el" href="class_module_manager.html">ModuleManager</a> &amp;&#1
 
 </div>
 </div>
-<a id="aad25d4b5fef27f8673d1102c8032d98b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad25d4b5fef27f8673d1102c8032d98b">&#9670;&nbsp;</a></span>traverseModules()</h2>
+<a id="a4dbeba098c176c37beef7bf86d25b4d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbeba098c176c37beef7bf86d25b4d3">&#9670;&nbsp;</a></span>traverseModules()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,9 +269,25 @@ static <a class="el" href="class_module_manager.html">ModuleManager</a> &amp;&#1
         <tr>
           <td class="memname">bool ModuleManager::traverseModules </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
-          <td class="paramname"><em>pattern</em> = <code>&quot;*&quot;</code></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em> = <code>&quot;*&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>colors</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

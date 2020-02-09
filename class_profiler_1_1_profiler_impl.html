@@ -116,15 +116,14 @@ MemorySize&#160;</td><td class="memItemRight" valign="bottom"><b>rebalanceCount<
 <tr class="memitem:a5e373bf90becc4eb408223378cd3fac0"><td class="memItemLeft" align="right" valign="top"><a id="a5e373bf90becc4eb408223378cd3fac0"></a>
 <a class="el" href="class_file_output_stream.html">FileOutputStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fos</b></td></tr>
 <tr class="separator:a5e373bf90becc4eb408223378cd3fac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19aa3da92ea5142b4f0a2971cb6b060f"><td class="memItemLeft" align="right" valign="top"><a id="a19aa3da92ea5142b4f0a2971cb6b060f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>useStackFrames</b> = false</td></tr>
+<tr class="memitem:a19aa3da92ea5142b4f0a2971cb6b060f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_profiler_impl.html#a19aa3da92ea5142b4f0a2971cb6b060f">useStackFrames</a> = false</td></tr>
 <tr class="separator:a19aa3da92ea5142b4f0a2971cb6b060f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8414bd9bdf1af4183dd6de9f3f7ebdf7"><td class="memItemLeft" align="right" valign="top"><a id="a8414bd9bdf1af4183dd6de9f3f7ebdf7"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>minimumWaitTime</b> = 1</td></tr>
+<tr class="memitem:a8414bd9bdf1af4183dd6de9f3f7ebdf7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_profiler_impl.html#a8414bd9bdf1af4183dd6de9f3f7ebdf7">minimumWaitTime</a> = 1</td></tr>
 <tr class="separator:a8414bd9bdf1af4183dd6de9f3f7ebdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0940300a496bebba1146549ed4f1864"><td class="memItemLeft" align="right" valign="top"><a id="af0940300a496bebba1146549ed4f1864"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>minimumHeapSize</b> = 4096 * 2/2</td></tr>
+<tr class="memitem:af0940300a496bebba1146549ed4f1864"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_profiler_impl.html#af0940300a496bebba1146549ed4f1864">minimumHeapSize</a> = 4096 * 2 / 2</td></tr>
 <tr class="separator:af0940300a496bebba1146549ed4f1864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c042ec960e48374be121fa46092ba2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_profiler_impl.html#a51c042ec960e48374be121fa46092ba2">captureIOSize</a> = 0</td></tr>
+<tr class="separator:a51c042ec960e48374be121fa46092ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -250,6 +249,66 @@ static constexpr uint32&#160;</td><td class="memItemRight" valign="bottom"><b>SF
       </table>
 </div><div class="memdoc">
 <p><a class="el" href="class_double.html" title="Double.">Double</a> linked list of all events. </p>
+
+</div>
+</div>
+<a id="a51c042ec960e48374be121fa46092ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c042ec960e48374be121fa46092ba2">&#9670;&nbsp;</a></span>captureIOSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Profiler::ProfilerImpl::captureIOSize = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The global IO capture limit. </p>
+
+</div>
+</div>
+<a id="af0940300a496bebba1146549ed4f1864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0940300a496bebba1146549ed4f1864">&#9670;&nbsp;</a></span>minimumHeapSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Profiler::ProfilerImpl::minimumHeapSize = 4096 * 2 / 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The minimum heap size to record event. </p>
+
+</div>
+</div>
+<a id="a8414bd9bdf1af4183dd6de9f3f7ebdf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8414bd9bdf1af4183dd6de9f3f7ebdf7">&#9670;&nbsp;</a></span>minimumWaitTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Profiler::ProfilerImpl::minimumWaitTime = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The minimum time to wait to record event. </p>
+
+</div>
+</div>
+<a id="a19aa3da92ea5142b4f0a2971cb6b060f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19aa3da92ea5142b4f0a2971cb6b060f">&#9670;&nbsp;</a></span>useStackFrames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Profiler::ProfilerImpl::useStackFrames = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Include stack frames for events. </p>
 
 </div>
 </div>

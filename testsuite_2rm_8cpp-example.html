@@ -90,7 +90,7 @@ $(function() {
 <div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;</a> arguments = getArguments();</div>
 <div class="line">    <a name="_a2"></a><a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = arguments.<a name="a3"></a><a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
-<div class="line">      <a name="_a4"></a><a class="code" href="class_string.html">String</a> argument = *enu.next();</div>
+<div class="line">      <a name="_a4"></a><a class="code" href="class_string.html">String</a> argument = enu.next();</div>
 <div class="line">      <span class="keywordflow">if</span> (argument == <span class="stringliteral">&quot;--help&quot;</span>) {</div>
 <div class="line">        command = COMMAND_HELP;</div>
 <div class="line">        <span class="keywordflow">return</span>;</div>
@@ -140,7 +140,7 @@ $(function() {
 <div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;</a> entries = folder.<a name="a7"></a><a class="code" href="class_folder_info.html#a24c31ff756d3bc4e66d436cad54343af">getEntries</a>();</div>
 <div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = entries.<a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
-<div class="line">      <span class="keyword">const</span> <a class="code" href="class_string.html">String</a> entry = *enu.next();</div>
+<div class="line">      <span class="keyword">const</span> <a class="code" href="class_string.html">String</a> entry = enu.next();</div>
 <div class="line">      <span class="keywordflow">if</span> ((entry == <span class="stringliteral">&quot;.&quot;</span>) || (entry == <span class="stringliteral">&quot;..&quot;</span>)) {</div>
 <div class="line">        <span class="keywordflow">continue</span>;</div>
 <div class="line">      }</div>
@@ -181,7 +181,7 @@ $(function() {
 <div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = paths.<a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    </div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
-<div class="line">      <a class="code" href="class_string.html">String</a> path = *enu.next();</div>
+<div class="line">      <a class="code" href="class_string.html">String</a> path = enu.next();</div>
 <div class="line">      </div>
 <div class="line">      <span class="keywordflow">if</span> (!<a name="a14"></a><a class="code" href="class_file_system.html#a4a2b37a966b3de22239a04650151fcb9">FileSystem::entryExists</a>(path)) {</div>
 <div class="line">        ferr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; <span class="stringliteral">&quot;Entry does not exist: &quot;</span> &lt;&lt; path &lt;&lt; ENDL;</div>
@@ -249,21 +249,21 @@ $(function() {
 <div class="line"> </div>
 <div class="line">APPLICATION_STUB(RemoveApplication);</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57a4e61ee55dc60b7027b6e794afb8dedf7"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57a4e61ee55dc60b7027b6e794afb8dedf7">FileSystem::LINK</a></div><div class="ttdeci">@ LINK</div><div class="ttdef"><b>Definition:</b> FileSystem.h:58</div></div>
+<div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57a4e61ee55dc60b7027b6e794afb8dedf7"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57a4e61ee55dc60b7027b6e794afb8dedf7">FileSystem::LINK</a></div><div class="ttdeci">@ LINK</div><div class="ttdef"><b>Definition:</b> FileSystem.h:74</div></div>
 <div class="ttc" id="aclass_file_system_html_a4a2b37a966b3de22239a04650151fcb9"><div class="ttname"><a href="class_file_system.html#a4a2b37a966b3de22239a04650151fcb9">FileSystem::entryExists</a></div><div class="ttdeci">static bool entryExists(const String &amp;path)</div></div>
-<div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861">FileSystem::REGULAR</a></div><div class="ttdeci">@ REGULAR</div><div class="ttdef"><b>Definition:</b> FileSystem.h:60</div></div>
+<div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861">FileSystem::REGULAR</a></div><div class="ttdeci">@ REGULAR</div><div class="ttdef"><b>Definition:</b> FileSystem.h:76</div></div>
 <div class="ttc" id="aclass_folder_info_html"><div class="ttname"><a href="class_folder_info.html">FolderInfo</a></div><div class="ttdoc">Folder information.</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:33</div></div>
 <div class="ttc" id="aclass_file_system_html_a410eb496194789c861a058430d690581"><div class="ttname"><a href="class_file_system.html#a410eb496194789c861a058430d690581">FileSystem::removeFolder</a></div><div class="ttdeci">static void removeFolder(const String &amp;path)</div></div>
 <div class="ttc" id="aclass_file_system_html_a34bf0820658142a4de72eee071e19a0f"><div class="ttname"><a href="class_file_system.html#a34bf0820658142a4de72eee071e19a0f">FileSystem::removeFile</a></div><div class="ttdeci">static void removeFile(const String &amp;path)</div></div>
 <div class="ttc" id="aclass_array_html_a0cab82ffb63b2767df7f47e7a61b32e1"><div class="ttname"><a href="class_array.html#a0cab82ffb63b2767df7f47e7a61b32e1">Array::append</a></div><div class="ttdeci">void append(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:487</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application.</div><div class="ttdef"><b>Definition:</b> Application.h:53</div></div>
 <div class="ttc" id="aclass_file_system_exception_html"><div class="ttname"><a href="class_file_system_exception.html">FileSystemException</a></div><div class="ttdoc">File system exception.</div><div class="ttdef"><b>Definition:</b> FileSystemException.h:28</div></div>
 <div class="ttc" id="aclass_file_system_html_af32ca0652ee6e091df124cca322ea34b"><div class="ttname"><a href="class_file_system.html#af32ca0652ee6e091df124cca322ea34b">FileSystem::getType</a></div><div class="ttdeci">static unsigned int getType(const String &amp;path)</div></div>
-<div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57aa90c0bb53aafd6dccd348804b3b74b7f"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57aa90c0bb53aafd6dccd348804b3b74b7f">FileSystem::FOLDER</a></div><div class="ttdeci">@ FOLDER</div><div class="ttdef"><b>Definition:</b> FileSystem.h:57</div></div>
+<div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57aa90c0bb53aafd6dccd348804b3b74b7f"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57aa90c0bb53aafd6dccd348804b3b74b7f">FileSystem::FOLDER</a></div><div class="ttdeci">@ FOLDER</div><div class="ttdef"><b>Definition:</b> FileSystem.h:73</div></div>
 <div class="ttc" id="aclass_array_html_af75233edc1ca07dbea71ddbe4501ed12"><div class="ttname"><a href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">Array::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> Array.h:477</div></div>
 <div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array&lt; String &gt;</a></div></div>
-<div class="ttc" id="aclass_exception_html_a1276e9cb93984055580283f5a864f8e4"><div class="ttname"><a href="class_exception.html#a1276e9cb93984055580283f5a864f8e4">Exception::getMessage</a></div><div class="ttdeci">const char * getMessage() const noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:213</div></div>
+<div class="ttc" id="aclass_exception_html_a1276e9cb93984055580283f5a864f8e4"><div class="ttname"><a href="class_exception.html#a1276e9cb93984055580283f5a864f8e4">Exception::getMessage</a></div><div class="ttdeci">const char * getMessage() const noexcept</div><div class="ttdef"><b>Definition:</b> Exception.h:219</div></div>
 <div class="ttc" id="aclass_folder_info_html_a24c31ff756d3bc4e66d436cad54343af"><div class="ttname"><a href="class_folder_info.html#a24c31ff756d3bc4e66d436cad54343af">FolderInfo::getEntries</a></div><div class="ttdeci">Array&lt; String &gt; getEntries() const</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

@@ -44,6 +44,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_profiler_1_1_task-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Profiler::Task Class Reference</div>  </div>
@@ -52,7 +54,7 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_profiler_8h_source.html">base/Profiler.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="class_profiler_1_1_i_o_task.html">Profiler::IOTask</a>, and <a class="el" href="class_profiler_1_1_wait_task.html">Profiler::WaitTask</a>.</p>
+<p>Inherited by <a class="el" href="class_profiler_1_1_compute_task.html">Profiler::ComputeTask</a>, <a class="el" href="class_profiler_1_1_i_o_task.html">Profiler::IOTask</a>, <a class="el" href="class_profiler_1_1_rendering_task.html">Profiler::RenderingTask</a>, <a class="el" href="class_profiler_1_1_resource_create_task.html">Profiler::ResourceCreateTask</a>, <a class="el" href="class_profiler_1_1_security_task.html">Profiler::SecurityTask</a>, <a class="el" href="class_profiler_1_1_u_i_task.html">Profiler::UITask</a>, and <a class="el" href="class_profiler_1_1_wait_task.html">Profiler::WaitTask</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -60,6 +62,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a66c44bf6af7e5c55a1589cf16b524669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ba1899c5c5ec239a3f15ad59ba87044"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a8ba1899c5c5ec239a3f15ad59ba87044">~Task</a> () noexcept</td></tr>
 <tr class="separator:a8ba1899c5c5ec239a3f15ad59ba87044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abe296a392551a7bdf123e7e0ff4382c0"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#abe296a392551a7bdf123e7e0ff4382c0">getTask</a> (const char *name, const char *cat) noexcept</td></tr>
+<tr class="separator:abe296a392551a7bdf123e7e0ff4382c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91857fefc74151e5b98a4d7473a0ddf0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a91857fefc74151e5b98a4d7473a0ddf0">pushTask</a> (unsigned int taskId) noexcept</td></tr>
+<tr class="separator:a91857fefc74151e5b98a4d7473a0ddf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a980e8cc1f80abb0ae7cb9a9efb2944a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a980e8cc1f80abb0ae7cb9a9efb2944a1">setTaskPath</a> (const <a class="el" href="class_string.html">String</a> &amp;path) noexcept</td></tr>
+<tr class="separator:a980e8cc1f80abb0ae7cb9a9efb2944a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c155ce5ba2234708147df560e6238c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a3c155ce5ba2234708147df560e6238c7">setTaskResourceHandle</a> (const <a class="el" href="class_resource_handle.html">ResourceHandle</a> &amp;handle) noexcept</td></tr>
+<tr class="separator:a3c155ce5ba2234708147df560e6238c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcd6e82b951c5cc6f1d31aaae0cfc15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a8dcd6e82b951c5cc6f1d31aaae0cfc15">setTaskSecurityLevel</a> (unsigned int securityLevel) noexcept</td></tr>
+<tr class="separator:a8dcd6e82b951c5cc6f1d31aaae0cfc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19bc10f2fbe69564d4a4fbfb086a6e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a19bc10f2fbe69564d4a4fbfb086a6e62">setTaskWaitId</a> (const char *id) noexcept</td></tr>
+<tr class="separator:a19bc10f2fbe69564d4a4fbfb086a6e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbec1e9228244df8a0198b1311d1f0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#acdbec1e9228244df8a0198b1311d1f0d">setTaskWaitHandle</a> (const <a class="el" href="class_resource.html">Resource</a> &amp;resource) noexcept</td></tr>
+<tr class="separator:acdbec1e9228244df8a0198b1311d1f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab470f72f345315f5ef5b2b851d5f28b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#ab470f72f345315f5ef5b2b851d5f28b7">setTaskWaitHandle</a> (const <a class="el" href="class_resource_handle.html">ResourceHandle</a> &amp;handle) noexcept</td></tr>
+<tr class="separator:ab470f72f345315f5ef5b2b851d5f28b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd2150d65ce8848fd8d029be1681778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#aecd2150d65ce8848fd8d029be1681778">setTaskBytesRead</a> (const uint8 *buffer, unsigned int bytesRead) noexcept</td></tr>
+<tr class="separator:aecd2150d65ce8848fd8d029be1681778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a6d494455ea28dc1608081e03c55cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profiler_1_1_task.html#a44a6d494455ea28dc1608081e03c55cf">setTaskBytesWritten</a> (const uint8 *buffer, unsigned int bytesWritten) noexcept</td></tr>
+<tr class="separator:a44a6d494455ea28dc1608081e03c55cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_profiler_1_1_task.html">Task</a>. </p>
@@ -123,7 +151,308 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_profiler_1_1_task.html">Task</a> comple. </p>
+<p><a class="el" href="class_profiler_1_1_task.html">Task</a> complete. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abe296a392551a7bdf123e7e0ff4382c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe296a392551a7bdf123e7e0ff4382c0">&#9670;&nbsp;</a></span>getTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned int Profiler::Task::getTask </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocates new task. </p>
+
+</div>
+</div>
+<a id="a91857fefc74151e5b98a4d7473a0ddf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91857fefc74151e5b98a4d7473a0ddf0">&#9670;&nbsp;</a></span>pushTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Profiler::Task::pushTask </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>taskId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pushes task. </p>
+
+</div>
+</div>
+<a id="aecd2150d65ce8848fd8d029be1681778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd2150d65ce8848fd8d029be1681778">&#9670;&nbsp;</a></span>setTaskBytesRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskBytesRead </td>
+          <td>(</td>
+          <td class="paramtype">const uint8 *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>bytesRead</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets bytes read for task. </p>
+
+</div>
+</div>
+<a id="a44a6d494455ea28dc1608081e03c55cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a6d494455ea28dc1608081e03c55cf">&#9670;&nbsp;</a></span>setTaskBytesWritten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskBytesWritten </td>
+          <td>(</td>
+          <td class="paramtype">const uint8 *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>bytesWritten</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets bytes written for task. </p>
+
+</div>
+</div>
+<a id="a980e8cc1f80abb0ae7cb9a9efb2944a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a980e8cc1f80abb0ae7cb9a9efb2944a1">&#9670;&nbsp;</a></span>setTaskPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskPath </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the path for the resource handle for the object. </p>
+
+</div>
+</div>
+<a id="a3c155ce5ba2234708147df560e6238c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c155ce5ba2234708147df560e6238c7">&#9670;&nbsp;</a></span>setTaskResourceHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskResourceHandle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_resource_handle.html">ResourceHandle</a> &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the resource handle for the object. </p>
+
+</div>
+</div>
+<a id="a8dcd6e82b951c5cc6f1d31aaae0cfc15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dcd6e82b951c5cc6f1d31aaae0cfc15">&#9670;&nbsp;</a></span>setTaskSecurityLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskSecurityLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>securityLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the security level for the object. </p>
+
+</div>
+</div>
+<a id="acdbec1e9228244df8a0198b1311d1f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbec1e9228244df8a0198b1311d1f0d">&#9670;&nbsp;</a></span>setTaskWaitHandle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskWaitHandle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_resource.html">Resource</a> &amp;&#160;</td>
+          <td class="paramname"><em>resource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the resource handle for the object. </p>
+
+</div>
+</div>
+<a id="ab470f72f345315f5ef5b2b851d5f28b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab470f72f345315f5ef5b2b851d5f28b7">&#9670;&nbsp;</a></span>setTaskWaitHandle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskWaitHandle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_resource_handle.html">ResourceHandle</a> &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the resource handle for the object. </p>
+
+</div>
+</div>
+<a id="a19bc10f2fbe69564d4a4fbfb086a6e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19bc10f2fbe69564d4a4fbfb086a6e62">&#9670;&nbsp;</a></span>setTaskWaitId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Profiler::Task::setTaskWaitId </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the name of the object. </p>
 
 </div>
 </div>

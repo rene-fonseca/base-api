@@ -120,6 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6218352737d8f154fcc3eebe9a7dfa42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee858b535b4478ebcc2c9d04c19f19c"><td class="memItemLeft" align="right" valign="top">int64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a> () const noexcept</td></tr>
 <tr class="separator:afee858b535b4478ebcc2c9d04c19f19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0e43ef8351feb6e569c98d6369de08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_date.html#a5f0e43ef8351feb6e569c98d6369de08">operator bool</a> () const noexcept</td></tr>
+<tr class="separator:a5f0e43ef8351feb6e569c98d6369de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b885bd0bac83e1a670921a163ee7d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">addBias</a> (int64 bias) noexcept</td></tr>
 <tr class="separator:a5b885bd0bac83e1a670921a163ee7d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1681deb0996566d4140218083e727289"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_date.html#a1681deb0996566d4140218083e727289">getMillisecond</a> () const noexcept</td></tr>
@@ -1087,7 +1089,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the current time in UTC time. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ls_8cpp-example.html#a5">testsuite/ls.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ls_8cpp-example.html#a6">testsuite/ls.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -1476,7 +1478,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the year in local time. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ls_8cpp-example.html#a6">testsuite/ls.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ls_8cpp-example.html#a7">testsuite/ls.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -1550,6 +1552,32 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The year carrier. Only non-zero if the year falls outside the range [-9999;9999]. </dd></dl>
+
+</div>
+</div>
+<a id="a5f0e43ef8351feb6e569c98d6369de08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0e43ef8351feb6e569c98d6369de08">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Date::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if date is not epoch. </p>
 
 </div>
 </div>

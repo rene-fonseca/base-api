@@ -108,7 +108,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Invalid insert (expecting OutOfRange) for size &quot;</span> &lt;&lt; ai.<a name="a5"></a><a class="code" href="class_array.html#a137f2cae7d1ade1316b2a0d10ffaccde">getSize</a>() &lt;&lt; ENDL;</div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="preprocessor">#if (_COM_AZURE_DEV__BASE__OS != _COM_AZURE_DEV__BASE__WASI)</span></div>
+<div class="line"><span class="preprocessor">#if (!defined(_COM_AZURE_DEV__BASE__NO_EXCEPTIONS)) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__SPARC64) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__POWERPC64) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__S390X)</span></div>
 <div class="line">      ai.<a class="code" href="class_array.html#a3fd58d338af597fdd85425a5e26e5c0c">insert</a>(11, 123);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    } <span class="keywordflow">catch</span> (<a name="_a6"></a><a class="code" href="class_exception.html">Exception</a>&amp; e) {</div>
@@ -151,8 +154,8 @@ $(function() {
 <div class="ttc" id="aclass_type_info_html_abc13cfedb9611f4b4b1a6a6a283d3453"><div class="ttname"><a href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a></div><div class="ttdeci">static String getTypename() noexcept</div><div class="ttdef"><b>Definition:</b> TypeInfo.h:61</div></div>
 <div class="ttc" id="aclass_array_html_ab70306868691eb0a2daaaef0f226e181"><div class="ttname"><a href="class_array.html#ab70306868691eb0a2daaaef0f226e181">Array::prepend</a></div><div class="ttdeci">void prepend(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:522</div></div>
 <div class="ttc" id="aclass_array_html_a137f2cae7d1ade1316b2a0d10ffaccde"><div class="ttname"><a href="class_array.html#a137f2cae7d1ade1316b2a0d10ffaccde">Array::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Array.h:339</div></div>
-<div class="ttc" id="aclass_multiply_html"><div class="ttname"><a href="class_multiply.html">Multiply</a></div><div class="ttdoc">Arithmetic multiplication function object.</div><div class="ttdef"><b>Definition:</b> Functor.h:732</div></div>
-<div class="ttc" id="aclass_sum_html"><div class="ttname"><a href="class_sum.html">Sum</a></div><div class="ttdoc">Summation function object.</div><div class="ttdef"><b>Definition:</b> Functor.h:943</div></div>
+<div class="ttc" id="aclass_multiply_html"><div class="ttname"><a href="class_multiply.html">Multiply</a></div><div class="ttdoc">Arithmetic multiplication function object.</div><div class="ttdef"><b>Definition:</b> Functor.h:736</div></div>
+<div class="ttc" id="aclass_sum_html"><div class="ttname"><a href="class_sum.html">Sum</a></div><div class="ttdoc">Summation function object.</div><div class="ttdef"><b>Definition:</b> Functor.h:947</div></div>
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application.</div><div class="ttdef"><b>Definition:</b> Application.h:53</div></div>
 <div class="ttc" id="aclass_array_html_a3fd58d338af597fdd85425a5e26e5c0c"><div class="ttname"><a href="class_array.html#a3fd58d338af597fdd85425a5e26e5c0c">Array::insert</a></div><div class="ttdeci">void insert(MemorySize index, const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:566</div></div>
 <div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array</a></div><div class="ttdoc">Array collection.</div><div class="ttdef"><b>Definition:</b> Array.h:40</div></div>

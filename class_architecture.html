@@ -56,7 +56,8 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:ab95eecaf11dbc095c7ed19b8790eedda"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eedda">ByteOrder</a> { <a class="el" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa0874e9e04b98b81d6792454214e7c4e5">BE</a> = 0, 
 <a class="el" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaaa33e42b7f70729cb5b6683e8a7dc85c6">LE</a> = 1, 
-<a class="el" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa3a19595550ca730c13ed60449eabc81d">NATIVE</a> = BE
+<a class="el" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa3a19595550ca730c13ed60449eabc81d">NATIVE</a> = BE, 
+<a class="el" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa0b9c60911a67ade8c3a6a7b081c65319">FLOAT_NATIVE</a> = BE
  }</td></tr>
 <tr class="separator:ab95eecaf11dbc095c7ed19b8790eedda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a157b5ee7c1d3b01e88952c384eb19f42"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42">Technology</a> { <br />
@@ -83,17 +84,24 @@ Public Types</h2></td></tr>
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcadfc95262d97965d4a859da0b4665c4de">POWER_PC_32</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca2cdec548214c9690cf44f051cb6a7fe6">POWER_PC_64</a>, 
 <br />
-&#160;&#160;<b>S390X</b>, 
+&#160;&#160;<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6f8336b38ee77afcaf67a562085bcd9b">S390X</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca3c8183a47fcf5017801f839ae9e840ac">RS</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca9469dafe278a6958a06a30559be4b15e">SPARC32</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6eb381fc8ef5ba00595adc20d3e64208">SPARC64</a>, 
 <br />
 &#160;&#160;<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca670998667484c866c9649c7dfbe7045d">S390</a>, 
+<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca20561df3cb73b5dc787115a73585f402">PA_RISC32</a>, 
+<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca29387942b6b5600aa9e1923683ed9cc2">PA_RISC64</a>, 
+<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6f15ac3861cc4696d0dbcb41fc2762c5">RISCV32</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaf504eb76aa892070c02e27d0ca2d2ab4">RISCV64</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca767ab84e5c920335b31cc8103bea30cb">ARM32</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaa4d2a570ae46be5f7cac56d1338c35a9">ARM64</a>, 
 <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcab491c53b1663eab71780bdf86b111b3b">WASM32</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca55f783bf6d997659e16f8a4a671cfab5">WASM64</a>
+&#160;&#160;<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca55f783bf6d997659e16f8a4a671cfab5">WASM64</a>, 
+<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6a1596ecba556d8215aad6e0370b6f9d">GENERIC32</a>, 
+<a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca44ff29ab02ec1e70dcee4a4831a6ab6d">GENERIC64</a>
 <br />
  }</td></tr>
 <tr class="separator:aedeab9a013a95bb54b73d45d2b406bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,10 +115,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aef11467ff4187b68569fa29e2a7b3ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1258d0aeae6ee439d8ba0f918dc4d28a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a1258d0aeae6ee439d8ba0f918dc4d28a">isLittleEndian</a> () noexcept</td></tr>
 <tr class="separator:a1258d0aeae6ee439d8ba0f918dc4d28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d7764f7384005d796086838e428325"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a54d7764f7384005d796086838e428325">isFloatWordBigEndian</a> () noexcept</td></tr>
+<tr class="separator:a54d7764f7384005d796086838e428325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e6cf21de5781ab0d0f97bbba1073c6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a80e6cf21de5781ab0d0f97bbba1073c6">isFloatWordLittleEndian</a> () noexcept</td></tr>
+<tr class="separator:a80e6cf21de5781ab0d0f97bbba1073c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63070cf60c8ca4f695fa2fa60f636d05"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a63070cf60c8ca4f695fa2fa60f636d05">getTechonologies</a> () noexcept</td></tr>
 <tr class="separator:a63070cf60c8ca4f695fa2fa60f636d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49fbefedca5c1bf49b043306ae86055c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">Major</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a49fbefedca5c1bf49b043306ae86055c">getArchitecture</a> () noexcept</td></tr>
 <tr class="separator:a49fbefedca5c1bf49b043306ae86055c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bb32dfa058cdba6c5aec7491cb42db"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a64bb32dfa058cdba6c5aec7491cb42db">getArchitectureAsString</a> () noexcept</td></tr>
+<tr class="separator:a64bb32dfa058cdba6c5aec7491cb42db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45059166faf071644109e55911d3d6b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">Minor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_architecture.html#a45059166faf071644109e55911d3d6b8">getMinorArchitecture</a> () noexcept</td></tr>
 <tr class="separator:a45059166faf071644109e55911d3d6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -137,6 +151,8 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ab95eecaf11dbc095c7ed19b8790eeddaaa33e42b7f70729cb5b6683e8a7dc85c6"></a>LE&#160;</td><td class="fielddoc"><p>Little endian. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab95eecaf11dbc095c7ed19b8790eeddaa3a19595550ca730c13ed60449eabc81d"></a>NATIVE&#160;</td><td class="fielddoc"><p>Native byte order. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab95eecaf11dbc095c7ed19b8790eeddaa0b9c60911a67ade8c3a6a7b081c65319"></a>FLOAT_NATIVE&#160;</td><td class="fielddoc"><p>Native floating-point word order. </p>
 </td></tr>
 </table>
 
@@ -171,13 +187,23 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca2cdec548214c9690cf44f051cb6a7fe6"></a>POWER_PC_64&#160;</td><td class="fielddoc"><p>Power PC 64-bit. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca3c8183a47fcf5017801f839ae9e840ac"></a>RS&#160;</td><td class="fielddoc"><p>IBM subsystem 64-bit. RS. </p>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca6f8336b38ee77afcaf67a562085bcd9b"></a>S390X&#160;</td><td class="fielddoc"><p>IBM subsystem 64-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca3c8183a47fcf5017801f839ae9e840ac"></a>RS&#160;</td><td class="fielddoc"><p>RS. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca9469dafe278a6958a06a30559be4b15e"></a>SPARC32&#160;</td><td class="fielddoc"><p>Sparc 32-bit. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca6eb381fc8ef5ba00595adc20d3e64208"></a>SPARC64&#160;</td><td class="fielddoc"><p>Sparc 64-bit. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca670998667484c866c9649c7dfbe7045d"></a>S390&#160;</td><td class="fielddoc"><p>S390. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca20561df3cb73b5dc787115a73585f402"></a>PA_RISC32&#160;</td><td class="fielddoc"><p>PA-RISC 32-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca29387942b6b5600aa9e1923683ed9cc2"></a>PA_RISC64&#160;</td><td class="fielddoc"><p>PA-RISC 64-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca6f15ac3861cc4696d0dbcb41fc2762c5"></a>RISCV32&#160;</td><td class="fielddoc"><p>RISC-V 32-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfcaf504eb76aa892070c02e27d0ca2d2ab4"></a>RISCV64&#160;</td><td class="fielddoc"><p>RISC-V 64-bit. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca767ab84e5c920335b31cc8103bea30cb"></a>ARM32&#160;</td><td class="fielddoc"><p>ARM 32-bit. </p>
 </td></tr>
@@ -186,6 +212,10 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfcab491c53b1663eab71780bdf86b111b3b"></a>WASM32&#160;</td><td class="fielddoc"><p><a class="el" href="class_web_assembly.html">WebAssembly</a> 32-bit. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca55f783bf6d997659e16f8a4a671cfab5"></a>WASM64&#160;</td><td class="fielddoc"><p><a class="el" href="class_web_assembly.html">WebAssembly</a> 64-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca6a1596ecba556d8215aad6e0370b6f9d"></a>GENERIC32&#160;</td><td class="fielddoc"><p>Generic 32-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedeab9a013a95bb54b73d45d2b406bfca44ff29ab02ec1e70dcee4a4831a6ab6d"></a>GENERIC64&#160;</td><td class="fielddoc"><p>Generic 64-bit. </p>
 </td></tr>
 </table>
 
@@ -270,6 +300,32 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a64bb32dfa058cdba6c5aec7491cb42db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bb32dfa058cdba6c5aec7491cb42db">&#9670;&nbsp;</a></span>getArchitectureAsString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> Architecture::getArchitectureAsString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the major architecture as a string. </p>
+
+</div>
+</div>
 <a id="a45059166faf071644109e55911d3d6b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45059166faf071644109e55911d3d6b8">&#9670;&nbsp;</a></span>getMinorArchitecture()</h2>
 
@@ -345,6 +401,58 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the native byte order is big endian. </p>
+
+</div>
+</div>
+<a id="a54d7764f7384005d796086838e428325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d7764f7384005d796086838e428325">&#9670;&nbsp;</a></span>isFloatWordBigEndian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Architecture::isFloatWordBigEndian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the native word order is big endian. </p>
+
+</div>
+</div>
+<a id="a80e6cf21de5781ab0d0f97bbba1073c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e6cf21de5781ab0d0f97bbba1073c6">&#9670;&nbsp;</a></span>isFloatWordLittleEndian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Architecture::isFloatWordLittleEndian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the native word order is little endian. </p>
 
 </div>
 </div>

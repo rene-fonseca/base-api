@@ -44,6 +44,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="class_wide_string-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">WideString Class Reference</div>  </div>
@@ -54,11 +55,11 @@ $(function() {
  <a href="class_wide_string.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_wide_string_8h_source.html">base/string/WideString.h</a>&gt;</code></p>
-
-<p>Inherits <a class="el" href="class_object.html">Object</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string_1_1_default.html">Default</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_wide_string_1_1_hash_entry.html">HashEntry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -95,38 +96,37 @@ typedef ucs4&#160;</td><td class="memItemRight" valign="bottom"><b>Char</b></td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2dc2ab43eab8ec975d3e6bdeec20e0b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2dc2ab43eab8ec975d3e6bdeec20e0b2">WideString</a> (<a class="el" href="class_string_1_1_default.html">String::Default</a> d)</td></tr>
-<tr class="separator:a2dc2ab43eab8ec975d3e6bdeec20e0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cb293fea54b983c681389d5e06555e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a1cb293fea54b983c681389d5e06555e7">WideString</a> () noexcept</td></tr>
 <tr class="separator:a1cb293fea54b983c681389d5e06555e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fadff0319917d6cd520a3405236465"><td class="memItemLeft" align="right" valign="top"><a id="a48fadff0319917d6cd520a3405236465"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (<a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_reference_counted_allocator.html">ReferenceCountedAllocator</a>&lt; Char &gt; &gt; string)</td></tr>
+<tr class="separator:a48fadff0319917d6cd520a3405236465"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82d9c1cbd51c599c9201023343782955"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a82d9c1cbd51c599c9201023343782955">WideString</a> (MemorySize capacity)</td></tr>
 <tr class="separator:a82d9c1cbd51c599c9201023343782955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1af2449ba74081989b6a78427fb41d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#abe1af2449ba74081989b6a78427fb41d">WideString</a> (<a class="el" href="class_wide_string_1_1_default.html">Default</a> d)</td></tr>
+<tr class="separator:abe1af2449ba74081989b6a78427fb41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66115cffa02b547a5a7a92e5611aa004"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a66115cffa02b547a5a7a92e5611aa004">WideString</a> (const <a class="el" href="class_literal.html">Literal</a> &amp;string)</td></tr>
 <tr class="separator:a66115cffa02b547a5a7a92e5611aa004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee6f60898f6fc0c84065e9151ded8b15"><td class="memItemLeft" align="right" valign="top"><a id="aee6f60898f6fc0c84065e9151ded8b15"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string)</td></tr>
+<tr class="memitem:aee6f60898f6fc0c84065e9151ded8b15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aee6f60898f6fc0c84065e9151ded8b15">WideString</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string)</td></tr>
 <tr class="separator:aee6f60898f6fc0c84065e9151ded8b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0b39a7af03aba0f9fbfa3a0e9413cb"><td class="memItemLeft" align="right" valign="top"><a id="a6b0b39a7af03aba0f9fbfa3a0e9413cb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const char *string)</td></tr>
+<tr class="memitem:a6b0b39a7af03aba0f9fbfa3a0e9413cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a6b0b39a7af03aba0f9fbfa3a0e9413cb">WideString</a> (const char *string)</td></tr>
 <tr class="separator:a6b0b39a7af03aba0f9fbfa3a0e9413cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0a691e9eb476a6866b4dcb28189d2aa"><td class="memItemLeft" align="right" valign="top"><a id="aa0a691e9eb476a6866b4dcb28189d2aa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const char16_t *string)</td></tr>
-<tr class="separator:aa0a691e9eb476a6866b4dcb28189d2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67ba4f683d373e2fe90cf983e1d4b713"><td class="memItemLeft" align="right" valign="top"><a id="a67ba4f683d373e2fe90cf983e1d4b713"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const wchar *string)</td></tr>
+<tr class="memitem:a254f1855161e2e0b1756b209b4c9f708"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a254f1855161e2e0b1756b209b4c9f708">WideString</a> (const char *string, MemorySize length)</td></tr>
+<tr class="separator:a254f1855161e2e0b1756b209b4c9f708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ba4f683d373e2fe90cf983e1d4b713"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a67ba4f683d373e2fe90cf983e1d4b713">WideString</a> (const wchar *string)</td></tr>
 <tr class="separator:a67ba4f683d373e2fe90cf983e1d4b713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeff781bfc0f7bbcb6d1920f364672dd"><td class="memItemLeft" align="right" valign="top"><a id="afeff781bfc0f7bbcb6d1920f364672dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const wchar *string, MemorySize length)</td></tr>
+<tr class="memitem:afeff781bfc0f7bbcb6d1920f364672dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#afeff781bfc0f7bbcb6d1920f364672dd">WideString</a> (const wchar *string, MemorySize length)</td></tr>
 <tr class="separator:afeff781bfc0f7bbcb6d1920f364672dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3ac28d565f9bfaaced649a5c172a23f"><td class="memItemLeft" align="right" valign="top"><a id="ab3ac28d565f9bfaaced649a5c172a23f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const ucs4 *string)</td></tr>
-<tr class="separator:ab3ac28d565f9bfaaced649a5c172a23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60655cfa18e40478c6d9844af814b050"><td class="memItemLeft" align="right" valign="top"><a id="a60655cfa18e40478c6d9844af814b050"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WideString</b> (const ucs4 *string, MemorySize length)</td></tr>
-<tr class="separator:a60655cfa18e40478c6d9844af814b050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c37f45194e8012c8703c4287e821d16"><td class="memTemplParams" colspan="2">template&lt;MemorySize SIZE&gt; </td></tr>
-<tr class="memitem:a8c37f45194e8012c8703c4287e821d16"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a8c37f45194e8012c8703c4287e821d16">WideString</a> (const wchar(&amp;string)[SIZE])</td></tr>
-<tr class="separator:a8c37f45194e8012c8703c4287e821d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a691e9eb476a6866b4dcb28189d2aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa0a691e9eb476a6866b4dcb28189d2aa">WideString</a> (const char16_t *string)</td></tr>
+<tr class="separator:aa0a691e9eb476a6866b4dcb28189d2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57ad7cb52534cae8eeda75b810a455c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a57ad7cb52534cae8eeda75b810a455c0">WideString</a> (const char16_t *string, MemorySize length)</td></tr>
+<tr class="separator:a57ad7cb52534cae8eeda75b810a455c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93482314b499845d2b3886fae101d70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#af93482314b499845d2b3886fae101d70">WideString</a> (const char32_t *string)</td></tr>
+<tr class="separator:af93482314b499845d2b3886fae101d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b2c35e69a222903330257522772c1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa0b2c35e69a222903330257522772c1e">WideString</a> (const char32_t *string, MemorySize length)</td></tr>
+<tr class="separator:aa0b2c35e69a222903330257522772c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e29d42e5d865e3c2eb38cb3c18d7bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a80e29d42e5d865e3c2eb38cb3c18d7bd">WideString</a> (const <a class="el" href="class_string.html">String</a> &amp;string)</td></tr>
+<tr class="separator:a80e29d42e5d865e3c2eb38cb3c18d7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a068cc079df3609d90063fea81aa6e902"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a068cc079df3609d90063fea81aa6e902">WideString</a> (const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;string)</td></tr>
 <tr class="separator:a068cc079df3609d90063fea81aa6e902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af08ac9b989b96d03c60a0fec83a43766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#af08ac9b989b96d03c60a0fec83a43766">WideString</a> (const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;string, MemorySize maximum)</td></tr>
@@ -138,29 +138,38 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0a9a270490b7fd948e88cd34a7bc4249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9434ffc13409b02bf6c241328c2780bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a9434ffc13409b02bf6c241328c2780bf">WideString</a> (const <a class="el" href="class_native_string.html">NativeString</a> &amp;string, MemorySize maximum)</td></tr>
 <tr class="separator:a9434ffc13409b02bf6c241328c2780bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dcd66838039101723dddbc83daa7084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a5dcd66838039101723dddbc83daa7084">WideString</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;copy) noexcept</td></tr>
+<tr class="memitem:a5dcd66838039101723dddbc83daa7084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a5dcd66838039101723dddbc83daa7084">WideString</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;<a class="el" href="class_wide_string.html#a1606edce0157a4b3c15a5e695649541c">copy</a>) noexcept</td></tr>
 <tr class="separator:a5dcd66838039101723dddbc83daa7084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80e29d42e5d865e3c2eb38cb3c18d7bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a80e29d42e5d865e3c2eb38cb3c18d7bd">WideString</a> (const <a class="el" href="class_string.html">String</a> &amp;string)</td></tr>
-<tr class="separator:a80e29d42e5d865e3c2eb38cb3c18d7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ed0014e2768cc468b4a8f5566638e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a06ed0014e2768cc468b4a8f5566638e4">WideString</a> (<a class="el" href="class_wide_string.html">WideString</a> &amp;&amp;move) noexcept</td></tr>
+<tr class="separator:a06ed0014e2768cc468b4a8f5566638e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8859bde7dbdd8d657f37d55ccf7bf85f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a8859bde7dbdd8d657f37d55ccf7bf85f">WideString</a> (<a class="el" href="class_string_output_stream.html">StringOutputStream</a> &amp;stream)</td></tr>
+<tr class="separator:a8859bde7dbdd8d657f37d55ccf7bf85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbc2c87a724da5aa0e099422bc0e25f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#adcbc2c87a724da5aa0e099422bc0e25f">WideString</a> (<a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;stream)</td></tr>
+<tr class="separator:adcbc2c87a724da5aa0e099422bc0e25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab5e6d62eb38a784002edf2e273f925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#abab5e6d62eb38a784002edf2e273f925">operator=</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;assign) noexcept</td></tr>
 <tr class="separator:abab5e6d62eb38a784002edf2e273f925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45e52fb79a0147ecc2c27d185ab6392"><td class="memItemLeft" align="right" valign="top"><a id="ac45e52fb79a0147ecc2c27d185ab6392"></a>
+<a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_wide_string.html">WideString</a> &amp;&amp;move) noexcept</td></tr>
+<tr class="separator:ac45e52fb79a0147ecc2c27d185ab6392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334fdd722863909c54c484a44f93c005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a334fdd722863909c54c484a44f93c005">operator=</a> (const <a class="el" href="class_literal.html">Literal</a> &amp;assign)</td></tr>
 <tr class="separator:a334fdd722863909c54c484a44f93c005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e57dd6f92bcb33ce949ad943534e738"><td class="memItemLeft" align="right" valign="top"><a id="a4e57dd6f92bcb33ce949ad943534e738"></a>
-<a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;assign)</td></tr>
+<tr class="memitem:a4e57dd6f92bcb33ce949ad943534e738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a4e57dd6f92bcb33ce949ad943534e738">operator=</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;assign)</td></tr>
 <tr class="separator:a4e57dd6f92bcb33ce949ad943534e738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941e09e2ba0ff4f03a0a2c6e0a603f6c"><td class="memItemLeft" align="right" valign="top"><a id="a941e09e2ba0ff4f03a0a2c6e0a603f6c"></a>
-<a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char *assign)</td></tr>
+<tr class="memitem:a941e09e2ba0ff4f03a0a2c6e0a603f6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a941e09e2ba0ff4f03a0a2c6e0a603f6c">operator=</a> (const char *assign)</td></tr>
 <tr class="separator:a941e09e2ba0ff4f03a0a2c6e0a603f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad086e41033c3ad11e3cde6539e11cbcd"><td class="memItemLeft" align="right" valign="top"><a id="ad086e41033c3ad11e3cde6539e11cbcd"></a>
-<a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const wchar *assign)</td></tr>
+<tr class="memitem:ad086e41033c3ad11e3cde6539e11cbcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ad086e41033c3ad11e3cde6539e11cbcd">operator=</a> (const wchar *assign)</td></tr>
 <tr class="separator:ad086e41033c3ad11e3cde6539e11cbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af94f3e4ead3c63fa77070be916ffb8ac"><td class="memItemLeft" align="right" valign="top"><a id="af94f3e4ead3c63fa77070be916ffb8ac"></a>
-<a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char16_t *assign)</td></tr>
+<tr class="memitem:af94f3e4ead3c63fa77070be916ffb8ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#af94f3e4ead3c63fa77070be916ffb8ac">operator=</a> (const char16_t *assign)</td></tr>
 <tr class="separator:af94f3e4ead3c63fa77070be916ffb8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2416025248c866a90bc9be2099a606fa"><td class="memItemLeft" align="right" valign="top"><a id="a2416025248c866a90bc9be2099a606fa"></a>
-<a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char32_t *assign)</td></tr>
+<tr class="memitem:a2416025248c866a90bc9be2099a606fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2416025248c866a90bc9be2099a606fa">operator=</a> (const char32_t *assign)</td></tr>
 <tr class="separator:a2416025248c866a90bc9be2099a606fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac392c1a0cb028c494df768c8321c2205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac392c1a0cb028c494df768c8321c2205">operator=</a> (const <a class="el" href="class_string.html">String</a> &amp;assign)</td></tr>
+<tr class="separator:ac392c1a0cb028c494df768c8321c2205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1fd8346c3eee61660849850f3bc4d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a4c1fd8346c3eee61660849850f3bc4d1">operator=</a> (const <a class="el" href="class_string_output_stream.html">StringOutputStream</a> &amp;assign)</td></tr>
+<tr class="separator:a4c1fd8346c3eee61660849850f3bc4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18b9306a3199d90b0ab5eee7c2c24c9"><td class="memTemplParams" colspan="2">template&lt;MemorySize SIZE&gt; </td></tr>
+<tr class="memitem:aa18b9306a3199d90b0ab5eee7c2c24c9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa18b9306a3199d90b0ab5eee7c2c24c9">operator=</a> (const Char(&amp;literal)[SIZE])</td></tr>
+<tr class="separator:aa18b9306a3199d90b0ab5eee7c2c24c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa526695c4288b0fd0433e831eb87a423"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa526695c4288b0fd0433e831eb87a423">getLength</a> () const noexcept</td></tr>
 <tr class="separator:aa526695c4288b0fd0433e831eb87a423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d18be32f5bc39004def1b458fb6e0ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a7d18be32f5bc39004def1b458fb6e0ae">isEmpty</a> () const noexcept</td></tr>
@@ -169,14 +178,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a87b6f8664d2ae9d0b2275216645576f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f42342e1cc39bcf71292c5c5c7b6d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a38f42342e1cc39bcf71292c5c5c7b6d9">isASCII</a> () const noexcept</td></tr>
 <tr class="separator:a38f42342e1cc39bcf71292c5c5c7b6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a352e7a705a45808f8f0965fb9110f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ad3a352e7a705a45808f8f0965fb9110f">isMultiReferenced</a> () const noexcept</td></tr>
+<tr class="separator:ad3a352e7a705a45808f8f0965fb9110f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688b745d0610587d13cd81a6252f9ccb"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a688b745d0610587d13cd81a6252f9ccb">getCapacity</a> () const noexcept</td></tr>
 <tr class="separator:a688b745d0610587d13cd81a6252f9ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea8fd1ba6ce83d6d2c65a30bf34dea5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aea8fd1ba6ce83d6d2c65a30bf34dea5f">ensureCapacity</a> (MemorySize capacity)</td></tr>
 <tr class="separator:aea8fd1ba6ce83d6d2c65a30bf34dea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab612c1c638784cf95db9af1e057b4653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ab612c1c638784cf95db9af1e057b4653">clear</a> ()</td></tr>
 <tr class="separator:ab612c1c638784cf95db9af1e057b4653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1606edce0157a4b3c15a5e695649541c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a1606edce0157a4b3c15a5e695649541c">copy</a> () const</td></tr>
+<tr class="separator:a1606edce0157a4b3c15a5e695649541c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a7eb769b84878a6489d92819e3f439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a56a7eb769b84878a6489d92819e3f439">garbageCollect</a> ()</td></tr>
 <tr class="separator:a56a7eb769b84878a6489d92819e3f439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3415ddd3a0a1ee453c68f84d5e2baeb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a3415ddd3a0a1ee453c68f84d5e2baeb0">forceToLength</a> (MemorySize length)</td></tr>
+<tr class="separator:a3415ddd3a0a1ee453c68f84d5e2baeb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ef6f81792f375104eb85985ff832c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#ad4b49a852c48421f4e3a535ca00949dc">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a4ef6f81792f375104eb85985ff832c9a">getBeginIterator</a> () noexcept</td></tr>
 <tr class="separator:a4ef6f81792f375104eb85985ff832c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85373f51d040c4cfec7fe9b25da2d111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#ad4b49a852c48421f4e3a535ca00949dc">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a85373f51d040c4cfec7fe9b25da2d111">getEndIterator</a> () noexcept</td></tr>
@@ -185,6 +200,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07589490478836d9e86b874d0ee5eb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af12d33c5bc3fd3f07c1c65a8d16e72cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#adca11500daf6ec90011564f68455c640">ReadIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#af12d33c5bc3fd3f07c1c65a8d16e72cf">getEndReadIterator</a> () const noexcept</td></tr>
 <tr class="separator:af12d33c5bc3fd3f07c1c65a8d16e72cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8222bed3bb6e828b2dbb399c12a4854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#adca11500daf6ec90011564f68455c640">ReadIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac8222bed3bb6e828b2dbb399c12a4854">begin</a> () const noexcept</td></tr>
+<tr class="separator:ac8222bed3bb6e828b2dbb399c12a4854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aace2b2d8715c7b47179da0d68293f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#adca11500daf6ec90011564f68455c640">ReadIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a1aace2b2d8715c7b47179da0d68293f9">end</a> () const noexcept</td></tr>
+<tr class="separator:a1aace2b2d8715c7b47179da0d68293f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a2d81616809ece3956b0a461c4ef66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#aae51da98f03594e5ba2d12e5482a02f3">Enumerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a70a2d81616809ece3956b0a461c4ef66">getEnumerator</a> () noexcept</td></tr>
 <tr class="separator:a70a2d81616809ece3956b0a461c4ef66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe8543eb8cd06b23dd313ccce13b135"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html#a7ea6762706498fee3e58f01f565d35f7">ReadEnumerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aefe8543eb8cd06b23dd313ccce13b135">getReadEnumerator</a> () const noexcept</td></tr>
@@ -195,9 +214,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a827d24663d1656e795d58adab8db30ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55db23445c14c949eff11ecdb0a0011b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a55db23445c14c949eff11ecdb0a0011b">operator[]</a> (MemorySize index)</td></tr>
 <tr class="separator:a55db23445c14c949eff11ecdb0a0011b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5748bec9a00c560bb05bfce3bec514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2a5748bec9a00c560bb05bfce3bec514">operator bool</a> () const noexcept</td></tr>
+<tr class="separator:a2a5748bec9a00c560bb05bfce3bec514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35acc4b83640b017d7a9244ea51d3ac2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a35acc4b83640b017d7a9244ea51d3ac2">operator[]</a> (MemorySize index) const</td></tr>
 <tr class="separator:a35acc4b83640b017d7a9244ea51d3ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa32e2ceb1b93bc50aee432ccdf407e5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa32e2ceb1b93bc50aee432ccdf407e5a">remove</a> (MemorySize start, MemorySize end)</td></tr>
+<tr class="memitem:aa32e2ceb1b93bc50aee432ccdf407e5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa32e2ceb1b93bc50aee432ccdf407e5a">remove</a> (MemorySize start, MemorySize <a class="el" href="class_wide_string.html#a1aace2b2d8715c7b47179da0d68293f9">end</a>)</td></tr>
 <tr class="separator:aa32e2ceb1b93bc50aee432ccdf407e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18eb460f21fc090524c14dab83b8e53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#af18eb460f21fc090524c14dab83b8e53">removeFrom</a> (MemorySize start)</td></tr>
 <tr class="separator:af18eb460f21fc090524c14dab83b8e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,10 +228,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8197a4d9e3bda8387e09a4fc70b2a51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02c592a861ab4da41e1c82fd4f93eac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa02c592a861ab4da41e1c82fd4f93eac">append</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string)</td></tr>
 <tr class="separator:aa02c592a861ab4da41e1c82fd4f93eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c682c400eda77bd6a4ef7ee9173572e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a9c682c400eda77bd6a4ef7ee9173572e">append</a> (const <a class="el" href="class_string.html">String</a> &amp;string)</td></tr>
+<tr class="separator:a9c682c400eda77bd6a4ef7ee9173572e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72285643f11e8c4477f2978afbf0b7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa72285643f11e8c4477f2978afbf0b7d">append</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string)</td></tr>
 <tr class="separator:aa72285643f11e8c4477f2978afbf0b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07a6e2f818399277d057ecfd89e03ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aa07a6e2f818399277d057ecfd89e03ad">append</a> (const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;string)</td></tr>
+<tr class="separator:aa07a6e2f818399277d057ecfd89e03ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6476c8ff8a8cb3f8dcf034efc1dd6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#abc6476c8ff8a8cb3f8dcf034efc1dd6c">append</a> (const char *string)</td></tr>
+<tr class="separator:abc6476c8ff8a8cb3f8dcf034efc1dd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fb27292d863491db76157a396d622c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a52fb27292d863491db76157a396d622c">append</a> (const wchar *string)</td></tr>
+<tr class="separator:a52fb27292d863491db76157a396d622c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ca20585af1aa98949a00a61611dfdf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a4ca20585af1aa98949a00a61611dfdf6">append</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string, MemorySize maximum)</td></tr>
 <tr class="separator:a4ca20585af1aa98949a00a61611dfdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509165d20ba84539ba5b1a2aa8cf3451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a509165d20ba84539ba5b1a2aa8cf3451">append</a> (const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;string, MemorySize maximum)</td></tr>
+<tr class="separator:a509165d20ba84539ba5b1a2aa8cf3451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a667d68f8d706c8370e033f1e4de43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a21a667d68f8d706c8370e033f1e4de43">append</a> (const wchar *string, MemorySize maximum)</td></tr>
 <tr class="separator:a21a667d68f8d706c8370e033f1e4de43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55d77901dc40806786e5f348836bac12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a55d77901dc40806786e5f348836bac12">prepend</a> (ucs4 ch)</td></tr>
@@ -223,16 +254,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98c683dfd87adbbe3429c603e76c63e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba6a27b14623c45a9719fb491e2ae0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#afba6a27b14623c45a9719fb491e2ae0f">insert</a> (MemorySize index, const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string)</td></tr>
 <tr class="separator:afba6a27b14623c45a9719fb491e2ae0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80f271dfda7d2bb6d3e783f60eaf991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac80f271dfda7d2bb6d3e783f60eaf991">replace</a> (MemorySize start, MemorySize end, const <a class="el" href="class_wide_string.html">WideString</a> &amp;string)</td></tr>
+<tr class="memitem:a3e126fd61f78b659a0c5c884c5304189"><td class="memTemplParams" colspan="2"><a id="a3e126fd61f78b659a0c5c884c5304189"></a>
+template&lt;MemorySize SIZE&gt; </td></tr>
+<tr class="memitem:a3e126fd61f78b659a0c5c884c5304189"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>insert</b> (MemorySize index, const Char(&amp;literal)[SIZE])</td></tr>
+<tr class="separator:a3e126fd61f78b659a0c5c884c5304189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25078a88e2bde86f2112157e9abc4309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a25078a88e2bde86f2112157e9abc4309">insert</a> (MemorySize index, const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;string)</td></tr>
+<tr class="separator:a25078a88e2bde86f2112157e9abc4309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7739f7357c0c648b89d6672827a7df66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a7739f7357c0c648b89d6672827a7df66">insert</a> (MemorySize index, const wchar *string)</td></tr>
+<tr class="separator:a7739f7357c0c648b89d6672827a7df66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7febc6e80429ef7d68f0583c99590ee7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a7febc6e80429ef7d68f0583c99590ee7">insert</a> (MemorySize index, const char *string)</td></tr>
+<tr class="separator:a7febc6e80429ef7d68f0583c99590ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80f271dfda7d2bb6d3e783f60eaf991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac80f271dfda7d2bb6d3e783f60eaf991">replace</a> (MemorySize start, MemorySize <a class="el" href="class_wide_string.html#a1aace2b2d8715c7b47179da0d68293f9">end</a>, const <a class="el" href="class_wide_string.html">WideString</a> &amp;string)</td></tr>
 <tr class="separator:ac80f271dfda7d2bb6d3e783f60eaf991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0b976a91ebb63f1aa53d0c2e1959995"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ad0b976a91ebb63f1aa53d0c2e1959995">replaceAll</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;fromStr, const <a class="el" href="class_wide_string.html">WideString</a> &amp;toStr)</td></tr>
 <tr class="separator:ad0b976a91ebb63f1aa53d0c2e1959995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79393a348e743b5a54851aca0ea8c9b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a79393a348e743b5a54851aca0ea8c9b2">substring</a> (MemorySize start, MemorySize end) const</td></tr>
+<tr class="memitem:a79393a348e743b5a54851aca0ea8c9b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a79393a348e743b5a54851aca0ea8c9b2">substring</a> (MemorySize start, MemorySize <a class="el" href="class_wide_string.html#a1aace2b2d8715c7b47179da0d68293f9">end</a>) const</td></tr>
 <tr class="separator:a79393a348e743b5a54851aca0ea8c9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8351eb235fe90897b298975b9c25ff57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a8351eb235fe90897b298975b9c25ff57">substring</a> (MemorySize start) const</td></tr>
 <tr class="separator:a8351eb235fe90897b298975b9c25ff57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69185d91941cf69cb880595b59a96278"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a69185d91941cf69cb880595b59a96278">operator+=</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;suffix)</td></tr>
 <tr class="separator:a69185d91941cf69cb880595b59a96278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc2424f73fafb38151d6f40bc136926"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#adbc2424f73fafb38151d6f40bc136926">operator+=</a> (const <a class="el" href="class_string.html">String</a> &amp;suffix)</td></tr>
+<tr class="separator:adbc2424f73fafb38151d6f40bc136926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082f4fcd9ce94cb1e2327ef0f5aa110b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a082f4fcd9ce94cb1e2327ef0f5aa110b">operator+=</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;suffix)</td></tr>
+<tr class="separator:a082f4fcd9ce94cb1e2327ef0f5aa110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8dd3270e94b2c917d4a7d83f0bcf82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ada8dd3270e94b2c917d4a7d83f0bcf82">operator+=</a> (const wchar *suffix)</td></tr>
+<tr class="separator:ada8dd3270e94b2c917d4a7d83f0bcf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9841823597cf3b382da42b5634219642"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a9841823597cf3b382da42b5634219642">operator+=</a> (const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;suffix)</td></tr>
+<tr class="separator:a9841823597cf3b382da42b5634219642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746fc9214d38fc0b5bbfe693e12626d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a746fc9214d38fc0b5bbfe693e12626d8">operator+=</a> (Char suffix)</td></tr>
+<tr class="separator:a746fc9214d38fc0b5bbfe693e12626d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9b52ab0e7ccc9b3782140c3d9aa351e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ad9b52ab0e7ccc9b3782140c3d9aa351e">operator-=</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;suffix)</td></tr>
 <tr class="separator:ad9b52ab0e7ccc9b3782140c3d9aa351e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2658b6ad03fb389a2a9f358825b03e1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2658b6ad03fb389a2a9f358825b03e1a">reverse</a> () noexcept</td></tr>
@@ -243,26 +294,38 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afd47c7d28551803cabae957b93fb0f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23de46113961f1069a36b1197ff09339"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a23de46113961f1069a36b1197ff09339">compareTo</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string) const noexcept</td></tr>
 <tr class="separator:a23de46113961f1069a36b1197ff09339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa94d27c7022b430b8a7ec19f77a5df6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aaa94d27c7022b430b8a7ec19f77a5df6">compareTo</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string) const noexcept</td></tr>
-<tr class="separator:aaa94d27c7022b430b8a7ec19f77a5df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3e1869ef70334907527aa7d70b3d800"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ad3e1869ef70334907527aa7d70b3d800">compareTo</a> (const wchar *string) const noexcept</td></tr>
-<tr class="separator:ad3e1869ef70334907527aa7d70b3d800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18c52331c949612bc95280884e8b582"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ae18c52331c949612bc95280884e8b582">compareTo</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string) const</td></tr>
+<tr class="separator:ae18c52331c949612bc95280884e8b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb0e3c64c994bcc25a6a38e1b56ef60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#afcb0e3c64c994bcc25a6a38e1b56ef60">compareTo</a> (const wchar *string) const</td></tr>
+<tr class="separator:afcb0e3c64c994bcc25a6a38e1b56ef60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9b2cdc03d01a2259276a1a44cbb308"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a8a9b2cdc03d01a2259276a1a44cbb308">compareTo</a> (const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;string) const</td></tr>
+<tr class="separator:a8a9b2cdc03d01a2259276a1a44cbb308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac561c2720a89fa797c68e72aa5b239ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac561c2720a89fa797c68e72aa5b239ff">compareToIgnoreCase</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string) const noexcept</td></tr>
 <tr class="separator:ac561c2720a89fa797c68e72aa5b239ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a005ddbbc2c63e7a2c97302aa9dccebf3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a005ddbbc2c63e7a2c97302aa9dccebf3">startsWith</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;prefix) const noexcept</td></tr>
-<tr class="separator:a005ddbbc2c63e7a2c97302aa9dccebf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b4c2f892766871297a6deb4a4070f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a08b4c2f892766871297a6deb4a4070f5">startsWith</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;prefix) const noexcept</td></tr>
-<tr class="separator:a08b4c2f892766871297a6deb4a4070f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a529ce529bc0af65ba1c040534d3e7c45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a529ce529bc0af65ba1c040534d3e7c45">endsWith</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;suffix) const noexcept</td></tr>
-<tr class="separator:a529ce529bc0af65ba1c040534d3e7c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cffb377f8dfbc1069d8226cf1470937"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2cffb377f8dfbc1069d8226cf1470937">endsWith</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;suffix) const noexcept</td></tr>
-<tr class="separator:a2cffb377f8dfbc1069d8226cf1470937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a041578bc887404f888fd7f6d6c8a1c"><td class="memTemplParams" colspan="2"><a id="a4a041578bc887404f888fd7f6d6c8a1c"></a>
+template&lt;MemorySize SIZE&gt; </td></tr>
+<tr class="memitem:a4a041578bc887404f888fd7f6d6c8a1c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>compareToIgnoreCase</b> (const Char(&amp;literal)[SIZE]) const noexcept</td></tr>
+<tr class="separator:a4a041578bc887404f888fd7f6d6c8a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46511f9c3cb2b9edad46ac19496aa4bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a46511f9c3cb2b9edad46ac19496aa4bd">startsWith</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;prefix) const</td></tr>
+<tr class="separator:a46511f9c3cb2b9edad46ac19496aa4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50eaea82a2de9b0eec4280012c6f936"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ae50eaea82a2de9b0eec4280012c6f936">startsWith</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;prefix) const</td></tr>
+<tr class="separator:ae50eaea82a2de9b0eec4280012c6f936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55ae6256d8e8d880b4320578a2c0db0"><td class="memTemplParams" colspan="2">template&lt;MemorySize SIZE&gt; </td></tr>
+<tr class="memitem:ae55ae6256d8e8d880b4320578a2c0db0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ae55ae6256d8e8d880b4320578a2c0db0">startsWith</a> (const Char(&amp;prefix)[SIZE]) const</td></tr>
+<tr class="separator:ae55ae6256d8e8d880b4320578a2c0db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdbddc97d2e438030ac38bc0ae4fde7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a5cdbddc97d2e438030ac38bc0ae4fde7">endsWith</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;suffix) const</td></tr>
+<tr class="separator:a5cdbddc97d2e438030ac38bc0ae4fde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1daf323b82c62990f90a48caa573af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a8b1daf323b82c62990f90a48caa573af">endsWith</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;suffix) const</td></tr>
+<tr class="separator:a8b1daf323b82c62990f90a48caa573af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff4a16d811b63da056e52eaf2a618e0"><td class="memTemplParams" colspan="2">template&lt;MemorySize SIZE&gt; </td></tr>
+<tr class="memitem:a7ff4a16d811b63da056e52eaf2a618e0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a7ff4a16d811b63da056e52eaf2a618e0">endsWith</a> (const char(&amp;suffix)[SIZE]) const</td></tr>
+<tr class="separator:a7ff4a16d811b63da056e52eaf2a618e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8200c287fb3d02f3335903b34a3b04b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a8200c287fb3d02f3335903b34a3b04b1">operator==</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string) const noexcept</td></tr>
 <tr class="separator:a8200c287fb3d02f3335903b34a3b04b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add5ea4ff613e4dc7bae1a18abaaf0ba8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#add5ea4ff613e4dc7bae1a18abaaf0ba8">operator==</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string) const noexcept</td></tr>
-<tr class="separator:add5ea4ff613e4dc7bae1a18abaaf0ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab710b17aa85452931a5f7b134682a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a9ab710b17aa85452931a5f7b134682a0">operator!=</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string) const noexcept</td></tr>
 <tr class="separator:a9ab710b17aa85452931a5f7b134682a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add5ea4ff613e4dc7bae1a18abaaf0ba8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#add5ea4ff613e4dc7bae1a18abaaf0ba8">operator==</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;string) const noexcept</td></tr>
+<tr class="separator:add5ea4ff613e4dc7bae1a18abaaf0ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aab3223208cf92102473a551cc7e6d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a6aab3223208cf92102473a551cc7e6d0">operator&lt;</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string) const noexcept</td></tr>
 <tr class="separator:a6aab3223208cf92102473a551cc7e6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27feff20a32a0aa5b9ee6d797c31983f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a27feff20a32a0aa5b9ee6d797c31983f">operator&lt;=</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string) const noexcept</td></tr>
@@ -287,18 +350,34 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7c6a00ef69022b4862e5547029d577ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af219bc1284aadc1ffa4e47985309c298"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#af219bc1284aadc1ffa4e47985309c298">count</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string, MemorySize start=0) const noexcept</td></tr>
 <tr class="separator:af219bc1284aadc1ffa4e47985309c298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0ad8f6495f1e5aacba785989b98fda"><td class="memItemLeft" align="right" valign="top">const ucs4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#add0ad8f6495f1e5aacba785989b98fda">getElements</a> () const noexcept</td></tr>
-<tr class="separator:add0ad8f6495f1e5aacba785989b98fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3638c590882427652e96d1f83a5480f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a3638c590882427652e96d1f83a5480f0">isUpperCased</a> () const noexcept</td></tr>
 <tr class="separator:a3638c590882427652e96d1f83a5480f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9eef00715affe23f4629cdd2d5f0ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a5f9eef00715affe23f4629cdd2d5f0ab">isLowerCased</a> () const noexcept</td></tr>
 <tr class="separator:a5f9eef00715affe23f4629cdd2d5f0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacffc101c2b69b3db4bf7dd4dadaa68a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#aacffc101c2b69b3db4bf7dd4dadaa68a">isTitleCased</a> () const noexcept</td></tr>
 <tr class="separator:aacffc101c2b69b3db4bf7dd4dadaa68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb92815ce4ba35302a46c62e02f27e21"><td class="memItemLeft" align="right" valign="top">const ucs4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#acb92815ce4ba35302a46c62e02f27e21">native</a> () const noexcept</td></tr>
-<tr class="separator:acb92815ce4ba35302a46c62e02f27e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a5748bec9a00c560bb05bfce3bec514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2a5748bec9a00c560bb05bfce3bec514">operator bool</a> () const noexcept</td></tr>
-<tr class="separator:a2a5748bec9a00c560bb05bfce3bec514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cce0279ab29353ad419db80e70c9162"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a5cce0279ab29353ad419db80e70c9162">trim</a> (ucs4 character=' ')</td></tr>
+<tr class="separator:a5cce0279ab29353ad419db80e70c9162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7013fc6e171ba1ca3ccc5f6e46cd1bd5"><td class="memItemLeft" align="right" valign="top">MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a7013fc6e171ba1ca3ccc5f6e46cd1bd5">search</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;<a class="el" href="class_wide_string.html#a79393a348e743b5a54851aca0ea8c9b2">substring</a>, MemorySize start=0) const noexcept</td></tr>
+<tr class="separator:a7013fc6e171ba1ca3ccc5f6e46cd1bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39138ebda721c9fa3d02d27a486cd6fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_wide_string.html">WideString</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a39138ebda721c9fa3d02d27a486cd6fd">split</a> (Char separator, bool group=false) const</td></tr>
+<tr class="separator:a39138ebda721c9fa3d02d27a486cd6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406c40524e6e0a6e35407fabec8c39a6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_reference_counted_allocator.html">ReferenceCountedAllocator</a>&lt; Char &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a406c40524e6e0a6e35407fabec8c39a6">getContainer</a> () const</td></tr>
+<tr class="separator:a406c40524e6e0a6e35407fabec8c39a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd037f7ec5e4dc0ba6ed5d978ab5050"><td class="memItemLeft" align="right" valign="top">Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a4fd037f7ec5e4dc0ba6ed5d978ab5050">getElements</a> ()</td></tr>
+<tr class="separator:a4fd037f7ec5e4dc0ba6ed5d978ab5050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e7d47b0e91a8f8839595c5f3095457"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a89e7d47b0e91a8f8839595c5f3095457">invariant</a> () const noexcept</td></tr>
+<tr class="separator:a89e7d47b0e91a8f8839595c5f3095457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f3f7050f5fa501d16723f7e8065d6a"><td class="memItemLeft" align="right" valign="top">const Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a34f3f7050f5fa501d16723f7e8065d6a">getElements</a> () const noexcept</td></tr>
+<tr class="separator:a34f3f7050f5fa501d16723f7e8065d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74f2c34f576fa1896439f425b04f72a"><td class="memItemLeft" align="right" valign="top">const Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ae74f2c34f576fa1896439f425b04f72a">getEnd</a> () const noexcept</td></tr>
+<tr class="separator:ae74f2c34f576fa1896439f425b04f72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44cbf2c66fadcb0b8ffb8d9c5d61472f"><td class="memItemLeft" align="right" valign="top">const Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a44cbf2c66fadcb0b8ffb8d9c5d61472f">native</a> () const noexcept</td></tr>
+<tr class="separator:a44cbf2c66fadcb0b8ffb8d9c5d61472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3468ce791da9fc08efbccf5529d808"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#acd3468ce791da9fc08efbccf5529d808">isValidUnicode</a> (bool iso=false) const noexcept</td></tr>
+<tr class="separator:acd3468ce791da9fc08efbccf5529d808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbca21a92eef665168366d004e708ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wide_string.html">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#acfbca21a92eef665168366d004e708ed">getValidUnicode</a> (bool iso=false) const</td></tr>
+<tr class="separator:acfbca21a92eef665168366d004e708ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -319,26 +398,30 @@ Static Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a79c029f6e852a7fc19b721bf5262d2e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a79c029f6e852a7fc19b721bf5262d2e7">initialize</a> (const char *string, MemorySize length)</td></tr>
 <tr class="separator:a79c029f6e852a7fc19b721bf5262d2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ba7a62264e8dbc731b9344d51b0b53f"><td class="memItemLeft" align="right" valign="top"><a id="a2ba7a62264e8dbc731b9344d51b0b53f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const wchar *string, MemorySize length)</td></tr>
+<tr class="memitem:a2ba7a62264e8dbc731b9344d51b0b53f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2ba7a62264e8dbc731b9344d51b0b53f">initialize</a> (const wchar *string, MemorySize length)</td></tr>
 <tr class="separator:a2ba7a62264e8dbc731b9344d51b0b53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36974ee14fb8deb69275adeb6ac5fd6"><td class="memItemLeft" align="right" valign="top"><a id="ab36974ee14fb8deb69275adeb6ac5fd6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const char16_t *string, MemorySize nativeLength)</td></tr>
-<tr class="separator:ab36974ee14fb8deb69275adeb6ac5fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095157b55da53d4d40a4109d1588acd3"><td class="memItemLeft" align="right" valign="top"><a id="a095157b55da53d4d40a4109d1588acd3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const ucs4 *string, MemorySize length)</td></tr>
+<tr class="memitem:a9187bc08a0aaf42989d1ecaae850cacb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a9187bc08a0aaf42989d1ecaae850cacb">initialize</a> (const char16_t *string, MemorySize length)</td></tr>
+<tr class="separator:a9187bc08a0aaf42989d1ecaae850cacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095157b55da53d4d40a4109d1588acd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a095157b55da53d4d40a4109d1588acd3">initialize</a> (const ucs4 *string, MemorySize length)</td></tr>
 <tr class="separator:a095157b55da53d4d40a4109d1588acd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d064c2586a5df3424101ddb0889e187"><td class="memItemLeft" align="right" valign="top">ucs4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a9d064c2586a5df3424101ddb0889e187">getBuffer</a> ()</td></tr>
-<tr class="separator:a9d064c2586a5df3424101ddb0889e187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac115df6ba17485566454e43f95e7bb59"><td class="memItemLeft" align="right" valign="top">const ucs4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac115df6ba17485566454e43f95e7bb59">getBuffer</a> () const noexcept</td></tr>
-<tr class="separator:ac115df6ba17485566454e43f95e7bb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d347bbf52f8212b534294a366d5c32b"><td class="memItemLeft" align="right" valign="top">Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a2d347bbf52f8212b534294a366d5c32b">getBuffer</a> ()</td></tr>
+<tr class="separator:a2d347bbf52f8212b534294a366d5c32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac550334a23fdb49627309ae84facb395"><td class="memItemLeft" align="right" valign="top">Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#ac550334a23fdb49627309ae84facb395">getBuffer</a> (MemorySize length)</td></tr>
+<tr class="separator:ac550334a23fdb49627309ae84facb395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086ea9046e0c253ffb9fcf61fb3ec937"><td class="memItemLeft" align="right" valign="top">const Char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a086ea9046e0c253ffb9fcf61fb3ec937">getBuffer</a> () const noexcept</td></tr>
+<tr class="separator:a086ea9046e0c253ffb9fcf61fb3ec937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a234eb83762e1b45756438fe625319e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a234eb83762e1b45756438fe625319e48">setLength</a> (MemorySize length)</td></tr>
 <tr class="separator:a234eb83762e1b45756438fe625319e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a54c4fa2fd413bf3c20c55faa5609daa1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wide_string.html#a54c4fa2fd413bf3c20c55faa5609daa1">compareToIgnoreCase</a> (const ucs4 *left, const ucs4 *right) noexcept</td></tr>
+<tr class="separator:a54c4fa2fd413bf3c20c55faa5609daa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wide-character string. </p>
 <p>Wide-character string implementation. The first modifying operation on a string may force the internal buffer to be duplicated. The implementation is currently NOT MT-safe.</p>
-<div class="fragment"><div class="line"><a class="code" href="class_wide_string.html">WideString</a> myString = <span class="stringliteral">&quot;Hello, World!&quot;</span>;</div>
+<div class="fragment"><div class="line"><a class="code" href="class_wide_string.html">WideString</a> myString = L<span class="stringliteral">&quot;Hello, World!&quot;</span>;</div>
 <div class="line"><a class="code" href="class_wide_string.html">WideString</a> myOtherString = myString;</div>
 </div><!-- fragment --><dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2sax_8cpp-example.html#_a26">testsuite/sax.cpp</a>.</dd>
@@ -471,27 +554,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2dc2ab43eab8ec975d3e6bdeec20e0b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dc2ab43eab8ec975d3e6bdeec20e0b2">&#9670;&nbsp;</a></span>WideString() <span class="overload">[1/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">WideString::WideString </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_string_1_1_default.html">String::Default</a>&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Forces a non-null empty string. Avoid this. </p>
-
-</div>
-</div>
 <a id="a1cb293fea54b983c681389d5e06555e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cb293fea54b983c681389d5e06555e7">&#9670;&nbsp;</a></span>WideString() <span class="overload">[2/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb293fea54b983c681389d5e06555e7">&#9670;&nbsp;</a></span>WideString() <span class="overload">[1/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,12 +576,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initializes an empty string. </p>
+<p>Initializes an empty string. No allocation done. </p>
 
 </div>
 </div>
 <a id="a82d9c1cbd51c599c9201023343782955"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82d9c1cbd51c599c9201023343782955">&#9670;&nbsp;</a></span>WideString() <span class="overload">[3/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d9c1cbd51c599c9201023343782955">&#9670;&nbsp;</a></span>WideString() <span class="overload">[2/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -539,18 +603,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initializes a string with no characters in it, initial capacity and granularity of capacity.</p>
+<p>Initializes a string with no characters in it and the given initial capacity.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">capacity</td><td>The initial capacity of the internal buffer. </td></tr>
+    <tr><td class="paramname">capacity</td><td>The initial capacity. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
+<a id="abe1af2449ba74081989b6a78427fb41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1af2449ba74081989b6a78427fb41d">&#9670;&nbsp;</a></span>WideString() <span class="overload">[3/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_wide_string_1_1_default.html">Default</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forces a non-null empty string. Avoid this. </p>
+
+</div>
+</div>
 <a id="a66115cffa02b547a5a7a92e5611aa004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66115cffa02b547a5a7a92e5611aa004">&#9670;&nbsp;</a></span>WideString() <span class="overload">[4/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a66115cffa02b547a5a7a92e5611aa004">&#9670;&nbsp;</a></span>WideString() <span class="overload">[4/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -567,50 +650,303 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (const
 <p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td><a class="el" href="class_string.html" title="String.">String</a> literal. </td></tr>
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a8c37f45194e8012c8703c4287e821d16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c37f45194e8012c8703c4287e821d16">&#9670;&nbsp;</a></span>WideString() <span class="overload">[5/12]</span></h2>
+<a id="aee6f60898f6fc0c84065e9151ded8b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6f60898f6fc0c84065e9151ded8b15">&#9670;&nbsp;</a></span>WideString() <span class="overload">[5/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;MemorySize SIZE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">WideString::WideString </td>
           <td>(</td>
-          <td class="paramtype">const wchar(&amp;)&#160;</td>
-          <td class="paramname"><em>string</em>[SIZE]</td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Initializes the string from a string literal. Implicit initialization is allowed.</p>
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td><a class="el" href="class_string.html" title="String.">String</a> literal. </td></tr>
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
+<a id="a6b0b39a7af03aba0f9fbfa3a0e9413cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0b39a7af03aba0f9fbfa3a0e9413cb">&#9670;&nbsp;</a></span>WideString() <span class="overload">[6/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a254f1855161e2e0b1756b209b4c9f708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a254f1855161e2e0b1756b209b4c9f708">&#9670;&nbsp;</a></span>WideString() <span class="overload">[7/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a67ba4f683d373e2fe90cf983e1d4b713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ba4f683d373e2fe90cf983e1d4b713">&#9670;&nbsp;</a></span>WideString() <span class="overload">[8/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afeff781bfc0f7bbcb6d1920f364672dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeff781bfc0f7bbcb6d1920f364672dd">&#9670;&nbsp;</a></span>WideString() <span class="overload">[9/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0a691e9eb476a6866b4dcb28189d2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a691e9eb476a6866b4dcb28189d2aa">&#9670;&nbsp;</a></span>WideString() <span class="overload">[10/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a57ad7cb52534cae8eeda75b810a455c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ad7cb52534cae8eeda75b810a455c0">&#9670;&nbsp;</a></span>WideString() <span class="overload">[11/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af93482314b499845d2b3886fae101d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93482314b499845d2b3886fae101d70">&#9670;&nbsp;</a></span>WideString() <span class="overload">[12/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const char32_t *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0b2c35e69a222903330257522772c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b2c35e69a222903330257522772c1e">&#9670;&nbsp;</a></span>WideString() <span class="overload">[13/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const char32_t *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80e29d42e5d865e3c2eb38cb3c18d7bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e29d42e5d865e3c2eb38cb3c18d7bd">&#9670;&nbsp;</a></span>WideString() <span class="overload">[14/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from UTF-8 string. </p>
+
+</div>
+</div>
 <a id="a068cc079df3609d90063fea81aa6e902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a068cc079df3609d90063fea81aa6e902">&#9670;&nbsp;</a></span>WideString() <span class="overload">[6/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a068cc079df3609d90063fea81aa6e902">&#9670;&nbsp;</a></span>WideString() <span class="overload">[15/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,7 +971,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="af08ac9b989b96d03c60a0fec83a43766"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af08ac9b989b96d03c60a0fec83a43766">&#9670;&nbsp;</a></span>WideString() <span class="overload">[7/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af08ac9b989b96d03c60a0fec83a43766">&#9670;&nbsp;</a></span>WideString() <span class="overload">[16/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -659,7 +995,7 @@ template&lt;MemorySize SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initializes the string from a NULL-terminated string. If the length of the specified string exceeds the maximum length (n) only the first n characters are used.</p>
+<p>Initializes the string from a NULL-terminated string. If the length of the specified string (string) exceeds the maximum length (n) only the first n characters are used. Raises <a class="el" href="class_string_exception.html" title="String exception.">StringException</a> is string exceeds the maximum allowed length.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>NULL-terminated string. If NULL, the string is initialized with no characters in it. </td></tr>
@@ -671,7 +1007,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="afe6a3efbd899f00c994d858e05b87f62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe6a3efbd899f00c994d858e05b87f62">&#9670;&nbsp;</a></span>WideString() <span class="overload">[8/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6a3efbd899f00c994d858e05b87f62">&#9670;&nbsp;</a></span>WideString() <span class="overload">[17/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -706,7 +1042,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a0a9a270490b7fd948e88cd34a7bc4249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a9a270490b7fd948e88cd34a7bc4249">&#9670;&nbsp;</a></span>WideString() <span class="overload">[9/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9a270490b7fd948e88cd34a7bc4249">&#9670;&nbsp;</a></span>WideString() <span class="overload">[18/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -731,7 +1067,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a9434ffc13409b02bf6c241328c2780bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9434ffc13409b02bf6c241328c2780bf">&#9670;&nbsp;</a></span>WideString() <span class="overload">[10/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9434ffc13409b02bf6c241328c2780bf">&#9670;&nbsp;</a></span>WideString() <span class="overload">[19/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,7 +1103,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a5dcd66838039101723dddbc83daa7084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dcd66838039101723dddbc83daa7084">&#9670;&nbsp;</a></span>WideString() <span class="overload">[11/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dcd66838039101723dddbc83daa7084">&#9670;&nbsp;</a></span>WideString() <span class="overload">[20/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -793,8 +1129,35 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a80e29d42e5d865e3c2eb38cb3c18d7bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80e29d42e5d865e3c2eb38cb3c18d7bd">&#9670;&nbsp;</a></span>WideString() <span class="overload">[12/12]</span></h2>
+<a id="a06ed0014e2768cc468b4a8f5566638e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ed0014e2768cc468b4a8f5566638e4">&#9670;&nbsp;</a></span>WideString() <span class="overload">[21/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_wide_string.html">WideString</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>move</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes string from other string. </p>
+
+</div>
+</div>
+<a id="a8859bde7dbdd8d657f37d55ccf7bf85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8859bde7dbdd8d657f37d55ccf7bf85f">&#9670;&nbsp;</a></span>WideString() <span class="overload">[22/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,19 +1165,206 @@ template&lt;MemorySize SIZE&gt; </div>
         <tr>
           <td class="memname">WideString::WideString </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="class_string_output_stream.html">StringOutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes string from string output stream. Forces flush(). </p>
+
+</div>
+</div>
+<a id="adcbc2c87a724da5aa0e099422bc0e25f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbc2c87a724da5aa0e099422bc0e25f">&#9670;&nbsp;</a></span>WideString() <span class="overload">[23/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WideString::WideString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes string from string output stream via <a class="el" href="class_format_output_stream.html" title="Format output stream.">FormatOutputStream</a>. Forces flush(). Throws exception if not a <a class="el" href="class_string_output_stream.html" title="String output stream.">StringOutputStream</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc6476c8ff8a8cb3f8dcf034efc1dd6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6476c8ff8a8cb3f8dcf034efc1dd6c">&#9670;&nbsp;</a></span>append() <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::append </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the native string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The native string to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa07a6e2f818399277d057ecfd89e03ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07a6e2f818399277d057ecfd89e03ad">&#9670;&nbsp;</a></span>append() <span class="overload">[2/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::append </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the NULL-terminated string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a509165d20ba84539ba5b1a2aa8cf3451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a509165d20ba84539ba5b1a2aa8cf3451">&#9670;&nbsp;</a></span>append() <span class="overload">[3/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::append </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>maximum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Appends the NULL-terminated string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string to be appended. </td></tr>
+    <tr><td class="paramname">maximum</td><td>The maximum length of the string to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c682c400eda77bd6a4ef7ee9173572e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c682c400eda77bd6a4ef7ee9173572e">&#9670;&nbsp;</a></span>append() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::append </td>
+          <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>string</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Initialized wide string from multibyte string. </p>
+<p>Appends the string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a52fb27292d863491db76157a396d622c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fb27292d863491db76157a396d622c">&#9670;&nbsp;</a></span>append() <span class="overload">[5/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::append </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the native string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The native string to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a21a667d68f8d706c8370e033f1e4de43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21a667d68f8d706c8370e033f1e4de43">&#9670;&nbsp;</a></span>append() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a667d68f8d706c8370e033f1e4de43">&#9670;&nbsp;</a></span>append() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -850,7 +1400,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="aa72285643f11e8c4477f2978afbf0b7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa72285643f11e8c4477f2978afbf0b7d">&#9670;&nbsp;</a></span>append() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72285643f11e8c4477f2978afbf0b7d">&#9670;&nbsp;</a></span>append() <span class="overload">[7/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -875,7 +1425,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a4ca20585af1aa98949a00a61611dfdf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ca20585af1aa98949a00a61611dfdf6">&#9670;&nbsp;</a></span>append() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca20585af1aa98949a00a61611dfdf6">&#9670;&nbsp;</a></span>append() <span class="overload">[8/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -903,7 +1453,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The string to be appended. </td></tr>
-    <tr><td class="paramname">maximum</td><td>The maximum length of the to be appended string. </td></tr>
+    <tr><td class="paramname">maximum</td><td>The maximum length of the string to be appended. </td></tr>
   </table>
   </dd>
 </dl>
@@ -911,7 +1461,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="aa02c592a861ab4da41e1c82fd4f93eac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa02c592a861ab4da41e1c82fd4f93eac">&#9670;&nbsp;</a></span>append() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02c592a861ab4da41e1c82fd4f93eac">&#9670;&nbsp;</a></span>append() <span class="overload">[9/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -944,7 +1494,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a8197a4d9e3bda8387e09a4fc70b2a51e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8197a4d9e3bda8387e09a4fc70b2a51e">&#9670;&nbsp;</a></span>append() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8197a4d9e3bda8387e09a4fc70b2a51e">&#9670;&nbsp;</a></span>append() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -976,6 +1526,32 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="ac8222bed3bb6e828b2dbb399c12a4854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8222bed3bb6e828b2dbb399c12a4854">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html#adca11500daf6ec90011564f68455c640">ReadIterator</a> WideString::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the first element of the string as a non-modifying iterator. </p>
+
+</div>
+</div>
 <a id="ab612c1c638784cf95db9af1e057b4653"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab612c1c638784cf95db9af1e057b4653">&#9670;&nbsp;</a></span>clear()</h2>
 
@@ -994,14 +1570,45 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="ad3e1869ef70334907527aa7d70b3d800"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3e1869ef70334907527aa7d70b3d800">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[1/3]</span></h2>
+<a id="a8a9b2cdc03d01a2259276a1a44cbb308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9b2cdc03d01a2259276a1a44cbb308">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WideString::compareTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compares this string with a NULL-terminated string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_integer.html" title="Signed integer.">Integer</a> less than, equal to, or greater than zero if this string is found, respectively, to be less than, equal to, or greater than the specified string. False, if string is 0. </dd></dl>
+
+</div>
+</div>
+<a id="afcb0e3c64c994bcc25a6a38e1b56ef60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb0e3c64c994bcc25a6a38e1b56ef60">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int WideString::compareTo </td>
@@ -1011,16 +1618,11 @@ template&lt;MemorySize SIZE&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Compare this string with NULL-terminated string.</p>
+<p>Compares this string with NULL-terminated string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>The string to compare this string with.</td></tr>
+    <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1028,14 +1630,11 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="aaa94d27c7022b430b8a7ec19f77a5df6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa94d27c7022b430b8a7ec19f77a5df6">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[2/3]</span></h2>
+<a id="ae18c52331c949612bc95280884e8b582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18c52331c949612bc95280884e8b582">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int WideString::compareTo </td>
@@ -1045,16 +1644,11 @@ template&lt;MemorySize SIZE&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Compare this string with a string literal.</p>
+<p>Compares this string to with string literal.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>The string literal to compare this string with.</td></tr>
+    <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1063,7 +1657,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a23de46113961f1069a36b1197ff09339"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23de46113961f1069a36b1197ff09339">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a23de46113961f1069a36b1197ff09339">&#9670;&nbsp;</a></span>compareTo() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1088,7 +1682,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <p>Compare this string with another string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>The string to compare this string with.</td></tr>
+    <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1096,8 +1690,45 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a54c4fa2fd413bf3c20c55faa5609daa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c4fa2fd413bf3c20c55faa5609daa1">&#9670;&nbsp;</a></span>compareToIgnoreCase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int WideString::compareToIgnoreCase </td>
+          <td>(</td>
+          <td class="paramtype">const ucs4 *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ucs4 *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare the NULL-terminated strings ignoring the case. </p>
+
+</div>
+</div>
 <a id="ac561c2720a89fa797c68e72aa5b239ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac561c2720a89fa797c68e72aa5b239ff">&#9670;&nbsp;</a></span>compareToIgnoreCase()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac561c2720a89fa797c68e72aa5b239ff">&#9670;&nbsp;</a></span>compareToIgnoreCase() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1119,14 +1750,32 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compares this string with other string ignoring the case of the characters.</p>
+<p>Compares this string with NULL-terminated string ignoring the case of the characters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>The string to compare this string with.</td></tr>
+    <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_integer.html" title="Signed integer.">Integer</a> less than, equal to, or greater than zero if this string is found, respectively, to be less than, equal to, or greater than the specified string. </dd></dl>
+
+</div>
+</div>
+<a id="a1606edce0157a4b3c15a5e695649541c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1606edce0157a4b3c15a5e695649541c">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a> WideString::copy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a forced copy of the string. </p>
 
 </div>
 </div>
@@ -1167,7 +1816,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The substring to be counted. </td></tr>
-    <tr><td class="paramname">start</td><td>The start position. Default is 0. </td></tr>
+    <tr><td class="paramname">start</td><td>The start position. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1212,7 +1861,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ch</td><td>The character to be counted. </td></tr>
-    <tr><td class="paramname">start</td><td>The start position. Default is 0. </td></tr>
+    <tr><td class="paramname">start</td><td>The start position. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1220,14 +1869,72 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a2cffb377f8dfbc1069d8226cf1470937"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cffb377f8dfbc1069d8226cf1470937">&#9670;&nbsp;</a></span>endsWith() <span class="overload">[1/2]</span></h2>
+<a id="a1aace2b2d8715c7b47179da0d68293f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aace2b2d8715c7b47179da0d68293f9">&#9670;&nbsp;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html#adca11500daf6ec90011564f68455c640">ReadIterator</a> WideString::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the end of the string as a non-modifying iterator. </p>
+
+</div>
+</div>
+<a id="a7ff4a16d811b63da056e52eaf2a618e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff4a16d811b63da056e52eaf2a618e0">&#9670;&nbsp;</a></span>endsWith() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemorySize SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WideString::endsWith </td>
+          <td>(</td>
+          <td class="paramtype">const char(&amp;)&#160;</td>
+          <td class="paramname"><em>suffix</em>[SIZE]</td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this string ends with prefix.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">suffix</td><td>The string to compare end of this string with. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b1daf323b82c62990f90a48caa573af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1daf323b82c62990f90a48caa573af">&#9670;&nbsp;</a></span>endsWith() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool WideString::endsWith </td>
@@ -1237,11 +1944,6 @@ template&lt;MemorySize SIZE&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Returns true if this string ends with the specified suffix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1253,14 +1955,11 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a529ce529bc0af65ba1c040534d3e7c45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a529ce529bc0af65ba1c040534d3e7c45">&#9670;&nbsp;</a></span>endsWith() <span class="overload">[2/2]</span></h2>
+<a id="a5cdbddc97d2e438030ac38bc0ae4fde7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdbddc97d2e438030ac38bc0ae4fde7">&#9670;&nbsp;</a></span>endsWith() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool WideString::endsWith </td>
@@ -1270,11 +1969,6 @@ template&lt;MemorySize SIZE&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Returns true if this string ends with the specified suffix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1308,6 +2002,25 @@ template&lt;MemorySize SIZE&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a3415ddd3a0a1ee453c68f84d5e2baeb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3415ddd3a0a1ee453c68f84d5e2baeb0">&#9670;&nbsp;</a></span>forceToLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WideString::forceToLength </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the length of the string without initializing the elements. </p>
 
 </div>
 </div>
@@ -1400,8 +2113,8 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a9d064c2586a5df3424101ddb0889e187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d064c2586a5df3424101ddb0889e187">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[1/2]</span></h2>
+<a id="a2d347bbf52f8212b534294a366d5c32b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d347bbf52f8212b534294a366d5c32b">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1410,7 +2123,7 @@ template&lt;MemorySize SIZE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ucs4* WideString::getBuffer </td>
+          <td class="memname">Char* WideString::getBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1418,16 +2131,16 @@ template&lt;MemorySize SIZE&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a modifiable buffer. Forces the internal buffer to be copied if shared by multiple strings. </p>
+<p>Returns a modifiable buffer. Forces copy of internal buffer if shared by multiple strings. </p>
 
 </div>
 </div>
-<a id="ac115df6ba17485566454e43f95e7bb59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac115df6ba17485566454e43f95e7bb59">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[2/2]</span></h2>
+<a id="a086ea9046e0c253ffb9fcf61fb3ec937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086ea9046e0c253ffb9fcf61fb3ec937">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1436,7 +2149,7 @@ template&lt;MemorySize SIZE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ucs4* WideString::getBuffer </td>
+          <td class="memname">const Char* WideString::getBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1449,6 +2162,33 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns a non-modifiable buffer. </p>
+
+</div>
+</div>
+<a id="ac550334a23fdb49627309ae84facb395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac550334a23fdb49627309ae84facb395">&#9670;&nbsp;</a></span>getBuffer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Char* WideString::getBuffer </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns buffer for modification and resizes at the same time. </p>
 
 </div>
 </div>
@@ -1478,8 +2218,8 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="add0ad8f6495f1e5aacba785989b98fda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add0ad8f6495f1e5aacba785989b98fda">&#9670;&nbsp;</a></span>getElements()</h2>
+<a id="a406c40524e6e0a6e35407fabec8c39a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406c40524e6e0a6e35407fabec8c39a6">&#9670;&nbsp;</a></span>getContainer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1488,7 +2228,51 @@ template&lt;MemorySize SIZE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ucs4* WideString::getElements </td>
+          <td class="memname">const <a class="el" href="class_reference.html">Reference</a>&lt;<a class="el" href="class_reference_counted_allocator.html">ReferenceCountedAllocator</a>&lt;Char&gt; &gt;&amp; WideString::getContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the internal container. </p>
+
+</div>
+</div>
+<a id="a4fd037f7ec5e4dc0ba6ed5d978ab5050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd037f7ec5e4dc0ba6ed5d978ab5050">&#9670;&nbsp;</a></span>getElements() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Char* WideString::getElements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns NULL-terminated string for modifying access. </p>
+
+</div>
+</div>
+<a id="a34f3f7050f5fa501d16723f7e8065d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f3f7050f5fa501d16723f7e8065d6a">&#9670;&nbsp;</a></span>getElements() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Char* WideString::getElements </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1500,7 +2284,33 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns NULL-terminated wide string. </p>
+<p>Returns NULL-terminated string. </p>
+
+</div>
+</div>
+<a id="ae74f2c34f576fa1896439f425b04f72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74f2c34f576fa1896439f425b04f72a">&#9670;&nbsp;</a></span>getEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Char* WideString::getEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the end of string. </p>
 
 </div>
 </div>
@@ -1634,6 +2444,26 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="acfbca21a92eef665168366d004e708ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfbca21a92eef665168366d004e708ed">&#9670;&nbsp;</a></span>getValidUnicode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a> WideString::getValidUnicode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>iso</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the string with all invalid <a class="el" href="class_unicode.html">Unicode</a> codes removed.</p>
+<p>@iso Specifies the ISO codes should be allowed. </p>
+
+</div>
+</div>
 <a id="a12ca3cd97250c5303e843bbfcd8b5512"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12ca3cd97250c5303e843bbfcd8b5512">&#9670;&nbsp;</a></span>indexOf() <span class="overload">[1/2]</span></h2>
 
@@ -1671,7 +2501,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The substring to find. </td></tr>
-    <tr><td class="paramname">start</td><td>Specifies the start position of the search. Default is 0. </td></tr>
+    <tr><td class="paramname">start</td><td>Specifies the start position of the search. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1716,7 +2546,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ch</td><td>The character to find. </td></tr>
-    <tr><td class="paramname">start</td><td>Specifies the start position of the search. Default is 0. </td></tr>
+    <tr><td class="paramname">start</td><td>Specifies the start position of the search. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1725,7 +2555,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a79c029f6e852a7fc19b721bf5262d2e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79c029f6e852a7fc19b721bf5262d2e7">&#9670;&nbsp;</a></span>initialize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c029f6e852a7fc19b721bf5262d2e7">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1761,8 +2591,243 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a9187bc08a0aaf42989d1ecaae850cacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9187bc08a0aaf42989d1ecaae850cacb">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WideString::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes string. </p>
+
+</div>
+</div>
+<a id="a095157b55da53d4d40a4109d1588acd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095157b55da53d4d40a4109d1588acd3">&#9670;&nbsp;</a></span>initialize() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WideString::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const ucs4 *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes string. </p>
+
+</div>
+</div>
+<a id="a2ba7a62264e8dbc731b9344d51b0b53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba7a62264e8dbc731b9344d51b0b53f">&#9670;&nbsp;</a></span>initialize() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WideString::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes string. </p>
+
+</div>
+</div>
+<a id="a7febc6e80429ef7d68f0583c99590ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7febc6e80429ef7d68f0583c99590ee7">&#9670;&nbsp;</a></span>insert() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::insert </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts NULL-terminated string into this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end. </td></tr>
+    <tr><td class="paramname">string</td><td>The NULL-terminated string to be inserted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25078a88e2bde86f2112157e9abc4309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25078a88e2bde86f2112157e9abc4309">&#9670;&nbsp;</a></span>insert() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::insert </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserts NULL-terminated string into this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end. </td></tr>
+    <tr><td class="paramname">string</td><td>The NULL-terminated string to be inserted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7739f7357c0c648b89d6672827a7df66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7739f7357c0c648b89d6672827a7df66">&#9670;&nbsp;</a></span>insert() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::insert </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts NULL-terminated string into this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end. </td></tr>
+    <tr><td class="paramname">string</td><td>The NULL-terminated string to be inserted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="afba6a27b14623c45a9719fb491e2ae0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afba6a27b14623c45a9719fb491e2ae0f">&#9670;&nbsp;</a></span>insert() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afba6a27b14623c45a9719fb491e2ae0f">&#9670;&nbsp;</a></span>insert() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1786,11 +2851,11 @@ template&lt;MemorySize SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inserts NULL-terminated string into this string.</p>
+<p>Inserts the string literal into this string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end.</td></tr>
-    <tr><td class="paramname">string</td><td>The NULL-terminated string to be inserted. </td></tr>
+    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end. </td></tr>
+    <tr><td class="paramname">string</td><td>The string literal to be inserted. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1798,7 +2863,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a98c683dfd87adbbe3429c603e76c63e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98c683dfd87adbbe3429c603e76c63e8">&#9670;&nbsp;</a></span>insert() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c683dfd87adbbe3429c603e76c63e8">&#9670;&nbsp;</a></span>insert() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1825,7 +2890,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <p>Inserts the string into this string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end.</td></tr>
+    <tr><td class="paramname">index</td><td>Specifies the position to insert the string. If the index exceeds the end of this string the string is inserted at the end. </td></tr>
     <tr><td class="paramname">string</td><td>The string to be inserted. </td></tr>
   </table>
   </dd>
@@ -1834,7 +2899,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="af249eac1820a93ed28d7c587dcb24ecf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af249eac1820a93ed28d7c587dcb24ecf">&#9670;&nbsp;</a></span>insert() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af249eac1820a93ed28d7c587dcb24ecf">&#9670;&nbsp;</a></span>insert() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1869,6 +2934,32 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a89e7d47b0e91a8f8839595c5f3095457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e7d47b0e91a8f8839595c5f3095457">&#9670;&nbsp;</a></span>invariant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WideString::invariant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if state is valid. </p>
+
+</div>
+</div>
 <a id="a38f42342e1cc39bcf71292c5c5c7b6d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38f42342e1cc39bcf71292c5c5c7b6d9">&#9670;&nbsp;</a></span>isASCII()</h2>
 
@@ -1887,7 +2978,7 @@ template&lt;MemorySize SIZE&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1917,7 +3008,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if the string contains no characters. </p>
+<p>Returns true if the string does not contain characters. </p>
 
 </div>
 </div>
@@ -1944,6 +3035,32 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the string is lower case. </p>
+
+</div>
+</div>
+<a id="ad3a352e7a705a45808f8f0965fb9110f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a352e7a705a45808f8f0965fb9110f">&#9670;&nbsp;</a></span>isMultiReferenced()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WideString::isMultiReferenced </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the string has multiple references. </p>
 
 </div>
 </div>
@@ -2025,6 +3142,34 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="acd3468ce791da9fc08efbccf5529d808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3468ce791da9fc08efbccf5529d808">&#9670;&nbsp;</a></span>isValidUnicode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WideString::isValidUnicode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>iso</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the string has valid <a class="el" href="class_unicode.html">Unicode</a> codes.</p>
+<p>@iso Specifies the ISO codes should be allowed. </p>
+
+</div>
+</div>
 <a id="aeb3a1e614d361da971411d77cacb19a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb3a1e614d361da971411d77cacb19a5">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[1/4]</span></h2>
 
@@ -2096,11 +3241,11 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The substring to find. </td></tr>
-    <tr><td class="paramname">start</td><td>Specifies the start position of the search. Default is end of string. </td></tr>
+    <tr><td class="paramname">start</td><td>Specifies the start position of the search. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Index of the last match if any otherwise -1. Also returns -1 if the substring is empty. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Index of the last match if any otherwise -1. Also returns -1 if substring is empty. </dd></dl>
 
 </div>
 </div>
@@ -2127,7 +3272,14 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the index of the last character that matches the specified character starting from the end of the string. </p>
+<p>Returns the index of the last character that matches the specified character.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>The character to find. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Index of the last match if any otherwise -1. </dd></dl>
 
 </div>
 </div>
@@ -2168,7 +3320,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ch</td><td>The character to find. </td></tr>
-    <tr><td class="paramname">start</td><td>Specifies the start position of the search. Default is end of string. </td></tr>
+    <tr><td class="paramname">start</td><td>Specifies the start position of the search. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is end of string. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2176,8 +3328,8 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="acb92815ce4ba35302a46c62e02f27e21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb92815ce4ba35302a46c62e02f27e21">&#9670;&nbsp;</a></span>native()</h2>
+<a id="a44cbf2c66fadcb0b8ffb8d9c5d61472f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44cbf2c66fadcb0b8ffb8d9c5d61472f">&#9670;&nbsp;</a></span>native()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2186,7 +3338,7 @@ template&lt;MemorySize SIZE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ucs4* WideString::native </td>
+          <td class="memname">const Char* WideString::native </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2255,8 +3407,173 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a746fc9214d38fc0b5bbfe693e12626d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a746fc9214d38fc0b5bbfe693e12626d8">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">Char&#160;</td>
+          <td class="paramname"><em>suffix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the character to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">suffix</td><td>The character to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9841823597cf3b382da42b5634219642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9841823597cf3b382da42b5634219642">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_native_wide_string.html">NativeWideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>suffix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">suffix</td><td>The character to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adbc2424f73fafb38151d6f40bc136926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc2424f73fafb38151d6f40bc136926">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>suffix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">suffix</td><td>The string to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada8dd3270e94b2c917d4a7d83f0bcf82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada8dd3270e94b2c917d4a7d83f0bcf82">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>suffix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the string to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">suffix</td><td>The character to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a082f4fcd9ce94cb1e2327ef0f5aa110b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a082f4fcd9ce94cb1e2327ef0f5aa110b">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;&#160;</td>
+          <td class="paramname"><em>suffix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Appends the literal to this string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">suffix</td><td>The character to be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a69185d91941cf69cb880595b59a96278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69185d91941cf69cb880595b59a96278">&#9670;&nbsp;</a></span>operator+=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69185d91941cf69cb880595b59a96278">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2303,7 +3620,7 @@ template&lt;MemorySize SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_wide_string.html" title="Wide-character string.">WideString</a> reduction operator. Removes suffix from this string if and only if it ends with the suffix (e.g. ("presuf"-"suf") results in a new string "pre" whereas ("pre"-"suf") results in "pre").</p>
+<p><a class="el" href="class_string.html" title="String.">String</a> reduction operator. Removes suffix from this string if and only if it ends with the suffix (e.g. ("presuf"-"suf") results in a new string "pre" whereas ("pre"-"suf") results in "pre").</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">suffix</td><td>The suffix to be removed. </td></tr>
@@ -2367,8 +3684,94 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a941e09e2ba0ff4f03a0a2c6e0a603f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941e09e2ba0ff4f03a0a2c6e0a603f6c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="aa18b9306a3199d90b0ab5eee7c2c24c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18b9306a3199d90b0ab5eee7c2c24c9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemorySize SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const Char(&amp;)&#160;</td>
+          <td class="paramname"><em>literal</em>[SIZE]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="af94f3e4ead3c63fa77070be916ffb8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94f3e4ead3c63fa77070be916ffb8ac">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a2416025248c866a90bc9be2099a606fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2416025248c866a90bc9be2099a606fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char32_t *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
 <a id="a334fdd722863909c54c484a44f93c005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a334fdd722863909c54c484a44f93c005">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a334fdd722863909c54c484a44f93c005">&#9670;&nbsp;</a></span>operator=() <span class="overload">[5/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2386,8 +3789,84 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="ac392c1a0cb028c494df768c8321c2205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac392c1a0cb028c494df768c8321c2205">&#9670;&nbsp;</a></span>operator=() <span class="overload">[6/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a4c1fd8346c3eee61660849850f3bc4d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1fd8346c3eee61660849850f3bc4d1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[7/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string_output_stream.html">StringOutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="ad086e41033c3ad11e3cde6539e11cbcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad086e41033c3ad11e3cde6539e11cbcd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a4e57dd6f92bcb33ce949ad943534e738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e57dd6f92bcb33ce949ad943534e738">&#9670;&nbsp;</a></span>operator=() <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
 <a id="abab5e6d62eb38a784002edf2e273f925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abab5e6d62eb38a784002edf2e273f925">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abab5e6d62eb38a784002edf2e273f925">&#9670;&nbsp;</a></span>operator=() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2409,7 +3888,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Assignment of string with string. </p>
+<p>Assignment of string to string. </p>
 
 </div>
 </div>
@@ -2841,6 +4320,53 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a7013fc6e171ba1ca3ccc5f6e46cd1bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7013fc6e171ba1ca3ccc5f6e46cd1bd5">&#9670;&nbsp;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MemoryDiff WideString::search </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>substring</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>start</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the index of the first substring that matches the specified string after the start position. The implementation is based on the "Boyer-Moore
+Fast String Searching Algorithm".</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_wide_string.html#a245f7e1ef259cbd77b2a0abbc3888adc">indexOf</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The substring to find. </td></tr>
+    <tr><td class="paramname">start</td><td>Specifies the start position of the search. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Index of the first match if any otherwise -1. Also returns -1 if substring is empty. </dd></dl>
+
+</div>
+</div>
 <a id="a827d24663d1656e795d58adab8db30ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a827d24663d1656e795d58adab8db30ae">&#9670;&nbsp;</a></span>setAt()</h2>
 
@@ -2904,11 +4430,49 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a08b4c2f892766871297a6deb4a4070f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08b4c2f892766871297a6deb4a4070f5">&#9670;&nbsp;</a></span>startsWith() <span class="overload">[1/2]</span></h2>
+<a id="a39138ebda721c9fa3d02d27a486cd6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39138ebda721c9fa3d02d27a486cd6fd">&#9670;&nbsp;</a></span>split()</h2>
 
 <div class="memitem">
 <div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_array.html">Array</a>&lt;<a class="el" href="class_wide_string.html">WideString</a>&gt; WideString::split </td>
+          <td>(</td>
+          <td class="paramtype">Char&#160;</td>
+          <td class="paramname"><em>separator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>group</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the substrings between the specified separator.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">separator</td><td>Separator. </td></tr>
+    <tr><td class="paramname">group</td><td><a class="el" href="class_group.html" title="Group trustee.">Group</a> separators. <a class="el" href="class_wide_string_1_1_default.html">Default</a> is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae55ae6256d8e8d880b4320578a2c0db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55ae6256d8e8d880b4320578a2c0db0">&#9670;&nbsp;</a></span>startsWith() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemorySize SIZE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2916,14 +4480,14 @@ template&lt;MemorySize SIZE&gt; </div>
         <tr>
           <td class="memname">bool WideString::startsWith </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;&#160;</td>
-          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td class="paramtype">const Char(&amp;)&#160;</td>
+          <td class="paramname"><em>prefix</em>[SIZE]</td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2937,14 +4501,36 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a005ddbbc2c63e7a2c97302aa9dccebf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a005ddbbc2c63e7a2c97302aa9dccebf3">&#9670;&nbsp;</a></span>startsWith() <span class="overload">[2/2]</span></h2>
+<a id="ae50eaea82a2de9b0eec4280012c6f936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae50eaea82a2de9b0eec4280012c6f936">&#9670;&nbsp;</a></span>startsWith() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WideString::startsWith </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if this string starts with the specified prefix.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>The string to compare start of this string with. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46511f9c3cb2b9edad46ac19496aa4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46511f9c3cb2b9edad46ac19496aa4bd">&#9670;&nbsp;</a></span>startsWith() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool WideString::startsWith </td>
@@ -2954,11 +4540,6 @@ template&lt;MemorySize SIZE&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Returns true if this string starts with the specified prefix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3088,6 +4669,31 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Converts the characters of this string into the upper case equivalents. </p>
+
+</div>
+</div>
+<a id="a5cce0279ab29353ad419db80e70c9162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cce0279ab29353ad419db80e70c9162">&#9670;&nbsp;</a></span>trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wide_string.html">WideString</a>&amp; WideString::trim </td>
+          <td>(</td>
+          <td class="paramtype">ucs4&#160;</td>
+          <td class="paramname"><em>character</em> = <code>'&#160;'</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Trims the string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">character</td><td>The character to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3231,7 +4837,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:208</div></div>
+<div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:205</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

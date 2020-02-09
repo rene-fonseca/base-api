@@ -67,100 +67,61 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;base/io/OutputStream.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;base/mem/Reference.h&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;base/collection/Pair.h&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;base/io/Handle.h&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_pipe.html">   34</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_pipe.html">Pipe</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_object.html">Object</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_input_stream.html">InputStream</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_output_stream.html">OutputStream</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">class </span><a class="code" href="class_pipe_1_1_pipe_handle.html">PipeHandle</a> : <span class="keyword">public</span> <a class="code" href="class_handle.html">Handle</a> {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>Initialization;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_pipe.html">Pipe</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_handle.html">Handle</a>* invalid;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_pipe_1_1_pipe_handle.html">PipeHandle</a>(<a class="code" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a> handle) noexcept : <a class="code" href="class_handle.html">Handle</a>(handle) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_pipe_1_1_pipe_handle.html">   48</a></span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ~<a class="code" href="class_pipe_1_1_pipe_handle.html">PipeHandle</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="class_reference.html">Reference&lt;Handle&gt;</a> <a class="code" href="class_pipe.html#a24830bdf7f7c460855f7e3e120e1ff9a">fd</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_pipe.html#af77219b5bc5018150d4a38fc9d813df7">end</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_pair.html">Pair&lt;Pipe, Pipe&gt;</a> <a class="code" href="class_pipe.html#a4aa96c7b59e93d7232208a1b0c8fb45d">make</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_pipe.html#af77219b5bc5018150d4a38fc9d813df7">   68</a></span>&#160;  <a class="code" href="class_pipe.html#ad2b986ad7994a41a1ac89fa50468fc13">Pipe</a>() noexcept;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  inline <a class="code" href="class_pipe.html">Pipe</a>(const <a class="code" href="class_pipe.html">Pipe</a>&amp; copy) noexcept : <a class="code" href="class_pipe.html#a24830bdf7f7c460855f7e3e120e1ff9a">fd</a>(copy.<a class="code" href="class_pipe.html#a24830bdf7f7c460855f7e3e120e1ff9a">fd</a>) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_pipe.html">Pipe</a>&amp; <a class="code" href="class_reference_counted_object.html#aee15627db68c14c11b6d67c2027cc04f">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_pipe.html">Pipe</a>&amp; assign) noexcept</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// no need to protect against self assignment</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="class_pipe.html#a24830bdf7f7c460855f7e3e120e1ff9a">fd</a> = assign.fd;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="class_pipe.html#af77219b5bc5018150d4a38fc9d813df7">end</a> = assign.end;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_pipe.html#adadf0a41e166b61de628959e06f0cd03">   84</a></span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_pipe.html#ac03cc350ebd229f65df2440c496ec6c1">   90</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_stream.html#af7a33426f29b28ba4a3441b2b4df2f1d">close</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_pipe.html#a771ef376dad62057f941ae45b29b51d7">getBufferSize</a>() const noexcept;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;base/Resource.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;base/io/Handle.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_pipe.html">   35</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_pipe.html">Pipe</a> : <span class="keyword">public</span> <a class="code" href="class_resource.html">Resource</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_input_stream.html">InputStream</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="class_output_stream.html">OutputStream</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_pair.html">Pair&lt;Pipe, Pipe&gt;</a> make();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="class_pipe.html">Pipe</a>() noexcept;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_stream.html#af7a33426f29b28ba4a3441b2b4df2f1d">close</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getBufferSize() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">bool</span> atEnd() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_input_stream.html#a3454fa2fb231080a0f8cf1c20308e805">available</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_input_stream.html#abb209df74a042603d93e3510a3bc2dd5">skip</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_output_stream.html#a2b731aef87084c3779bea292f85e800d">flush</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_input_stream.html#a2c0b6371ed955ae0b60eb742798656f5">read</a>(</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    uint8* buffer,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">bool</span> nonblocking = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_output_stream.html#a1478a1432b2c73a8d07f6b065fbbe1eb">write</a>(</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">const</span> uint8* buffer,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> nonblocking = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_input_stream.html#ac01e22fa0af1dadea5ff21ede0f58c22">wait</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_pipe.html#a2ca8126dcc4d8a8df0aa3adec7633408">atEnd</a>() const;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_pipe.html#a04718e1baebcefa07f846326ead34e3d">available</a>() const;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_pipe.html#a5e180ed4f6315a204fedaccba8ff727b">skip</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pipe.html#a69a151b246ef62e60ee0ce75e5f8fc36">flush</a>();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_pipe.html#a0bf272be91be3d60b1653cee49899bb4">read</a>(</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    uint8* buffer,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size,</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">bool</span> nonblocking = false);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_pipe.html#a732a4f497be8af31fee02d488fca7101">write</a>(</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    const uint8* buffer,</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size,</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> nonblocking = false);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pipe.html#a3d545aacb6576b2e93f44b83de67ac1f">wait</a>() const;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_pipe.html#a3d545aacb6576b2e93f44b83de67ac1f">wait</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> timeout) const;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  ~<a class="code" href="class_pipe.html">Pipe</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;};</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_input_stream.html#ac01e22fa0af1dadea5ff21ede0f58c22">wait</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> timeout) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  ~<a class="code" href="class_pipe.html">Pipe</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_output_stream_html"><div class="ttname"><a href="class_output_stream.html">OutputStream</a></div><div class="ttdoc">Output stream.</div><div class="ttdef"><b>Definition:</b> OutputStream.h:28</div></div>
-<div class="ttc" id="aclass_pipe_html_ad2b986ad7994a41a1ac89fa50468fc13"><div class="ttname"><a href="class_pipe.html#ad2b986ad7994a41a1ac89fa50468fc13">Pipe::Pipe</a></div><div class="ttdeci">Pipe() noexcept</div></div>
-<div class="ttc" id="aclass_pipe_html_a2ca8126dcc4d8a8df0aa3adec7633408"><div class="ttname"><a href="class_pipe.html#a2ca8126dcc4d8a8df0aa3adec7633408">Pipe::atEnd</a></div><div class="ttdeci">bool atEnd() const</div></div>
-<div class="ttc" id="aclass_pipe_html_af77219b5bc5018150d4a38fc9d813df7"><div class="ttname"><a href="class_pipe.html#af77219b5bc5018150d4a38fc9d813df7">Pipe::end</a></div><div class="ttdeci">bool end</div><div class="ttdef"><b>Definition:</b> Pipe.h:68</div></div>
-<div class="ttc" id="aclass_pipe_1_1_pipe_handle_html"><div class="ttname"><a href="class_pipe_1_1_pipe_handle.html">Pipe::PipeHandle</a></div><div class="ttdef"><b>Definition:</b> Pipe.h:48</div></div>
-<div class="ttc" id="aclass_pipe_html_a3d545aacb6576b2e93f44b83de67ac1f"><div class="ttname"><a href="class_pipe.html#a3d545aacb6576b2e93f44b83de67ac1f">Pipe::wait</a></div><div class="ttdeci">void wait() const</div></div>
-<div class="ttc" id="aclass_pipe_html_a5e180ed4f6315a204fedaccba8ff727b"><div class="ttname"><a href="class_pipe.html#a5e180ed4f6315a204fedaccba8ff727b">Pipe::skip</a></div><div class="ttdeci">unsigned int skip(unsigned int count)</div></div>
-<div class="ttc" id="aclass_operating_system_html_af78062041361a872cf95fb2e8cf8f1c5"><div class="ttname"><a href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a></div><div class="ttdeci">void * Handle</div><div class="ttdef"><b>Definition:</b> OperatingSystem.h:54</div></div>
-<div class="ttc" id="aclass_reference_counted_object_html_aee15627db68c14c11b6d67c2027cc04f"><div class="ttname"><a href="class_reference_counted_object.html#aee15627db68c14c11b6d67c2027cc04f">ReferenceCountedObject::operator=</a></div><div class="ttdeci">ReferenceCountedObject &amp; operator=(const ReferenceCountedObject &amp;copy) noexcept</div><div class="ttdef"><b>Definition:</b> ReferenceCountedObject.h:165</div></div>
-<div class="ttc" id="aclass_pipe_html_a732a4f497be8af31fee02d488fca7101"><div class="ttname"><a href="class_pipe.html#a732a4f497be8af31fee02d488fca7101">Pipe::write</a></div><div class="ttdeci">unsigned int write(const uint8 *buffer, unsigned int size, bool nonblocking=false)</div></div>
-<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
+<div class="ttc" id="aclass_output_stream_html_a1478a1432b2c73a8d07f6b065fbbe1eb"><div class="ttname"><a href="class_output_stream.html#a1478a1432b2c73a8d07f6b065fbbe1eb">OutputStream::write</a></div><div class="ttdeci">virtual unsigned int write(const uint8 *buffer, unsigned int size, bool nonblocking)=0</div></div>
+<div class="ttc" id="aclass_input_stream_html_a2c0b6371ed955ae0b60eb742798656f5"><div class="ttname"><a href="class_input_stream.html#a2c0b6371ed955ae0b60eb742798656f5">InputStream::read</a></div><div class="ttdeci">virtual unsigned int read(uint8 *buffer, unsigned int size, bool nonblocking)=0</div></div>
+<div class="ttc" id="aclass_resource_html"><div class="ttname"><a href="class_resource.html">Resource</a></div><div class="ttdef"><b>Definition:</b> Resource.h:24</div></div>
+<div class="ttc" id="aclass_output_stream_html_a2b731aef87084c3779bea292f85e800d"><div class="ttname"><a href="class_output_stream.html#a2b731aef87084c3779bea292f85e800d">OutputStream::flush</a></div><div class="ttdeci">virtual void flush()=0</div></div>
+<div class="ttc" id="aclass_input_stream_html_a3454fa2fb231080a0f8cf1c20308e805"><div class="ttname"><a href="class_input_stream.html#a3454fa2fb231080a0f8cf1c20308e805">InputStream::available</a></div><div class="ttdeci">virtual unsigned int available() const =0</div></div>
 <div class="ttc" id="aclass_input_stream_html"><div class="ttname"><a href="class_input_stream.html">InputStream</a></div><div class="ttdoc">Input stream.</div><div class="ttdef"><b>Definition:</b> InputStream.h:28</div></div>
-<div class="ttc" id="aclass_handle_html"><div class="ttname"><a href="class_handle.html">Handle</a></div><div class="ttdoc">Generic descriptor.</div><div class="ttdef"><b>Definition:</b> Handle.h:32</div></div>
-<div class="ttc" id="aclass_pipe_html_a4aa96c7b59e93d7232208a1b0c8fb45d"><div class="ttname"><a href="class_pipe.html#a4aa96c7b59e93d7232208a1b0c8fb45d">Pipe::make</a></div><div class="ttdeci">static Pair&lt; Pipe, Pipe &gt; make()</div></div>
-<div class="ttc" id="aclass_reference_html"><div class="ttname"><a href="class_reference.html">Reference&lt; Handle &gt;</a></div></div>
-<div class="ttc" id="aclass_pipe_html_a771ef376dad62057f941ae45b29b51d7"><div class="ttname"><a href="class_pipe.html#a771ef376dad62057f941ae45b29b51d7">Pipe::getBufferSize</a></div><div class="ttdeci">unsigned int getBufferSize() const noexcept</div></div>
-<div class="ttc" id="aclass_pair_html"><div class="ttname"><a href="class_pair.html">Pair</a></div><div class="ttdoc">Value pair binder.</div><div class="ttdef"><b>Definition:</b> Pair.h:28</div></div>
-<div class="ttc" id="aclass_pipe_html_a24830bdf7f7c460855f7e3e120e1ff9a"><div class="ttname"><a href="class_pipe.html#a24830bdf7f7c460855f7e3e120e1ff9a">Pipe::fd</a></div><div class="ttdeci">Reference&lt; Handle &gt; fd</div><div class="ttdef"><b>Definition:</b> Pipe.h:66</div></div>
-<div class="ttc" id="aclass_pipe_html_a04718e1baebcefa07f846326ead34e3d"><div class="ttname"><a href="class_pipe.html#a04718e1baebcefa07f846326ead34e3d">Pipe::available</a></div><div class="ttdeci">unsigned int available() const</div></div>
+<div class="ttc" id="aclass_input_stream_html_ac01e22fa0af1dadea5ff21ede0f58c22"><div class="ttname"><a href="class_input_stream.html#ac01e22fa0af1dadea5ff21ede0f58c22">InputStream::wait</a></div><div class="ttdeci">virtual void wait() const =0</div></div>
+<div class="ttc" id="aclass_pair_html"><div class="ttname"><a href="class_pair.html">Pair</a></div><div class="ttdoc">Value pair binder.</div><div class="ttdef"><b>Definition:</b> Pair.h:29</div></div>
+<div class="ttc" id="aclass_input_stream_html_abb209df74a042603d93e3510a3bc2dd5"><div class="ttname"><a href="class_input_stream.html#abb209df74a042603d93e3510a3bc2dd5">InputStream::skip</a></div><div class="ttdeci">virtual unsigned int skip(unsigned int count)=0</div></div>
 <div class="ttc" id="aclass_stream_html_af7a33426f29b28ba4a3441b2b4df2f1d"><div class="ttname"><a href="class_stream.html#af7a33426f29b28ba4a3441b2b4df2f1d">Stream::close</a></div><div class="ttdeci">virtual void close()=0</div></div>
-<div class="ttc" id="aclass_pipe_html"><div class="ttname"><a href="class_pipe.html">Pipe</a></div><div class="ttdoc">Pipe.</div><div class="ttdef"><b>Definition:</b> Pipe.h:34</div></div>
-<div class="ttc" id="aclass_pipe_html_a0bf272be91be3d60b1653cee49899bb4"><div class="ttname"><a href="class_pipe.html#a0bf272be91be3d60b1653cee49899bb4">Pipe::read</a></div><div class="ttdeci">unsigned int read(uint8 *buffer, unsigned int size, bool nonblocking=false)</div></div>
-<div class="ttc" id="aclass_pipe_html_a69a151b246ef62e60ee0ce75e5f8fc36"><div class="ttname"><a href="class_pipe.html#a69a151b246ef62e60ee0ce75e5f8fc36">Pipe::flush</a></div><div class="ttdeci">void flush()</div></div>
+<div class="ttc" id="aclass_pipe_html"><div class="ttname"><a href="class_pipe.html">Pipe</a></div><div class="ttdoc">Pipe.</div><div class="ttdef"><b>Definition:</b> Pipe.h:35</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

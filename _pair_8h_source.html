@@ -62,178 +62,199 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/Base.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_pair.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pair.html">Pair</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">typedef</span> FIRST <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">typedef</span> SECOND <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a> <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a> <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">   49</a></span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; _first, <span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; _second)</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_pair.html#a04c1664a02014683e474e369a09c0083">   57</a></span>&#160;  : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(_first)), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(_second))</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">   67</a></span>&#160;  <a class="code" href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">Pair</a>(<a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp;&amp; _first, <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp;&amp; _second)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(_first)), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(_second))</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">   78</a></span>&#160;  <a class="code" href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; _first, <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp;&amp; _second)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(_first), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(_second))</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">   89</a></span>&#160;  <a class="code" href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">Pair</a>(<a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp;&amp; _first, <span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; _second)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(_first)), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(_second)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; copy)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(copy.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(copy.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  {</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_pair.html#a5ad720ad7ec7668f37388e956c907291">  100</a></span>&#160;  }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>(<a class="code" href="class_pair.html">Pair</a>&amp;&amp; move)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(move.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>)),</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(move.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>))</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_pair.html#ac944737c51f3e17bf32dbbfd7e69364d">  108</a></span>&#160;  {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="class_pair.html">Pair</a>&amp; <a class="code" href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; assign)</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  {</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_pair.html#a3ab134160256ef41637e9ce54cbc4e88">  116</a></span>&#160;    <span class="keywordflow">if</span> (&amp;assign != <span class="keyword">this</span>) { <span class="comment">// protect against self assignment</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = assign.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = assign.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/string/FormatOutputStream.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_pair.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pair.html">Pair</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">typedef</span> FIRST <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">typedef</span> SECOND <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a> <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a> <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">   50</a></span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; _first)</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_pair.html#a04c1664a02014683e474e369a09c0083">   58</a></span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(_first)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_pair.html#a2d4485e5c61a73cb047dd5ce914c14f3">   68</a></span>&#160;  <a class="code" href="class_pair.html#a2d4485e5c61a73cb047dd5ce914c14f3">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; _first, <span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; _second)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(_first), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(_second)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">   79</a></span>&#160;  <a class="code" href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">Pair</a>(<a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp;&amp; _first, <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp;&amp; _second)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(_first)), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(_second))</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">   90</a></span>&#160;  <a class="code" href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; _first, <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp;&amp; _second)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(_first), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(_second))</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">  101</a></span>&#160;  <a class="code" href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">Pair</a>(<a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp;&amp; _first, <span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; _second)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(_first)), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(_second)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; copy)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(copy.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>), <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(copy.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  {</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_pair.html#a5ad720ad7ec7668f37388e956c907291">  112</a></span>&#160;  }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a>(<a class="code" href="class_pair.html">Pair</a>&amp;&amp; move)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    : <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>(moveObject(move.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>)),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>(moveObject(move.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>))</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_pair.html#ac944737c51f3e17bf32dbbfd7e69364d">  120</a></span>&#160;  {</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="class_pair.html">Pair</a>&amp; <a class="code" href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">operator=</a>(<a class="code" href="class_pair.html">Pair</a>&amp;&amp; assign)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="class_pair.html">Pair</a>&amp; <a class="code" href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; assign)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (&amp;assign != <span class="keyword">this</span>) { <span class="comment">// protect against self assignment</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = moveObject(assign.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = moveObject(assign.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_pair.html#a3ab134160256ef41637e9ce54cbc4e88">  128</a></span>&#160;    <span class="keywordflow">if</span> (&amp;assign != <span class="keyword">this</span>) { <span class="comment">// protect against self assignment</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = assign.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = assign.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; <a class="code" href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">getFirst</a>() const noexcept</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="class_pair.html">Pair</a>&amp; <a class="code" href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">operator=</a>(<a class="code" href="class_pair.html">Pair</a>&amp;&amp; assign)</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; <a class="code" href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">getSecond</a>() const noexcept</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">  149</a></span>&#160;  }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">setFirst</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; value)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = value;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">  157</a></span>&#160;  }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">setFirst</a>(<a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp;&amp; value)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = moveObject(value);</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">  165</a></span>&#160;  }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">setSecond</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; value)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = value;</div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="class_pair.html#abb48d16471fe3703d1c044d5183135e7">  173</a></span>&#160;  }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">setSecond</a>(<a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp;&amp; value)</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = moveObject(value);</div>
-<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">  181</a></span>&#160;  }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_pair.html#a12b0ee91b39347941a4a12abfceccf20">compareTo</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="class_pair.html#aa430bed04fd6eb1946d79b12679cc222">  189</a></span>&#160;    <span class="keywordtype">int</span> result = <a class="code" href="class_pair.html#a12b0ee91b39347941a4a12abfceccf20">compareTo</a>(<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>, compare.first);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> (result != 0) ? result : <a class="code" href="class_pair.html#a12b0ee91b39347941a4a12abfceccf20">compareTo</a>(<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>, compare.second);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_pair.html#a12b0ee91b39347941a4a12abfceccf20">  198</a></span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> == compare.first) &amp;&amp; (<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> == compare.second);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">operator!=</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> !(<a class="code" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">operator==</a>(compare));</div>
-<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">  207</a></span>&#160;  }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> &lt; compare.first) || ((<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> == compare.first) &amp;&amp; (<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> &lt; compare.second));</div>
-<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">  215</a></span>&#160;  }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="comment">// friend int compare&lt;&gt;(const Pair&amp; left, const Pair&amp; right) noexcept;</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">if</span> (&amp;assign != <span class="keyword">this</span>) { <span class="comment">// protect against self assignment</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = moveObject(assign.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = moveObject(assign.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; <a class="code" href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">getFirst</a>() const noexcept</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; <a class="code" href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">getSecond</a>() const noexcept</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">  161</a></span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">setFirst</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp; value)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = value;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">  169</a></span>&#160;  }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">setFirst</a>(<a class="code" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a>&amp;&amp; value)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> = moveObject(value);</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">  177</a></span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">setSecond</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp; value)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = value;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_pair.html#abb48d16471fe3703d1c044d5183135e7">  185</a></span>&#160;  }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">setSecond</a>(<a class="code" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a>&amp;&amp; value)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> = moveObject(value);</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">  193</a></span>&#160;  }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> compareTo(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="class_pair.html#aa430bed04fd6eb1946d79b12679cc222">  201</a></span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">int</span> result = compareTo(<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>, compare.first);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> (result != 0) ? result : compareTo(<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>, compare.second);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> == compare.first) &amp;&amp; (<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> == compare.second);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">operator!=</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> !(<a class="code" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">operator==</a>(compare));</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">  221</a></span>&#160;  }</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">  223</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> compare(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; left, <span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; right)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> &lt; right.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>) {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> == right.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>) {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> &lt; right.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>) {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> == right.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  }</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a> makePair(<span class="keyword">const</span> FIRST&amp; first, <span class="keyword">const</span> SECOND&amp; second)</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>(first, second);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a> makePair(FIRST&amp;&amp; first, SECOND&amp;&amp; second)</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>(moveObject(first), moveObject(second));</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> &lt; compare.first) || ((<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> == compare.first) &amp;&amp; (<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> &lt; compare.second));</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">  229</a></span>&#160;  }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">// friend int compare&lt;&gt;(const Pair&amp; left, const Pair&amp; right) noexcept;</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;};</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">  237</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> compare(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; left, <span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; right)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;{</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> &lt; right.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a> == right.<a class="code" href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">first</a>) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> &lt; right.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (left.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a> == right.<a class="code" href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">second</a>) {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a> makePair(<span class="keyword">const</span> FIRST&amp; first, <span class="keyword">const</span> SECOND&amp; second)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>(first, second);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a> makePair(FIRST&amp;&amp; first, SECOND&amp;&amp; second)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>(moveObject(first), moveObject(second));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; value)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;{</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <span class="charliteral">&#39;[&#39;</span> &lt;&lt; value.<a class="code" href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">getFirst</a>() &lt;&lt; <span class="charliteral">&#39;;&#39;</span> &lt;&lt; value.<a class="code" href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">getSecond</a>() &lt;&lt; <span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_pair.html">Pair&lt;String, String&gt;</a> <a class="code" href="class_pair.html">StringPair</a>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_pair.html">Pair&lt;WideString, WideString&gt;</a> <a class="code" href="class_pair.html">WideStringPair</a>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_pair_html_a017fba682768616f5ad1b96b45e26db6"><div class="ttname"><a href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">Pair::setSecond</a></div><div class="ttdeci">void setSecond(const Second &amp;value)</div><div class="ttdef"><b>Definition:</b> Pair.h:181</div></div>
-<div class="ttc" id="aclass_pair_html_a04c1664a02014683e474e369a09c0083"><div class="ttname"><a href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair::Pair</a></div><div class="ttdeci">Pair()</div><div class="ttdef"><b>Definition:</b> Pair.h:57</div></div>
-<div class="ttc" id="aclass_pair_html_a8054d2770293836bde6b51f946e8de2d"><div class="ttname"><a href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">Pair::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:223</div></div>
-<div class="ttc" id="aclass_pair_html_ad6bcbbf0ae3764b316f93fd287fb47b8"><div class="ttname"><a href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">Pair::getFirst</a></div><div class="ttdeci">const First &amp; getFirst() const noexcept</div><div class="ttdef"><b>Definition:</b> Pair.h:149</div></div>
-<div class="ttc" id="aclass_pair_html_a84dbf3a5173b3e7511f66689e3d860d5"><div class="ttname"><a href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">Pair::operator==</a></div><div class="ttdeci">bool operator==(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:207</div></div>
-<div class="ttc" id="aclass_pair_html_ad9821b26461eebe8a3067ad1b667476a"><div class="ttname"><a href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">Pair::operator!=</a></div><div class="ttdeci">bool operator!=(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:215</div></div>
-<div class="ttc" id="aclass_pair_html_ae9e2f2bb9252c7e4c86f44a5377ab045"><div class="ttname"><a href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">Pair::Pair</a></div><div class="ttdeci">Pair(First &amp;&amp;_first, Second &amp;&amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:78</div></div>
-<div class="ttc" id="aclass_pair_html_a8e475783a5b44a2ec1b870cf6fb2195b"><div class="ttname"><a href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">Pair::First</a></div><div class="ttdeci">FIRST First</div><div class="ttdef"><b>Definition:</b> Pair.h:43</div></div>
-<div class="ttc" id="aclass_pair_html_a60fb5224b490e9fa5f73725bbf54e967"><div class="ttname"><a href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first, const Second &amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:67</div></div>
-<div class="ttc" id="aclass_pair_html_a6cf53e8a15154afe658c3dcaafa6b82e"><div class="ttname"><a href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first, Second &amp;&amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:89</div></div>
-<div class="ttc" id="aclass_pair_html_a2ae2e860ab54811f3ea51ff78f8e64ea"><div class="ttname"><a href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">Pair::getSecond</a></div><div class="ttdeci">const Second &amp; getSecond() const noexcept</div><div class="ttdef"><b>Definition:</b> Pair.h:157</div></div>
-<div class="ttc" id="aclass_pair_html_a705c6db8ab53cbe25203c5db20e74db5"><div class="ttname"><a href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">Pair::operator=</a></div><div class="ttdeci">Pair &amp; operator=(const Pair &amp;assign)</div><div class="ttdef"><b>Definition:</b> Pair.h:125</div></div>
-<div class="ttc" id="aclass_pair_html_a352808ece9fa2df8cdabe71cffbb48d8"><div class="ttname"><a href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Pair::Second</a></div><div class="ttdeci">SECOND Second</div><div class="ttdef"><b>Definition:</b> Pair.h:45</div></div>
-<div class="ttc" id="aclass_pair_html"><div class="ttname"><a href="class_pair.html">Pair</a></div><div class="ttdoc">Value pair binder.</div><div class="ttdef"><b>Definition:</b> Pair.h:28</div></div>
-<div class="ttc" id="aclass_pair_html_a9d5c7cdf4c6e1e6daf5cd39289a95d59"><div class="ttname"><a href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">Pair::second</a></div><div class="ttdeci">Second second</div><div class="ttdef"><b>Definition:</b> Pair.h:51</div></div>
-<div class="ttc" id="aclass_pair_html_a12b0ee91b39347941a4a12abfceccf20"><div class="ttname"><a href="class_pair.html#a12b0ee91b39347941a4a12abfceccf20">Pair::compareTo</a></div><div class="ttdeci">int compareTo(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:198</div></div>
-<div class="ttc" id="aclass_pair_html_afc5ef059775e89a4d6c99d833f0c4f4d"><div class="ttname"><a href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">Pair::first</a></div><div class="ttdeci">First first</div><div class="ttdef"><b>Definition:</b> Pair.h:49</div></div>
-<div class="ttc" id="aclass_pair_html_a2658792e2beb89aaeff4bce5ffa8a921"><div class="ttname"><a href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">Pair::setFirst</a></div><div class="ttdeci">void setFirst(const First &amp;value)</div><div class="ttdef"><b>Definition:</b> Pair.h:165</div></div>
+<div class="ttc" id="aclass_pair_html_a017fba682768616f5ad1b96b45e26db6"><div class="ttname"><a href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">Pair::setSecond</a></div><div class="ttdeci">void setSecond(const Second &amp;value)</div><div class="ttdef"><b>Definition:</b> Pair.h:193</div></div>
+<div class="ttc" id="aclass_pair_html_a04c1664a02014683e474e369a09c0083"><div class="ttname"><a href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair::Pair</a></div><div class="ttdeci">Pair()</div><div class="ttdef"><b>Definition:</b> Pair.h:58</div></div>
+<div class="ttc" id="aclass_pair_html_a8054d2770293836bde6b51f946e8de2d"><div class="ttname"><a href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">Pair::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:237</div></div>
+<div class="ttc" id="aclass_pair_html_ad6bcbbf0ae3764b316f93fd287fb47b8"><div class="ttname"><a href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">Pair::getFirst</a></div><div class="ttdeci">const First &amp; getFirst() const noexcept</div><div class="ttdef"><b>Definition:</b> Pair.h:161</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
+<div class="ttc" id="aclass_pair_html_a84dbf3a5173b3e7511f66689e3d860d5"><div class="ttname"><a href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">Pair::operator==</a></div><div class="ttdeci">bool operator==(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:221</div></div>
+<div class="ttc" id="aclass_pair_html_ad9821b26461eebe8a3067ad1b667476a"><div class="ttname"><a href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">Pair::operator!=</a></div><div class="ttdeci">bool operator!=(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:229</div></div>
+<div class="ttc" id="aclass_pair_html_ae9e2f2bb9252c7e4c86f44a5377ab045"><div class="ttname"><a href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">Pair::Pair</a></div><div class="ttdeci">Pair(First &amp;&amp;_first, Second &amp;&amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:90</div></div>
+<div class="ttc" id="aclass_pair_html_a8e475783a5b44a2ec1b870cf6fb2195b"><div class="ttname"><a href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">Pair::First</a></div><div class="ttdeci">FIRST First</div><div class="ttdef"><b>Definition:</b> Pair.h:44</div></div>
+<div class="ttc" id="aclass_pair_html_a2d4485e5c61a73cb047dd5ce914c14f3"><div class="ttname"><a href="class_pair.html#a2d4485e5c61a73cb047dd5ce914c14f3">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first)</div><div class="ttdef"><b>Definition:</b> Pair.h:68</div></div>
+<div class="ttc" id="aclass_pair_html_a60fb5224b490e9fa5f73725bbf54e967"><div class="ttname"><a href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first, const Second &amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:79</div></div>
+<div class="ttc" id="aclass_pair_html_a6cf53e8a15154afe658c3dcaafa6b82e"><div class="ttname"><a href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first, Second &amp;&amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:101</div></div>
+<div class="ttc" id="aclass_pair_html_a2ae2e860ab54811f3ea51ff78f8e64ea"><div class="ttname"><a href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">Pair::getSecond</a></div><div class="ttdeci">const Second &amp; getSecond() const noexcept</div><div class="ttdef"><b>Definition:</b> Pair.h:169</div></div>
+<div class="ttc" id="aclass_pair_html_a705c6db8ab53cbe25203c5db20e74db5"><div class="ttname"><a href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">Pair::operator=</a></div><div class="ttdeci">Pair &amp; operator=(const Pair &amp;assign)</div><div class="ttdef"><b>Definition:</b> Pair.h:137</div></div>
+<div class="ttc" id="aclass_pair_html_a352808ece9fa2df8cdabe71cffbb48d8"><div class="ttname"><a href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Pair::Second</a></div><div class="ttdeci">SECOND Second</div><div class="ttdef"><b>Definition:</b> Pair.h:46</div></div>
+<div class="ttc" id="aclass_pair_html"><div class="ttname"><a href="class_pair.html">Pair</a></div><div class="ttdoc">Value pair binder.</div><div class="ttdef"><b>Definition:</b> Pair.h:29</div></div>
+<div class="ttc" id="aclass_pair_html_a9d5c7cdf4c6e1e6daf5cd39289a95d59"><div class="ttname"><a href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">Pair::second</a></div><div class="ttdeci">Second second</div><div class="ttdef"><b>Definition:</b> Pair.h:52</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
+<div class="ttc" id="aclass_pair_html_afc5ef059775e89a4d6c99d833f0c4f4d"><div class="ttname"><a href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">Pair::first</a></div><div class="ttdeci">First first</div><div class="ttdef"><b>Definition:</b> Pair.h:50</div></div>
+<div class="ttc" id="aclass_pair_html_a2658792e2beb89aaeff4bce5ffa8a921"><div class="ttname"><a href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">Pair::setFirst</a></div><div class="ttdeci">void setFirst(const First &amp;value)</div><div class="ttdef"><b>Definition:</b> Pair.h:177</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

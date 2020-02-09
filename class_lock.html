@@ -52,7 +52,7 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_lock_8h_source.html">base/concurrency/Lock.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="class_mutual_exclusion.html">MutualExclusion</a>, <a class="el" href="class_n_i_spin_lock.html">NISpinLock</a>, <a class="el" href="class_read_write_lock.html">ReadWriteLock</a>, and <a class="el" href="class_spin_lock.html">SpinLock</a>.</p>
+<p>Inherited by <a class="el" href="class_mutual_exclusion.html">MutualExclusion</a>, <a class="el" href="class_n_i_spin_lock.html">NISpinLock</a>, <a class="el" href="class_read_write_lock.html">ReadWriteLock</a>, <a class="el" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a>, and <a class="el" href="class_spin_lock.html">SpinLock</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -159,7 +159,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Acquires an exclusive lock. </p>
 
-<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a89e5a049a2efe309610763c4f1559fdb">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a72a76f0c75a77c25e8d8b7328f9e252d">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#a11ab5fbb727d30017e3e262e3538f666">NISpinLock</a>, <a class="el" href="class_recursive_mutual_exclusion.html#a23e682823efb389e4215cb2ea7f39c72">RecursiveMutualExclusion</a>, <a class="el" href="class_read_write_lock.html#af9349d545ee6d7b9ff0f8dbb1aca5f69">ReadWriteLock</a>, and <a class="el" href="class_mutual_exclusion.html#a84038b0e260111e182d74c25ec3ee08d">MutualExclusion</a>.</p>
+<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a89e5a049a2efe309610763c4f1559fdb">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a72a76f0c75a77c25e8d8b7328f9e252d">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#a11ab5fbb727d30017e3e262e3538f666">NISpinLock</a>, <a class="el" href="class_read_write_lock.html#af9349d545ee6d7b9ff0f8dbb1aca5f69">ReadWriteLock</a>, <a class="el" href="class_mutual_exclusion.html#a84038b0e260111e182d74c25ec3ee08d">MutualExclusion</a>, and <a class="el" href="class_recursive_mutual_exclusion.html#a23e682823efb389e4215cb2ea7f39c72">RecursiveMutualExclusion</a>.</p>
 
 </div>
 </div>
@@ -187,7 +187,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Releases the lock. </p>
 
-<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a9be6e6285c7752f9738dbcdbfb7e4c61">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a16ce5c045180150b56078385b20ab285">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#a774a18f6661803a29135d94ad3086e20">NISpinLock</a>, <a class="el" href="class_recursive_mutual_exclusion.html#aaddbd0e67de11851382bb5f8437f9095">RecursiveMutualExclusion</a>, <a class="el" href="class_mutual_exclusion.html#afc7b199da786ca6faa8ea94325336d9e">MutualExclusion</a>, and <a class="el" href="class_read_write_lock.html#ac9d48c79a50bd3c98991900e4638f739">ReadWriteLock</a>.</p>
+<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a9be6e6285c7752f9738dbcdbfb7e4c61">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a16ce5c045180150b56078385b20ab285">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#a774a18f6661803a29135d94ad3086e20">NISpinLock</a>, <a class="el" href="class_mutual_exclusion.html#afc7b199da786ca6faa8ea94325336d9e">MutualExclusion</a>, <a class="el" href="class_recursive_mutual_exclusion.html#aaddbd0e67de11851382bb5f8437f9095">RecursiveMutualExclusion</a>, and <a class="el" href="class_read_write_lock.html#ac9d48c79a50bd3c98991900e4638f739">ReadWriteLock</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Acquires a shared lock. For some lock implementations this will acquire an exclusive lock. </p>
 
-<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a45607ca9ac56d2b52cdc15214278266d">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a1fda8a52e5a8f4ec31cf948fef7fd599">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#aa6054002dbb129b7aeeef87fa9fde27a">NISpinLock</a>, <a class="el" href="class_recursive_mutual_exclusion.html#a1b6b4042bf51f614ef334444978f479c">RecursiveMutualExclusion</a>, <a class="el" href="class_mutual_exclusion.html#a0f07fa2f777344a14f84f7dd2054d927">MutualExclusion</a>, and <a class="el" href="class_read_write_lock.html#aa87837e91716d213ccad2766d5fb4991">ReadWriteLock</a>.</p>
+<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a45607ca9ac56d2b52cdc15214278266d">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a1fda8a52e5a8f4ec31cf948fef7fd599">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#aa6054002dbb129b7aeeef87fa9fde27a">NISpinLock</a>, <a class="el" href="class_mutual_exclusion.html#a0f07fa2f777344a14f84f7dd2054d927">MutualExclusion</a>, <a class="el" href="class_read_write_lock.html#aa87837e91716d213ccad2766d5fb4991">ReadWriteLock</a>, and <a class="el" href="class_recursive_mutual_exclusion.html#a1b6b4042bf51f614ef334444978f479c">RecursiveMutualExclusion</a>.</p>
 
 </div>
 </div>
@@ -244,7 +244,7 @@ Public Member Functions</h2></td></tr>
 <p>Tries to acquire an exclusive lock.</p>
 <dl class="section return"><dt>Returns</dt><dd>True on success. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a0394b89c772297fb80825bb486ee2241">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a6666e51c287025da4026f19ab6f93a41">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#abb55c84943228f0797bd24cca822d8d6">NISpinLock</a>, <a class="el" href="class_recursive_mutual_exclusion.html#af3e0b3415f78355604bba1729630ee1b">RecursiveMutualExclusion</a>, <a class="el" href="class_mutual_exclusion.html#a707d5bc1253fcb6d9a622b561ab130dc">MutualExclusion</a>, and <a class="el" href="class_read_write_lock.html#ab26265b3a08ed603b2e88c6459e976cf">ReadWriteLock</a>.</p>
+<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a0394b89c772297fb80825bb486ee2241">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a6666e51c287025da4026f19ab6f93a41">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#abb55c84943228f0797bd24cca822d8d6">NISpinLock</a>, <a class="el" href="class_mutual_exclusion.html#a707d5bc1253fcb6d9a622b561ab130dc">MutualExclusion</a>, <a class="el" href="class_read_write_lock.html#ab26265b3a08ed603b2e88c6459e976cf">ReadWriteLock</a>, and <a class="el" href="class_recursive_mutual_exclusion.html#af3e0b3415f78355604bba1729630ee1b">RecursiveMutualExclusion</a>.</p>
 
 </div>
 </div>
@@ -273,7 +273,7 @@ Public Member Functions</h2></td></tr>
 <p>Tries to acquire a shared lock. For some lock implementations this will acquire an exclusive lock.</p>
 <dl class="section return"><dt>Returns</dt><dd>True on success. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a314fd53f0d4a2d393a06589abff040c8">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a5e0cd2e319ae44eb62576a32a3da6a67">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#a7720e4d780ad5752a5cb02953bedc573">NISpinLock</a>, <a class="el" href="class_recursive_mutual_exclusion.html#a77a0141278e9c59144dae3e5a02d9fe6">RecursiveMutualExclusion</a>, <a class="el" href="class_mutual_exclusion.html#ada7f47373ae36f99030df9ec6cb80320">MutualExclusion</a>, and <a class="el" href="class_read_write_lock.html#a989407bc40801b04ae5254daa3290137">ReadWriteLock</a>.</p>
+<p>Implemented in <a class="el" href="class_recursive_spin_lock.html#a314fd53f0d4a2d393a06589abff040c8">RecursiveSpinLock</a>, <a class="el" href="class_spin_lock.html#a5e0cd2e319ae44eb62576a32a3da6a67">SpinLock</a>, <a class="el" href="class_n_i_spin_lock.html#a7720e4d780ad5752a5cb02953bedc573">NISpinLock</a>, <a class="el" href="class_mutual_exclusion.html#ada7f47373ae36f99030df9ec6cb80320">MutualExclusion</a>, <a class="el" href="class_recursive_mutual_exclusion.html#a77a0141278e9c59144dae3e5a02d9fe6">RecursiveMutualExclusion</a>, and <a class="el" href="class_read_write_lock.html#a989407bc40801b04ae5254daa3290137">ReadWriteLock</a>.</p>
 
 </div>
 </div>

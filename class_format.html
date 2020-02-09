@@ -131,12 +131,12 @@ static <a class="el" href="class_string.html">String</a>&#160;</td><td class="me
 <tr class="memitem:a630c92c1d8348b83262808e36e06c81e"><td class="memItemLeft" align="right" valign="top"><a id="a630c92c1d8348b83262808e36e06c81e"></a>
 static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>subst</b> (const <a class="el" href="class_string.html">String</a> &amp;text, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;a, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;b, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;c, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;d, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;e, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;f, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;g, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;h, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;i, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;j, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;k, const <a class="el" href="class_any_value.html">AnyValue</a> &amp;l)</td></tr>
 <tr class="separator:a630c92c1d8348b83262808e36e06c81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d499b5778a0ec26dbda44a88c795d8d"><td class="memItemLeft" align="right" valign="top"><a id="a8d499b5778a0ec26dbda44a88c795d8d"></a>
-static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>subst</b> (const <a class="el" href="class_string.html">String</a> &amp;text, std::initializer_list&lt; const char * &gt; list)</td></tr>
-<tr class="separator:a8d499b5778a0ec26dbda44a88c795d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cd5ba4663524c6c48fe80d0799ba720"><td class="memItemLeft" align="right" valign="top"><a id="a8cd5ba4663524c6c48fe80d0799ba720"></a>
-static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>subst</b> (const <a class="el" href="class_string.html">String</a> &amp;text, std::initializer_list&lt; <a class="el" href="class_literal.html">Literal</a> &gt; list)</td></tr>
-<tr class="separator:a8cd5ba4663524c6c48fe80d0799ba720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3957626581756adaf2aa41fea277079d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format.html#a3957626581756adaf2aa41fea277079d">subst</a> (const <a class="el" href="class_string.html">String</a> &amp;text, const std::initializer_list&lt; const char * &gt; &amp;list)</td></tr>
+<tr class="separator:a3957626581756adaf2aa41fea277079d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d19550805bb6dcd7e00a26bce7b229"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format.html#ad5d19550805bb6dcd7e00a26bce7b229">subst</a> (const <a class="el" href="class_string.html">String</a> &amp;text, const std::initializer_list&lt; <a class="el" href="class_literal.html">Literal</a> &gt; &amp;list)</td></tr>
+<tr class="separator:ad5d19550805bb6dcd7e00a26bce7b229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3366a3b391b6e2fc2ee61078298365"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format.html#a6c3366a3b391b6e2fc2ee61078298365">subst</a> (const <a class="el" href="class_string.html">String</a> &amp;text, const std::initializer_list&lt; <a class="el" href="class_string.html">String</a> &gt; &amp;list)</td></tr>
+<tr class="separator:a6c3366a3b391b6e2fc2ee61078298365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -151,7 +151,7 @@ Static Public Attributes</h2></td></tr>
 <p>You can also reuse to format object as a shorthand because each argument triggers automatic restart of the stream. format f; <a class="el" href="class_string.html" title="String.">String</a> result = <a class="el" href="class_format.html#aa5655e93a7c32cdd7cf359258789dae5">Format::subst</a>( MESSAGE("My value is %1 and %2."), f &lt;&lt; HEX &lt;&lt; myValue, f &lt;&lt; ZEROPAD &lt;&lt; setWidth(8) &lt;&lt; 5432 ); </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa5655e93a7c32cdd7cf359258789dae5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5655e93a7c32cdd7cf359258789dae5">&#9670;&nbsp;</a></span>subst()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5655e93a7c32cdd7cf359258789dae5">&#9670;&nbsp;</a></span>subst() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,6 +175,117 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Simple string substitution.</p>
 <p><a class="el" href="class_string.html" title="String.">String</a> text = <a class="el" href="class_format.html#aa5655e93a7c32cdd7cf359258789dae5">Format::subst</a>(MESSAGE("My name is %1 and my last name is %2."), {"John", "Doe"}); </p>
+
+</div>
+</div>
+<a id="a3957626581756adaf2aa41fea277079d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3957626581756adaf2aa41fea277079d">&#9670;&nbsp;</a></span>subst() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> Format::subst </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::initializer_list&lt; const char * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_string.html" title="String.">String</a> substitution. </p>
+
+</div>
+</div>
+<a id="ad5d19550805bb6dcd7e00a26bce7b229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d19550805bb6dcd7e00a26bce7b229">&#9670;&nbsp;</a></span>subst() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> Format::subst </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::initializer_list&lt; <a class="el" href="class_literal.html">Literal</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_string.html" title="String.">String</a> substitution. </p>
+
+</div>
+</div>
+<a id="a6c3366a3b391b6e2fc2ee61078298365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c3366a3b391b6e2fc2ee61078298365">&#9670;&nbsp;</a></span>subst() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> Format::subst </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::initializer_list&lt; <a class="el" href="class_string.html">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_string.html" title="String.">String</a> substitution. </p>
 
 </div>
 </div>

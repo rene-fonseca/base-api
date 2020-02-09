@@ -679,129 +679,131 @@ $(function() {
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160; </div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_list.html#a7f41fa9e8abaeafce83de422def3a0b3">sort</a>()</div>
 <div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;  {</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <a class="code" href="class_list.html#ad65d1c7d829b14edaa1f3666b9d480e8">elements</a>.copyOnWrite();</div>
-<div class="line"><a name="l00842"></a><span class="lineno"><a class="line" href="class_list.html#a7202389bb336ce65bcfcca42c28946e4">  842</a></span>&#160;    <span class="comment">// TAG: swap nodes instead - at least when TYPE doesnt allow move</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    bubbleSort(<a class="code" href="class_list.html#ad46120b2b2da64ce42f213ebc2745d48">begin</a>(), <a class="code" href="class_list.html#a0689c5401a7fcd472cc93df648345154">end</a>());</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;  }</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160; </div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> PREDICATE&gt;</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_list.html#a7f41fa9e8abaeafce83de422def3a0b3">sort</a>(PREDICATE predicate)</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;  {</div>
-<div class="line"><a name="l00850"></a><span class="lineno"><a class="line" href="class_list.html#a7f41fa9e8abaeafce83de422def3a0b3">  850</a></span>&#160;    <a class="code" href="class_list.html#ad65d1c7d829b14edaa1f3666b9d480e8">elements</a>.copyOnWrite();</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="comment">// TAG: swap nodes instead - at least when TYPE doesnt allow move</span></div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    bubbleSort(<a class="code" href="class_list.html#ad46120b2b2da64ce42f213ebc2745d48">begin</a>(), <a class="code" href="class_list.html#a0689c5401a7fcd472cc93df648345154">end</a>(), predicate);</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;  }</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160; </div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">shuffle</a>();</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160; </div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a64120b0ecc9944300560237d7c75e300">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_list.html#a05315fadeeb751843035e2b1e721e6bf">getSize</a>() != compare.getSize()) {</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    }</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <span class="keyword">auto</span> a = <a class="code" href="class_list.html#a60302b074d918e50c438bef52c92d0e6">cbegin</a>();</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> aEnd = <a class="code" href="class_list.html#ada018f20a79abcd13c015633e9d4ff98">cend</a>();</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    <span class="keyword">auto</span> b = compare.cbegin();</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    <span class="keywordflow">for</span> (; a != aEnd; ++a, ++b) {</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;      <span class="keywordflow">if</span> (!(*a == *b)) {</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00874"></a><span class="lineno"><a class="line" href="class_list.html#a64120b0ecc9944300560237d7c75e300">  874</a></span>&#160;      }</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    }</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;  }</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160; </div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a786b8a40ecc9cb5d7e26aae4d1232f1f">operator!=</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="class_list.html#a64120b0ecc9944300560237d7c75e300">operator==</a>(compare);</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;  }</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160; </div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a0824e636efd722d5bef7be8894cea77d">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    <span class="keyword">auto</span> a = <a class="code" href="class_list.html#a60302b074d918e50c438bef52c92d0e6">cbegin</a>();</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    <span class="keyword">auto</span> b = compare.cbegin();</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> aEnd = <a class="code" href="class_list.html#ada018f20a79abcd13c015633e9d4ff98">cend</a>();</div>
-<div class="line"><a name="l00891"></a><span class="lineno"><a class="line" href="class_list.html#a786b8a40ecc9cb5d7e26aae4d1232f1f">  891</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> bEnd = compare.cend();</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_list.html#a05315fadeeb751843035e2b1e721e6bf">getSize</a>() &lt;= compare.getSize()) {</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;      <span class="keywordflow">for</span> (; a != aEnd; ++a, ++b) {</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <span class="keywordflow">if</span> (*a &lt; *b) {</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*a == *b) {</div>
-<div class="line"><a name="l00897"></a><span class="lineno"><a class="line" href="class_list.html#a0824e636efd722d5bef7be8894cea77d">  897</a></span>&#160;          <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        }</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;      }</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;      <span class="keywordflow">return</span> b != bEnd;</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;      <span class="keywordflow">for</span> (; b != bEnd; ++a, ++b) {</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">if</span> (*a &lt; *b) {</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*a == *b) {</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;          <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        }</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;      }</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    }</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;  }</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;  </div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a197bf68a2d7496f20648e35c2ce78df5">operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="class_list.html#a0824e636efd722d5bef7be8894cea77d">operator&lt;</a>(compare);</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;  }</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160; </div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;  {</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="class_list.html#ad9c3ddbc329a8173813e1ead7ebf4559">isEmpty</a>();</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;  }</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;  </div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_list.html">List</a>&amp; <a class="code" href="class_list.html#a24b0b4f4befa5ab5900e181786387889">operator&lt;&lt;</a>(<span class="keyword">const</span> TYPE&amp; value)</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;  {</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <a class="code" href="class_list.html#a99c43760a19e4c187a41823bdbf149a3">append</a>(value);</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;  }</div>
-<div class="line"><a name="l00933"></a><span class="lineno"><a class="line" href="class_list.html#ac98c558ab6628bc6e328d9ef59e1ca1e">  933</a></span>&#160; </div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_list.html">List</a>&amp; <a class="code" href="class_list.html#a24b0b4f4befa5ab5900e181786387889">operator&lt;&lt;</a>(TYPE&amp;&amp; value)</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;  {</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <a class="code" href="class_list.html#a99c43760a19e4c187a41823bdbf149a3">append</a>(moveObject(value));</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00939"></a><span class="lineno"><a class="line" href="class_list.html#a24b0b4f4befa5ab5900e181786387889">  939</a></span>&#160;  }</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;};</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160; </div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
-<div class="line"><a name="l00948"></a><span class="lineno"><a class="line" href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">  948</a></span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_list.html">List&lt;TYPE&gt;</a>&amp; value)</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;{</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;  <span class="keyword">typename</span> <a class="code" href="class_double_linked_node_read_enumerator.html">List&lt;TYPE&gt;::ReadEnumerator</a> enu = value.<a class="code" href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">getReadEnumerator</a>();</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;[&#39;</span>;</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;  <span class="keywordflow">while</span> (enu.<a class="code" href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">hasNext</a>()) {</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    stream &lt;&lt; *enu.<a class="code" href="class_double_linked_node_read_enumerator.html#a9402a24749b248bace3f83260b05da14">next</a>();</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    <span class="keywordflow">if</span> (enu.<a class="code" href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">hasNext</a>()) {</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;      stream &lt;&lt; <span class="charliteral">&#39;;&#39;</span>;</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    }</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;  }</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;]&#39;</span>;</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;  <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;}</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160; </div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
-<div class="line"><a name="l00963"></a><span class="lineno"><a class="line" href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">  963</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">List&lt;TYPE&gt;::shuffle</a>()</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;{</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;  MemorySize n = getSize();</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  <span class="keywordflow">if</span> (n &lt;= 1) {</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <span class="keywordflow">return</span>; <span class="comment">// nothing to do</span></div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  }</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;  elements.<a class="code" href="class_reference.html#af5dc6ff9026c0aaa4e94c8fdfd9d9d18">copyOnWrite</a>();</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;  elements-&gt;shuffle();</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;}</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <a class="code" href="class_compute_task.html">ComputeTask</a> profiler(<span class="stringliteral">&quot;List::sort()&quot;</span>);</div>
+<div class="line"><a name="l00842"></a><span class="lineno"><a class="line" href="class_list.html#a7202389bb336ce65bcfcca42c28946e4">  842</a></span>&#160;    <a class="code" href="class_list.html#ad65d1c7d829b14edaa1f3666b9d480e8">elements</a>.copyOnWrite();</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="comment">// TAG: swap nodes instead - at least when TYPE doesnt allow move</span></div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    bubbleSort(<a class="code" href="class_list.html#ad46120b2b2da64ce42f213ebc2745d48">begin</a>(), <a class="code" href="class_list.html#a0689c5401a7fcd472cc93df648345154">end</a>());</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;  }</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> PREDICATE&gt;</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_list.html#a7f41fa9e8abaeafce83de422def3a0b3">sort</a>(PREDICATE predicate)</div>
+<div class="line"><a name="l00850"></a><span class="lineno"><a class="line" href="class_list.html#a7f41fa9e8abaeafce83de422def3a0b3">  850</a></span>&#160;  {</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <a class="code" href="class_compute_task.html">ComputeTask</a> profiler(<span class="stringliteral">&quot;List::sort()&quot;</span>);</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    <a class="code" href="class_list.html#ad65d1c7d829b14edaa1f3666b9d480e8">elements</a>.copyOnWrite();</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    <span class="comment">// TAG: swap nodes instead - at least when TYPE doesnt allow move</span></div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;    bubbleSort(<a class="code" href="class_list.html#ad46120b2b2da64ce42f213ebc2745d48">begin</a>(), <a class="code" href="class_list.html#a0689c5401a7fcd472cc93df648345154">end</a>(), predicate);</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;  }</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160; </div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">shuffle</a>();</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160; </div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a64120b0ecc9944300560237d7c75e300">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_list.html#a05315fadeeb751843035e2b1e721e6bf">getSize</a>() != compare.getSize()) {</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    }</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    <span class="keyword">auto</span> a = <a class="code" href="class_list.html#a60302b074d918e50c438bef52c92d0e6">cbegin</a>();</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> aEnd = <a class="code" href="class_list.html#ada018f20a79abcd13c015633e9d4ff98">cend</a>();</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    <span class="keyword">auto</span> b = compare.cbegin();</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <span class="keywordflow">for</span> (; a != aEnd; ++a, ++b) {</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;      <span class="keywordflow">if</span> (!(*a == *b)) {</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00876"></a><span class="lineno"><a class="line" href="class_list.html#a64120b0ecc9944300560237d7c75e300">  876</a></span>&#160;      }</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    }</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;  }</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160; </div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a786b8a40ecc9cb5d7e26aae4d1232f1f">operator!=</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="class_list.html#a64120b0ecc9944300560237d7c75e300">operator==</a>(compare);</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;  }</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160; </div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a0824e636efd722d5bef7be8894cea77d">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    <span class="keyword">auto</span> a = <a class="code" href="class_list.html#a60302b074d918e50c438bef52c92d0e6">cbegin</a>();</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="keyword">auto</span> b = compare.cbegin();</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> aEnd = <a class="code" href="class_list.html#ada018f20a79abcd13c015633e9d4ff98">cend</a>();</div>
+<div class="line"><a name="l00893"></a><span class="lineno"><a class="line" href="class_list.html#a786b8a40ecc9cb5d7e26aae4d1232f1f">  893</a></span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> bEnd = compare.cend();</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_list.html#a05315fadeeb751843035e2b1e721e6bf">getSize</a>() &lt;= compare.getSize()) {</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;      <span class="keywordflow">for</span> (; a != aEnd; ++a, ++b) {</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        <span class="keywordflow">if</span> (*a &lt; *b) {</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*a == *b) {</div>
+<div class="line"><a name="l00899"></a><span class="lineno"><a class="line" href="class_list.html#a0824e636efd722d5bef7be8894cea77d">  899</a></span>&#160;          <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        }</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;      }</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;      <span class="keywordflow">return</span> b != bEnd;</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;      <span class="keywordflow">for</span> (; b != bEnd; ++a, ++b) {</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordflow">if</span> (*a &lt; *b) {</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*a == *b) {</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;          <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        }</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;      }</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    }</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;  }</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;  </div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_list.html#a197bf68a2d7496f20648e35c2ce78df5">operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="class_list.html">List</a>&amp; compare)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="class_list.html#a0824e636efd722d5bef7be8894cea77d">operator&lt;</a>(compare);</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;  }</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160; </div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;  {</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="class_list.html#ad9c3ddbc329a8173813e1ead7ebf4559">isEmpty</a>();</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;  }</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;  </div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_list.html">List</a>&amp; <a class="code" href="class_list.html#a24b0b4f4befa5ab5900e181786387889">operator&lt;&lt;</a>(<span class="keyword">const</span> TYPE&amp; value)</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;  {</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <a class="code" href="class_list.html#a99c43760a19e4c187a41823bdbf149a3">append</a>(value);</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;  }</div>
+<div class="line"><a name="l00935"></a><span class="lineno"><a class="line" href="class_list.html#ac98c558ab6628bc6e328d9ef59e1ca1e">  935</a></span>&#160; </div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_list.html">List</a>&amp; <a class="code" href="class_list.html#a24b0b4f4befa5ab5900e181786387889">operator&lt;&lt;</a>(TYPE&amp;&amp; value)</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;  {</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <a class="code" href="class_list.html#a99c43760a19e4c187a41823bdbf149a3">append</a>(moveObject(value));</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00941"></a><span class="lineno"><a class="line" href="class_list.html#a24b0b4f4befa5ab5900e181786387889">  941</a></span>&#160;  }</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;};</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160; </div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00950"></a><span class="lineno"><a class="line" href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">  950</a></span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_list.html">List&lt;TYPE&gt;</a>&amp; value)</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;{</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;  <span class="keyword">typename</span> <a class="code" href="class_double_linked_node_read_enumerator.html">List&lt;TYPE&gt;::ReadEnumerator</a> enu = value.<a class="code" href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">getReadEnumerator</a>();</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;[&#39;</span>;</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;  <span class="keywordflow">while</span> (enu.<a class="code" href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">hasNext</a>()) {</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    stream &lt;&lt; enu.<a class="code" href="class_double_linked_node_read_enumerator.html#a7394eb7fd5e6776e56931ada238bf480">next</a>();</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    <span class="keywordflow">if</span> (enu.<a class="code" href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">hasNext</a>()) {</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;      stream &lt;&lt; <span class="charliteral">&#39;;&#39;</span>;</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;    }</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;  }</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;  stream &lt;&lt; <span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;}</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160; </div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00965"></a><span class="lineno"><a class="line" href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">  965</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">List&lt;TYPE&gt;::shuffle</a>()</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;{</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;  MemorySize n = getSize();</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  <span class="keywordflow">if</span> (n &lt;= 1) {</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <span class="keywordflow">return</span>; <span class="comment">// nothing to do</span></div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;  }</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;  elements.<a class="code" href="class_reference.html#af5dc6ff9026c0aaa4e94c8fdfd9d9d18">copyOnWrite</a>();</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;  elements-&gt;shuffle();</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;}</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160; </div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_forward_iterable_html"><div class="ttname"><a href="class_forward_iterable.html">ForwardIterable</a></div><div class="ttdef"><b>Definition:</b> Algorithm.h:91</div></div>
+<div class="ttc" id="aclass_forward_iterable_html"><div class="ttname"><a href="class_forward_iterable.html">ForwardIterable</a></div><div class="ttdef"><b>Definition:</b> Algorithm.h:107</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a6e16d350b36238f9b9efb9193a739baf"><div class="ttname"><a href="class_list_1_1_list_impl.html#a6e16d350b36238f9b9efb9193a739baf">List::ListImpl::moveToBack</a></div><div class="ttdeci">void moveToBack(Node *node)</div><div class="ttdef"><b>Definition:</b> List.h:442</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a48bcbc31dbb6b89fbfa93b45866e8c46"><div class="ttname"><a href="class_list_1_1_list_impl.html#a48bcbc31dbb6b89fbfa93b45866e8c46">List::ListImpl::remove</a></div><div class="ttdeci">void remove(Node *node)</div><div class="ttdef"><b>Definition:</b> List.h:293</div></div>
-<div class="ttc" id="aclass_list_html_a24b0b4f4befa5ab5900e181786387889"><div class="ttname"><a href="class_list.html#a24b0b4f4befa5ab5900e181786387889">List::operator&lt;&lt;</a></div><div class="ttdeci">List &amp; operator&lt;&lt;(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:939</div></div>
+<div class="ttc" id="aclass_list_html_a24b0b4f4befa5ab5900e181786387889"><div class="ttname"><a href="class_list.html#a24b0b4f4befa5ab5900e181786387889">List::operator&lt;&lt;</a></div><div class="ttdeci">List &amp; operator&lt;&lt;(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:941</div></div>
 <div class="ttc" id="aclass_double_linked_node_read_iterator_html"><div class="ttname"><a href="class_double_linked_node_read_iterator.html">DoubleLinkedNodeReadIterator</a></div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:351</div></div>
 <div class="ttc" id="aclass_list_html_a696406735a0196e8e0d090e2d1d72fc6"><div class="ttname"><a href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">List::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> List.h:618</div></div>
-<div class="ttc" id="aclass_create_double_linked_node_html"><div class="ttname"><a href="class_create_double_linked_node.html">CreateDoubleLinkedNode</a></div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:681</div></div>
+<div class="ttc" id="aclass_create_double_linked_node_html"><div class="ttname"><a href="class_create_double_linked_node.html">CreateDoubleLinkedNode</a></div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:683</div></div>
 <div class="ttc" id="aclass_list_html_a7f41fa9e8abaeafce83de422def3a0b3"><div class="ttname"><a href="class_list.html#a7f41fa9e8abaeafce83de422def3a0b3">List::sort</a></div><div class="ttdeci">void sort()</div><div class="ttdef"><b>Definition:</b> List.h:850</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a056cd7ce970365174b6be45703c5a7d6"><div class="ttname"><a href="class_list_1_1_list_impl.html#a056cd7ce970365174b6be45703c5a7d6">List::ListImpl::removeFirst</a></div><div class="ttdeci">void removeFirst()</div><div class="ttdef"><b>Definition:</b> List.h:362</div></div>
 <div class="ttc" id="aclass_reference_html_af5dc6ff9026c0aaa4e94c8fdfd9d9d18"><div class="ttname"><a href="class_reference.html#af5dc6ff9026c0aaa4e94c8fdfd9d9d18">Reference::copyOnWrite</a></div><div class="ttdeci">void copyOnWrite()</div><div class="ttdef"><b>Definition:</b> Reference.h:310</div></div>
@@ -812,18 +814,19 @@ $(function() {
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a30048eb870d67115f905c87835063520"><div class="ttname"><a href="class_list_1_1_list_impl.html#a30048eb870d67115f905c87835063520">List::ListImpl::insert</a></div><div class="ttdeci">Node * insert(Node *node, const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:240</div></div>
 <div class="ttc" id="aclass_collection_html"><div class="ttname"><a href="class_collection.html">Collection</a></div><div class="ttdoc">Base class for all collections.</div><div class="ttdef"><b>Definition:</b> Collection.h:32</div></div>
 <div class="ttc" id="aclass_list_html_ad46120b2b2da64ce42f213ebc2745d48"><div class="ttname"><a href="class_list.html#ad46120b2b2da64ce42f213ebc2745d48">List::begin</a></div><div class="ttdeci">Iterator begin()</div><div class="ttdef"><b>Definition:</b> List.h:624</div></div>
-<div class="ttc" id="aclass_double_linked_node_read_enumerator_html"><div class="ttname"><a href="class_double_linked_node_read_enumerator.html">DoubleLinkedNodeReadEnumerator</a></div><div class="ttdoc">Non-modifying enumerator of DoubleLinkedNode.</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:606</div></div>
+<div class="ttc" id="aclass_double_linked_node_read_enumerator_html"><div class="ttname"><a href="class_double_linked_node_read_enumerator.html">DoubleLinkedNodeReadEnumerator</a></div><div class="ttdoc">Non-modifying enumerator of DoubleLinkedNode.</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:607</div></div>
 <div class="ttc" id="aclass_list_html_adf8c95247d194f1a95ebfbfe729baa61"><div class="ttname"><a href="class_list.html#adf8c95247d194f1a95ebfbfe729baa61">List::moveToBack</a></div><div class="ttdeci">void moveToBack(const Iterator &amp;it)</div><div class="ttdef"><b>Definition:</b> List.h:807</div></div>
 <div class="ttc" id="aclass_list_html_a24af975544d63e6563f24c5848ca86de"><div class="ttname"><a href="class_list.html#a24af975544d63e6563f24c5848ca86de">List::List</a></div><div class="ttdeci">List()</div><div class="ttdef"><b>Definition:</b> List.h:508</div></div>
-<div class="ttc" id="aclass_enumerator_html"><div class="ttname"><a href="class_enumerator.html">Enumerator</a></div><div class="ttdoc">Enumeration interface for modifying access.</div><div class="ttdef"><b>Definition:</b> Enumeration.h:109</div></div>
+<div class="ttc" id="aclass_enumerator_html"><div class="ttname"><a href="class_enumerator.html">Enumerator</a></div><div class="ttdoc">Enumeration interface for modifying access.</div><div class="ttdef"><b>Definition:</b> Enumeration.h:111</div></div>
 <div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
 <div class="ttc" id="aclass_empty_container_html"><div class="ttname"><a href="class_empty_container.html">EmptyContainer</a></div><div class="ttdef"><b>Definition:</b> EmptyContainer.h:26</div></div>
 <div class="ttc" id="aclass_double_linked_node_html"><div class="ttname"><a href="class_double_linked_node.html">DoubleLinkedNode&lt; Value &gt;</a></div></div>
 <div class="ttc" id="aclass_double_linked_node_iterator_html"><div class="ttname"><a href="class_double_linked_node_iterator.html">DoubleLinkedNodeIterator</a></div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:174</div></div>
 <div class="ttc" id="aclass_list_html_acec99c695adb87d7aa18dbfdcd160571"><div class="ttname"><a href="class_list.html#acec99c695adb87d7aa18dbfdcd160571">List::remove</a></div><div class="ttdeci">void remove(const Iterator &amp;it)</div><div class="ttdef"><b>Definition:</b> List.h:773</div></div>
-<div class="ttc" id="aclass_list_html_a786b8a40ecc9cb5d7e26aae4d1232f1f"><div class="ttname"><a href="class_list.html#a786b8a40ecc9cb5d7e26aae4d1232f1f">List::operator!=</a></div><div class="ttdeci">bool operator!=(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:891</div></div>
+<div class="ttc" id="aclass_list_html_a786b8a40ecc9cb5d7e26aae4d1232f1f"><div class="ttname"><a href="class_list.html#a786b8a40ecc9cb5d7e26aae4d1232f1f">List::operator!=</a></div><div class="ttdeci">bool operator!=(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:893</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a8561907641961579a5bb24d23161ef60"><div class="ttname"><a href="class_list_1_1_list_impl.html#a8561907641961579a5bb24d23161ef60">List::ListImpl::getLast</a></div><div class="ttdeci">Node * getLast() noexcept</div><div class="ttdef"><b>Definition:</b> List.h:171</div></div>
 <div class="ttc" id="aclass_list_html_a17aa5665c69b6d8cf9ac3b385b70a257"><div class="ttname"><a href="class_list.html#a17aa5665c69b6d8cf9ac3b385b70a257">List::getFirst</a></div><div class="ttdeci">TYPE &amp; getFirst()</div><div class="ttdef"><b>Definition:</b> List.h:567</div></div>
+<div class="ttc" id="aclass_compute_task_html"><div class="ttname"><a href="class_compute_task.html">ComputeTask</a></div><div class="ttdef"><b>Definition:</b> Algorithm.h:22</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a37455ffa73769458f94998d643bb1d8b"><div class="ttname"><a href="class_list_1_1_list_impl.html#a37455ffa73769458f94998d643bb1d8b">List::ListImpl::~ListImpl</a></div><div class="ttdeci">~ListImpl()</div><div class="ttdef"><b>Definition:</b> List.h:459</div></div>
 <div class="ttc" id="aclass_double_linked_node_html_a009788e31b994017bfe9f587c253ab63"><div class="ttname"><a href="class_double_linked_node.html#a009788e31b994017bfe9f587c253ab63">DoubleLinkedNode::getNext</a></div><div class="ttdeci">DoubleLinkedNode * getNext() const noexcept</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:112</div></div>
 <div class="ttc" id="aclass_double_linked_node_html_a5c21e234a7dc45cad3034b99b781bc15"><div class="ttname"><a href="class_double_linked_node.html#a5c21e234a7dc45cad3034b99b781bc15">DoubleLinkedNode::setPrevious</a></div><div class="ttdeci">void setPrevious(DoubleLinkedNode *previous) noexcept</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:136</div></div>
@@ -831,7 +834,6 @@ $(function() {
 <div class="ttc" id="aclass_list_html_a0689c5401a7fcd472cc93df648345154"><div class="ttname"><a href="class_list.html#a0689c5401a7fcd472cc93df648345154">List::end</a></div><div class="ttdeci">Iterator end()</div><div class="ttdef"><b>Definition:</b> List.h:631</div></div>
 <div class="ttc" id="aclass_double_linked_node_html_a978306f16ff1c27623bc838d0b8ad494"><div class="ttname"><a href="class_double_linked_node.html#a978306f16ff1c27623bc838d0b8ad494">DoubleLinkedNode::getPrevious</a></div><div class="ttdeci">DoubleLinkedNode * getPrevious() const noexcept</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:128</div></div>
 <div class="ttc" id="aclass_list_html_af674ab3e41526bc1de4aa8bf7d40db11"><div class="ttname"><a href="class_list.html#af674ab3e41526bc1de4aa8bf7d40db11">List::add</a></div><div class="ttdeci">void add(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:695</div></div>
-<div class="ttc" id="aclass_double_linked_node_read_enumerator_html_a9402a24749b248bace3f83260b05da14"><div class="ttname"><a href="class_double_linked_node_read_enumerator.html#a9402a24749b248bace3f83260b05da14">DoubleLinkedNodeReadEnumerator::next</a></div><div class="ttdeci">Pointer next()</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:646</div></div>
 <div class="ttc" id="aclass_reference_counted_object_html"><div class="ttname"><a href="class_reference_counted_object.html">ReferenceCountedObject</a></div><div class="ttdoc">Reference counted object.</div><div class="ttdef"><b>Definition:</b> ReferenceCountedObject.h:50</div></div>
 <div class="ttc" id="aclass_iterator_exception_html"><div class="ttname"><a href="class_iterator_exception.html">IteratorException</a></div><div class="ttdef"><b>Definition:</b> IteratorException.h:26</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">DOM node.</div><div class="ttdef"><b>Definition:</b> Node.h:39</div></div>
@@ -840,27 +842,28 @@ $(function() {
 <div class="ttc" id="aclass_list_html_aaa8e982d595f3ac9c2f42fc30662f73a"><div class="ttname"><a href="class_list.html#aaa8e982d595f3ac9c2f42fc30662f73a">List::Node</a></div><div class="ttdeci">DoubleLinkedNode&lt; Value &gt; Node</div><div class="ttdef"><b>Definition:</b> List.h:62</div></div>
 <div class="ttc" id="aclass_double_linked_node_html_ac5827dea01cc750c96e4e8f8874e4c27"><div class="ttname"><a href="class_double_linked_node.html#ac5827dea01cc750c96e4e8f8874e4c27">DoubleLinkedNode::setNext</a></div><div class="ttdeci">void setNext(DoubleLinkedNode *next) noexcept</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:120</div></div>
 <div class="ttc" id="aclass_list_html_a0d14455b5cfd462a531e883941b2b0fc"><div class="ttname"><a href="class_list.html#a0d14455b5cfd462a531e883941b2b0fc">List::getFirstNode</a></div><div class="ttdeci">Node * getFirstNode()</div><div class="ttdef"><b>Definition:</b> List.h:473</div></div>
-<div class="ttc" id="aclass_list_html_af6fe3688b7a449559c5bfcd464af633a"><div class="ttname"><a href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">List::shuffle</a></div><div class="ttdeci">void shuffle()</div><div class="ttdef"><b>Definition:</b> List.h:963</div></div>
+<div class="ttc" id="aclass_list_html_af6fe3688b7a449559c5bfcd464af633a"><div class="ttname"><a href="class_list.html#af6fe3688b7a449559c5bfcd464af633a">List::shuffle</a></div><div class="ttdeci">void shuffle()</div><div class="ttdef"><b>Definition:</b> List.h:965</div></div>
 <div class="ttc" id="aclass_list_html_a2266d11fa3cac60b544b9ec3e209229a"><div class="ttname"><a href="class_list.html#a2266d11fa3cac60b544b9ec3e209229a">List::removeLast</a></div><div class="ttdeci">void removeLast()</div><div class="ttdef"><b>Definition:</b> List.h:833</div></div>
 <div class="ttc" id="aclass_primitive_stack_array_html"><div class="ttname"><a href="class_primitive_stack_array.html">PrimitiveStackArray</a></div><div class="ttdef"><b>Definition:</b> Heap.h:617</div></div>
 <div class="ttc" id="aclass_list_html_a99c43760a19e4c187a41823bdbf149a3"><div class="ttname"><a href="class_list.html#a99c43760a19e4c187a41823bdbf149a3">List::append</a></div><div class="ttdeci">void append(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:673</div></div>
+<div class="ttc" id="aclass_double_linked_node_read_enumerator_html_a7394eb7fd5e6776e56931ada238bf480"><div class="ttname"><a href="class_double_linked_node_read_enumerator.html#a7394eb7fd5e6776e56931ada238bf480">DoubleLinkedNodeReadEnumerator::next</a></div><div class="ttdeci">Reference next()</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:648</div></div>
 <div class="ttc" id="aclass_list_html_ad65d1c7d829b14edaa1f3666b9d480e8"><div class="ttname"><a href="class_list.html#ad65d1c7d829b14edaa1f3666b9d480e8">List::elements</a></div><div class="ttdeci">Reference&lt; ListImpl &gt; elements</div><div class="ttdef"><b>Definition:</b> List.h:468</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_aaea4b5ff88977c3d221542e8329a5206"><div class="ttname"><a href="class_list_1_1_list_impl.html#aaea4b5ff88977c3d221542e8329a5206">List::ListImpl::append</a></div><div class="ttdeci">void append(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:302</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a322ac66685368dab1b11d98451d69b7a"><div class="ttname"><a href="class_list_1_1_list_impl.html#a322ac66685368dab1b11d98451d69b7a">List::ListImpl::detachNode</a></div><div class="ttdeci">Node * detachNode(Node *node) noexcept</div><div class="ttdef"><b>Definition:</b> List.h:89</div></div>
-<div class="ttc" id="aclass_double_linked_node_read_enumerator_html_af224dec383bf510a7074b8572c3add78"><div class="ttname"><a href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">DoubleLinkedNodeReadEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:638</div></div>
-<div class="ttc" id="aclass_list_html_a5d45381c8806f70cd6a937fc9e711241"><div class="ttname"><a href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">List::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const List&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:948</div></div>
-<div class="ttc" id="aclass_list_html_a197bf68a2d7496f20648e35c2ce78df5"><div class="ttname"><a href="class_list.html#a197bf68a2d7496f20648e35c2ce78df5">List::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:927</div></div>
+<div class="ttc" id="aclass_double_linked_node_read_enumerator_html_af224dec383bf510a7074b8572c3add78"><div class="ttname"><a href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">DoubleLinkedNodeReadEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:640</div></div>
+<div class="ttc" id="aclass_list_html_a5d45381c8806f70cd6a937fc9e711241"><div class="ttname"><a href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">List::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const List&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:950</div></div>
+<div class="ttc" id="aclass_list_html_a197bf68a2d7496f20648e35c2ce78df5"><div class="ttname"><a href="class_list.html#a197bf68a2d7496f20648e35c2ce78df5">List::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:929</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_af8ea3d05d34073c7310537636aa16345"><div class="ttname"><a href="class_list_1_1_list_impl.html#af8ea3d05d34073c7310537636aa16345">List::ListImpl::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> List.h:147</div></div>
 <div class="ttc" id="aclass_double_linked_node_enumerator_html"><div class="ttname"><a href="class_double_linked_node_enumerator.html">DoubleLinkedNodeEnumerator</a></div><div class="ttdoc">Modifying enumerator of DoubleLinkedNode.</div><div class="ttdef"><b>Definition:</b> DoubleLinkedNode.h:533</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a18d5ad37c546c543be965edff1a9735e"><div class="ttname"><a href="class_list_1_1_list_impl.html#a18d5ad37c546c543be965edff1a9735e">List::ListImpl::getFirst</a></div><div class="ttdeci">Node * getFirst() noexcept</div><div class="ttdef"><b>Definition:</b> List.h:155</div></div>
 <div class="ttc" id="aclass_list_html_aeede57dcc1979f2eec36c21a0dddf0b0"><div class="ttname"><a href="class_list.html#aeede57dcc1979f2eec36c21a0dddf0b0">List::Value</a></div><div class="ttdeci">TYPE Value</div><div class="ttdef"><b>Definition:</b> List.h:60</div></div>
 <div class="ttc" id="aclass_list_html"><div class="ttname"><a href="class_list.html">List</a></div><div class="ttdoc">List collection.</div><div class="ttdef"><b>Definition:</b> List.h:45</div></div>
 <div class="ttc" id="aclass_reference_html"><div class="ttname"><a href="class_reference.html">Reference</a></div><div class="ttdoc">Automation pointer that counts the number of references to an object.</div><div class="ttdef"><b>Definition:</b> Reference.h:25</div></div>
-<div class="ttc" id="aclass_list_html_a0824e636efd722d5bef7be8894cea77d"><div class="ttname"><a href="class_list.html#a0824e636efd722d5bef7be8894cea77d">List::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:897</div></div>
+<div class="ttc" id="aclass_list_html_a0824e636efd722d5bef7be8894cea77d"><div class="ttname"><a href="class_list.html#a0824e636efd722d5bef7be8894cea77d">List::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:899</div></div>
 <div class="ttc" id="aclass_list_html_a6f64a66c91f3656fabaa12217f82e581"><div class="ttname"><a href="class_list.html#a6f64a66c91f3656fabaa12217f82e581">List::prepend</a></div><div class="ttdeci">void prepend(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:717</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a7c74449a23f057f539856712f1ff57e0"><div class="ttname"><a href="class_list_1_1_list_impl.html#a7c74449a23f057f539856712f1ff57e0">List::ListImpl::prepend</a></div><div class="ttdeci">void prepend(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:332</div></div>
 <div class="ttc" id="aclass_list_html_af4c0537969c18f56e226d5124f6cfb53"><div class="ttname"><a href="class_list.html#af4c0537969c18f56e226d5124f6cfb53">List::removeFirst</a></div><div class="ttdeci">void removeFirst()</div><div class="ttdef"><b>Definition:</b> List.h:824</div></div>
-<div class="ttc" id="aclass_list_html_a64120b0ecc9944300560237d7c75e300"><div class="ttname"><a href="class_list.html#a64120b0ecc9944300560237d7c75e300">List::operator==</a></div><div class="ttdeci">bool operator==(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:874</div></div>
+<div class="ttc" id="aclass_list_html_a64120b0ecc9944300560237d7c75e300"><div class="ttname"><a href="class_list.html#a64120b0ecc9944300560237d7c75e300">List::operator==</a></div><div class="ttdeci">bool operator==(const List &amp;compare) const</div><div class="ttdef"><b>Definition:</b> List.h:876</div></div>
 <div class="ttc" id="aclass_list_1_1_list_impl_html_a9f3be9ab580a86bfecf56054da42535f"><div class="ttname"><a href="class_list_1_1_list_impl.html#a9f3be9ab580a86bfecf56054da42535f">List::ListImpl::moveToFront</a></div><div class="ttdeci">void moveToFront(Node *node)</div><div class="ttdef"><b>Definition:</b> List.h:432</div></div>
 <div class="ttc" id="aclass_list_html_ae6f24d36d08478b1833e43b06e2217bc"><div class="ttname"><a href="class_list.html#ae6f24d36d08478b1833e43b06e2217bc">List::insert</a></div><div class="ttdeci">void insert(const Iterator &amp;it, const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> List.h:740</div></div>
 <div class="ttc" id="aclass_list_html_a7202389bb336ce65bcfcca42c28946e4"><div class="ttname"><a href="class_list.html#a7202389bb336ce65bcfcca42c28946e4">List::removeAll</a></div><div class="ttdeci">void removeAll()</div><div class="ttdef"><b>Definition:</b> List.h:842</div></div>

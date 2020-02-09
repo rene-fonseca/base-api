@@ -103,6 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a49e73de7bf8414ca05023e42dcae457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab40c0586799432717757dfeb82b995f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ab40c0586799432717757dfeb82b995f1">setExitCode</a> (int value) noexcept</td></tr>
 <tr class="separator:ab40c0586799432717757dfeb82b995f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa478b848434f89a4f8bdf264042da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a4aa478b848434f89a4f8bdf264042da7">error</a> (const <a class="el" href="class_string.html">String</a> &amp;text, int exitCode=<a class="el" href="class_application.html#a424e991058669da73258a7852c5c60c8af3de75e1d2f3a24bc32e505e273cb3d9">EXIT_CODE_INVALID</a>)</td></tr>
+<tr class="separator:a4aa478b848434f89a4f8bdf264042da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ad8f8a9da7386a5bb9ea762a4fb026"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ae5ad8f8a9da7386a5bb9ea762a4fb026">isTerminated</a> () const noexcept</td></tr>
 <tr class="separator:ae5ad8f8a9da7386a5bb9ea762a4fb026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b4254e5623aed8d533e79059ad4cba6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a1b4254e5623aed8d533e79059ad4cba6">onTermination</a> () noexcept</td></tr>
@@ -233,6 +235,42 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4aa478b848434f89a4f8bdf264042da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa478b848434f89a4f8bdf264042da7">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::error </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>exitCode</em> = <code><a class="el" href="class_application.html#a424e991058669da73258a7852c5c60c8af3de75e1d2f3a24bc32e505e273cb3d9">EXIT_CODE_INVALID</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Writes error to stderr. Only intended for console apps. Only sets exit code is not equal to EXIT_CODE_INVALID.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The error message. </td></tr>
+    <tr><td class="paramname">exitCode</td><td>The exit code. Not set by default. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad48585c24004d71dd91c947ce8458825"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad48585c24004d71dd91c947ce8458825">&#9670;&nbsp;</a></span>exceptionHandler() <span class="overload">[1/2]</span></h2>
 

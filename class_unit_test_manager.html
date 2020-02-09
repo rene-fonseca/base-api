@@ -77,6 +77,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8423361ff8035e1b1feed0a0334da263"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a8423361ff8035e1b1feed0a0334da263">addTest</a> (<a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_unit_test.html">UnitTest</a> &gt; test)</td></tr>
 <tr class="separator:a8423361ff8035e1b1feed0a0334da263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9027b4b6575e66e368f61d0593c3bcaf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a9027b4b6575e66e368f61d0593c3bcaf">hasSymbol</a> (const <a class="el" href="class_string.html">String</a> &amp;name) const</td></tr>
+<tr class="separator:a9027b4b6575e66e368f61d0593c3bcaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc19f8b976dd49999b9a28cdd75dd62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a6fc19f8b976dd49999b9a28cdd75dd62">addSymbol</a> (const <a class="el" href="class_string.html">String</a> &amp;name, const <a class="el" href="class_string.html">String</a> &amp;value)</td></tr>
+<tr class="separator:a6fc19f8b976dd49999b9a28cdd75dd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39343e6db23bec2ac91eca03e31614f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a39343e6db23bec2ac91eca03e31614f6">getJUnit</a> (const <a class="el" href="class_string.html">String</a> &amp;uuid=<a class="el" href="class_string.html">String</a>(), const <a class="el" href="class_string.html">String</a> &amp;name=&quot;BASE&quot;) const</td></tr>
 <tr class="separator:a39343e6db23bec2ac91eca03e31614f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a870b21d78b9e37bc1fb7b61a2dd79"><td class="memTemplParams" colspan="2">template&lt;class TYPE &gt; </td></tr>
@@ -100,6 +104,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setUseJSON</b> (bool 
 <tr class="separator:a341908344fd2d7b480361af39e00e3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa71d066494f55ef233e16e69ff3e5aa1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#aa71d066494f55ef233e16e69ff3e5aa1">getUseUrlAsSource</a> () const noexcept</td></tr>
 <tr class="separator:aa71d066494f55ef233e16e69ff3e5aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff44656e2ef73d4551c3583903454a65"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#aff44656e2ef73d4551c3583903454a65">getTestFolder</a> () const noexcept</td></tr>
+<tr class="separator:aff44656e2ef73d4551c3583903454a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a156dbb3b666dfc4dcb21b74b19ee59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a4a156dbb3b666dfc4dcb21b74b19ee59">setTestFolder</a> (const <a class="el" href="class_string.html">String</a> &amp;path) noexcept</td></tr>
+<tr class="separator:a4a156dbb3b666dfc4dcb21b74b19ee59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63936cd65435b01815297049d5355621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a63936cd65435b01815297049d5355621">setUseUrlAsSource</a> (bool _useUrlAsSource) noexcept</td></tr>
 <tr class="separator:a63936cd65435b01815297049d5355621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e92af7e97f3dd3a9f7cbf0941e8c116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unit_test_manager.html#a9e92af7e97f3dd3a9f7cbf0941e8c116">setRandomize</a> (bool _randomize) noexcept</td></tr>
@@ -142,6 +150,43 @@ static <a class="el" href="class_unit_test_manager.html">UnitTestManager</a> &am
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Unit test manager. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6fc19f8b976dd49999b9a28cdd75dd62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc19f8b976dd49999b9a28cdd75dd62">&#9670;&nbsp;</a></span>addSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitTestManager::addSymbol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the given symbol. </p>
+
+</div>
+</div>
 <a id="a8423361ff8035e1b1feed0a0334da263"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8423361ff8035e1b1feed0a0334da263">&#9670;&nbsp;</a></span>addTest()</h2>
 
@@ -303,6 +348,32 @@ static <a class="el" href="class_unit_test_manager.html">UnitTestManager</a> &am
 
 </div>
 </div>
+<a id="aff44656e2ef73d4551c3583903454a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff44656e2ef73d4551c3583903454a65">&#9670;&nbsp;</a></span>getTestFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_string.html">String</a>&amp; UnitTestManager::getTestFolder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the tet folder. </p>
+
+</div>
+</div>
 <a id="a50f61762c405de9d74b5ee81793cef12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50f61762c405de9d74b5ee81793cef12">&#9670;&nbsp;</a></span>getTests()</h2>
 
@@ -378,6 +449,33 @@ static <a class="el" href="class_unit_test_manager.html">UnitTestManager</a> &am
 </table>
 </div><div class="memdoc">
 <p>Returns true if source shold be shown as GIT repo url. </p>
+
+</div>
+</div>
+<a id="a9027b4b6575e66e368f61d0593c3bcaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9027b4b6575e66e368f61d0593c3bcaf">&#9670;&nbsp;</a></span>hasSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnitTestManager::hasSymbol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the symbol is defined. </p>
 
 </div>
 </div>
@@ -630,6 +728,33 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Sets stop on failure. </p>
+
+</div>
+</div>
+<a id="a4a156dbb3b666dfc4dcb21b74b19ee59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a156dbb3b666dfc4dcb21b74b19ee59">&#9670;&nbsp;</a></span>setTestFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitTestManager::setTestFolder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the test folder. </p>
 
 </div>
 </div>

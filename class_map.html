@@ -93,10 +93,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab74bd27b40ce93aa805bc4f68d981783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b817098b0002cc32a6b3255aae90d9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a2b817098b0002cc32a6b3255aae90d9c">Map</a> (std::initializer_list&lt; <a class="el" href="class_map.html#ae17162c6baefc9ae02995f8749f6d978">Node</a> &gt; values)</td></tr>
 <tr class="separator:a2b817098b0002cc32a6b3255aae90d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8088128e6b1c90a427673128c71236e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a8088128e6b1c90a427673128c71236e1">Map</a> (const <a class="el" href="class_map.html">Map</a> &amp;copy)</td></tr>
-<tr class="separator:a8088128e6b1c90a427673128c71236e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6e0d0dc3f9fd67ecade04c2937703c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a5f6e0d0dc3f9fd67ecade04c2937703c">Map</a> (<a class="el" href="class_map.html">Map</a> &amp;&amp;move)</td></tr>
-<tr class="separator:a5f6e0d0dc3f9fd67ecade04c2937703c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e37237c35a0acc038ddc24515ae7fc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9e37237c35a0acc038ddc24515ae7fc1">Map</a> (const <a class="el" href="class_map.html">Map</a> &amp;copy) noexcept</td></tr>
+<tr class="separator:a9e37237c35a0acc038ddc24515ae7fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048da73d7cde7732d8946398d3a3356e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a048da73d7cde7732d8946398d3a3356e">Map</a> (<a class="el" href="class_map.html">Map</a> &amp;&amp;move) noexcept</td></tr>
+<tr class="separator:a048da73d7cde7732d8946398d3a3356e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0658e4dcba7a4d5254d8b4851fd42c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map.html">Map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab0658e4dcba7a4d5254d8b4851fd42c5">operator=</a> (const <a class="el" href="class_map.html">Map</a> &amp;copy)</td></tr>
 <tr class="separator:ab0658e4dcba7a4d5254d8b4851fd42c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e5f93183586ab449b37910bb01c4a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map.html">Map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad5e5f93183586ab449b37910bb01c4a7">operator=</a> (<a class="el" href="class_map.html">Map</a> &amp;&amp;move)</td></tr>
@@ -293,8 +293,8 @@ template&lt;class KEY , class VALUE &gt; </div>
 
 </div>
 </div>
-<a id="a8088128e6b1c90a427673128c71236e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8088128e6b1c90a427673128c71236e1">&#9670;&nbsp;</a></span>Map() <span class="overload">[3/4]</span></h2>
+<a id="a9e37237c35a0acc038ddc24515ae7fc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e37237c35a0acc038ddc24515ae7fc1">&#9670;&nbsp;</a></span>Map() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +314,7 @@ template&lt;class KEY , class VALUE &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -322,8 +322,8 @@ template&lt;class KEY , class VALUE &gt; </div>
 
 </div>
 </div>
-<a id="a5f6e0d0dc3f9fd67ecade04c2937703c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f6e0d0dc3f9fd67ecade04c2937703c">&#9670;&nbsp;</a></span>Map() <span class="overload">[4/4]</span></h2>
+<a id="a048da73d7cde7732d8946398d3a3356e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048da73d7cde7732d8946398d3a3356e">&#9670;&nbsp;</a></span>Map() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +343,7 @@ template&lt;class KEY , class VALUE &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

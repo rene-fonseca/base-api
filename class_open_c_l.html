@@ -71,6 +71,11 @@ Public Types</h2></td></tr>
 <b>TYPE_GPU</b>
  }</td></tr>
 <tr class="separator:a569b4debfb34fae7a79d6d0fdbb793f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbb7798a77fb06f27a20bd9dd706a1c"><td class="memItemLeft" align="right" valign="top"><a id="a6cbb7798a77fb06f27a20bd9dd706a1c"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>FLAG_CPU</b> = 1, 
+<b>FLAG_GPU</b> = 2, 
+<b>FLAG_ANY</b> = FLAG_CPU | FLAG_GPU
+ }</td></tr>
+<tr class="separator:a6cbb7798a77fb06f27a20bd9dd706a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdab65f7913d05d40b7efa79c93e3e2b"><td class="memItemLeft" align="right" valign="top"><a id="abdab65f7913d05d40b7efa79c93e3e2b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Access</b> { <b>ACCESS_READ_ONLY</b>, 
 <b>ACCESS_WRITE_ONLY</b>
  }</td></tr>
@@ -90,8 +95,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>createContext</b> (<a
 <tr class="memitem:a6218312678b3b988df503a7d6d214e53"><td class="memItemLeft" align="right" valign="top"><a id="a6218312678b3b988df503a7d6d214e53"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>createContext</b> (DeviceId device)</td></tr>
 <tr class="separator:a6218312678b3b988df503a7d6d214e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad63d706aea105c7f3bc879eca174c87e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#ad63d706aea105c7f3bc879eca174c87e">isValid</a> () const</td></tr>
-<tr class="separator:ad63d706aea105c7f3bc879eca174c87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6beac61bd2cf097985404a567506df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#a0f6beac61bd2cf097985404a567506df">isValid</a> () const noexcept</td></tr>
+<tr class="separator:a0f6beac61bd2cf097985404a567506df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1d01124088184f7a89a83cecd60a8f"><td class="memItemLeft" align="right" valign="top"><a id="a0f1d01124088184f7a89a83cecd60a8f"></a>
 <a class="el" href="class_open_c_l_1_1_queue.html">Queue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createCommandQueue</b> (MemorySize size)</td></tr>
 <tr class="separator:a0f1d01124088184f7a89a83cecd60a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,16 +117,74 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>createBuffer</b> (M
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2c7fcda39682fd9d8929ab3623c97c8"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#ad2c7fcda39682fd9d8929ab3623c97c8">getNumberOfDevices</a> ()</td></tr>
 <tr class="separator:ad2c7fcda39682fd9d8929ab3623c97c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a746098743133ad54b56d8867c05c2db7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_array.html">Array</a>&lt; DeviceId &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#a746098743133ad54b56d8867c05c2db7">getDevices</a> ()</td></tr>
-<tr class="separator:a746098743133ad54b56d8867c05c2db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb78161811f01869546fcd815284968"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_array.html">Array</a>&lt; DeviceId &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#aaeb78161811f01869546fcd815284968">getDevices</a> (unsigned int flags=FLAG_ANY)</td></tr>
+<tr class="separator:aaeb78161811f01869546fcd815284968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c863d88328d9ec576d064cd443a6ad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#ac1c863d88328d9ec576d064cd443a6ad">getDeviceName</a> (DeviceId device)</td></tr>
 <tr class="separator:ac1c863d88328d9ec576d064cd443a6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1591ad0e3d9edcdb4a15bd4759aa9023"><td class="memItemLeft" align="right" valign="top">static uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#a1591ad0e3d9edcdb4a15bd4759aa9023">getDeviceInfoUInt</a> (DeviceId device)</td></tr>
+<tr class="separator:a1591ad0e3d9edcdb4a15bd4759aa9023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63ad2ecc69786a92e9509182a48b3fd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_c_l.html#af63ad2ecc69786a92e9509182a48b3fd">getDeviceInfoBool</a> (DeviceId device)</td></tr>
+<tr class="separator:af63ad2ecc69786a92e9509182a48b3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_open_c_l.html" title="OpenCL.">OpenCL</a>. </p>
-<p><a class="el" href="class_open_c_l.html" title="OpenCL.">OpenCL</a> rendering context.</p>
+<p><a class="el" href="class_open_c_l.html" title="OpenCL.">OpenCL</a> context.</p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af63ad2ecc69786a92e9509182a48b3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af63ad2ecc69786a92e9509182a48b3fd">&#9670;&nbsp;</a></span>getDeviceInfoBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool OpenCL::getDeviceInfoBool </td>
+          <td>(</td>
+          <td class="paramtype">DeviceId&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns bool value of the given device. </p>
+
+</div>
+</div>
+<a id="a1591ad0e3d9edcdb4a15bd4759aa9023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1591ad0e3d9edcdb4a15bd4759aa9023">&#9670;&nbsp;</a></span>getDeviceInfoUInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32 OpenCL::getDeviceInfoUInt </td>
+          <td>(</td>
+          <td class="paramtype">DeviceId&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns uint value of the given device. </p>
+
+</div>
+</div>
 <a id="ac1c863d88328d9ec576d064cd443a6ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1c863d88328d9ec576d064cd443a6ad">&#9670;&nbsp;</a></span>getDeviceName()</h2>
 
@@ -149,8 +212,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a746098743133ad54b56d8867c05c2db7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a746098743133ad54b56d8867c05c2db7">&#9670;&nbsp;</a></span>getDevices()</h2>
+<a id="aaeb78161811f01869546fcd815284968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb78161811f01869546fcd815284968">&#9670;&nbsp;</a></span>getDevices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +224,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="class_array.html">Array</a>&lt;DeviceId&gt; OpenCL::getDevices </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>FLAG_ANY</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -201,8 +265,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad63d706aea105c7f3bc879eca174c87e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad63d706aea105c7f3bc879eca174c87e">&#9670;&nbsp;</a></span>isValid()</h2>
+<a id="a0f6beac61bd2cf097985404a567506df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6beac61bd2cf097985404a567506df">&#9670;&nbsp;</a></span>isValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +283,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

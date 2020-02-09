@@ -72,138 +72,133 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_shared_memory.html">   32</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_shared_memory.html">SharedMemory</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a> getHandle(<span class="keyword">const</span> <a class="code" href="class_file.html">File</a>&amp; file) noexcept {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> file.<a class="code" href="class_file.html#a70ad776e43673fe64cde89b77b67b914">getHandle</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a> : <span class="keyword">public</span> <a class="code" href="class_reference_counted_object.html">ReferenceCountedObject</a> {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_file.html">File</a> file;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_file_region.html">FileRegion</a> region;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a> handle;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    uint8* address = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a>(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">const</span> <a class="code" href="class_file.html">File</a>&amp; file,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">const</span> <a class="code" href="class_file_region.html">FileRegion</a>&amp; region,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">inline</span> uint8* getBytes() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> address;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_file.html">File</a>&amp; getFile() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> file;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> getOffset() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> region.<a class="code" href="class_file_region.html#a733f872a3a4b639c4271794631528bfd">getOffset</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getSize() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">return</span> region.<a class="code" href="class_file_region.html#aa87742aee019153fb654e5a0caddb00b">getSize</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_file_region.html">FileRegion</a>&amp; getRegion() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> region;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getAccess() noexcept</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">return</span> access;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a> : <span class="keyword">public</span> <a class="code" href="class_reference_counted_object.html">ReferenceCountedObject</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_file.html">File</a> file;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_file_region.html">FileRegion</a> region;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a> handle;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    uint8* address = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a>(</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">const</span> <a class="code" href="class_file.html">File</a>&amp; file,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">const</span> <a class="code" href="class_file_region.html">FileRegion</a>&amp; region,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">inline</span> uint8* getBytes() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">return</span> address;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_file.html">File</a>&amp; getFile() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> file;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> getOffset() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">return</span> region.<a class="code" href="class_file_region.html#a733f872a3a4b639c4271794631528bfd">getOffset</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getSize() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> region.<a class="code" href="class_file_region.html#aa87742aee019153fb654e5a0caddb00b">getSize</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_file_region.html">FileRegion</a>&amp; getRegion() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> region;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getAccess() noexcept</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">return</span> access;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> lock();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> unlock();</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> lock();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setProtection(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> unlock();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> synchronize(<span class="keywordtype">bool</span> asynchronous);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> setProtection(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> synchronize(<span class="keywordtype">bool</span> asynchronous);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ~<a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a>() noexcept;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  };</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="class_reference.html">Reference&lt;SharedMemoryImpl&gt;</a> sharedMemory;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404">Access</a> {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    READ = 1, </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    WRITE = 2, </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    READWRITE = READ|WRITE, </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    EXECUTE = 4, </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    ANY = READWRITE|EXECUTE </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_shared_memory.html#ae8164de1a2ec9890e6864446dd6771b9">Option</a> {</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404">  117</a></span>&#160;    PREPARE = 1,</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404a49c56020959f6ed4460b826d963ecfd0">  119</a></span>&#160;    CLEAR = 2</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404a042d7d49a573bd9362612e02f4b38afd">  120</a></span>&#160;  };</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404ab0ff8f6470c751f53bb0cc2fa635dbb0">  121</a></span>&#160;  </div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_shared_memory.html#ae8164de1a2ec9890e6864446dd6771b9">  126</a></span>&#160;  <span class="keyword">static</span> MemorySize getGranularity() noexcept;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="class_shared_memory.html">SharedMemory</a>(const <a class="code" href="class_string.html">String</a>&amp; path, const <a class="code" href="class_file_region.html">FileRegion</a>&amp; region, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> options);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="class_shared_memory.html">SharedMemory</a>(const <a class="code" href="class_shared_memory.html">SharedMemory</a>&amp; copy) noexcept;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="class_shared_memory.html">SharedMemory</a>&amp; operator=(const <a class="code" href="class_shared_memory.html">SharedMemory</a>&amp; assign) noexcept;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  inline <span class="keywordtype">long</span> <span class="keywordtype">long</span> getOffset() const noexcept {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getOffset();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getSize() const noexcept {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getSize();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_file_region.html">FileRegion</a>&amp; getRegion() const noexcept {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getRegion();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keyword">inline</span> uint8* getBytes() noexcept {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getBytes();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> uint8* getBytes() const noexcept {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getBytes();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">void</span> lock();</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">void</span> unlock();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> setProtection(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">void</span> synchronize(<span class="keywordtype">bool</span> asynchronous = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keywordtype">void</span> clear() noexcept;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;};</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    ~<a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a>() noexcept;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemoryImpl</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="class_reference.html">Reference&lt;SharedMemoryImpl&gt;</a> sharedMemory;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404">Access</a> {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    READ = 1, </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    WRITE = 2, </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    READWRITE = READ|WRITE, </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    EXECUTE = 4, </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ANY = READWRITE|EXECUTE </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_shared_memory.html#ae8164de1a2ec9890e6864446dd6771b9">Option</a> {</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404">  113</a></span>&#160;    PREPARE = 1,</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404a49c56020959f6ed4460b826d963ecfd0">  115</a></span>&#160;    CLEAR = 2</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404a042d7d49a573bd9362612e02f4b38afd">  116</a></span>&#160;  };</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404ab0ff8f6470c751f53bb0cc2fa635dbb0">  117</a></span>&#160;  </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_shared_memory.html#ae8164de1a2ec9890e6864446dd6771b9">  122</a></span>&#160;  <span class="keyword">static</span> MemorySize getGranularity() noexcept;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="class_shared_memory.html">SharedMemory</a>(const <a class="code" href="class_string.html">String</a>&amp; path, const <a class="code" href="class_file_region.html">FileRegion</a>&amp; region, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> options);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="class_shared_memory.html">SharedMemory</a>(const <a class="code" href="class_shared_memory.html">SharedMemory</a>&amp; copy) noexcept;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <a class="code" href="class_shared_memory.html">SharedMemory</a>&amp; operator=(const <a class="code" href="class_shared_memory.html">SharedMemory</a>&amp; assign) noexcept;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  inline <span class="keywordtype">long</span> <span class="keywordtype">long</span> getOffset() const noexcept {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getOffset();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getSize() const noexcept {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getSize();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_file_region.html">FileRegion</a>&amp; getRegion() const noexcept {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getRegion();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keyword">inline</span> uint8* getBytes() noexcept {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getBytes();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> uint8* getBytes() const noexcept {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> sharedMemory-&gt;getBytes();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">void</span> lock();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">void</span> unlock();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">void</span> setProtection(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> access);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">void</span> synchronize(<span class="keywordtype">bool</span> asynchronous = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">void</span> clear() noexcept;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_file_region_html_aa87742aee019153fb654e5a0caddb00b"><div class="ttname"><a href="class_file_region.html#aa87742aee019153fb654e5a0caddb00b">FileRegion::getSize</a></div><div class="ttdeci">unsigned int getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> FileRegion.h:93</div></div>
 <div class="ttc" id="aclass_reference_counted_object_html"><div class="ttname"><a href="class_reference_counted_object.html">ReferenceCountedObject</a></div><div class="ttdoc">Reference counted object.</div><div class="ttdef"><b>Definition:</b> ReferenceCountedObject.h:50</div></div>
-<div class="ttc" id="aclass_file_html"><div class="ttname"><a href="class_file.html">File</a></div><div class="ttdoc">File.</div><div class="ttdef"><b>Definition:</b> File.h:39</div></div>
+<div class="ttc" id="aclass_file_html"><div class="ttname"><a href="class_file.html">File</a></div><div class="ttdoc">File.</div><div class="ttdef"><b>Definition:</b> File.h:37</div></div>
 <div class="ttc" id="aclass_operating_system_html_af78062041361a872cf95fb2e8cf8f1c5"><div class="ttname"><a href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a></div><div class="ttdeci">void * Handle</div><div class="ttdef"><b>Definition:</b> OperatingSystem.h:54</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
-<div class="ttc" id="aclass_shared_memory_html_a32ba795e3fd4a13cdc03400ab6675404"><div class="ttname"><a href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404">SharedMemory::Access</a></div><div class="ttdeci">Access</div><div class="ttdef"><b>Definition:</b> SharedMemory.h:117</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_shared_memory_html_a32ba795e3fd4a13cdc03400ab6675404"><div class="ttname"><a href="class_shared_memory.html#a32ba795e3fd4a13cdc03400ab6675404">SharedMemory::Access</a></div><div class="ttdeci">Access</div><div class="ttdef"><b>Definition:</b> SharedMemory.h:113</div></div>
 <div class="ttc" id="aclass_file_region_html_a733f872a3a4b639c4271794631528bfd"><div class="ttname"><a href="class_file_region.html#a733f872a3a4b639c4271794631528bfd">FileRegion::getOffset</a></div><div class="ttdeci">long long getOffset() const noexcept</div><div class="ttdef"><b>Definition:</b> FileRegion.h:85</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
 <div class="ttc" id="aclass_file_region_html"><div class="ttname"><a href="class_file_region.html">FileRegion</a></div><div class="ttdoc">A region of a file.</div><div class="ttdef"><b>Definition:</b> FileRegion.h:30</div></div>
 <div class="ttc" id="aclass_reference_html"><div class="ttname"><a href="class_reference.html">Reference</a></div><div class="ttdoc">Automation pointer that counts the number of references to an object.</div><div class="ttdef"><b>Definition:</b> Reference.h:25</div></div>
-<div class="ttc" id="aclass_shared_memory_1_1_shared_memory_impl_html"><div class="ttname"><a href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemory::SharedMemoryImpl</a></div><div class="ttdef"><b>Definition:</b> SharedMemory.h:50</div></div>
+<div class="ttc" id="aclass_shared_memory_1_1_shared_memory_impl_html"><div class="ttname"><a href="class_shared_memory_1_1_shared_memory_impl.html">SharedMemory::SharedMemoryImpl</a></div><div class="ttdef"><b>Definition:</b> SharedMemory.h:46</div></div>
 <div class="ttc" id="aclass_shared_memory_html"><div class="ttname"><a href="class_shared_memory.html">SharedMemory</a></div><div class="ttdoc">Shared memory.</div><div class="ttdef"><b>Definition:</b> SharedMemory.h:32</div></div>
-<div class="ttc" id="aclass_file_html_a70ad776e43673fe64cde89b77b67b914"><div class="ttname"><a href="class_file.html#a70ad776e43673fe64cde89b77b67b914">File::getHandle</a></div><div class="ttdeci">OperatingSystem::Handle getHandle() const noexcept</div><div class="ttdef"><b>Definition:</b> File.h:331</div></div>
-<div class="ttc" id="aclass_shared_memory_html_ae8164de1a2ec9890e6864446dd6771b9"><div class="ttname"><a href="class_shared_memory.html#ae8164de1a2ec9890e6864446dd6771b9">SharedMemory::Option</a></div><div class="ttdeci">Option</div><div class="ttdef"><b>Definition:</b> SharedMemory.h:126</div></div>
+<div class="ttc" id="aclass_shared_memory_html_ae8164de1a2ec9890e6864446dd6771b9"><div class="ttname"><a href="class_shared_memory.html#ae8164de1a2ec9890e6864446dd6771b9">SharedMemory::Option</a></div><div class="ttdeci">Option</div><div class="ttdef"><b>Definition:</b> SharedMemory.h:122</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

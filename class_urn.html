@@ -47,7 +47,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Uniform Resource Name (URN)  
+<p>Uniform <a class="el" href="class_resource.html">Resource</a> Name (URN)  
  <a href="class_urn.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_urn_8h_source.html">base/net/Urn.h</a>&gt;</code></p>
@@ -80,6 +80,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6e8750d5b7005a1eead2b4ecf52c69f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f7194dbac4d79d833e5990631289a30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urn.html#a0f7194dbac4d79d833e5990631289a30">getUrn</a> () const</td></tr>
 <tr class="separator:a0f7194dbac4d79d833e5990631289a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790dd7a6115d94cb5947fde5287f7ce5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urn.html#a790dd7a6115d94cb5947fde5287f7ce5">operator String</a> () const</td></tr>
+<tr class="separator:a790dd7a6115d94cb5947fde5287f7ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -87,8 +89,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aeb26b216e7ac483905c9f02944c0c698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Uniform Resource Name (URN) </p>
-<p>Implementation of Uniform Resource Name (URN) as specified by RFC 2141. Uniform Resource Names (URNs) are intended to serve as persistent, location-independent, resource identifiers. The components of the urn are stored internally in escaped format.</p>
+<div class="textblock"><p>Uniform <a class="el" href="class_resource.html">Resource</a> Name (URN) </p>
+<p>Implementation of Uniform <a class="el" href="class_resource.html">Resource</a> Name (URN) as specified by RFC 2141. Uniform <a class="el" href="class_resource.html">Resource</a> Names (URNs) are intended to serve as persistent, location-independent, resource identifiers. The components of the urn are stored internally in escaped format.</p>
 <p>See <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Name">https://en.wikipedia.org/wiki/Uniform_Resource_Name</a>.</p>
 <div class="fragment"><div class="line"><a class="code" href="class_urn.html">Urn</a> urn(<span class="stringliteral">&quot;urn:NID:NSS&quot;</span>)</div>
 </div><!-- fragment --><dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
@@ -320,6 +322,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the specified string is a valid urn. </p>
+
+</div>
+</div>
+<a id="a790dd7a6115d94cb5947fde5287f7ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790dd7a6115d94cb5947fde5287f7ce5">&#9670;&nbsp;</a></span>operator String()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Urn::operator <a class="el" href="class_string.html">String</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the URN in escaped format. </p>
 
 </div>
 </div>

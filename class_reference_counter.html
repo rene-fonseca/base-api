@@ -67,9 +67,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8b4af76d7f24dc6d1e7e6464e24effb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30dec59abcf046bbdd7629696899ad10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#a30dec59abcf046bbdd7629696899ad10">ReferenceCounter</a> (const <a class="el" href="class_reference_counter.html">ReferenceCounter</a> &amp;copy) noexcept</td></tr>
 <tr class="separator:a30dec59abcf046bbdd7629696899ad10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade09e1827227860b4a12f8dae6c53366"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#ade09e1827227860b4a12f8dae6c53366">ReferenceCounter</a> (<a class="el" href="class_reference_counter.html">ReferenceCounter</a> &amp;&amp;move) noexcept</td></tr>
+<tr class="separator:ade09e1827227860b4a12f8dae6c53366"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba773bd85bfa353e91586911828cd35c"><td class="memTemplParams" colspan="2">template&lt;class POLY &gt; </td></tr>
 <tr class="memitem:aba773bd85bfa353e91586911828cd35c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#aba773bd85bfa353e91586911828cd35c">ReferenceCounter</a> (const <a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; POLY &gt; &amp;copy) noexcept</td></tr>
 <tr class="separator:aba773bd85bfa353e91586911828cd35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a06def22422061f7251bb63902407e"><td class="memTemplParams" colspan="2">template&lt;class POLY &gt; </td></tr>
+<tr class="memitem:a02a06def22422061f7251bb63902407e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#a02a06def22422061f7251bb63902407e">ReferenceCounter</a> (<a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; POLY &gt; &amp;&amp;move) noexcept</td></tr>
+<tr class="separator:a02a06def22422061f7251bb63902407e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74fd0163b0cd42211f14b839891918ab"><td class="memTemplParams" colspan="2">template&lt;class POLY &gt; </td></tr>
 <tr class="memitem:a74fd0163b0cd42211f14b839891918ab"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#a74fd0163b0cd42211f14b839891918ab">isType</a> () const noexcept</td></tr>
 <tr class="separator:a74fd0163b0cd42211f14b839891918ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,8 +99,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af1c82e994210c3fef9b3ba1ef96e70b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a594c4721c69ada19630fb36df0b291ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference_counter.html#a378fba087e509bcf273cf2463cfb23a5">Counter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#a594c4721c69ada19630fb36df0b291ea">getReferences</a> () const noexcept</td></tr>
 <tr class="separator:a594c4721c69ada19630fb36df0b291ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a700911abf1c6c9be0c3969cda28d0a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#a700911abf1c6c9be0c3969cda28d0a27">setValue</a> (TYPE *_value)</td></tr>
-<tr class="separator:a700911abf1c6c9be0c3969cda28d0a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfc4cebae1f1d1e75dc04480be3c8cad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#adfc4cebae1f1d1e75dc04480be3c8cad">isMultiReferenced</a> () const noexcept</td></tr>
 <tr class="separator:adfc4cebae1f1d1e75dc04480be3c8cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a715c94eab31c0d22d0f4278f974e91f1"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference_counter.html#a715c94eab31c0d22d0f4278f974e91f1">getNumberOfReferences</a> () const noexcept</td></tr>
@@ -149,7 +152,7 @@ template&lt;class TYPE &gt; </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a56884574a2ca8288a984d307e1b0d2ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56884574a2ca8288a984d307e1b0d2ad">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a56884574a2ca8288a984d307e1b0d2ad">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +180,7 @@ template&lt;class TYPE &gt; </div>
 </div>
 </div>
 <a id="a880a057a712cf7e5074ce6408792e040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a880a057a712cf7e5074ce6408792e040">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a880a057a712cf7e5074ce6408792e040">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +216,7 @@ template&lt;class TYPE &gt; </div>
 </div>
 </div>
 <a id="a8b4af76d7f24dc6d1e7e6464e24effb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b4af76d7f24dc6d1e7e6464e24effb9">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4af76d7f24dc6d1e7e6464e24effb9">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +262,7 @@ template&lt;class TYPE &gt; </div>
 </div>
 </div>
 <a id="a30dec59abcf046bbdd7629696899ad10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30dec59abcf046bbdd7629696899ad10">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dec59abcf046bbdd7629696899ad10">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,8 +290,37 @@ template&lt;class TYPE &gt; </div>
 
 </div>
 </div>
+<a id="ade09e1827227860b4a12f8dae6c53366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade09e1827227860b4a12f8dae6c53366">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; TYPE &gt;::<a class="el" href="class_reference_counter.html">ReferenceCounter</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; TYPE &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>move</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Move initialization of automation pointer from other automation pointer. </p>
+
+</div>
+</div>
 <a id="aba773bd85bfa353e91586911828cd35c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba773bd85bfa353e91586911828cd35c">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aba773bd85bfa353e91586911828cd35c">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,6 +347,37 @@ template&lt;class POLY &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Initialization of automation pointer from other automation pointer using compile time polymorphism. </p>
+
+</div>
+</div>
+<a id="a02a06def22422061f7251bb63902407e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a06def22422061f7251bb63902407e">&#9670;&nbsp;</a></span>ReferenceCounter() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<div class="memtemplate">
+template&lt;class POLY &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; TYPE &gt;::<a class="el" href="class_reference_counter.html">ReferenceCounter</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; POLY &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>move</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Move initialization of automation pointer from other automation pointer using compile time polymorphism. </p>
 
 </div>
 </div>
@@ -918,35 +981,6 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the references are equal. </p>
-
-</div>
-</div>
-<a id="a700911abf1c6c9be0c3969cda28d0a27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a700911abf1c6c9be0c3969cda28d0a27">&#9670;&nbsp;</a></span>setValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TYPE &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="class_reference_counter.html">ReferenceCounter</a>&lt; TYPE &gt;::setValue </td>
-          <td>(</td>
-          <td class="paramtype">TYPE *&#160;</td>
-          <td class="paramname"><em>_value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the pointer value of this automation pointer. </p>
 
 </div>
 </div>

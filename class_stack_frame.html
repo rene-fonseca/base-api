@@ -52,7 +52,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0ff648f70705fe639eb3d607bb7bf738"><td class="memItemLeft" align="right" valign="top"><a id="a0ff648f70705fe639eb3d607bb7bf738"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+<tr class="memitem:a531e567f69458299e9f8cd55b6c7b51a"><td class="memItemLeft" align="right" valign="top"><a id="a531e567f69458299e9f8cd55b6c7b51a"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<b>FLAG_SHOW_ADDRESS</b> = 1 &lt;&lt; 0, 
 <b>FLAG_SHOW_MODULE</b> = 1 &lt;&lt; 1, 
 <b>FLAG_INDENT</b> = 1 &lt;&lt; 2, 
@@ -60,13 +60,14 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<b>FLAG_FULL_PATH</b> = 1 &lt;&lt; 4, 
 <b>FLAG_USE_COLORS</b> = 1 &lt;&lt; 5, 
-<b>FLAG_STRIP_NAMESPACE</b> = 1 &lt;&lt; 6, 
-<b>FLAG_TRIM_SYSTEM</b> = 1 &lt;&lt; 7, 
+<b>FLAG_USE_COLORS_IF_ANSI_TERMINAL</b> = 1 &lt;&lt; 6, 
+<b>FLAG_STRIP_NAMESPACE</b> = 1 &lt;&lt; 7, 
 <br />
-&#160;&#160;<b>FLAG_DEFAULT</b> = FLAG_COMPACT | FLAG_SHOW_ADDRESS | FLAG_SHOW_MODULE | FLAG_INDENT | FLAG_TRIM_SYSTEM
+&#160;&#160;<b>FLAG_TRIM_SYSTEM</b> = 1 &lt;&lt; 8, 
+<b>FLAG_DEFAULT</b> = FLAG_COMPACT | FLAG_SHOW_ADDRESS | FLAG_SHOW_MODULE | FLAG_INDENT | FLAG_TRIM_SYSTEM
 <br />
  }</td></tr>
-<tr class="separator:a0ff648f70705fe639eb3d607bb7bf738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a531e567f69458299e9f8cd55b6c7b51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -94,24 +95,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a18044b442a08625ae467f616c3c7e564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8e3c07759366604d5026c382af460bf"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#aa8e3c07759366604d5026c382af460bf">stripUntil</a> (const void *ip) noexcept</td></tr>
 <tr class="separator:aa8e3c07759366604d5026c382af460bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a5b9e4ab4a3d12afda27444ce15eb38"><td class="memItemLeft" align="right" valign="top"><a id="a0a5b9e4ab4a3d12afda27444ce15eb38"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_stack_frame.html">StackFrame</a> &amp;compare) const noexcept</td></tr>
+<tr class="memitem:a0a5b9e4ab4a3d12afda27444ce15eb38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a0a5b9e4ab4a3d12afda27444ce15eb38">operator==</a> (const <a class="el" href="class_stack_frame.html">StackFrame</a> &amp;compare) const noexcept</td></tr>
 <tr class="separator:a0a5b9e4ab4a3d12afda27444ce15eb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af72d4df01c9807d61d48de243c4e7521"><td class="memItemLeft" align="right" valign="top"><a id="af72d4df01c9807d61d48de243c4e7521"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_stack_frame.html">StackFrame</a> &amp;compare) const noexcept</td></tr>
+<tr class="memitem:af72d4df01c9807d61d48de243c4e7521"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#af72d4df01c9807d61d48de243c4e7521">operator!=</a> (const <a class="el" href="class_stack_frame.html">StackFrame</a> &amp;compare) const noexcept</td></tr>
 <tr class="separator:af72d4df01c9807d61d48de243c4e7521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0d4322b68fef268f3ffcbd513c141f"><td class="memItemLeft" align="right" valign="top"><a id="a6b0d4322b68fef268f3ffcbd513c141f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;compare) const noexcept</td></tr>
+<tr class="memitem:a6b0d4322b68fef268f3ffcbd513c141f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a6b0d4322b68fef268f3ffcbd513c141f">operator==</a> (const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;compare) const noexcept</td></tr>
 <tr class="separator:a6b0d4322b68fef268f3ffcbd513c141f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4247d72bdcd12442d4bb1d7e0d0128ad"><td class="memItemLeft" align="right" valign="top"><a id="a4247d72bdcd12442d4bb1d7e0d0128ad"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;compare) const noexcept</td></tr>
+<tr class="memitem:a4247d72bdcd12442d4bb1d7e0d0128ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a4247d72bdcd12442d4bb1d7e0d0128ad">operator!=</a> (const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;compare) const noexcept</td></tr>
 <tr class="separator:a4247d72bdcd12442d4bb1d7e0d0128ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5eaf1d5d8d50c9d51801c6dcc2f1ce8"><td class="memItemLeft" align="right" valign="top"><a id="aa5eaf1d5d8d50c9d51801c6dcc2f1ce8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const noexcept</td></tr>
+<tr class="memitem:aa5eaf1d5d8d50c9d51801c6dcc2f1ce8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#aa5eaf1d5d8d50c9d51801c6dcc2f1ce8">operator bool</a> () const noexcept</td></tr>
 <tr class="separator:aa5eaf1d5d8d50c9d51801c6dcc2f1ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5d768b25804f5c3dd3b2929e27c78a77"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a5d768b25804f5c3dd3b2929e27c78a77">doesSupportStackTrace</a> () noexcept</td></tr>
+<tr class="separator:a5d768b25804f5c3dd3b2929e27c78a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a516a6e343888415b652e8dc1bda69183"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a516a6e343888415b652e8dc1bda69183">getUseStandardOut</a> () noexcept</td></tr>
 <tr class="separator:a516a6e343888415b652e8dc1bda69183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9382ebc6eec65336b827e970999606e9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a9382ebc6eec65336b827e970999606e9">setUseStandardOut</a> (bool useStandardOut) noexcept</td></tr>
@@ -130,12 +128,38 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ade6fa705e2815bcbcc596317538ae909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f633b0626bd809580429b696ecb697"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#ad4f633b0626bd809580429b696ecb697">dump</a> (unsigned int skip=1, unsigned int levels=32)</td></tr>
 <tr class="separator:ad4f633b0626bd809580429b696ecb697"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53652f7b5a87d2448baab49d49dd7705"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a53652f7b5a87d2448baab49d49dd7705">toStream</a> (<a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;stream, const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;stackTrace, unsigned int flags=FLAG_DEFAULT)</td></tr>
-<tr class="separator:a53652f7b5a87d2448baab49d49dd7705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136cf4d85db44b4ae6cbe241c034c45c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stack_frame.html#a136cf4d85db44b4ae6cbe241c034c45c">toStream</a> (<a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;stream, const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;stackTrace, unsigned int flags=FLAG_DEFAULT)</td></tr>
+<tr class="separator:a136cf4d85db44b4ae6cbe241c034c45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_stack.html" title="Stack collection.">Stack</a> frame. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5d768b25804f5c3dd3b2929e27c78a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d768b25804f5c3dd3b2929e27c78a77">&#9670;&nbsp;</a></span>doesSupportStackTrace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool StackFrame::doesSupportStackTrace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if stack trace is supported. </p>
+
+</div>
+</div>
 <a id="ad4f633b0626bd809580429b696ecb697"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4f633b0626bd809580429b696ecb697">&#9670;&nbsp;</a></span>dump()</h2>
 
@@ -597,6 +621,140 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa5eaf1d5d8d50c9d51801c6dcc2f1ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5eaf1d5d8d50c9d51801c6dcc2f1ce8">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StackFrame::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if stack trace is empty. </p>
+
+</div>
+</div>
+<a id="a4247d72bdcd12442d4bb1d7e0d0128ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4247d72bdcd12442d4bb1d7e0d0128ad">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StackFrame::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>compare</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if stack traces are non-equal. </p>
+
+</div>
+</div>
+<a id="af72d4df01c9807d61d48de243c4e7521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72d4df01c9807d61d48de243c4e7521">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StackFrame::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stack_frame.html">StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>compare</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if stack traces are non-equal. </p>
+
+</div>
+</div>
+<a id="a6b0d4322b68fef268f3ffcbd513c141f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0d4322b68fef268f3ffcbd513c141f">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StackFrame::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; const void * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>compare</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if stack traces are equal. </p>
+
+</div>
+</div>
+<a id="a0a5b9e4ab4a3d12afda27444ce15eb38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5b9e4ab4a3d12afda27444ce15eb38">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StackFrame::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_stack_frame.html">StackFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>compare</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if stack traces are equal. </p>
+
+</div>
+</div>
 <a id="a9382ebc6eec65336b827e970999606e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9382ebc6eec65336b827e970999606e9">&#9670;&nbsp;</a></span>setUseStandardOut()</h2>
 
@@ -679,8 +837,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a53652f7b5a87d2448baab49d49dd7705"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53652f7b5a87d2448baab49d49dd7705">&#9670;&nbsp;</a></span>toStream()</h2>
+<a id="a136cf4d85db44b4ae6cbe241c034c45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136cf4d85db44b4ae6cbe241c034c45c">&#9670;&nbsp;</a></span>toStream()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -689,7 +847,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void StackFrame::toStream </td>
+          <td class="memname">static <a class="el" href="class_format_output_stream.html">FormatOutputStream</a>&amp; StackFrame::toStream </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td>
           <td class="paramname"><em>stream</em>, </td>

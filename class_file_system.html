@@ -139,8 +139,18 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af37d3f6ba11a7ecc6c711f42138cea20"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#af37d3f6ba11a7ecc6c711f42138cea20">isSeparator</a> (ucs4 ch) noexcept</td></tr>
+<tr class="separator:af37d3f6ba11a7ecc6c711f42138cea20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2835e8e4d4d36c615d16821ef525906"><td class="memItemLeft" align="right" valign="top">static MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#aa2835e8e4d4d36c615d16821ef525906">findSeparator</a> (const <a class="el" href="class_string.html">String</a> &amp;path, MemorySize start)</td></tr>
+<tr class="separator:aa2835e8e4d4d36c615d16821ef525906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5a28bf0ed7c5bdff56f7365eae1b28"><td class="memItemLeft" align="right" valign="top">static MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a3a5a28bf0ed7c5bdff56f7365eae1b28">findLastSeparator</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:a3a5a28bf0ed7c5bdff56f7365eae1b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f531f44cac92f04563b1961e739f32e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a6f531f44cac92f04563b1961e739f32e">getPath</a> (const <a class="el" href="class_string.html">String</a> &amp;base, const <a class="el" href="class_string.html">String</a> &amp;relative) noexcept</td></tr>
 <tr class="separator:a6f531f44cac92f04563b1961e739f32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d642bfaec753acc96db5c5278c66ce3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a2d642bfaec753acc96db5c5278c66ce3">join</a> (const <a class="el" href="class_string.html">String</a> &amp;base, const <a class="el" href="class_string.html">String</a> &amp;relative) noexcept</td></tr>
+<tr class="separator:a2d642bfaec753acc96db5c5278c66ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122afe6d9ecd6ad291d7357715a2d88e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a122afe6d9ecd6ad291d7357715a2d88e">join</a> (const std::initializer_list&lt; <a class="el" href="class_string.html">String</a> &gt; &amp;paths) noexcept</td></tr>
+<tr class="separator:a122afe6d9ecd6ad291d7357715a2d88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fbe5473168f6fc63f98991d63f87eb2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a8fbe5473168f6fc63f98991d63f87eb2">getComponent</a> (const <a class="el" href="class_string.html">String</a> &amp;path, <a class="el" href="class_file_system.html#a04e3988b7ba1882d2b5103430b4e96b5">Component</a> component)</td></tr>
 <tr class="separator:a8fbe5473168f6fc63f98991d63f87eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab490488453e0aa8ffac1c27562533d5c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#ab490488453e0aa8ffac1c27562533d5c">isAbsolutePath</a> (const <a class="el" href="class_string.html">String</a> &amp;path) noexcept</td></tr>
@@ -173,16 +183,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a410eb496194789c861a058430d690581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbea37c4a6b61fecb59047b1df4763a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#abbea37c4a6b61fecb59047b1df4763a0">makeFolder</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
 <tr class="separator:abbea37c4a6b61fecb59047b1df4763a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2dbb677bde334d01b52afd9d178d1bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#ad2dbb677bde334d01b52afd9d178d1bd">supportsLinks</a> () noexcept</td></tr>
-<tr class="separator:ad2dbb677bde334d01b52afd9d178d1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f63b2e0f92116205eee0704ca44e67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a89f63b2e0f92116205eee0704ca44e67">makeFolderRecursive</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:a89f63b2e0f92116205eee0704ca44e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99be187d1454d2fc598fea27daed705"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#ae99be187d1454d2fc598fea27daed705">doesSupportLinks</a> () noexcept</td></tr>
+<tr class="separator:ae99be187d1454d2fc598fea27daed705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30fdb1bc12c7669236c82722148e01a1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a30fdb1bc12c7669236c82722148e01a1">makeHardLink</a> (const <a class="el" href="class_string.html">String</a> &amp;target, const <a class="el" href="class_string.html">String</a> &amp;destination)</td></tr>
 <tr class="separator:a30fdb1bc12c7669236c82722148e01a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca58388734f884229b0bc3e4723f16a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a7ca58388734f884229b0bc3e4723f16a">isLink</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
 <tr class="separator:a7ca58388734f884229b0bc3e4723f16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f06d344030bee84036bedb7af840f29"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a1f06d344030bee84036bedb7af840f29">makeLink</a> (const <a class="el" href="class_string.html">String</a> &amp;target, const <a class="el" href="class_string.html">String</a> &amp;destination)</td></tr>
 <tr class="separator:a1f06d344030bee84036bedb7af840f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31f4dd14318fe36015b81b0113975208"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a31f4dd14318fe36015b81b0113975208">getLink</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
-<tr class="separator:a31f4dd14318fe36015b81b0113975208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3393867186238281b4ae9f84503ac17e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a3393867186238281b4ae9f84503ac17e">getLinkTarget</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:a3393867186238281b4ae9f84503ac17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48758050cd8e9913ca2892de9418cdaf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a48758050cd8e9913ca2892de9418cdaf">getTempFolder</a> (<a class="el" href="class_file_system.html#a88a55c156e025a7ff3ba089211386906">TemporaryFolder</a> folder=<a class="el" href="class_file_system.html#a88a55c156e025a7ff3ba089211386906a8792c90e5d256f80568fd066032d2e2e">USER_SPECIFIED</a>) noexcept</td></tr>
 <tr class="separator:a48758050cd8e9913ca2892de9418cdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acefd2860d5b1837f3a3df5e4cbfbfc4f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#acefd2860d5b1837f3a3df5e4cbfbfc4f">getTempFileName</a> (unsigned int fields=<a class="el" href="class_file_system.html#a11962b886a134fd36428de5586081017af7331fb94ba80eb5ea606d50ad5d8a5d">PREFIX</a>|<a class="el" href="class_file_system.html#a11962b886a134fd36428de5586081017a19c8603dbe50dd0a4331e5b1e7955144">APPLICATION</a>|<a class="el" href="class_file_system.html#a11962b886a134fd36428de5586081017a85bc15f7e401ee0f95bb03b5402acece">USER</a>|<a class="el" href="class_file_system.html#a11962b886a134fd36428de5586081017ae2bce484b8a7eafa28080ca2490ccd98">SUFFIX</a>) noexcept</td></tr>
@@ -193,13 +205,21 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a5aa395c8a073b66a27bac59a183558aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17d46ff7c7d2118fc64375956ac9386a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a17d46ff7c7d2118fc64375956ac9386a">getFolder</a> (<a class="el" href="class_file_system.html#a58d2eb6b203fb12e26e2d6ab6cb67cb7">Folder</a> folder) noexcept</td></tr>
 <tr class="separator:a17d46ff7c7d2118fc64375956ac9386a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f9a0d9da65533c3402696745e5bdc4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a67f9a0d9da65533c3402696745e5bdc4">getRelativePath</a> (const <a class="el" href="class_string.html">String</a> &amp;folder, const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:a67f9a0d9da65533c3402696745e5bdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1179e5e484d1299a8ccb6969292168"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a6f1179e5e484d1299a8ccb6969292168">getParent</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:a6f1179e5e484d1299a8ccb6969292168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ce8901feccaa7c815c4a9d91a87ace"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a32ce8901feccaa7c815c4a9d91a87ace">split</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:a32ce8901feccaa7c815c4a9d91a87ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785dd66c7502e03c4edc9105eab92eb4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a785dd66c7502e03c4edc9105eab92eb4">join</a> (const <a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_string.html">String</a> &gt; &amp;paths)</td></tr>
+<tr class="separator:a785dd66c7502e03c4edc9105eab92eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58606b9d972a96453756f7e57165c35"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#ad58606b9d972a96453756f7e57165c35">normalize</a> (const <a class="el" href="class_string.html">String</a> &amp;path)</td></tr>
+<tr class="separator:ad58606b9d972a96453756f7e57165c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab496e6a1df68a4ae70090d182eb2896"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_file_system_1_1_quota.html">Quota</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#aab496e6a1df68a4ae70090d182eb2896">getQuota</a> (const <a class="el" href="class_string.html">String</a> &amp;path, <a class="el" href="class_trustee.html">Trustee</a> trustee)</td></tr>
 <tr class="separator:aab496e6a1df68a4ae70090d182eb2896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a27d751d8f0f875d4eb7eebde1540b3aa"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#a27d751d8f0f875d4eb7eebde1540b3aa">SEPARATOR</a> = '/'</td></tr>
-<tr class="separator:a27d751d8f0f875d4eb7eebde1540b3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addc4cbb943b998560d443563b3401f0e"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_system.html#addc4cbb943b998560d443563b3401f0e">MAXIMUM_PATH_LENGTH</a></td></tr>
 <tr class="separator:addc4cbb943b998560d443563b3401f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -411,6 +431,34 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae99be187d1454d2fc598fea27daed705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99be187d1454d2fc598fea27daed705">&#9670;&nbsp;</a></span>doesSupportLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool FileSystem::doesSupportLinks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if symbolic links are supported. This method always returns true for Unices. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ln_8cpp-example.html#a4">testsuite/ln.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="a4a2b37a966b3de22239a04650151fcb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a2b37a966b3de22239a04650151fcb9">&#9670;&nbsp;</a></span>entryExists()</h2>
 
@@ -516,6 +564,72 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Empty string if not found. The relative path if it is really an absolute path. </dd></dl>
+
+</div>
+</div>
+<a id="a3a5a28bf0ed7c5bdff56f7365eae1b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5a28bf0ed7c5bdff56f7365eae1b28">&#9670;&nbsp;</a></span>findLastSeparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static MemoryDiff FileSystem::findLastSeparator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the index of the last separator. For Windows both \ and / are separator.</p>
+<p>Returns -1 is not found. </p>
+
+</div>
+</div>
+<a id="aa2835e8e4d4d36c615d16821ef525906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2835e8e4d4d36c615d16821ef525906">&#9670;&nbsp;</a></span>findSeparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static MemoryDiff FileSystem::findSeparator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>start</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the index of the first separator. For Windows both \ and / are separator.</p>
+<p>Returns -1 is not found. </p>
 
 </div>
 </div>
@@ -647,8 +761,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a31f4dd14318fe36015b81b0113975208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31f4dd14318fe36015b81b0113975208">&#9670;&nbsp;</a></span>getLink()</h2>
+<a id="a3393867186238281b4ae9f84503ac17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3393867186238281b4ae9f84503ac17e">&#9670;&nbsp;</a></span>getLinkTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -657,7 +771,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::getLink </td>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::getLinkTarget </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -679,6 +793,33 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ls_8cpp-example.html#a21">testsuite/ls.cpp</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="a6f1179e5e484d1299a8ccb6969292168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1179e5e484d1299a8ccb6969292168">&#9670;&nbsp;</a></span>getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::getParent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the parent folder. </p>
 
 </div>
 </div>
@@ -772,6 +913,44 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_quota_8cpp-example.html#a7">testsuite/Quota.cpp</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="a67f9a0d9da65533c3402696745e5bdc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f9a0d9da65533c3402696745e5bdc4">&#9670;&nbsp;</a></span>getRelativePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::getRelativePath </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>folder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the relative path to the given folder.</p>
+<p>getRelativePath("a/b/c/d/e/f", "a/b/c/g/h/i") returns "../../../g/h/i". </p>
 
 </div>
 </div>
@@ -1053,6 +1232,138 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af37d3f6ba11a7ecc6c711f42138cea20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37d3f6ba11a7ecc6c711f42138cea20">&#9670;&nbsp;</a></span>isSeparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool FileSystem::isSeparator </td>
+          <td>(</td>
+          <td class="paramtype">ucs4&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if char is a separator. For Windows both \ and / are separator. </p>
+
+</div>
+</div>
+<a id="a785dd66c7502e03c4edc9105eab92eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785dd66c7502e03c4edc9105eab92eb4">&#9670;&nbsp;</a></span>join() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::join </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_string.html">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Joins the paths. </p>
+
+</div>
+</div>
+<a id="a122afe6d9ecd6ad291d7357715a2d88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122afe6d9ecd6ad291d7357715a2d88e">&#9670;&nbsp;</a></span>join() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::join </td>
+          <td>(</td>
+          <td class="paramtype">const std::initializer_list&lt; <a class="el" href="class_string.html">String</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the combined path of the specified base and relative path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>The paths to join. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d642bfaec753acc96db5c5278c66ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d642bfaec753acc96db5c5278c66ce3">&#9670;&nbsp;</a></span>join() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::join </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>relative</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the combined path of the specified base and relative path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>The base path. </td></tr>
+    <tr><td class="paramname">relative</td><td>The relative path.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the relative path if base is blank. </dd></dl>
+
+</div>
+</div>
 <a id="abbea37c4a6b61fecb59047b1df4763a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbea37c4a6b61fecb59047b1df4763a0">&#9670;&nbsp;</a></span>makeFolder()</h2>
 
@@ -1064,6 +1375,33 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">static void FileSystem::makeFolder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Makes a folder. </p>
+
+</div>
+</div>
+<a id="a89f63b2e0f92116205eee0704ca44e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f63b2e0f92116205eee0704ca44e67">&#9670;&nbsp;</a></span>makeFolderRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void FileSystem::makeFolderRecursive </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -1170,6 +1508,33 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad58606b9d972a96453756f7e57165c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58606b9d972a96453756f7e57165c35">&#9670;&nbsp;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> FileSystem::normalize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the normalized path. </p>
+
+</div>
+</div>
 <a id="a34bf0820658142a4de72eee071e19a0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34bf0820658142a4de72eee071e19a0f">&#9670;&nbsp;</a></span>removeFile()</h2>
 
@@ -1257,8 +1622,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad2dbb677bde334d01b52afd9d178d1bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2dbb677bde334d01b52afd9d178d1bd">&#9670;&nbsp;</a></span>supportsLinks()</h2>
+<a id="a32ce8901feccaa7c815c4a9d91a87ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ce8901feccaa7c815c4a9d91a87ace">&#9670;&nbsp;</a></span>split()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1267,21 +1632,21 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool FileSystem::supportsLinks </td>
+          <td class="memname">static <a class="el" href="class_array.html">Array</a>&lt;<a class="el" href="class_string.html">String</a>&gt; FileSystem::split </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if symbolic links are supported. This method always returns true for Unices. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ln_8cpp-example.html#a4">testsuite/ln.cpp</a>.</dd>
-</dl>
+<p>Returns the path split into sections.</p>
+<p>Separators are not included in result except the first item it is is to indicate root. </p>
 
 </div>
 </div>
@@ -1383,29 +1748,6 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Specifies the maximum length of a path. </p>
-
-</div>
-</div>
-<a id="a27d751d8f0f875d4eb7eebde1540b3aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27d751d8f0f875d4eb7eebde1540b3aa">&#9670;&nbsp;</a></span>SEPARATOR</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char FileSystem::SEPARATOR = '/'</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Specifies the folder level separator. </p>
 
 </div>
 </div>

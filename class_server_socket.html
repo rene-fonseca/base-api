@@ -62,6 +62,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a014d78133f813452de8bd6e2589b8e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ebc299fdd7fa32cfae7564c23ff662"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#a50ebc299fdd7fa32cfae7564c23ff662">ServerSocket</a> (const <a class="el" href="class_inet_address.html">InetAddress</a> &amp;address, unsigned short port, unsigned int backlog)</td></tr>
 <tr class="separator:a50ebc299fdd7fa32cfae7564c23ff662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892d7ee8dc4001b4ade1bce6127ab5c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#a892d7ee8dc4001b4ade1bce6127ab5c4">ServerSocket</a> (const <a class="el" href="class_inet_end_point.html">InetEndPoint</a> &amp;endPoint, unsigned int backlog)</td></tr>
+<tr class="separator:a892d7ee8dc4001b4ade1bce6127ab5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa49df6e01ffee86c9850982de7131c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stream_socket.html">StreamSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#adfa49df6e01ffee86c9850982de7131c">accept</a> ()</td></tr>
 <tr class="separator:adfa49df6e01ffee86c9850982de7131c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2655f7ab0b05002f36718e9fcfe9c15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stream_socket.html">StreamSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#ad2655f7ab0b05002f36718e9fcfe9c15">accept</a> (unsigned int milliseconds)</td></tr>
@@ -74,6 +76,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a87de644b3b1194bb7a8faa6e99e46673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa245da9f861f99bd78d1fef073e4124d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#aa245da9f861f99bd78d1fef073e4124d">getLocalPort</a> () const noexcept</td></tr>
 <tr class="separator:aa245da9f861f99bd78d1fef073e4124d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285a6ca57dd68084b827c0c26d1012dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_inet_end_point.html">InetEndPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#a285a6ca57dd68084b827c0c26d1012dc">getLocalEndPoint</a> () const noexcept</td></tr>
+<tr class="separator:a285a6ca57dd68084b827c0c26d1012dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8889a68e18a6f7e5c9f3dd14caf4a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#a7c8889a68e18a6f7e5c9f3dd14caf4a2">setNonBlocking</a> (bool value)</td></tr>
 <tr class="separator:a7c8889a68e18a6f7e5c9f3dd14caf4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d6c2e1aa55a953389c1bc7c988fa76e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_socket.html#a7d6c2e1aa55a953389c1bc7c988fa76e">wait</a> () const</td></tr>
@@ -91,7 +95,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa71d8db932feeebd59d1915ecba4d4ad inherit pro_types_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22dc4a157a9551999668594078f0c28a inherit pro_types_class_socket"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28a">Domain</a> { <a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28aa8227a91b85976fbfe510cf31fe962fd6">IPV4</a>, 
 <a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28aa722e5e5cc0cb8f246d54fffaa6d1adf6">IPV6</a>, 
-<a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28aa8d84c3aeb253328777ed512f25a04f1c">DEFAULT_DOMAIN</a>
+<a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28aa8d84c3aeb253328777ed512f25a04f1c">DEFAULT_DOMAIN</a> = IPV4
  }</td></tr>
 <tr class="separator:a22dc4a157a9551999668594078f0c28a inherit pro_types_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad3850ccbf98b1773b9ffc19f4db59f9 inherit pro_types_class_socket"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aad3850ccbf98b1773b9ffc19f4db59f9">Kind</a> { <a class="el" href="class_socket.html#aad3850ccbf98b1773b9ffc19f4db59f9a02038cdf7c7dde8a2bf45049e2d44f0b">STREAM</a>, 
@@ -108,20 +112,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a99077c61031d81101aa63a09e4b0d293 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d22cc8bbfde8cd2eafb4098cdc9f7bb inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a4d22cc8bbfde8cd2eafb4098cdc9f7bb">Socket</a> () noexcept</td></tr>
 <tr class="separator:a4d22cc8bbfde8cd2eafb4098cdc9f7bb inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24cd5ec5cdc72b10195e06062ede65b7 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">AnyReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a24cd5ec5cdc72b10195e06062ede65b7">getReference</a> () noexcept</td></tr>
-<tr class="separator:a24cd5ec5cdc72b10195e06062ede65b7 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b3ff446dac80b6e10a91938ebb16d4c inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a0b3ff446dac80b6e10a91938ebb16d4c">Socket</a> (const <a class="el" href="class_socket.html">Socket</a> &amp;copy) noexcept</td></tr>
-<tr class="separator:a0b3ff446dac80b6e10a91938ebb16d4c inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c446f9f454b467d0d8897dd3b2739ea inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_socket.html">Socket</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a2c446f9f454b467d0d8897dd3b2739ea">operator=</a> (const <a class="el" href="class_socket.html">Socket</a> &amp;assign) noexcept</td></tr>
-<tr class="separator:a2c446f9f454b467d0d8897dd3b2739ea inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71dc195966cb6fa9deaa23bb7eecc147 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a71dc195966cb6fa9deaa23bb7eecc147">accept</a> (<a class="el" href="class_socket.html">Socket</a> &amp;<a class="el" href="class_socket.html#aaae88544cea66224fd23fa0edf5d6819">socket</a>)</td></tr>
+<tr class="memitem:a5a09e4068518080e86782ed29888ca1e inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28a">Domain</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a5a09e4068518080e86782ed29888ca1e">getDomain</a> () const</td></tr>
+<tr class="separator:a5a09e4068518080e86782ed29888ca1e inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9446a5847a161e3c178d66a8ed762f inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_socket.html#aad3850ccbf98b1773b9ffc19f4db59f9">Kind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a7b9446a5847a161e3c178d66a8ed762f">getKind</a> () const</td></tr>
+<tr class="separator:a7b9446a5847a161e3c178d66a8ed762f inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71dc195966cb6fa9deaa23bb7eecc147 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a71dc195966cb6fa9deaa23bb7eecc147">accept</a> (<a class="el" href="class_socket.html">Socket</a> &amp;socket)</td></tr>
 <tr class="separator:a71dc195966cb6fa9deaa23bb7eecc147 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea9906a176ca3cdc58bb90ee7691ab55 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aea9906a176ca3cdc58bb90ee7691ab55">bind</a> (const <a class="el" href="class_inet_address.html">InetAddress</a> &amp;address, unsigned short port)</td></tr>
 <tr class="separator:aea9906a176ca3cdc58bb90ee7691ab55 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e934a6a787e4586156ee558e9647ea inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a69e934a6a787e4586156ee558e9647ea">bind</a> (const <a class="el" href="class_inet_end_point.html">InetEndPoint</a> &amp;endPoint)</td></tr>
+<tr class="separator:a69e934a6a787e4586156ee558e9647ea inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ee749264ccbcfc4dfbf5442e55dcb8 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a75ee749264ccbcfc4dfbf5442e55dcb8">close</a> ()</td></tr>
 <tr class="separator:a75ee749264ccbcfc4dfbf5442e55dcb8 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ec6866aaee52af7fc2c3b5bbe972b8e inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a1ec6866aaee52af7fc2c3b5bbe972b8e">connect</a> (const <a class="el" href="class_inet_address.html">InetAddress</a> &amp;address, unsigned short port)</td></tr>
 <tr class="separator:a1ec6866aaee52af7fc2c3b5bbe972b8e inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fc18e1bfd7aacda7dae973aa6fed22 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a41fc18e1bfd7aacda7dae973aa6fed22">connect</a> (const <a class="el" href="class_inet_end_point.html">InetEndPoint</a> &amp;endPoint)</td></tr>
+<tr class="separator:a41fc18e1bfd7aacda7dae973aa6fed22 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677d040fc9ae39e545a253b4a5e44725 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a677d040fc9ae39e545a253b4a5e44725">create</a> (<a class="el" href="class_socket.html#aad3850ccbf98b1773b9ffc19f4db59f9">Kind</a> kind, <a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28a">Domain</a> domain=<a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28aa8d84c3aeb253328777ed512f25a04f1c">DEFAULT_DOMAIN</a>)</td></tr>
 <tr class="separator:a677d040fc9ae39e545a253b4a5e44725 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae26bdccde62431e6d2a31c630f37a0e0 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ae26bdccde62431e6d2a31c630f37a0e0">getName</a> () noexcept</td></tr>
@@ -130,10 +136,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a9f33070e3738b884b6178e9df732b164 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0798ee047c9c36bbc222e835045cd55f inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a0798ee047c9c36bbc222e835045cd55f">getPort</a> () const noexcept</td></tr>
 <tr class="separator:a0798ee047c9c36bbc222e835045cd55f inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de135ca6947066d94a4be8ddfc63f7d inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_inet_end_point.html">InetEndPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a0de135ca6947066d94a4be8ddfc63f7d">getEndPoint</a> () const noexcept</td></tr>
+<tr class="separator:a0de135ca6947066d94a4be8ddfc63f7d inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f63098b05a2d1a693b8476f9d9f803d inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_inet_address.html">InetAddress</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a7f63098b05a2d1a693b8476f9d9f803d">getLocalAddress</a> () const noexcept</td></tr>
 <tr class="separator:a7f63098b05a2d1a693b8476f9d9f803d inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2404b5d2b0adf11dfbe18d7baddee24 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ac2404b5d2b0adf11dfbe18d7baddee24">getLocalPort</a> () const noexcept</td></tr>
 <tr class="separator:ac2404b5d2b0adf11dfbe18d7baddee24 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a93928a63baeb7463d4c3043ee23205 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_inet_end_point.html">InetEndPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a9a93928a63baeb7463d4c3043ee23205">getLocalEndPoint</a> () const noexcept</td></tr>
+<tr class="separator:a9a93928a63baeb7463d4c3043ee23205 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811b63e4cff926ed538ec097f4c5599c inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a811b63e4cff926ed538ec097f4c5599c">listen</a> (unsigned int backlog)</td></tr>
 <tr class="separator:a811b63e4cff926ed538ec097f4c5599c inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3169a633f7a00c07dd4e9400f102ddd inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ae3169a633f7a00c07dd4e9400f102ddd">shutdownInputStream</a> ()</td></tr>
@@ -220,8 +230,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3a7a6e7824ef1fed2ebeb469565fbbbb inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e5864f453e1b0705f85917abbed63c inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ac2e5864f453e1b0705f85917abbed63c">available</a> () const</td></tr>
 <tr class="separator:ac2e5864f453e1b0705f85917abbed63c inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaad4df4cd9de214bf98e07800955a635 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aaad4df4cd9de214bf98e07800955a635">isValid</a> () const noexcept</td></tr>
-<tr class="separator:aaad4df4cd9de214bf98e07800955a635 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3cb2e57cb5f6fc85821e7c5e3fc6ba6 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#af3cb2e57cb5f6fc85821e7c5e3fc6ba6">flush</a> ()</td></tr>
 <tr class="separator:af3cb2e57cb5f6fc85821e7c5e3fc6ba6 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04c9e4753160bf199e998ea5a5af2832 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a04c9e4753160bf199e998ea5a5af2832">read</a> (uint8 *buffer, unsigned int size, bool nonblocking=false)</td></tr>
@@ -245,15 +253,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCancel</b> ()</t
 <tr class="separator:aec4db08d71cb438c7b04994de292db10 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeac4eb6379a543d38ed88977d3b6630a inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
 <tr class="separator:aeac4eb6379a543d38ed88977d3b6630a inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_resource')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_resource.html">Resource</a></td></tr>
+<tr class="memitem:a916d6696c1c7b1e17b1c7cc2ebdcdd3e inherit pro_methods_class_resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a916d6696c1c7b1e17b1c7cc2ebdcdd3e">getDescription</a> () const</td></tr>
+<tr class="separator:a916d6696c1c7b1e17b1c7cc2ebdcdd3e inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec668a244fd79d0e9dc8f70c3936e7e2 inherit pro_methods_class_resource"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#aec668a244fd79d0e9dc8f70c3936e7e2">setDescription</a> (const <a class="el" href="class_string.html">String</a> &amp;description)</td></tr>
+<tr class="separator:aec668a244fd79d0e9dc8f70c3936e7e2 inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5598b07ed9e571ce7320b11c6826e9ee inherit pro_methods_class_resource"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a5598b07ed9e571ce7320b11c6826e9ee">getResourceId</a> () const</td></tr>
+<tr class="separator:a5598b07ed9e571ce7320b11c6826e9ee inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4383d49ffb694fa722df35f5b1fbcd inherit pro_methods_class_resource"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#afc4383d49ffb694fa722df35f5b1fbcd">getCreatedById</a> () const</td></tr>
+<tr class="separator:afc4383d49ffb694fa722df35f5b1fbcd inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc33b9816f44f8c3af5d194a492a9ed inherit pro_methods_class_resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">AnyReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a6fc33b9816f44f8c3af5d194a492a9ed">getHandle</a> () const noexcept</td></tr>
+<tr class="separator:a6fc33b9816f44f8c3af5d194a492a9ed inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7a747396c1fd25bbd94b70099fed58 inherit pro_methods_class_resource"><td class="memTemplParams" colspan="2">template&lt;class TYPE &gt; </td></tr>
+<tr class="memitem:a9b7a747396c1fd25bbd94b70099fed58 inherit pro_methods_class_resource"><td class="memTemplItemLeft" align="right" valign="top">TYPE &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_resource.html#a9b7a747396c1fd25bbd94b70099fed58">getInternalHandle</a> () const</td></tr>
+<tr class="separator:a9b7a747396c1fd25bbd94b70099fed58 inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc46af0f04fbe0b1ab406f0cdb4a4a36 inherit pro_methods_class_resource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#abc46af0f04fbe0b1ab406f0cdb4a4a36">operator bool</a> () const noexcept</td></tr>
+<tr class="separator:abc46af0f04fbe0b1ab406f0cdb4a4a36 inherit pro_methods_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_asynchronous_stream"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_asynchronous_stream')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_asynchronous_stream.html">AsynchronousStream</a></td></tr>
 <tr class="memitem:a00325387f12b55b5ad47e3487dcd7f7b inherit pro_methods_class_asynchronous_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asynchronous_stream.html#a00325387f12b55b5ad47e3487dcd7f7b">~AsynchronousStream</a> () noexcept(false)</td></tr>
 <tr class="separator:a00325387f12b55b5ad47e3487dcd7f7b inherit pro_methods_class_asynchronous_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_socket')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:a1d6ae3151d99c8b4fa82afb4d9030f5f inherit pro_static_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a id="a1d6ae3151d99c8b4fa82afb4d9030f5f"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (<a class="el" href="class_socket.html#a22dc4a157a9551999668594078f0c28a">Domain</a> domain) noexcept</td></tr>
+<tr class="separator:a1d6ae3151d99c8b4fa82afb4d9030f5f inherit pro_static_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf79339b0ea0c76b72932ac2a007a08 inherit pro_static_methods_class_socket"><td class="memItemLeft" align="right" valign="top"><a id="a6bf79339b0ea0c76b72932ac2a007a08"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (<a class="el" href="class_socket.html#aad3850ccbf98b1773b9ffc19f4db59f9">Kind</a> kind) noexcept</td></tr>
+<tr class="separator:a6bf79339b0ea0c76b72932ac2a007a08 inherit pro_static_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_class_asynchronous_stream"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_asynchronous_stream')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="class_asynchronous_stream.html">AsynchronousStream</a></td></tr>
 <tr class="memitem:a15d1fdceec4fb0153dc05ebf57ee1c35 inherit pro_static_methods_class_asynchronous_stream"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_asynchronous_stream.html#a15d1fdceec4fb0153dc05ebf57ee1c35">asyncTest</a> () noexcept</td></tr>
 <tr class="separator:a15d1fdceec4fb0153dc05ebf57ee1c35 inherit pro_static_methods_class_asynchronous_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_socket')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_socket.html">Socket</a></td></tr>
-<tr class="memitem:aaae88544cea66224fd23fa0edf5d6819 inherit pro_attribs_class_socket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">Reference</a>&lt; SocketImpl &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aaae88544cea66224fd23fa0edf5d6819">socket</a></td></tr>
-<tr class="separator:aaae88544cea66224fd23fa0edf5d6819 inherit pro_attribs_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_resource')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_resource.html">Resource</a></td></tr>
+<tr class="memitem:a9d8368a62a48df58deb4babc26f80f77 inherit pro_attribs_class_resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reference.html">AnyReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource.html#a9d8368a62a48df58deb4babc26f80f77">handle</a></td></tr>
+<tr class="separator:a9d8368a62a48df58deb4babc26f80f77 inherit pro_attribs_class_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Server socket. </p>
@@ -263,7 +294,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCancel</b> ()</t
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a60cb359f062ac8990c9d5db173caad78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60cb359f062ac8990c9d5db173caad78">&#9670;&nbsp;</a></span>ServerSocket() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a60cb359f062ac8990c9d5db173caad78">&#9670;&nbsp;</a></span>ServerSocket() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +320,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCancel</b> ()</t
 </div>
 </div>
 <a id="a50ebc299fdd7fa32cfae7564c23ff662"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50ebc299fdd7fa32cfae7564c23ff662">&#9670;&nbsp;</a></span>ServerSocket() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ebc299fdd7fa32cfae7564c23ff662">&#9670;&nbsp;</a></span>ServerSocket() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,6 +355,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCancel</b> ()</t
   <table class="params">
     <tr><td class="paramname">address</td><td>The IP address of the host to connect to. </td></tr>
     <tr><td class="paramname">port</td><td>The port to connect to on the host. If zero the socket is bound to a unique port. </td></tr>
+    <tr><td class="paramname">backlog</td><td>The maxium length of the queue. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a892d7ee8dc4001b4ade1bce6127ab5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892d7ee8dc4001b4ade1bce6127ab5c4">&#9670;&nbsp;</a></span>ServerSocket() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ServerSocket::ServerSocket </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_inet_end_point.html">InetEndPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>endPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>backlog</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a server stream socket and binds it to the specified port and IP address.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endPoint</td><td>The local end-point to connect to. </td></tr>
     <tr><td class="paramname">backlog</td><td>The maxium length of the queue. </td></tr>
   </table>
   </dd>
@@ -448,6 +515,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCancel</b> ()</t
 <p>Returns the local IP address to which the socket is bound. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ftp_8cpp-example.html#a30">testsuite/ftp.cpp</a>, and <a class="el" href="testsuite_2server_8cpp-example.html#a25">testsuite/server.cpp</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="a285a6ca57dd68084b827c0c26d1012dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285a6ca57dd68084b827c0c26d1012dc">&#9670;&nbsp;</a></span>getLocalEndPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_inet_end_point.html">InetEndPoint</a> ServerSocket::getLocalEndPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the local end-point to which the socket is bound. </p>
 
 </div>
 </div>

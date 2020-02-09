@@ -91,7 +91,7 @@ $(function() {
 <div class="line">      <a name="_a3"></a><a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html">BitSet::ReadEnumerator</a> enu = bitSet.<a name="a4"></a><a class="code" href="class_bit_set.html#ab2cb485b71cbe9ddde145df1cc354923">getReadEnumerator</a>();</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;Bits: &quot;</span>;</div>
 <div class="line">      <span class="keywordflow">while</span> (enu.<a name="a5"></a><a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html#adaf0b076fca23d505078ccd92cde56ec">hasNext</a>()) {</div>
-<div class="line">        fout &lt;&lt; (*enu.<a name="a6"></a><a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html#ac348fe4a32a8b70f758ce47e07754228">next</a>() ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line">        fout &lt;&lt; (enu.<a name="a6"></a><a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html#a516e5e413004c1c3fd20a3c9b8505eec">next</a>() ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line">      }</div>
 <div class="line">      fout &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line">      <a name="_a8"></a><a class="code" href="class_bit_set_1_1_bit_set_enumerator.html">BitSet::Enumerator</a> enu = bitSet.<a name="a9"></a><a class="code" href="class_bit_set.html#a967ecec05a0bc0fe565a4f4427ec61d5">getEnumerator</a>();</div>
 <div class="line">      <span class="keywordtype">bool</span> value = <span class="keyword">false</span>;</div>
 <div class="line">      <span class="keywordflow">while</span> (enu.<a name="a10"></a><a class="code" href="class_bit_set_1_1_bit_set_enumerator.html#aa108828b2e17349b342d090f31b99133">hasNext</a>()) {</div>
-<div class="line">        *enu.<a name="a11"></a><a class="code" href="class_bit_set_1_1_bit_set_enumerator.html#a29ed170a5a62b5c17410e2369cc5b92d">next</a>() ^= value;</div>
+<div class="line">        enu.<a name="a11"></a><a class="code" href="class_bit_set_1_1_bit_set_enumerator.html#ac8ffecc4b4849f8f6c109e94dae827ca">next</a>() ^= value;</div>
 <div class="line">        value = !value;</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
@@ -114,7 +114,7 @@ $(function() {
 <div class="line">      <a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html">BitSet::ReadEnumerator</a> enu = bitSet.<a class="code" href="class_bit_set.html#ab2cb485b71cbe9ddde145df1cc354923">getReadEnumerator</a>();</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;Bits: &quot;</span>;</div>
 <div class="line">      <span class="keywordflow">while</span> (enu.<a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html#adaf0b076fca23d505078ccd92cde56ec">hasNext</a>()) {</div>
-<div class="line">        fout &lt;&lt; (*enu.<a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html#ac348fe4a32a8b70f758ce47e07754228">next</a>() ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line">        fout &lt;&lt; (enu.<a class="code" href="class_bit_set_1_1_bit_set_read_enumerator.html#a516e5e413004c1c3fd20a3c9b8505eec">next</a>() ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line">      }</div>
 <div class="line">      fout &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -123,17 +123,17 @@ $(function() {
 <div class="line"> </div>
 <div class="line">APPLICATION_STUB(BitSetApplication);</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclass_bit_set_html_a967ecec05a0bc0fe565a4f4427ec61d5"><div class="ttname"><a href="class_bit_set.html#a967ecec05a0bc0fe565a4f4427ec61d5">BitSet::getEnumerator</a></div><div class="ttdeci">Enumerator getEnumerator() noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:704</div></div>
-<div class="ttc" id="aclass_bit_set_1_1_bit_set_enumerator_html_aa108828b2e17349b342d090f31b99133"><div class="ttname"><a href="class_bit_set_1_1_bit_set_enumerator.html#aa108828b2e17349b342d090f31b99133">BitSet::BitSetEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:286</div></div>
-<div class="ttc" id="aclass_bit_set_1_1_bit_set_enumerator_html"><div class="ttname"><a href="class_bit_set_1_1_bit_set_enumerator.html">BitSet::BitSetEnumerator</a></div><div class="ttdoc">Non-modifying enumerator of elements of a bit set.</div><div class="ttdef"><b>Definition:</b> BitSet.h:250</div></div>
-<div class="ttc" id="aclass_bit_set_1_1_bit_set_read_enumerator_html_adaf0b076fca23d505078ccd92cde56ec"><div class="ttname"><a href="class_bit_set_1_1_bit_set_read_enumerator.html#adaf0b076fca23d505078ccd92cde56ec">BitSet::BitSetReadEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:378</div></div>
-<div class="ttc" id="aclass_bit_set_1_1_bit_set_read_enumerator_html"><div class="ttname"><a href="class_bit_set_1_1_bit_set_read_enumerator.html">BitSet::BitSetReadEnumerator</a></div><div class="ttdoc">Non-modifying enumerator of elements of a bit set.</div><div class="ttdef"><b>Definition:</b> BitSet.h:342</div></div>
-<div class="ttc" id="aclass_bit_set_1_1_bit_set_enumerator_html_a29ed170a5a62b5c17410e2369cc5b92d"><div class="ttname"><a href="class_bit_set_1_1_bit_set_enumerator.html#a29ed170a5a62b5c17410e2369cc5b92d">BitSet::BitSetEnumerator::next</a></div><div class="ttdeci">Pointer next()</div><div class="ttdef"><b>Definition:</b> BitSet.h:294</div></div>
-<div class="ttc" id="aclass_bit_set_1_1_bit_set_read_enumerator_html_ac348fe4a32a8b70f758ce47e07754228"><div class="ttname"><a href="class_bit_set_1_1_bit_set_read_enumerator.html#ac348fe4a32a8b70f758ce47e07754228">BitSet::BitSetReadEnumerator::next</a></div><div class="ttdeci">Pointer next()</div><div class="ttdef"><b>Definition:</b> BitSet.h:386</div></div>
+<div class="ttc" id="aclass_bit_set_html_a967ecec05a0bc0fe565a4f4427ec61d5"><div class="ttname"><a href="class_bit_set.html#a967ecec05a0bc0fe565a4f4427ec61d5">BitSet::getEnumerator</a></div><div class="ttdeci">Enumerator getEnumerator() noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:718</div></div>
+<div class="ttc" id="aclass_bit_set_1_1_bit_set_enumerator_html_aa108828b2e17349b342d090f31b99133"><div class="ttname"><a href="class_bit_set_1_1_bit_set_enumerator.html#aa108828b2e17349b342d090f31b99133">BitSet::BitSetEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:297</div></div>
+<div class="ttc" id="aclass_bit_set_1_1_bit_set_enumerator_html"><div class="ttname"><a href="class_bit_set_1_1_bit_set_enumerator.html">BitSet::BitSetEnumerator</a></div><div class="ttdoc">Non-modifying enumerator of elements of a bit set.</div><div class="ttdef"><b>Definition:</b> BitSet.h:258</div></div>
+<div class="ttc" id="aclass_bit_set_1_1_bit_set_read_enumerator_html_adaf0b076fca23d505078ccd92cde56ec"><div class="ttname"><a href="class_bit_set_1_1_bit_set_read_enumerator.html#adaf0b076fca23d505078ccd92cde56ec">BitSet::BitSetReadEnumerator::hasNext</a></div><div class="ttdeci">bool hasNext() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:393</div></div>
+<div class="ttc" id="aclass_bit_set_1_1_bit_set_read_enumerator_html"><div class="ttname"><a href="class_bit_set_1_1_bit_set_read_enumerator.html">BitSet::BitSetReadEnumerator</a></div><div class="ttdoc">Non-modifying enumerator of elements of a bit set.</div><div class="ttdef"><b>Definition:</b> BitSet.h:354</div></div>
+<div class="ttc" id="aclass_bit_set_1_1_bit_set_enumerator_html_ac8ffecc4b4849f8f6c109e94dae827ca"><div class="ttname"><a href="class_bit_set_1_1_bit_set_enumerator.html#ac8ffecc4b4849f8f6c109e94dae827ca">BitSet::BitSetEnumerator::next</a></div><div class="ttdeci">Reference next()</div><div class="ttdef"><b>Definition:</b> BitSet.h:305</div></div>
 <div class="ttc" id="aclass_bit_set_html"><div class="ttname"><a href="class_bit_set.html">BitSet</a></div><div class="ttdoc">Set of bits collection.</div><div class="ttdef"><b>Definition:</b> BitSet.h:36</div></div>
-<div class="ttc" id="aclass_bit_set_html_ab2cb485b71cbe9ddde145df1cc354923"><div class="ttname"><a href="class_bit_set.html#ab2cb485b71cbe9ddde145df1cc354923">BitSet::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:716</div></div>
+<div class="ttc" id="aclass_bit_set_html_ab2cb485b71cbe9ddde145df1cc354923"><div class="ttname"><a href="class_bit_set.html#ab2cb485b71cbe9ddde145df1cc354923">BitSet::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:730</div></div>
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application.</div><div class="ttdef"><b>Definition:</b> Application.h:53</div></div>
-<div class="ttc" id="aclass_bit_set_html_a05d309307ba363e732f6a2221f087e67"><div class="ttname"><a href="class_bit_set.html#a05d309307ba363e732f6a2221f087e67">BitSet::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:562</div></div>
+<div class="ttc" id="aclass_bit_set_1_1_bit_set_read_enumerator_html_a516e5e413004c1c3fd20a3c9b8505eec"><div class="ttname"><a href="class_bit_set_1_1_bit_set_read_enumerator.html#a516e5e413004c1c3fd20a3c9b8505eec">BitSet::BitSetReadEnumerator::next</a></div><div class="ttdeci">EnumReference next()</div><div class="ttdef"><b>Definition:</b> BitSet.h:401</div></div>
+<div class="ttc" id="aclass_bit_set_html_a05d309307ba363e732f6a2221f087e67"><div class="ttname"><a href="class_bit_set.html#a05d309307ba363e732f6a2221f087e67">BitSet::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> BitSet.h:576</div></div>
 <div class="ttc" id="aclass_bit_set_html_a502e952feaefd6ade962151702917069"><div class="ttname"><a href="class_bit_set.html#a502e952feaefd6ade962151702917069">BitSet::flip</a></div><div class="ttdeci">BitSet &amp; flip() noexcept</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

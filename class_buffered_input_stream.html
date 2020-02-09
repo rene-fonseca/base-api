@@ -57,8 +57,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a03e9b586a84705fd08f3cca37c1115b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buffered_input_stream.html#a03e9b586a84705fd08f3cca37c1115b2">BufferedInputStream</a> ()</td></tr>
+<tr class="separator:a03e9b586a84705fd08f3cca37c1115b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e43f45d3fddeda6b38264a9edd04d37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buffered_input_stream.html#a5e43f45d3fddeda6b38264a9edd04d37">BufferedInputStream</a> (<a class="el" href="class_input_stream.html">InputStream</a> &amp;<a class="el" href="class_filter_input_stream.html#aa227e238840e847c9233a854ac1dd712">in</a>, unsigned int size=<a class="el" href="class_buffered_input_stream.html#a68f171ea0b87780ac0c1dfd8efb2cf61">DEFAULT_BUFFER_SIZE</a>)</td></tr>
 <tr class="separator:a5e43f45d3fddeda6b38264a9edd04d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85e4b103cdcfe6dc6658fd0fabf2f93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buffered_input_stream.html#ae85e4b103cdcfe6dc6658fd0fabf2f93">fill</a> ()</td></tr>
+<tr class="separator:ae85e4b103cdcfe6dc6658fd0fabf2f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7188bb7b5e8ccc3209aa830c8c8fd781"><td class="memItemLeft" align="right" valign="top">const uint8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buffered_input_stream.html#a7188bb7b5e8ccc3209aa830c8c8fd781">getElements</a> () const noexcept</td></tr>
 <tr class="separator:a7188bb7b5e8ccc3209aa830c8c8fd781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a11906fdd233a294110e50fa6b2a0af"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_buffered_input_stream.html#a1a11906fdd233a294110e50fa6b2a0af">getNumberOfBytes</a> () const noexcept</td></tr>
@@ -147,8 +151,26 @@ Protected Attributes</h2></td></tr>
 <p>A <a class="el" href="class_filter_input_stream.html" title="Filter input stream.">FilterInputStream</a> that adds buffer functionality to an <a class="el" href="class_input_stream.html" title="Input stream.">InputStream</a> for added performance. MT-unsafe implementation.</p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a03e9b586a84705fd08f3cca37c1115b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e9b586a84705fd08f3cca37c1115b2">&#9670;&nbsp;</a></span>BufferedInputStream() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BufferedInputStream::BufferedInputStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the buffered input stream. </p>
+
+</div>
+</div>
 <a id="a5e43f45d3fddeda6b38264a9edd04d37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e43f45d3fddeda6b38264a9edd04d37">&#9670;&nbsp;</a></span>BufferedInputStream()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e43f45d3fddeda6b38264a9edd04d37">&#9670;&nbsp;</a></span>BufferedInputStream() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +198,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>The input stream. </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the buffer. Default is given by DEFAULT_BUFFER_SIZE. The size cannot... </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the buffer. Default is given by DEFAULT_BUFFER_SIZE. </td></tr>
   </table>
   </dd>
 </dl>
@@ -228,6 +250,24 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Available number of bytes in stream. </dd></dl>
 
 <p>Implements <a class="el" href="class_input_stream.html#a3454fa2fb231080a0f8cf1c20308e805">InputStream</a>.</p>
+
+</div>
+</div>
+<a id="ae85e4b103cdcfe6dc6658fd0fabf2f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae85e4b103cdcfe6dc6658fd0fabf2f93">&#9670;&nbsp;</a></span>fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BufferedInputStream::fill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Requests buffer to be filled. </p>
 
 </div>
 </div>

@@ -61,58 +61,50 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/concurrency/MutualExclusion.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/concurrency/Thread.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/ResourceException.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/concurrency/Lock.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;base/concurrency/MutualExclusionException.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;base/Resource.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_recursive_mutual_exclusion.html">   30</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a> : <span class="keyword">public</span> <a class="code" href="class_mutual_exclusion.html">Lock</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="class_spin_lock.html">SpinLock</a> <a class="code" href="class_spin_lock.html">Guard</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="class_mutual_exclusion.html">MutualExclusion</a> <a class="code" href="class_lock.html#a7d9ec0fb1542999869d9d2dfa7e08c17">Lock</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="class_spin_lock.html">Guard</a> guard;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="class_mutual_exclusion.html">Lock</a> lock;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="class_thread.html#a5e0db4daf53f02c3de48bb3010a39bcd">Thread::Identifier</a> owner = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfLocks = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="class_exclusive_synchronize.html">ExclusiveSynchronize&lt;RecursiveMutualExclusion&gt;</a> <a class="code" href="class_exclusive_synchronize.html">Sync</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_mutual_exclusion.html#a84038b0e260111e182d74c25ec3ee08d">exclusiveLock</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_mutual_exclusion.html#a707d5bc1253fcb6d9a622b561ab130dc">tryExclusiveLock</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_mutual_exclusion.html#a0f07fa2f777344a14f84f7dd2054d927">sharedLock</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="class_mutual_exclusion.html#a84038b0e260111e182d74c25ec3ee08d">exclusiveLock</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_mutual_exclusion.html#ada7f47373ae36f99030df9ec6cb80320">trySharedLock</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_mutual_exclusion.html#a707d5bc1253fcb6d9a622b561ab130dc">tryExclusiveLock</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_recursive_mutual_exclusion.html#a77a0141278e9c59144dae3e5a02d9fe6">   99</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_mutual_exclusion.html#afc7b199da786ca6faa8ea94325336d9e">releaseLock</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  ~<a class="code" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a>();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_recursive_mutual_exclusion.html">   32</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a> : <span class="keyword">public</span> <a class="code" href="class_resource.html">Resource</a>, <span class="keyword">public</span> <a class="code" href="class_lock.html">Lock</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="class_exclusive_synchronize.html">ExclusiveSynchronize&lt;RecursiveMutualExclusion&gt;</a> <a class="code" href="class_exclusive_synchronize.html">Sync</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_lock.html#a0d9754c851e7c09d4e94e81b858c2d92">exclusiveLock</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_lock.html#a210b3c1367d08efdac8996af78353a0e">tryExclusiveLock</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_lock.html#a040a8299840f86b107f6a410ed6667c2">sharedLock</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_lock.html#a0d9754c851e7c09d4e94e81b858c2d92">exclusiveLock</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_lock.html#a43c8b5e64f795c53e6fc71b9e69797b8">trySharedLock</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_lock.html#a210b3c1367d08efdac8996af78353a0e">tryExclusiveLock</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_recursive_mutual_exclusion.html#a77a0141278e9c59144dae3e5a02d9fe6">   89</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_lock.html#ad36e698a8e5ecc769e60a99c3d0528ae">releaseLock</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  ~<a class="code" href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_mutual_exclusion_html_a84038b0e260111e182d74c25ec3ee08d"><div class="ttname"><a href="class_mutual_exclusion.html#a84038b0e260111e182d74c25ec3ee08d">MutualExclusion::exclusiveLock</a></div><div class="ttdeci">void exclusiveLock() const</div></div>
-<div class="ttc" id="aclass_mutual_exclusion_html"><div class="ttname"><a href="class_mutual_exclusion.html">MutualExclusion</a></div><div class="ttdoc">Mutual exclusion synchronization object.</div><div class="ttdef"><b>Definition:</b> MutualExclusion.h:34</div></div>
-<div class="ttc" id="aclass_recursive_mutual_exclusion_html"><div class="ttname"><a href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a></div><div class="ttdoc">Recursive mutual exclusion synchronization object.</div><div class="ttdef"><b>Definition:</b> RecursiveMutualExclusion.h:30</div></div>
-<div class="ttc" id="aclass_thread_html_a5e0db4daf53f02c3de48bb3010a39bcd"><div class="ttname"><a href="class_thread.html#a5e0db4daf53f02c3de48bb3010a39bcd">Thread::Identifier</a></div><div class="ttdeci">void * Identifier</div><div class="ttdef"><b>Definition:</b> Thread.h:83</div></div>
-<div class="ttc" id="aclass_mutual_exclusion_html_ada7f47373ae36f99030df9ec6cb80320"><div class="ttname"><a href="class_mutual_exclusion.html#ada7f47373ae36f99030df9ec6cb80320">MutualExclusion::trySharedLock</a></div><div class="ttdeci">bool trySharedLock() const</div><div class="ttdef"><b>Definition:</b> MutualExclusion.h:95</div></div>
+<div class="ttc" id="aclass_recursive_mutual_exclusion_html"><div class="ttname"><a href="class_recursive_mutual_exclusion.html">RecursiveMutualExclusion</a></div><div class="ttdoc">Recursive mutual exclusion synchronization object.</div><div class="ttdef"><b>Definition:</b> RecursiveMutualExclusion.h:32</div></div>
+<div class="ttc" id="aclass_lock_html"><div class="ttname"><a href="class_lock.html">Lock</a></div><div class="ttdoc">Lock interface.</div><div class="ttdef"><b>Definition:</b> Lock.h:30</div></div>
+<div class="ttc" id="aclass_lock_html_ad36e698a8e5ecc769e60a99c3d0528ae"><div class="ttname"><a href="class_lock.html#ad36e698a8e5ecc769e60a99c3d0528ae">Lock::releaseLock</a></div><div class="ttdeci">virtual void releaseLock() const =0</div></div>
+<div class="ttc" id="aclass_resource_html"><div class="ttname"><a href="class_resource.html">Resource</a></div><div class="ttdef"><b>Definition:</b> Resource.h:24</div></div>
 <div class="ttc" id="aclass_exclusive_synchronize_html"><div class="ttname"><a href="class_exclusive_synchronize.html">ExclusiveSynchronize</a></div><div class="ttdoc">Exclusive synchronization.</div><div class="ttdef"><b>Definition:</b> ExclusiveSynchronize.h:58</div></div>
-<div class="ttc" id="aclass_lock_html_a7d9ec0fb1542999869d9d2dfa7e08c17"><div class="ttname"><a href="class_lock.html#a7d9ec0fb1542999869d9d2dfa7e08c17">Lock::Lock</a></div><div class="ttdeci">Lock() noexcept</div><div class="ttdef"><b>Definition:</b> Lock.h:55</div></div>
-<div class="ttc" id="aclass_mutual_exclusion_html_a0f07fa2f777344a14f84f7dd2054d927"><div class="ttname"><a href="class_mutual_exclusion.html#a0f07fa2f777344a14f84f7dd2054d927">MutualExclusion::sharedLock</a></div><div class="ttdeci">void sharedLock() const</div><div class="ttdef"><b>Definition:</b> MutualExclusion.h:83</div></div>
-<div class="ttc" id="aclass_mutual_exclusion_html_afc7b199da786ca6faa8ea94325336d9e"><div class="ttname"><a href="class_mutual_exclusion.html#afc7b199da786ca6faa8ea94325336d9e">MutualExclusion::releaseLock</a></div><div class="ttdeci">void releaseLock() const</div></div>
-<div class="ttc" id="aclass_mutual_exclusion_html_a707d5bc1253fcb6d9a622b561ab130dc"><div class="ttname"><a href="class_mutual_exclusion.html#a707d5bc1253fcb6d9a622b561ab130dc">MutualExclusion::tryExclusiveLock</a></div><div class="ttdeci">bool tryExclusiveLock() const</div></div>
-<div class="ttc" id="aclass_spin_lock_html"><div class="ttname"><a href="class_spin_lock.html">SpinLock</a></div><div class="ttdoc">Spin lock (fast).</div><div class="ttdef"><b>Definition:</b> SpinLock.h:32</div></div>
+<div class="ttc" id="aclass_lock_html_a0d9754c851e7c09d4e94e81b858c2d92"><div class="ttname"><a href="class_lock.html#a0d9754c851e7c09d4e94e81b858c2d92">Lock::exclusiveLock</a></div><div class="ttdeci">virtual void exclusiveLock() const =0</div></div>
+<div class="ttc" id="aclass_lock_html_a43c8b5e64f795c53e6fc71b9e69797b8"><div class="ttname"><a href="class_lock.html#a43c8b5e64f795c53e6fc71b9e69797b8">Lock::trySharedLock</a></div><div class="ttdeci">virtual bool trySharedLock() const =0</div></div>
+<div class="ttc" id="aclass_lock_html_a210b3c1367d08efdac8996af78353a0e"><div class="ttname"><a href="class_lock.html#a210b3c1367d08efdac8996af78353a0e">Lock::tryExclusiveLock</a></div><div class="ttdeci">virtual bool tryExclusiveLock() const =0</div></div>
+<div class="ttc" id="aclass_lock_html_a040a8299840f86b107f6a410ed6667c2"><div class="ttname"><a href="class_lock.html#a040a8299840f86b107f6a410ed6667c2">Lock::sharedLock</a></div><div class="ttdeci">virtual void sharedLock() const =0</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

@@ -276,7 +276,7 @@ $(function() {
 <div class="line"><span class="comment">//          &lt;&lt; &quot;enumeration={&quot;;</span></div>
 <div class="line"><span class="comment">//     Array&lt;String&gt;::ReadEnumerator enu = enumeration.getReadEnumerator();</span></div>
 <div class="line"><span class="comment">//     while (enu.hasNext()) {</span></div>
-<div class="line"><span class="comment">//       fout &lt;&lt; quote(*enu.next());</span></div>
+<div class="line"><span class="comment">//       fout &lt;&lt; quote(enu.next());</span></div>
 <div class="line"><span class="comment">//       if (enu.hasNext()) {</span></div>
 <div class="line"><span class="comment">//         fout &lt;&lt; &#39;,&#39;;</span></div>
 <div class="line"><span class="comment">//       }</span></div>
@@ -428,7 +428,7 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">    </div>
 <div class="line">    stream &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; FLUSH;</div>
-<div class="line">    <span class="keywordflow">return</span> stream.<a name="a29"></a><a class="code" href="class_string_output_stream.html#ac7da39327261de7ff1bbd3c0585cacb3">getString</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> stream.<a name="a29"></a><a class="code" href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">getString</a>();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">void</span> comment(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; data) noexcept {</div>
@@ -520,7 +520,7 @@ $(function() {
 <div class="line">         &lt;&lt; <span class="stringliteral">&quot;enumeration={&quot;</span>;</div>
 <div class="line">    <a name="_a30"></a><a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = enumeration.<a name="a31"></a><a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
-<div class="line">      fout &lt;&lt; quote(*enu.next());</div>
+<div class="line">      fout &lt;&lt; quote(enu.next());</div>
 <div class="line">      <span class="keywordflow">if</span> (enu.hasNext()) {</div>
 <div class="line">        fout &lt;&lt; <span class="charliteral">&#39;,&#39;</span>;</div>
 <div class="line">      }</div>
@@ -733,7 +733,7 @@ $(function() {
 <div class="line">         &lt;&lt; <span class="stringliteral">&quot;enumeration={&quot;</span>;</div>
 <div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = enumeration.<a name="a33"></a><a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
-<div class="line">      fout &lt;&lt; *enu.next();</div>
+<div class="line">      fout &lt;&lt; enu.next();</div>
 <div class="line">      <span class="keywordflow">if</span> (enu.hasNext()) {</div>
 <div class="line">        fout &lt;&lt; <span class="charliteral">&#39;,&#39;</span>;</div>
 <div class="line">      }</div>
@@ -1322,6 +1322,7 @@ $(function() {
 <div class="line"><span class="stringliteral">        parser-&gt;setDTDHandler(tracer);</span></div>
 <div class="line"><span class="stringliteral">        parser-&gt;setContentHandler(tracer);</span></div>
 <div class="line"><span class="stringliteral">        parser-&gt;traverse(document);</span></div>
+<div class="line"><span class="stringliteral">        delete parser;</span></div>
 <div class="line"><span class="stringliteral">        delete tracer;</span></div>
 <div class="line"><span class="stringliteral">        </span></div>
 <div class="line"><span class="stringliteral">//         SAXDumper* dumper = new SAXDumper(parser);</span></div>
@@ -1347,35 +1348,35 @@ $(function() {
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">APPLICATION_STUB(SAXApplication);</span></div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclass_attributes_1_1_attribute_html_abb2dfc9106f2b3cac4eabf66426db9a4"><div class="ttname"><a href="class_attributes_1_1_attribute.html#abb2dfc9106f2b3cac4eabf66426db9a4">Attributes::Attribute::getValue</a></div><div class="ttdeci">const String &amp; getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> Attributes.h:109</div></div>
+<div class="ttc" id="aclass_attributes_1_1_attribute_html_abb2dfc9106f2b3cac4eabf66426db9a4"><div class="ttname"><a href="class_attributes_1_1_attribute.html#abb2dfc9106f2b3cac4eabf66426db9a4">Attributes::Attribute::getValue</a></div><div class="ttdeci">const String &amp; getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> Attributes.h:114</div></div>
 <div class="ttc" id="aclass_x_m_l_reader_1_1_locator_html"><div class="ttname"><a href="class_x_m_l_reader_1_1_locator.html">XMLReader::Locator</a></div><div class="ttdef"><b>Definition:</b> XMLReader.h:252</div></div>
 <div class="ttc" id="aclass_x_m_l_reader_1_1_content_handler_html"><div class="ttname"><a href="class_x_m_l_reader_1_1_content_handler.html">XMLReader::ContentHandler</a></div><div class="ttdoc">Basic interface for SAX error handlers.</div><div class="ttdef"><b>Definition:</b> XMLReader.h:261</div></div>
-<div class="ttc" id="aclass_attributes_1_1_attribute_html_ac96405ba400154c2e8396ed9607fc7c3"><div class="ttname"><a href="class_attributes_1_1_attribute.html#ac96405ba400154c2e8396ed9607fc7c3">Attributes::Attribute::getName</a></div><div class="ttdeci">const String &amp; getName() const noexcept</div><div class="ttdef"><b>Definition:</b> Attributes.h:102</div></div>
+<div class="ttc" id="aclass_attributes_1_1_attribute_html_ac96405ba400154c2e8396ed9607fc7c3"><div class="ttname"><a href="class_attributes_1_1_attribute.html#ac96405ba400154c2e8396ed9607fc7c3">Attributes::Attribute::getName</a></div><div class="ttdeci">const String &amp; getName() const noexcept</div><div class="ttdef"><b>Definition:</b> Attributes.h:106</div></div>
 <div class="ttc" id="aclass_document_html_ac2fd914dda9a3a485add9a2ad50f9bae"><div class="ttname"><a href="class_document.html#ac2fd914dda9a3a485add9a2ad50f9bae">Document::createProcessingInstruction</a></div><div class="ttdeci">ProcessingInstruction createProcessingInstruction(const String &amp;target, const String &amp;data)</div></div>
-<div class="ttc" id="aclass_string_html_a65fccc1157873ede654aa52a4d9d1c55"><div class="ttname"><a href="class_string.html#a65fccc1157873ede654aa52a4d9d1c55">String::isProper</a></div><div class="ttdeci">bool isProper() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:356</div></div>
+<div class="ttc" id="aclass_string_html_a65fccc1157873ede654aa52a4d9d1c55"><div class="ttname"><a href="class_string.html#a65fccc1157873ede654aa52a4d9d1c55">String::isProper</a></div><div class="ttdeci">bool isProper() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:483</div></div>
 <div class="ttc" id="aclass_x_m_l_reader_html"><div class="ttname"><a href="class_x_m_l_reader.html">XMLReader</a></div><div class="ttdoc">Support for reading an XML document using callbacks.</div><div class="ttdef"><b>Definition:</b> XMLReader.h:31</div></div>
 <div class="ttc" id="aclass_node_html_ac8f8f37a7785093cf6b952972fdcfd1f"><div class="ttname"><a href="class_node.html#ac8f8f37a7785093cf6b952972fdcfd1f">Node::appendChild</a></div><div class="ttdeci">Node appendChild(Node child)</div></div>
 <div class="ttc" id="aclass_x_m_l_reader_1_1_d_t_d_handler_html"><div class="ttname"><a href="class_x_m_l_reader_1_1_d_t_d_handler.html">XMLReader::DTDHandler</a></div><div class="ttdoc">Receive notification of basic DTD-related events.</div><div class="ttdef"><b>Definition:</b> XMLReader.h:57</div></div>
 <div class="ttc" id="aclass_document_html_a93c4032842191badb5aa482499469231"><div class="ttname"><a href="class_document.html#a93c4032842191badb5aa482499469231">Document::createCDATASection</a></div><div class="ttdeci">CDATASection createCDATASection(const String &amp;data)</div></div>
 <div class="ttc" id="aclass_document_html_a7838bbbc170d80447c89187b2feeaa2d"><div class="ttname"><a href="class_document.html#a7838bbbc170d80447c89187b2feeaa2d">Document::createElementNS</a></div><div class="ttdeci">Element createElementNS(const String &amp;namespaceURI, const String &amp;qualifiedName)</div></div>
-<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:45</div></div>
+<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:47</div></div>
 <div class="ttc" id="aclass_attributes_html"><div class="ttname"><a href="class_attributes.html">Attributes</a></div><div class="ttdoc">List of XML attributes.</div><div class="ttdef"><b>Definition:</b> Attributes.h:29</div></div>
 <div class="ttc" id="aclass_document_type_html"><div class="ttname"><a href="class_document_type.html">DocumentType</a></div><div class="ttdoc">DOM document type node.</div><div class="ttdef"><b>Definition:</b> DocumentType.h:37</div></div>
-<div class="ttc" id="aclass_string_output_stream_html_ac7da39327261de7ff1bbd3c0585cacb3"><div class="ttname"><a href="class_string_output_stream.html#ac7da39327261de7ff1bbd3c0585cacb3">StringOutputStream::getString</a></div><div class="ttdeci">const String &amp; getString() const noexcept</div></div>
 <div class="ttc" id="aclass_document_html_a96fd1277e8fe590e6633e5dc61512e01"><div class="ttname"><a href="class_document.html#a96fd1277e8fe590e6633e5dc61512e01">Document::createComment</a></div><div class="ttdeci">Comment createComment(const String &amp;data)</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">DOM node.</div><div class="ttdef"><b>Definition:</b> Node.h:39</div></div>
 <div class="ttc" id="aclass_document_html_a9efc962668d0152d1dc6454ee52a8cb7"><div class="ttname"><a href="class_document.html#a9efc962668d0152d1dc6454ee52a8cb7">Document::createAndSetDocumentType</a></div><div class="ttdeci">DocumentType createAndSetDocumentType(const String &amp;qualifiedName, const String &amp;publicId, const String &amp;systemId)</div></div>
 <div class="ttc" id="aclass_attributes_1_1_attribute_html"><div class="ttname"><a href="class_attributes_1_1_attribute.html">Attributes::Attribute</a></div><div class="ttdoc">XML attribute.</div><div class="ttdef"><b>Definition:</b> Attributes.h:48</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
-<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:99</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
 <div class="ttc" id="aclass_a_s_c_i_i_traits_html_afeb4bada6cdca54bfa2378cbeac630e4"><div class="ttname"><a href="class_a_s_c_i_i_traits.html#afeb4bada6cdca54bfa2378cbeac630e4">ASCIITraits::isControl</a></div><div class="ttdeci">static bool isControl(char value) noexcept</div><div class="ttdef"><b>Definition:</b> ASCIITraits.h:221</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_a03e6dcdce8844c1c8c522c32cd487e31"><div class="ttname"><a href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">DOMImplementation::createDocument</a></div><div class="ttdeci">Document createDocument(const String &amp;version=&quot;1.0&quot;)</div></div>
 <div class="ttc" id="aclass_element_html"><div class="ttname"><a href="class_element.html">Element</a></div><div class="ttdoc">DOM element node.</div><div class="ttdef"><b>Definition:</b> Element.h:31</div></div>
 <div class="ttc" id="aclass_element_decl_html_a1f6c807f804e47812b7fa8f7aa7a9199"><div class="ttname"><a href="class_element_decl.html#a1f6c807f804e47812b7fa8f7aa7a9199">ElementDecl::ValueType</a></div><div class="ttdeci">ValueType</div><div class="ttdef"><b>Definition:</b> ElementDecl.h:42</div></div>
-<div class="ttc" id="aclass_element_html_a2c328400d380b4eb0a65d5deceb113a4"><div class="ttname"><a href="class_element.html#a2c328400d380b4eb0a65d5deceb113a4">Element::setAttribute</a></div><div class="ttdeci">void setAttribute(const String &amp;name, const String &amp;value)</div><div class="ttdef"><b>Definition:</b> Element.h:81</div></div>
-<div class="ttc" id="aclass_wide_string_html_adca11500daf6ec90011564f68455c640"><div class="ttname"><a href="class_wide_string.html#adca11500daf6ec90011564f68455c640">WideString::ReadIterator</a></div><div class="ttdeci">ReferenceCountedAllocator&lt; ucs4 &gt;::ReadIterator ReadIterator</div><div class="ttdef"><b>Definition:</b> WideString.h:234</div></div>
-<div class="ttc" id="aclass_attributes_html_a4ab33f71566fddabef036b5128c27a91"><div class="ttname"><a href="class_attributes.html#a4ab33f71566fddabef036b5128c27a91">Attributes::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Attributes.h:169</div></div>
-<div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:208</div></div>
+<div class="ttc" id="aclass_element_html_a2c328400d380b4eb0a65d5deceb113a4"><div class="ttname"><a href="class_element.html#a2c328400d380b4eb0a65d5deceb113a4">Element::setAttribute</a></div><div class="ttdeci">void setAttribute(const String &amp;name, const String &amp;value)</div><div class="ttdef"><b>Definition:</b> Element.h:87</div></div>
+<div class="ttc" id="aclass_string_output_stream_html_a5961bae1abf412a65744385e536cc029"><div class="ttname"><a href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">StringOutputStream::getString</a></div><div class="ttdeci">const String &amp; getString() const</div></div>
+<div class="ttc" id="aclass_wide_string_html_adca11500daf6ec90011564f68455c640"><div class="ttname"><a href="class_wide_string.html#adca11500daf6ec90011564f68455c640">WideString::ReadIterator</a></div><div class="ttdeci">ReferenceCountedAllocator&lt; ucs4 &gt;::ReadIterator ReadIterator</div><div class="ttdef"><b>Definition:</b> WideString.h:232</div></div>
+<div class="ttc" id="aclass_attributes_html_a4ab33f71566fddabef036b5128c27a91"><div class="ttname"><a href="class_attributes.html#a4ab33f71566fddabef036b5128c27a91">Attributes::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Attributes.h:179</div></div>
+<div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:205</div></div>
 <div class="ttc" id="aclass_document_html_a8d59e7d028512b88fda2bb1e985d799e"><div class="ttname"><a href="class_document.html#a8d59e7d028512b88fda2bb1e985d799e">Document::createElement</a></div><div class="ttdeci">Element createElement(const String &amp;name)</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html"><div class="ttname"><a href="class_d_o_m_implementation.html">DOMImplementation</a></div><div class="ttdoc">DOM implementation.</div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:32</div></div>
 <div class="ttc" id="aclass_node_html_ab4a34265d0d0836f5d95dcd0cbfe3aaf"><div class="ttname"><a href="class_node.html#ab4a34265d0d0836f5d95dcd0cbfe3aaf">Node::getParent</a></div><div class="ttdeci">Node getParent() const noexcept</div></div>

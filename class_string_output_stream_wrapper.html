@@ -46,24 +46,28 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="_string_output_stream_8h_source.html">base/string/StringOutputStream.h</a>&gt;</code></p>
+
 <p>Inherits <a class="el" href="class_object.html">Object</a>, and <a class="el" href="class_output_stream.html">OutputStream</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a78896d83d96f04dab1556d2b0886d0a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#a78896d83d96f04dab1556d2b0886d0a9">StringOutputStreamWrapper</a> () noexcept</td></tr>
+<tr class="separator:a78896d83d96f04dab1556d2b0886d0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fbf38d981b3a6fe6020053ab089a060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#a0fbf38d981b3a6fe6020053ab089a060">ensureCapacity</a> (MemorySize capacity)</td></tr>
 <tr class="separator:a0fbf38d981b3a6fe6020053ab089a060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aede226c66ec3980aca2b25fd0e0a6c9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#aede226c66ec3980aca2b25fd0e0a6c9c">close</a> ()</td></tr>
 <tr class="separator:aede226c66ec3980aca2b25fd0e0a6c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c54fb6738e7662f46108049964dbf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#a72c54fb6738e7662f46108049964dbf9">flush</a> ()</td></tr>
 <tr class="separator:a72c54fb6738e7662f46108049964dbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab85be54e0c7ac552d35bc470a9a044d8"><td class="memItemLeft" align="right" valign="top"><a id="ab85be54e0c7ac552d35bc470a9a044d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>restart</b> ()</td></tr>
+<tr class="memitem:ab85be54e0c7ac552d35bc470a9a044d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#ab85be54e0c7ac552d35bc470a9a044d8">restart</a> ()</td></tr>
 <tr class="separator:ab85be54e0c7ac552d35bc470a9a044d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf259fdc21835addc0adc36962f4c4bc"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#aaf259fdc21835addc0adc36962f4c4bc">write</a> (const uint8 *buffer, unsigned int size, bool nonblocking=false)</td></tr>
 <tr class="separator:aaf259fdc21835addc0adc36962f4c4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b62b1487581167b90239c3aec139c5"><td class="memItemLeft" align="right" valign="top"><a id="a91b62b1487581167b90239c3aec139c5"></a>
-const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> () const noexcept</td></tr>
+<tr class="memitem:a91b62b1487581167b90239c3aec139c5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#a91b62b1487581167b90239c3aec139c5">getString</a> () const noexcept</td></tr>
 <tr class="separator:a91b62b1487581167b90239c3aec139c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69178a934f6d5384792c5de781667bfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_output_stream_wrapper.html#a69178a934f6d5384792c5de781667bfe">~StringOutputStreamWrapper</a> ()</td></tr>
+<tr class="separator:a69178a934f6d5384792c5de781667bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_stream.html">Stream</a></td></tr>
 <tr class="memitem:a9bdbd72789bbcaffe8f692197ee6ba64 inherit pub_methods_class_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stream.html#a9bdbd72789bbcaffe8f692197ee6ba64">~Stream</a> () noexcept(false)</td></tr>
 <tr class="separator:a9bdbd72789bbcaffe8f692197ee6ba64 inherit pub_methods_class_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -93,6 +97,53 @@ const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td clas
 &#160;</td><td class="memItemRight" valign="bottom"><b>_COM_AZURE_DEV__BASE__OVERRIDE_ALLOC</b> ()</td></tr>
 <tr class="separator:ad15a90a5710a2b5085c37089342e1c17 inherit pub_methods_class_dynamic_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Internal string output stream. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a78896d83d96f04dab1556d2b0886d0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78896d83d96f04dab1556d2b0886d0a9">&#9670;&nbsp;</a></span>StringOutputStreamWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringOutputStreamWrapper::StringOutputStreamWrapper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes buffer. </p>
+
+</div>
+</div>
+<a id="a69178a934f6d5384792c5de781667bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69178a934f6d5384792c5de781667bfe">&#9670;&nbsp;</a></span>~StringOutputStreamWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringOutputStreamWrapper::~StringOutputStreamWrapper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructs buffer. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aede226c66ec3980aca2b25fd0e0a6c9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aede226c66ec3980aca2b25fd0e0a6c9c">&#9670;&nbsp;</a></span>close()</h2>
@@ -116,7 +167,7 @@ const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Closes the stream and releases any system resources associated with the stream. </p>
+<p>Close stream. </p>
 
 <p>Implements <a class="el" href="class_stream.html#af7a33426f29b28ba4a3441b2b4df2f1d">Stream</a>.</p>
 
@@ -163,9 +214,53 @@ const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Forces any buffered bytes to be written out. </p>
+<p>Flush stream. </p>
 
 <p>Implements <a class="el" href="class_output_stream.html#a2b731aef87084c3779bea292f85e800d">OutputStream</a>.</p>
+
+</div>
+</div>
+<a id="a91b62b1487581167b90239c3aec139c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b62b1487581167b90239c3aec139c5">&#9670;&nbsp;</a></span>getString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_string.html">String</a>&amp; StringOutputStreamWrapper::getString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns string. </p>
+
+</div>
+</div>
+<a id="ab85be54e0c7ac552d35bc470a9a044d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85be54e0c7ac552d35bc470a9a044d8">&#9670;&nbsp;</a></span>restart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StringOutputStreamWrapper::restart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Restarts stream. </p>
 
 </div>
 </div>
@@ -208,16 +303,7 @@ const <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes the specified number of bytes in the buffer to the stream. In blocking mode the method does not return until all bytes have been written. In non-blocking mode the total number of bytes written may be any number below or equal to the requested number of bytes.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buffer</td><td>The buffer containing the bytes to be written. </td></tr>
-    <tr><td class="paramname">size</td><td>The number of bytes to be written. </td></tr>
-    <tr><td class="paramname">nonblocking</td><td>Specifies that the method may not block. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The actual number of bytes written to the stream. </dd></dl>
+<p>Writes to string. </p>
 
 <p>Implements <a class="el" href="class_output_stream.html#a1478a1432b2c73a8d07f6b065fbbe1eb">OutputStream</a>.</p>
 

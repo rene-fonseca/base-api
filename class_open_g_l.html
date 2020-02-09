@@ -71,7 +71,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af8eac05546be7d43f0f60e9de186203e"><td class="memItemLeft" align="right" valign="top"><a id="af8eac05546be7d43f0f60e9de186203e"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+<tr class="memitem:a5db04889c4fac7385776eaed7275a8fa"><td class="memItemLeft" align="right" valign="top"><a id="a5db04889c4fac7385776eaed7275a8fa"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<b>VERSION_1_1</b> = 0x0101, 
 <b>VERSION_1_2</b> = 0x0102, 
 <b>VERSION_1_3</b> = 0x0103, 
@@ -808,8 +808,8 @@ Public Types</h2></td></tr>
 <b>FOG_SPECULAR_TEXTURE_WIN</b> = 0x80ec
 <br />
  }</td></tr>
-<tr class="separator:af8eac05546be7d43f0f60e9de186203e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5db04889c4fac7385776eaed7275a8fa"><td class="memItemLeft" align="right" valign="top"><a id="a5db04889c4fac7385776eaed7275a8fa"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+<tr class="separator:a5db04889c4fac7385776eaed7275a8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489d402261a7680ed954770b7cae7907"><td class="memItemLeft" align="right" valign="top"><a id="a489d402261a7680ed954770b7cae7907"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<b>ARB_imaging</b> = 1, 
 <b>ARB_multitexture</b> = 1, 
 <b>TEXTURE_BINDING_3D</b> = 0x806a, 
@@ -1051,7 +1051,7 @@ Public Types</h2></td></tr>
 <b>OPERAND2_ALPHA_EXT</b> = 0x859a
 <br />
  }</td></tr>
-<tr class="separator:a5db04889c4fac7385776eaed7275a8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a489d402261a7680ed954770b7cae7907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b3ff1e727511f174dd3ebab060c9b4c"><td class="memItemLeft" align="right" valign="top"><a id="a2b3ff1e727511f174dd3ebab060c9b4c"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>Function</b>) ()</td></tr>
 <tr class="separator:a2b3ff1e727511f174dd3ebab060c9b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2495,9 +2495,9 @@ const typedef GLubyte *__stdcall *&#160;</td><td class="memItemRight" valign="bo
 <tr class="separator:a5cec457bfcb86a0844f626cc800684d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91ba5ea93eba92f6da02b20d574f9117"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_g_l.html#a91ba5ea93eba92f6da02b20d574f9117">perspective</a> (GLdouble fovy, GLdouble aspectRatio, GLdouble zNear, GLdouble zFar) noexcept</td></tr>
 <tr class="separator:a91ba5ea93eba92f6da02b20d574f9117"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ed8c9cbeaf338cede3c4b7bcbdbfec0"><td class="memItemLeft" align="right" valign="top"><a id="a6ed8c9cbeaf338cede3c4b7bcbdbfec0"></a>
-<a class="el" href="class_vector3_d.html">Vector3D</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>project</b> (<a class="el" href="class_vector3_d.html">Vector3D</a>&lt; double &gt; object, const <a class="el" href="class_matrix4x4.html">Matrix4x4</a>&lt; double &gt; model, const <a class="el" href="class_matrix4x4.html">Matrix4x4</a>&lt; double &gt; projection, const GLint viewport[4])</td></tr>
-<tr class="separator:a6ed8c9cbeaf338cede3c4b7bcbdbfec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1520171383b7d7c5992ead0f66574325"><td class="memItemLeft" align="right" valign="top"><a id="a1520171383b7d7c5992ead0f66574325"></a>
+<a class="el" href="class_vector3_d.html">Vector3D</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>project</b> (const <a class="el" href="class_vector3_d.html">Vector3D</a>&lt; double &gt; &amp;object, const <a class="el" href="class_matrix4x4.html">Matrix4x4</a>&lt; double &gt; &amp;model, const <a class="el" href="class_matrix4x4.html">Matrix4x4</a>&lt; double &gt; &amp;projection, const GLint viewport[4])</td></tr>
+<tr class="separator:a1520171383b7d7c5992ead0f66574325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a081d533a8f8e9c362d11359097a4fb44"><td class="memItemLeft" align="right" valign="top"><a id="a081d533a8f8e9c362d11359097a4fb44"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>pickMatrix</b> (GLdouble x, GLdouble y, GLdouble width, GLdouble height, GLint viewport[4]) noexcept</td></tr>
 <tr class="separator:a081d533a8f8e9c362d11359097a4fb44"><td class="memSeparator" colspan="2">&#160;</td></tr>

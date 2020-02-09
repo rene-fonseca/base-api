@@ -1334,7 +1334,7 @@ $(function() {
 <div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;    <span class="comment">// TextureCoordName</span></div>
 <div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    S = 0x2000,</div>
 <div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;    T = 0x2001,</div>
-<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    R = 0x2002,</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    <a class="code" href="class_reference.html">R</a> = 0x2002,</div>
 <div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;    Q = 0x2003,</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160; </div>
 <div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;    <span class="comment">// TexCoordPointerType</span></div>
@@ -3068,198 +3068,227 @@ $(function() {
 <div class="line"><a name="l03076"></a><span class="lineno"> 3076</span>&#160;  <span class="keyword">typedef</span> void (CALL_OPENGL *WindowPos3sv)(<span class="keyword">const</span> GLshort* p);</div>
 <div class="line"><a name="l03077"></a><span class="lineno"> 3077</span>&#160;  WindowPos3sv glWindowPos3sv;</div>
 <div class="line"><a name="l03078"></a><span class="lineno"> 3078</span>&#160;  </div>
-<div class="line"><a name="l03082"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a102655a053f9b5f72137f2893ca0b758"> 3082</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_open_g_l.html#a102655a053f9b5f72137f2893ca0b758">ortho2D</a>(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top) noexcept {</div>
-<div class="line"><a name="l03083"></a><span class="lineno"> 3083</span>&#160;    glOrtho(left, right, bottom, top, -1, 1);</div>
-<div class="line"><a name="l03084"></a><span class="lineno"> 3084</span>&#160;  }</div>
-<div class="line"><a name="l03085"></a><span class="lineno"> 3085</span>&#160; </div>
-<div class="line"><a name="l03089"></a><span class="lineno"> 3089</span>&#160;  <span class="keywordtype">void</span> lookAt(<span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; eye, <span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; center, <span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; up) noexcept;</div>
-<div class="line"><a name="l03090"></a><span class="lineno"> 3090</span>&#160; </div>
-<div class="line"><a name="l03099"></a><span class="lineno"> 3099</span>&#160;  <span class="keywordtype">void</span> perspective(GLdouble fovy, GLdouble aspectRatio, GLdouble zNear, GLdouble zFar) noexcept;</div>
-<div class="line"><a name="l03100"></a><span class="lineno"> 3100</span>&#160;  </div>
-<div class="line"><a name="l03101"></a><span class="lineno"> 3101</span>&#160;  <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a> project(<a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a> <span class="keywordtype">object</span>, <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a> model, <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a> projection, <span class="keyword">const</span> GLint viewport[4]);</div>
-<div class="line"><a name="l03102"></a><span class="lineno"> 3102</span>&#160;  </div>
-<div class="line"><a name="l03103"></a><span class="lineno"> 3103</span>&#160;  <span class="keywordtype">void</span> pickMatrix(GLdouble x, GLdouble y, GLdouble width, GLdouble height, GLint viewport[4]) noexcept;</div>
-<div class="line"><a name="l03104"></a><span class="lineno"> 3104</span>&#160;  </div>
-<div class="line"><a name="l03105"></a><span class="lineno"> 3105</span>&#160;  <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a> unProject(<span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; window, <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a>&amp; model, <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a>&amp; projection, <span class="keyword">const</span> GLint viewport[4]);</div>
-<div class="line"><a name="l03106"></a><span class="lineno"> 3106</span>&#160; </div>
-<div class="line"><a name="l03115"></a><span class="lineno"> 3115</span>&#160;  <span class="keywordtype">void</span> box(<span class="keywordtype">double</span> width, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags) noexcept;</div>
-<div class="line"><a name="l03116"></a><span class="lineno"> 3116</span>&#160;  </div>
-<div class="line"><a name="l03117"></a><span class="lineno"> 3117</span>&#160;  <span class="keywordtype">void</span> cylinder(GLdouble baseRadius, GLdouble topRadius, GLdouble height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stacks) noexcept;</div>
-<div class="line"><a name="l03118"></a><span class="lineno"> 3118</span>&#160;  </div>
-<div class="line"><a name="l03119"></a><span class="lineno"> 3119</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> cone(GLdouble baseRadius, GLdouble height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stacks) noexcept {</div>
-<div class="line"><a name="l03120"></a><span class="lineno"> 3120</span>&#160;    cylinder(baseRadius, 0, height, slices, stacks);</div>
-<div class="line"><a name="l03121"></a><span class="lineno"> 3121</span>&#160;  }</div>
-<div class="line"><a name="l03122"></a><span class="lineno"> 3122</span>&#160; </div>
-<div class="line"><a name="l03123"></a><span class="lineno"> 3123</span>&#160;  <span class="keywordtype">void</span> disk(<span class="keywordtype">double</span> innerRadius, <span class="keywordtype">double</span> outerRadius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loops) noexcept;</div>
-<div class="line"><a name="l03124"></a><span class="lineno"> 3124</span>&#160; </div>
-<div class="line"><a name="l03125"></a><span class="lineno"> 3125</span>&#160;  <span class="keywordtype">void</span> partialDisk(GLdouble innerRadius, GLdouble outerRadius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loops, GLdouble startAngle, GLdouble sweepAngle) noexcept;</div>
-<div class="line"><a name="l03126"></a><span class="lineno"> 3126</span>&#160; </div>
-<div class="line"><a name="l03134"></a><span class="lineno"> 3134</span>&#160;  <span class="keywordtype">void</span> sphere(<span class="keywordtype">double</span> radius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stacks) noexcept;</div>
-<div class="line"><a name="l03135"></a><span class="lineno"> 3135</span>&#160; </div>
-<div class="line"><a name="l03144"></a><span class="lineno"> 3144</span>&#160;  <span class="keywordtype">void</span> torus(GLdouble innerRadius, GLdouble outerRadius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfRings, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfSides) noexcept;</div>
-<div class="line"><a name="l03145"></a><span class="lineno"> 3145</span>&#160;  </div>
-<div class="line"><a name="l03151"></a><span class="lineno"> 3151</span>&#160;  <a class="code" href="class_open_g_l.html">OpenGL</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> latest = 0x010400);</div>
-<div class="line"><a name="l03152"></a><span class="lineno"> 3152</span>&#160; </div>
-<div class="line"><a name="l03156"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a51f0ad5fc0317c034448e89da18ad9aa"> 3156</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_open_g_l.html#a51f0ad5fc0317c034448e89da18ad9aa">getSpecification</a>() noexcept {</div>
-<div class="line"><a name="l03157"></a><span class="lineno"> 3157</span>&#160;    <span class="keywordflow">return</span> specification;</div>
-<div class="line"><a name="l03158"></a><span class="lineno"> 3158</span>&#160;  }</div>
-<div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160; </div>
-<div class="line"><a name="l03163"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a330c25af22a1636db8bad6ec4633b37f"> 3163</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a330c25af22a1636db8bad6ec4633b37f">getVendor</a>() noexcept {</div>
-<div class="line"><a name="l03164"></a><span class="lineno"> 3164</span>&#160;    <span class="keyword">const</span> GLubyte* vendor = glGetString(OpenGL::VENDOR);</div>
-<div class="line"><a name="l03165"></a><span class="lineno"> 3165</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(vendor));</div>
-<div class="line"><a name="l03166"></a><span class="lineno"> 3166</span>&#160;  }</div>
-<div class="line"><a name="l03167"></a><span class="lineno"> 3167</span>&#160; </div>
-<div class="line"><a name="l03171"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a58d6b0e3dbb2025ba1d6b36996c41c53"> 3171</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a58d6b0e3dbb2025ba1d6b36996c41c53">getRenderer</a>() noexcept {</div>
-<div class="line"><a name="l03172"></a><span class="lineno"> 3172</span>&#160;    <span class="keyword">const</span> GLubyte* renderer = glGetString(OpenGL::RENDERER);</div>
-<div class="line"><a name="l03173"></a><span class="lineno"> 3173</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(renderer));</div>
-<div class="line"><a name="l03174"></a><span class="lineno"> 3174</span>&#160;  }</div>
-<div class="line"><a name="l03175"></a><span class="lineno"> 3175</span>&#160;  </div>
-<div class="line"><a name="l03179"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a3d4f68e79bd2ef0cc53e54c808e84b6a"> 3179</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a3d4f68e79bd2ef0cc53e54c808e84b6a">getVersion</a>() noexcept {</div>
-<div class="line"><a name="l03180"></a><span class="lineno"> 3180</span>&#160;    <span class="keyword">const</span> GLubyte* version = glGetString(OpenGL::VERSION);</div>
-<div class="line"><a name="l03181"></a><span class="lineno"> 3181</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(version));</div>
-<div class="line"><a name="l03182"></a><span class="lineno"> 3182</span>&#160;  }</div>
-<div class="line"><a name="l03183"></a><span class="lineno"> 3183</span>&#160; </div>
-<div class="line"><a name="l03187"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a96f4be123a46b0141dd556a42a8344a1"> 3187</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a96f4be123a46b0141dd556a42a8344a1">getExtensions</a>() noexcept {</div>
-<div class="line"><a name="l03188"></a><span class="lineno"> 3188</span>&#160;    <span class="keyword">const</span> GLubyte* extensions = glGetString(OpenGL::EXTENSIONS);</div>
-<div class="line"><a name="l03189"></a><span class="lineno"> 3189</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(extensions));</div>
-<div class="line"><a name="l03190"></a><span class="lineno"> 3190</span>&#160;  }</div>
-<div class="line"><a name="l03191"></a><span class="lineno"> 3191</span>&#160;  </div>
-<div class="line"><a name="l03195"></a><span class="lineno"> 3195</span>&#160;  <span class="keywordtype">bool</span> isSupported(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
-<div class="line"><a name="l03196"></a><span class="lineno"> 3196</span>&#160; </div>
-<div class="line"><a name="l03197"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_block.html"> 3197</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_block.html">Block</a> {</div>
-<div class="line"><a name="l03198"></a><span class="lineno"> 3198</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l03199"></a><span class="lineno"> 3199</span>&#160;    </div>
-<div class="line"><a name="l03200"></a><span class="lineno"> 3200</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
-<div class="line"><a name="l03201"></a><span class="lineno"> 3201</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03202"></a><span class="lineno"> 3202</span>&#160;    </div>
-<div class="line"><a name="l03203"></a><span class="lineno"> 3203</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_block.html">Block</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL, GLenum mode) noexcept : openGL(_openGL) {</div>
-<div class="line"><a name="l03204"></a><span class="lineno"> 3204</span>&#160;      openGL.glBegin(mode);</div>
-<div class="line"><a name="l03205"></a><span class="lineno"> 3205</span>&#160;    }</div>
-<div class="line"><a name="l03206"></a><span class="lineno"> 3206</span>&#160;    </div>
-<div class="line"><a name="l03207"></a><span class="lineno"> 3207</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_block.html">Block</a>() noexcept {</div>
-<div class="line"><a name="l03208"></a><span class="lineno"> 3208</span>&#160;      openGL.glEnd();</div>
-<div class="line"><a name="l03209"></a><span class="lineno"> 3209</span>&#160;    }</div>
-<div class="line"><a name="l03210"></a><span class="lineno"> 3210</span>&#160;  };</div>
-<div class="line"><a name="l03211"></a><span class="lineno"> 3211</span>&#160;  </div>
-<div class="line"><a name="l03212"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_push_pop.html"> 3212</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_push_pop.html">PushPop</a> {</div>
-<div class="line"><a name="l03213"></a><span class="lineno"> 3213</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l03214"></a><span class="lineno"> 3214</span>&#160;    </div>
-<div class="line"><a name="l03215"></a><span class="lineno"> 3215</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
-<div class="line"><a name="l03216"></a><span class="lineno"> 3216</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03217"></a><span class="lineno"> 3217</span>&#160;    </div>
-<div class="line"><a name="l03218"></a><span class="lineno"> 3218</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_push_pop.html">PushPop</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL) noexcept : openGL(_openGL) {</div>
-<div class="line"><a name="l03219"></a><span class="lineno"> 3219</span>&#160;      openGL.glPushMatrix();</div>
+<div class="line"><a name="l03082"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a102655a053f9b5f72137f2893ca0b758"> 3082</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_open_g_l.html#a102655a053f9b5f72137f2893ca0b758">ortho2D</a>(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top) noexcept</div>
+<div class="line"><a name="l03083"></a><span class="lineno"> 3083</span>&#160;  {</div>
+<div class="line"><a name="l03084"></a><span class="lineno"> 3084</span>&#160;    glOrtho(left, right, bottom, top, -1, 1);</div>
+<div class="line"><a name="l03085"></a><span class="lineno"> 3085</span>&#160;  }</div>
+<div class="line"><a name="l03086"></a><span class="lineno"> 3086</span>&#160; </div>
+<div class="line"><a name="l03090"></a><span class="lineno"> 3090</span>&#160;  <span class="keywordtype">void</span> lookAt(<span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; eye, <span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; center, <span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; up) noexcept;</div>
+<div class="line"><a name="l03091"></a><span class="lineno"> 3091</span>&#160; </div>
+<div class="line"><a name="l03100"></a><span class="lineno"> 3100</span>&#160;  <span class="keywordtype">void</span> perspective(GLdouble fovy, GLdouble aspectRatio, GLdouble zNear, GLdouble zFar) noexcept;</div>
+<div class="line"><a name="l03101"></a><span class="lineno"> 3101</span>&#160;  </div>
+<div class="line"><a name="l03102"></a><span class="lineno"> 3102</span>&#160;  <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a> project(<span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; <span class="keywordtype">object</span>,</div>
+<div class="line"><a name="l03103"></a><span class="lineno"> 3103</span>&#160;                           <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a>&amp; model,</div>
+<div class="line"><a name="l03104"></a><span class="lineno"> 3104</span>&#160;                           <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a>&amp; projection,</div>
+<div class="line"><a name="l03105"></a><span class="lineno"> 3105</span>&#160;                           <span class="keyword">const</span> GLint viewport[4]);</div>
+<div class="line"><a name="l03106"></a><span class="lineno"> 3106</span>&#160;  </div>
+<div class="line"><a name="l03107"></a><span class="lineno"> 3107</span>&#160;  <span class="keywordtype">void</span> pickMatrix(GLdouble x, GLdouble y, GLdouble width, GLdouble height, GLint viewport[4]) noexcept;</div>
+<div class="line"><a name="l03108"></a><span class="lineno"> 3108</span>&#160;  </div>
+<div class="line"><a name="l03109"></a><span class="lineno"> 3109</span>&#160;  <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a> unProject(<span class="keyword">const</span> <a class="code" href="class_vector3_d.html">Vector3D&lt;double&gt;</a>&amp; window,</div>
+<div class="line"><a name="l03110"></a><span class="lineno"> 3110</span>&#160;                             <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a>&amp; model,</div>
+<div class="line"><a name="l03111"></a><span class="lineno"> 3111</span>&#160;                             <span class="keyword">const</span> <a class="code" href="class_matrix4x4.html">Matrix4x4&lt;double&gt;</a>&amp; projection,</div>
+<div class="line"><a name="l03112"></a><span class="lineno"> 3112</span>&#160;                             <span class="keyword">const</span> GLint viewport[4]);</div>
+<div class="line"><a name="l03113"></a><span class="lineno"> 3113</span>&#160; </div>
+<div class="line"><a name="l03122"></a><span class="lineno"> 3122</span>&#160;  <span class="keywordtype">void</span> box(<span class="keywordtype">double</span> width, <span class="keywordtype">double</span> length, <span class="keywordtype">double</span> height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags) noexcept;</div>
+<div class="line"><a name="l03123"></a><span class="lineno"> 3123</span>&#160;  </div>
+<div class="line"><a name="l03124"></a><span class="lineno"> 3124</span>&#160;  <span class="keywordtype">void</span> cylinder(GLdouble baseRadius, GLdouble topRadius, GLdouble height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stacks) noexcept;</div>
+<div class="line"><a name="l03125"></a><span class="lineno"> 3125</span>&#160;  </div>
+<div class="line"><a name="l03126"></a><span class="lineno"> 3126</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> cone(GLdouble baseRadius, GLdouble height, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stacks) noexcept</div>
+<div class="line"><a name="l03127"></a><span class="lineno"> 3127</span>&#160;  {</div>
+<div class="line"><a name="l03128"></a><span class="lineno"> 3128</span>&#160;    cylinder(baseRadius, 0, height, slices, stacks);</div>
+<div class="line"><a name="l03129"></a><span class="lineno"> 3129</span>&#160;  }</div>
+<div class="line"><a name="l03130"></a><span class="lineno"> 3130</span>&#160; </div>
+<div class="line"><a name="l03131"></a><span class="lineno"> 3131</span>&#160;  <span class="keywordtype">void</span> disk(<span class="keywordtype">double</span> innerRadius, <span class="keywordtype">double</span> outerRadius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loops) noexcept;</div>
+<div class="line"><a name="l03132"></a><span class="lineno"> 3132</span>&#160; </div>
+<div class="line"><a name="l03133"></a><span class="lineno"> 3133</span>&#160;  <span class="keywordtype">void</span> partialDisk(GLdouble innerRadius, GLdouble outerRadius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> loops, GLdouble startAngle, GLdouble sweepAngle) noexcept;</div>
+<div class="line"><a name="l03134"></a><span class="lineno"> 3134</span>&#160; </div>
+<div class="line"><a name="l03142"></a><span class="lineno"> 3142</span>&#160;  <span class="keywordtype">void</span> sphere(<span class="keywordtype">double</span> radius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> slices, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> stacks) noexcept;</div>
+<div class="line"><a name="l03143"></a><span class="lineno"> 3143</span>&#160; </div>
+<div class="line"><a name="l03152"></a><span class="lineno"> 3152</span>&#160;  <span class="keywordtype">void</span> torus(GLdouble innerRadius, GLdouble outerRadius, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfRings, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfSides) noexcept;</div>
+<div class="line"><a name="l03153"></a><span class="lineno"> 3153</span>&#160;  </div>
+<div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;  <a class="code" href="class_open_g_l.html">OpenGL</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> latest = 0x010400);</div>
+<div class="line"><a name="l03160"></a><span class="lineno"> 3160</span>&#160; </div>
+<div class="line"><a name="l03164"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a51f0ad5fc0317c034448e89da18ad9aa"> 3164</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_open_g_l.html#a51f0ad5fc0317c034448e89da18ad9aa">getSpecification</a>() noexcept</div>
+<div class="line"><a name="l03165"></a><span class="lineno"> 3165</span>&#160;  {</div>
+<div class="line"><a name="l03166"></a><span class="lineno"> 3166</span>&#160;    <span class="keywordflow">return</span> specification;</div>
+<div class="line"><a name="l03167"></a><span class="lineno"> 3167</span>&#160;  }</div>
+<div class="line"><a name="l03168"></a><span class="lineno"> 3168</span>&#160; </div>
+<div class="line"><a name="l03172"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a330c25af22a1636db8bad6ec4633b37f"> 3172</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a330c25af22a1636db8bad6ec4633b37f">getVendor</a>() noexcept</div>
+<div class="line"><a name="l03173"></a><span class="lineno"> 3173</span>&#160;  {</div>
+<div class="line"><a name="l03174"></a><span class="lineno"> 3174</span>&#160;    <span class="keyword">const</span> GLubyte* vendor = glGetString(OpenGL::VENDOR);</div>
+<div class="line"><a name="l03175"></a><span class="lineno"> 3175</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(vendor));</div>
+<div class="line"><a name="l03176"></a><span class="lineno"> 3176</span>&#160;  }</div>
+<div class="line"><a name="l03177"></a><span class="lineno"> 3177</span>&#160; </div>
+<div class="line"><a name="l03181"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a58d6b0e3dbb2025ba1d6b36996c41c53"> 3181</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a58d6b0e3dbb2025ba1d6b36996c41c53">getRenderer</a>() noexcept</div>
+<div class="line"><a name="l03182"></a><span class="lineno"> 3182</span>&#160;  {</div>
+<div class="line"><a name="l03183"></a><span class="lineno"> 3183</span>&#160;    <span class="keyword">const</span> GLubyte* renderer = glGetString(OpenGL::RENDERER);</div>
+<div class="line"><a name="l03184"></a><span class="lineno"> 3184</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(renderer));</div>
+<div class="line"><a name="l03185"></a><span class="lineno"> 3185</span>&#160;  }</div>
+<div class="line"><a name="l03186"></a><span class="lineno"> 3186</span>&#160;  </div>
+<div class="line"><a name="l03190"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a3d4f68e79bd2ef0cc53e54c808e84b6a"> 3190</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a3d4f68e79bd2ef0cc53e54c808e84b6a">getVersion</a>() noexcept</div>
+<div class="line"><a name="l03191"></a><span class="lineno"> 3191</span>&#160;  {</div>
+<div class="line"><a name="l03192"></a><span class="lineno"> 3192</span>&#160;    <span class="keyword">const</span> GLubyte* version = glGetString(OpenGL::VERSION);</div>
+<div class="line"><a name="l03193"></a><span class="lineno"> 3193</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(version));</div>
+<div class="line"><a name="l03194"></a><span class="lineno"> 3194</span>&#160;  }</div>
+<div class="line"><a name="l03195"></a><span class="lineno"> 3195</span>&#160; </div>
+<div class="line"><a name="l03199"></a><span class="lineno"><a class="line" href="class_open_g_l.html#a96f4be123a46b0141dd556a42a8344a1"> 3199</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> <a class="code" href="class_open_g_l.html#a96f4be123a46b0141dd556a42a8344a1">getExtensions</a>() noexcept</div>
+<div class="line"><a name="l03200"></a><span class="lineno"> 3200</span>&#160;  {</div>
+<div class="line"><a name="l03201"></a><span class="lineno"> 3201</span>&#160;    <span class="keyword">const</span> GLubyte* extensions = glGetString(OpenGL::EXTENSIONS);</div>
+<div class="line"><a name="l03202"></a><span class="lineno"> 3202</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_native_string.html">NativeString</a>(Cast::pointer&lt;const char*&gt;(extensions));</div>
+<div class="line"><a name="l03203"></a><span class="lineno"> 3203</span>&#160;  }</div>
+<div class="line"><a name="l03204"></a><span class="lineno"> 3204</span>&#160;  </div>
+<div class="line"><a name="l03208"></a><span class="lineno"> 3208</span>&#160;  <span class="keywordtype">bool</span> isSupported(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
+<div class="line"><a name="l03209"></a><span class="lineno"> 3209</span>&#160; </div>
+<div class="line"><a name="l03210"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_block.html"> 3210</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_block.html">Block</a> {</div>
+<div class="line"><a name="l03211"></a><span class="lineno"> 3211</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l03212"></a><span class="lineno"> 3212</span>&#160;    </div>
+<div class="line"><a name="l03213"></a><span class="lineno"> 3213</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
+<div class="line"><a name="l03214"></a><span class="lineno"> 3214</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l03215"></a><span class="lineno"> 3215</span>&#160;    </div>
+<div class="line"><a name="l03216"></a><span class="lineno"> 3216</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_block.html">Block</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL, GLenum mode) noexcept</div>
+<div class="line"><a name="l03217"></a><span class="lineno"> 3217</span>&#160;      : openGL(_openGL)</div>
+<div class="line"><a name="l03218"></a><span class="lineno"> 3218</span>&#160;    {</div>
+<div class="line"><a name="l03219"></a><span class="lineno"> 3219</span>&#160;      openGL.glBegin(mode);</div>
 <div class="line"><a name="l03220"></a><span class="lineno"> 3220</span>&#160;    }</div>
 <div class="line"><a name="l03221"></a><span class="lineno"> 3221</span>&#160;    </div>
-<div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_push_pop.html">PushPop</a>() noexcept {</div>
-<div class="line"><a name="l03223"></a><span class="lineno"> 3223</span>&#160;      openGL.glPopMatrix();</div>
-<div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;    }</div>
-<div class="line"><a name="l03225"></a><span class="lineno"> 3225</span>&#160;  };</div>
-<div class="line"><a name="l03226"></a><span class="lineno"> 3226</span>&#160; </div>
-<div class="line"><a name="l03227"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_display_list.html"> 3227</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_display_list.html">DisplayList</a> {</div>
-<div class="line"><a name="l03228"></a><span class="lineno"> 3228</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l03229"></a><span class="lineno"> 3229</span>&#160;    </div>
-<div class="line"><a name="l03230"></a><span class="lineno"> 3230</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
-<div class="line"><a name="l03231"></a><span class="lineno"> 3231</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03232"></a><span class="lineno"> 3232</span>&#160;    </div>
-<div class="line"><a name="l03233"></a><span class="lineno"> 3233</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_display_list.html">DisplayList</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL, GLuint list, GLenum mode = OpenGL::COMPILE) noexcept</div>
-<div class="line"><a name="l03234"></a><span class="lineno"> 3234</span>&#160;      : openGL(_openGL) {</div>
-<div class="line"><a name="l03235"></a><span class="lineno"> 3235</span>&#160;      openGL.glNewList(list, mode);</div>
-<div class="line"><a name="l03236"></a><span class="lineno"> 3236</span>&#160;    }</div>
-<div class="line"><a name="l03237"></a><span class="lineno"> 3237</span>&#160;    </div>
-<div class="line"><a name="l03238"></a><span class="lineno"> 3238</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_display_list.html">DisplayList</a>() noexcept {</div>
-<div class="line"><a name="l03239"></a><span class="lineno"> 3239</span>&#160;      openGL.glEndList();</div>
-<div class="line"><a name="l03240"></a><span class="lineno"> 3240</span>&#160;    }</div>
-<div class="line"><a name="l03241"></a><span class="lineno"> 3241</span>&#160;  };</div>
-<div class="line"><a name="l03242"></a><span class="lineno"> 3242</span>&#160; </div>
-<div class="line"><a name="l03243"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_reserve_display_lists.html"> 3243</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_reserve_display_lists.html">ReserveDisplayLists</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l03244"></a><span class="lineno"> 3244</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l03245"></a><span class="lineno"> 3245</span>&#160;    </div>
-<div class="line"><a name="l03246"></a><span class="lineno"> 3246</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
-<div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset = 0;</div>
-<div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfLists = 0;</div>
-<div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;    <a class="code" href="class_allocator.html">Allocator&lt;unsigned int&gt;</a> objects;</div>
+<div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_block.html">Block</a>() noexcept</div>
+<div class="line"><a name="l03223"></a><span class="lineno"> 3223</span>&#160;    {</div>
+<div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;      openGL.glEnd();</div>
+<div class="line"><a name="l03225"></a><span class="lineno"> 3225</span>&#160;    }</div>
+<div class="line"><a name="l03226"></a><span class="lineno"> 3226</span>&#160;  };</div>
+<div class="line"><a name="l03227"></a><span class="lineno"> 3227</span>&#160;  </div>
+<div class="line"><a name="l03228"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_push_pop.html"> 3228</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_push_pop.html">PushPop</a> {</div>
+<div class="line"><a name="l03229"></a><span class="lineno"> 3229</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l03230"></a><span class="lineno"> 3230</span>&#160;    </div>
+<div class="line"><a name="l03231"></a><span class="lineno"> 3231</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
+<div class="line"><a name="l03232"></a><span class="lineno"> 3232</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l03233"></a><span class="lineno"> 3233</span>&#160;    </div>
+<div class="line"><a name="l03234"></a><span class="lineno"> 3234</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_push_pop.html">PushPop</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL) noexcept</div>
+<div class="line"><a name="l03235"></a><span class="lineno"> 3235</span>&#160;      : openGL(_openGL)</div>
+<div class="line"><a name="l03236"></a><span class="lineno"> 3236</span>&#160;    {</div>
+<div class="line"><a name="l03237"></a><span class="lineno"> 3237</span>&#160;      openGL.glPushMatrix();</div>
+<div class="line"><a name="l03238"></a><span class="lineno"> 3238</span>&#160;    }</div>
+<div class="line"><a name="l03239"></a><span class="lineno"> 3239</span>&#160;    </div>
+<div class="line"><a name="l03240"></a><span class="lineno"> 3240</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_push_pop.html">PushPop</a>() noexcept</div>
+<div class="line"><a name="l03241"></a><span class="lineno"> 3241</span>&#160;    {</div>
+<div class="line"><a name="l03242"></a><span class="lineno"> 3242</span>&#160;      openGL.glPopMatrix();</div>
+<div class="line"><a name="l03243"></a><span class="lineno"> 3243</span>&#160;    }</div>
+<div class="line"><a name="l03244"></a><span class="lineno"> 3244</span>&#160;  };</div>
+<div class="line"><a name="l03245"></a><span class="lineno"> 3245</span>&#160; </div>
+<div class="line"><a name="l03246"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_display_list.html"> 3246</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_display_list.html">DisplayList</a> {</div>
+<div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;    </div>
+<div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
 <div class="line"><a name="l03250"></a><span class="lineno"> 3250</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l03251"></a><span class="lineno"> 3251</span>&#160;    </div>
-<div class="line"><a name="l03252"></a><span class="lineno"> 3252</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_reserve_display_lists.html">ReserveDisplayLists</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _numberOfLists)</div>
-<div class="line"><a name="l03253"></a><span class="lineno"> 3253</span>&#160;      : openGL(_openGL),</div>
-<div class="line"><a name="l03254"></a><span class="lineno"> 3254</span>&#160;        numberOfLists(_numberOfLists),</div>
-<div class="line"><a name="l03255"></a><span class="lineno"> 3255</span>&#160;        objects(_numberOfLists) {</div>
-<div class="line"><a name="l03256"></a><span class="lineno"> 3256</span>&#160;      bassert(numberOfLists &gt; 0, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(<span class="keyword">this</span>));</div>
-<div class="line"><a name="l03257"></a><span class="lineno"> 3257</span>&#160;      offset = openGL.glGenLists(numberOfLists);</div>
-<div class="line"><a name="l03258"></a><span class="lineno"> 3258</span>&#160;      bassert(offset &gt; 0, <a class="code" href="class_open_g_l_exception.html">OpenGLException</a>(<span class="stringliteral">&quot;Display lists exhausted.&quot;</span>, <span class="keyword">this</span>));</div>
-<div class="line"><a name="l03259"></a><span class="lineno"> 3259</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* dest = objects.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>();</div>
-<div class="line"><a name="l03260"></a><span class="lineno"> 3260</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* end = dest + numberOfLists;</div>
-<div class="line"><a name="l03261"></a><span class="lineno"> 3261</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = offset; dest &lt; end; ++id, ++dest) {</div>
-<div class="line"><a name="l03262"></a><span class="lineno"> 3262</span>&#160;        *dest = id;</div>
-<div class="line"><a name="l03263"></a><span class="lineno"> 3263</span>&#160;      }</div>
-<div class="line"><a name="l03264"></a><span class="lineno"> 3264</span>&#160;    }</div>
-<div class="line"><a name="l03265"></a><span class="lineno"> 3265</span>&#160;    </div>
-<div class="line"><a name="l03266"></a><span class="lineno"> 3266</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getOffset() <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l03267"></a><span class="lineno"> 3267</span>&#160;      <span class="keywordflow">return</span> offset;</div>
-<div class="line"><a name="l03268"></a><span class="lineno"> 3268</span>&#160;    }</div>
-<div class="line"><a name="l03269"></a><span class="lineno"> 3269</span>&#160;    </div>
-<div class="line"><a name="l03270"></a><span class="lineno"> 3270</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> execute() <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l03271"></a><span class="lineno"> 3271</span>&#160;      openGL.glCallLists(numberOfLists, UNSIGNED_INT, objects.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>());</div>
-<div class="line"><a name="l03272"></a><span class="lineno"> 3272</span>&#160;    }</div>
-<div class="line"><a name="l03273"></a><span class="lineno"> 3273</span>&#160;    </div>
-<div class="line"><a name="l03274"></a><span class="lineno"> 3274</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_reserve_display_lists.html">ReserveDisplayLists</a>() noexcept {</div>
-<div class="line"><a name="l03275"></a><span class="lineno"> 3275</span>&#160;      openGL.glDeleteLists(offset, numberOfLists);</div>
-<div class="line"><a name="l03276"></a><span class="lineno"> 3276</span>&#160;    }</div>
-<div class="line"><a name="l03277"></a><span class="lineno"> 3277</span>&#160;  };</div>
-<div class="line"><a name="l03278"></a><span class="lineno"> 3278</span>&#160;  </div>
-<div class="line"><a name="l03279"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_reserve_texture.html"> 3279</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_reserve_texture.html">ReserveTexture</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l03280"></a><span class="lineno"> 3280</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l03281"></a><span class="lineno"> 3281</span>&#160;    </div>
-<div class="line"><a name="l03282"></a><span class="lineno"> 3282</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
-<div class="line"><a name="l03283"></a><span class="lineno"> 3283</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> name = 0;</div>
-<div class="line"><a name="l03284"></a><span class="lineno"> 3284</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03285"></a><span class="lineno"> 3285</span>&#160;    </div>
-<div class="line"><a name="l03286"></a><span class="lineno"> 3286</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_reserve_texture.html">ReserveTexture</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL)</div>
-<div class="line"><a name="l03287"></a><span class="lineno"> 3287</span>&#160;      : openGL(_openGL) {</div>
-<div class="line"><a name="l03288"></a><span class="lineno"> 3288</span>&#160;      openGL.glGenTextures(1, &amp;name);</div>
-<div class="line"><a name="l03289"></a><span class="lineno"> 3289</span>&#160;    }</div>
-<div class="line"><a name="l03290"></a><span class="lineno"> 3290</span>&#160;    </div>
-<div class="line"><a name="l03291"></a><span class="lineno"> 3291</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getName() <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l03292"></a><span class="lineno"> 3292</span>&#160;      <span class="keywordflow">return</span> name;</div>
-<div class="line"><a name="l03293"></a><span class="lineno"> 3293</span>&#160;    }</div>
-<div class="line"><a name="l03294"></a><span class="lineno"> 3294</span>&#160;    </div>
-<div class="line"><a name="l03295"></a><span class="lineno"> 3295</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_reserve_texture.html">ReserveTexture</a>() noexcept {</div>
-<div class="line"><a name="l03296"></a><span class="lineno"> 3296</span>&#160;      openGL.glDeleteTextures(1, &amp;name);</div>
-<div class="line"><a name="l03297"></a><span class="lineno"> 3297</span>&#160;    }</div>
-<div class="line"><a name="l03298"></a><span class="lineno"> 3298</span>&#160;  };</div>
-<div class="line"><a name="l03299"></a><span class="lineno"> 3299</span>&#160;};</div>
-<div class="line"><a name="l03300"></a><span class="lineno"> 3300</span>&#160; </div>
-<div class="line"><a name="l03301"></a><span class="lineno"> 3301</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
-<div class="line"><a name="l03302"></a><span class="lineno"> 3302</span>&#160; </div>
-<div class="line"><a name="l03303"></a><span class="lineno"> 3303</span>&#160;<span class="preprocessor">#undef CALL_OPENGL</span></div>
+<div class="line"><a name="l03252"></a><span class="lineno"> 3252</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_display_list.html">DisplayList</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL, GLuint list, GLenum mode = OpenGL::COMPILE) noexcept</div>
+<div class="line"><a name="l03253"></a><span class="lineno"> 3253</span>&#160;      : openGL(_openGL)</div>
+<div class="line"><a name="l03254"></a><span class="lineno"> 3254</span>&#160;    {</div>
+<div class="line"><a name="l03255"></a><span class="lineno"> 3255</span>&#160;      openGL.glNewList(list, mode);</div>
+<div class="line"><a name="l03256"></a><span class="lineno"> 3256</span>&#160;    }</div>
+<div class="line"><a name="l03257"></a><span class="lineno"> 3257</span>&#160;    </div>
+<div class="line"><a name="l03258"></a><span class="lineno"> 3258</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_display_list.html">DisplayList</a>() noexcept</div>
+<div class="line"><a name="l03259"></a><span class="lineno"> 3259</span>&#160;    {</div>
+<div class="line"><a name="l03260"></a><span class="lineno"> 3260</span>&#160;      openGL.glEndList();</div>
+<div class="line"><a name="l03261"></a><span class="lineno"> 3261</span>&#160;    }</div>
+<div class="line"><a name="l03262"></a><span class="lineno"> 3262</span>&#160;  };</div>
+<div class="line"><a name="l03263"></a><span class="lineno"> 3263</span>&#160; </div>
+<div class="line"><a name="l03264"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_reserve_display_lists.html"> 3264</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_reserve_display_lists.html">ReserveDisplayLists</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l03265"></a><span class="lineno"> 3265</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l03266"></a><span class="lineno"> 3266</span>&#160;    </div>
+<div class="line"><a name="l03267"></a><span class="lineno"> 3267</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
+<div class="line"><a name="l03268"></a><span class="lineno"> 3268</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset = 0;</div>
+<div class="line"><a name="l03269"></a><span class="lineno"> 3269</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfLists = 0;</div>
+<div class="line"><a name="l03270"></a><span class="lineno"> 3270</span>&#160;    <a class="code" href="class_allocator.html">Allocator&lt;unsigned int&gt;</a> objects;</div>
+<div class="line"><a name="l03271"></a><span class="lineno"> 3271</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l03272"></a><span class="lineno"> 3272</span>&#160;    </div>
+<div class="line"><a name="l03273"></a><span class="lineno"> 3273</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_reserve_display_lists.html">ReserveDisplayLists</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _numberOfLists)</div>
+<div class="line"><a name="l03274"></a><span class="lineno"> 3274</span>&#160;      : openGL(_openGL),</div>
+<div class="line"><a name="l03275"></a><span class="lineno"> 3275</span>&#160;        numberOfLists(_numberOfLists),</div>
+<div class="line"><a name="l03276"></a><span class="lineno"> 3276</span>&#160;        objects(_numberOfLists)</div>
+<div class="line"><a name="l03277"></a><span class="lineno"> 3277</span>&#160;    {</div>
+<div class="line"><a name="l03278"></a><span class="lineno"> 3278</span>&#160;      bassert(numberOfLists &gt; 0, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l03279"></a><span class="lineno"> 3279</span>&#160;      offset = openGL.glGenLists(numberOfLists);</div>
+<div class="line"><a name="l03280"></a><span class="lineno"> 3280</span>&#160;      bassert(offset &gt; 0, <a class="code" href="class_open_g_l_exception.html">OpenGLException</a>(<span class="stringliteral">&quot;Display lists exhausted.&quot;</span>, <span class="keyword">this</span>));</div>
+<div class="line"><a name="l03281"></a><span class="lineno"> 3281</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* dest = objects.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>();</div>
+<div class="line"><a name="l03282"></a><span class="lineno"> 3282</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* end = dest + numberOfLists;</div>
+<div class="line"><a name="l03283"></a><span class="lineno"> 3283</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = offset; dest &lt; end; ++id, ++dest) {</div>
+<div class="line"><a name="l03284"></a><span class="lineno"> 3284</span>&#160;        *dest = id;</div>
+<div class="line"><a name="l03285"></a><span class="lineno"> 3285</span>&#160;      }</div>
+<div class="line"><a name="l03286"></a><span class="lineno"> 3286</span>&#160;    }</div>
+<div class="line"><a name="l03287"></a><span class="lineno"> 3287</span>&#160;    </div>
+<div class="line"><a name="l03288"></a><span class="lineno"> 3288</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getOffset() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l03289"></a><span class="lineno"> 3289</span>&#160;    {</div>
+<div class="line"><a name="l03290"></a><span class="lineno"> 3290</span>&#160;      <span class="keywordflow">return</span> offset;</div>
+<div class="line"><a name="l03291"></a><span class="lineno"> 3291</span>&#160;    }</div>
+<div class="line"><a name="l03292"></a><span class="lineno"> 3292</span>&#160;    </div>
+<div class="line"><a name="l03293"></a><span class="lineno"> 3293</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> execute() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l03294"></a><span class="lineno"> 3294</span>&#160;    {</div>
+<div class="line"><a name="l03295"></a><span class="lineno"> 3295</span>&#160;      openGL.glCallLists(numberOfLists, UNSIGNED_INT, objects.<a class="code" href="class_allocator.html#abbfd194591389976896abc85ce1f1872">getElements</a>());</div>
+<div class="line"><a name="l03296"></a><span class="lineno"> 3296</span>&#160;    }</div>
+<div class="line"><a name="l03297"></a><span class="lineno"> 3297</span>&#160;    </div>
+<div class="line"><a name="l03298"></a><span class="lineno"> 3298</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_reserve_display_lists.html">ReserveDisplayLists</a>() noexcept</div>
+<div class="line"><a name="l03299"></a><span class="lineno"> 3299</span>&#160;    {</div>
+<div class="line"><a name="l03300"></a><span class="lineno"> 3300</span>&#160;      openGL.glDeleteLists(offset, numberOfLists);</div>
+<div class="line"><a name="l03301"></a><span class="lineno"> 3301</span>&#160;    }</div>
+<div class="line"><a name="l03302"></a><span class="lineno"> 3302</span>&#160;  };</div>
+<div class="line"><a name="l03303"></a><span class="lineno"> 3303</span>&#160;  </div>
+<div class="line"><a name="l03304"></a><span class="lineno"><a class="line" href="class_open_g_l_1_1_reserve_texture.html"> 3304</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_open_g_l_1_1_reserve_texture.html">ReserveTexture</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l03305"></a><span class="lineno"> 3305</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l03306"></a><span class="lineno"> 3306</span>&#160;    </div>
+<div class="line"><a name="l03307"></a><span class="lineno"> 3307</span>&#160;    <a class="code" href="class_open_g_l.html">OpenGL</a>&amp; openGL;</div>
+<div class="line"><a name="l03308"></a><span class="lineno"> 3308</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> name = 0;</div>
+<div class="line"><a name="l03309"></a><span class="lineno"> 3309</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l03310"></a><span class="lineno"> 3310</span>&#160;    </div>
+<div class="line"><a name="l03311"></a><span class="lineno"> 3311</span>&#160;    <span class="keyword">inline</span> <a class="code" href="class_open_g_l_1_1_reserve_texture.html">ReserveTexture</a>(<a class="code" href="class_open_g_l.html">OpenGL</a>&amp; _openGL)</div>
+<div class="line"><a name="l03312"></a><span class="lineno"> 3312</span>&#160;      : openGL(_openGL)</div>
+<div class="line"><a name="l03313"></a><span class="lineno"> 3313</span>&#160;    {</div>
+<div class="line"><a name="l03314"></a><span class="lineno"> 3314</span>&#160;      openGL.glGenTextures(1, &amp;name);</div>
+<div class="line"><a name="l03315"></a><span class="lineno"> 3315</span>&#160;    }</div>
+<div class="line"><a name="l03316"></a><span class="lineno"> 3316</span>&#160;    </div>
+<div class="line"><a name="l03317"></a><span class="lineno"> 3317</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getName() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l03318"></a><span class="lineno"> 3318</span>&#160;    {</div>
+<div class="line"><a name="l03319"></a><span class="lineno"> 3319</span>&#160;      <span class="keywordflow">return</span> name;</div>
+<div class="line"><a name="l03320"></a><span class="lineno"> 3320</span>&#160;    }</div>
+<div class="line"><a name="l03321"></a><span class="lineno"> 3321</span>&#160;    </div>
+<div class="line"><a name="l03322"></a><span class="lineno"> 3322</span>&#160;    <span class="keyword">inline</span> ~<a class="code" href="class_open_g_l_1_1_reserve_texture.html">ReserveTexture</a>() noexcept</div>
+<div class="line"><a name="l03323"></a><span class="lineno"> 3323</span>&#160;    {</div>
+<div class="line"><a name="l03324"></a><span class="lineno"> 3324</span>&#160;      openGL.glDeleteTextures(1, &amp;name);</div>
+<div class="line"><a name="l03325"></a><span class="lineno"> 3325</span>&#160;    }</div>
+<div class="line"><a name="l03326"></a><span class="lineno"> 3326</span>&#160;  };</div>
+<div class="line"><a name="l03327"></a><span class="lineno"> 3327</span>&#160;};</div>
+<div class="line"><a name="l03328"></a><span class="lineno"> 3328</span>&#160; </div>
+<div class="line"><a name="l03329"></a><span class="lineno"> 3329</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l03330"></a><span class="lineno"> 3330</span>&#160; </div>
+<div class="line"><a name="l03331"></a><span class="lineno"> 3331</span>&#160;<span class="preprocessor">#undef CALL_OPENGL</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_out_of_domain_html"><div class="ttname"><a href="class_out_of_domain.html">OutOfDomain</a></div><div class="ttdoc">Out of domain exception.</div><div class="ttdef"><b>Definition:</b> OutOfDomain.h:29</div></div>
 <div class="ttc" id="aclass_vector3_d_html"><div class="ttname"><a href="class_vector3_d.html">Vector3D</a></div><div class="ttdoc">Three-dimensional vector.</div><div class="ttdef"><b>Definition:</b> Vector3D.h:30</div></div>
-<div class="ttc" id="aclass_open_g_l_1_1_reserve_display_lists_html"><div class="ttname"><a href="class_open_g_l_1_1_reserve_display_lists.html">OpenGL::ReserveDisplayLists</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3243</div></div>
-<div class="ttc" id="aclass_open_g_l_1_1_display_list_html"><div class="ttname"><a href="class_open_g_l_1_1_display_list.html">OpenGL::DisplayList</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3227</div></div>
-<div class="ttc" id="aclass_open_g_l_html_a96f4be123a46b0141dd556a42a8344a1"><div class="ttname"><a href="class_open_g_l.html#a96f4be123a46b0141dd556a42a8344a1">OpenGL::getExtensions</a></div><div class="ttdeci">String getExtensions() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3187</div></div>
+<div class="ttc" id="aclass_open_g_l_1_1_reserve_display_lists_html"><div class="ttname"><a href="class_open_g_l_1_1_reserve_display_lists.html">OpenGL::ReserveDisplayLists</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3264</div></div>
+<div class="ttc" id="aclass_open_g_l_1_1_display_list_html"><div class="ttname"><a href="class_open_g_l_1_1_display_list.html">OpenGL::DisplayList</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3246</div></div>
+<div class="ttc" id="aclass_open_g_l_html_a96f4be123a46b0141dd556a42a8344a1"><div class="ttname"><a href="class_open_g_l.html#a96f4be123a46b0141dd556a42a8344a1">OpenGL::getExtensions</a></div><div class="ttdeci">String getExtensions() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3199</div></div>
 <div class="ttc" id="aclass_allocator_html"><div class="ttname"><a href="class_allocator.html">Allocator&lt; unsigned int &gt;</a></div></div>
-<div class="ttc" id="aclass_open_g_l_html_a3d4f68e79bd2ef0cc53e54c808e84b6a"><div class="ttname"><a href="class_open_g_l.html#a3d4f68e79bd2ef0cc53e54c808e84b6a">OpenGL::getVersion</a></div><div class="ttdeci">String getVersion() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3179</div></div>
+<div class="ttc" id="aclass_open_g_l_html_a3d4f68e79bd2ef0cc53e54c808e84b6a"><div class="ttname"><a href="class_open_g_l.html#a3d4f68e79bd2ef0cc53e54c808e84b6a">OpenGL::getVersion</a></div><div class="ttdeci">String getVersion() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3190</div></div>
 <div class="ttc" id="aclass_literal_html"><div class="ttname"><a href="class_literal.html">Literal</a></div><div class="ttdoc">A string literal.</div><div class="ttdef"><b>Definition:</b> Literal.h:28</div></div>
-<div class="ttc" id="aclass_open_g_l_html_a58d6b0e3dbb2025ba1d6b36996c41c53"><div class="ttname"><a href="class_open_g_l.html#a58d6b0e3dbb2025ba1d6b36996c41c53">OpenGL::getRenderer</a></div><div class="ttdeci">String getRenderer() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3171</div></div>
-<div class="ttc" id="aclass_open_g_l_1_1_push_pop_html"><div class="ttname"><a href="class_open_g_l_1_1_push_pop.html">OpenGL::PushPop</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3212</div></div>
+<div class="ttc" id="aclass_open_g_l_html_a58d6b0e3dbb2025ba1d6b36996c41c53"><div class="ttname"><a href="class_open_g_l.html#a58d6b0e3dbb2025ba1d6b36996c41c53">OpenGL::getRenderer</a></div><div class="ttdeci">String getRenderer() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3181</div></div>
+<div class="ttc" id="aclass_open_g_l_1_1_push_pop_html"><div class="ttname"><a href="class_open_g_l_1_1_push_pop.html">OpenGL::PushPop</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3228</div></div>
 <div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
-<div class="ttc" id="aclass_native_string_html"><div class="ttname"><a href="class_native_string.html">NativeString</a></div><div class="ttdef"><b>Definition:</b> Primitives.h:128</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
-<div class="ttc" id="aclass_open_g_l_1_1_reserve_texture_html"><div class="ttname"><a href="class_open_g_l_1_1_reserve_texture.html">OpenGL::ReserveTexture</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3279</div></div>
-<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:99</div></div>
-<div class="ttc" id="aclass_open_g_l_html_a330c25af22a1636db8bad6ec4633b37f"><div class="ttname"><a href="class_open_g_l.html#a330c25af22a1636db8bad6ec4633b37f">OpenGL::getVendor</a></div><div class="ttdeci">String getVendor() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3163</div></div>
+<div class="ttc" id="aclass_native_string_html"><div class="ttname"><a href="class_native_string.html">NativeString</a></div><div class="ttdef"><b>Definition:</b> Primitives.h:163</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_open_g_l_1_1_reserve_texture_html"><div class="ttname"><a href="class_open_g_l_1_1_reserve_texture.html">OpenGL::ReserveTexture</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3304</div></div>
+<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
+<div class="ttc" id="aclass_open_g_l_html_a330c25af22a1636db8bad6ec4633b37f"><div class="ttname"><a href="class_open_g_l.html#a330c25af22a1636db8bad6ec4633b37f">OpenGL::getVendor</a></div><div class="ttdeci">String getVendor() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3172</div></div>
 <div class="ttc" id="aclass_matrix4x4_html"><div class="ttname"><a href="class_matrix4x4.html">Matrix4x4</a></div><div class="ttdoc">4 by 4 matrix.</div><div class="ttdef"><b>Definition:</b> Matrix4x4.h:33</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
 <div class="ttc" id="aclass_open_g_l_exception_html"><div class="ttname"><a href="class_open_g_l_exception.html">OpenGLException</a></div><div class="ttdoc">OpenGL exception.</div><div class="ttdef"><b>Definition:</b> OpenGL.h:431</div></div>
 <div class="ttc" id="aclass_allocator_html_abbfd194591389976896abc85ce1f1872"><div class="ttname"><a href="class_allocator.html#abbfd194591389976896abc85ce1f1872">Allocator::getElements</a></div><div class="ttdeci">TYPE * getElements() noexcept</div><div class="ttdef"><b>Definition:</b> Allocator.h:427</div></div>
-<div class="ttc" id="aclass_get_string_html"><div class="ttname"><a href="class_get_string.html">GetString</a></div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:965</div></div>
+<div class="ttc" id="aclass_get_string_html"><div class="ttname"><a href="class_get_string.html">GetString</a></div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:970</div></div>
 <div class="ttc" id="astruct_open_g_l_1_1_descriptor_html_ab4d2440808568f0996c67016080c4e79"><div class="ttname"><a href="struct_open_g_l_1_1_descriptor.html#ab4d2440808568f0996c67016080c4e79">OpenGL::Descriptor::name</a></div><div class="ttdeci">Literal name</div><div class="ttdef"><b>Definition:</b> OpenGL.h:480</div></div>
 <div class="ttc" id="astruct_open_g_l_1_1_descriptor_html"><div class="ttname"><a href="struct_open_g_l_1_1_descriptor.html">OpenGL::Descriptor</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:478</div></div>
-<div class="ttc" id="aclass_open_g_l_1_1_block_html"><div class="ttname"><a href="class_open_g_l_1_1_block.html">OpenGL::Block</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3197</div></div>
+<div class="ttc" id="aclass_open_g_l_1_1_block_html"><div class="ttname"><a href="class_open_g_l_1_1_block.html">OpenGL::Block</a></div><div class="ttdef"><b>Definition:</b> OpenGL.h:3210</div></div>
+<div class="ttc" id="aclass_reference_html"><div class="ttname"><a href="class_reference.html">Reference</a></div><div class="ttdoc">Automation pointer that counts the number of references to an object.</div><div class="ttdef"><b>Definition:</b> Reference.h:25</div></div>
 <div class="ttc" id="anamespaceopengl_html"><div class="ttname"><a href="namespaceopengl.html">opengl</a></div><div class="ttdoc">This namespace provides OpenGL specific types.</div><div class="ttdef"><b>Definition:</b> OpenGL.h:51</div></div>
-<div class="ttc" id="aclass_open_g_l_html_a51f0ad5fc0317c034448e89da18ad9aa"><div class="ttname"><a href="class_open_g_l.html#a51f0ad5fc0317c034448e89da18ad9aa">OpenGL::getSpecification</a></div><div class="ttdeci">unsigned int getSpecification() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3156</div></div>
+<div class="ttc" id="aclass_open_g_l_html_a51f0ad5fc0317c034448e89da18ad9aa"><div class="ttname"><a href="class_open_g_l.html#a51f0ad5fc0317c034448e89da18ad9aa">OpenGL::getSpecification</a></div><div class="ttdeci">unsigned int getSpecification() noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3164</div></div>
 <div class="ttc" id="aclass_open_g_l_html_a102655a053f9b5f72137f2893ca0b758"><div class="ttname"><a href="class_open_g_l.html#a102655a053f9b5f72137f2893ca0b758">OpenGL::ortho2D</a></div><div class="ttdeci">void ortho2D(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top) noexcept</div><div class="ttdef"><b>Definition:</b> OpenGL.h:3082</div></div>
 <div class="ttc" id="aclass_open_g_l_html"><div class="ttname"><a href="class_open_g_l.html">OpenGL</a></div><div class="ttdoc">OpenGL implementation.</div><div class="ttdef"><b>Definition:</b> OpenGL.h:472</div></div>
 <div class="ttc" id="aclass_type_html"><div class="ttname"><a href="class_type.html">Type</a></div><div class="ttdoc">Type identity.</div><div class="ttdef"><b>Definition:</b> Type.h:31</div></div>

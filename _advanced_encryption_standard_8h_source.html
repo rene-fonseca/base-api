@@ -140,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> operator()(uint8* dest, <span class="keyword">const</span> uint8* src, <span class="keyword">const</span> uint8* schedule) noexcept;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  };</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  Cipher cipher;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  Cipher cipher = CIPHER_256;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">bool</span> inverse = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  uint8 schedule[4 * Cipher256Traits::Nb * (Cipher256Traits::Nr + 1)]; <span class="comment">// worst</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span>  uint8 buffer[Cipher256Traits::BLOCK_SIZE]; <span class="comment">// worst case</span></div>

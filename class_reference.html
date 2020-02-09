@@ -60,8 +60,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a03602a239c370d468e86683756626ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ccfbfbdecb95f1f5a0d3e195fa3063"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference.html#aa3ccfbfbdecb95f1f5a0d3e195fa3063">Reference</a> (const <a class="el" href="class_reference.html">Reference</a> &amp;copy) noexcept</td></tr>
 <tr class="separator:aa3ccfbfbdecb95f1f5a0d3e195fa3063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a093055680ce1a2692253b5cae3aee3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference.html#a3a093055680ce1a2692253b5cae3aee3">Reference</a> (<a class="el" href="class_reference.html">Reference</a> &amp;&amp;move)</td></tr>
-<tr class="separator:a3a093055680ce1a2692253b5cae3aee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6419080bd66d1306e9b8640905471b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reference.html#a2d6419080bd66d1306e9b8640905471b">Reference</a> (<a class="el" href="class_reference.html">Reference</a> &amp;&amp;move) noexcept</td></tr>
+<tr class="separator:a2d6419080bd66d1306e9b8640905471b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e19de9610eea917eecac31ea6dee087"><td class="memTemplParams" colspan="2">template&lt;class POLY &gt; </td></tr>
 <tr class="memitem:a4e19de9610eea917eecac31ea6dee087"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_reference.html#a4e19de9610eea917eecac31ea6dee087">Reference</a> (const <a class="el" href="class_reference.html">Reference</a>&lt; POLY &gt; &amp;copy) noexcept</td></tr>
 <tr class="separator:a4e19de9610eea917eecac31ea6dee087"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,8 +231,8 @@ template&lt;class TYPE &gt; </div>
 
 </div>
 </div>
-<a id="a3a093055680ce1a2692253b5cae3aee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a093055680ce1a2692253b5cae3aee3">&#9670;&nbsp;</a></span>Reference() <span class="overload">[4/5]</span></h2>
+<a id="a2d6419080bd66d1306e9b8640905471b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6419080bd66d1306e9b8640905471b">&#9670;&nbsp;</a></span>Reference() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +252,7 @@ template&lt;class TYPE &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -489,6 +489,8 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the pointer value of this automation pointer. Be careful when utilizing this member function. Its completely up to you to ensure that the reference counting rules aren't violated. Invocation of this method should be avoided. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_hash_table_8cpp-example.html#a12">testsuite/HashTable.cpp</a>, and <a class="el" href="testsuite_2_map_8cpp-example.html#a12">testsuite/Map.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>

@@ -103,7 +103,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Pop on empty stack (exception OutOfRange expected)&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="preprocessor">#if (_COM_AZURE_DEV__BASE__OS != _COM_AZURE_DEV__BASE__WASI)</span></div>
+<div class="line"><span class="preprocessor">#if (!defined(_COM_AZURE_DEV__BASE__NO_EXCEPTIONS)) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__SPARC64) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__POWERPC64) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__S390X)</span></div>
 <div class="line">      stack.<a class="code" href="class_stack.html#a2705b0f7ebcad637badc7d79e719a4cb">pop</a>();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    } <span class="keywordflow">catch</span> (<a name="_a6"></a><a class="code" href="class_out_of_range.html">OutOfRange</a>&amp; e) {</div>
@@ -120,14 +123,14 @@ $(function() {
 <div class="line"> </div>
 <div class="line">APPLICATION_STUB(StackApplication);</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclass_stack_html_a5723ad521fbef21cdd7467b41a16b130"><div class="ttname"><a href="class_stack.html#a5723ad521fbef21cdd7467b41a16b130">Stack::push</a></div><div class="ttdeci">void push(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> Stack.h:399</div></div>
-<div class="ttc" id="aclass_stack_html_a21a713b4ec9874d1fe7f334ac87a2ffb"><div class="ttname"><a href="class_stack.html#a21a713b4ec9874d1fe7f334ac87a2ffb">Stack::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Stack.h:372</div></div>
+<div class="ttc" id="aclass_stack_html_a5723ad521fbef21cdd7467b41a16b130"><div class="ttname"><a href="class_stack.html#a5723ad521fbef21cdd7467b41a16b130">Stack::push</a></div><div class="ttdeci">void push(const TYPE &amp;value)</div><div class="ttdef"><b>Definition:</b> Stack.h:400</div></div>
+<div class="ttc" id="aclass_stack_html_a21a713b4ec9874d1fe7f334ac87a2ffb"><div class="ttname"><a href="class_stack.html#a21a713b4ec9874d1fe7f334ac87a2ffb">Stack::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Stack.h:373</div></div>
 <div class="ttc" id="aclass_stack_html"><div class="ttname"><a href="class_stack.html">Stack</a></div><div class="ttdoc">Stack collection.</div><div class="ttdef"><b>Definition:</b> Stack.h:36</div></div>
-<div class="ttc" id="aclass_stack_html_a2705b0f7ebcad637badc7d79e719a4cb"><div class="ttname"><a href="class_stack.html#a2705b0f7ebcad637badc7d79e719a4cb">Stack::pop</a></div><div class="ttdeci">TYPE pop()</div><div class="ttdef"><b>Definition:</b> Stack.h:411</div></div>
+<div class="ttc" id="aclass_stack_html_a2705b0f7ebcad637badc7d79e719a4cb"><div class="ttname"><a href="class_stack.html#a2705b0f7ebcad637badc7d79e719a4cb">Stack::pop</a></div><div class="ttdeci">TYPE pop()</div><div class="ttdef"><b>Definition:</b> Stack.h:412</div></div>
 <div class="ttc" id="aclass_out_of_range_html"><div class="ttname"><a href="class_out_of_range.html">OutOfRange</a></div><div class="ttdoc">Ouf of range exception.</div><div class="ttdef"><b>Definition:</b> OutOfRange.h:28</div></div>
-<div class="ttc" id="aclass_stack_html_af877c3473770e9471f8d5ddf1377f16e"><div class="ttname"><a href="class_stack.html#af877c3473770e9471f8d5ddf1377f16e">Stack::removeAll</a></div><div class="ttdeci">void removeAll() noexcept</div><div class="ttdef"><b>Definition:</b> Stack.h:467</div></div>
+<div class="ttc" id="aclass_stack_html_af877c3473770e9471f8d5ddf1377f16e"><div class="ttname"><a href="class_stack.html#af877c3473770e9471f8d5ddf1377f16e">Stack::removeAll</a></div><div class="ttdeci">void removeAll() noexcept</div><div class="ttdef"><b>Definition:</b> Stack.h:468</div></div>
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application.</div><div class="ttdef"><b>Definition:</b> Application.h:53</div></div>
-<div class="ttc" id="aclass_stack_html_a99686b8396c8e603d3a8edcc6bcbd395"><div class="ttname"><a href="class_stack.html#a99686b8396c8e603d3a8edcc6bcbd395">Stack::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> Stack.h:380</div></div>
+<div class="ttc" id="aclass_stack_html_a99686b8396c8e603d3a8edcc6bcbd395"><div class="ttname"><a href="class_stack.html#a99686b8396c8e603d3a8edcc6bcbd395">Stack::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> Stack.h:381</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

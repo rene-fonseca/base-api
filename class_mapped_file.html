@@ -42,7 +42,6 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="class_mapped_file-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MappedFile Class Reference<div class="ingroups"><a class="el" href="group__io.html">IO</a></div></div>  </div>
@@ -77,11 +76,6 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7dd2785252752024d12a11661af41b48"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mapped_file.html#a7dd2785252752024d12a11661af41b48">getGranularity</a> () noexcept</td></tr>
 <tr class="separator:a7dd2785252752024d12a11661af41b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac175ff2bb26b61e8809c24b75963db5f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mapped_file.html#ac175ff2bb26b61e8809c24b75963db5f">getHandle</a> (<a class="el" href="class_file.html">File</a> &amp;file) noexcept</td></tr>
-<tr class="separator:ac175ff2bb26b61e8809c24b75963db5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_file.html" title="File.">File</a> region mapper. </p>
@@ -208,33 +202,6 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the required granularity of the file region offset. </p>
-
-</div>
-</div>
-<a id="ac175ff2bb26b61e8809c24b75963db5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac175ff2bb26b61e8809c24b75963db5f">&#9670;&nbsp;</a></span>getHandle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="class_operating_system.html#af78062041361a872cf95fb2e8cf8f1c5">OperatingSystem::Handle</a> MappedFile::getHandle </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_file.html">File</a> &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the handle of the specified file. </p>
 
 </div>
 </div>

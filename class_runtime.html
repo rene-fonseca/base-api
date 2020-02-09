@@ -62,6 +62,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aca872560101313066b10047a02190b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00cd38fe8d229a4c67f506d9242eb72c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#a00cd38fe8d229a4c67f506d9242eb72c">corruption</a> (const char *who)</td></tr>
 <tr class="separator:a00cd38fe8d229a4c67f506d9242eb72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67f0ae69a26cbe6cf2e687e03199cf5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#aa67f0ae69a26cbe6cf2e687e03199cf5">internalError</a> (const char *who, const char *message)</td></tr>
+<tr class="separator:aa67f0ae69a26cbe6cf2e687e03199cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08dc2ee198f71520948c87a0077fc26"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#aa08dc2ee198f71520948c87a0077fc26">getNullPointer</a> () noexcept</td></tr>
+<tr class="separator:aa08dc2ee198f71520948c87a0077fc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_runtime.html">Runtime</a> helper functions. </p>
@@ -90,6 +94,69 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Triggers failure due to corruption. </p>
+
+</div>
+</div>
+<a id="aa08dc2ee198f71520948c87a0077fc26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08dc2ee198f71520948c87a0077fc26">&#9670;&nbsp;</a></span>getNullPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* Runtime::getNullPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns nullptr. </p>
+
+</div>
+</div>
+<a id="aa67f0ae69a26cbe6cf2e687e03199cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67f0ae69a26cbe6cf2e687e03199cf5">&#9670;&nbsp;</a></span>internalError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Runtime::internalError </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>who</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Triggers internal error due to unexpected result. </p>
 
 </div>
 </div>

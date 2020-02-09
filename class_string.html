@@ -42,6 +42,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
@@ -55,8 +56,6 @@ $(function() {
  <a href="class_string.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_string_8h_source.html">base/string/String.h</a>&gt;</code></p>
-
-<p>Inherits <a class="el" href="class_object.html">Object</a>.</p>
 
 <p>Inherited by <a class="el" href="class_string_input_stream.html">StringInputStream</a><code> [protected]</code>.</p>
 <table class="memberdecls">
@@ -88,35 +87,34 @@ typedef <a class="el" href="class_reference_counted_allocator.html">ReferenceCou
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0225bb76bd3527b0e9ec9663c53f873d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a0225bb76bd3527b0e9ec9663c53f873d">String</a> () noexcept</td></tr>
 <tr class="separator:a0225bb76bd3527b0e9ec9663c53f873d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949a49dfd87b6a05d1ea73805a079675"><td class="memItemLeft" align="right" valign="top"><a id="a949a49dfd87b6a05d1ea73805a079675"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (<a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_reference_counted_allocator.html">ReferenceCountedAllocator</a>&lt; char &gt; &gt; string)</td></tr>
+<tr class="separator:a949a49dfd87b6a05d1ea73805a079675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6db09623444250492841e2b19646f43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#aa6db09623444250492841e2b19646f43">String</a> (MemorySize capacity)</td></tr>
 <tr class="separator:aa6db09623444250492841e2b19646f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a701ff2611f6760c7ad153f0d5556654a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a701ff2611f6760c7ad153f0d5556654a">String</a> (<a class="el" href="class_string_1_1_default.html">Default</a> d)</td></tr>
 <tr class="separator:a701ff2611f6760c7ad153f0d5556654a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d46d3de3d1d77280f09a3d1f78139d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a07d46d3de3d1d77280f09a3d1f78139d">String</a> (const <a class="el" href="class_native_string.html">NativeString</a> &amp;string)</td></tr>
 <tr class="separator:a07d46d3de3d1d77280f09a3d1f78139d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe855cd63128c5e22c20fddc351ba80b"><td class="memItemLeft" align="right" valign="top"><a id="abe855cd63128c5e22c20fddc351ba80b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const <a class="el" href="class_literal.html">Literal</a> &amp;string)</td></tr>
+<tr class="memitem:abe855cd63128c5e22c20fddc351ba80b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#abe855cd63128c5e22c20fddc351ba80b">String</a> (const <a class="el" href="class_literal.html">Literal</a> &amp;string)</td></tr>
 <tr class="separator:abe855cd63128c5e22c20fddc351ba80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ed40df855e20c097c1914b4ff0a7f09"><td class="memItemLeft" align="right" valign="top"><a id="a0ed40df855e20c097c1914b4ff0a7f09"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const char *string)</td></tr>
+<tr class="memitem:a0ed40df855e20c097c1914b4ff0a7f09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a0ed40df855e20c097c1914b4ff0a7f09">String</a> (const char *string)</td></tr>
 <tr class="separator:a0ed40df855e20c097c1914b4ff0a7f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c10e46b088d82317437defad2d85d08"><td class="memItemLeft" align="right" valign="top"><a id="a6c10e46b088d82317437defad2d85d08"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const char *string, MemorySize length)</td></tr>
+<tr class="memitem:a6c10e46b088d82317437defad2d85d08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a6c10e46b088d82317437defad2d85d08">String</a> (const char *string, MemorySize length)</td></tr>
 <tr class="separator:a6c10e46b088d82317437defad2d85d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86fba7c3716430d1ce37c4e03fff82e2"><td class="memItemLeft" align="right" valign="top"><a id="a86fba7c3716430d1ce37c4e03fff82e2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const char16_t *string)</td></tr>
-<tr class="separator:a86fba7c3716430d1ce37c4e03fff82e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad81078b2f6adf9ef0491e01ea7628af4"><td class="memItemLeft" align="right" valign="top"><a id="ad81078b2f6adf9ef0491e01ea7628af4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const char32_t *string)</td></tr>
-<tr class="separator:ad81078b2f6adf9ef0491e01ea7628af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a5cd1d94131ce94da18ee2718ebb47"><td class="memItemLeft" align="right" valign="top"><a id="a13a5cd1d94131ce94da18ee2718ebb47"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const wchar *string)</td></tr>
+<tr class="memitem:a13a5cd1d94131ce94da18ee2718ebb47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a13a5cd1d94131ce94da18ee2718ebb47">String</a> (const wchar *string)</td></tr>
 <tr class="separator:a13a5cd1d94131ce94da18ee2718ebb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc4b074b0ecb56125eca1b4aad415af7"><td class="memItemLeft" align="right" valign="top"><a id="adc4b074b0ecb56125eca1b4aad415af7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const wchar *string, MemorySize length)</td></tr>
+<tr class="memitem:adc4b074b0ecb56125eca1b4aad415af7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#adc4b074b0ecb56125eca1b4aad415af7">String</a> (const wchar *string, MemorySize length)</td></tr>
 <tr class="separator:adc4b074b0ecb56125eca1b4aad415af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec15a7d62446a92e5da8e2e5201eb52f"><td class="memItemLeft" align="right" valign="top"><a id="aec15a7d62446a92e5da8e2e5201eb52f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>String</b> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string)</td></tr>
+<tr class="memitem:a86fba7c3716430d1ce37c4e03fff82e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a86fba7c3716430d1ce37c4e03fff82e2">String</a> (const char16_t *string)</td></tr>
+<tr class="separator:a86fba7c3716430d1ce37c4e03fff82e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff51f59be63a36fa189c1058557771e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a9ff51f59be63a36fa189c1058557771e">String</a> (const char16_t *string, MemorySize length)</td></tr>
+<tr class="separator:a9ff51f59be63a36fa189c1058557771e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81078b2f6adf9ef0491e01ea7628af4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#ad81078b2f6adf9ef0491e01ea7628af4">String</a> (const char32_t *string)</td></tr>
+<tr class="separator:ad81078b2f6adf9ef0491e01ea7628af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24f8fbfff990d29d0159606bc92ef0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#af24f8fbfff990d29d0159606bc92ef0a">String</a> (const char32_t *string, MemorySize length)</td></tr>
+<tr class="separator:af24f8fbfff990d29d0159606bc92ef0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec15a7d62446a92e5da8e2e5201eb52f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#aec15a7d62446a92e5da8e2e5201eb52f">String</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string)</td></tr>
 <tr class="separator:aec15a7d62446a92e5da8e2e5201eb52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93c3f397a59cdb5c9eafd2353572e9a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a93c3f397a59cdb5c9eafd2353572e9a9">String</a> (const <a class="el" href="class_native_string.html">NativeString</a> &amp;string, MemorySize maximum)</td></tr>
 <tr class="separator:a93c3f397a59cdb5c9eafd2353572e9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,34 +126,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3e7a13af5165737d2b4635da3d93e35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a43d91bf5efe5d2b0579a71778f4e7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a5a43d91bf5efe5d2b0579a71778f4e7d">String</a> (<a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;stream)</td></tr>
 <tr class="separator:a5a43d91bf5efe5d2b0579a71778f4e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f89fd919a48380a6efca80af5e9cb39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a0f89fd919a48380a6efca80af5e9cb39">operator=</a> (const <a class="el" href="class_string.html">String</a> &amp;<a class="el" href="class_string.html#a0f6b82c597bc3993ea68cbee6531fc64">copy</a>) noexcept</td></tr>
-<tr class="separator:a0f89fd919a48380a6efca80af5e9cb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9cf6ba0030da79a10f73e90b4aba4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#abd9cf6ba0030da79a10f73e90b4aba4a">operator=</a> (const <a class="el" href="class_string.html">String</a> &amp;assign) noexcept</td></tr>
+<tr class="separator:abd9cf6ba0030da79a10f73e90b4aba4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cf1b0d771d25c1fab3474cc889d30b6"><td class="memItemLeft" align="right" valign="top"><a id="a4cf1b0d771d25c1fab3474cc889d30b6"></a>
 <a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_string.html">String</a> &amp;&amp;move) noexcept</td></tr>
 <tr class="separator:a4cf1b0d771d25c1fab3474cc889d30b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc45903454ede638fc7cbed97efdc7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#abdc45903454ede638fc7cbed97efdc7f">operator=</a> (const <a class="el" href="class_literal.html">Literal</a> &amp;assign)</td></tr>
 <tr class="separator:abdc45903454ede638fc7cbed97efdc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d75737426b51337b2a9f03bcefc5b5e"><td class="memItemLeft" align="right" valign="top"><a id="a7d75737426b51337b2a9f03bcefc5b5e"></a>
-<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_native_string.html">NativeString</a> &amp;string)</td></tr>
-<tr class="separator:a7d75737426b51337b2a9f03bcefc5b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a768cb0b5cab4b6939c36ece652346920"><td class="memItemLeft" align="right" valign="top"><a id="a768cb0b5cab4b6939c36ece652346920"></a>
-<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char *string)</td></tr>
-<tr class="separator:a768cb0b5cab4b6939c36ece652346920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7b21aa6234d451288256f8fde9d3021"><td class="memItemLeft" align="right" valign="top"><a id="ac7b21aa6234d451288256f8fde9d3021"></a>
-<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char16_t *string)</td></tr>
-<tr class="separator:ac7b21aa6234d451288256f8fde9d3021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56ac8dc9005bb08cd1228de9f1eb96eb"><td class="memItemLeft" align="right" valign="top"><a id="a56ac8dc9005bb08cd1228de9f1eb96eb"></a>
-<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char32_t *string)</td></tr>
-<tr class="separator:a56ac8dc9005bb08cd1228de9f1eb96eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef077bff00f8a27dd59297e395228e11"><td class="memItemLeft" align="right" valign="top"><a id="aef077bff00f8a27dd59297e395228e11"></a>
-<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const wchar *string)</td></tr>
-<tr class="separator:aef077bff00f8a27dd59297e395228e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4908d71862c7512cd97a351ce2a34fd"><td class="memItemLeft" align="right" valign="top"><a id="ac4908d71862c7512cd97a351ce2a34fd"></a>
-<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;string)</td></tr>
-<tr class="separator:ac4908d71862c7512cd97a351ce2a34fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a7641452a7945f5af9103b247526e2"><td class="memTemplParams" colspan="2"><a id="ab5a7641452a7945f5af9103b247526e2"></a>
-template&lt;MemorySize SIZE&gt; </td></tr>
-<tr class="memitem:ab5a7641452a7945f5af9103b247526e2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const char(&amp;literal)[SIZE])</td></tr>
+<tr class="memitem:a26be6af4422bc961f904d5237d5db8be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a26be6af4422bc961f904d5237d5db8be">operator=</a> (const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;assign)</td></tr>
+<tr class="separator:a26be6af4422bc961f904d5237d5db8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707ef137611a1c7851955f9f3f08757f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a707ef137611a1c7851955f9f3f08757f">operator=</a> (const <a class="el" href="class_native_string.html">NativeString</a> &amp;assign)</td></tr>
+<tr class="separator:a707ef137611a1c7851955f9f3f08757f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f407e5855a44b8079d8facd68fbed7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a4f407e5855a44b8079d8facd68fbed7b">operator=</a> (const char *assign)</td></tr>
+<tr class="separator:a4f407e5855a44b8079d8facd68fbed7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e008c319843b086ed233da521265fac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a7e008c319843b086ed233da521265fac">operator=</a> (const wchar *assign)</td></tr>
+<tr class="separator:a7e008c319843b086ed233da521265fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac3e7a80cdb5ab188ea90be715e04e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#aeac3e7a80cdb5ab188ea90be715e04e2">operator=</a> (const char16_t *assign)</td></tr>
+<tr class="separator:aeac3e7a80cdb5ab188ea90be715e04e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965af55814c71e9c38f75de08485ba31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a965af55814c71e9c38f75de08485ba31">operator=</a> (const char32_t *assign)</td></tr>
+<tr class="separator:a965af55814c71e9c38f75de08485ba31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6951f16bf75c24749a7c0375fee645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a4e6951f16bf75c24749a7c0375fee645">operator=</a> (const <a class="el" href="class_wide_string.html">WideString</a> &amp;assign)</td></tr>
+<tr class="separator:a4e6951f16bf75c24749a7c0375fee645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6dfb839e1508a5395239589ffe69947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#aa6dfb839e1508a5395239589ffe69947">operator=</a> (const <a class="el" href="class_string_output_stream.html">StringOutputStream</a> &amp;assign)</td></tr>
+<tr class="separator:aa6dfb839e1508a5395239589ffe69947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a7641452a7945f5af9103b247526e2"><td class="memTemplParams" colspan="2">template&lt;MemorySize SIZE&gt; </td></tr>
+<tr class="memitem:ab5a7641452a7945f5af9103b247526e2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_string.html#ab5a7641452a7945f5af9103b247526e2">operator=</a> (const char(&amp;literal)[SIZE])</td></tr>
 <tr class="separator:ab5a7641452a7945f5af9103b247526e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f03b86bfcf56cd0da709f95e79b9c9b"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a> () const noexcept</td></tr>
 <tr class="separator:a0f03b86bfcf56cd0da709f95e79b9c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,8 +368,7 @@ template&lt;MemorySize SIZE&gt; </td></tr>
 <tr class="separator:a971dd5c400823af2098e2d479cb69c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb24ae8c6ff2f04ab24f046dca47c4cd"><td class="memItemLeft" align="right" valign="top">MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#adb24ae8c6ff2f04ab24f046dca47c4cd">lastIndexOf</a> (const <a class="el" href="class_string.html">String</a> &amp;string, MemorySize start) const noexcept</td></tr>
 <tr class="separator:adb24ae8c6ff2f04ab24f046dca47c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70244f76201972bdb6e076781daf67f2"><td class="memItemLeft" align="right" valign="top"><a id="a70244f76201972bdb6e076781daf67f2"></a>
-MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><b>lastIndexOf</b> (const <a class="el" href="class_string.html">String</a> &amp;string) const noexcept</td></tr>
+<tr class="memitem:a70244f76201972bdb6e076781daf67f2"><td class="memItemLeft" align="right" valign="top">MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a70244f76201972bdb6e076781daf67f2">lastIndexOf</a> (const <a class="el" href="class_string.html">String</a> &amp;string) const noexcept</td></tr>
 <tr class="separator:a70244f76201972bdb6e076781daf67f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc35365d0a174fca898c7618b5f5f30"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a7cc35365d0a174fca898c7618b5f5f30">count</a> (char ch, MemorySize start=0) const noexcept</td></tr>
 <tr class="separator:a7cc35365d0a174fca898c7618b5f5f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -386,6 +380,8 @@ MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><b>lastIndexOf</b>
 <tr class="separator:ace39b82ea2ba07105c5b5fcbd7286e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e33d2e401ed639f23fddf0b1376f536"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_array.html">Array</a>&lt; <a class="el" href="class_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a4e33d2e401ed639f23fddf0b1376f536">split</a> (char separator, bool group=false) const</td></tr>
 <tr class="separator:a4e33d2e401ed639f23fddf0b1376f536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1f18c022fb1cbcd6b3f25e1da846df"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_reference_counted_allocator.html">ReferenceCountedAllocator</a>&lt; char &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#aec1f18c022fb1cbcd6b3f25e1da846df">getContainer</a> () const</td></tr>
+<tr class="separator:aec1f18c022fb1cbcd6b3f25e1da846df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c52656e2c5dc1f48aeb8e5ae95c7b29"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a2c52656e2c5dc1f48aeb8e5ae95c7b29">getElements</a> ()</td></tr>
 <tr class="separator:a2c52656e2c5dc1f48aeb8e5ae95c7b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa288bcd85ec867adfcb621d2029347"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#adfa288bcd85ec867adfcb621d2029347">invariant</a> () const noexcept</td></tr>
@@ -394,10 +390,37 @@ MemoryDiff&#160;</td><td class="memItemRight" valign="bottom"><b>lastIndexOf</b>
 <tr class="separator:a9fcf5fb1d760ec9c696ed5d98043f6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a066d94d9b9096d93a0070fb31e02fe01"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a066d94d9b9096d93a0070fb31e02fe01">getEnd</a> () const noexcept</td></tr>
 <tr class="separator:a066d94d9b9096d93a0070fb31e02fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7368cb86d241d490186b3f01a17323be"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a7368cb86d241d490186b3f01a17323be">getBytes</a> () const noexcept</td></tr>
-<tr class="separator:a7368cb86d241d490186b3f01a17323be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab66e05c049be3d08a20cd38839a6a3"><td class="memItemLeft" align="right" valign="top">const uint8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a0ab66e05c049be3d08a20cd38839a6a3">getBytes</a> () const noexcept</td></tr>
+<tr class="separator:a0ab66e05c049be3d08a20cd38839a6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3356de4cc61a24f61c35c7fef85fdc5e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a3356de4cc61a24f61c35c7fef85fdc5e">native</a> () const noexcept</td></tr>
 <tr class="separator:a3356de4cc61a24f61c35c7fef85fdc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02193c8b4bce2a05dd651d69a66b0193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a02193c8b4bce2a05dd651d69a66b0193">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a02193c8b4bce2a05dd651d69a66b0193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ffaaca14df06a5aa410d0c9c50d022f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a9ffaaca14df06a5aa410d0c9c50d022f">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a9ffaaca14df06a5aa410d0c9c50d022f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930892e0b2d577ab58682d27e2c5bf72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a930892e0b2d577ab58682d27e2c5bf72">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a930892e0b2d577ab58682d27e2c5bf72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d49801834e22e4427e3eb68e691ee7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a6d49801834e22e4427e3eb68e691ee7e">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a6d49801834e22e4427e3eb68e691ee7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312c47090ea160fbfe207d17fbdd1d3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a312c47090ea160fbfe207d17fbdd1d3c">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a312c47090ea160fbfe207d17fbdd1d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1182be9292f9c1bb6f6c5eefb1fd95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a8d1182be9292f9c1bb6f6c5eefb1fd95">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a8d1182be9292f9c1bb6f6c5eefb1fd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcaefcc9f98f996378019ba1fbb4615"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a1dcaefcc9f98f996378019ba1fbb4615">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:a1dcaefcc9f98f996378019ba1fbb4615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1600137b832d0b3b7f1e7d21b3ee23d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#ad1600137b832d0b3b7f1e7d21b3ee23d">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:ad1600137b832d0b3b7f1e7d21b3ee23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1d01eef65e04116248d739f974d743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#acb1d01eef65e04116248d739f974d743">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:acb1d01eef65e04116248d739f974d743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabec7401b7098b5a95f09561944debb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#adabec7401b7098b5a95f09561944debb">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:adabec7401b7098b5a95f09561944debb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05f1edde6f5c53947c2a712bd497c09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#ae05f1edde6f5c53947c2a712bd497c09">operator()</a> (const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;, const <a class="el" href="class_string.html">String</a> &amp;) const</td></tr>
+<tr class="separator:ae05f1edde6f5c53947c2a712bd497c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5aa1e6b91e13a2f5f7c8fa0f6f160e8c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_memory_span.html">MemorySpan</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a5aa1e6b91e13a2f5f7c8fa0f6f160e8c">toSpan</a> (const char *string) noexcept</td></tr>
+<tr class="separator:a5aa1e6b91e13a2f5f7c8fa0f6f160e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -433,8 +456,10 @@ Static Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_string.html" title="String.">String</a>. </p>
 <p><a class="el" href="class_string.html" title="String.">String</a> class. The first modifing operation on a string may force the internal buffer to be duplicated. The implementation is currently NOT MT-safe.</p>
-<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#_a1">testsuite/client.cpp</a>, <a class="el" href="testsuite_2digest_8cpp-example.html#_a6">testsuite/digest.cpp</a>, <a class="el" href="testsuite_2du_8cpp-example.html#_a4">testsuite/du.cpp</a>, <a class="el" href="testsuite_2echod_8cpp-example.html#_a40">testsuite/echod.cpp</a>, <a class="el" href="testsuite_2eval_8cpp-example.html#_a55">testsuite/eval.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#_a6">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#_a6">testsuite/http.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#_a37">testsuite/IEEE1394.cpp</a>, <a class="el" href="testsuite_2ln_8cpp-example.html#_a1">testsuite/ln.cpp</a>, <a class="el" href="testsuite_2ls_8cpp-example.html#_a4">testsuite/ls.cpp</a>, <a class="el" href="testsuite_2ping_8cpp-example.html#_a1">testsuite/ping.cpp</a>, <a class="el" href="testsuite_2_quota_8cpp-example.html#_a3">testsuite/Quota.cpp</a>, <a class="el" href="testsuite_2rm_8cpp-example.html#_a4">testsuite/rm.cpp</a>, <a class="el" href="testsuite_2sax_8cpp-example.html#_a5">testsuite/sax.cpp</a>, <a class="el" href="testsuite_2server_8cpp-example.html#_a1">testsuite/server.cpp</a>, <a class="el" href="testsuite_2validate_8cpp-example.html#_a3">testsuite/validate.cpp</a>, and <a class="el" href="testsuite_2xsltprocessor_8cpp-example.html#_a3">testsuite/xsltprocessor.cpp</a>.</dd>
+<div class="fragment"><div class="line"><a class="code" href="class_string.html">String</a> myString = <span class="stringliteral">&quot;Hello, World!&quot;</span>;</div>
+<div class="line"><a class="code" href="class_string.html">String</a> myOtherString = myString;</div>
+</div><!-- fragment --><dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#_a1">testsuite/client.cpp</a>, <a class="el" href="testsuite_2digest_8cpp-example.html#_a6">testsuite/digest.cpp</a>, <a class="el" href="testsuite_2du_8cpp-example.html#_a4">testsuite/du.cpp</a>, <a class="el" href="testsuite_2echod_8cpp-example.html#_a39">testsuite/echod.cpp</a>, <a class="el" href="testsuite_2eval_8cpp-example.html#_a55">testsuite/eval.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#_a6">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#_a6">testsuite/http.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#_a37">testsuite/IEEE1394.cpp</a>, <a class="el" href="testsuite_2ln_8cpp-example.html#_a1">testsuite/ln.cpp</a>, <a class="el" href="testsuite_2ls_8cpp-example.html#_a5">testsuite/ls.cpp</a>, <a class="el" href="testsuite_2ping_8cpp-example.html#_a1">testsuite/ping.cpp</a>, <a class="el" href="testsuite_2_quota_8cpp-example.html#_a3">testsuite/Quota.cpp</a>, <a class="el" href="testsuite_2rm_8cpp-example.html#_a4">testsuite/rm.cpp</a>, <a class="el" href="testsuite_2sax_8cpp-example.html#_a5">testsuite/sax.cpp</a>, <a class="el" href="testsuite_2server_8cpp-example.html#_a1">testsuite/server.cpp</a>, <a class="el" href="testsuite_2validate_8cpp-example.html#_a3">testsuite/validate.cpp</a>, and <a class="el" href="testsuite_2xsltprocessor_8cpp-example.html#_a3">testsuite/xsltprocessor.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3aaa109ea9529a85605a7634bd8c611c"></a>
@@ -454,7 +479,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0225bb76bd3527b0e9ec9663c53f873d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0225bb76bd3527b0e9ec9663c53f873d">&#9670;&nbsp;</a></span>String() <span class="overload">[1/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0225bb76bd3527b0e9ec9663c53f873d">&#9670;&nbsp;</a></span>String() <span class="overload">[1/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,12 +500,12 @@ Static Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initializes an empty string. </p>
+<p>Initializes an empty string. No allocation done. </p>
 
 </div>
 </div>
 <a id="aa6db09623444250492841e2b19646f43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6db09623444250492841e2b19646f43">&#9670;&nbsp;</a></span>String() <span class="overload">[2/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6db09623444250492841e2b19646f43">&#9670;&nbsp;</a></span>String() <span class="overload">[2/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +538,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a701ff2611f6760c7ad153f0d5556654a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a701ff2611f6760c7ad153f0d5556654a">&#9670;&nbsp;</a></span>String() <span class="overload">[3/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a701ff2611f6760c7ad153f0d5556654a">&#9670;&nbsp;</a></span>String() <span class="overload">[3/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,7 +557,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a07d46d3de3d1d77280f09a3d1f78139d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07d46d3de3d1d77280f09a3d1f78139d">&#9670;&nbsp;</a></span>String() <span class="overload">[4/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d46d3de3d1d77280f09a3d1f78139d">&#9670;&nbsp;</a></span>String() <span class="overload">[4/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -549,15 +574,303 @@ Static Protected Member Functions</h2></td></tr>
 <p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td><a class="el" href="class_string.html" title="String.">String</a> literal. </td></tr>
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
+<a id="abe855cd63128c5e22c20fddc351ba80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe855cd63128c5e22c20fddc351ba80b">&#9670;&nbsp;</a></span>String() <span class="overload">[5/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_literal.html">Literal</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ed40df855e20c097c1914b4ff0a7f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed40df855e20c097c1914b4ff0a7f09">&#9670;&nbsp;</a></span>String() <span class="overload">[6/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c10e46b088d82317437defad2d85d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c10e46b088d82317437defad2d85d08">&#9670;&nbsp;</a></span>String() <span class="overload">[7/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13a5cd1d94131ce94da18ee2718ebb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a5cd1d94131ce94da18ee2718ebb47">&#9670;&nbsp;</a></span>String() <span class="overload">[8/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adc4b074b0ecb56125eca1b4aad415af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4b074b0ecb56125eca1b4aad415af7">&#9670;&nbsp;</a></span>String() <span class="overload">[9/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a86fba7c3716430d1ce37c4e03fff82e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fba7c3716430d1ce37c4e03fff82e2">&#9670;&nbsp;</a></span>String() <span class="overload">[10/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ff51f59be63a36fa189c1058557771e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff51f59be63a36fa189c1058557771e">&#9670;&nbsp;</a></span>String() <span class="overload">[11/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad81078b2f6adf9ef0491e01ea7628af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81078b2f6adf9ef0491e01ea7628af4">&#9670;&nbsp;</a></span>String() <span class="overload">[12/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const char32_t *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af24f8fbfff990d29d0159606bc92ef0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24f8fbfff990d29d0159606bc92ef0a">&#9670;&nbsp;</a></span>String() <span class="overload">[13/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const char32_t *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from a string literal. The string literal is not copied into internal buffer. Implicit initialization is allowed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The string. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec15a7d62446a92e5da8e2e5201eb52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec15a7d62446a92e5da8e2e5201eb52f">&#9670;&nbsp;</a></span>String() <span class="overload">[14/19]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String::String </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the string from string. </p>
+
+</div>
+</div>
 <a id="a93c3f397a59cdb5c9eafd2353572e9a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93c3f397a59cdb5c9eafd2353572e9a9">&#9670;&nbsp;</a></span>String() <span class="overload">[5/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c3f397a59cdb5c9eafd2353572e9a9">&#9670;&nbsp;</a></span>String() <span class="overload">[15/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -593,7 +906,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ada961024f4bec1e6bcf2e7f6c3d384b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada961024f4bec1e6bcf2e7f6c3d384b7">&#9670;&nbsp;</a></span>String() <span class="overload">[6/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada961024f4bec1e6bcf2e7f6c3d384b7">&#9670;&nbsp;</a></span>String() <span class="overload">[16/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +933,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="add2fb3ec45b7fe597bae40ed09ee0785"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add2fb3ec45b7fe597bae40ed09ee0785">&#9670;&nbsp;</a></span>String() <span class="overload">[7/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#add2fb3ec45b7fe597bae40ed09ee0785">&#9670;&nbsp;</a></span>String() <span class="overload">[17/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -647,7 +960,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3e7a13af5165737d2b4635da3d93e35f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e7a13af5165737d2b4635da3d93e35f">&#9670;&nbsp;</a></span>String() <span class="overload">[8/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7a13af5165737d2b4635da3d93e35f">&#9670;&nbsp;</a></span>String() <span class="overload">[18/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -666,7 +979,7 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5a43d91bf5efe5d2b0579a71778f4e7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a43d91bf5efe5d2b0579a71778f4e7d">&#9670;&nbsp;</a></span>String() <span class="overload">[9/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a43d91bf5efe5d2b0579a71778f4e7d">&#9670;&nbsp;</a></span>String() <span class="overload">[19/19]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -766,7 +1079,7 @@ Static Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Appends the string literal to this string.</p>
+<p>Appends the string to this string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The string to be appended. </td></tr>
@@ -1034,7 +1347,7 @@ Static Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compares this string to a NULL-terminated string.</p>
+<p>Compares this string with a NULL-terminated string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
@@ -1068,7 +1381,7 @@ Static Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compares this string to another string.</p>
+<p>Compare this string with another string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The string to compare this string with. </td></tr>
@@ -1112,7 +1425,7 @@ Static Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compare two NULL-terminated strings. </p>
+<p>Compare the NULL-terminated strings ignoring the case. </p>
 
 </div>
 </div>
@@ -1368,7 +1681,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if this string ends with suffix.</p>
+<p>Returns true if this string ends with the specified suffix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">suffix</td><td>The string to compare end of this string with. </td></tr>
@@ -1401,7 +1714,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if this string ends with suffix.</p>
+<p>Returns true if this string ends with the specified suffix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">suffix</td><td>The string to compare end of this string with. </td></tr>
@@ -1625,8 +1938,8 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
-<a id="a7368cb86d241d490186b3f01a17323be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7368cb86d241d490186b3f01a17323be">&#9670;&nbsp;</a></span>getBytes()</h2>
+<a id="a0ab66e05c049be3d08a20cd38839a6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab66e05c049be3d08a20cd38839a6a3">&#9670;&nbsp;</a></span>getBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1635,7 +1948,7 @@ template&lt;MemorySize SIZE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* String::getBytes </td>
+          <td class="memname">const uint8* String::getBytes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1647,7 +1960,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the characters of the string for non-modifying access. </p>
+<p>Returns NULL-terminated string as bytes. </p>
 
 </div>
 </div>
@@ -1674,6 +1987,32 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the capacity of the string. </p>
+
+</div>
+</div>
+<a id="aec1f18c022fb1cbcd6b3f25e1da846df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1f18c022fb1cbcd6b3f25e1da846df">&#9670;&nbsp;</a></span>getContainer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_reference.html">Reference</a>&lt;<a class="el" href="class_reference_counted_allocator.html">ReferenceCountedAllocator</a>&lt;char&gt; &gt;&amp; String::getContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the internal container. </p>
 
 </div>
 </div>
@@ -1850,7 +2189,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the number of characters in the string. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ftp_8cpp-example.html#a26">testsuite/ftp.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#a53">testsuite/ls.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2ftp_8cpp-example.html#a26">testsuite/ftp.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#a52">testsuite/ls.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -2558,7 +2897,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a971dd5c400823af2098e2d479cb69c0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a971dd5c400823af2098e2d479cb69c0c">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a971dd5c400823af2098e2d479cb69c0c">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2592,7 +2931,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 <a id="a543a0648a791bcda132d7770e15cebb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a543a0648a791bcda132d7770e15cebb5">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a543a0648a791bcda132d7770e15cebb5">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2636,8 +2975,42 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a70244f76201972bdb6e076781daf67f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70244f76201972bdb6e076781daf67f2">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MemoryDiff String::lastIndexOf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the index of the last string that matches the specified string starting from the end of the string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>The substring to find.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Index of the last match if any otherwide -1. Also returns -1 if the substring is empty. </dd></dl>
+
+</div>
+</div>
 <a id="adb24ae8c6ff2f04ab24f046dca47c4cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb24ae8c6ff2f04ab24f046dca47c4cd">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb24ae8c6ff2f04ab24f046dca47c4cd">&#9670;&nbsp;</a></span>lastIndexOf() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2673,7 +3046,7 @@ template&lt;MemorySize SIZE&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>The substring to find. </td></tr>
-    <tr><td class="paramname">start</td><td>Specifies the start position of the search. <a class="el" href="class_string_1_1_default.html">Default</a> is end of string. </td></tr>
+    <tr><td class="paramname">start</td><td>Specifies the start position of the search. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2811,6 +3184,585 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Inequality operator. </p>
+
+</div>
+</div>
+<a id="a02193c8b4bce2a05dd651d69a66b0193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02193c8b4bce2a05dd651d69a66b0193">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="a9ffaaca14df06a5aa410d0c9c50d022f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffaaca14df06a5aa410d0c9c50d022f">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="a930892e0b2d577ab58682d27e2c5bf72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930892e0b2d577ab58682d27e2c5bf72">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="a6d49801834e22e4427e3eb68e691ee7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d49801834e22e4427e3eb68e691ee7e">&#9670;&nbsp;</a></span>operator()() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="a312c47090ea160fbfe207d17fbdd1d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312c47090ea160fbfe207d17fbdd1d3c">&#9670;&nbsp;</a></span>operator()() <span class="overload">[5/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="a8d1182be9292f9c1bb6f6c5eefb1fd95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d1182be9292f9c1bb6f6c5eefb1fd95">&#9670;&nbsp;</a></span>operator()() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="a1dcaefcc9f98f996378019ba1fbb4615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcaefcc9f98f996378019ba1fbb4615">&#9670;&nbsp;</a></span>operator()() <span class="overload">[7/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="ad1600137b832d0b3b7f1e7d21b3ee23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1600137b832d0b3b7f1e7d21b3ee23d">&#9670;&nbsp;</a></span>operator()() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="acb1d01eef65e04116248d739f974d743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1d01eef65e04116248d739f974d743">&#9670;&nbsp;</a></span>operator()() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="adabec7401b7098b5a95f09561944debb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabec7401b7098b5a95f09561944debb">&#9670;&nbsp;</a></span>operator()() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
+
+</div>
+</div>
+<a id="ae05f1edde6f5c53947c2a712bd497c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae05f1edde6f5c53947c2a712bd497c09">&#9670;&nbsp;</a></span>operator()() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> String::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Substitutes string using % syntax. </p>
 
 </div>
 </div>
@@ -3079,8 +4031,94 @@ template&lt;MemorySize SIZE&gt; </div>
 
 </div>
 </div>
+<a id="a4f407e5855a44b8079d8facd68fbed7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f407e5855a44b8079d8facd68fbed7b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="ab5a7641452a7945f5af9103b247526e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a7641452a7945f5af9103b247526e2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MemorySize SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char(&amp;)&#160;</td>
+          <td class="paramname"><em>literal</em>[SIZE]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="aeac3e7a80cdb5ab188ea90be715e04e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac3e7a80cdb5ab188ea90be715e04e2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char16_t *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a965af55814c71e9c38f75de08485ba31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965af55814c71e9c38f75de08485ba31">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const char32_t *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
 <a id="abdc45903454ede638fc7cbed97efdc7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdc45903454ede638fc7cbed97efdc7f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc45903454ede638fc7cbed97efdc7f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[5/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3094,12 +4132,31 @@ template&lt;MemorySize SIZE&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assignment of string literal to string. </p>
+<p>Assignment of string to string. </p>
 
 </div>
 </div>
-<a id="a0f89fd919a48380a6efca80af5e9cb39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f89fd919a48380a6efca80af5e9cb39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a707ef137611a1c7851955f9f3f08757f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707ef137611a1c7851955f9f3f08757f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_native_string.html">NativeString</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="abd9cf6ba0030da79a10f73e90b4aba4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9cf6ba0030da79a10f73e90b4aba4a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[7/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3111,7 +4168,7 @@ template&lt;MemorySize SIZE&gt; </div>
           <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
-          <td class="paramname"><em>copy</em></td><td>)</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3120,6 +4177,82 @@ template&lt;MemorySize SIZE&gt; </div>
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="aa6dfb839e1508a5395239589ffe69947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6dfb839e1508a5395239589ffe69947">&#9670;&nbsp;</a></span>operator=() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string_output_stream.html">StringOutputStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a7e008c319843b086ed233da521265fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e008c319843b086ed233da521265fac">&#9670;&nbsp;</a></span>operator=() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const wchar *&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a26be6af4422bc961f904d5237d5db8be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26be6af4422bc961f904d5237d5db8be">&#9670;&nbsp;</a></span>operator=() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_literal.html">WideLiteral</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assignment of string to string. </p>
+
+</div>
+</div>
+<a id="a4e6951f16bf75c24749a7c0375fee645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6951f16bf75c24749a7c0375fee645">&#9670;&nbsp;</a></span>operator=() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a>&amp; String::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_wide_string.html">WideString</a> &amp;&#160;</td>
+          <td class="paramname"><em>assign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 <p>Assignment of string to string. </p>
 
@@ -3805,7 +4938,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if this string starts with prefix.</p>
+<p>Returns true if this string starts with the specified prefix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prefix</td><td>The string to compare start of this string with. </td></tr>
@@ -3838,7 +4971,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if this string starts with prefix.</p>
+<p>Returns true if this string starts with the specified prefix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prefix</td><td>The string to compare start of this string with. </td></tr>
@@ -3871,7 +5004,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if this string starts with prefix.</p>
+<p>Returns true if this string starts with the specified prefix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prefix</td><td>The string to compare start of this string with. </td></tr>
@@ -3947,7 +5080,7 @@ template&lt;MemorySize SIZE&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2http_8cpp-example.html#a9">testsuite/http.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#a60">testsuite/IEEE1394.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#a54">testsuite/ls.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2http_8cpp-example.html#a9">testsuite/http.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#a60">testsuite/IEEE1394.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#a53">testsuite/ls.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -3975,6 +5108,33 @@ template&lt;MemorySize SIZE&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Converts the characters of this string into the lower case equivalents. </p>
+
+</div>
+</div>
+<a id="a5aa1e6b91e13a2f5f7c8fa0f6f160e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa1e6b91e13a2f5f7c8fa0f6f160e8c">&#9670;&nbsp;</a></span>toSpan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_memory_span.html">MemorySpan</a> String::toSpan </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the memory span. </p>
 
 </div>
 </div>
@@ -4077,6 +5237,7 @@ template&lt;MemorySize SIZE&gt; </div>
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

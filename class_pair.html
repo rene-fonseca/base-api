@@ -64,6 +64,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a04c1664a02014683e474e369a09c0083"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair</a> ()</td></tr>
 <tr class="separator:a04c1664a02014683e474e369a09c0083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4485e5c61a73cb047dd5ce914c14f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#a2d4485e5c61a73cb047dd5ce914c14f3">Pair</a> (const <a class="el" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a> &amp;_first)</td></tr>
+<tr class="separator:a2d4485e5c61a73cb047dd5ce914c14f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60fb5224b490e9fa5f73725bbf54e967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">Pair</a> (const <a class="el" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a> &amp;_first, const <a class="el" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a> &amp;_second)</td></tr>
 <tr class="separator:a60fb5224b490e9fa5f73725bbf54e967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e2f2bb9252c7e4c86f44a5377ab045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">Pair</a> (<a class="el" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a> &amp;&amp;_first, <a class="el" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a> &amp;&amp;_second)</td></tr>
@@ -92,8 +94,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a017fba682768616f5ad1b96b45e26db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa430bed04fd6eb1946d79b12679cc222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#aa430bed04fd6eb1946d79b12679cc222">setSecond</a> (<a class="el" href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Second</a> &amp;&amp;value)</td></tr>
 <tr class="separator:aa430bed04fd6eb1946d79b12679cc222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12b0ee91b39347941a4a12abfceccf20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#a12b0ee91b39347941a4a12abfceccf20">compareTo</a> (const <a class="el" href="class_pair.html">Pair</a> &amp;compare) const</td></tr>
-<tr class="separator:a12b0ee91b39347941a4a12abfceccf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84dbf3a5173b3e7511f66689e3d860d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">operator==</a> (const <a class="el" href="class_pair.html">Pair</a> &amp;compare) const</td></tr>
 <tr class="separator:a84dbf3a5173b3e7511f66689e3d860d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9821b26461eebe8a3067ad1b667476a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">operator!=</a> (const <a class="el" href="class_pair.html">Pair</a> &amp;compare) const</td></tr>
@@ -152,7 +152,7 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a04c1664a02014683e474e369a09c0083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04c1664a02014683e474e369a09c0083">&#9670;&nbsp;</a></span>Pair() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c1664a02014683e474e369a09c0083">&#9670;&nbsp;</a></span>Pair() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,8 +179,44 @@ template&lt;class FIRST , class SECOND &gt; </div>
 
 </div>
 </div>
+<a id="a2d4485e5c61a73cb047dd5ce914c14f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4485e5c61a73cb047dd5ce914c14f3">&#9670;&nbsp;</a></span>Pair() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FIRST , class SECOND &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pair.html">Pair</a>&lt; FIRST, SECOND &gt;::<a class="el" href="class_pair.html">Pair</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pair.html#a8e475783a5b44a2ec1b870cf6fb2195b">First</a> &amp;&#160;</td>
+          <td class="paramname"><em>_first</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes a pair with the specified first value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>The first value. </td></tr>
+    <tr><td class="paramname">second</td><td>The second value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a60fb5224b490e9fa5f73725bbf54e967"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60fb5224b490e9fa5f73725bbf54e967">&#9670;&nbsp;</a></span>Pair() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fb5224b490e9fa5f73725bbf54e967">&#9670;&nbsp;</a></span>Pair() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +262,7 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 </div>
 <a id="ae9e2f2bb9252c7e4c86f44a5377ab045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9e2f2bb9252c7e4c86f44a5377ab045">&#9670;&nbsp;</a></span>Pair() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e2f2bb9252c7e4c86f44a5377ab045">&#9670;&nbsp;</a></span>Pair() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +308,7 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 </div>
 <a id="a6cf53e8a15154afe658c3dcaafa6b82e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cf53e8a15154afe658c3dcaafa6b82e">&#9670;&nbsp;</a></span>Pair() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf53e8a15154afe658c3dcaafa6b82e">&#9670;&nbsp;</a></span>Pair() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,7 +354,7 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 </div>
 <a id="a5ad720ad7ec7668f37388e956c907291"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ad720ad7ec7668f37388e956c907291">&#9670;&nbsp;</a></span>Pair() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad720ad7ec7668f37388e956c907291">&#9670;&nbsp;</a></span>Pair() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +400,7 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 </div>
 <a id="ac944737c51f3e17bf32dbbfd7e69364d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac944737c51f3e17bf32dbbfd7e69364d">&#9670;&nbsp;</a></span>Pair() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac944737c51f3e17bf32dbbfd7e69364d">&#9670;&nbsp;</a></span>Pair() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +429,7 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 </div>
 <a id="a3ab134160256ef41637e9ce54cbc4e88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ab134160256ef41637e9ce54cbc4e88">&#9670;&nbsp;</a></span>Pair() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab134160256ef41637e9ce54cbc4e88">&#9670;&nbsp;</a></span>Pair() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,35 +458,6 @@ template&lt;class FIRST , class SECOND &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a12b0ee91b39347941a4a12abfceccf20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12b0ee91b39347941a4a12abfceccf20">&#9670;&nbsp;</a></span>compareTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class FIRST , class SECOND &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="class_pair.html">Pair</a>&lt; FIRST, SECOND &gt;::compareTo </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_pair.html">Pair</a>&lt; FIRST, SECOND &gt; &amp;&#160;</td>
-          <td class="paramname"><em>compare</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns -1, 0, or 1 if this pair is less than, equal to, or greater than the specified pair. </p>
-
-</div>
-</div>
 <a id="ad6bcbbf0ae3764b316f93fd287fb47b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6bcbbf0ae3764b316f93fd287fb47b8">&#9670;&nbsp;</a></span>getFirst()</h2>
 

@@ -40,6 +40,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_b_zip2_deflater-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -76,6 +77,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a046b2d7d85d301caa151b7ed0b8870cf inherit pub_methods_class_push_interface"><td class="memItemLeft" align="right" valign="top"><a id="a046b2d7d85d301caa151b7ed0b8870cf"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>pushBegin</b> (uint64 totalSize)=0</td></tr>
 <tr class="separator:a046b2d7d85d301caa151b7ed0b8870cf inherit pub_methods_class_push_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a90450381ca0ffc761c9acf36b198881d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_zip2_deflater.html#a90450381ca0ffc761c9acf36b198881d">isSupported</a> () noexcept</td></tr>
+<tr class="separator:a90450381ca0ffc761c9acf36b198881d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -212,6 +218,32 @@ Static Public Attributes</h2></td></tr>
 <p>Flushes the stream. Invoke <a class="el" href="class_b_zip2_deflater.html#aa6936a864ea2c6639beb22b7d9585e19">pull()</a> one or more times to read the compressed data. The stream has been flushed when <a class="el" href="class_b_zip2_deflater.html#aa6936a864ea2c6639beb22b7d9585e19">pull()</a> returns 0. </p>
 
 <p>Implements <a class="el" href="class_deflater.html#a9fe85eedd3ce3b5f68052d25edb531c1">Deflater</a>.</p>
+
+</div>
+</div>
+<a id="a90450381ca0ffc761c9acf36b198881d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90450381ca0ffc761c9acf36b198881d">&#9670;&nbsp;</a></span>isSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool BZip2Deflater::isSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if BZip2 is supported by the runtime. </p>
 
 </div>
 </div>

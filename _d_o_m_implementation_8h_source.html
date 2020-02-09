@@ -120,87 +120,91 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">const</span> <a class="code" href="class_d_o_m_event.html">DOMEvent</a>&amp; event) = 0;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  };</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_implementation.html#a794f07f9ab76577da496f08430b344d9">DOMImplementation</a>() noexcept {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_implementation.html#a794f07f9ab76577da496f08430b344d9">DOMImplementation</a>(<span class="keyword">const</span> <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>&amp; copy) noexcept {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>&amp; assign) noexcept {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_d_o_m_implementation.html#a5d1d8de1f11f77f1374e910077177790">hasFeature</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version) noexcept;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">createDocument</a>(</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version = <span class="stringliteral">&quot;1.0&quot;</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">createDocument</a>(</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="class_document_type.html">DocumentType</a> doctype,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version = <span class="stringliteral">&quot;1.0&quot;</span>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">createDocument</a>(</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; namespaceURI,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; qualifiedName,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="class_document_type.html">DocumentType</a> doctype,</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version = <span class="stringliteral">&quot;1.0&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#adb7ffa82774d94bbef8dd08d82cdd3cc">createFromURI</a>(</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; systemId,</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    Mode mode = VALIDATING,</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = WARNINGS|PEDANTIC|DETECT_IDS|COMPLETE_ATTRIBUTE_LISTS)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   ;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#ac8494f15aea6a09a865bd5efe2259f3c">createDocumentFromString</a>(</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; value,</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    Mode mode = VALIDATING,</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = WARNINGS|PEDANTIC|DETECT_IDS|COMPLETE_ATTRIBUTE_LISTS)</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   ;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="class_document_type.html">DocumentType</a> <a class="code" href="class_d_o_m_implementation.html#aa08517602b24cc9cf8c65cab5a2c3531">createDocumentType</a>(</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; qualifiedName,</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; publicId,</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; systemId);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_d_o_m_implementation.html#a707c03296e0da2223df1c3ed88e03879">saveDocument</a>(</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="class_document.html">Document</a> document,</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; filename,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">bool</span> indent = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_d_o_m_implementation.html#a707c03296e0da2223df1c3ed88e03879">saveDocument</a>(</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="class_document.html">Document</a> document,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; filename,</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; encoding,</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">bool</span> indent);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_d_o_m_implementation.html#a01156e6f1b94424f06ed5d7f0b1c2d75">saveDocumentToMemory</a>(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="class_document.html">Document</a> document, <span class="keywordtype">bool</span> spaces = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_d_o_m_implementation.html#a01156e6f1b94424f06ed5d7f0b1c2d75">saveDocumentToMemory</a>(</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="class_document.html">Document</a> document,</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; encoding,</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">bool</span> spaces = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_d_o_m_implementation.html#a16aa759f7e50a94f5ef66ec20bd36486">isSupported</a>() noexcept;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  inline <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>() noexcept</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_implementation.html#a794f07f9ab76577da496f08430b344d9">DOMImplementation</a>(<span class="keyword">const</span> <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>&amp; copy) noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>&amp; assign) noexcept</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_d_o_m_implementation.html#a794f07f9ab76577da496f08430b344d9">  105</a></span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_d_o_m_implementation.html#a5d1d8de1f11f77f1374e910077177790">hasFeature</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version) noexcept;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">createDocument</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version = <span class="stringliteral">&quot;1.0&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">createDocument</a>(</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="class_document_type.html">DocumentType</a> doctype,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version = <span class="stringliteral">&quot;1.0&quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">createDocument</a>(</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; namespaceURI,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; qualifiedName,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="class_document_type.html">DocumentType</a> doctype,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; version = <span class="stringliteral">&quot;1.0&quot;</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#adb7ffa82774d94bbef8dd08d82cdd3cc">createFromURI</a>(</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; systemId,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    Mode mode = VALIDATING,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = WARNINGS|PEDANTIC|DETECT_IDS|COMPLETE_ATTRIBUTE_LISTS)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;   ;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="class_document.html">Document</a> <a class="code" href="class_d_o_m_implementation.html#ac8494f15aea6a09a865bd5efe2259f3c">createDocumentFromString</a>(</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; value,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Mode mode = VALIDATING,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = WARNINGS|PEDANTIC|DETECT_IDS|COMPLETE_ATTRIBUTE_LISTS)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;   ;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <a class="code" href="class_document_type.html">DocumentType</a> <a class="code" href="class_d_o_m_implementation.html#aa08517602b24cc9cf8c65cab5a2c3531">createDocumentType</a>(</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; qualifiedName,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; publicId,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; systemId);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_d_o_m_implementation.html#a707c03296e0da2223df1c3ed88e03879">saveDocument</a>(</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="class_document.html">Document</a> document,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; filename,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">bool</span> indent = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_d_o_m_implementation.html#a707c03296e0da2223df1c3ed88e03879">saveDocument</a>(</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="class_document.html">Document</a> document,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; filename,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; encoding,</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">bool</span> indent);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_d_o_m_implementation.html#a01156e6f1b94424f06ed5d7f0b1c2d75">saveDocumentToMemory</a>(<a class="code" href="class_document.html">Document</a> document, <span class="keywordtype">bool</span> spaces = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_d_o_m_implementation.html#a01156e6f1b94424f06ed5d7f0b1c2d75">saveDocumentToMemory</a>(</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="class_document.html">Document</a> document,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; encoding,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">bool</span> spaces = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;};</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_d_o_m_implementation_html_ac8494f15aea6a09a865bd5efe2259f3c"><div class="ttname"><a href="class_d_o_m_implementation.html#ac8494f15aea6a09a865bd5efe2259f3c">DOMImplementation::createDocumentFromString</a></div><div class="ttdeci">Document createDocumentFromString(const String &amp;value, Mode mode=VALIDATING, unsigned int flags=WARNINGS|PEDANTIC|DETECT_IDS|COMPLETE_ATTRIBUTE_LISTS)</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_adb7ffa82774d94bbef8dd08d82cdd3cc"><div class="ttname"><a href="class_d_o_m_implementation.html#adb7ffa82774d94bbef8dd08d82cdd3cc">DOMImplementation::createFromURI</a></div><div class="ttdeci">Document createFromURI(const String &amp;systemId, Mode mode=VALIDATING, unsigned int flags=WARNINGS|PEDANTIC|DETECT_IDS|COMPLETE_ATTRIBUTE_LISTS)</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_a5d1d8de1f11f77f1374e910077177790"><div class="ttname"><a href="class_d_o_m_implementation.html#a5d1d8de1f11f77f1374e910077177790">DOMImplementation::hasFeature</a></div><div class="ttdeci">bool hasFeature(const String &amp;name, const String &amp;version) noexcept</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_1_1_interface_html"><div class="ttname"><a href="class_d_o_m_implementation_1_1_interface.html">DOMImplementation::Interface</a></div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:60</div></div>
-<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:45</div></div>
-<div class="ttc" id="aclass_d_o_m_implementation_html_a794f07f9ab76577da496f08430b344d9"><div class="ttname"><a href="class_d_o_m_implementation.html#a794f07f9ab76577da496f08430b344d9">DOMImplementation::DOMImplementation</a></div><div class="ttdeci">DOMImplementation() noexcept</div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:100</div></div>
+<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:47</div></div>
+<div class="ttc" id="aclass_d_o_m_implementation_html_a794f07f9ab76577da496f08430b344d9"><div class="ttname"><a href="class_d_o_m_implementation.html#a794f07f9ab76577da496f08430b344d9">DOMImplementation::DOMImplementation</a></div><div class="ttdeci">DOMImplementation() noexcept</div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:105</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_1_1_event_listener_html"><div class="ttname"><a href="class_d_o_m_implementation_1_1_event_listener.html">DOMImplementation::EventListener</a></div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:63</div></div>
 <div class="ttc" id="aclass_d_o_m_event_html"><div class="ttname"><a href="class_d_o_m_event.html">DOMEvent</a></div><div class="ttdoc">DOM event.</div><div class="ttdef"><b>Definition:</b> DOMEvent.h:29</div></div>
 <div class="ttc" id="aclass_document_type_html"><div class="ttname"><a href="class_document_type.html">DocumentType</a></div><div class="ttdoc">DOM document type node.</div><div class="ttdef"><b>Definition:</b> DocumentType.h:37</div></div>
 <div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_a707c03296e0da2223df1c3ed88e03879"><div class="ttname"><a href="class_d_o_m_implementation.html#a707c03296e0da2223df1c3ed88e03879">DOMImplementation::saveDocument</a></div><div class="ttdeci">void saveDocument(Document document, const String &amp;filename, bool indent=false)</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_a03e6dcdce8844c1c8c522c32cd487e31"><div class="ttname"><a href="class_d_o_m_implementation.html#a03e6dcdce8844c1c8c522c32cd487e31">DOMImplementation::createDocument</a></div><div class="ttdeci">Document createDocument(const String &amp;version=&quot;1.0&quot;)</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_aa08517602b24cc9cf8c65cab5a2c3531"><div class="ttname"><a href="class_d_o_m_implementation.html#aa08517602b24cc9cf8c65cab5a2c3531">DOMImplementation::createDocumentType</a></div><div class="ttdeci">DocumentType createDocumentType(const String &amp;qualifiedName, const String &amp;publicId, const String &amp;systemId)</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_a01156e6f1b94424f06ed5d7f0b1c2d75"><div class="ttname"><a href="class_d_o_m_implementation.html#a01156e6f1b94424f06ed5d7f0b1c2d75">DOMImplementation::saveDocumentToMemory</a></div><div class="ttdeci">String saveDocumentToMemory(Document document, bool spaces=false)</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_1_1_document_event_html"><div class="ttname"><a href="class_d_o_m_implementation_1_1_document_event.html">DOMImplementation::DocumentEvent</a></div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:67</div></div>
+<div class="ttc" id="aclass_d_o_m_implementation_html_a16aa759f7e50a94f5ef66ec20bd36486"><div class="ttname"><a href="class_d_o_m_implementation.html#a16aa759f7e50a94f5ef66ec20bd36486">DOMImplementation::isSupported</a></div><div class="ttdeci">static bool isSupported() noexcept</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html_ababb95915dc47876dbd3833cf3fc81b0"><div class="ttname"><a href="class_d_o_m_implementation.html#ababb95915dc47876dbd3833cf3fc81b0">DOMImplementation::Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:54</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_1_1_event_target_html"><div class="ttname"><a href="class_d_o_m_implementation_1_1_event_target.html">DOMImplementation::EventTarget</a></div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:82</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_1_1_event_exception_html"><div class="ttname"><a href="class_d_o_m_implementation_1_1_event_exception.html">DOMImplementation::EventException</a></div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:76</div></div>

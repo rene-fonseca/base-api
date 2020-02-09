@@ -61,7 +61,7 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/features.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/string/String.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
@@ -72,72 +72,97 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    BE = 0, </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    LE = 1, </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__BYTE_ORDER == _COM_AZURE_DEV__BASE__BIG_ENDIAN)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    NATIVE = BE </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    NATIVE = BE, </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#elif (_COM_AZURE_DEV__BASE__BYTE_ORDER == _COM_AZURE_DEV__BASE__LITTLE_ENDIAN)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    NATIVE = LE </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    NATIVE = LE, </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    NATIVE = 0 </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    NATIVE = 0, </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  };</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eedda">   42</a></span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42">Technology</a> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    FPU = 1U &lt;&lt; 0, </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    MMX = 1U &lt;&lt; 1, </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    SSE = 1U &lt;&lt; 2, </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SSE2 = 1U &lt;&lt; 3, </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SSE3 = 1U &lt;&lt; 4, </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    NOW3D = 1U &lt;&lt; 5, </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    NOW3D2 = 1U &lt;&lt; 6, </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    HYPER_THREADING = 1U &lt;&lt; 7 </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa0874e9e04b98b81d6792454214e7c4e5">   54</a></span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42abc4c91c74ee66e7751052f03d8d7a5dc">   56</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">Major</a> {</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa3a19595550ca730c13ed60449eabc81d">   57</a></span>&#160;    ALPHA, </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42acf916373493ba18a1f5ccbd06bdbe3ff">   58</a></span>&#160;    X86, </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42aa485bc2df4ed8c29b3b4e55ca70149f0">   59</a></span>&#160;    X86_64, </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42a587384b3fdc8bba96cc9d52deb72d29d">   60</a></span>&#160;    ITANIUM, </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42ab6d0b469f3be41127b329683a3afb4a2">   61</a></span>&#160;    MIPS, </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42a3807e64997c3e33df78b4555c1c3a355">   62</a></span>&#160;    MIPS64, </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42aa7876dadffce814e29bfba8f2041bd18">   63</a></span>&#160;    POWER_PC_32, </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    POWER_PC_64, </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    S390X, </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    RS, </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">   67</a></span>&#160;    SPARC32, </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaac023a8495a0be63337d452a35fefce0">   68</a></span>&#160;    SPARC64, </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca7c44d88c9ba70268b420446ed08e48d0">   69</a></span>&#160;    S390, </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca8c7c82eb718213249168c42ebf8bf75a">   70</a></span>&#160;    ARM32, </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcacb776e9cb198aec798dc578f2ea8d2bc">   71</a></span>&#160;    ARM64, </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca3ba04adc732cb5da5eb322a0b7d1899f">   72</a></span>&#160;    WASM32, </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca210ef3e84f635f1b933c8c312fd9452d">   73</a></span>&#160;    WASM64 </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcadfc95262d97965d4a859da0b4665c4de">   74</a></span>&#160;  };</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca2cdec548214c9690cf44f051cb6a7fe6">   75</a></span>&#160;  </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca3c8183a47fcf5017801f839ae9e840ac">   77</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">Minor</a> {</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca9469dafe278a6958a06a30559be4b15e">   78</a></span>&#160;    GENERIC </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6eb381fc8ef5ba00595adc20d3e64208">   79</a></span>&#160;  };</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca670998667484c866c9649c7dfbe7045d">   80</a></span>&#160;  </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca55f783bf6d997659e16f8a4a671cfab5">   84</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isBigEndian() noexcept</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> NATIVE == BE;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">   88</a></span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isLittleEndian() noexcept</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> NATIVE == LE;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_architecture.html#aef11467ff4187b68569fa29e2a7b3ed1">   95</a></span>&#160;  }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getTechonologies() noexcept;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  static Major getArchitecture() noexcept;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  static Minor getMinorArchitecture() noexcept;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__FLOAT_WORD_ORDER == _COM_AZURE_DEV__BASE__BIG_ENDIAN)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eedda">   42</a></span>&#160;    FLOAT_NATIVE = BE </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#elif (_COM_AZURE_DEV__BASE__FLOAT_WORD_ORDER == _COM_AZURE_DEV__BASE__LITTLE_ENDIAN)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    FLOAT_NATIVE = LE </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    FLOAT_NATIVE = 0 </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">enum</span> Technology {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    FPU = 1U &lt;&lt; 0, </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    MMX = 1U &lt;&lt; 1, </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa0874e9e04b98b81d6792454214e7c4e5">   54</a></span>&#160;    SSE = 1U &lt;&lt; 2, </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaaa33e42b7f70729cb5b6683e8a7dc85c6">   55</a></span>&#160;    SSE2 = 1U &lt;&lt; 3, </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    SSE3 = 1U &lt;&lt; 4, </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_architecture.html#ab95eecaf11dbc095c7ed19b8790eeddaa3a19595550ca730c13ed60449eabc81d">   57</a></span>&#160;    NOW3D = 1U &lt;&lt; 5, </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    NOW3D2 = 1U &lt;&lt; 6, </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    HYPER_THREADING = 1U &lt;&lt; 7 </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42abc4c91c74ee66e7751052f03d8d7a5dc">   63</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">Major</a> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42a2705bb08b389c886e22ea6ecdec63569">   64</a></span>&#160;    ALPHA, </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42acf916373493ba18a1f5ccbd06bdbe3ff">   65</a></span>&#160;    X86, </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42aa485bc2df4ed8c29b3b4e55ca70149f0">   66</a></span>&#160;    X86_64, </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42a587384b3fdc8bba96cc9d52deb72d29d">   67</a></span>&#160;    ITANIUM, </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42ab6d0b469f3be41127b329683a3afb4a2">   68</a></span>&#160;    MIPS, </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42a3807e64997c3e33df78b4555c1c3a355">   69</a></span>&#160;    MIPS64, </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42aa7876dadffce814e29bfba8f2041bd18">   70</a></span>&#160;    POWER_PC_32, </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    POWER_PC_64, </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    S390X, </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    RS, </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">   74</a></span>&#160;    SPARC32, </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaac023a8495a0be63337d452a35fefce0">   75</a></span>&#160;    SPARC64, </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca7c44d88c9ba70268b420446ed08e48d0">   76</a></span>&#160;    S390, </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca8c7c82eb718213249168c42ebf8bf75a">   77</a></span>&#160;    PA_RISC32, </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcacb776e9cb198aec798dc578f2ea8d2bc">   78</a></span>&#160;    PA_RISC64, </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca3ba04adc732cb5da5eb322a0b7d1899f">   79</a></span>&#160;    RISCV32, </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca210ef3e84f635f1b933c8c312fd9452d">   80</a></span>&#160;    RISCV64, </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcadfc95262d97965d4a859da0b4665c4de">   81</a></span>&#160;    ARM32, </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca2cdec548214c9690cf44f051cb6a7fe6">   82</a></span>&#160;    ARM64, </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6f8336b38ee77afcaf67a562085bcd9b">   83</a></span>&#160;    WASM32, </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca3c8183a47fcf5017801f839ae9e840ac">   84</a></span>&#160;    WASM64, </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca9469dafe278a6958a06a30559be4b15e">   85</a></span>&#160;    GENERIC32, </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6eb381fc8ef5ba00595adc20d3e64208">   86</a></span>&#160;    GENERIC64 </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca670998667484c866c9649c7dfbe7045d">   87</a></span>&#160;  };</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca20561df3cb73b5dc787115a73585f402">   88</a></span>&#160;  </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca6f15ac3861cc4696d0dbcb41fc2762c5">   90</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">Minor</a> {</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaf504eb76aa892070c02e27d0ca2d2ab4">   91</a></span>&#160;    GENERIC </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca767ab84e5c920335b31cc8103bea30cb">   92</a></span>&#160;  };</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfcaa4d2a570ae46be5f7cac56d1338c35a9">   93</a></span>&#160;  </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfca44ff29ab02ec1e70dcee4a4831a6ab6d">   97</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isBigEndian() noexcept</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> NATIVE == BE;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">  101</a></span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isLittleEndian() noexcept</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> NATIVE == LE;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_architecture.html#aef11467ff4187b68569fa29e2a7b3ed1">  108</a></span>&#160;  }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isFloatWordBigEndian() noexcept</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> FLOAT_NATIVE == BE;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_architecture.html#a1258d0aeae6ee439d8ba0f918dc4d28a">  116</a></span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isFloatWordLittleEndian() noexcept</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> FLOAT_NATIVE == LE;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_architecture.html#a54d7764f7384005d796086838e428325">  124</a></span>&#160;  }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getTechonologies() noexcept;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  static Major getArchitecture() noexcept;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  static <a class="code" href="class_string.html">String</a> getArchitectureAsString() noexcept;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  static Minor getMinorArchitecture() noexcept;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_byte_order_html"><div class="ttname"><a href="namespace_byte_order.html">ByteOrder</a></div><div class="ttdoc">Byte order manipulation functions.</div><div class="ttdef"><b>Definition:</b> ByteOrder.h:29</div></div>
-<div class="ttc" id="aclass_architecture_html_aedeab9a013a95bb54b73d45d2b406bfc"><div class="ttname"><a href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">Architecture::Major</a></div><div class="ttdeci">Major</div><div class="ttdef"><b>Definition:</b> Architecture.h:67</div></div>
-<div class="ttc" id="aclass_architecture_html_a157b5ee7c1d3b01e88952c384eb19f42"><div class="ttname"><a href="class_architecture.html#a157b5ee7c1d3b01e88952c384eb19f42">Architecture::Technology</a></div><div class="ttdeci">Technology</div><div class="ttdef"><b>Definition:</b> Architecture.h:55</div></div>
-<div class="ttc" id="aclass_architecture_html_a94327a49f13d2cf612a3ea0a84e44f3a"><div class="ttname"><a href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">Architecture::Minor</a></div><div class="ttdeci">Minor</div><div class="ttdef"><b>Definition:</b> Architecture.h:88</div></div>
+<div class="ttc" id="aclass_architecture_html_aedeab9a013a95bb54b73d45d2b406bfc"><div class="ttname"><a href="class_architecture.html#aedeab9a013a95bb54b73d45d2b406bfc">Architecture::Major</a></div><div class="ttdeci">Major</div><div class="ttdef"><b>Definition:</b> Architecture.h:74</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_architecture_html_a94327a49f13d2cf612a3ea0a84e44f3a"><div class="ttname"><a href="class_architecture.html#a94327a49f13d2cf612a3ea0a84e44f3a">Architecture::Minor</a></div><div class="ttdeci">Minor</div><div class="ttdef"><b>Definition:</b> Architecture.h:101</div></div>
 <div class="ttc" id="aclass_architecture_html"><div class="ttname"><a href="class_architecture.html">Architecture</a></div><div class="ttdoc">Architecture information.</div><div class="ttdef"><b>Definition:</b> Architecture.h:27</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

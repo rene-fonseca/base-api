@@ -60,6 +60,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_1_1_performance_counters.html">PerformanceCounters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_1_1_self.html">Self</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_exception.html" title="The general exception class.">Exception</a> raised by <a class="el" href="class_thread.html" title="Thread.">Thread</a>.  <a href="class_thread_1_1_self.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af260c8d78a684fdbca7956e8c62017f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86bdd68fbaa5dc70951d94f097b0b14e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a86bdd68fbaa5dc70951d94f097b0b14e">isMainThread</a> () const noexcept</td></tr>
 <tr class="separator:a86bdd68fbaa5dc70951d94f097b0b14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa590b64a3f1ae1c58e6d872c5d5875c1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#aa590b64a3f1ae1c58e6d872c5d5875c1">getThreadId</a> () const noexcept</td></tr>
+<tr class="separator:aa590b64a3f1ae1c58e6d872c5d5875c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1770be92a547aad6893435a905d588e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#ab1770be92a547aad6893435a905d588e">isParent</a> () const noexcept</td></tr>
 <tr class="separator:ab1770be92a547aad6893435a905d588e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6afd9df68781a65820d31cc9c9f0df70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a6afd9df68781a65820d31cc9c9f0df70">isSelf</a> () const noexcept</td></tr>
@@ -157,6 +161,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:accb2acc1bc47a7a8693d8e6c6e8a6944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d0c413045889d0ee440afe09e270e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_thread_local_context.html">ThreadLocalContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a61d0c413045889d0ee440afe09e270e3">getLocalContext</a> () noexcept</td></tr>
 <tr class="separator:a61d0c413045889d0ee440afe09e270e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6c6609a15db4ff587c5677725fd63d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_thread_1_1_performance_counters.html">PerformanceCounters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#abf6c6609a15db4ff587c5677725fd63d">getPerformanceCounters</a> () noexcept</td></tr>
+<tr class="separator:abf6c6609a15db4ff587c5677725fd63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434138c70c246635b7e5b66c432f55b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_thread.html">Thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a434138c70c246635b7e5b66c432f55b0">getThread</a> () noexcept</td></tr>
 <tr class="separator:a434138c70c246635b7e5b66c432f55b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d9b9e896bc7dcc90553970f2ccf12c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a8d9b9e896bc7dcc90553970f2ccf12c2">nanosleep</a> (unsigned int nanoseconds)</td></tr>
@@ -175,13 +181,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ad71c9c67375d56fa7a7d3bb45f28bb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a257f910fbf65f048c0d7a3e66bd3f09f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_thread_1_1_times.html">Times</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a257f910fbf65f048c0d7a3e66bd3f09f">getTimes</a> () noexcept</td></tr>
 <tr class="separator:a257f910fbf65f048c0d7a3e66bd3f09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab17ef2b5de5427e6a6161c59449bf2d4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#ab17ef2b5de5427e6a6161c59449bf2d4">getThreadName</a> ()</td></tr>
-<tr class="separator:ab17ef2b5de5427e6a6161c59449bf2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9c85c9dd357d9fc8a412647a7a4627"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a9a9c85c9dd357d9fc8a412647a7a4627">getThreadSimpleId</a> () noexcept</td></tr>
+<tr class="separator:a9a9c85c9dd357d9fc8a412647a7a4627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a16331c358daab996598eafb633cd91"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a6a16331c358daab996598eafb633cd91">getThreadName</a> () noexcept</td></tr>
+<tr class="separator:a6a16331c358daab996598eafb633cd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f51830b0124d503ffc23db655b76c31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a3f51830b0124d503ffc23db655b76c31">setThreadName</a> (const char *name)</td></tr>
 <tr class="separator:a3f51830b0124d503ffc23db655b76c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a96a454c3a51070b86806f4612a6fd71d"><td class="memItemLeft" align="right" valign="top"><a id="a96a454c3a51070b86806f4612a6fd71d"></a>
+static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>SUPPORTS_THREADING</b> = false</td></tr>
+<tr class="separator:a96a454c3a51070b86806f4612a6fd71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f08a472ea44cbb2a1509581f711127"><td class="memItemLeft" align="right" valign="top">static constexpr MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#ab0f08a472ea44cbb2a1509581f711127">THREAD_LOCAL_STORAGE</a> = 4096</td></tr>
 <tr class="separator:ab0f08a472ea44cbb2a1509581f711127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -530,6 +541,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="abf6c6609a15db4ff587c5677725fd63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6c6609a15db4ff587c5677725fd63d">&#9670;&nbsp;</a></span>getPerformanceCounters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_thread_1_1_performance_counters.html">PerformanceCounters</a> Thread::getPerformanceCounters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the thread performance counters. Requires <a class="el" href="class_profiler.html">Profiler</a> to be enabled. </p>
+
+</div>
+</div>
 <a id="ad71c9c67375d56fa7a7d3bb45f28bb6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad71c9c67375d56fa7a7d3bb45f28bb6e">&#9670;&nbsp;</a></span>getPriority()</h2>
 
@@ -636,8 +673,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab17ef2b5de5427e6a6161c59449bf2d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab17ef2b5de5427e6a6161c59449bf2d4">&#9670;&nbsp;</a></span>getThreadName()</h2>
+<a id="aa590b64a3f1ae1c58e6d872c5d5875c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa590b64a3f1ae1c58e6d872c5d5875c1">&#9670;&nbsp;</a></span>getThreadId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Thread::getThreadId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the simple ID assigned to the thread. </p>
+
+</div>
+</div>
+<a id="a6a16331c358daab996598eafb633cd91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a16331c358daab996598eafb633cd91">&#9670;&nbsp;</a></span>getThreadName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -654,11 +717,37 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the thread name is available. </p>
+
+</div>
+</div>
+<a id="a9a9c85c9dd357d9fc8a412647a7a4627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9c85c9dd357d9fc8a412647a7a4627">&#9670;&nbsp;</a></span>getThreadSimpleId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned int Thread::getThreadSimpleId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the simple ID assigned to the thread. </p>
 
 </div>
 </div>

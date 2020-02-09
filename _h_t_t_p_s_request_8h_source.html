@@ -61,109 +61,111 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/Object.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/string/String.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;base/net/NetworkException.h&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;base/io/OutputStream.h&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// TAG: move to proper place</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_push_interface.html">PushInterface</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> pushBegin(uint64 totalSize) = 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> MemorySize push(<span class="keyword">const</span> uint8* buffer, MemorySize size) = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> pushEnd() = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html">   32</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_h_t_t_p_exception.html">HTTPException</a> : <span class="keyword">public</span> <a class="code" href="class_network_exception.html">NetworkException</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a254af374c7b574dfa198d8cf4d7baf5a">   38</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a254af374c7b574dfa198d8cf4d7baf5a">HTTPException</a>() noexcept</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a9a2f02943aaffc32a32a62f394eb25cf">   47</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a9a2f02943aaffc32a32a62f394eb25cf">HTTPException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    : <a class="code" href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException</a>(message)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a1cf8ddcabb145db30b8caaa1b3ca3f9d">   57</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a1cf8ddcabb145db30b8caaa1b3ca3f9d">HTTPException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    : <a class="code" href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException</a>(type)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a01ddc80fa6a4e9f5e33a551935720346">   68</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a01ddc80fa6a4e9f5e33a551935720346">HTTPException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    : <a class="code" href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException</a>(message, type)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_h_t_t_p_s_request.html">   79</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_h_t_t_p_s_request.html">HTTPSRequest</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_GET;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_POST;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_PUT;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_DELETE;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="class_reference.html">AnyReference</a> handle;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="class_h_t_t_p_s_request.html">HTTPSRequest</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">bool</span> open(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; method, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; url, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; user = <a class="code" href="class_string.html">String</a>(), <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password = <a class="code" href="class_string.html">String</a>());</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> setRequestHeader(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; value);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">  109</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">setAgent</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; agent)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    setRequestHeader(<span class="stringliteral">&quot;User-Agent&quot;</span>, agent);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">void</span> send(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; body = <a class="code" href="class_string.html">String</a>());</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">void</span> close();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getStatus();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="class_string.html">String</a> getStatusText();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  uint64 getContentLength();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="class_string.html">String</a> getResponseHeader(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="class_string.html">String</a> getResponseHeader();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="class_string.html">String</a> getResponse();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">void</span> getResponse(<a class="code" href="class_output_stream.html">OutputStream</a>* os);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">void</span> getResponse(<a class="code" href="class_push_interface.html">PushInterface</a>* pi);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  ~<a class="code" href="class_h_t_t_p_s_request.html">HTTPSRequest</a>();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;};</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/net/NetworkException.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/io/OutputStream.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;base/Resource.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// TAG: move to proper place</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_push_interface.html">PushInterface</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> pushBegin(uint64 totalSize) = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">virtual</span> MemorySize push(<span class="keyword">const</span> uint8* buffer, MemorySize size) = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> pushEnd() = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html">   31</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_h_t_t_p_exception.html">HTTPException</a> : <span class="keyword">public</span> <a class="code" href="class_network_exception.html">NetworkException</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a254af374c7b574dfa198d8cf4d7baf5a">   37</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a254af374c7b574dfa198d8cf4d7baf5a">HTTPException</a>() noexcept</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a9a2f02943aaffc32a32a62f394eb25cf">   46</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a9a2f02943aaffc32a32a62f394eb25cf">HTTPException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message) noexcept</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    : <a class="code" href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException</a>(message)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a1cf8ddcabb145db30b8caaa1b3ca3f9d">   56</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a1cf8ddcabb145db30b8caaa1b3ca3f9d">HTTPException</a>(<span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    : <a class="code" href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException</a>(type)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_h_t_t_p_exception.html#a01ddc80fa6a4e9f5e33a551935720346">   67</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_h_t_t_p_exception.html#a01ddc80fa6a4e9f5e33a551935720346">HTTPException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <a class="code" href="class_type.html">Type</a>&amp; type) noexcept</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    : <a class="code" href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException</a>(message, type)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  _COM_AZURE_DEV__BASE__EXCEPTION_THIS_TYPE()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_h_t_t_p_s_request.html">   78</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_h_t_t_p_s_request.html">HTTPSRequest</a> : <span class="keyword">public</span> <a class="code" href="class_resource.html">Resource</a> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_GET;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_POST;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_PUT;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* METHOD_DELETE;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="class_reference.html">AnyReference</a> <a class="code" href="class_resource.html#a9d8368a62a48df58deb4babc26f80f77">handle</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isSupported() noexcept;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="class_h_t_t_p_s_request.html">HTTPSRequest</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">bool</span> open(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; method, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; url, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; user = <a class="code" href="class_string.html">String</a>(), <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password = <a class="code" href="class_string.html">String</a>());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> setRequestHeader(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; value);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">  113</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">setAgent</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; agent)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    setRequestHeader(<span class="stringliteral">&quot;User-Agent&quot;</span>, agent);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span> send(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; body = <a class="code" href="class_string.html">String</a>());</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">void</span> close();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getStatus();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="class_string.html">String</a> getStatusText();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  uint64 getContentLength();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <a class="code" href="class_string.html">String</a> getResponseHeader(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="class_string.html">String</a> getResponseHeader();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="class_string.html">String</a> getResponse();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">void</span> getResponse(<a class="code" href="class_output_stream.html">OutputStream</a>* os);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">void</span> getResponse(<a class="code" href="class_push_interface.html">PushInterface</a>* pi);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  ~<a class="code" href="class_h_t_t_p_s_request.html">HTTPSRequest</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;};</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_h_t_t_p_exception_html"><div class="ttname"><a href="class_h_t_t_p_exception.html">HTTPException</a></div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:32</div></div>
-<div class="ttc" id="aclass_h_t_t_p_exception_html_a01ddc80fa6a4e9f5e33a551935720346"><div class="ttname"><a href="class_h_t_t_p_exception.html#a01ddc80fa6a4e9f5e33a551935720346">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException(const char *message, const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:68</div></div>
+<div class="ttc" id="aclass_h_t_t_p_exception_html"><div class="ttname"><a href="class_h_t_t_p_exception.html">HTTPException</a></div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:31</div></div>
+<div class="ttc" id="aclass_h_t_t_p_exception_html_a01ddc80fa6a4e9f5e33a551935720346"><div class="ttname"><a href="class_h_t_t_p_exception.html#a01ddc80fa6a4e9f5e33a551935720346">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException(const char *message, const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:67</div></div>
 <div class="ttc" id="aclass_output_stream_html"><div class="ttname"><a href="class_output_stream.html">OutputStream</a></div><div class="ttdoc">Output stream.</div><div class="ttdef"><b>Definition:</b> OutputStream.h:28</div></div>
-<div class="ttc" id="aclass_h_t_t_p_s_request_html_a2d13f68d1bdb3cb03014653e2fe8aa50"><div class="ttname"><a href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">HTTPSRequest::setAgent</a></div><div class="ttdeci">void setAgent(const String &amp;agent)</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:109</div></div>
-<div class="ttc" id="aclass_h_t_t_p_exception_html_a9a2f02943aaffc32a32a62f394eb25cf"><div class="ttname"><a href="class_h_t_t_p_exception.html#a9a2f02943aaffc32a32a62f394eb25cf">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException(const char *message) noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:47</div></div>
+<div class="ttc" id="aclass_h_t_t_p_s_request_html_a2d13f68d1bdb3cb03014653e2fe8aa50"><div class="ttname"><a href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">HTTPSRequest::setAgent</a></div><div class="ttdeci">void setAgent(const String &amp;agent)</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:113</div></div>
+<div class="ttc" id="aclass_h_t_t_p_exception_html_a9a2f02943aaffc32a32a62f394eb25cf"><div class="ttname"><a href="class_h_t_t_p_exception.html#a9a2f02943aaffc32a32a62f394eb25cf">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException(const char *message) noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:46</div></div>
+<div class="ttc" id="aclass_resource_html_a9d8368a62a48df58deb4babc26f80f77"><div class="ttname"><a href="class_resource.html#a9d8368a62a48df58deb4babc26f80f77">Resource::handle</a></div><div class="ttdeci">AnyReference handle</div><div class="ttdef"><b>Definition:</b> Resource.h:39</div></div>
 <div class="ttc" id="aclass_push_interface_html"><div class="ttname"><a href="class_push_interface.html">PushInterface</a></div><div class="ttdoc">Push interface.</div><div class="ttdef"><b>Definition:</b> PushInterface.h:29</div></div>
 <div class="ttc" id="aclass_network_exception_html"><div class="ttname"><a href="class_network_exception.html">NetworkException</a></div><div class="ttdoc">Network IO exception.</div><div class="ttdef"><b>Definition:</b> NetworkException.h:28</div></div>
-<div class="ttc" id="aclass_h_t_t_p_s_request_html"><div class="ttname"><a href="class_h_t_t_p_s_request.html">HTTPSRequest</a></div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:79</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
-<div class="ttc" id="aclass_h_t_t_p_exception_html_a254af374c7b574dfa198d8cf4d7baf5a"><div class="ttname"><a href="class_h_t_t_p_exception.html#a254af374c7b574dfa198d8cf4d7baf5a">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException() noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:38</div></div>
-<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
+<div class="ttc" id="aclass_resource_html"><div class="ttname"><a href="class_resource.html">Resource</a></div><div class="ttdef"><b>Definition:</b> Resource.h:24</div></div>
+<div class="ttc" id="aclass_h_t_t_p_s_request_html"><div class="ttname"><a href="class_h_t_t_p_s_request.html">HTTPSRequest</a></div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:78</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_h_t_t_p_exception_html_a254af374c7b574dfa198d8cf4d7baf5a"><div class="ttname"><a href="class_h_t_t_p_exception.html#a254af374c7b574dfa198d8cf4d7baf5a">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException() noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:37</div></div>
 <div class="ttc" id="aclass_network_exception_html_aaa31691c5a557fb8af1bdcbe609ee2b4"><div class="ttname"><a href="class_network_exception.html#aaa31691c5a557fb8af1bdcbe609ee2b4">NetworkException::NetworkException</a></div><div class="ttdeci">NetworkException() noexcept</div></div>
 <div class="ttc" id="aclass_reference_html"><div class="ttname"><a href="class_reference.html">Reference&lt; ReferenceCountedObject &gt;</a></div></div>
-<div class="ttc" id="aclass_h_t_t_p_exception_html_a1cf8ddcabb145db30b8caaa1b3ca3f9d"><div class="ttname"><a href="class_h_t_t_p_exception.html#a1cf8ddcabb145db30b8caaa1b3ca3f9d">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:57</div></div>
+<div class="ttc" id="aclass_h_t_t_p_exception_html_a1cf8ddcabb145db30b8caaa1b3ca3f9d"><div class="ttname"><a href="class_h_t_t_p_exception.html#a1cf8ddcabb145db30b8caaa1b3ca3f9d">HTTPException::HTTPException</a></div><div class="ttdeci">HTTPException(const Type &amp;type) noexcept</div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:56</div></div>
 <div class="ttc" id="aclass_type_html"><div class="ttname"><a href="class_type.html">Type</a></div><div class="ttdoc">Type identity.</div><div class="ttdef"><b>Definition:</b> Type.h:31</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

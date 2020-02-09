@@ -64,6 +64,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3e0b727041162019fdc5b00094db8320"><td class="memItemLeft" >
 &#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>suspended</b> = 0</td></tr>
 <tr class="separator:a3e0b727041162019fdc5b00094db8320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d21b7bf14fefdebfe7df9a638e05dd"><td class="memItemLeft" >
+&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>captureIO</b> = 32</td></tr>
+<tr class="separator:ab5d21b7bf14fefdebfe7df9a638e05dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e0ec3af0f94083c67f1b150b3a656b"><td class="memItemLeft" >
 &#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>tasks</b> = 0</td></tr>
 <tr class="separator:a13e0ec3af0f94083c67f1b150b3a656b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -76,12 +79,20 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a01a70d95b240935ed3cb1ccf2ba6a909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d46fe44828ec925a8f147cdcc995eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_allocator.html">Allocator</a>&lt; uint8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a3d46fe44828ec925a8f147cdcc995eb9">storage</a> [STORAGE_BUFFERS]</td></tr>
 <tr class="separator:a3d46fe44828ec925a8f147cdcc995eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ebd45ec4d08e3ac35b23afb0c3c146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a92ebd45ec4d08e3ac35b23afb0c3c146">stringOutputStream</a></td></tr>
+<tr class="separator:a92ebd45ec4d08e3ac35b23afb0c3c146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49049aa9d89e8dd0575b4dd03b67d1c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_random_input_stream.html">RandomInputStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a49049aa9d89e8dd0575b4dd03b67d1c0">randomInputStream</a></td></tr>
 <tr class="separator:a49049aa9d89e8dd0575b4dd03b67d1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d0ecd76f50336d425cd107406ea5202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stack_frame.html">StackFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a5d0ecd76f50336d425cd107406ea5202">stackTrace</a></td></tr>
 <tr class="separator:a5d0ecd76f50336d425cd107406ea5202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3385e005202e9d77a18caf1d8824a6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a9d3385e005202e9d77a18caf1d8824a6">numberOfExceptions</a> = 0</td></tr>
 <tr class="separator:a9d3385e005202e9d77a18caf1d8824a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53cb07e8692e8c883a11117d654bddd6"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a53cb07e8692e8c883a11117d654bddd6">waiting</a> = 0</td></tr>
+<tr class="separator:a53cb07e8692e8c883a11117d654bddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d3826e8e3f207860088350f0fa1691"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a11d3826e8e3f207860088350f0fa1691">bytesRead</a> = 0</td></tr>
+<tr class="separator:a11d3826e8e3f207860088350f0fa1691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cffff4e7f30d45ff79d5c10e5d0f82b"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a1cffff4e7f30d45ff79d5c10e5d0f82b">bytesWritten</a> = 0</td></tr>
+<tr class="separator:a1cffff4e7f30d45ff79d5c10e5d0f82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -108,6 +119,36 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>State for all threads. Do NOT access directly from external modules. Context may change at any time. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a11d3826e8e3f207860088350f0fa1691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d3826e8e3f207860088350f0fa1691">&#9670;&nbsp;</a></span>bytesRead</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 ThreadLocalContext::bytesRead = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_bytes.html">Bytes</a> read. </p>
+
+</div>
+</div>
+<a id="a1cffff4e7f30d45ff79d5c10e5d0f82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cffff4e7f30d45ff79d5c10e5d0f82b">&#9670;&nbsp;</a></span>bytesWritten</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 ThreadLocalContext::bytesWritten = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_bytes.html">Bytes</a> written. </p>
+
+</div>
+</div>
 <a id="a9d3385e005202e9d77a18caf1d8824a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d3385e005202e9d77a18caf1d8824a6">&#9670;&nbsp;</a></span>numberOfExceptions</h2>
 
@@ -213,6 +254,21 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a92ebd45ec4d08e3ac35b23afb0c3c146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ebd45ec4d08e3ac35b23afb0c3c146">&#9670;&nbsp;</a></span>stringOutputStream</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string.html">String</a> ThreadLocalContext::stringOutputStream</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_string.html" title="String.">String</a> output stream - reused buffer. </p>
+
+</div>
+</div>
 <a id="ac522a82f7cc696146f7e5b5c11a595d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac522a82f7cc696146f7e5b5c11a595d5">&#9670;&nbsp;</a></span>thread</h2>
 
@@ -225,6 +281,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The thread object associated with context. </p>
+
+</div>
+</div>
+<a id="a53cb07e8692e8c883a11117d654bddd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53cb07e8692e8c883a11117d654bddd6">&#9670;&nbsp;</a></span>waiting</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 ThreadLocalContext::waiting = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Total microseconds spend waiting. </p>
 
 </div>
 </div>

@@ -116,51 +116,52 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> subst(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, std::initializer_list&lt;const char*&gt; list);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> subst(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, std::initializer_list&lt;Literal&gt; list);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_format_1_1_subst.html">  103</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_1_1_subst.html">Subst</a> {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> subst(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, <span class="keyword">const</span> std::initializer_list&lt;const char*&gt;&amp; list);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> subst(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, <span class="keyword">const</span> std::initializer_list&lt;Literal&gt;&amp; list);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> subst(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, <span class="keyword">const</span> std::initializer_list&lt;String&gt;&amp; list);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>* args = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    MemorySize numberOfArgs = 0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="class_format_1_1_subst.html">Subst</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>* args, MemorySize numberOfArgs);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">inline</span> MemorySize getNumberOfArgs() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordflow">return</span> numberOfArgs;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>&amp; getArg(MemorySize i)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordflow">if</span> (!INLINE_ASSERT(i &lt; numberOfArgs)) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        _throw <a class="code" href="class_out_of_range.html">OutOfRange</a>();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">return</span> args[i];</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="class_string.html">String</a> <a class="code" href="class_string_output_stream.html">format</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; operator&lt;&lt;(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  };</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_format_1_1_subst.html">Format::Subst</a>&amp; subst);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_format_1_1_subst.html">  107</a></span>&#160;  <span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_1_1_subst.html">Subst</a> {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>* args = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    MemorySize numberOfArgs = 0;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="class_format_1_1_subst.html">Subst</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text, <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>* args, MemorySize numberOfArgs);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">inline</span> MemorySize getNumberOfArgs() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordflow">return</span> numberOfArgs;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_memory_span.html">MemorySpan</a>&amp; getArg(MemorySize i)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">if</span> (!INLINE_ASSERT(i &lt; numberOfArgs)) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        _throw <a class="code" href="class_out_of_range.html">OutOfRange</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span> args[i];</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="class_string.html">String</a> <a class="code" href="class_string_output_stream.html">format</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; operator&lt;&lt;(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  };</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_format_1_1_subst.html">Format::Subst</a>&amp; subst);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_format_html"><div class="ttname"><a href="class_format.html">Format</a></div><div class="ttdef"><b>Definition:</b> Format.h:45</div></div>
 <div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
 <div class="ttc" id="aclass_out_of_range_html"><div class="ttname"><a href="class_out_of_range.html">OutOfRange</a></div><div class="ttdoc">Ouf of range exception.</div><div class="ttdef"><b>Definition:</b> OutOfRange.h:28</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
-<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:99</div></div>
-<div class="ttc" id="aclass_format_1_1_subst_html"><div class="ttname"><a href="class_format_1_1_subst.html">Format::Subst</a></div><div class="ttdef"><b>Definition:</b> Format.h:103</div></div>
-<div class="ttc" id="aclass_memory_span_html"><div class="ttname"><a href="class_memory_span.html">MemorySpan</a></div><div class="ttdef"><b>Definition:</b> Primitives.h:817</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
+<div class="ttc" id="aclass_format_1_1_subst_html"><div class="ttname"><a href="class_format_1_1_subst.html">Format::Subst</a></div><div class="ttdef"><b>Definition:</b> Format.h:107</div></div>
+<div class="ttc" id="aclass_memory_span_html"><div class="ttname"><a href="class_memory_span.html">MemorySpan</a></div><div class="ttdef"><b>Definition:</b> Primitives.h:885</div></div>
 <div class="ttc" id="aclass_any_value_html"><div class="ttname"><a href="class_any_value.html">AnyValue</a></div><div class="ttdoc">Any value.</div><div class="ttdef"><b>Definition:</b> AnyValue.h:34</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:932</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

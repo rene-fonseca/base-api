@@ -62,11 +62,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a29e12c85305af8463b475e7c030f2b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f8a634b15cf0e379a5bccbf636f5ad4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4x4.html#a4f8a634b15cf0e379a5bccbf636f5ad4">operator=</a> (const <a class="el" href="class_matrix4x4.html">Matrix4x4</a> &amp;assign) noexcept</td></tr>
 <tr class="separator:a4f8a634b15cf0e379a5bccbf636f5ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cc3e032e9f34f43e44e044778c4751e"><td class="memItemLeft" align="right" valign="top"><a id="a9cc3e032e9f34f43e44e044778c4751e"></a>
-TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>getAt</b> (unsigned int row, unsigned int column) const noexcept</td></tr>
+<tr class="memitem:a9cc3e032e9f34f43e44e044778c4751e"><td class="memItemLeft" align="right" valign="top">TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4x4.html#a9cc3e032e9f34f43e44e044778c4751e">getAt</a> (unsigned int row, unsigned int column) const noexcept</td></tr>
 <tr class="separator:a9cc3e032e9f34f43e44e044778c4751e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e78403d9af46b4e4d2196e0b282b9e1"><td class="memItemLeft" align="right" valign="top"><a id="a6e78403d9af46b4e4d2196e0b282b9e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAt</b> (unsigned int row, unsigned int column, const TYPE &amp;value) noexcept</td></tr>
+<tr class="memitem:a6e78403d9af46b4e4d2196e0b282b9e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix4x4.html#a6e78403d9af46b4e4d2196e0b282b9e1">setAt</a> (unsigned int row, unsigned int column, const TYPE &amp;value) noexcept</td></tr>
 <tr class="separator:a6e78403d9af46b4e4d2196e0b282b9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be028919329217d7e4cca1f04fbc00f"><td class="memItemLeft" align="right" valign="top"><a id="a0be028919329217d7e4cca1f04fbc00f"></a>
 TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>getElements</b> () noexcept</td></tr>
@@ -394,6 +392,45 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Fills the last row with the vector [0 0 0 1] and leaves the other elements unchanged. </p>
+
+</div>
+</div>
+<a id="a9cc3e032e9f34f43e44e044778c4751e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc3e032e9f34f43e44e044778c4751e">&#9670;&nbsp;</a></span>getAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TYPE <a class="el" href="class_matrix4x4.html">Matrix4x4</a>&lt; TYPE &gt;::getAt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the item at the given position. </p>
 
 </div>
 </div>
@@ -1167,6 +1204,51 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Unary plus. </p>
+
+</div>
+</div>
+<a id="a6e78403d9af46b4e4d2196e0b282b9e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e78403d9af46b4e4d2196e0b282b9e1">&#9670;&nbsp;</a></span>setAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_matrix4x4.html">Matrix4x4</a>&lt; TYPE &gt;::setAt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>column</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TYPE &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the items at the given position. </p>
 
 </div>
 </div>

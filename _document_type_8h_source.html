@@ -76,40 +76,44 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_d_o_m_implementation.html">DOMImplementation</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_document_type.html#aee604a6c767af4c6524e177c095d055f">   46</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_document_type.html#aee604a6c767af4c6524e177c095d055f">DocumentType</a>(<span class="keywordtype">void</span>* context) noexcept : <a class="code" href="class_node.html#aa61d025d65a8b40be59110988469760d">Node</a>(context) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_document_type.html#a8b1d6bce3415df45b016b7b45ad7294c">   53</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_document_type.html#a8b1d6bce3415df45b016b7b45ad7294c">DocumentType</a>(<a class="code" href="class_node.html">Node</a> node) : <a class="code" href="class_node.html">Node</a>(node) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    bassert(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == DOCUMENT_TYPE_NODE),</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_node.html#a6466208b9f3799ba0b10a0469e0c322f">getName</a>() const noexcept;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="class_named_node_map.html">NamedNodeMap</a> getEntities() const noexcept;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="class_named_node_map.html">NamedNodeMap</a> getNotations() const noexcept;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="class_string.html">String</a> getPublicId() const noexcept;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="class_string.html">String</a> getSystemId() const noexcept;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="class_string.html">String</a> getInternalSubset() const;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_document_type.html#aee604a6c767af4c6524e177c095d055f">   46</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_document_type.html#aee604a6c767af4c6524e177c095d055f">DocumentType</a>(<span class="keywordtype">void</span>* context) noexcept</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    : <a class="code" href="class_node.html#aa61d025d65a8b40be59110988469760d">Node</a>(context)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_document_type.html#a8b1d6bce3415df45b016b7b45ad7294c">   55</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_document_type.html#a8b1d6bce3415df45b016b7b45ad7294c">DocumentType</a>(<a class="code" href="class_node.html">Node</a> node)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    : <a class="code" href="class_node.html">Node</a>(node)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    bassert(</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      node.<a class="code" href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">isInvalid</a>() || (node.<a class="code" href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">getType</a>() == DOCUMENT_TYPE_NODE),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="class_cast_exception.html">CastException</a>(<span class="keyword">this</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_node.html#a6466208b9f3799ba0b10a0469e0c322f">getName</a>() const noexcept;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="class_named_node_map.html">NamedNodeMap</a> getEntities() const noexcept;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="class_named_node_map.html">NamedNodeMap</a> getNotations() const noexcept;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="class_string.html">String</a> getPublicId() const noexcept;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="class_string.html">String</a> getSystemId() const noexcept;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="class_string.html">String</a> getInternalSubset() const;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:307</div></div>
-<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:45</div></div>
-<div class="ttc" id="aclass_document_type_html_a8b1d6bce3415df45b016b7b45ad7294c"><div class="ttname"><a href="class_document_type.html#a8b1d6bce3415df45b016b7b45ad7294c">DocumentType::DocumentType</a></div><div class="ttdeci">DocumentType(Node node)</div><div class="ttdef"><b>Definition:</b> DocumentType.h:53</div></div>
+<div class="ttc" id="aclass_node_html_adf43df1132ffe152cdf853a318a22e3e"><div class="ttname"><a href="class_node.html#adf43df1132ffe152cdf853a318a22e3e">Node::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:325</div></div>
+<div class="ttc" id="aclass_document_html"><div class="ttname"><a href="class_document.html">Document</a></div><div class="ttdoc">DOM document.</div><div class="ttdef"><b>Definition:</b> Document.h:47</div></div>
+<div class="ttc" id="aclass_document_type_html_a8b1d6bce3415df45b016b7b45ad7294c"><div class="ttname"><a href="class_document_type.html#a8b1d6bce3415df45b016b7b45ad7294c">DocumentType::DocumentType</a></div><div class="ttdeci">DocumentType(Node node)</div><div class="ttdef"><b>Definition:</b> DocumentType.h:55</div></div>
 <div class="ttc" id="aclass_document_type_html"><div class="ttname"><a href="class_document_type.html">DocumentType</a></div><div class="ttdoc">DOM document type node.</div><div class="ttdef"><b>Definition:</b> DocumentType.h:37</div></div>
 <div class="ttc" id="aclass_node_html_a8fad79f65f64fc6c150574e023eb043f"><div class="ttname"><a href="class_node.html#a8fad79f65f64fc6c150574e023eb043f">Node::getType</a></div><div class="ttdeci">NodeType getType() const</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">DOM node.</div><div class="ttdef"><b>Definition:</b> Node.h:39</div></div>
-<div class="ttc" id="aclass_node_html_aa61d025d65a8b40be59110988469760d"><div class="ttname"><a href="class_node.html#aa61d025d65a8b40be59110988469760d">Node::Node</a></div><div class="ttdeci">Node() noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:146</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:93</div></div>
+<div class="ttc" id="aclass_node_html_aa61d025d65a8b40be59110988469760d"><div class="ttname"><a href="class_node.html#aa61d025d65a8b40be59110988469760d">Node::Node</a></div><div class="ttdeci">Node() noexcept</div><div class="ttdef"><b>Definition:</b> Node.h:159</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
 <div class="ttc" id="aclass_document_type_html_aee604a6c767af4c6524e177c095d055f"><div class="ttname"><a href="class_document_type.html#aee604a6c767af4c6524e177c095d055f">DocumentType::DocumentType</a></div><div class="ttdeci">DocumentType(void *context) noexcept</div><div class="ttdef"><b>Definition:</b> DocumentType.h:46</div></div>
 <div class="ttc" id="aclass_named_node_map_html"><div class="ttname"><a href="class_named_node_map.html">NamedNodeMap</a></div><div class="ttdoc">DOM named node map.</div><div class="ttdef"><b>Definition:</b> NamedNodeMap.h:44</div></div>
 <div class="ttc" id="aclass_d_o_m_implementation_html"><div class="ttname"><a href="class_d_o_m_implementation.html">DOMImplementation</a></div><div class="ttdoc">DOM implementation.</div><div class="ttdef"><b>Definition:</b> DOMImplementation.h:32</div></div>

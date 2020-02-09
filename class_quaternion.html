@@ -57,6 +57,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4dbfdeb451b97ba68339175f9205649"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_quaternion.html#ac4dbfdeb451b97ba68339175f9205649">Quaternion</a> () noexcept</td></tr>
 <tr class="separator:ac4dbfdeb451b97ba68339175f9205649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4deec63b24d8cf0ad0696591422443ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_quaternion.html#a4deec63b24d8cf0ad0696591422443ca">Quaternion</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a>&lt; TYPE &gt; &amp;xyz, const TYPE &amp;_w) noexcept</td></tr>
+<tr class="separator:a4deec63b24d8cf0ad0696591422443ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185b8cf5e7f284691e4ad1f569a0ea7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_quaternion.html#a185b8cf5e7f284691e4ad1f569a0ea7b">Quaternion</a> (const TYPE &amp;<a class="el" href="class_quaternion.html#a9e1d4f35189c1e35335cff8f86bc8382">x</a>, const TYPE &amp;<a class="el" href="class_quaternion.html#a73326f60676c5d16f76d780298a425de">y</a>, const TYPE &amp;<a class="el" href="class_quaternion.html#aa6babcba525fc62b026a042eb4d95dbe">z</a>, const TYPE &amp;<a class="el" href="class_quaternion.html#a50e01b4b19c364e47440bf0414ab3e93">w</a>) noexcept</td></tr>
 <tr class="separator:a185b8cf5e7f284691e4ad1f569a0ea7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ff3992946ffbb91c94aa772d545bca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_quaternion.html#ad7ff3992946ffbb91c94aa772d545bca">Quaternion</a> (const <a class="el" href="class_quaternion.html">Quaternion</a> &amp;copy) noexcept</td></tr>
@@ -157,7 +159,7 @@ class Quaternion&lt; TYPE &gt;</h3>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4dbfdeb451b97ba68339175f9205649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4dbfdeb451b97ba68339175f9205649">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4dbfdeb451b97ba68339175f9205649">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,8 +186,54 @@ template&lt;class TYPE &gt; </div>
 
 </div>
 </div>
+<a id="a4deec63b24d8cf0ad0696591422443ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4deec63b24d8cf0ad0696591422443ca">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_quaternion.html">Quaternion</a>&lt; TYPE &gt;::<a class="el" href="class_quaternion.html">Quaternion</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a>&lt; TYPE &gt; &amp;&#160;</td>
+          <td class="paramname"><em>xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TYPE &amp;&#160;</td>
+          <td class="paramname"><em>_w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes quaternion from the specified coordinates.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xyz</td><td>The desired X, Y, Z coordinates. </td></tr>
+    <tr><td class="paramname">w</td><td>The desired W coordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a185b8cf5e7f284691e4ad1f569a0ea7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a185b8cf5e7f284691e4ad1f569a0ea7b">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a185b8cf5e7f284691e4ad1f569a0ea7b">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +293,7 @@ template&lt;class TYPE &gt; </div>
 </div>
 </div>
 <a id="ad7ff3992946ffbb91c94aa772d545bca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7ff3992946ffbb91c94aa772d545bca">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ff3992946ffbb91c94aa772d545bca">&#9670;&nbsp;</a></span>Quaternion() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

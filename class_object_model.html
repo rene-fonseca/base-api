@@ -160,6 +160,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a655de00f0385db2e3cde54815557e16b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_object_model_1_1_stats.html">Stats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_model.html#a655de00f0385db2e3cde54815557e16b">getStats</a> (const <a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_object_model_1_1_value.html">ObjectModel::Value</a> &gt; &amp;value)</td></tr>
 <tr class="separator:a655de00f0385db2e3cde54815557e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2059047fa126351f065018e9625a9753"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_document.html">Document</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_model.html#a2059047fa126351f065018e9625a9753">getXML</a> (const <a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_object_model_1_1_value.html">ObjectModel::Value</a> &gt; &amp;value, const <a class="el" href="class_object_model_1_1_string.html">String</a> &amp;name=&quot;root&quot;, const <a class="el" href="class_object_model_1_1_string.html">String</a> &amp;ns=<a class="el" href="class_object_model_1_1_string.html">String</a>())</td></tr>
+<tr class="separator:a2059047fa126351f065018e9625a9753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic object model. </p>
@@ -497,6 +499,57 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the stats for the given item. </p>
+
+</div>
+</div>
+<a id="a2059047fa126351f065018e9625a9753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2059047fa126351f065018e9625a9753">&#9670;&nbsp;</a></span>getXML()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_document.html">Document</a> ObjectModel::getXML </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_reference.html">Reference</a>&lt; <a class="el" href="class_object_model_1_1_value.html">ObjectModel::Value</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_object_model_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;root&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_object_model_1_1_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>ns</em> = <code><a class="el" href="class_object_model_1_1_string.html">String</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns XML document for given <a class="el" href="class_object_model.html">ObjectModel</a> value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The object model value. </td></tr>
+    <tr><td class="paramname">name</td><td>The root name. Defaults to "root". </td></tr>
+    <tr><td class="paramname">ns</td><td>The XML namespace. Defaults to none. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

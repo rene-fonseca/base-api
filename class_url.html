@@ -41,6 +41,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="class_url-members.html">List of all members</a>  </div>
@@ -49,7 +50,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Uniform Resource Locator (URL)  
+<p>Uniform <a class="el" href="class_resource.html">Resource</a> Locator (URL)  
  <a href="class_url.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_url_8h_source.html">base/net/Url.h</a>&gt;</code></p>
@@ -105,6 +106,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48b1ffbb0e3f58b06c3fb28f205c6065"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_url.html#a48b1ffbb0e3f58b06c3fb28f205c6065">~Url</a> () noexcept</td></tr>
 <tr class="separator:a48b1ffbb0e3f58b06c3fb28f205c6065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a62c309dc1f973671b45dc256baef79ee"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_url.html#a62c309dc1f973671b45dc256baef79ee">isReserved</a> (ucs4 ch)</td></tr>
+<tr class="separator:a62c309dc1f973671b45dc256baef79ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16db7515d57d1933edc62bf7c05ccbdd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_url.html#a16db7515d57d1933edc62bf7c05ccbdd">isUnreserved</a> (ucs4 ch)</td></tr>
+<tr class="separator:a16db7515d57d1933edc62bf7c05ccbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15593dff43b23b0c5e516a9e8b1d9d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_url.html#af15593dff43b23b0c5e516a9e8b1d9d2">encodeURIComponent</a> (const <a class="el" href="class_string.html">String</a> &amp;component)</td></tr>
+<tr class="separator:af15593dff43b23b0c5e516a9e8b1d9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a9fcca7004a09f70f741553ab5c590"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_url.html#a54a9fcca7004a09f70f741553ab5c590">decodeURIComponent</a> (const <a class="el" href="class_string.html">String</a> &amp;component)</td></tr>
+<tr class="separator:a54a9fcca7004a09f70f741553ab5c590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:afaf02f718e28a11c06c000e2533eaf79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_url.html#afaf02f718e28a11c06c000e2533eaf79">parse</a> (const <a class="el" href="class_string.html">String</a> &amp;url, bool strict)</td></tr>
@@ -124,8 +136,8 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="separator:abf57142fce1c1af1a7aa1f7b66b4946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Uniform Resource Locator (URL) </p>
-<p>Implementation of Uniform Resource Locator (URL) as specified by RFC 1738 and</p><ol type="1">
+<div class="textblock"><p>Uniform <a class="el" href="class_resource.html">Resource</a> Locator (URL) </p>
+<p>Implementation of Uniform <a class="el" href="class_resource.html">Resource</a> Locator (URL) as specified by RFC 1738 and</p><ol type="1">
 <li>A compact string representation for a resource available via the Internet. This class is used to break down a url into its components. The components of the url are stored internally in decoded format.</li>
 </ol>
 <div class="fragment"><div class="line"><a class="code" href="class_url.html">Url</a> url(<span class="stringliteral">&quot;http://www.google.com&quot;</span>)</div>
@@ -285,6 +297,60 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a54a9fcca7004a09f70f741553ab5c590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a9fcca7004a09f70f741553ab5c590">&#9670;&nbsp;</a></span>decodeURIComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> Url::decodeURIComponent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the decoded URI component. </p>
+
+</div>
+</div>
+<a id="af15593dff43b23b0c5e516a9e8b1d9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15593dff43b23b0c5e516a9e8b1d9d2">&#9670;&nbsp;</a></span>encodeURIComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_string.html">String</a> Url::encodeURIComponent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the encoded URI component. </p>
+
+</div>
+</div>
 <a id="a0476b70e393ac2362ba4388ba6ace6e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0476b70e393ac2362ba4388ba6ace6e4">&#9670;&nbsp;</a></span>getHost()</h2>
 
@@ -556,6 +622,60 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns true if the url is relative. </p>
+
+</div>
+</div>
+<a id="a62c309dc1f973671b45dc256baef79ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c309dc1f973671b45dc256baef79ee">&#9670;&nbsp;</a></span>isReserved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Url::isReserved </td>
+          <td>(</td>
+          <td class="paramtype">ucs4&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if character is reserved per RFC3986. </p>
+
+</div>
+</div>
+<a id="a16db7515d57d1933edc62bf7c05ccbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16db7515d57d1933edc62bf7c05ccbdd">&#9670;&nbsp;</a></span>isUnreserved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Url::isUnreserved </td>
+          <td>(</td>
+          <td class="paramtype">ucs4&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if character is unreserved per RFC3986. </p>
 
 </div>
 </div>

@@ -78,21 +78,22 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_file_descriptor_output_stream.html">FileDescriptorOutputStream</a>&amp; <a class="code" href="class_file_descriptor_output_stream.html#af76e0078c561a46d7465e49ff73091e0">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_file_descriptor_output_stream.html">FileDescriptorOutputStream</a>&amp; assign) noexcept;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_file_descriptor_output_stream.html#a58f05cff19f702d8ddbad710d3a705c3">close</a>() {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_file_descriptor.html#a0b4c184bbf05d8882b1c93c30fc797d3">FileDescriptor::close</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_file_descriptor_output_stream.html#a51fd9fa3eb89c518669becf92bcfcf53">flush</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_file_descriptor_output_stream.html#ae8837e4a87b4286d3580e63a6323f5e3">write</a>(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> uint8* buffer,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> nonblocking = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="class_file_descriptor_output_stream.html#adccddb0395f7a0bb3ed25e0b95bd02c8">~FileDescriptorOutputStream</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_file_descriptor_output_stream.html#a58f05cff19f702d8ddbad710d3a705c3">close</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_file_descriptor.html#a0b4c184bbf05d8882b1c93c30fc797d3">FileDescriptor::close</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_file_descriptor_output_stream.html#a51fd9fa3eb89c518669becf92bcfcf53">flush</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_file_descriptor_output_stream.html#ae8837e4a87b4286d3580e63a6323f5e3">write</a>(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">const</span> uint8* buffer,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> nonblocking = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="class_file_descriptor_output_stream.html#adccddb0395f7a0bb3ed25e0b95bd02c8">~FileDescriptorOutputStream</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_file_descriptor_output_stream_html_ae8837e4a87b4286d3580e63a6323f5e3"><div class="ttname"><a href="class_file_descriptor_output_stream.html#ae8837e4a87b4286d3580e63a6323f5e3">FileDescriptorOutputStream::write</a></div><div class="ttdeci">unsigned int write(const uint8 *buffer, unsigned int size, bool nonblocking=false)</div></div>
 <div class="ttc" id="aclass_output_stream_html"><div class="ttname"><a href="class_output_stream.html">OutputStream</a></div><div class="ttdoc">Output stream.</div><div class="ttdef"><b>Definition:</b> OutputStream.h:28</div></div>

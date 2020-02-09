@@ -110,7 +110,8 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">void</span> main()</div>
 <div class="line">  {</div>
-<div class="line"><span class="preprocessor">#if (_COM_AZURE_DEV__BASE__OS == _COM_AZURE_DEV__BASE__WASI)</span></div>
+<div class="line"><span class="preprocessor">#if (_COM_AZURE_DEV__BASE__OS == _COM_AZURE_DEV__BASE__WASI) || \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH == _COM_AZURE_DEV__BASE__SPARC64) // setup_rt_frame: not implemented</span></div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>

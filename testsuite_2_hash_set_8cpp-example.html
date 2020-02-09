@@ -145,7 +145,10 @@ $(function() {
 <div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Removing non-existing value (exception InvalidNode expected)&quot;</span></div>
 <div class="line">         &lt;&lt; ENDL;</div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="preprocessor">#if (_COM_AZURE_DEV__BASE__OS != _COM_AZURE_DEV__BASE__WASI)</span></div>
+<div class="line"><span class="preprocessor">#if (!defined(_COM_AZURE_DEV__BASE__NO_EXCEPTIONS)) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__SPARC64) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__POWERPC64) &amp;&amp; \</span></div>
+<div class="line"><span class="preprocessor">    (_COM_AZURE_DEV__BASE__ARCH != _COM_AZURE_DEV__BASE__S390X)</span></div>
 <div class="line">      hashSet.<a class="code" href="class_hash_set.html#a108bf318716b2093830a4263c159cb86">remove</a>(MESSAGE(<span class="stringliteral">&quot;other&quot;</span>));</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    } <span class="keywordflow">catch</span> (<a name="_a14"></a><a class="code" href="class_invalid_node.html">InvalidNode</a>&amp; e) {</div>
@@ -156,18 +159,18 @@ $(function() {
 <div class="line"> </div>
 <div class="line">APPLICATION_STUB(HashSetApplication);</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclass_hash_set_html_a108bf318716b2093830a4263c159cb86"><div class="ttname"><a href="class_hash_set.html#a108bf318716b2093830a4263c159cb86">HashSet::remove</a></div><div class="ttdeci">void remove(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashSet.h:701</div></div>
-<div class="ttc" id="aclass_hash_set_1_1_hash_set_enumerator_html"><div class="ttname"><a href="class_hash_set_1_1_hash_set_enumerator.html">HashSet::HashSetEnumerator</a></div><div class="ttdoc">Hash set enumerator.</div><div class="ttdef"><b>Definition:</b> HashSet.h:524</div></div>
-<div class="ttc" id="aclass_hash_set_html_a64a45e1651f655c1cfcb375595fd4217"><div class="ttname"><a href="class_hash_set.html#a64a45e1651f655c1cfcb375595fd4217">HashSet::hasValue</a></div><div class="ttdeci">bool hasValue(const Value &amp;value) const noexcept</div><div class="ttdef"><b>Definition:</b> HashSet.h:675</div></div>
+<div class="ttc" id="aclass_hash_set_html_a108bf318716b2093830a4263c159cb86"><div class="ttname"><a href="class_hash_set.html#a108bf318716b2093830a4263c159cb86">HashSet::remove</a></div><div class="ttdeci">void remove(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashSet.h:706</div></div>
+<div class="ttc" id="aclass_hash_set_1_1_hash_set_enumerator_html"><div class="ttname"><a href="class_hash_set_1_1_hash_set_enumerator.html">HashSet::HashSetEnumerator</a></div><div class="ttdoc">Hash set enumerator.</div><div class="ttdef"><b>Definition:</b> HashSet.h:528</div></div>
+<div class="ttc" id="aclass_hash_set_html_a64a45e1651f655c1cfcb375595fd4217"><div class="ttname"><a href="class_hash_set.html#a64a45e1651f655c1cfcb375595fd4217">HashSet::hasValue</a></div><div class="ttdeci">bool hasValue(const Value &amp;value) const noexcept</div><div class="ttdef"><b>Definition:</b> HashSet.h:680</div></div>
 <div class="ttc" id="aclass_literal_html"><div class="ttname"><a href="class_literal.html">Literal</a></div><div class="ttdoc">A string literal.</div><div class="ttdef"><b>Definition:</b> Literal.h:28</div></div>
-<div class="ttc" id="aclass_hash_set_html_a21c4b4d7e4ac70d3e01cf88bc1d07153"><div class="ttname"><a href="class_hash_set.html#a21c4b4d7e4ac70d3e01cf88bc1d07153">HashSet::getEnumerator</a></div><div class="ttdeci">Enumerator getEnumerator() noexcept</div><div class="ttdef"><b>Definition:</b> HashSet.h:718</div></div>
-<div class="ttc" id="aclass_hash_set_html_a3e699d5c6b4ce2baaefa7d13718f1729"><div class="ttname"><a href="class_hash_set.html#a3e699d5c6b4ce2baaefa7d13718f1729">HashSet::removeAll</a></div><div class="ttdeci">void removeAll()</div><div class="ttdef"><b>Definition:</b> HashSet.h:710</div></div>
-<div class="ttc" id="aclass_hash_set_html_a295c830f797ae2ac928777c63dd954fd"><div class="ttname"><a href="class_hash_set.html#a295c830f797ae2ac928777c63dd954fd">HashSet::add</a></div><div class="ttdeci">void add(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashSet.h:691</div></div>
-<div class="ttc" id="aclass_sum_html"><div class="ttname"><a href="class_sum.html">Sum</a></div><div class="ttdoc">Summation function object.</div><div class="ttdef"><b>Definition:</b> Functor.h:943</div></div>
+<div class="ttc" id="aclass_hash_set_html_a21c4b4d7e4ac70d3e01cf88bc1d07153"><div class="ttname"><a href="class_hash_set.html#a21c4b4d7e4ac70d3e01cf88bc1d07153">HashSet::getEnumerator</a></div><div class="ttdeci">Enumerator getEnumerator() noexcept</div><div class="ttdef"><b>Definition:</b> HashSet.h:723</div></div>
+<div class="ttc" id="aclass_hash_set_html_a3e699d5c6b4ce2baaefa7d13718f1729"><div class="ttname"><a href="class_hash_set.html#a3e699d5c6b4ce2baaefa7d13718f1729">HashSet::removeAll</a></div><div class="ttdeci">void removeAll()</div><div class="ttdef"><b>Definition:</b> HashSet.h:715</div></div>
+<div class="ttc" id="aclass_hash_set_html_a295c830f797ae2ac928777c63dd954fd"><div class="ttname"><a href="class_hash_set.html#a295c830f797ae2ac928777c63dd954fd">HashSet::add</a></div><div class="ttdeci">void add(const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashSet.h:696</div></div>
+<div class="ttc" id="aclass_sum_html"><div class="ttname"><a href="class_sum.html">Sum</a></div><div class="ttdoc">Summation function object.</div><div class="ttdef"><b>Definition:</b> Functor.h:947</div></div>
 <div class="ttc" id="aclass_hash_set_html"><div class="ttname"><a href="class_hash_set.html">HashSet</a></div><div class="ttdoc">Hash set collection.</div><div class="ttdef"><b>Definition:</b> HashSet.h:35</div></div>
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application.</div><div class="ttdef"><b>Definition:</b> Application.h:53</div></div>
 <div class="ttc" id="aclass_invalid_node_html"><div class="ttname"><a href="class_invalid_node.html">InvalidNode</a></div><div class="ttdoc">Invalid node exception.</div><div class="ttdef"><b>Definition:</b> InvalidNode.h:28</div></div>
-<div class="ttc" id="aclass_hash_set_html_a680c316ec5a72a23e83c84d11c4e8178"><div class="ttname"><a href="class_hash_set.html#a680c316ec5a72a23e83c84d11c4e8178">HashSet::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> HashSet.h:659</div></div>
+<div class="ttc" id="aclass_hash_set_html_a680c316ec5a72a23e83c84d11c4e8178"><div class="ttname"><a href="class_hash_set.html#a680c316ec5a72a23e83c84d11c4e8178">HashSet::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> HashSet.h:664</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>
