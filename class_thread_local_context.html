@@ -79,8 +79,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a01a70d95b240935ed3cb1ccf2ba6a909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d46fe44828ec925a8f147cdcc995eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_allocator.html">Allocator</a>&lt; uint8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a3d46fe44828ec925a8f147cdcc995eb9">storage</a> [STORAGE_BUFFERS]</td></tr>
 <tr class="separator:a3d46fe44828ec925a8f147cdcc995eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92ebd45ec4d08e3ac35b23afb0c3c146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a92ebd45ec4d08e3ac35b23afb0c3c146">stringOutputStream</a></td></tr>
-<tr class="separator:a92ebd45ec4d08e3ac35b23afb0c3c146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f943fbb630a85fd71c7fab6ea5f95e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_output_stream.html">StringOutputStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a35f943fbb630a85fd71c7fab6ea5f95e">stringOutputStream</a></td></tr>
+<tr class="separator:a35f943fbb630a85fd71c7fab6ea5f95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8e63e6b3cd2ca5bc71088ae816562d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a8a8e63e6b3cd2ca5bc71088ae816562d">stringOutputStreamUsage</a> = 0</td></tr>
+<tr class="separator:a8a8e63e6b3cd2ca5bc71088ae816562d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49049aa9d89e8dd0575b4dd03b67d1c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_random_input_stream.html">RandomInputStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a49049aa9d89e8dd0575b4dd03b67d1c0">randomInputStream</a></td></tr>
 <tr class="separator:a49049aa9d89e8dd0575b4dd03b67d1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d0ecd76f50336d425cd107406ea5202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stack_frame.html">StackFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_local_context.html#a5d0ecd76f50336d425cd107406ea5202">stackTrace</a></td></tr>
@@ -254,18 +256,33 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a92ebd45ec4d08e3ac35b23afb0c3c146"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92ebd45ec4d08e3ac35b23afb0c3c146">&#9670;&nbsp;</a></span>stringOutputStream</h2>
+<a id="a35f943fbb630a85fd71c7fab6ea5f95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f943fbb630a85fd71c7fab6ea5f95e">&#9670;&nbsp;</a></span>stringOutputStream</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_string.html">String</a> ThreadLocalContext::stringOutputStream</td>
+          <td class="memname"><a class="el" href="class_string_output_stream.html">StringOutputStream</a> ThreadLocalContext::stringOutputStream</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_string.html" title="String.">String</a> output stream - reused buffer. </p>
+<p><a class="el" href="class_string.html" title="String.">String</a> output stream. </p>
+
+</div>
+</div>
+<a id="a8a8e63e6b3cd2ca5bc71088ae816562d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8e63e6b3cd2ca5bc71088ae816562d">&#9670;&nbsp;</a></span>stringOutputStreamUsage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ThreadLocalContext::stringOutputStreamUsage = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_string.html" title="String.">String</a> output stream. </p>
 
 </div>
 </div>

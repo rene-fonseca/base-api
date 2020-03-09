@@ -83,11 +83,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7bb2c15edc92e7773268257cf56bc5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8aa6e97416fab835638b2425a094c99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_atomic_counter.html">AtomicCounter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atomic_counter.html#af8aa6e97416fab835638b2425a094c99">operator=</a> (const TYPE _value) noexcept</td></tr>
 <tr class="separator:af8aa6e97416fab835638b2425a094c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05eb40d187740cff978f6932f7bbc2e7"><td class="memItemLeft" align="right" valign="top"><a id="a05eb40d187740cff978f6932f7bbc2e7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const TYPE _value) const noexcept</td></tr>
+<tr class="memitem:a05eb40d187740cff978f6932f7bbc2e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atomic_counter.html#a05eb40d187740cff978f6932f7bbc2e7">operator==</a> (const TYPE _value) const noexcept</td></tr>
 <tr class="separator:a05eb40d187740cff978f6932f7bbc2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c071ee341651cc161875fc6a37e680a"><td class="memItemLeft" align="right" valign="top"><a id="a3c071ee341651cc161875fc6a37e680a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const TYPE _value) const noexcept</td></tr>
+<tr class="memitem:a3c071ee341651cc161875fc6a37e680a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atomic_counter.html#a3c071ee341651cc161875fc6a37e680a">operator!=</a> (const TYPE _value) const noexcept</td></tr>
 <tr class="separator:a3c071ee341651cc161875fc6a37e680a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00897affbc15a86c4362637abde15d90"><td class="memItemLeft" align="right" valign="top">TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atomic_counter.html#a00897affbc15a86c4362637abde15d90">exchange</a> (const TYPE desired) noexcept</td></tr>
 <tr class="separator:a00897affbc15a86c4362637abde15d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,6 +301,35 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the value of the counter. </p>
+
+</div>
+</div>
+<a id="a3c071ee341651cc161875fc6a37e680a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c071ee341651cc161875fc6a37e680a">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_atomic_counter.html">AtomicCounter</a>&lt; TYPE &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const TYPE&#160;</td>
+          <td class="paramname"><em>_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if not equal to value. </p>
 
 </div>
 </div>
@@ -533,6 +560,35 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Assign value to counter. </p>
+
+</div>
+</div>
+<a id="a05eb40d187740cff978f6932f7bbc2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05eb40d187740cff978f6932f7bbc2e7">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_atomic_counter.html">AtomicCounter</a>&lt; TYPE &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const TYPE&#160;</td>
+          <td class="paramname"><em>_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if equal to value. </p>
 
 </div>
 </div>

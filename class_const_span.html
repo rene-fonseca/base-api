@@ -40,63 +40,379 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_const_span-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ConstSpan&lt; TYPE &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_heap_8h_source.html">base/mem/Heap.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_span_8h_source.html">base/mem/Span.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89034a5aa0499538cce37d21181809d7"><td class="memItemLeft" align="right" valign="top"><a id="a89034a5aa0499538cce37d21181809d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConstSpan</b> (const TYPE *_buffer, MemorySize _size) noexcept</td></tr>
+<tr class="memitem:aa5698fc83d44f468eb603b8ffdfff8a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#aa5698fc83d44f468eb603b8ffdfff8a8">ConstSpan</a> () noexcept</td></tr>
+<tr class="separator:aa5698fc83d44f468eb603b8ffdfff8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89034a5aa0499538cce37d21181809d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a89034a5aa0499538cce37d21181809d7">ConstSpan</a> (const TYPE *_buffer, MemorySize _size) noexcept</td></tr>
 <tr class="separator:a89034a5aa0499538cce37d21181809d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa959b8f0a0993b234f30b28a7fd5590b"><td class="memItemLeft" align="right" valign="top"><a id="aa959b8f0a0993b234f30b28a7fd5590b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConstSpan</b> (const TYPE *_buffer, const TYPE *end) noexcept</td></tr>
+<tr class="memitem:aa959b8f0a0993b234f30b28a7fd5590b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#aa959b8f0a0993b234f30b28a7fd5590b">ConstSpan</a> (const TYPE *_buffer, const TYPE *<a class="el" href="class_const_span.html#a82260344bad33ba8b0f4b2fea1d52653">end</a>) noexcept</td></tr>
 <tr class="separator:aa959b8f0a0993b234f30b28a7fd5590b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ea378b8947bf00cd50080996e86e1ce"><td class="memItemLeft" align="right" valign="top"><a id="a3ea378b8947bf00cd50080996e86e1ce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConstSpan</b> (const <a class="el" href="class_span.html">Span</a>&lt; TYPE &gt; &amp;span) noexcept</td></tr>
+<tr class="memitem:a3ea378b8947bf00cd50080996e86e1ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a3ea378b8947bf00cd50080996e86e1ce">ConstSpan</a> (const <a class="el" href="class_span.html">Span</a>&lt; TYPE &gt; &amp;span) noexcept</td></tr>
 <tr class="separator:a3ea378b8947bf00cd50080996e86e1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28a0721edd2563a23aa9009e8d55831"><td class="memItemLeft" align="right" valign="top"><a id="aa28a0721edd2563a23aa9009e8d55831"></a>
-const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
+<tr class="memitem:aa28a0721edd2563a23aa9009e8d55831"><td class="memItemLeft" align="right" valign="top">const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#aa28a0721edd2563a23aa9009e8d55831">begin</a> () const noexcept</td></tr>
 <tr class="separator:aa28a0721edd2563a23aa9009e8d55831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82260344bad33ba8b0f4b2fea1d52653"><td class="memItemLeft" align="right" valign="top"><a id="a82260344bad33ba8b0f4b2fea1d52653"></a>
-const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
+<tr class="memitem:a82260344bad33ba8b0f4b2fea1d52653"><td class="memItemLeft" align="right" valign="top">const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a82260344bad33ba8b0f4b2fea1d52653">end</a> () const noexcept</td></tr>
 <tr class="separator:a82260344bad33ba8b0f4b2fea1d52653"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba67351ef2dd33f5ebf75acaff99af97"><td class="memItemLeft" align="right" valign="top"><a id="aba67351ef2dd33f5ebf75acaff99af97"></a>
-const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="memitem:aba67351ef2dd33f5ebf75acaff99af97"><td class="memItemLeft" align="right" valign="top">const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#aba67351ef2dd33f5ebf75acaff99af97">cbegin</a> () const noexcept</td></tr>
 <tr class="separator:aba67351ef2dd33f5ebf75acaff99af97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a921b3c956dc4facd102896bb23439592"><td class="memItemLeft" align="right" valign="top"><a id="a921b3c956dc4facd102896bb23439592"></a>
-const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const noexcept</td></tr>
+<tr class="memitem:a921b3c956dc4facd102896bb23439592"><td class="memItemLeft" align="right" valign="top">const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a921b3c956dc4facd102896bb23439592">cend</a> () const noexcept</td></tr>
 <tr class="separator:a921b3c956dc4facd102896bb23439592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a01189f5633779ab4492aeab5b6291b"><td class="memItemLeft" align="right" valign="top"><a id="a4a01189f5633779ab4492aeab5b6291b"></a>
-MemorySize&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> () const noexcept</td></tr>
+<tr class="memitem:a4a01189f5633779ab4492aeab5b6291b"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a4a01189f5633779ab4492aeab5b6291b">getSize</a> () const noexcept</td></tr>
 <tr class="separator:a4a01189f5633779ab4492aeab5b6291b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33f80f0b6ecf759a56c8fca7d1d54e3e"><td class="memItemLeft" align="right" valign="top"><a id="a33f80f0b6ecf759a56c8fca7d1d54e3e"></a>
-const TYPE &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (MemorySize index) const noexcept</td></tr>
+<tr class="memitem:a33f80f0b6ecf759a56c8fca7d1d54e3e"><td class="memItemLeft" align="right" valign="top">const TYPE &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a33f80f0b6ecf759a56c8fca7d1d54e3e">operator[]</a> (MemorySize index) const noexcept</td></tr>
 <tr class="separator:a33f80f0b6ecf759a56c8fca7d1d54e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dccfe21cba1b6b0ac9d8f33914c8ddf"><td class="memItemLeft" align="right" valign="top"><a id="a0dccfe21cba1b6b0ac9d8f33914c8ddf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const noexcept</td></tr>
+<tr class="memitem:a0dccfe21cba1b6b0ac9d8f33914c8ddf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_const_span.html#a0dccfe21cba1b6b0ac9d8f33914c8ddf">operator bool</a> () const noexcept</td></tr>
 <tr class="separator:a0dccfe21cba1b6b0ac9d8f33914c8ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a860937db9a0e1015b95291a8cc7dfd2e"><td class="memItemLeft" align="right" valign="top"><a id="a860937db9a0e1015b95291a8cc7dfd2e"></a>
-const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
-<tr class="separator:a860937db9a0e1015b95291a8cc7dfd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70dae2d6673da04dbf40f212db74169"><td class="memItemLeft" align="right" valign="top"><a id="ac70dae2d6673da04dbf40f212db74169"></a>
-MemorySize&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> = 0</td></tr>
-<tr class="separator:ac70dae2d6673da04dbf40f212db74169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class TYPE&gt;<br />
 class ConstSpan&lt; TYPE &gt;</h3>
 
-<p>Memory span. </p>
-</div></div><!-- contents -->
+<p><a class="el" href="class_sequence.html" title="Sequence descriptor.">Sequence</a> of values in memory. The memory is not owned by class. You must ensure that the memory is not released. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa5698fc83d44f468eb603b8ffdfff8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5698fc83d44f468eb603b8ffdfff8a8">&#9670;&nbsp;</a></span>ConstSpan() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::<a class="el" href="class_const_span.html">ConstSpan</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes empty span. </p>
+
+</div>
+</div>
+<a id="a89034a5aa0499538cce37d21181809d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89034a5aa0499538cce37d21181809d7">&#9670;&nbsp;</a></span>ConstSpan() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::<a class="el" href="class_const_span.html">ConstSpan</a> </td>
+          <td>(</td>
+          <td class="paramtype">const TYPE *&#160;</td>
+          <td class="paramname"><em>_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes span. </p>
+
+</div>
+</div>
+<a id="aa959b8f0a0993b234f30b28a7fd5590b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa959b8f0a0993b234f30b28a7fd5590b">&#9670;&nbsp;</a></span>ConstSpan() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::<a class="el" href="class_const_span.html">ConstSpan</a> </td>
+          <td>(</td>
+          <td class="paramtype">const TYPE *&#160;</td>
+          <td class="paramname"><em>_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TYPE *&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes span. </p>
+
+</div>
+</div>
+<a id="a3ea378b8947bf00cd50080996e86e1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea378b8947bf00cd50080996e86e1ce">&#9670;&nbsp;</a></span>ConstSpan() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::<a class="el" href="class_const_span.html">ConstSpan</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_span.html">Span</a>&lt; TYPE &gt; &amp;&#160;</td>
+          <td class="paramname"><em>span</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes span. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa28a0721edd2563a23aa9009e8d55831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28a0721edd2563a23aa9009e8d55831">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TYPE* <a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begin iterator. </p>
+
+</div>
+</div>
+<a id="aba67351ef2dd33f5ebf75acaff99af97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba67351ef2dd33f5ebf75acaff99af97">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TYPE* <a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begin iterator. </p>
+
+</div>
+</div>
+<a id="a921b3c956dc4facd102896bb23439592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921b3c956dc4facd102896bb23439592">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TYPE* <a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>End iterator. </p>
+
+</div>
+</div>
+<a id="a82260344bad33ba8b0f4b2fea1d52653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82260344bad33ba8b0f4b2fea1d52653">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TYPE* <a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>End iterator. </p>
+
+</div>
+</div>
+<a id="a4a01189f5633779ab4492aeab5b6291b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a01189f5633779ab4492aeab5b6291b">&#9670;&nbsp;</a></span>getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MemorySize <a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the size. </p>
+
+</div>
+</div>
+<a id="a0dccfe21cba1b6b0ac9d8f33914c8ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dccfe21cba1b6b0ac9d8f33914c8ddf">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if non-empty. </p>
+
+</div>
+</div>
+<a id="a33f80f0b6ecf759a56c8fca7d1d54e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f80f0b6ecf759a56c8fca7d1d54e3e">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TYPE&amp; <a class="el" href="class_const_span.html">ConstSpan</a>&lt; TYPE &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the item at the given index. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

@@ -242,6 +242,7 @@ $(function() {
 , <a class="el" href="class_bit_set_1_1_bit_reference.html#a006ef70592609fdb8c20e463a62a53a5">BitSet::BitReference</a>
 , <a class="el" href="class_bit_set.html#adb08c694a03ad761fd2fa588893d6160">BitSet</a>
 , <a class="el" href="class_checked_pointer.html#a0a2e44fcc906e2e5333e8ac44e25c501">CheckedPointer&lt; TYPE &gt;</a>
+, <a class="el" href="class_const_span.html#a0dccfe21cba1b6b0ac9d8f33914c8ddf">ConstSpan&lt; TYPE &gt;</a>
 , <a class="el" href="class_date.html#a5f0e43ef8351feb6e569c98d6369de08">Date</a>
 , <a class="el" href="class_hash_set.html#a8f0cf6d9af78a89f46f61372574676f0">HashSet&lt; TYPE &gt;</a>
 , <a class="el" href="class_hash_table.html#a21124abc33c37fef05b2d8e63811794c">HashTable&lt; KEY, VALUE &gt;</a>
@@ -255,6 +256,7 @@ $(function() {
 , <a class="el" href="class_reference.html#ac993a5862b48aae6c0d6a8ec2885f6c8">Reference&lt; TYPE &gt;</a>
 , <a class="el" href="class_reference_counter.html#a54317e18fbec371735782b1a2f27b4a3">ReferenceCounter&lt; TYPE &gt;</a>
 , <a class="el" href="class_resource.html#abc46af0f04fbe0b1ab406f0cdb4a4a36">Resource</a>
+, <a class="el" href="class_span.html#a6ea1cb9846f0677b71254d673df8eaf0">Span&lt; TYPE &gt;</a>
 , <a class="el" href="class_stack_frame.html#aa5eaf1d5d8d50c9d51801c6dcc2f1ce8">StackFrame</a>
 , <a class="el" href="class_stream_socket.html#a64b52caebaedb0f1d798764c10acf118">StreamSocket</a>
 , <a class="el" href="class_string.html#ab65699da266f2c911c4879a54523d99b">String</a>
@@ -266,6 +268,7 @@ $(function() {
 </li>
 <li>operator const char *()
 : <a class="el" href="class_native_string.html#a077779cf16805ffb383bdef19e826dcd">NativeString</a>
+, <a class="el" href="class_owned_native_string.html#ad40cd3906baa8ec4b42cf7b87906dd08">OwnedNativeString</a>
 </li>
 <li>operator const KEY &amp;()
 : <a class="el" href="class_association.html#aaa5fb3a074825483653dd3e0c3994a9c">Association&lt; KEY, VALUE &gt;</a>
@@ -305,6 +308,9 @@ $(function() {
 <li>operator int()
 : <a class="el" href="class_integer.html#a52d10f532c9381434c5efe9e0a043c6b">Integer</a>
 </li>
+<li>operator int64()
+: <a class="el" href="class_date.html#a6a372155474f6327d0c9f7258e5af843">Date</a>
+</li>
 <li>operator long double()
 : <a class="el" href="class_long_double.html#a30f7258d29ad52fea4a5624707c21087">LongDouble</a>
 </li>
@@ -324,7 +330,8 @@ $(function() {
 : <a class="el" href="class_short_integer.html#aa866739d4a6b408614b4c7641160da64">ShortInteger</a>
 </li>
 <li>operator String()
-: <a class="el" href="class_urn.html#a790dd7a6115d94cb5947fde5287f7ce5">Urn</a>
+: <a class="el" href="class_guid.html#a794f7e367ba2aa6e425aed412ba6ec09">Guid</a>
+, <a class="el" href="class_urn.html#a790dd7a6115d94cb5947fde5287f7ce5">Urn</a>
 </li>
 <li>operator TYPE()
 : <a class="el" href="class_atomic_counter.html#aed15a60056639822740e80d9dae7b83e">AtomicCounter&lt; TYPE &gt;</a>
@@ -351,6 +358,7 @@ $(function() {
 : <a class="el" href="class_allocator_enumerator.html#a160b0b29fee52a7b0e4dfe0ce22780dd">AllocatorEnumerator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_array.html#aede606ca730317042161e320207cc646">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_association.html#a2bdbe6c29e8de2e296dfccd634524190">Association&lt; KEY, VALUE &gt;</a>
+, <a class="el" href="class_atomic_counter.html#a3c071ee341651cc161875fc6a37e680a">AtomicCounter&lt; TYPE &gt;</a>
 , <a class="el" href="class_bit_set_1_1_bit_set_enumerator.html#ad7bc5969dd6465cc9c5805aea4ea8a7e">BitSet::BitSetEnumerator</a>
 , <a class="el" href="class_bit_set_1_1_bit_set_read_enumerator.html#a635698855b89b378adf7e6e775f3f635">BitSet::BitSetReadEnumerator</a>
 , <a class="el" href="class_checked_pointer.html#a5e5b48e495c7600b52e92a59640e9157">CheckedPointer&lt; TYPE &gt;</a>
@@ -390,6 +398,7 @@ $(function() {
 , <a class="el" href="class_user.html#a0e8aa82aa06d2c5e97a079d3ce764a3a">User</a>
 , <a class="el" href="class_u_t_f16_iterator.html#a98237fe92041cbfe69d620a2d89793bc">UTF16Iterator</a>
 , <a class="el" href="class_u_t_f8_iterator.html#ab5fdcf0fb47d97c05be2f727314a158c">UTF8Iterator</a>
+, <a class="el" href="class_web_assembly_1_1_function_type.html#a5ba77b02a3420d00483a9485b6226911">WebAssembly::FunctionType</a>
 , <a class="el" href="class_wide_string.html#a9ab710b17aa85452931a5f7b134682a0">WideString</a>
 </li>
 <li>operator%=()
@@ -409,7 +418,8 @@ $(function() {
 , <a class="el" href="class_invoke_member.html#a3945ce96849b476214652099b73e011c">InvokeMember&lt; TYPE, RESULT &gt;</a>
 , <a class="el" href="class_matrix.html#a3aeb84e23598daf12ae4e59a473cea1e">Matrix&lt; TYPE &gt;</a>
 , <a class="el" href="class_signal.html#ae44da0b941e7d81f85fd59c71e689fe5">Signal&lt; SENDER, LISTENER &gt;</a>
-, <a class="el" href="class_string.html#a02193c8b4bce2a05dd651d69a66b0193">String</a>
+, <a class="el" href="class_string.html#ab119e96a9e7bd8a936352ba8b26dc586">String</a>
+, <a class="el" href="class_web_assembly_function.html#a85631cee711f7206e82481b3161db897">WebAssemblyFunction</a>
 </li>
 <li>operator*()
 : <a class="el" href="class_bit_set_1_1_bit_pointer.html#a4f12c7f01454d2854c7fab2576c13cb4">BitSet::BitPointer</a>
@@ -550,7 +560,7 @@ $(function() {
 , <a class="el" href="class_ownership_pointer.html#aab80e48dde83eb1b92b9ba9848b45553">OwnershipPointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_pointer.html#a3bba4e55e1997cf98247e6d83e2614a4">Pointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_protected_pointer.html#aad98007fcdb5d6a54b7a072ca89563d9">ProtectedPointer&lt; TYPE &gt;</a>
-, <a class="el" href="class_protected_reference.html#a2bf5a250fcd106c17d03f21e556066a0">ProtectedReference&lt; TYPE &gt;</a>
+, <a class="el" href="class_protected_reference.html#a329583509959aba6fe011da9c11a8c68">ProtectedReference&lt; TYPE &gt;</a>
 , <a class="el" href="class_reference.html#afdc4b1a404e7c0e14924e6af176f598c">Reference&lt; TYPE &gt;</a>
 , <a class="el" href="class_reference_counted_object_wrapper.html#aa91a65a309ebd5b4b56f7e62d9d18b05">ReferenceCountedObjectWrapper&lt; TYPE &gt;</a>
 , <a class="el" href="class_reference_counter.html#a436d72462c64ad72e16a3416c1c4721d">ReferenceCounter&lt; TYPE &gt;</a>
@@ -566,7 +576,7 @@ $(function() {
 , <a class="el" href="class_vector3_d.html#a0c6bd011c8c249c69091f4475ccc2b08">Vector3D&lt; TYPE &gt;</a>
 </li>
 <li>operator/=()
-: <a class="el" href="class_complex.html#aa3003a2a98bd5617468dc1696a484f63">Complex&lt; TYPE &gt;</a>
+: <a class="el" href="class_complex.html#af61b50c6ab68f85eac1b1e53f7cd77df">Complex&lt; TYPE &gt;</a>
 , <a class="el" href="class_large_integer.html#ae1c93d0e079728de9ccb827eb6590654">LargeInteger</a>
 , <a class="el" href="class_matrix4x4.html#a173201574dbfd283b60f35d59e99c567">Matrix4x4&lt; TYPE &gt;</a>
 , <a class="el" href="class_matrix.html#a27f920b067a9f17b94d68559ba5c5213">Matrix&lt; TYPE &gt;</a>
@@ -592,9 +602,8 @@ $(function() {
 , <a class="el" href="class_bit_set.html#a5b75732356887c663e14ba92916e68ba">BitSet</a>
 , <a class="el" href="class_cache.html#a304025f786e5947eccd9395b7eb0b52f">Cache&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_complex.html#a9b2746c4df4e6b575b1bb252331863eb">Complex&lt; TYPE &gt;</a>
-, <a class="el" href="class_format_1_1_subst.html#a1d40e87587b782b35903a762b7741ae0">Format::Subst</a>
-, <a class="el" href="class_format_output_stream.html#ab86d4b6c9b127be68bd1ac4f9de8f065">FormatOutputStream</a>
-, <a class="el" href="class_hash_set.html#aeee29ba00c8597c27db265b9f9c9bffe">HashSet&lt; TYPE &gt;</a>
+, <a class="el" href="class_format_output_stream.html#aad544f23583a5a49fadbc3d62caf1013">FormatOutputStream</a>
+, <a class="el" href="class_hash_set.html#ac3205a4c869c41dfb225639a2ee23ac0">HashSet&lt; TYPE &gt;</a>
 , <a class="el" href="class_hash_table.html#a6d584f8f3ed32af45963ba5ca6fd2f60">HashTable&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_list.html#a5d45381c8806f70cd6a937fc9e711241">List&lt; TYPE &gt;</a>
 , <a class="el" href="class_map.html#a8a9384ade57c2e724cced06dd237f949">Map&lt; KEY, VALUE &gt;</a>
@@ -602,6 +611,7 @@ $(function() {
 , <a class="el" href="class_quaternion.html#a7daba773ceafc2b458e224ead6a2f7c9">Quaternion&lt; TYPE &gt;</a>
 , <a class="el" href="class_set.html#affac6dbb4d96cc54fd029bfcf02803f9">Set&lt; KEY &gt;</a>
 , <a class="el" href="class_stack.html#a6f4258b3514c63dd8afe2bd075de9d8a">Stack&lt; TYPE &gt;</a>
+, <a class="el" href="class_thread_string_output_stream.html#a0e401a9e2181836a8880b672fcf0da77">ThreadStringOutputStream</a>
 , <a class="el" href="class_timer.html#aa5de5249a9adcc09b3b44cfd7cfcca52">Timer</a>
 , <a class="el" href="class_vector2_d.html#af85e7e845c2214ec1cf1b86045100885">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#adc40bfed08eb3afdc23388f44da0b9c5">Vector3D&lt; TYPE &gt;</a>
@@ -622,7 +632,7 @@ $(function() {
 : <a class="el" href="class_access_control_entry.html#afe4e27639a8d125893b091e96478658c">AccessControlEntry</a>
 , <a class="el" href="class_access_control_list.html#a9aaf8041839dcd026e7199d5132ba757">AccessControlList</a>
 , <a class="el" href="class_allocator.html#a2fe57f8bc547ad6c920edc19b7eb8117">Allocator&lt; TYPE &gt;</a>
-, <a class="el" href="class_any_value.html#a2374f60b88f4d5db94554bf0e73a50ad">AnyValue</a>
+, <a class="el" href="class_any_value.html#aa62a4dc9d8808597a00dfc3ae0d00a60">AnyValue</a>
 , <a class="el" href="class_array_1_1_element.html#a524bbba98207b396480a1ec15e52d82c">Array&lt; TYPE &gt;::Element</a>
 , <a class="el" href="class_array.html#ac944903b43d59bbd860f691e33f611b7">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_array_map.html#a44ccc150c0e1acb54de549212c31622a">ArrayMap&lt; KEY, VALUE &gt;</a>
@@ -635,17 +645,17 @@ $(function() {
 , <a class="el" href="class_binary_tree.html#a6c94c0ac1778132fd89a1085f37c9925">BinaryTree&lt; TYPE &gt;</a>
 , <a class="el" href="class_bitmap.html#a2f3df7b05fa70ffc57c7e8b5782f5b55">Bitmap</a>
 , <a class="el" href="class_bit_set_1_1_bit_read_reference.html#adae5abad04808fbb13ac72b7435af06d">BitSet::BitReadReference</a>
-, <a class="el" href="class_bit_set_1_1_bit_reference.html#ae92dc50fab94045f60d480b07a44ae04">BitSet::BitReference</a>
+, <a class="el" href="class_bit_set_1_1_bit_reference.html#a83fbc2d7b9be0466e9081a74ebea42d8">BitSet::BitReference</a>
 , <a class="el" href="class_bit_set.html#ac19572e98c9f7a4bd1640631cd0af10f">BitSet</a>
 , <a class="el" href="class_cache.html#a97b8a90ccc8e4cc60938f9ef23c683d5">Cache&lt; KEY, VALUE &gt;</a>
-, <a class="el" href="class_character.html#aa6658f4ad225da150d4da74e7cac3d9f">Character</a>
+, <a class="el" href="class_character.html#a7a7766d517b4ddc88efc5b202285ec31">Character</a>
 , <a class="el" href="class_character_set.html#a6ff5581641634f4fa73742d83e1831c0">CharacterSet</a>
 , <a class="el" href="class_checked_pointer.html#a363c5114f67d3ea9764c11d47a12551d">CheckedPointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_color.html#ab575bb469bff65722bdffece7dab56bd">Color</a>
 , <a class="el" href="class_complex.html#aa1ce8980230df14b4862bdb09c91ab13">Complex&lt; TYPE &gt;</a>
 , <a class="el" href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">Date</a>
 , <a class="el" href="class_dimension.html#a8ef36f6cbae7c1f4bcc6c1174b97a6ac">Dimension</a>
-, <a class="el" href="class_double.html#a66ee357d1ac09cd960ade0e05465400c">Double</a>
+, <a class="el" href="class_double.html#a8f8f0367c461ddbb87a2bb9fea1a4172">Double</a>
 , <a class="el" href="class_double_linked_node_iterator.html#a376bf3a9a8dfde8f6ee108eb215f15f3">DoubleLinkedNodeIterator&lt; TYPE &gt;</a>
 , <a class="el" href="class_double_linked_node_read_iterator.html#a97a040bb8d0ac513aa396ee5250a6ce1">DoubleLinkedNodeReadIterator&lt; TYPE &gt;</a>
 , <a class="el" href="class_e_u_i64.html#a4548794414dd363bdb85ae260b5325b2">EUI64</a>
@@ -659,7 +669,7 @@ $(function() {
 , <a class="el" href="class_hash_set.html#a0048f8536509b9ee72fa7f1f241a7d7a">HashSet&lt; TYPE &gt;</a>
 , <a class="el" href="class_hash_table_1_1_element.html#a43efdeb636581132c09fb3d5a303ff3c">HashTable&lt; KEY, VALUE &gt;::Element</a>
 , <a class="el" href="class_hash_table.html#a98b02afe1a6d374e948f682d3423f1b5">HashTable&lt; KEY, VALUE &gt;</a>
-, <a class="el" href="class_heap_block.html#ac3ad8497bbcd06d3621e323b1830612a">HeapBlock&lt; TYPE &gt;</a>
+, <a class="el" href="class_heap_block.html#ab1b884eb5356689620f8385f7e4e5a45">HeapBlock&lt; TYPE &gt;</a>
 , <a class="el" href="class_heap_block_owned.html#a5b9995dc15dbad2c8f1b56d2cb68e305">HeapBlockOwned&lt; TYPE &gt;</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_read_channel.html#ac90285987c25d867b091d02fc2afcf40">IEEE1394Common::IsochronousReadChannel</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_read_fixed_data_request.html#a1c98e18daf93e70957491266fd7bfd7a">IEEE1394Common::IsochronousReadFixedDataRequest</a>
@@ -671,16 +681,16 @@ $(function() {
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_fixed_packets_request.html#a3d0e2f4185613fffe75c26741ba97470">IEEE1394Common::IsochronousWriteFixedPacketsRequest</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_packets_request.html#a4196409855b0866e8b26e139a084449c">IEEE1394Common::IsochronousWritePacketsRequest</a>
 , <a class="el" href="class_i_e_e_e1394_common_1_1_isochronous_write_request.html#a5f280d1057ec79bd7185feeac0fbe81f">IEEE1394Common::IsochronousWriteRequest</a>
-, <a class="el" href="class_indirect.html#a3830494b40158d5fb7113752b3884e51">Indirect&lt; TYPE &gt;</a>
+, <a class="el" href="class_indirect.html#a4e3e7ab5283d011ae3b48ceac1720357">Indirect&lt; TYPE &gt;</a>
 , <a class="el" href="class_inet_address.html#a307f799bae774110fab5c6b3910b71d7">InetAddress</a>
 , <a class="el" href="class_inet_end_point.html#aba8bb551e392246ab3a189ffbb99409c">InetEndPoint</a>
 , <a class="el" href="class_inet_service.html#a26632f73f311d3af50ddb76d34f45bd3">InetService</a>
-, <a class="el" href="class_integer.html#a4be21cb07776a186f452b983fdd81a85">Integer</a>
+, <a class="el" href="class_integer.html#af429bc8c368296087c189f95e240a5a3">Integer</a>
 , <a class="el" href="class_invocation_result.html#a5cb8b08096603be82e4a59cba2bf3098">InvocationResult</a>
 , <a class="el" href="class_list.html#adaa927e312db949ed455886ffbe65c43">List&lt; TYPE &gt;</a>
 , <a class="el" href="class_long_double.html#ab652ef0e921fc3fc95e1ae7b6f3cb30d">LongDouble</a>
 , <a class="el" href="class_long_integer.html#a38c8df90a599660a677f84d78778c447">LongInteger</a>
-, <a class="el" href="class_map.html#ab0658e4dcba7a4d5254d8b4851fd42c5">Map&lt; KEY, VALUE &gt;</a>
+, <a class="el" href="class_map.html#ad5e5f93183586ab449b37910bb01c4a7">Map&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_mapped_file.html#a733629514253addd1c3ab668bc744066">MappedFile</a>
 , <a class="el" href="class_matrix4x4.html#a4f8a634b15cf0e379a5bccbf636f5ad4">Matrix4x4&lt; TYPE &gt;</a>
 , <a class="el" href="class_matrix.html#a30fcbb0d454b4cf4bdfbf989a0c75a96">Matrix&lt; TYPE &gt;</a>
@@ -690,50 +700,53 @@ $(function() {
 , <a class="el" href="class_node.html#adc79b4820db97deedd32d53ea5e4fb23">Node</a>
 , <a class="el" href="class_orb_reference.html#ab3f36593417b70301f6202995288cd38">OrbReference</a>
 , <a class="el" href="class_ordered_binary_tree.html#ae6d19abf0cb7f561c0a012ed01822b7d">OrderedBinaryTree&lt; TYPE, KEY &gt;</a>
-, <a class="el" href="class_ownership_pointer.html#ab13ed4d6292047cc02053c7d98bb763d">OwnershipPointer&lt; TYPE &gt;</a>
+, <a class="el" href="class_owned_native_string.html#ae72f7fc9d01e5bdd01852f8a870401d3">OwnedNativeString</a>
+, <a class="el" href="class_ownership_pointer.html#a6f19c1368fdab2ef4c9cd6728176f15b">OwnershipPointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">Pair&lt; FIRST, SECOND &gt;</a>
-, <a class="el" href="class_pointer.html#ab22e7b0693ae7a9328a099115c1fb879">Pointer&lt; TYPE &gt;</a>
+, <a class="el" href="class_pointer.html#af847b65ea2d329a05984006ec52760cb">Pointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_position.html#aeb692f5769e82d4c4bdd3d40ea120d48">Position</a>
 , <a class="el" href="class_priority_queue.html#a598ee7ad2ef0c94136de0d5c2a70df71">PriorityQueue&lt; VALUE, PRIORITY, LOCK &gt;</a>
 , <a class="el" href="class_process.html#a9a4c5c1477842517509ff6a81ff4e8e3">Process</a>
-, <a class="el" href="class_protected_pointer.html#a4b8bee37ac58ead265079b9c981b3f24">ProtectedPointer&lt; TYPE &gt;</a>
-, <a class="el" href="class_protected_reference.html#a56335a06a9d7d941a7038bce9512ea9b">ProtectedReference&lt; TYPE &gt;</a>
+, <a class="el" href="class_protected_pointer.html#a6020b2368c67a9e3ecac400cc39d3f2d">ProtectedPointer&lt; TYPE &gt;</a>
+, <a class="el" href="class_protected_reference.html#a9b13b2956d7822e35173d6cf1d10dc11">ProtectedReference&lt; TYPE &gt;</a>
 , <a class="el" href="class_quaternion.html#a4c205184ed4d81acbfe78c8476831a41">Quaternion&lt; TYPE &gt;</a>
 , <a class="el" href="class_queue.html#a78cc2093ee8ec12162153e2b91d7aa4b">Queue&lt; TYPE, LOCK &gt;</a>
 , <a class="el" href="class_range2_d.html#ada0c0085c6216b85df9c04f6fabf7e84">Range2D</a>
-, <a class="el" href="class_reference.html#abc950fe45efd6f29a7492f07687e19ab">Reference&lt; TYPE &gt;</a>
-, <a class="el" href="class_reference_counted_object.html#a99acb3804778bf956d2edc23dd4b4148">ReferenceCountedObject</a>
-, <a class="el" href="class_reference_counter.html#a3240fbe95e99e85e7e82af918e4185f6">ReferenceCounter&lt; TYPE &gt;</a>
+, <a class="el" href="class_reference.html#acc72da1065d19bd91ac14ad682aed9f5">Reference&lt; TYPE &gt;</a>
+, <a class="el" href="class_reference_counted_object.html#aee15627db68c14c11b6d67c2027cc04f">ReferenceCountedObject</a>
+, <a class="el" href="class_reference_counter.html#a4551989f0b0b02114aeff52fd1b11d40">ReferenceCounter&lt; TYPE &gt;</a>
 , <a class="el" href="class_reg_exp_1_1_substring.html#af59dcd529c603e20c2b8d0c233447865">RegExp::Substring</a>
 , <a class="el" href="class_region.html#a6a03cd455673e6e35fc336f5463ae778">Region</a>
-, <a class="el" href="class_sequence_iterator.html#a40a482a515a2fb177f42d34d428bf28b">SequenceIterator&lt; TRAITS &gt;</a>
+, <a class="el" href="class_sequence_iterator.html#a7d6fb9ba644d5ba22f55b23ffe976b66">SequenceIterator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_shared_memory.html#aaf6b209772e09eb3e1e0ff2a55b44451">SharedMemory</a>
 , <a class="el" href="class_short_integer.html#ab1684a2184da403e9721af125ec4d817">ShortInteger</a>
 , <a class="el" href="class_single_linked_node_iterator.html#a956cb0e6160bf35b6449dba2e8cd9e81">SingleLinkedNodeIterator&lt; TYPE &gt;</a>
 , <a class="el" href="class_single_linked_node_read_iterator.html#a379213feda99d894ef911f794f32b0ad">SingleLinkedNodeReadIterator&lt; TYPE &gt;</a>
 , <a class="el" href="class_stack.html#a267f767333362bfdf2ff2ae8d7e0ff0f">Stack&lt; TYPE &gt;</a>
-, <a class="el" href="class_string.html#a965af55814c71e9c38f75de08485ba31">String</a>
+, <a class="el" href="class_string.html#a26be6af4422bc961f904d5237d5db8be">String</a>
 , <a class="el" href="class_stylesheet.html#a444fcdc907efa19e2086c7bfa82cc5f8">Stylesheet</a>
 , <a class="el" href="class_trustee.html#ac41cc43c838faede69e2e8c8b3bc3415">Trustee</a>
 , <a class="el" href="class_type.html#ae259996cb02e2686f16023ff6a567393">Type</a>
-, <a class="el" href="class_unsigned_integer.html#a9d798e7a504734b20c4dee3f05497f3c">UnsignedInteger</a>
-, <a class="el" href="class_unsigned_long_integer.html#a7b99099d3bfb4d78d3330ad8f17cc402">UnsignedLongInteger</a>
+, <a class="el" href="class_unsigned_integer.html#af93812f20b8b51eb61c2c8a0d4c77dfa">UnsignedInteger</a>
+, <a class="el" href="class_unsigned_long_integer.html#a85d0260563373d0632d57a6783da6a7f">UnsignedLongInteger</a>
 , <a class="el" href="class_uri.html#a3aec4951b8b4f0150663b76619a031ca">Uri</a>
 , <a class="el" href="class_url.html#a148a65d50cead77fa8c42ed9988ed090">Url</a>
 , <a class="el" href="class_urn.html#a6c4e6649d5acd6a14f0346763e53a16c">Urn</a>
 , <a class="el" href="class_user.html#aa7add1aa80bf291413dd80631da158df">User</a>
 , <a class="el" href="class_u_t_f16_iterator.html#a1187a4972f2bf6237d9e8d842cd6bc40">UTF16Iterator</a>
 , <a class="el" href="class_u_t_f8_iterator.html#af9a6da425425dbb3a8df035ee8d214d7">UTF8Iterator</a>
-, <a class="el" href="class_validified_result.html#a0a2d34cad1e8920d936858d92d95b0d4">ValidifiedResult&lt; TYPE &gt;</a>
+, <a class="el" href="class_u_t_f8_stringify.html#ad968ef696a74f32ed00c73c38320b123">UTF8Stringify</a>
+, <a class="el" href="class_validified_result.html#a59b4613826fcf11e9a07bcf2d2593600">ValidifiedResult&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector2_d.html#ad9ec4f2a898fbf161deb5e04dad6c3f1">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#a5c8f358da954d1e62e510d5b52a632d2">Vector3D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector.html#ad0df65269d9dd3b2076e82ca785c954a">Vector&lt; TYPE &gt;</a>
-, <a class="el" href="class_wide_string.html#a2416025248c866a90bc9be2099a606fa">WideString</a>
+, <a class="el" href="class_wide_string.html#aa18b9306a3199d90b0ab5eee7c2c24c9">WideString</a>
 </li>
 <li>operator==()
 : <a class="el" href="class_allocator_enumerator.html#a1fe4574f59a0d27150df099f2f8a3789">AllocatorEnumerator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_array.html#ac5adfcd936a295f909f1a501d7d22216">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_association.html#a07753ef572cdaababa11812ac625b38e">Association&lt; KEY, VALUE &gt;</a>
+, <a class="el" href="class_atomic_counter.html#a05eb40d187740cff978f6932f7bbc2e7">AtomicCounter&lt; TYPE &gt;</a>
 , <a class="el" href="class_bit_set_1_1_bit_set_enumerator.html#a834f0f99a7c03f467fae92c59e885422">BitSet::BitSetEnumerator</a>
 , <a class="el" href="class_bit_set_1_1_bit_set_read_enumerator.html#aec00670723dc51bc5903cd2292439ac2">BitSet::BitSetReadEnumerator</a>
 , <a class="el" href="class_checked_pointer.html#a88f76f28e361d853ad1a6837f92ebe6f">CheckedPointer&lt; TYPE &gt;</a>
@@ -763,7 +776,7 @@ $(function() {
 , <a class="el" href="class_protected_pointer.html#a0eb2f5364c9be65f9bcb300e42460d11">ProtectedPointer&lt; TYPE &gt;</a>
 , <a class="el" href="class_protected_reference.html#ad5b02772950247dc7611b4214140592c">ProtectedReference&lt; TYPE &gt;</a>
 , <a class="el" href="class_quaternion.html#a82730eed0aa4c1210861de119f339fe9">Quaternion&lt; TYPE &gt;</a>
-, <a class="el" href="class_reference.html#ae4e8172e5b7902c9f9639cb566279519">Reference&lt; TYPE &gt;</a>
+, <a class="el" href="class_reference.html#af060c3f27bb9a56269dbce1ba4d502ce">Reference&lt; TYPE &gt;</a>
 , <a class="el" href="class_reference_counter.html#a8f0aef89dbf747e5971f880f988fcdb6">ReferenceCounter&lt; TYPE &gt;</a>
 , <a class="el" href="class_sequence_iterator.html#a80d26b965edcef1b2b3e61094c34b6da">SequenceIterator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_single_linked_node_iterator.html#a89d061f57eb61090083216746cd11243">SingleLinkedNodeIterator&lt; TYPE &gt;</a>
@@ -771,10 +784,10 @@ $(function() {
 , <a class="el" href="class_stack_1_1_stack_read_enumerator.html#a285b294e5dda895ed291e170e6fe1dc5">Stack&lt; TYPE &gt;::StackReadEnumerator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_stack_frame.html#a0a5b9e4ab4a3d12afda27444ce15eb38">StackFrame</a>
 , <a class="el" href="class_strict_pointer.html#ae9204ef75662b0ee59b73813ff6c836e">StrictPointer&lt; TYPE &gt;</a>
-, <a class="el" href="class_string.html#a6852e95e2753089d26fb6f93a3ef611b">String</a>
+, <a class="el" href="class_string.html#a35a81d3c98c9797711bb3b3d2e399627">String</a>
 , <a class="el" href="class_trustee.html#a565a62f2f2a14496a5ddb8a9c6b5e992">Trustee</a>
 , <a class="el" href="class_type.html#ad64092dac419201ed8b7bf4598b5c8cd">Type</a>
-, <a class="el" href="class_type_of.html#a34f63dab1899b2b14e8a600b3ff02f90">TypeOf&lt; TYPE &gt;</a>
+, <a class="el" href="class_type_of.html#a1846289a26fdb44b42f95af53a87e469">TypeOf&lt; TYPE &gt;</a>
 , <a class="el" href="class_urn.html#ac6db06aa2df09403a72d99e955ba3d17">Urn</a>
 , <a class="el" href="class_user.html#a56c8ff230786c51d74906294740deead">User</a>
 , <a class="el" href="class_u_t_f16_iterator.html#a3b5796ede255bd65d6b887d190f089ab">UTF16Iterator</a>
@@ -782,10 +795,11 @@ $(function() {
 , <a class="el" href="class_vector2_d.html#add29b6068881ab540a87fba5989e177e">Vector2D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector3_d.html#af46fd33bc77f8b3e1e2588824bdcdbb8">Vector3D&lt; TYPE &gt;</a>
 , <a class="el" href="class_vector.html#ab3813cae686f669943d5ae92af748c3a">Vector&lt; TYPE &gt;</a>
+, <a class="el" href="class_web_assembly_1_1_function_type.html#a71686b7821f03afe1a93cbf6d78a3149">WebAssembly::FunctionType</a>
 , <a class="el" href="class_wide_string.html#a8200c287fb3d02f3335903b34a3b04b1">WideString</a>
 </li>
 <li>operator&gt;()
-: <a class="el" href="class_association.html#a28d10f489d73897156599ba2bf553e44">Association&lt; KEY, VALUE &gt;</a>
+: <a class="el" href="class_association.html#a5474348c690593347512e2f926b0d1fd">Association&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_string.html#a70b6a50dca6708e32b3dc66e0f5bdcea">String</a>
 , <a class="el" href="class_u_t_f16_iterator.html#a330b2e06c85900741ff3e989c4c39539">UTF16Iterator</a>
 , <a class="el" href="class_u_t_f8_iterator.html#a362aa5de14821d54e9042b3d159da7ff">UTF8Iterator</a>
@@ -796,7 +810,7 @@ $(function() {
 , <a class="el" href="class_association.html#a725258a193b93dad57a9ccb5b4484761">Association&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_list.html#a197bf68a2d7496f20648e35c2ce78df5">List&lt; TYPE &gt;</a>
 , <a class="el" href="class_sequence_iterator.html#a91f4a57603ac2e64710eb9d6130916b5">SequenceIterator&lt; TRAITS &gt;</a>
-, <a class="el" href="class_string.html#af89296fa91e2eb767264166314b7cb15">String</a>
+, <a class="el" href="class_string.html#a92eb2d9f2414a1402cadbd64dfe0c86c">String</a>
 , <a class="el" href="class_u_t_f16_iterator.html#ae16121687bb85fab28900813d63e2e4d">UTF16Iterator</a>
 , <a class="el" href="class_u_t_f8_iterator.html#aa764a637932da4a483f9b041c93262b7">UTF8Iterator</a>
 , <a class="el" href="class_wide_string.html#a7f8e50790d675b196b03fa91f1994a94">WideString</a>
@@ -809,20 +823,22 @@ $(function() {
 , <a class="el" href="class_large_integer.html#ae93ddfcb8f2866e8ce6f645d942ec9bf">LargeInteger</a>
 </li>
 <li>operator[]()
-: <a class="el" href="class_array.html#a9ad580994d18a36b55e4fc4005341c10">Array&lt; TYPE &gt;</a>
+: <a class="el" href="class_array.html#ac7f43497fdce3b311b91efa770e21a9a">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_attributes.html#aa922aff4202628c8902190690d3eb7de">Attributes</a>
 , <a class="el" href="class_bit_set.html#a8fb0ca49832fc6bd3eeacbd836e93d70">BitSet</a>
 , <a class="el" href="class_buffer.html#abf76762af2d04e90eca5f2ef23452361">Buffer</a>
 , <a class="el" href="class_cache.html#a3f87a6f28d9dc649dd10b2617f4b55eb">Cache&lt; KEY, VALUE &gt;</a>
-, <a class="el" href="class_hash_table.html#a507907cd75c2e8aeb3bb738bda5cbc97">HashTable&lt; KEY, VALUE &gt;</a>
+, <a class="el" href="class_const_span.html#a33f80f0b6ecf759a56c8fca7d1d54e3e">ConstSpan&lt; TYPE &gt;</a>
+, <a class="el" href="class_hash_table.html#a61be132ca483e75b15b28197cc7ebd6e">HashTable&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_interleaved_iterator.html#afd1abb81bc584bc350fef9ab0d180934">InterleavedIterator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_map.html#a1d49fd666f88fcf528e992c5e108e91d">Map&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_matrix.html#a1270def9dc617458b82c226b908ef376">Matrix&lt; TYPE &gt;</a>
 , <a class="el" href="class_object_model_1_1_array.html#afa14d74bce4e899f72a979d48f8d0e4e">ObjectModel::Array</a>
-, <a class="el" href="class_primitive_array.html#a1e9600a32edff9b39a1ad648c4758a63">PrimitiveArray&lt; TYPE &gt;</a>
+, <a class="el" href="class_primitive_array.html#ae1edaa0a5768e47d5689a2162e253588">PrimitiveArray&lt; TYPE &gt;</a>
 , <a class="el" href="class_sequence_iterator.html#aacffa9ff28d7bb09026bd6255bdcae54">SequenceIterator&lt; TRAITS &gt;</a>
 , <a class="el" href="class_set.html#aec7f0aeffd0cc92935dbd8931874f771">Set&lt; KEY &gt;</a>
-, <a class="el" href="class_string.html#ad3dfe6f11b247891009979b91fa12e3f">String</a>
+, <a class="el" href="class_span.html#af20ddb18b7a106c3cf884090a54e2749">Span&lt; TYPE &gt;</a>
+, <a class="el" href="class_string.html#a98509ba059e04402d5dde560cc88729d">String</a>
 , <a class="el" href="class_u_t_f16_iterator.html#a6d9a45bc1692e9e5ae7dbe9d8eb46d28">UTF16Iterator</a>
 , <a class="el" href="class_u_t_f8_iterator.html#a5c94f8affa946f6c243cf32304621583">UTF8Iterator</a>
 , <a class="el" href="class_vector.html#ae6f4ab6737324581bc2474033a50c2bd">Vector&lt; TYPE &gt;</a>
@@ -868,7 +884,7 @@ $(function() {
 : <a class="el" href="class_orb_date_stub.html#a44864a2785fc3d6f0956eafd4c2e0088">OrbDateStub</a>
 </li>
 <li>OrbException()
-: <a class="el" href="class_orb_exception.html#a5238e475c1119ae3a43f9ac41df939a6">OrbException</a>
+: <a class="el" href="class_orb_exception.html#a5d76e1057764130c0142de50d2ad0e95">OrbException</a>
 </li>
 <li>OrbIdentifier()
 : <a class="el" href="class_orb_identifier.html#a731c9908efd5478c368f0ebe233719c4">OrbIdentifier</a>
@@ -877,7 +893,7 @@ $(function() {
 : <a class="el" href="class_orb_object.html#a578bd5a7431e5ecb400c51f203da5570">OrbObject</a>
 </li>
 <li>OrbReference()
-: <a class="el" href="class_orb_reference.html#a9b341cbfe1f950e68569654a2f3d1ea5">OrbReference</a>
+: <a class="el" href="class_orb_reference.html#a8a8a33c11a5ee39dcaf559672b684718">OrbReference</a>
 </li>
 <li>OrbRequest()
 : <a class="el" href="class_orb_request.html#a80acc79be65d5093decc8d201febeaf9">OrbRequest</a>
@@ -901,22 +917,25 @@ $(function() {
 : <a class="el" href="class_open_g_l.html#a102655a053f9b5f72137f2893ca0b758">OpenGL</a>
 </li>
 <li>OutOfBounds()
-: <a class="el" href="class_out_of_bounds.html#a0c69b76f49631b752b275420feaa4c89">OutOfBounds</a>
+: <a class="el" href="class_out_of_bounds.html#acc126fb83641181583f833329aa5feec">OutOfBounds</a>
 </li>
 <li>OutOfDomain()
-: <a class="el" href="class_out_of_domain.html#af3bfe3e64ff348ea6990f529f118b3c4">OutOfDomain</a>
+: <a class="el" href="class_out_of_domain.html#a637f045dcb507c7a63c2f80a3647d93c">OutOfDomain</a>
 </li>
 <li>OutOfRange()
 : <a class="el" href="class_out_of_range.html#ac3238c684b2e7fe721f3e9efa29a01fe">OutOfRange</a>
 </li>
 <li>Overflow()
-: <a class="el" href="class_overflow.html#a095104ac0babf01dc7ae4d2124e0ca84">Overflow</a>
+: <a class="el" href="class_overflow.html#a713c2dfb9a1f959769b05e0079e9b076">Overflow</a>
 </li>
 <li>overwriteFromSource()
 : <a class="el" href="class_format_input_stream.html#a4d04b4ff4b5397060e13d0a446659343">FormatInputStream</a>
 </li>
+<li>OwnedNativeString()
+: <a class="el" href="class_owned_native_string.html#a1d02b35a1a08750b4d82fc1cd4a0a139">OwnedNativeString</a>
+</li>
 <li>OwnershipPointer()
-: <a class="el" href="class_ownership_pointer.html#a3b10b0766f8e4e645ff50193b1c0e47a">OwnershipPointer&lt; TYPE &gt;</a>
+: <a class="el" href="class_ownership_pointer.html#adf7c10a14cc7713810caab2c564d4786">OwnershipPointer&lt; TYPE &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

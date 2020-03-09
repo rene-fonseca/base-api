@@ -72,7 +72,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_validified_result.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_validified_result.html">ValidifiedResult</a> : <span class="keyword">public</span> <a class="code" href="class_automation_object.html">AutomationObject</a> {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  TYPE value= TYPE();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  TYPE value = TYPE();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">bool</span> valid = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -151,41 +151,46 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_validified_result.html#aeb00d36d9a38af246916f345a4fc1d82">  146</a></span>&#160;    }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> <span class="keyword">const</span> TYPE&amp;() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> <span class="keyword">const</span> TYPE&amp;() <span class="keyword">const</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_validified_result.html#a97f4cf07e7c5356e2e8fd0745f925400">getValue</a>();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#if 0 // conflicts with valid operator</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_validified_result.html#aaa96d94c98483ab2bd4abc50c4e7f79c">isValid</a>();</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_validified_result.html">ValidifiedResult&lt;TYPE&gt;</a>&amp; value)</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">return</span> value.operator&lt;&lt;(stream);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">// rename ValidifiedResult to Validified</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">using</span> <a class="code" href="class_validified_result.html">Validified</a> = <a class="code" href="class_validified_result.html">ValidifiedResult&lt;TYPE&gt;</a>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (!valid) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      _throw <a class="code" href="class_invalid_exception.html">InvalidException</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#if 0 // conflicts with valid operator</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> valid;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_validified_result.html">ValidifiedResult&lt;TYPE&gt;</a>&amp; value)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordflow">return</span> value.operator&lt;&lt;(stream);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">// rename ValidifiedResult to Validified</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">using</span> <a class="code" href="class_validified_result.html">Validified</a> = <a class="code" href="class_validified_result.html">ValidifiedResult&lt;TYPE&gt;</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;_COM_AZURE_DEV__BASE__CLING_GET_MIME_BUNDLE_TEMPLATE(<a class="code" href="class_validified_result.html">ValidifiedResult</a>)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_validified_result_html_aeb00d36d9a38af246916f345a4fc1d82"><div class="ttname"><a href="class_validified_result.html#aeb00d36d9a38af246916f345a4fc1d82">ValidifiedResult::isInvalid</a></div><div class="ttdeci">bool isInvalid() const noexcept</div><div class="ttdef"><b>Definition:</b> ValidifiedResult.h:146</div></div>
 <div class="ttc" id="aclass_validified_result_html_a97f4cf07e7c5356e2e8fd0745f925400"><div class="ttname"><a href="class_validified_result.html#a97f4cf07e7c5356e2e8fd0745f925400">ValidifiedResult::getValue</a></div><div class="ttdeci">const TYPE &amp; getValue() const</div><div class="ttdef"><b>Definition:</b> ValidifiedResult.h:119</div></div>
 <div class="ttc" id="aclass_validified_result_html_aaa96d94c98483ab2bd4abc50c4e7f79c"><div class="ttname"><a href="class_validified_result.html#aaa96d94c98483ab2bd4abc50c4e7f79c">ValidifiedResult::isValid</a></div><div class="ttdeci">bool isValid() const noexcept</div><div class="ttdef"><b>Definition:</b> ValidifiedResult.h:138</div></div>
 <div class="ttc" id="aclass_validified_result_html_ab5322520482a8713a4ca8b7c11b294bc"><div class="ttname"><a href="class_validified_result.html#ab5322520482a8713a4ca8b7c11b294bc">ValidifiedResult::ValidifiedResult</a></div><div class="ttdeci">ValidifiedResult()</div><div class="ttdef"><b>Definition:</b> ValidifiedResult.h:55</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
 <div class="ttc" id="aclass_automation_object_html"><div class="ttname"><a href="class_automation_object.html">AutomationObject</a></div><div class="ttdoc">Pure automation object.</div><div class="ttdef"><b>Definition:</b> AutomationObject.h:29</div></div>
 <div class="ttc" id="aclass_validified_result_html_a0a2d34cad1e8920d936858d92d95b0d4"><div class="ttname"><a href="class_validified_result.html#a0a2d34cad1e8920d936858d92d95b0d4">ValidifiedResult::operator=</a></div><div class="ttdeci">ValidifiedResult &amp; operator=(const ValidifiedResult &amp;assign)</div><div class="ttdef"><b>Definition:</b> ValidifiedResult.h:94</div></div>
 <div class="ttc" id="aclass_invalid_exception_html"><div class="ttname"><a href="class_invalid_exception.html">InvalidException</a></div><div class="ttdoc">Invalid exception.</div><div class="ttdef"><b>Definition:</b> InvalidException.h:27</div></div>
 <div class="ttc" id="aclass_unspecified_html"><div class="ttname"><a href="class_unspecified.html">Unspecified</a></div><div class="ttdoc">Unspecified type.</div><div class="ttdef"><b>Definition:</b> Base.h:274</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:960</div></div>
 <div class="ttc" id="aclass_validified_result_html"><div class="ttname"><a href="class_validified_result.html">ValidifiedResult</a></div><div class="ttdoc">Validified result.</div><div class="ttdef"><b>Definition:</b> ValidifiedResult.h:32</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

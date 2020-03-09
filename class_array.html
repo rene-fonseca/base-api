@@ -112,6 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a137f2cae7d1ade1316b2a0d10ffaccde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f23ef0edac6c07fccd10f335e2c34e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a2f23ef0edac6c07fccd10f335e2c34e9">isEmpty</a> () const noexcept</td></tr>
 <tr class="separator:a2f23ef0edac6c07fccd10f335e2c34e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fac29d096ad56f4397909a5e4edc92"><td class="memItemLeft" align="right" valign="top">TYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#ad4fac29d096ad56f4397909a5e4edc92">getFirstReference</a> () noexcept</td></tr>
+<tr class="separator:ad4fac29d096ad56f4397909a5e4edc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d89da3228d2f5f59e4b050f958cf5f7"><td class="memItemLeft" align="right" valign="top">const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a1d89da3228d2f5f59e4b050f958cf5f7">getFirstReference</a> () const noexcept</td></tr>
+<tr class="separator:a1d89da3228d2f5f59e4b050f958cf5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c4b3579a8684482a0e3b67525020059"><td class="memItemLeft" align="right" valign="top">TYPE &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a6c4b3579a8684482a0e3b67525020059">getFirst</a> ()</td></tr>
 <tr class="separator:a6c4b3579a8684482a0e3b67525020059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a819cf5d5cd63f66e4f6afe86617332cf"><td class="memItemLeft" align="right" valign="top">const TYPE &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a819cf5d5cd63f66e4f6afe86617332cf">getFirst</a> () const</td></tr>
@@ -215,6 +219,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69caca3aa674ce1f09304333f05ee20d"><td class="memTemplParams" colspan="2">template&lt;class PREDICATE &gt; </td></tr>
 <tr class="memitem:a69caca3aa674ce1f09304333f05ee20d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_array.html#a69caca3aa674ce1f09304333f05ee20d">sort</a> (PREDICATE predicate)</td></tr>
 <tr class="separator:a69caca3aa674ce1f09304333f05ee20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bdafbacb310e01dff02513f75a98b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_array.html">Array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a55bdafbacb310e01dff02513f75a98b1">head</a> (MemorySize n) const</td></tr>
+<tr class="separator:a55bdafbacb310e01dff02513f75a98b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50402de74466f7a9ab0e4503a7aaf2f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_array.html">Array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a50402de74466f7a9ab0e4503a7aaf2f2">tail</a> (MemorySize n) const</td></tr>
+<tr class="separator:a50402de74466f7a9ab0e4503a7aaf2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e74b346199659e816e8ddc33f9ff027"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_array.html">Array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#a4e74b346199659e816e8ddc33f9ff027">operator&lt;&lt;</a> (const TYPE &amp;value)</td></tr>
 <tr class="separator:a4e74b346199659e816e8ddc33f9ff027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeb74a0109ae40a9473eddc36cb7c88e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_array.html">Array</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_array.html#aaeb74a0109ae40a9473eddc36cb7c88e">operator&lt;&lt;</a> (TYPE &amp;&amp;value)</td></tr>
@@ -235,7 +243,7 @@ class Array&lt; TYPE &gt;</h3>
 <p><a class="el" href="class_array.html" title="Array collection.">Array</a> collection. </p>
 <p>The <a class="el" href="class_array.html" title="Array collection.">Array</a> collection is a container for an ordered sequence of elements which provides random access to the individual elements. Elements must have a default constructor.</p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_array_8cpp-example.html#_a1">testsuite/Array.cpp</a>, <a class="el" href="testsuite_2digest_8cpp-example.html#_a40">testsuite/digest.cpp</a>, <a class="el" href="testsuite_2du_8cpp-example.html#_a2">testsuite/du.cpp</a>, <a class="el" href="testsuite_2echod_8cpp-example.html#_a42">testsuite/echod.cpp</a>, <a class="el" href="testsuite_2eval_8cpp-example.html#_a74">testsuite/eval.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#_a4">testsuite/IEEE1394.cpp</a>, <a class="el" href="testsuite_2ls_8cpp-example.html#_a12">testsuite/ls.cpp</a>, <a class="el" href="testsuite_2ping_8cpp-example.html#_a34">testsuite/ping.cpp</a>, <a class="el" href="testsuite_2rm_8cpp-example.html#_a2">testsuite/rm.cpp</a>, and <a class="el" href="testsuite_2sax_8cpp-example.html#_a30">testsuite/sax.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_array_8cpp-example.html#_a1">testsuite/Array.cpp</a>, <a class="el" href="testsuite_2digest_8cpp-example.html#_a40">testsuite/digest.cpp</a>, <a class="el" href="testsuite_2du_8cpp-example.html#_a2">testsuite/du.cpp</a>, <a class="el" href="testsuite_2echod_8cpp-example.html#_a42">testsuite/echod.cpp</a>, <a class="el" href="testsuite_2eval_8cpp-example.html#_a74">testsuite/eval.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#_a4">testsuite/IEEE1394.cpp</a>, <a class="el" href="testsuite_2ls_8cpp-example.html#_a13">testsuite/ls.cpp</a>, <a class="el" href="testsuite_2ping_8cpp-example.html#_a34">testsuite/ping.cpp</a>, <a class="el" href="testsuite_2rm_8cpp-example.html#_a2">testsuite/rm.cpp</a>, and <a class="el" href="testsuite_2sax_8cpp-example.html#_a30">testsuite/sax.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a754ecdf765b2d8a77bd409ef5bdb84f5"></a>
@@ -1128,6 +1136,62 @@ template&lt;class TYPE &gt; </div>
 
 </div>
 </div>
+<a id="a1d89da3228d2f5f59e4b050f958cf5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d89da3228d2f5f59e4b050f958cf5f7">&#9670;&nbsp;</a></span>getFirstReference() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TYPE* <a class="el" href="class_array.html">Array</a>&lt; TYPE &gt;::getFirstReference </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the pointer to the first item or nullptr if empty. </p>
+
+</div>
+</div>
+<a id="ad4fac29d096ad56f4397909a5e4edc92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fac29d096ad56f4397909a5e4edc92">&#9670;&nbsp;</a></span>getFirstReference() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TYPE* <a class="el" href="class_array.html">Array</a>&lt; TYPE &gt;::getFirstReference </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the pointer to the first item or nullptr if empty. </p>
+
+</div>
+</div>
 <a id="a83ffa9f63c0037c77c412d5a63d85002"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83ffa9f63c0037c77c412d5a63d85002">&#9670;&nbsp;</a></span>getLast() <span class="overload">[1/2]</span></h2>
 
@@ -1239,6 +1303,35 @@ template&lt;class TYPE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the number fo elements in the array. </p>
+
+</div>
+</div>
+<a id="a55bdafbacb310e01dff02513f75a98b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bdafbacb310e01dff02513f75a98b1">&#9670;&nbsp;</a></span>head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_array.html">Array</a> <a class="el" href="class_array.html">Array</a>&lt; TYPE &gt;::head </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the first n items. </p>
 
 </div>
 </div>
@@ -2447,6 +2540,35 @@ template&lt;class PREDICATE &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Sorts the array. </p>
+
+</div>
+</div>
+<a id="a50402de74466f7a9ab0e4503a7aaf2f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50402de74466f7a9ab0e4503a7aaf2f2">&#9670;&nbsp;</a></span>tail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_array.html">Array</a> <a class="el" href="class_array.html">Array</a>&lt; TYPE &gt;::tail </td>
+          <td>(</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the last n items. </p>
 
 </div>
 </div>

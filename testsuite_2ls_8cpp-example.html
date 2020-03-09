@@ -112,9 +112,8 @@ $(function() {
 <div class="line">  </div>
 <div class="line">  <span class="keyword">inline</span> <a class="code" href="class_string.html">String</a> getTime(<span class="keyword">const</span> <a name="_a9"></a><a class="code" href="class_date.html">Date</a>&amp; date)<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">  </span>{</div>
-<div class="line">    <span class="keywordflow">return</span> date.<a name="a10"></a><a class="code" href="class_date.html#a851e60176105b56215580faca96471bf">format</a>(</div>
-<div class="line">      (date.<a class="code" href="class_date.html#ad6c7644ea165f715045d80182b284c51">getYear</a>() == currentYear) ? thisYearFormat : otherYearFormat,</div>
-<div class="line">      <span class="keyword">true</span></div>
+<div class="line">    <span class="keywordflow">return</span> date.<a name="a10"></a><a class="code" href="class_date.html#a4cbeba4861c78f096ffd768330986642">getLocalTime</a>().<a name="a11"></a><a class="code" href="class_date.html#a4d3fb2c3a4a9a37d7b3b82c8b7c46571">format</a>(</div>
+<div class="line">      (date.<a class="code" href="class_date.html#ad6c7644ea165f715045d80182b284c51">getYear</a>() == currentYear) ? thisYearFormat : otherYearFormat</div>
 <div class="line">    );</div>
 <div class="line">  }</div>
 <div class="line">  </div>
@@ -122,8 +121,8 @@ $(function() {
 <div class="line">  {</div>
 <div class="line">    <span class="keywordtype">bool</span> pathSpecified = <span class="keyword">false</span>;</div>
 <div class="line">    </div>
-<div class="line">    <a name="_a11"></a><a class="code" href="class_array.html">Array&lt;String&gt;</a> arguments = getArguments();</div>
-<div class="line">    <a name="_a12"></a><a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = arguments.<a name="a13"></a><a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
+<div class="line">    <a name="_a12"></a><a class="code" href="class_array.html">Array&lt;String&gt;</a> arguments = getArguments();</div>
+<div class="line">    <a name="_a13"></a><a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = arguments.<a name="a14"></a><a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
 <div class="line">      <a class="code" href="class_string.html">String</a> argument = enu.next();</div>
 <div class="line">      <span class="keywordflow">if</span> (argument == <span class="stringliteral">&quot;--help&quot;</span>) {</div>
@@ -177,41 +176,41 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">void</span> list()</div>
 <div class="line">  {</div>
-<div class="line">    <span class="keywordflow">if</span> (!<a name="a14"></a><a class="code" href="class_file_system.html#ac4e9ee00c06b34622dd5ae7668cc9f02">FileSystem::folderExists</a>(path)) {</div>
+<div class="line">    <span class="keywordflow">if</span> (!<a name="a15"></a><a class="code" href="class_file_system.html#ac4e9ee00c06b34622dd5ae7668cc9f02">FileSystem::folderExists</a>(path)) {</div>
 <div class="line">      ferr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; <span class="stringliteral">&quot;Not a folder.&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">      setExitCode(EXIT_CODE_ERROR);</div>
 <div class="line">      <span class="keywordflow">return</span>;</div>
 <div class="line">    }</div>
 <div class="line">    </div>
-<div class="line">    <a name="_a15"></a><a class="code" href="class_folder_info.html">FolderInfo</a> folder(path);</div>
-<div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;</a> entries = folder.<a name="a16"></a><a class="code" href="class_folder_info.html#a24c31ff756d3bc4e66d436cad54343af">getEntries</a>();</div>
+<div class="line">    <a name="_a16"></a><a class="code" href="class_folder_info.html">FolderInfo</a> folder(path);</div>
+<div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;</a> entries = folder.<a name="a17"></a><a class="code" href="class_folder_info.html#a24c31ff756d3bc4e66d436cad54343af">getEntries</a>();</div>
 <div class="line">    </div>
-<div class="line">    <a name="a17"></a><a class="code" href="class_file_system.html#a4ddab6a75c18ac53d53553acca9fa7a5">FileSystem::setCurrentFolder</a>(path);</div>
+<div class="line">    <a name="a18"></a><a class="code" href="class_file_system.html#a4ddab6a75c18ac53d53553acca9fa7a5">FileSystem::setCurrentFolder</a>(path);</div>
 <div class="line">    </div>
-<div class="line">    <a name="_a18"></a><a class="code" href="class_hash_table.html">HashTable&lt;User, String&gt;</a> owners;</div>
+<div class="line">    <a name="_a19"></a><a class="code" href="class_hash_table.html">HashTable&lt;User, String&gt;</a> owners;</div>
 <div class="line">    <a class="code" href="class_hash_table.html">HashTable&lt;Group, String&gt;</a> groups;</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="class_array.html">Array&lt;String&gt;::ReadEnumerator</a> enu = entries.<a class="code" href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordflow">while</span> (enu.hasNext()) {</div>
 <div class="line">      <span class="keyword">const</span> <a class="code" href="class_string.html">String</a> entry = enu.next();</div>
 <div class="line">      <span class="keywordflow">try</span> {</div>
-<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> type = <a name="a19"></a><a class="code" href="class_file_system.html#af32ca0652ee6e091df124cca322ea34b">FileSystem::getType</a>(entry);</div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> type = <a name="a20"></a><a class="code" href="class_file_system.html#af32ca0652ee6e091df124cca322ea34b">FileSystem::getType</a>(entry);</div>
 <div class="line">        </div>
 <div class="line">        <span class="keywordtype">bool</span> link = <span class="keyword">false</span>;</div>
 <div class="line">        <span class="keywordtype">bool</span> linkTarget = <span class="keyword">false</span>;</div>
 <div class="line">        <span class="keywordtype">bool</span> deadLink = <span class="keyword">false</span>;</div>
 <div class="line">        <a class="code" href="class_string.html">String</a> target;</div>
 <div class="line">        <span class="keywordflow">try</span> {</div>
-<div class="line">          <span class="keywordflow">if</span> (<a name="a20"></a><a class="code" href="class_file_system.html#a7ca58388734f884229b0bc3e4723f16a">FileSystem::isLink</a>(entry)) {</div>
+<div class="line">          <span class="keywordflow">if</span> (<a name="a21"></a><a class="code" href="class_file_system.html#a7ca58388734f884229b0bc3e4723f16a">FileSystem::isLink</a>(entry)) {</div>
 <div class="line">            link = <span class="keyword">true</span>;</div>
-<div class="line">            target = <a name="a21"></a><a class="code" href="class_file_system.html#a3393867186238281b4ae9f84503ac17e">FileSystem::getLinkTarget</a>(entry);</div>
+<div class="line">            target = <a name="a22"></a><a class="code" href="class_file_system.html#a3393867186238281b4ae9f84503ac17e">FileSystem::getLinkTarget</a>(entry);</div>
 <div class="line">            <span class="keywordflow">if</span> (!target) {</div>
 <div class="line">              target = <span class="stringliteral">&quot;&lt;UNKNOWN&gt;&quot;</span>;</div>
 <div class="line">            }</div>
 <div class="line">            deadLink = <a class="code" href="class_file_system.html#af32ca0652ee6e091df124cca322ea34b">FileSystem::getType</a>(target) == 0;</div>
 <div class="line">            linkTarget = <span class="keyword">true</span>;</div>
 <div class="line">          }</div>
-<div class="line">        } <span class="keywordflow">catch</span> (<a name="_a22"></a><a class="code" href="class_exception.html">Exception</a>&amp; e) {</div>
+<div class="line">        } <span class="keywordflow">catch</span> (<a name="_a23"></a><a class="code" href="class_exception.html">Exception</a>&amp; e) {</div>
 <div class="line">          <span class="keywordflow">if</span> (link &amp;&amp; !linkTarget) {</div>
 <div class="line">            target = MESSAGE(<span class="stringliteral">&quot;&lt;UNKNOWN&gt;&quot;</span>);</div>
 <div class="line">          }</div>
@@ -219,76 +218,76 @@ $(function() {
 <div class="line">        }</div>
 <div class="line">        </div>
 <div class="line">        {</div>
-<div class="line">          <span class="keywordflow">if</span> (type &amp; <a name="a23"></a><a class="code" href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861">FileSystem::REGULAR</a>) {</div>
-<div class="line">            <a name="_a24"></a><a class="code" href="class_file_info.html">FileInfo</a> info(entry);</div>
-<div class="line">            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode = info.<a name="a25"></a><a class="code" href="class_file_info.html#a2c33d8adf15dfac3f9946f7f8bf98b4b">getMode</a>();</div>
+<div class="line">          <span class="keywordflow">if</span> (type &amp; <a name="a24"></a><a class="code" href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861">FileSystem::REGULAR</a>) {</div>
+<div class="line">            <a name="_a25"></a><a class="code" href="class_file_info.html">FileInfo</a> info(entry);</div>
+<div class="line">            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode = info.<a name="a26"></a><a class="code" href="class_file_info.html#a2c33d8adf15dfac3f9946f7f8bf98b4b">getMode</a>();</div>
 <div class="line">            <span class="keywordtype">char</span> flags[10];</div>
 <div class="line">            flags[0] = (link) ? <span class="charliteral">&#39;l&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[1] = (mode &amp; <a name="a26"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a53f5785ed3784f31dc64da95bb73b4ca">FileInfo::RUSR</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[2] = (mode &amp; <a name="a27"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a0fce60001516cef2aba8793bf1882848">FileInfo::WUSR</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a28"></a><a class="code" href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412a4c05c98cb034bdc08a00f64d40a7e88a">FileInfo::SET_UID</a>) {</div>
-<div class="line">              flags[3] = (mode &amp; <a name="a29"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a5475f5b7187102493a5b9e7acdac6294">FileInfo::XUSR</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line">            flags[1] = (mode &amp; <a name="a27"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a53f5785ed3784f31dc64da95bb73b4ca">FileInfo::RUSR</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            flags[2] = (mode &amp; <a name="a28"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a0fce60001516cef2aba8793bf1882848">FileInfo::WUSR</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a29"></a><a class="code" href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412a4c05c98cb034bdc08a00f64d40a7e88a">FileInfo::SET_UID</a>) {</div>
+<div class="line">              flags[3] = (mode &amp; <a name="a30"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a5475f5b7187102493a5b9e7acdac6294">FileInfo::XUSR</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              flags[3] = (mode &amp; <a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a5475f5b7187102493a5b9e7acdac6294">FileInfo::XUSR</a>) ? <span class="charliteral">&#39;x&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
 <div class="line">            }</div>
-<div class="line">            flags[4] = (mode &amp; <a name="a30"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6aff662fc4e990a2b57066676f720ab8c4">FileInfo::RGRP</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[5] = (mode &amp; <a name="a31"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a101cdd590b9e3f5823c877b9542cb5e6">FileInfo::WGRP</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a32"></a><a class="code" href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412a224802b1ca36f6de2b16ee2050c29593">FileInfo::SET_GID</a>) {</div>
-<div class="line">              flags[6] = (mode &amp; <a name="a33"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a0a6cd08cf1f37c534b573af97b45c1b1">FileInfo::XGRP</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line">            flags[4] = (mode &amp; <a name="a31"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6aff662fc4e990a2b57066676f720ab8c4">FileInfo::RGRP</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            flags[5] = (mode &amp; <a name="a32"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a101cdd590b9e3f5823c877b9542cb5e6">FileInfo::WGRP</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a33"></a><a class="code" href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412a224802b1ca36f6de2b16ee2050c29593">FileInfo::SET_GID</a>) {</div>
+<div class="line">              flags[6] = (mode &amp; <a name="a34"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a0a6cd08cf1f37c534b573af97b45c1b1">FileInfo::XGRP</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              flags[6] = (mode &amp; <a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a0a6cd08cf1f37c534b573af97b45c1b1">FileInfo::XGRP</a>) ? <span class="charliteral">&#39;x&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
 <div class="line">            }</div>
-<div class="line">            flags[7] = (mode &amp; <a name="a34"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a140f5de27cfb46bf03b2dfaa1af95746">FileInfo::ROTH</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[8] = (mode &amp; <a name="a35"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6aaa206b1fc7153eec18b48f8e53588af9">FileInfo::WOTH</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a36"></a><a class="code" href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412af826bb8c5593347d9ba874584bd82764">FileInfo::RESTRICT</a>) {</div>
-<div class="line">              flags[9] = (mode &amp; <a name="a37"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a8f656c0684f435302366ded1cdb66d9f">FileInfo::XOTH</a>) ? <span class="charliteral">&#39;t&#39;</span> : <span class="charliteral">&#39;T&#39;</span>;</div>
+<div class="line">            flags[7] = (mode &amp; <a name="a35"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a140f5de27cfb46bf03b2dfaa1af95746">FileInfo::ROTH</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            flags[8] = (mode &amp; <a name="a36"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6aaa206b1fc7153eec18b48f8e53588af9">FileInfo::WOTH</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a37"></a><a class="code" href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412af826bb8c5593347d9ba874584bd82764">FileInfo::RESTRICT</a>) {</div>
+<div class="line">              flags[9] = (mode &amp; <a name="a38"></a><a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a8f656c0684f435302366ded1cdb66d9f">FileInfo::XOTH</a>) ? <span class="charliteral">&#39;t&#39;</span> : <span class="charliteral">&#39;T&#39;</span>;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              flags[9] = (mode &amp; <a class="code" href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a8f656c0684f435302366ded1cdb66d9f">FileInfo::XOTH</a>) ? <span class="charliteral">&#39;x&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
 <div class="line">            }</div>
 <div class="line"> </div>
 <div class="line">            <span class="comment">// TAG: need upper limit on number of elements to cache</span></div>
 <div class="line">            <span class="comment">// TAG: get max length of names to align fields</span></div>
-<div class="line">            <a name="_a38"></a><a class="code" href="class_user.html">User</a> owner = info.<a name="a39"></a><a class="code" href="class_file_info.html#ad12c862ee58dd1ffb2a4367f407fa2a7">getOwner</a>();</div>
+<div class="line">            <a name="_a39"></a><a class="code" href="class_user.html">User</a> owner = info.<a name="a40"></a><a class="code" href="class_file_info.html#ad12c862ee58dd1ffb2a4367f407fa2a7">getOwner</a>();</div>
 <div class="line">            <a class="code" href="class_string.html">String</a> ownerName;</div>
-<div class="line">            <span class="keywordflow">if</span> (owners.<a name="a40"></a><a class="code" href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">hasKey</a>(owner)) {</div>
+<div class="line">            <span class="keywordflow">if</span> (owners.<a name="a41"></a><a class="code" href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">hasKey</a>(owner)) {</div>
 <div class="line">              ownerName = owners[owner];</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              <span class="keywordflow">try</span> {</div>
-<div class="line">                ownerName = owner.<a name="a41"></a><a class="code" href="class_user.html#a3817a0a8525124d84f9554c68e6590c5">getName</a>();</div>
-<div class="line">              } <span class="keywordflow">catch</span> (<a name="_a42"></a><a class="code" href="class_user_1_1_user_exception.html">User::UserException</a>&amp;) {</div>
-<div class="line">                <a name="_a43"></a><a class="code" href="class_string_output_stream.html">StringOutputStream</a> sos;</div>
+<div class="line">                ownerName = owner.<a name="a42"></a><a class="code" href="class_user.html#a3817a0a8525124d84f9554c68e6590c5">getName</a>();</div>
+<div class="line">              } <span class="keywordflow">catch</span> (<a name="_a43"></a><a class="code" href="class_user_1_1_user_exception.html">User::UserException</a>&amp;) {</div>
+<div class="line">                <a name="_a44"></a><a class="code" href="class_string_output_stream.html">StringOutputStream</a> sos;</div>
 <div class="line">                <span class="keyword">const</span> <a class="code" href="class_string.html">String</a> name = sos &lt;&lt; owner;</div>
 <div class="line">                ownerName = name;</div>
 <div class="line">              }</div>
-<div class="line">              owners.<a name="a44"></a><a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(owner, ownerName);</div>
+<div class="line">              owners.<a name="a45"></a><a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(owner, ownerName);</div>
 <div class="line">            }</div>
 <div class="line">            </div>
-<div class="line">            <a name="_a45"></a><a class="code" href="class_group.html">Group</a> group = info.<a name="a46"></a><a class="code" href="class_file_info.html#a0960fc6358989972ab745acf683db22c">getGroup</a>();</div>
+<div class="line">            <a name="_a46"></a><a class="code" href="class_group.html">Group</a> group = info.<a name="a47"></a><a class="code" href="class_file_info.html#a0960fc6358989972ab745acf683db22c">getGroup</a>();</div>
 <div class="line">            <a class="code" href="class_string.html">String</a> groupName;</div>
-<div class="line">            <span class="keywordflow">if</span> (groups.<a name="a47"></a><a class="code" href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">hasKey</a>(group)) {</div>
+<div class="line">            <span class="keywordflow">if</span> (groups.<a name="a48"></a><a class="code" href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">hasKey</a>(group)) {</div>
 <div class="line">              groupName = groups[group];</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              <span class="keywordflow">try</span> {</div>
-<div class="line">                groupName = group.<a name="a48"></a><a class="code" href="class_group.html#ae13c926a5428ddf1a4bde24fc0499dd2">getName</a>();</div>
-<div class="line">              } <span class="keywordflow">catch</span> (<a name="_a49"></a><a class="code" href="class_group_1_1_group_exception.html">Group::GroupException</a>&amp;) {</div>
+<div class="line">                groupName = group.<a name="a49"></a><a class="code" href="class_group.html#ae13c926a5428ddf1a4bde24fc0499dd2">getName</a>();</div>
+<div class="line">              } <span class="keywordflow">catch</span> (<a name="_a50"></a><a class="code" href="class_group_1_1_group_exception.html">Group::GroupException</a>&amp;) {</div>
 <div class="line">                <a class="code" href="class_string_output_stream.html">StringOutputStream</a> sos;</div>
 <div class="line">                <span class="keyword">const</span> <a class="code" href="class_string.html">String</a> name = sos &lt;&lt; group;</div>
 <div class="line">                groupName = name;</div>
 <div class="line">              }</div>
-<div class="line">              groups.<a name="a50"></a><a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(group, groupName);</div>
+<div class="line">              groups.<a name="a51"></a><a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(group, groupName);</div>
 <div class="line">            }</div>
 <div class="line">            </div>
 <div class="line">            fout &lt;&lt; Sequence&lt;char&gt;(flags, <span class="keyword">sizeof</span>(flags)) &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">                 &lt;&lt; setWidth(4);</div>
-<div class="line">            <span class="keywordflow">if</span> (info.<a name="a51"></a><a class="code" href="class_file_info.html#a4ba71449942c2b70ce410fbfde65e240">getLinks</a>() != 0) {</div>
+<div class="line">            <span class="keywordflow">if</span> (info.<a name="a52"></a><a class="code" href="class_file_info.html#a4ba71449942c2b70ce410fbfde65e240">getLinks</a>() != 0) {</div>
 <div class="line">              fout &lt;&lt; info.<a class="code" href="class_file_info.html#a4ba71449942c2b70ce410fbfde65e240">getLinks</a>();</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              fout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
 <div class="line">            }</div>
 <div class="line">            </div>
 <div class="line">            <span class="keywordflow">if</span> (limitTrustees) {</div>
-<div class="line">              <span class="keywordflow">if</span> (ownerName.<a name="a52"></a><a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>() &gt; MAXIMUM_TRUSTEE_LENGTH) {</div>
-<div class="line">                ownerName = ownerName.<a name="a53"></a><a class="code" href="class_string.html#aaa820ec17b415ebcb14a57b9b19f3740">substring</a>(</div>
+<div class="line">              <span class="keywordflow">if</span> (ownerName.<a name="a53"></a><a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>() &gt; MAXIMUM_TRUSTEE_LENGTH) {</div>
+<div class="line">                ownerName = ownerName.<a name="a54"></a><a class="code" href="class_string.html#aaa820ec17b415ebcb14a57b9b19f3740">substring</a>(</div>
 <div class="line">                  ownerName.<a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>() - MAXIMUM_TRUSTEE_LENGTH</div>
 <div class="line">                );</div>
 <div class="line">              }</div>
@@ -302,8 +301,8 @@ $(function() {
 <div class="line">            fout &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">                 &lt;&lt; setWidth(MAXIMUM_TRUSTEE_LENGTH) &lt;&lt; ownerName &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">                 &lt;&lt; setWidth(MAXIMUM_TRUSTEE_LENGTH) &lt;&lt; groupName &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line">                 &lt;&lt; setWidth(8) &lt;&lt; info.<a name="a54"></a><a class="code" href="class_file_info.html#a4f424d712e81983e40a094efd0c90da3">getSize</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line">                 &lt;&lt; getTime(info.<a name="a55"></a><a class="code" href="class_file_info.html#a4834ea3acf043dc7e86f912f6673b7d7">getLastModification</a>()) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line">                 &lt;&lt; setWidth(8) &lt;&lt; info.<a name="a55"></a><a class="code" href="class_file_info.html#a4f424d712e81983e40a094efd0c90da3">getSize</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
+<div class="line">                 &lt;&lt; getTime(info.<a name="a56"></a><a class="code" href="class_file_info.html#a4834ea3acf043dc7e86f912f6673b7d7">getLastModification</a>()) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
 <div class="line">            <span class="keywordflow">if</span> (link) {</div>
 <div class="line">              <span class="comment">// TAG: add method to handle colorize</span></div>
 <div class="line">              <span class="keywordflow">if</span> (colorize) {</div>
@@ -327,35 +326,35 @@ $(function() {
 <div class="line">              }</div>
 <div class="line">            }</div>
 <div class="line">            fout &lt;&lt; EOL;</div>
-<div class="line">          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type &amp; <a name="a56"></a><a class="code" href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57aa90c0bb53aafd6dccd348804b3b74b7f">FileSystem::FOLDER</a>) {</div>
+<div class="line">          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type &amp; <a name="a57"></a><a class="code" href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57aa90c0bb53aafd6dccd348804b3b74b7f">FileSystem::FOLDER</a>) {</div>
 <div class="line">            <a class="code" href="class_folder_info.html">FolderInfo</a> info(entry);</div>
 <div class="line">            </div>
-<div class="line">            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode = info.<a name="a57"></a><a class="code" href="class_folder_info.html#a88b627c04de201bbd2af4978181c6451">getMode</a>();</div>
+<div class="line">            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mode = info.<a name="a58"></a><a class="code" href="class_folder_info.html#a88b627c04de201bbd2af4978181c6451">getMode</a>();</div>
 <div class="line">            <span class="keywordtype">char</span> flags[10];</div>
 <div class="line">            flags[0] = (link) ? <span class="charliteral">&#39;l&#39;</span> : <span class="charliteral">&#39;d&#39;</span>;</div>
-<div class="line">            flags[1] = (mode &amp; <a name="a58"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a83ff9d6d6ee652621937983a129680c7">FolderInfo::RUSR</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[2] = (mode &amp; <a name="a59"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a0ea816d1e9ff9b0c281a9dc9092f1cb5">FolderInfo::WUSR</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a60"></a><a class="code" href="class_folder_info.html#a924a97133b3487662581e153b758ed11a165e05ed4e5457a63e7e10d24a5cb66e">FolderInfo::SET_UID</a>) {</div>
-<div class="line">              flags[3] = (mode &amp; <a name="a61"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a4cccdba5091e03159512647dfa294d01">FolderInfo::XUSR</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line">            flags[1] = (mode &amp; <a name="a59"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a83ff9d6d6ee652621937983a129680c7">FolderInfo::RUSR</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            flags[2] = (mode &amp; <a name="a60"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a0ea816d1e9ff9b0c281a9dc9092f1cb5">FolderInfo::WUSR</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a61"></a><a class="code" href="class_folder_info.html#a924a97133b3487662581e153b758ed11a165e05ed4e5457a63e7e10d24a5cb66e">FolderInfo::SET_UID</a>) {</div>
+<div class="line">              flags[3] = (mode &amp; <a name="a62"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a4cccdba5091e03159512647dfa294d01">FolderInfo::XUSR</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              flags[3] = (mode &amp; <a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a4cccdba5091e03159512647dfa294d01">FolderInfo::XUSR</a>) ? <span class="charliteral">&#39;x&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
 <div class="line">            }</div>
-<div class="line">            flags[4] = (mode &amp; <a name="a62"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a6bfbd485e404fe4f486599d0e0c4689f">FolderInfo::RGRP</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[5] = (mode &amp; <a name="a63"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794ac3ff0d2a5d7af1ded84a77e80b67dedc">FolderInfo::WGRP</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a64"></a><a class="code" href="class_folder_info.html#a924a97133b3487662581e153b758ed11acea4c80a581cc7bf397a2ebca0501934">FolderInfo::SET_GID</a>) {</div>
-<div class="line">              flags[6] = (mode &amp; <a name="a65"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a7b0594c2a4e8cebe1179697a632b32ed">FolderInfo::XGRP</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
+<div class="line">            flags[4] = (mode &amp; <a name="a63"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a6bfbd485e404fe4f486599d0e0c4689f">FolderInfo::RGRP</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            flags[5] = (mode &amp; <a name="a64"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794ac3ff0d2a5d7af1ded84a77e80b67dedc">FolderInfo::WGRP</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a65"></a><a class="code" href="class_folder_info.html#a924a97133b3487662581e153b758ed11acea4c80a581cc7bf397a2ebca0501934">FolderInfo::SET_GID</a>) {</div>
+<div class="line">              flags[6] = (mode &amp; <a name="a66"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a7b0594c2a4e8cebe1179697a632b32ed">FolderInfo::XGRP</a>) ? <span class="charliteral">&#39;s&#39;</span> : <span class="charliteral">&#39;S&#39;</span>;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              flags[6] = (mode &amp; <a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a7b0594c2a4e8cebe1179697a632b32ed">FolderInfo::XGRP</a>) ? <span class="charliteral">&#39;x&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
 <div class="line">            }</div>
-<div class="line">            flags[7] = (mode &amp; <a name="a66"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aeb95125d01df2aaccce74e63f3eaab02">FolderInfo::ROTH</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            flags[8] = (mode &amp; <a name="a67"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794acd07bf814379912131407ea9228620ee">FolderInfo::WOTH</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a68"></a><a class="code" href="class_folder_info.html#a924a97133b3487662581e153b758ed11aaf406f5aff627a4bb670b5715853a274">FolderInfo::RESTRICT</a>) {</div>
-<div class="line">              flags[9] = (mode &amp; <a name="a69"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aa52db0a5f1518be74274eec6a9e84741">FolderInfo::XOTH</a>) ? <span class="charliteral">&#39;t&#39;</span> : <span class="charliteral">&#39;T&#39;</span>;</div>
+<div class="line">            flags[7] = (mode &amp; <a name="a67"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aeb95125d01df2aaccce74e63f3eaab02">FolderInfo::ROTH</a>) ? <span class="charliteral">&#39;r&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            flags[8] = (mode &amp; <a name="a68"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794acd07bf814379912131407ea9228620ee">FolderInfo::WOTH</a>) ? <span class="charliteral">&#39;w&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line">            <span class="keywordflow">if</span> (mode &amp; <a name="a69"></a><a class="code" href="class_folder_info.html#a924a97133b3487662581e153b758ed11aaf406f5aff627a4bb670b5715853a274">FolderInfo::RESTRICT</a>) {</div>
+<div class="line">              flags[9] = (mode &amp; <a name="a70"></a><a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aa52db0a5f1518be74274eec6a9e84741">FolderInfo::XOTH</a>) ? <span class="charliteral">&#39;t&#39;</span> : <span class="charliteral">&#39;T&#39;</span>;</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              flags[9] = (mode &amp; <a class="code" href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aa52db0a5f1518be74274eec6a9e84741">FolderInfo::XOTH</a>) ? <span class="charliteral">&#39;x&#39;</span> : <span class="charliteral">&#39;-&#39;</span>;</div>
 <div class="line">            }</div>
 <div class="line">            </div>
-<div class="line">            <a class="code" href="class_user.html">User</a> owner = info.<a name="a70"></a><a class="code" href="class_folder_info.html#ab9966c27a6a21b7816d3474d367c343c">getOwner</a>();</div>
+<div class="line">            <a class="code" href="class_user.html">User</a> owner = info.<a name="a71"></a><a class="code" href="class_folder_info.html#ab9966c27a6a21b7816d3474d367c343c">getOwner</a>();</div>
 <div class="line">            <a class="code" href="class_string.html">String</a> ownerName;</div>
 <div class="line">            <span class="keywordflow">if</span> (owners.<a class="code" href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">hasKey</a>(owner)) {</div>
 <div class="line">              ownerName = owners[owner];</div>
@@ -370,7 +369,7 @@ $(function() {
 <div class="line">              owners.<a class="code" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">add</a>(owner, ownerName);</div>
 <div class="line">            }</div>
 <div class="line">            </div>
-<div class="line">            <a class="code" href="class_group.html">Group</a> group = info.<a name="a71"></a><a class="code" href="class_folder_info.html#ad4bdb9dd85462d6668daa1bf28036486">getGroup</a>();</div>
+<div class="line">            <a class="code" href="class_group.html">Group</a> group = info.<a name="a72"></a><a class="code" href="class_folder_info.html#ad4bdb9dd85462d6668daa1bf28036486">getGroup</a>();</div>
 <div class="line">            <a class="code" href="class_string.html">String</a> groupName;</div>
 <div class="line">            <span class="keywordflow">if</span> (groups.<a class="code" href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">hasKey</a>(group)) {</div>
 <div class="line">              groupName = groups[group];</div>
@@ -387,7 +386,7 @@ $(function() {
 <div class="line">            </div>
 <div class="line">            fout &lt;&lt; Sequence&lt;char&gt;(flags, <span class="keyword">sizeof</span>(flags)) &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">                 &lt;&lt; setWidth(4);</div>
-<div class="line">            <span class="keywordflow">if</span> (info.<a name="a72"></a><a class="code" href="class_folder_info.html#a27fb7b882ecb7d9195375f003e1caca0">getLinks</a>() != 0) {</div>
+<div class="line">            <span class="keywordflow">if</span> (info.<a name="a73"></a><a class="code" href="class_folder_info.html#a27fb7b882ecb7d9195375f003e1caca0">getLinks</a>() != 0) {</div>
 <div class="line">              fout &lt;&lt; info.<a class="code" href="class_folder_info.html#a27fb7b882ecb7d9195375f003e1caca0">getLinks</a>();</div>
 <div class="line">            } <span class="keywordflow">else</span> {</div>
 <div class="line">              fout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
@@ -410,7 +409,7 @@ $(function() {
 <div class="line">                 &lt;&lt; setWidth(MAXIMUM_TRUSTEE_LENGTH) &lt;&lt; ownerName &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">                 &lt;&lt; setWidth(MAXIMUM_TRUSTEE_LENGTH) &lt;&lt; groupName &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">                 &lt;&lt; setWidth(8) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line">                 &lt;&lt; getTime(info.<a name="a73"></a><a class="code" href="class_folder_info.html#aeb8e2b851de594594886b03e9980f654">getLastModification</a>()) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line">                 &lt;&lt; getTime(info.<a name="a74"></a><a class="code" href="class_folder_info.html#aeb8e2b851de594594886b03e9980f654">getLastModification</a>()) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
 <div class="line">            <span class="keywordflow">if</span> (link) {</div>
 <div class="line">              <span class="keywordflow">if</span> (colorize) {</div>
 <div class="line">                fout &lt;&lt; setForeground(COLOR_LINK) &lt;&lt; entry &lt;&lt; normal();</div>
@@ -464,7 +463,7 @@ $(function() {
 <div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line">        fout &lt;&lt; FLUSH;</div>
-<div class="line">      } <span class="keywordflow">catch</span> (<a name="_a74"></a><a class="code" href="class_file_system_exception.html">FileSystemException</a>&amp; e) {</div>
+<div class="line">      } <span class="keywordflow">catch</span> (<a name="_a75"></a><a class="code" href="class_file_system_exception.html">FileSystemException</a>&amp; e) {</div>
 <div class="line">        <span class="comment">// TAG: ignore exception - unless in debug mode?</span></div>
 <div class="line">        ferr &lt;&lt; entry &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; e &lt;&lt; ENDL;</div>
 <div class="line">      }</div>
@@ -496,19 +495,20 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aclass_file_info_html_a4834ea3acf043dc7e86f912f6673b7d7"><div class="ttname"><a href="class_file_info.html#a4834ea3acf043dc7e86f912f6673b7d7">FileInfo::getLastModification</a></div><div class="ttdeci">const Date &amp; getLastModification() const noexcept</div><div class="ttdef"><b>Definition:</b> FileInfo.h:155</div></div>
 <div class="ttc" id="aclass_group_1_1_group_exception_html"><div class="ttname"><a href="class_group_1_1_group_exception.html">Group::GroupException</a></div><div class="ttdoc">Group exception.</div><div class="ttdef"><b>Definition:</b> Group.h:63</div></div>
-<div class="ttc" id="aclass_date_html_a851e60176105b56215580faca96471bf"><div class="ttname"><a href="class_date.html#a851e60176105b56215580faca96471bf">Date::format</a></div><div class="ttdeci">String format(const String &amp;format, bool local=true) const</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794a6bfbd485e404fe4f486599d0e0c4689f"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a6bfbd485e404fe4f486599d0e0c4689f">FolderInfo::RGRP</a></div><div class="ttdeci">@ RGRP</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:63</div></div>
-<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:467</div></div>
+<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:510</div></div>
 <div class="ttc" id="aclass_folder_info_html_a924a97133b3487662581e153b758ed11aaf406f5aff627a4bb670b5715853a274"><div class="ttname"><a href="class_folder_info.html#a924a97133b3487662581e153b758ed11aaf406f5aff627a4bb670b5715853a274">FolderInfo::RESTRICT</a></div><div class="ttdeci">@ RESTRICT</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:62</div></div>
 <div class="ttc" id="aclass_group_html_ae13c926a5428ddf1a4bde24fc0499dd2"><div class="ttname"><a href="class_group.html#ae13c926a5428ddf1a4bde24fc0499dd2">Group::getName</a></div><div class="ttdeci">String getName() const</div></div>
 <div class="ttc" id="aclass_file_info_html_a869c91133d237f731c6cf4aaabb84412a4c05c98cb034bdc08a00f64d40a7e88a"><div class="ttname"><a href="class_file_info.html#a869c91133d237f731c6cf4aaabb84412a4c05c98cb034bdc08a00f64d40a7e88a">FileInfo::SET_UID</a></div><div class="ttdeci">@ SET_UID</div><div class="ttdef"><b>Definition:</b> FileInfo.h:59</div></div>
 <div class="ttc" id="aclass_file_info_html_aa745d8ba6f21c062a6eded6ffe8674d6a53f5785ed3784f31dc64da95bb73b4ca"><div class="ttname"><a href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a53f5785ed3784f31dc64da95bb73b4ca">FileInfo::RUSR</a></div><div class="ttdeci">@ RUSR</div><div class="ttdef"><b>Definition:</b> FileInfo.h:56</div></div>
 <div class="ttc" id="aclass_a_n_s_i_escape_sequence_html_a2d4ba4c410c1bbd0e71756b78cd05eac"><div class="ttname"><a href="class_a_n_s_i_escape_sequence.html#a2d4ba4c410c1bbd0e71756b78cd05eac">ANSIEscapeSequence::Color</a></div><div class="ttdeci">Color</div><div class="ttdef"><b>Definition:</b> ANSIEscapeSequence.h:52</div></div>
+<div class="ttc" id="aclass_date_html_a4d3fb2c3a4a9a37d7b3b82c8b7c46571"><div class="ttname"><a href="class_date.html#a4d3fb2c3a4a9a37d7b3b82c8b7c46571">Date::format</a></div><div class="ttdeci">String format(const String &amp;format) const</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794a7b0594c2a4e8cebe1179697a632b32ed"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a7b0594c2a4e8cebe1179697a632b32ed">FolderInfo::XGRP</a></div><div class="ttdeci">@ XGRP</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:67</div></div>
 <div class="ttc" id="aclass_file_system_html_a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861"><div class="ttname"><a href="class_file_system.html#a141ba942c2909e70c05829d25d2abb57afa1042c7556d3cd8ed6f449935c48861">FileSystem::REGULAR</a></div><div class="ttdeci">@ REGULAR</div><div class="ttdef"><b>Definition:</b> FileSystem.h:76</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794acd07bf814379912131407ea9228620ee"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794acd07bf814379912131407ea9228620ee">FolderInfo::WOTH</a></div><div class="ttdeci">@ WOTH</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:74</div></div>
 <div class="ttc" id="aclass_file_system_html_a7ca58388734f884229b0bc3e4723f16a"><div class="ttname"><a href="class_file_system.html#a7ca58388734f884229b0bc3e4723f16a">FileSystem::isLink</a></div><div class="ttdeci">static bool isLink(const String &amp;path)</div></div>
 <div class="ttc" id="aclass_user_html_a3817a0a8525124d84f9554c68e6590c5"><div class="ttname"><a href="class_user.html#a3817a0a8525124d84f9554c68e6590c5">User::getName</a></div><div class="ttdeci">String getName(bool fallback=true) const</div></div>
+<div class="ttc" id="aclass_date_html_a4cbeba4861c78f096ffd768330986642"><div class="ttname"><a href="class_date.html#a4cbeba4861c78f096ffd768330986642">Date::getLocalTime</a></div><div class="ttdeci">Date getLocalTime() const noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:301</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeb8e2b851de594594886b03e9980f654"><div class="ttname"><a href="class_folder_info.html#aeb8e2b851de594594886b03e9980f654">FolderInfo::getLastModification</a></div><div class="ttdeci">const Date &amp; getLastModification() const noexcept</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:158</div></div>
 <div class="ttc" id="aclass_date_html_ad6c7644ea165f715045d80182b284c51"><div class="ttname"><a href="class_date.html#ad6c7644ea165f715045d80182b284c51">Date::getYear</a></div><div class="ttdeci">int getYear() const noexcept</div></div>
 <div class="ttc" id="aclass_folder_info_html_a27fb7b882ecb7d9195375f003e1caca0"><div class="ttname"><a href="class_folder_info.html#a27fb7b882ecb7d9195375f003e1caca0">FolderInfo::getLinks</a></div><div class="ttdeci">unsigned int getLinks() const noexcept</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:150</div></div>
@@ -523,18 +523,18 @@ $(function() {
 <div class="ttc" id="aclass_a_n_s_i_escape_sequence_html_a2d4ba4c410c1bbd0e71756b78cd05eacafe9f6865f1c7c65a0a2787ee31b55351"><div class="ttname"><a href="class_a_n_s_i_escape_sequence.html#a2d4ba4c410c1bbd0e71756b78cd05eacafe9f6865f1c7c65a0a2787ee31b55351">ANSIEscapeSequence::GREEN</a></div><div class="ttdeci">@ GREEN</div><div class="ttdef"><b>Definition:</b> ANSIEscapeSequence.h:55</div></div>
 <div class="ttc" id="aclass_file_info_html_a0960fc6358989972ab745acf683db22c"><div class="ttname"><a href="class_file_info.html#a0960fc6358989972ab745acf683db22c">FileInfo::getGroup</a></div><div class="ttdeci">const Group &amp; getGroup() const noexcept</div><div class="ttdef"><b>Definition:</b> FileInfo.h:127</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794aa52db0a5f1518be74274eec6a9e84741"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794aa52db0a5f1518be74274eec6a9e84741">FolderInfo::XOTH</a></div><div class="ttdeci">@ XOTH</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:75</div></div>
-<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:40</div></div>
 <div class="ttc" id="aclass_folder_info_html"><div class="ttname"><a href="class_folder_info.html">FolderInfo</a></div><div class="ttdoc">Folder information.</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:33</div></div>
 <div class="ttc" id="aclass_file_info_html_aa745d8ba6f21c062a6eded6ffe8674d6a0fce60001516cef2aba8793bf1882848"><div class="ttname"><a href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a0fce60001516cef2aba8793bf1882848">FileInfo::WUSR</a></div><div class="ttdeci">@ WUSR</div><div class="ttdef"><b>Definition:</b> FileInfo.h:57</div></div>
 <div class="ttc" id="aclass_date_html_aff5486914e313334a8ae1a7cad068a14"><div class="ttname"><a href="class_date.html#aff5486914e313334a8ae1a7cad068a14">Date::getNow</a></div><div class="ttdeci">static Date getNow()</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
 <div class="ttc" id="aclass_file_info_html_ad12c862ee58dd1ffb2a4367f407fa2a7"><div class="ttname"><a href="class_file_info.html#ad12c862ee58dd1ffb2a4367f407fa2a7">FileInfo::getOwner</a></div><div class="ttdeci">const User &amp; getOwner() const noexcept</div><div class="ttdef"><b>Definition:</b> FileInfo.h:119</div></div>
 <div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
 <div class="ttc" id="aclass_file_info_html_a4ba71449942c2b70ce410fbfde65e240"><div class="ttname"><a href="class_file_info.html#a4ba71449942c2b70ce410fbfde65e240">FileInfo::getLinks</a></div><div class="ttdeci">unsigned int getLinks() const noexcept</div><div class="ttdef"><b>Definition:</b> FileInfo.h:147</div></div>
 <div class="ttc" id="aclass_format_output_stream_html_afa3bf8c1e53c0cf548f12e09b2332633"><div class="ttname"><a href="class_format_output_stream.html#afa3bf8c1e53c0cf548f12e09b2332633">FormatOutputStream::isANSITerminal</a></div><div class="ttdeci">bool isANSITerminal()</div></div>
 <div class="ttc" id="aclass_a_n_s_i_escape_sequence_html_a2d4ba4c410c1bbd0e71756b78cd05eaca9a0ee40334d29ecf9a1e31ce4e9e3198"><div class="ttname"><a href="class_a_n_s_i_escape_sequence.html#a2d4ba4c410c1bbd0e71756b78cd05eaca9a0ee40334d29ecf9a1e31ce4e9e3198">ANSIEscapeSequence::YELLOW</a></div><div class="ttdeci">@ YELLOW</div><div class="ttdef"><b>Definition:</b> ANSIEscapeSequence.h:56</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794a0ea816d1e9ff9b0c281a9dc9092f1cb5"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a0ea816d1e9ff9b0c281a9dc9092f1cb5">FolderInfo::WUSR</a></div><div class="ttdeci">@ WUSR</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:58</div></div>
-<div class="ttc" id="aclass_hash_table_html_a29700754ae124a0c474eab2cbb5527b9"><div class="ttname"><a href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">HashTable::hasKey</a></div><div class="ttdeci">bool hasKey(const Key &amp;key) const noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:928</div></div>
+<div class="ttc" id="aclass_hash_table_html_a29700754ae124a0c474eab2cbb5527b9"><div class="ttname"><a href="class_hash_table.html#a29700754ae124a0c474eab2cbb5527b9">HashTable::hasKey</a></div><div class="ttdeci">bool hasKey(const Key &amp;key) const noexcept</div><div class="ttdef"><b>Definition:</b> HashTable.h:929</div></div>
 <div class="ttc" id="aclass_user_1_1_user_exception_html"><div class="ttname"><a href="class_user_1_1_user_exception.html">User::UserException</a></div><div class="ttdoc">User exception.</div><div class="ttdef"><b>Definition:</b> User.h:54</div></div>
 <div class="ttc" id="aclass_folder_info_html_a88b627c04de201bbd2af4978181c6451"><div class="ttname"><a href="class_folder_info.html#a88b627c04de201bbd2af4978181c6451">FolderInfo::getMode</a></div><div class="ttdeci">unsigned int getMode() const noexcept</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:140</div></div>
 <div class="ttc" id="aclass_a_n_s_i_escape_sequence_html_a2d4ba4c410c1bbd0e71756b78cd05eaca596a56de3988ef1a8585b923b39353c9"><div class="ttname"><a href="class_a_n_s_i_escape_sequence.html#a2d4ba4c410c1bbd0e71756b78cd05eaca596a56de3988ef1a8585b923b39353c9">ANSIEscapeSequence::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdef"><b>Definition:</b> ANSIEscapeSequence.h:54</div></div>
@@ -545,7 +545,7 @@ $(function() {
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdoc">Application.</div><div class="ttdef"><b>Definition:</b> Application.h:53</div></div>
 <div class="ttc" id="aclass_file_system_exception_html"><div class="ttname"><a href="class_file_system_exception.html">FileSystemException</a></div><div class="ttdoc">File system exception.</div><div class="ttdef"><b>Definition:</b> FileSystemException.h:28</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794a4cccdba5091e03159512647dfa294d01"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a4cccdba5091e03159512647dfa294d01">FolderInfo::XUSR</a></div><div class="ttdeci">@ XUSR</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:59</div></div>
-<div class="ttc" id="aclass_hash_table_html"><div class="ttname"><a href="class_hash_table.html">HashTable</a></div><div class="ttdoc">Hash table collection.</div><div class="ttdef"><b>Definition:</b> HashTable.h:35</div></div>
+<div class="ttc" id="aclass_hash_table_html"><div class="ttname"><a href="class_hash_table.html">HashTable</a></div><div class="ttdoc">Hash table collection.</div><div class="ttdef"><b>Definition:</b> HashTable.h:36</div></div>
 <div class="ttc" id="aclass_user_html"><div class="ttname"><a href="class_user.html">User</a></div><div class="ttdoc">User trustee.</div><div class="ttdef"><b>Definition:</b> User.h:34</div></div>
 <div class="ttc" id="aclass_file_system_html_af32ca0652ee6e091df124cca322ea34b"><div class="ttname"><a href="class_file_system.html#af32ca0652ee6e091df124cca322ea34b">FileSystem::getType</a></div><div class="ttdeci">static unsigned int getType(const String &amp;path)</div></div>
 <div class="ttc" id="aclass_folder_info_html_aeadc03f9e965a49f3945c9dcfbe63794a83ff9d6d6ee652621937983a129680c7"><div class="ttname"><a href="class_folder_info.html#aeadc03f9e965a49f3945c9dcfbe63794a83ff9d6d6ee652621937983a129680c7">FolderInfo::RUSR</a></div><div class="ttdeci">@ RUSR</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:57</div></div>
@@ -557,7 +557,7 @@ $(function() {
 <div class="ttc" id="aclass_file_info_html_aa745d8ba6f21c062a6eded6ffe8674d6a101cdd590b9e3f5823c877b9542cb5e6"><div class="ttname"><a href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a101cdd590b9e3f5823c877b9542cb5e6">FileInfo::WGRP</a></div><div class="ttdeci">@ WGRP</div><div class="ttdef"><b>Definition:</b> FileInfo.h:64</div></div>
 <div class="ttc" id="aclass_file_info_html_aa745d8ba6f21c062a6eded6ffe8674d6a8f656c0684f435302366ded1cdb66d9f"><div class="ttname"><a href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a8f656c0684f435302366ded1cdb66d9f">FileInfo::XOTH</a></div><div class="ttdeci">@ XOTH</div><div class="ttdef"><b>Definition:</b> FileInfo.h:74</div></div>
 <div class="ttc" id="aclass_file_info_html_aa745d8ba6f21c062a6eded6ffe8674d6aaa206b1fc7153eec18b48f8e53588af9"><div class="ttname"><a href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6aaa206b1fc7153eec18b48f8e53588af9">FileInfo::WOTH</a></div><div class="ttdeci">@ WOTH</div><div class="ttdef"><b>Definition:</b> FileInfo.h:73</div></div>
-<div class="ttc" id="aclass_array_html_af75233edc1ca07dbea71ddbe4501ed12"><div class="ttname"><a href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">Array::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> Array.h:477</div></div>
+<div class="ttc" id="aclass_array_html_af75233edc1ca07dbea71ddbe4501ed12"><div class="ttname"><a href="class_array.html#af75233edc1ca07dbea71ddbe4501ed12">Array::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> Array.h:489</div></div>
 <div class="ttc" id="aclass_folder_info_html_ad4bdb9dd85462d6668daa1bf28036486"><div class="ttname"><a href="class_folder_info.html#ad4bdb9dd85462d6668daa1bf28036486">FolderInfo::getGroup</a></div><div class="ttdeci">const Group &amp; getGroup() const noexcept</div><div class="ttdef"><b>Definition:</b> FolderInfo.h:130</div></div>
 <div class="ttc" id="aclass_file_system_html_ac4e9ee00c06b34622dd5ae7668cc9f02"><div class="ttname"><a href="class_file_system.html#ac4e9ee00c06b34622dd5ae7668cc9f02">FileSystem::folderExists</a></div><div class="ttdeci">static bool folderExists(const String &amp;path)</div></div>
 <div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array&lt; String &gt;</a></div></div>
@@ -565,8 +565,8 @@ $(function() {
 <div class="ttc" id="aclass_file_system_html_a4ddab6a75c18ac53d53553acca9fa7a5"><div class="ttname"><a href="class_file_system.html#a4ddab6a75c18ac53d53553acca9fa7a5">FileSystem::setCurrentFolder</a></div><div class="ttdeci">static void setCurrentFolder(const String &amp;path)</div></div>
 <div class="ttc" id="aclass_file_info_html_aa745d8ba6f21c062a6eded6ffe8674d6a140f5de27cfb46bf03b2dfaa1af95746"><div class="ttname"><a href="class_file_info.html#aa745d8ba6f21c062a6eded6ffe8674d6a140f5de27cfb46bf03b2dfaa1af95746">FileInfo::ROTH</a></div><div class="ttdeci">@ ROTH</div><div class="ttdef"><b>Definition:</b> FileInfo.h:72</div></div>
 <div class="ttc" id="aclass_folder_info_html_a24c31ff756d3bc4e66d436cad54343af"><div class="ttname"><a href="class_folder_info.html#a24c31ff756d3bc4e66d436cad54343af">FolderInfo::getEntries</a></div><div class="ttdeci">Array&lt; String &gt; getEntries() const</div></div>
-<div class="ttc" id="aclass_hash_table_html_a4d80ffa5e7addf735af4c73c4134ae01"><div class="ttname"><a href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">HashTable::add</a></div><div class="ttdeci">void add(const Key &amp;key, const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashTable.h:971</div></div>
-<div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Date and time.</div><div class="ttdef"><b>Definition:</b> Date.h:34</div></div>
+<div class="ttc" id="aclass_hash_table_html_a4d80ffa5e7addf735af4c73c4134ae01"><div class="ttname"><a href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">HashTable::add</a></div><div class="ttdeci">void add(const Key &amp;key, const Value &amp;value)</div><div class="ttdef"><b>Definition:</b> HashTable.h:972</div></div>
+<div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Date and time.</div><div class="ttdef"><b>Definition:</b> Date.h:35</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

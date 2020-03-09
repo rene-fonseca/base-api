@@ -93,10 +93,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c00112d82d2c2a4880f2f35cf4392dd"><td class="memTemplParams" colspan="2"><a id="a4c00112d82d2c2a4880f2f35cf4392dd"></a>
-template&lt;class TYPE &gt; </td></tr>
-<tr class="memitem:a4c00112d82d2c2a4880f2f35cf4392dd"><td class="memTemplItemLeft" align="right" valign="top">static TYPE&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getGlobalSymbol</b> (const <a class="el" href="class_string.html">String</a> &amp;symbol)</td></tr>
+<tr class="memitem:a4c00112d82d2c2a4880f2f35cf4392dd"><td class="memTemplParams" colspan="2">template&lt;class TYPE &gt; </td></tr>
+<tr class="memitem:a4c00112d82d2c2a4880f2f35cf4392dd"><td class="memTemplItemLeft" align="right" valign="top">static TYPE&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_dynamic_linker.html#a4c00112d82d2c2a4880f2f35cf4392dd">getGlobalSymbol</a> (const <a class="el" href="class_string.html">String</a> &amp;symbol)</td></tr>
 <tr class="separator:a4c00112d82d2c2a4880f2f35cf4392dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d875a74d004a36abe477bcb21ead16"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_linker.html#ad1d875a74d004a36abe477bcb21ead16">getGlobalSymbol</a> (const char *symbol) noexcept</td></tr>
+<tr class="separator:ad1d875a74d004a36abe477bcb21ead16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce52e9440757c18bb74b39166efb47a"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_linker.html#abce52e9440757c18bb74b39166efb47a">getModule</a> (const char *path) noexcept</td></tr>
+<tr class="separator:abce52e9440757c18bb74b39166efb47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3bb6d6fc87b688a9a95c7d4d8973fbb"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_linker.html#af3bb6d6fc87b688a9a95c7d4d8973fbb">getProcessImage</a> () noexcept</td></tr>
 <tr class="separator:af3bb6d6fc87b688a9a95c7d4d8973fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d0659158b099a1abc22364a6a1451b3"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_linker.html#a7d0659158b099a1abc22364a6a1451b3">getBaseFrameworkImage</a> () noexcept</td></tr>
@@ -247,6 +250,62 @@ template&lt;class TYPE &gt; </td></tr>
 
 </div>
 </div>
+<a id="ad1d875a74d004a36abe477bcb21ead16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d875a74d004a36abe477bcb21ead16">&#9670;&nbsp;</a></span>getGlobalSymbol() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* DynamicLinker::getGlobalSymbol </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns address of symbol. </p>
+
+</div>
+</div>
+<a id="a4c00112d82d2c2a4880f2f35cf4392dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c00112d82d2c2a4880f2f35cf4392dd">&#9670;&nbsp;</a></span>getGlobalSymbol() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static TYPE DynamicLinker::getGlobalSymbol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns address of symbol. </p>
+
+</div>
+</div>
 <a id="aa0a20e24807cda80b7e0a982f813dd25"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0a20e24807cda80b7e0a982f813dd25">&#9670;&nbsp;</a></span>getImageAddress()</h2>
 
@@ -298,6 +357,33 @@ template&lt;class TYPE &gt; </td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the path of the image for the given process address. </p>
+
+</div>
+</div>
+<a id="abce52e9440757c18bb74b39166efb47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce52e9440757c18bb74b39166efb47a">&#9670;&nbsp;</a></span>getModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* DynamicLinker::getModule </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the module handle if already loaded. </p>
 
 </div>
 </div>

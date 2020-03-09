@@ -168,8 +168,8 @@ $(function() {
 <div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> retryAttempts = 0;</div>
 <div class="line"><span class="keyword">protected</span>:</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> translateReplyCode(</div>
-<div class="line">    <span class="keywordtype">char</span> a, <span class="keywordtype">char</span> b, <span class="keywordtype">char</span> c, ReplyCode&amp; result) {</div>
+<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> translateReplyCode(<span class="keywordtype">char</span> a, <span class="keywordtype">char</span> b, <span class="keywordtype">char</span> c, ReplyCode&amp; result)</div>
+<div class="line">  {</div>
 <div class="line">    result.valid = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">switch</span> (a) {</div>
@@ -225,7 +225,8 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> getResponse() {</div>
+<div class="line">  <span class="keywordtype">void</span> getResponse()</div>
+<div class="line">  {</div>
 <div class="line">    <a name="_a7"></a><a class="code" href="class_format_input_stream.html">FormatInputStream</a> instream(controlConnection);</div>
 <div class="line"> </div>
 <div class="line">    replyCode.valid = <span class="keyword">false</span>; <span class="comment">// invalidate</span></div>
@@ -237,13 +238,13 @@ $(function() {
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) { <span class="comment">// read response</span></div>
-<div class="line">      <a class="code" href="class_string.html">String</a> line(256);</div>
+<div class="line">      <a class="code" href="class_string.html">String</a> line(<a name="a8"></a><a class="code" href="class_string.html#a95a7ad2fcff474d4f0be7a3ba909c690">String::makeCapacity</a>(256));</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">while</span> (<span class="keyword">true</span>) { <span class="comment">// read line</span></div>
 <div class="line">        <span class="keywordtype">char</span> ch = 0;</div>
 <div class="line">        instream &gt;&gt; ch;</div>
 <div class="line">        bassert(</div>
-<div class="line">          <a name="a8"></a><a class="code" href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">String::Traits::isASCII</a>(ch),</div>
+<div class="line">          <a name="a9"></a><a class="code" href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">String::Traits::isASCII</a>(ch),</div>
 <div class="line">          FTPException(<span class="stringliteral">&quot;Reply contains invalid character.&quot;</span>)</div>
 <div class="line">        );</div>
 <div class="line">        <span class="comment">// read until new line &quot;\n&quot; and remove &quot;\r&quot; and other annoying chars</span></div>
@@ -285,17 +286,19 @@ $(function() {
 <div class="line">    bassert(replyCode.valid, FTPException(<span class="stringliteral">&quot;Failed to get reply.&quot;</span>));</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> requestPassword(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password) {</div>
+<div class="line">  <span class="keywordtype">void</span> requestPassword(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_EXTENDED) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Sending command &#39;&quot;</span> &lt;&lt; CMD_PASSWORD</div>
 <div class="line">           &lt;&lt; <span class="stringliteral">&quot;&#39; with value &#39;&quot;</span> &lt;&lt; password &lt;&lt; <span class="charliteral">&#39;\&#39;&#39;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
 <div class="line">    responsePending = <span class="keyword">true</span>;</div>
-<div class="line">    <a name="_a9"></a><a class="code" href="class_format_output_stream.html">FormatOutputStream</a> outstream(controlConnection);</div>
+<div class="line">    <a name="_a10"></a><a class="code" href="class_format_output_stream.html">FormatOutputStream</a> outstream(controlConnection);</div>
 <div class="line">    outstream &lt;&lt; CMD_PASSWORD &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; password &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span> &lt;&lt; FLUSH;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> request(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; command) {</div>
+<div class="line">  <span class="keywordtype">void</span> request(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; command)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_EXTENDED) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Sending command &#39;&quot;</span> &lt;&lt; command &lt;&lt; <span class="stringliteral">&quot;&#39; with no value&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -304,7 +307,8 @@ $(function() {
 <div class="line">    outstream &lt;&lt; command &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span> &lt;&lt; FLUSH;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> request(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; command, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; value) {</div>
+<div class="line">  <span class="keywordtype">void</span> request(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; command, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; value)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_EXTENDED) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Sending command &#39;&quot;</span> &lt;&lt; command &lt;&lt; <span class="stringliteral">&quot;&#39; with value &#39;&quot;</span> &lt;&lt; value &lt;&lt; <span class="charliteral">&#39;\&#39;&#39;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -314,12 +318,13 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidString(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; str) {</div>
-<div class="line">    <span class="keywordflow">if</span> (str.<a name="a10"></a><a class="code" href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">isEmpty</a>()) {</div>
+<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidString(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; str)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">if</span> (str.<a name="a11"></a><a class="code" href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">isEmpty</a>()) {</div>
 <div class="line">      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keyword">const</span> String::ReadIterator end = str.<a name="a11"></a><a class="code" href="class_string.html#a329ec306ac33605383654cd9c1040709">getEndReadIterator</a>();</div>
-<div class="line">    <span class="keywordflow">for</span> (String::ReadIterator i = str.<a name="a12"></a><a class="code" href="class_string.html#a304007fdfcd2acdae2f0b56217ae920c">getBeginReadIterator</a>(); i &lt; end; ++i) {</div>
+<div class="line">    <span class="keyword">const</span> String::ReadIterator end = str.<a name="a12"></a><a class="code" href="class_string.html#a329ec306ac33605383654cd9c1040709">getEndReadIterator</a>();</div>
+<div class="line">    <span class="keywordflow">for</span> (String::ReadIterator i = str.<a name="a13"></a><a class="code" href="class_string.html#a304007fdfcd2acdae2f0b56217ae920c">getBeginReadIterator</a>(); i &lt; end; ++i) {</div>
 <div class="line">      <span class="keywordflow">if</span> (!<a class="code" href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">String::Traits::isASCII</a>(*i) || (*i == <span class="charliteral">&#39;\n&#39;</span>) || (*i == <span class="charliteral">&#39;\r&#39;</span>)) {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line">      }</div>
@@ -327,7 +332,8 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidPrintableString(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; str) {</div>
+<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidPrintableString(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; str)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (str.<a class="code" href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">isEmpty</a>()) {</div>
 <div class="line">      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
@@ -344,72 +350,85 @@ $(function() {
 <div class="line">    : endPoint(ep),</div>
 <div class="line">      verbosity(v),</div>
 <div class="line">      retryDelay(DEFAULT_RETRY_DELAY),</div>
-<div class="line">      retryAttempts(DEFAULT_RETRY_ATTEMPTS) {</div>
+<div class="line">      retryAttempts(DEFAULT_RETRY_ATTEMPTS)</div>
+<div class="line">  {</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getRetryDelay()<span class="keyword"> const </span>{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getRetryDelay()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">  </span>{</div>
 <div class="line">    <span class="keywordflow">return</span> retryDelay;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> setRetryDelay(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value) {</div>
+<div class="line">  <span class="keywordtype">void</span> setRetryDelay(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value)</div>
+<div class="line">  {</div>
 <div class="line">    retryDelay = value;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getRetryAttempts()<span class="keyword"> const </span>{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getRetryAttempts()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">  </span>{</div>
 <div class="line">    <span class="keywordflow">return</span> retryAttempts;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> setRetryAttempts(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value) {</div>
+<div class="line">  <span class="keywordtype">void</span> setRetryAttempts(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value)</div>
+<div class="line">  {</div>
 <div class="line">    retryAttempts = value;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> connect() {</div>
+<div class="line">  <span class="keywordtype">void</span> connect()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Establishing control connection to: &quot;</span></div>
 <div class="line">           &lt;&lt; endPoint &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
-<div class="line">    controlConnection.<a name="a13"></a><a class="code" href="class_stream_socket.html#a6e0aea719fe3e57d2ef4629d5a0c1fce">connect</a>(endPoint.<a name="a14"></a><a class="code" href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">getAddress</a>(), endPoint.<a name="a15"></a><a class="code" href="class_inet_end_point.html#aa99ae24dc2401d68c213a83e9d597556">getPort</a>());</div>
-<div class="line">    controlConnection.<a name="a16"></a><a class="code" href="class_stream_socket.html#a01819dfd9af1e02e66251e0b3a846b9c">getName</a>();</div>
+<div class="line">    controlConnection.<a name="a14"></a><a class="code" href="class_stream_socket.html#a6e0aea719fe3e57d2ef4629d5a0c1fce">connect</a>(endPoint.<a name="a15"></a><a class="code" href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">getAddress</a>(), endPoint.<a name="a16"></a><a class="code" href="class_inet_end_point.html#af3477bd5eebe2861a7c733023f5b5732">getPort</a>());</div>
+<div class="line">    controlConnection.<a name="a17"></a><a class="code" href="class_stream_socket.html#a01819dfd9af1e02e66251e0b3a846b9c">getName</a>();</div>
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">int</span> sendUser(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; username) {</div>
-<div class="line">    bassert(isValidString(username), <a name="_a17"></a><a class="code" href="class_invalid_format.html">InvalidFormat</a>(<span class="stringliteral">&quot;Invalid FTP string.&quot;</span>));</div>
+<div class="line">  <span class="keywordtype">int</span> sendUser(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; username)</div>
+<div class="line">  {</div>
+<div class="line">    bassert(isValidString(username), <a name="_a18"></a><a class="code" href="class_invalid_format.html">InvalidFormat</a>(<span class="stringliteral">&quot;Invalid FTP string.&quot;</span>));</div>
 <div class="line">    request(CMD_USER, username);</div>
 <div class="line">    getResponse();</div>
 <div class="line">    <span class="keywordflow">return</span> replyCode.reply;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">int</span> sendPassword(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password) {</div>
+<div class="line">  <span class="keywordtype">int</span> sendPassword(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password)</div>
+<div class="line">  {</div>
 <div class="line">    bassert(isValidString(password), <a class="code" href="class_invalid_format.html">InvalidFormat</a>(<span class="stringliteral">&quot;Invalid FTP string.&quot;</span>));</div>
 <div class="line">    requestPassword(password);</div>
 <div class="line">    getResponse();</div>
 <div class="line">    <span class="keywordflow">return</span> replyCode.reply;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">int</span> sendAccount(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; account) {</div>
+<div class="line">  <span class="keywordtype">int</span> sendAccount(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; account)</div>
+<div class="line">  {</div>
 <div class="line">    bassert(isValidString(account), <a class="code" href="class_invalid_format.html">InvalidFormat</a>(<span class="stringliteral">&quot;Invalid FTP string.&quot;</span>));</div>
 <div class="line">    request(CMD_ACCOUNT, account);</div>
 <div class="line">    getResponse();</div>
 <div class="line">    <span class="keywordflow">return</span> replyCode.reply;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> sendReinitialize() {</div>
+<div class="line">  <span class="keywordtype">void</span> sendReinitialize()</div>
+<div class="line">  {</div>
 <div class="line">    request(CMD_REINITIALIZE);</div>
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> sendHelp() {</div>
+<div class="line">  <span class="keywordtype">void</span> sendHelp()</div>
+<div class="line">  {</div>
 <div class="line">    request(CMD_HELP);</div>
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> sendNoOperation() {</div>
+<div class="line">  <span class="keywordtype">void</span> sendNoOperation()</div>
+<div class="line">  {</div>
 <div class="line">    request(CMD_NOOP);</div>
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> getSystemType() {</div>
+<div class="line">  <span class="keywordtype">void</span> getSystemType()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Getting system type...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -417,7 +436,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> getStatus() {</div>
+<div class="line">  <span class="keywordtype">void</span> getStatus()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Getting status...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -425,7 +445,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> setType(Representation representation) {</div>
+<div class="line">  <span class="keywordtype">void</span> setType(Representation representation)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Setting type...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -444,7 +465,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> setStructure(Structure structure) {</div>
+<div class="line">  <span class="keywordtype">void</span> setStructure(Structure structure)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Setting file structure...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -462,7 +484,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> setMode(Mode mode) {</div>
+<div class="line">  <span class="keywordtype">void</span> setMode(Mode mode)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Setting mode...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -480,7 +503,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> getList() {</div>
+<div class="line">  <span class="keywordtype">void</span> getList()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: List...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -488,12 +512,13 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> readDirectoryList() {</div>
-<div class="line">    <a name="_a18"></a><a class="code" href="class_allocator.html">Allocator&lt;uint8&gt;</a> buffer(4096);</div>
+<div class="line">  <span class="keywordtype">void</span> readDirectoryList()</div>
+<div class="line">  {</div>
+<div class="line">    <a name="_a19"></a><a class="code" href="class_allocator.html">Allocator&lt;uint8&gt;</a> buffer(4096);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) { <span class="comment">// read line until response</span></div>
 <div class="line">      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> result =</div>
-<div class="line">        dataConnection.<a name="a19"></a><a class="code" href="class_stream_socket.html#a7de21334ca8a2b37708e0f712426da5a">read</a>(buffer.getElements(), buffer.getSize(), <span class="keyword">true</span>);</div>
+<div class="line">        dataConnection.<a name="a20"></a><a class="code" href="class_stream_socket.html#a7de21334ca8a2b37708e0f712426da5a">read</a>(buffer.getElements(), buffer.getSize(), <span class="keyword">true</span>);</div>
 <div class="line">      <span class="keywordflow">if</span> (result == 0) {</div>
 <div class="line">        <span class="keywordflow">break</span>;</div>
 <div class="line">      }</div>
@@ -527,11 +552,12 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> readData(<span class="keywordtype">long</span> <span class="keywordtype">long</span> sizeOfFile) {</div>
+<div class="line">  <span class="keywordtype">void</span> readData(<span class="keywordtype">long</span> <span class="keywordtype">long</span> sizeOfFile)</div>
+<div class="line">  {</div>
 <div class="line">    <a class="code" href="class_allocator.html">Allocator&lt;uint8&gt;</a> buffer(4096 * 16);</div>
-<div class="line">    <a name="_a20"></a><a class="code" href="class_file.html">File</a> file(<span class="stringliteral">&quot;ftpoutput&quot;</span>, <a name="a21"></a><a class="code" href="class_file.html#adb1db6815e6eeb9b39c76da4a541ae18a20233714769e48aa46a386c3fd8e84d7">File::WRITE</a>, <a name="a22"></a><a class="code" href="class_file.html#a335979c8b00259c29ac1a2784cb4dfd4ae98c4bc1eaf89a65baa406458c743382">File::CREATE</a> | <a name="a23"></a><a class="code" href="class_file.html#a335979c8b00259c29ac1a2784cb4dfd4a646ec9705a761ff7e96b6c4f78720ba5">File::TRUNCATE</a>);</div>
+<div class="line">    <a name="_a21"></a><a class="code" href="class_file.html">File</a> file(<span class="stringliteral">&quot;ftpoutput&quot;</span>, <a name="a22"></a><a class="code" href="class_file.html#adb1db6815e6eeb9b39c76da4a541ae18a20233714769e48aa46a386c3fd8e84d7">File::WRITE</a>, <a name="a23"></a><a class="code" href="class_file.html#a335979c8b00259c29ac1a2784cb4dfd4ae98c4bc1eaf89a65baa406458c743382">File::CREATE</a> | <a name="a24"></a><a class="code" href="class_file.html#a335979c8b00259c29ac1a2784cb4dfd4a646ec9705a761ff7e96b6c4f78720ba5">File::TRUNCATE</a>);</div>
 <div class="line"> </div>
-<div class="line">    <a name="_a24"></a><a class="code" href="class_timer.html">Timer</a> timer;</div>
+<div class="line">    <a name="_a25"></a><a class="code" href="class_timer.html">Timer</a> timer;</div>
 <div class="line">    <span class="keywordtype">long</span> <span class="keywordtype">long</span> bytesRead = 0;</div>
 <div class="line">    <span class="keywordflow">while</span> (bytesRead &lt; sizeOfFile) {</div>
 <div class="line">      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bytesToRead =</div>
@@ -545,14 +571,15 @@ $(function() {
 <div class="line">      <span class="keywordflow">if</span> (verbosity &gt;= SHORT) {</div>
 <div class="line">        fout &lt;&lt; <span class="stringliteral">&quot;bytes read=&quot;</span> &lt;&lt; bytesRead &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">             &lt;&lt; <span class="stringliteral">&quot;completed=&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bytesRead)/sizeOfFile*100 &lt;&lt; <span class="charliteral">&#39;%&#39;</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line">             &lt;&lt; <span class="stringliteral">&quot;time=&quot;</span> &lt;&lt; timer.<a name="a25"></a><a class="code" href="class_timer.html#ab82c0b645c7b797b2a970812dc3617e3">getLiveMicroseconds</a>()/1000000. &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
+<div class="line">             &lt;&lt; <span class="stringliteral">&quot;time=&quot;</span> &lt;&lt; timer.<a name="a26"></a><a class="code" href="class_timer.html#ab82c0b645c7b797b2a970812dc3617e3">getLiveMicroseconds</a>()/1000000. &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
 <div class="line">             &lt;&lt; <span class="stringliteral">&quot;rate=&quot;</span> &lt;&lt; (1000000./1024. * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bytesRead)/timer.<a class="code" href="class_timer.html#ab82c0b645c7b797b2a970812dc3617e3">getLiveMicroseconds</a>()) &lt;&lt; <span class="stringliteral">&quot;kbs\r&quot;</span> &lt;&lt; FLUSH;</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line">    fout &lt;&lt; ENDL;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> restart(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; marker) {</div>
+<div class="line">  <span class="keywordtype">void</span> restart(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; marker)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Restarting...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -563,7 +590,8 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// File commands</span></div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> renameFile(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; from, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; to) {</div>
+<div class="line">  <span class="keywordtype">void</span> renameFile(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; from, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; to)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Renaming file system object...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -573,7 +601,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> deleteFile(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; path) {</div>
+<div class="line">  <span class="keywordtype">void</span> deleteFile(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; path)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Deleting file system object...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -584,7 +613,8 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Directory commands</span></div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> getCurrentDirectory() {</div>
+<div class="line">  <span class="keywordtype">void</span> getCurrentDirectory()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Getting current directory...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -592,7 +622,8 @@ $(function() {
 <div class="line">    getResponse();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> changeDirectory(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; path) {</div>
+<div class="line">  <span class="keywordtype">void</span> changeDirectory(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; path)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Changing working directory...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -606,7 +637,8 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> makeDirectory(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; path) {</div>
+<div class="line">  <span class="keywordtype">void</span> makeDirectory(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; path)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Creating new directory...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -628,9 +660,9 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <a class="code" href="class_string.html">String</a> clipPassiveResponse(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; response, <span class="keywordtype">int</span>&amp; index)</div>
 <div class="line">  {</div>
-<div class="line">    <a class="code" href="class_string.html">String</a> result(3);</div>
+<div class="line">    <a class="code" href="class_string.html">String</a> result(<a class="code" href="class_string.html#a95a7ad2fcff474d4f0be7a3ba909c690">String::makeCapacity</a>(3));</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> count = 3;</div>
-<div class="line">      count &amp;&amp; (index &lt; static_cast&lt;int&gt;(response.<a name="a26"></a><a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>())) &amp;&amp;</div>
+<div class="line">      count &amp;&amp; (index &lt; static_cast&lt;int&gt;(response.<a name="a27"></a><a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>())) &amp;&amp;</div>
 <div class="line">        (response[index] &gt;= <span class="charliteral">&#39;0&#39;</span>) &amp;&amp; (response[index] &lt;= <span class="charliteral">&#39;9&#39;</span>); --count) {</div>
 <div class="line">      result += response[index++];</div>
 <div class="line">    }</div>
@@ -639,7 +671,8 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> login(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; username, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password) {</div>
+<div class="line">  <span class="keywordtype">void</span> login(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; username, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; password)</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Sending user and password...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -687,7 +720,7 @@ $(function() {
 <div class="line">    request(CMD_RETRIEVE, filename);</div>
 <div class="line">    getResponse();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">int</span> i = response.<a name="a27"></a><a class="code" href="class_string.html#a956785ad5fbd5c770fa488890a271181">indexOf</a>(<span class="stringliteral">&quot; byte&quot;</span>, 4);</div>
+<div class="line">    <span class="keywordtype">int</span> i = response.<a name="a28"></a><a class="code" href="class_string.html#a956785ad5fbd5c770fa488890a271181">indexOf</a>(<span class="stringliteral">&quot; byte&quot;</span>, 4);</div>
 <div class="line">    bassert(i &gt;= 0, FTPException(<span class="stringliteral">&quot;Invalid reply.&quot;</span>));</div>
 <div class="line">    --i; <span class="comment">// possible last digit</span></div>
 <div class="line">    bassert(</div>
@@ -717,7 +750,8 @@ $(function() {
 <div class="line"><span class="comment">//const Literal CMD_NAME_LIST = MESSAGE(&quot;NLST&quot;); // request name list</span></div>
 <div class="line"><span class="comment">//const Literal CMD_SITE = MESSAGE(&quot;SITE&quot;); // site specific</span></div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> abort() {</div>
+<div class="line">  <span class="keywordtype">void</span> abort()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Aborting...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -725,35 +759,38 @@ $(function() {
 <div class="line">    getResponse(); <span class="comment">// wait for completed</span></div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> requestActiveTransfer() {</div>
+<div class="line">  <span class="keywordtype">void</span> requestActiveTransfer()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Requesting active transfer mode...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
-<div class="line">    serverDataConnection = <a class="code" href="class_server_socket.html">ServerSocket</a>(controlConnection.<a name="a28"></a><a class="code" href="class_stream_socket.html#a9640edd848c5bac3517d23bafad06f23">getLocalAddress</a>(), 0, 1); <span class="comment">// address must be IPv4</span></div>
-<div class="line">    serverDataConnection.<a name="a29"></a><a class="code" href="class_server_socket.html#a1d693235f0e95e16c4df28775e8fdba3">getName</a>();</div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* binaryAddress = serverDataConnection.<a name="a30"></a><a class="code" href="class_server_socket.html#a87de644b3b1194bb7a8faa6e99e46673">getLocalAddress</a>().<a name="a31"></a><a class="code" href="class_inet_address.html#a0637f5d2643bb73099679339eb1e97c3">getAddress</a>(); <span class="comment">// network byte order!</span></div>
-<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port = serverDataConnection.<a name="a32"></a><a class="code" href="class_server_socket.html#aa245da9f861f99bd78d1fef073e4124d">getLocalPort</a>();</div>
-<div class="line">    <a name="_a33"></a><a class="code" href="class_string_output_stream.html">StringOutputStream</a> endPoint;</div>
+<div class="line">    serverDataConnection = <a class="code" href="class_server_socket.html">ServerSocket</a>(controlConnection.<a name="a29"></a><a class="code" href="class_stream_socket.html#a9640edd848c5bac3517d23bafad06f23">getLocalAddress</a>(), 0, 1); <span class="comment">// address must be IPv4</span></div>
+<div class="line">    serverDataConnection.<a name="a30"></a><a class="code" href="class_server_socket.html#a1d693235f0e95e16c4df28775e8fdba3">getName</a>();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* binaryAddress = serverDataConnection.<a name="a31"></a><a class="code" href="class_server_socket.html#a87de644b3b1194bb7a8faa6e99e46673">getLocalAddress</a>().<a name="a32"></a><a class="code" href="class_inet_address.html#a0637f5d2643bb73099679339eb1e97c3">getAddress</a>(); <span class="comment">// network byte order!</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port = serverDataConnection.<a name="a33"></a><a class="code" href="class_server_socket.html#aa245da9f861f99bd78d1fef073e4124d">getLocalPort</a>();</div>
+<div class="line">    <a name="_a34"></a><a class="code" href="class_string_output_stream.html">StringOutputStream</a> endPoint;</div>
 <div class="line">    endPoint &lt;&lt; static_cast&lt;unsigned int&gt;(binaryAddress[0]) &lt;&lt; <span class="charliteral">&#39;,&#39;</span></div>
 <div class="line">             &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(binaryAddress[1]) &lt;&lt; <span class="charliteral">&#39;,&#39;</span></div>
 <div class="line">             &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(binaryAddress[2]) &lt;&lt; <span class="charliteral">&#39;,&#39;</span></div>
 <div class="line">             &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(binaryAddress[3]) &lt;&lt; <span class="charliteral">&#39;,&#39;</span></div>
 <div class="line">             &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(port &gt;&gt; 8) &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(port &amp; 0xff) &lt;&lt; FLUSH;</div>
-<div class="line">    request(CMD_DATA_PORT, endPoint.<a name="a34"></a><a class="code" href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">getString</a>());</div>
+<div class="line">    request(CMD_DATA_PORT, endPoint.<a name="a35"></a><a class="code" href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">getString</a>());</div>
 <div class="line">    getResponse();</div>
 <div class="line"> </div>
 <div class="line">    request(CMD_LIST);</div>
-<div class="line">    dataConnection = serverDataConnection.<a name="a35"></a><a class="code" href="class_server_socket.html#adfa49df6e01ffee86c9850982de7131c">accept</a>();</div>
-<div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Incoming connection from: &quot;</span> &lt;&lt; dataConnection.<a name="a36"></a><a class="code" href="class_stream_socket.html#a7eabc256fb774e12db56b414ac05c52e">getAddress</a>() &lt;&lt; ENDL;</div>
+<div class="line">    dataConnection = serverDataConnection.<a name="a36"></a><a class="code" href="class_server_socket.html#adfa49df6e01ffee86c9850982de7131c">accept</a>();</div>
+<div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Incoming connection from: &quot;</span> &lt;&lt; dataConnection.<a name="a37"></a><a class="code" href="class_stream_socket.html#a7eabc256fb774e12db56b414ac05c52e">getAddress</a>() &lt;&lt; ENDL;</div>
 <div class="line">    getResponse(); <span class="comment">// wait for completed</span></div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> waitForConnection() {</div>
+<div class="line">  <span class="keywordtype">void</span> waitForConnection()</div>
+<div class="line">  {</div>
 <div class="line">    dataConnection = serverDataConnection.<a class="code" href="class_server_socket.html#adfa49df6e01ffee86c9850982de7131c">accept</a>();</div>
 <div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Incoming connection from: &quot;</span> &lt;&lt; dataConnection.<a class="code" href="class_stream_socket.html#a7eabc256fb774e12db56b414ac05c52e">getAddress</a>() &lt;&lt; ENDL;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> requestPassiveTransfer() {</div>
+<div class="line">  <span class="keywordtype">void</span> requestPassiveTransfer()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Requesting passive transfer mode...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
@@ -764,7 +801,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (i = 4; (i &lt; static_cast&lt;int&gt;(response.<a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>())) &amp;&amp; ((response[i] &lt; <span class="charliteral">&#39;0&#39;</span>) || (response[i] &gt; <span class="charliteral">&#39;9&#39;</span>)); ++i); <span class="comment">// find first digit of addr</span></div>
 <div class="line">    bassert(i &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(response.<a class="code" href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">getLength</a>()), FTPException(<span class="stringliteral">&quot;Invalid reply.&quot;</span>));</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="class_string.html">String</a> address(15);</div>
+<div class="line">    <a class="code" href="class_string.html">String</a> address(<a class="code" href="class_string.html#a95a7ad2fcff474d4f0be7a3ba909c690">String::makeCapacity</a>(15));</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> number = 0; number &lt; 4; ++number) { <span class="comment">// read address</span></div>
 <div class="line">      <a class="code" href="class_string.html">String</a> result = clipPassiveResponse(response, i);</div>
 <div class="line">      bassert(response[i++] == <span class="charliteral">&#39;,&#39;</span>, FTPException(<span class="stringliteral">&quot;Invalid reply.&quot;</span>));  <span class="comment">// skip &#39;,&#39;</span></div>
@@ -777,7 +814,8 @@ $(function() {
 <div class="line">    <a class="code" href="class_string.html">String</a> portHigh = clipPassiveResponse(response, i);</div>
 <div class="line">    bassert(response[i++] == <span class="charliteral">&#39;,&#39;</span>, FTPException(<span class="stringliteral">&quot;Invalid reply.&quot;</span>));  <span class="comment">// skip &#39;,&#39;</span></div>
 <div class="line">    <a class="code" href="class_string.html">String</a> portLow = clipPassiveResponse(response, i);</div>
-<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port = <a name="_a37"></a><a class="code" href="class_unsigned_integer.html">UnsignedInteger</a>(portHigh).<a name="a38"></a><a class="code" href="class_unsigned_integer.html#a8c58df7eb879fb64ad4ab726db3fdfbb">getValue</a>() * 256 + <a class="code" href="class_unsigned_integer.html">UnsignedInteger</a>(portLow).<a class="code" href="class_unsigned_integer.html#a8c58df7eb879fb64ad4ab726db3fdfbb">getValue</a>(); <span class="comment">// TAG: make UnsignedInteger class and use this here</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port = <a name="_a38"></a><a class="code" href="class_unsigned_integer.html">UnsignedInteger</a>(portHigh).<a name="a39"></a><a class="code" href="class_unsigned_integer.html#a8c58df7eb879fb64ad4ab726db3fdfbb">getValue</a>() * 256 + <a class="code" href="class_unsigned_integer.html">UnsignedInteger</a>(portLow).<a class="code" href="class_unsigned_integer.html#a8c58df7eb879fb64ad4ab726db3fdfbb">getValue</a>();</div>
+<div class="line">    <span class="comment">// TAG: make UnsignedInteger class and use this here</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Establishing data connection to: &quot;</span></div>
@@ -793,23 +831,25 @@ $(function() {
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Closing sockets...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
-<div class="line">    dataConnection.<a name="a39"></a><a class="code" href="class_stream_socket.html#af0bbecc96f41e4dd13fcb993647350bf">close</a>();</div>
+<div class="line">    dataConnection.<a name="a40"></a><a class="code" href="class_stream_socket.html#af0bbecc96f41e4dd13fcb993647350bf">close</a>();</div>
 <div class="line">    controlConnection.<a class="code" href="class_stream_socket.html#af0bbecc96f41e4dd13fcb993647350bf">close</a>();</div>
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">class </span>MyThread : <span class="keyword">public</span> <a name="_a40"></a><a class="code" href="class_runnable.html">Runnable</a> {</div>
+<div class="line"><span class="keyword">class </span>MyThread : <span class="keyword">public</span> <a name="_a41"></a><a class="code" href="class_runnable.html">Runnable</a> {</div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line"> </div>
 <div class="line">  FileTransferProtocolClient&amp; client;</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line"> </div>
-<div class="line">  MyThread(FileTransferProtocolClient&amp; _client) : client(_client) {</div>
+<div class="line">  MyThread(FileTransferProtocolClient&amp; _client) : client(_client)</div>
+<div class="line">  {</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> run() {</div>
+<div class="line">  <span class="keywordtype">void</span> run()</div>
+<div class="line">  {</div>
 <div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line">      client.waitForConnection();</div>
 <div class="line">    }</div>
@@ -818,8 +858,9 @@ $(function() {
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> ftpclient(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; resource, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; file) {</div>
-<div class="line">  <a name="_a41"></a><a class="code" href="class_url.html">Url</a> url(resource);</div>
+<div class="line"><span class="keywordtype">void</span> ftpclient(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; resource, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; file)</div>
+<div class="line">{</div>
+<div class="line">  <a name="_a42"></a><a class="code" href="class_url.html">Url</a> url(resource);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (url.getScheme().isEmpty()) {</div>
 <div class="line">    url.setScheme(<span class="stringliteral">&quot;ftp&quot;</span>);</div>
@@ -847,14 +888,14 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <a name="_a42"></a><a class="code" href="class_inet_address.html">InetAddress</a> address; <span class="comment">// the address of the remote host</span></div>
+<div class="line">  <a name="_a43"></a><a class="code" href="class_inet_address.html">InetAddress</a> address; <span class="comment">// the address of the remote host</span></div>
 <div class="line">  {</div>
 <div class="line">    fout &lt;&lt; <span class="stringliteral">&quot;Server addresses:&quot;</span> &lt;&lt; ENDL;</div>
-<div class="line">    <a name="_a43"></a><a class="code" href="class_list.html">List&lt;InetAddress&gt;</a> addresses = <a name="a44"></a><a class="code" href="class_inet_address.html#a252f40425847bf9d1fb8d24ab5bfa3b8">InetAddress::getAddressesByName</a>(url.getHost());</div>
-<div class="line">    <a name="_a45"></a><a class="code" href="class_double_linked_node_read_enumerator.html">List&lt;InetAddress&gt;::ReadEnumerator</a> enu = addresses.<a name="a46"></a><a class="code" href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">getReadEnumerator</a>();</div>
+<div class="line">    <a name="_a44"></a><a class="code" href="class_list.html">List&lt;InetAddress&gt;</a> addresses = <a name="a45"></a><a class="code" href="class_inet_address.html#a252f40425847bf9d1fb8d24ab5bfa3b8">InetAddress::getAddressesByName</a>(url.getHost());</div>
+<div class="line">    <a name="_a46"></a><a class="code" href="class_double_linked_node_read_enumerator.html">List&lt;InetAddress&gt;::ReadEnumerator</a> enu = addresses.<a name="a47"></a><a class="code" href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">getReadEnumerator</a>();</div>
 <div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index = 0;</div>
-<div class="line">    <span class="keywordflow">while</span> (enu.<a name="a47"></a><a class="code" href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">hasNext</a>()) {</div>
-<div class="line">      <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; temp = enu.<a name="a48"></a><a class="code" href="class_double_linked_node_read_enumerator.html#a7394eb7fd5e6776e56931ada238bf480">next</a>();</div>
+<div class="line">    <span class="keywordflow">while</span> (enu.<a name="a48"></a><a class="code" href="class_double_linked_node_read_enumerator.html#af224dec383bf510a7074b8572c3add78">hasNext</a>()) {</div>
+<div class="line">      <span class="keyword">const</span> <a class="code" href="class_inet_address.html">InetAddress</a>&amp; temp = enu.<a name="a49"></a><a class="code" href="class_double_linked_node_read_enumerator.html#a7394eb7fd5e6776e56931ada238bf480">next</a>();</div>
 <div class="line">      <span class="keywordflow">if</span> (index == 0) { <span class="comment">// use the first address</span></div>
 <div class="line">        address = temp;</div>
 <div class="line">        fout &lt;&lt; <span class="stringliteral">&quot;  address &quot;</span> &lt;&lt; index++ &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; temp &lt;&lt; <span class="stringliteral">&quot; (USING THIS)&quot;</span> &lt;&lt; ENDL;</div>
@@ -890,7 +931,7 @@ $(function() {
 <div class="line">  client.logout();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">class </span>FTPApplication : <span class="keyword">public</span> <a name="_a49"></a><a class="code" href="class_application.html">Application</a> {</div>
+<div class="line"><span class="keyword">class </span>FTPApplication : <span class="keyword">public</span> <a name="_a50"></a><a class="code" href="class_application.html">Application</a> {</div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> MAJOR_VERSION = 1;</div>
@@ -902,18 +943,19 @@ $(function() {
 <div class="line">  {</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> main() {</div>
+<div class="line">  <span class="keywordtype">void</span> main()</div>
+<div class="line">  {</div>
 <div class="line">    fout &lt;&lt; getFormalName() &lt;&lt; <span class="stringliteral">&quot; version &quot;</span></div>
 <div class="line">         &lt;&lt; MAJOR_VERSION &lt;&lt; <span class="charliteral">&#39;.&#39;</span> &lt;&lt; MINOR_VERSION &lt;&lt; EOL</div>
 <div class="line">         &lt;&lt; <span class="stringliteral">&quot;The Base Framework (Test Suite)&quot;</span> &lt;&lt; EOL</div>
 <div class="line">         &lt;&lt; ENDL;</div>
 <div class="line">    </div>
-<div class="line">    <a name="_a50"></a><a class="code" href="class_array.html">Array&lt;String&gt;</a> arguments = getArguments();</div>
+<div class="line">    <a name="_a51"></a><a class="code" href="class_array.html">Array&lt;String&gt;</a> arguments = getArguments();</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="class_string.html">String</a> url = <span class="stringliteral">&quot;ftp.sunsite.auc.dk&quot;</span>; <span class="comment">// default url</span></div>
 <div class="line">    <a class="code" href="class_string.html">String</a> file = <span class="stringliteral">&quot;welcome.msg&quot;</span>; <span class="comment">// default file</span></div>
 <div class="line">    </div>
-<div class="line">    <span class="keywordflow">switch</span> (arguments.<a name="a51"></a><a class="code" href="class_array.html#a137f2cae7d1ade1316b2a0d10ffaccde">getSize</a>()) {</div>
+<div class="line">    <span class="keywordflow">switch</span> (arguments.<a name="a52"></a><a class="code" href="class_array.html#a137f2cae7d1ade1316b2a0d10ffaccde">getSize</a>()) {</div>
 <div class="line">    <span class="keywordflow">case</span> 0:</div>
 <div class="line">      <span class="comment">// use defaults</span></div>
 <div class="line">      <span class="keywordflow">break</span>;</div>
@@ -932,7 +974,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">try</span> {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;Testing File Transfer Protocol (FTP) class...&quot;</span> &lt;&lt; ENDL;</div>
 <div class="line">      ftpclient(url, file);</div>
-<div class="line">    } <span class="keywordflow">catch</span> (<a name="_a52"></a><a class="code" href="class_exception.html">Exception</a>&amp;) {</div>
+<div class="line">    } <span class="keywordflow">catch</span> (<a name="_a53"></a><a class="code" href="class_exception.html">Exception</a>&amp;) {</div>
 <div class="line">      setExitCode(EXIT_CODE_ERROR);</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
@@ -940,11 +982,12 @@ $(function() {
 <div class="line"> </div>
 <div class="line">APPLICATION_STUB(FTPApplication);</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:467</div></div>
+<div class="ttc" id="aclass_string_html_a0f03b86bfcf56cd0da709f95e79b9c9b"><div class="ttname"><a href="class_string.html#a0f03b86bfcf56cd0da709f95e79b9c9b">String::getLength</a></div><div class="ttdeci">MemorySize getLength() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:510</div></div>
 <div class="ttc" id="aclass_inet_end_point_html"><div class="ttname"><a href="class_inet_end_point.html">InetEndPoint</a></div><div class="ttdoc">Internet end point.</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:30</div></div>
 <div class="ttc" id="aclass_i_o_exception_html"><div class="ttname"><a href="class_i_o_exception.html">IOException</a></div><div class="ttdoc">IO exception.</div><div class="ttdef"><b>Definition:</b> IOException.h:32</div></div>
 <div class="ttc" id="aclass_stream_socket_html_a01819dfd9af1e02e66251e0b3a846b9c"><div class="ttname"><a href="class_stream_socket.html#a01819dfd9af1e02e66251e0b3a846b9c">StreamSocket::getName</a></div><div class="ttdeci">void getName()</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:147</div></div>
 <div class="ttc" id="aclass_stream_socket_html_a7eabc256fb774e12db56b414ac05c52e"><div class="ttname"><a href="class_stream_socket.html#a7eabc256fb774e12db56b414ac05c52e">StreamSocket::getAddress</a></div><div class="ttdeci">const InetAddress &amp; getAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:155</div></div>
+<div class="ttc" id="aclass_string_html_a95a7ad2fcff474d4f0be7a3ba909c690"><div class="ttname"><a href="class_string.html#a95a7ad2fcff474d4f0be7a3ba909c690">String::makeCapacity</a></div><div class="ttdeci">static String makeCapacity(MemorySize capacity)</div><div class="ttdef"><b>Definition:</b> String.h:253</div></div>
 <div class="ttc" id="aclass_list_html_a696406735a0196e8e0d090e2d1d72fc6"><div class="ttname"><a href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">List::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> List.h:618</div></div>
 <div class="ttc" id="aclass_server_socket_html_aa245da9f861f99bd78d1fef073e4124d"><div class="ttname"><a href="class_server_socket.html#aa245da9f861f99bd78d1fef073e4124d">ServerSocket::getLocalPort</a></div><div class="ttdeci">unsigned short getLocalPort() const noexcept</div><div class="ttdef"><b>Definition:</b> ServerSocket.h:133</div></div>
 <div class="ttc" id="aclass_stream_socket_html_af0bbecc96f41e4dd13fcb993647350bf"><div class="ttname"><a href="class_stream_socket.html#af0bbecc96f41e4dd13fcb993647350bf">StreamSocket::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:116</div></div>
@@ -954,24 +997,23 @@ $(function() {
 <div class="ttc" id="aclass_stream_socket_html_a6e0aea719fe3e57d2ef4629d5a0c1fce"><div class="ttname"><a href="class_stream_socket.html#a6e0aea719fe3e57d2ef4629d5a0c1fce">StreamSocket::connect</a></div><div class="ttdeci">void connect(const InetAddress &amp;address, unsigned short port)</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:127</div></div>
 <div class="ttc" id="aclass_allocator_html"><div class="ttname"><a href="class_allocator.html">Allocator&lt; uint8 &gt;</a></div></div>
 <div class="ttc" id="aclass_inet_address_html_a252f40425847bf9d1fb8d24ab5bfa3b8"><div class="ttname"><a href="class_inet_address.html#a252f40425847bf9d1fb8d24ab5bfa3b8">InetAddress::getAddressesByName</a></div><div class="ttdeci">static List&lt; InetAddress &gt; getAddressesByName(const String &amp;name)</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
-<div class="ttc" id="aclass_string_html_a329ec306ac33605383654cd9c1040709"><div class="ttname"><a href="class_string.html#a329ec306ac33605383654cd9c1040709">String::getEndReadIterator</a></div><div class="ttdeci">ReadIterator getEndReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:562</div></div>
-<div class="ttc" id="aclass_unsigned_integer_html_a8c58df7eb879fb64ad4ab726db3fdfbb"><div class="ttname"><a href="class_unsigned_integer.html#a8c58df7eb879fb64ad4ab726db3fdfbb">UnsignedInteger::getValue</a></div><div class="ttdeci">unsigned int getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> UnsignedInteger.h:126</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
+<div class="ttc" id="aclass_string_html_a329ec306ac33605383654cd9c1040709"><div class="ttname"><a href="class_string.html#a329ec306ac33605383654cd9c1040709">String::getEndReadIterator</a></div><div class="ttdeci">ReadIterator getEndReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:605</div></div>
+<div class="ttc" id="aclass_unsigned_integer_html_a8c58df7eb879fb64ad4ab726db3fdfbb"><div class="ttname"><a href="class_unsigned_integer.html#a8c58df7eb879fb64ad4ab726db3fdfbb">UnsignedInteger::getValue</a></div><div class="ttdeci">unsigned int getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> UnsignedInteger.h:144</div></div>
 <div class="ttc" id="aclass_literal_html"><div class="ttname"><a href="class_literal.html">Literal</a></div><div class="ttdoc">A string literal.</div><div class="ttdef"><b>Definition:</b> Literal.h:28</div></div>
-<div class="ttc" id="aclass_inet_end_point_html_aa19ef1f6be976a00e13b544d89c3ba6a"><div class="ttname"><a href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">InetEndPoint::getAddress</a></div><div class="ttdeci">const InetAddress &amp; getAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:119</div></div>
-<div class="ttc" id="aclass_string_html_a304007fdfcd2acdae2f0b56217ae920c"><div class="ttname"><a href="class_string.html#a304007fdfcd2acdae2f0b56217ae920c">String::getBeginReadIterator</a></div><div class="ttdeci">ReadIterator getBeginReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:554</div></div>
+<div class="ttc" id="aclass_inet_end_point_html_aa19ef1f6be976a00e13b544d89c3ba6a"><div class="ttname"><a href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">InetEndPoint::getAddress</a></div><div class="ttdeci">const InetAddress &amp; getAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:130</div></div>
+<div class="ttc" id="aclass_string_html_a304007fdfcd2acdae2f0b56217ae920c"><div class="ttname"><a href="class_string.html#a304007fdfcd2acdae2f0b56217ae920c">String::getBeginReadIterator</a></div><div class="ttdeci">ReadIterator getBeginReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:597</div></div>
 <div class="ttc" id="aclass_stream_socket_html"><div class="ttname"><a href="class_stream_socket.html">StreamSocket</a></div><div class="ttdoc">Stream socket.</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:33</div></div>
-<div class="ttc" id="aclass_char_traits_html_a8ee60714fc024775be5568d3756f8b89"><div class="ttname"><a href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">CharTraits::isASCII</a></div><div class="ttdeci">static bool isASCII(char character) noexcept</div><div class="ttdef"><b>Definition:</b> String.h:51</div></div>
+<div class="ttc" id="aclass_char_traits_html_a8ee60714fc024775be5568d3756f8b89"><div class="ttname"><a href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">CharTraits::isASCII</a></div><div class="ttdeci">static bool isASCII(char character) noexcept</div><div class="ttdef"><b>Definition:</b> String.h:52</div></div>
 <div class="ttc" id="aclass_url_html"><div class="ttname"><a href="class_url.html">Url</a></div><div class="ttdoc">Uniform Resource Locator (URL)</div><div class="ttdef"><b>Definition:</b> Url.h:38</div></div>
 <div class="ttc" id="aclass_file_html"><div class="ttname"><a href="class_file.html">File</a></div><div class="ttdoc">File.</div><div class="ttdef"><b>Definition:</b> File.h:37</div></div>
-<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
-<div class="ttc" id="aclass_unsigned_integer_html"><div class="ttname"><a href="class_unsigned_integer.html">UnsignedInteger</a></div><div class="ttdoc">Unsigned integer.</div><div class="ttdef"><b>Definition:</b> UnsignedInteger.h:30</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:40</div></div>
+<div class="ttc" id="aclass_unsigned_integer_html"><div class="ttname"><a href="class_unsigned_integer.html">UnsignedInteger</a></div><div class="ttdoc">Unsigned integer.</div><div class="ttdef"><b>Definition:</b> UnsignedInteger.h:31</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
 <div class="ttc" id="aclass_string_html_a956785ad5fbd5c770fa488890a271181"><div class="ttname"><a href="class_string.html#a956785ad5fbd5c770fa488890a271181">String::indexOf</a></div><div class="ttdeci">MemoryDiff indexOf(char ch, MemorySize start=0) const noexcept</div></div>
 <div class="ttc" id="aclass_file_html_a335979c8b00259c29ac1a2784cb4dfd4a646ec9705a761ff7e96b6c4f78720ba5"><div class="ttname"><a href="class_file.html#a335979c8b00259c29ac1a2784cb4dfd4a646ec9705a761ff7e96b6c4f78720ba5">File::TRUNCATE</a></div><div class="ttdeci">@ TRUNCATE</div><div class="ttdef"><b>Definition:</b> File.h:68</div></div>
 <div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
-<div class="ttc" id="aclass_string_html_ab31a36bda8c789ba3c0ed37bb16c978c"><div class="ttname"><a href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">String::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:475</div></div>
-<div class="ttc" id="aclass_inet_end_point_html_aa99ae24dc2401d68c213a83e9d597556"><div class="ttname"><a href="class_inet_end_point.html#aa99ae24dc2401d68c213a83e9d597556">InetEndPoint::getPort</a></div><div class="ttdeci">unsigned short getPort() const noexcept</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:127</div></div>
+<div class="ttc" id="aclass_string_html_ab31a36bda8c789ba3c0ed37bb16c978c"><div class="ttname"><a href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">String::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:518</div></div>
 <div class="ttc" id="aclass_array_html_a137f2cae7d1ade1316b2a0d10ffaccde"><div class="ttname"><a href="class_array.html#a137f2cae7d1ade1316b2a0d10ffaccde">Array::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Array.h:339</div></div>
 <div class="ttc" id="aclass_server_socket_html_a1d693235f0e95e16c4df28775e8fdba3"><div class="ttname"><a href="class_server_socket.html#a1d693235f0e95e16c4df28775e8fdba3">ServerSocket::getName</a></div><div class="ttdeci">void getName() noexcept</div><div class="ttdef"><b>Definition:</b> ServerSocket.h:117</div></div>
 <div class="ttc" id="aclass_format_input_stream_html"><div class="ttname"><a href="class_format_input_stream.html">FormatInputStream</a></div><div class="ttdoc">Reader of formatted input.</div><div class="ttdef"><b>Definition:</b> FormatInputStream.h:32</div></div>
@@ -987,6 +1029,7 @@ $(function() {
 <div class="ttc" id="aclass_list_html"><div class="ttname"><a href="class_list.html">List</a></div><div class="ttdoc">List collection.</div><div class="ttdef"><b>Definition:</b> List.h:45</div></div>
 <div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">Timer.</div><div class="ttdef"><b>Definition:</b> Timer.h:27</div></div>
 <div class="ttc" id="aclass_stream_socket_html_a7de21334ca8a2b37708e0f712426da5a"><div class="ttname"><a href="class_stream_socket.html#a7de21334ca8a2b37708e0f712426da5a">StreamSocket::read</a></div><div class="ttdeci">unsigned int read(uint8 *buffer, unsigned int size, bool nonblocking=false)</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:365</div></div>
+<div class="ttc" id="aclass_inet_end_point_html_af3477bd5eebe2861a7c733023f5b5732"><div class="ttname"><a href="class_inet_end_point.html#af3477bd5eebe2861a7c733023f5b5732">InetEndPoint::getPort</a></div><div class="ttdeci">static unsigned short getPort(const String &amp;service)</div></div>
 <div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array&lt; String &gt;</a></div></div>
 <div class="ttc" id="aclass_stream_socket_html_a9640edd848c5bac3517d23bafad06f23"><div class="ttname"><a href="class_stream_socket.html#a9640edd848c5bac3517d23bafad06f23">StreamSocket::getLocalAddress</a></div><div class="ttdeci">const InetAddress &amp; getLocalAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:179</div></div>
 <div class="ttc" id="aclass_server_socket_html_a87de644b3b1194bb7a8faa6e99e46673"><div class="ttname"><a href="class_server_socket.html#a87de644b3b1194bb7a8faa6e99e46673">ServerSocket::getLocalAddress</a></div><div class="ttdeci">const InetAddress &amp; getLocalAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> ServerSocket.h:125</div></div>

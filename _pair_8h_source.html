@@ -62,7 +62,7 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/Base.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/string/FormatOutputStream.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;base/string/StringOutputStream.h&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
@@ -233,13 +233,51 @@ $(function() {
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">typedef</span> <a class="code" href="class_pair.html">Pair&lt;WideString, WideString&gt;</a> <a class="code" href="class_pair.html">WideStringPair</a>;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keyword">namespace </span>pair {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; getHeaderAsTR(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text)</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <span class="stringliteral">&quot;&lt;tr&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;th colspan=\&quot;2\&quot; style=\&quot;text-align: center\&quot;&gt;&quot;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    &lt;&lt; text &lt;&lt; <span class="stringliteral">&quot;&lt;/th&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; getTypeValueAsTR(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> TYPE&amp; value)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <span class="stringliteral">&quot;&lt;tr&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;td style=\&quot;text-align: right\&quot;&gt;&quot;</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    &lt;&lt; <a class="code" href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a>(Type::getType&lt;TYPE&gt;()) &lt;&lt; <span class="stringliteral">&quot;&lt;/td&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;td style=\&quot;text-align: left\&quot;&gt;&quot;</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    &lt;&lt; <a class="code" href="class_h_t_m_l_encode.html">HTMLEncode&lt;TYPE&gt;::map</a>(value) &lt;&lt; <span class="stringliteral">&quot;&lt;/td&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<a class="code" href="class_string.html">String</a> getPairAsHTML(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; value)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <a class="code" href="class_string_output_stream.html">StringOutputStream</a> stream;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  stream &lt;&lt; <span class="stringliteral">&quot;&lt;table&gt;&quot;</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  pair::getHeaderAsTR(stream, <a class="code" href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a>(value));</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  pair::getTypeValueAsTR(stream, value.<a class="code" href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">getFirst</a>());</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  pair::getTypeValueAsTR(stream, value.<a class="code" href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">getSecond</a>());</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  stream &lt;&lt; <span class="stringliteral">&quot;&lt;table&gt;&quot;</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordflow">return</span> stream.<a class="code" href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">getString</a>();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__COMPILER == _COM_AZURE_DEV__BASE__COMPILER_CLING)</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> FIRST, <span class="keyword">class</span> SECOND&gt; \</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;inline ClingMimeBundle _COM_AZURE_DEV__BASE__CLING_GET_MIME_BUNDLE_ID(<span class="keyword">const</span> <a class="code" href="class_pair.html">Pair&lt;FIRST, SECOND&gt;</a>&amp; v) \</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{ \</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  return cling_getHTMLMimeBundle(getPairAsHTML(v)); \</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_pair_html_a017fba682768616f5ad1b96b45e26db6"><div class="ttname"><a href="class_pair.html#a017fba682768616f5ad1b96b45e26db6">Pair::setSecond</a></div><div class="ttdeci">void setSecond(const Second &amp;value)</div><div class="ttdef"><b>Definition:</b> Pair.h:193</div></div>
 <div class="ttc" id="aclass_pair_html_a04c1664a02014683e474e369a09c0083"><div class="ttname"><a href="class_pair.html#a04c1664a02014683e474e369a09c0083">Pair::Pair</a></div><div class="ttdeci">Pair()</div><div class="ttdef"><b>Definition:</b> Pair.h:58</div></div>
 <div class="ttc" id="aclass_pair_html_a8054d2770293836bde6b51f946e8de2d"><div class="ttname"><a href="class_pair.html#a8054d2770293836bde6b51f946e8de2d">Pair::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:237</div></div>
 <div class="ttc" id="aclass_pair_html_ad6bcbbf0ae3764b316f93fd287fb47b8"><div class="ttname"><a href="class_pair.html#ad6bcbbf0ae3764b316f93fd287fb47b8">Pair::getFirst</a></div><div class="ttdeci">const First &amp; getFirst() const noexcept</div><div class="ttdef"><b>Definition:</b> Pair.h:161</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
 <div class="ttc" id="aclass_pair_html_a84dbf3a5173b3e7511f66689e3d860d5"><div class="ttname"><a href="class_pair.html#a84dbf3a5173b3e7511f66689e3d860d5">Pair::operator==</a></div><div class="ttdeci">bool operator==(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:221</div></div>
 <div class="ttc" id="aclass_pair_html_ad9821b26461eebe8a3067ad1b667476a"><div class="ttname"><a href="class_pair.html#ad9821b26461eebe8a3067ad1b667476a">Pair::operator!=</a></div><div class="ttdeci">bool operator!=(const Pair &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Pair.h:229</div></div>
 <div class="ttc" id="aclass_pair_html_ae9e2f2bb9252c7e4c86f44a5377ab045"><div class="ttname"><a href="class_pair.html#ae9e2f2bb9252c7e4c86f44a5377ab045">Pair::Pair</a></div><div class="ttdeci">Pair(First &amp;&amp;_first, Second &amp;&amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:90</div></div>
@@ -247,12 +285,17 @@ $(function() {
 <div class="ttc" id="aclass_pair_html_a2d4485e5c61a73cb047dd5ce914c14f3"><div class="ttname"><a href="class_pair.html#a2d4485e5c61a73cb047dd5ce914c14f3">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first)</div><div class="ttdef"><b>Definition:</b> Pair.h:68</div></div>
 <div class="ttc" id="aclass_pair_html_a60fb5224b490e9fa5f73725bbf54e967"><div class="ttname"><a href="class_pair.html#a60fb5224b490e9fa5f73725bbf54e967">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first, const Second &amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:79</div></div>
 <div class="ttc" id="aclass_pair_html_a6cf53e8a15154afe658c3dcaafa6b82e"><div class="ttname"><a href="class_pair.html#a6cf53e8a15154afe658c3dcaafa6b82e">Pair::Pair</a></div><div class="ttdeci">Pair(const First &amp;_first, Second &amp;&amp;_second)</div><div class="ttdef"><b>Definition:</b> Pair.h:101</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
+<div class="ttc" id="aclass_type_info_html_abc13cfedb9611f4b4b1a6a6a283d3453"><div class="ttname"><a href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a></div><div class="ttdeci">static String getTypename() noexcept</div><div class="ttdef"><b>Definition:</b> TypeInfo.h:61</div></div>
+<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
+<div class="ttc" id="aclass_h_t_m_l_encode_html"><div class="ttname"><a href="class_h_t_m_l_encode.html">HTMLEncode</a></div><div class="ttdef"><b>Definition:</b> HTML.h:46</div></div>
 <div class="ttc" id="aclass_pair_html_a2ae2e860ab54811f3ea51ff78f8e64ea"><div class="ttname"><a href="class_pair.html#a2ae2e860ab54811f3ea51ff78f8e64ea">Pair::getSecond</a></div><div class="ttdeci">const Second &amp; getSecond() const noexcept</div><div class="ttdef"><b>Definition:</b> Pair.h:169</div></div>
+<div class="ttc" id="aclass_string_output_stream_html_a5961bae1abf412a65744385e536cc029"><div class="ttname"><a href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">StringOutputStream::getString</a></div><div class="ttdeci">const String &amp; getString() const</div></div>
 <div class="ttc" id="aclass_pair_html_a705c6db8ab53cbe25203c5db20e74db5"><div class="ttname"><a href="class_pair.html#a705c6db8ab53cbe25203c5db20e74db5">Pair::operator=</a></div><div class="ttdeci">Pair &amp; operator=(const Pair &amp;assign)</div><div class="ttdef"><b>Definition:</b> Pair.h:137</div></div>
 <div class="ttc" id="aclass_pair_html_a352808ece9fa2df8cdabe71cffbb48d8"><div class="ttname"><a href="class_pair.html#a352808ece9fa2df8cdabe71cffbb48d8">Pair::Second</a></div><div class="ttdeci">SECOND Second</div><div class="ttdef"><b>Definition:</b> Pair.h:46</div></div>
 <div class="ttc" id="aclass_pair_html"><div class="ttname"><a href="class_pair.html">Pair</a></div><div class="ttdoc">Value pair binder.</div><div class="ttdef"><b>Definition:</b> Pair.h:29</div></div>
 <div class="ttc" id="aclass_pair_html_a9d5c7cdf4c6e1e6daf5cd39289a95d59"><div class="ttname"><a href="class_pair.html#a9d5c7cdf4c6e1e6daf5cd39289a95d59">Pair::second</a></div><div class="ttdeci">Second second</div><div class="ttdef"><b>Definition:</b> Pair.h:52</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:960</div></div>
 <div class="ttc" id="aclass_pair_html_afc5ef059775e89a4d6c99d833f0c4f4d"><div class="ttname"><a href="class_pair.html#afc5ef059775e89a4d6c99d833f0c4f4d">Pair::first</a></div><div class="ttdeci">First first</div><div class="ttdef"><b>Definition:</b> Pair.h:50</div></div>
 <div class="ttc" id="aclass_pair_html_a2658792e2beb89aaeff4bce5ffa8a921"><div class="ttname"><a href="class_pair.html#a2658792e2beb89aaeff4bce5ffa8a921">Pair::setFirst</a></div><div class="ttdeci">void setFirst(const First &amp;value)</div><div class="ttdef"><b>Definition:</b> Pair.h:177</div></div>
 <!-- HTML footer for doxygen 1.8.17-->

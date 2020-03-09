@@ -172,91 +172,127 @@ $(function() {
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  {</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    readUCS4();</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_parser.html#a4ef68a5771e97fe76d3cd9433bec5c95">  147</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> <a class="code" href="class_parser.html#a4ef68a5771e97fe76d3cd9433bec5c95">read</a>()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_parser.html#a16e24cc15f391872ce9daff959dd98b5">  147</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_parser.html#a16e24cc15f391872ce9daff959dd98b5">readDigit</a>()</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (src == end) {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      _throw <a class="code" href="class_parse_exception.html">ParseException</a>(<span class="stringliteral">&quot;Unexpected end reached.&quot;</span>);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> result = *src;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    ++src;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_parser.html#aec236bee31b7f9da90ac7d964a4c1c15">  158</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#aec236bee31b7f9da90ac7d964a4c1c15">read</a>(<span class="keywordtype">char</span> ch)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> (read() != ch) {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      _throw <a class="code" href="class_parse_exception.html">ParseException</a>(<span class="stringliteral">&quot;Unexpected char.&quot;</span>);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_parser.html#ac0e359410fa12d2b922b33b4f2dd5819">  166</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#ac0e359410fa12d2b922b33b4f2dd5819">read</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text)</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (!text) {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      _throw <a class="code" href="class_null_pointer.html">NullPointer</a>();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">while</span> (*text) {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      read(*text++);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  </div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_parser.html#acc4911ba8e6028b374a253658349e139">  177</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#acc4911ba8e6028b374a253658349e139">skipJSONSpaces</a>()</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">while</span> (src != end) {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">switch</span> (peek()) {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;\r&#39;</span>:</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      ++src;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    ucs4 ch = readUCS4();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> ((ch &gt;= <span class="charliteral">&#39;0&#39;</span>) &amp;&amp; (ch &lt;= <span class="charliteral">&#39;9&#39;</span>)) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordflow">return</span> ch - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    _throw <a class="code" href="class_parse_exception.html">ParseException</a>(<span class="stringliteral">&quot;Unexpected char.&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_parser.html#a8b64e6c0e1a321b943f29769ff1c6e29">  157</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_parser.html#a8b64e6c0e1a321b943f29769ff1c6e29">readDigits</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    BASSERT(count &lt;= 9);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">while</span> (count--) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      uint8 value = readDigit();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      result = result * 10 + value;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_parser.html#a7c548c04177a83d21734d8ae80ec58ba">  169</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_parser.html#a7c548c04177a83d21734d8ae80ec58ba">getNumberOfDigits</a>() const noexcept</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">const</span> uint8* src = this-&gt;src;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">while</span> (src != end) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      uint8 value = *src; <span class="comment">// fine without ucs4</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordflow">if</span> (!((value &gt;= <span class="charliteral">&#39;0&#39;</span>) &amp;&amp; (value &lt;= <span class="charliteral">&#39;9&#39;</span>))) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      ++src;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(src - this-&gt;src);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_parser.html#a4ef68a5771e97fe76d3cd9433bec5c95">  183</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> <a class="code" href="class_parser.html#a4ef68a5771e97fe76d3cd9433bec5c95">read</a>()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (src == end) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      _throw <a class="code" href="class_parse_exception.html">ParseException</a>(<span class="stringliteral">&quot;Unexpected end reached.&quot;</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> result = *src;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    ++src;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  </div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_parser.html#a73fcdfe44e3f4e0ed033b64801286bd1">  194</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#a73fcdfe44e3f4e0ed033b64801286bd1">skipAny</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* chars)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="class_parser.html#aec236bee31b7f9da90ac7d964a4c1c15">  194</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#aec236bee31b7f9da90ac7d964a4c1c15">read</a>(<span class="keywordtype">char</span> ch)</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">while</span> (src != end) {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span> ch = peek();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordtype">bool</span> skip = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>* s = chars; *s; ++s) {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span> (ch == *s) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;          skip = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordflow">if</span> (!skip) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      ++src;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (read() != ch) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      _throw <a class="code" href="class_parse_exception.html">ParseException</a>(<span class="stringliteral">&quot;Unexpected char.&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_parser.html#ac0e359410fa12d2b922b33b4f2dd5819">  202</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#ac0e359410fa12d2b922b33b4f2dd5819">read</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (!text) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      _throw <a class="code" href="class_null_pointer.html">NullPointer</a>();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">while</span> (*text) {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      read(*text++);</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> doesMatchPattern(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; pattern, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text) noexcept;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;};</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="class_parser.html#acc4911ba8e6028b374a253658349e139">  213</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#acc4911ba8e6028b374a253658349e139">skipJSONSpaces</a>()</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">while</span> (src != end) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">switch</span> (peek()) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;\r&#39;</span>:</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      ++src;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  </div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="class_parser.html#a73fcdfe44e3f4e0ed033b64801286bd1">  230</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_parser.html#a73fcdfe44e3f4e0ed033b64801286bd1">skipAny</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* chars)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">while</span> (src != end) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span> ch = peek();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordtype">bool</span> skip = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>* s = chars; *s; ++s) {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">if</span> (ch == *s) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          skip = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">if</span> (!skip) {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      ++src;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> doesMatchPattern(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; pattern, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text) noexcept;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;};</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_parser_html_a8b64e6c0e1a321b943f29769ff1c6e29"><div class="ttname"><a href="class_parser.html#a8b64e6c0e1a321b943f29769ff1c6e29">Parser::readDigits</a></div><div class="ttdeci">unsigned int readDigits(unsigned int count)</div><div class="ttdef"><b>Definition:</b> Parser.h:157</div></div>
 <div class="ttc" id="aclass_parser_html_ab6e75ce961419517b64d645bb9cab628"><div class="ttname"><a href="class_parser.html#ab6e75ce961419517b64d645bb9cab628">Parser::skip</a></div><div class="ttdeci">void skip()</div><div class="ttdef"><b>Definition:</b> Parser.h:114</div></div>
-<div class="ttc" id="aclass_parser_html_ac0e359410fa12d2b922b33b4f2dd5819"><div class="ttname"><a href="class_parser.html#ac0e359410fa12d2b922b33b4f2dd5819">Parser::read</a></div><div class="ttdeci">void read(const char *text)</div><div class="ttdef"><b>Definition:</b> Parser.h:166</div></div>
+<div class="ttc" id="aclass_parser_html_ac0e359410fa12d2b922b33b4f2dd5819"><div class="ttname"><a href="class_parser.html#ac0e359410fa12d2b922b33b4f2dd5819">Parser::read</a></div><div class="ttdeci">void read(const char *text)</div><div class="ttdef"><b>Definition:</b> Parser.h:202</div></div>
 <div class="ttc" id="aclass_parser_html_a700ab5e9a4d0fe5b21b3c892343c2129"><div class="ttname"><a href="class_parser.html#a700ab5e9a4d0fe5b21b3c892343c2129">Parser::Parser</a></div><div class="ttdeci">Parser() noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:42</div></div>
 <div class="ttc" id="aclass_parser_html_a9a43eb481f5b483e69616e537425a060"><div class="ttname"><a href="class_parser.html#a9a43eb481f5b483e69616e537425a060">Parser::Parser</a></div><div class="ttdeci">Parser(const String &amp;text) noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:54</div></div>
-<div class="ttc" id="aclass_parser_html_a73fcdfe44e3f4e0ed033b64801286bd1"><div class="ttname"><a href="class_parser.html#a73fcdfe44e3f4e0ed033b64801286bd1">Parser::skipAny</a></div><div class="ttdeci">void skipAny(const char *chars)</div><div class="ttdef"><b>Definition:</b> Parser.h:194</div></div>
+<div class="ttc" id="aclass_parser_html_a73fcdfe44e3f4e0ed033b64801286bd1"><div class="ttname"><a href="class_parser.html#a73fcdfe44e3f4e0ed033b64801286bd1">Parser::skipAny</a></div><div class="ttdeci">void skipAny(const char *chars)</div><div class="ttdef"><b>Definition:</b> Parser.h:230</div></div>
 <div class="ttc" id="aclass_parser_html_ab6e3d7a19fc651a22fa24708055a06e4"><div class="ttname"><a href="class_parser.html#ab6e3d7a19fc651a22fa24708055a06e4">Parser::Parser</a></div><div class="ttdeci">Parser(const uint8 *_src, const uint8 *_end) noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:47</div></div>
 <div class="ttc" id="aclass_null_pointer_html"><div class="ttname"><a href="class_null_pointer.html">NullPointer</a></div><div class="ttdoc">Invalid pointer exception.</div><div class="ttdef"><b>Definition:</b> NullPointer.h:28</div></div>
 <div class="ttc" id="aclass_parser_html"><div class="ttname"><a href="class_parser.html">Parser</a></div><div class="ttdef"><b>Definition:</b> Parser.h:34</div></div>
-<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:39</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdoc">The general exception class.</div><div class="ttdef"><b>Definition:</b> Exception.h:40</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
 <div class="ttc" id="aclass_parser_html_a013f2d122eb497642f24e8d61374866d"><div class="ttname"><a href="class_parser.html#a013f2d122eb497642f24e8d61374866d">Parser::getCurrent</a></div><div class="ttdeci">const uint8 * getCurrent() const noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:61</div></div>
 <div class="ttc" id="aclass_parser_html_a3530510b732537e2cf593b497fb53683"><div class="ttname"><a href="class_parser.html#a3530510b732537e2cf593b497fb53683">Parser::unwind</a></div><div class="ttdeci">void unwind()</div><div class="ttdef"><b>Definition:</b> Parser.h:103</div></div>
-<div class="ttc" id="aclass_parser_html_a4ef68a5771e97fe76d3cd9433bec5c95"><div class="ttname"><a href="class_parser.html#a4ef68a5771e97fe76d3cd9433bec5c95">Parser::read</a></div><div class="ttdeci">char read()</div><div class="ttdef"><b>Definition:</b> Parser.h:147</div></div>
-<div class="ttc" id="aclass_parser_html_acc4911ba8e6028b374a253658349e139"><div class="ttname"><a href="class_parser.html#acc4911ba8e6028b374a253658349e139">Parser::skipJSONSpaces</a></div><div class="ttdeci">void skipJSONSpaces()</div><div class="ttdef"><b>Definition:</b> Parser.h:177</div></div>
+<div class="ttc" id="aclass_parser_html_a4ef68a5771e97fe76d3cd9433bec5c95"><div class="ttname"><a href="class_parser.html#a4ef68a5771e97fe76d3cd9433bec5c95">Parser::read</a></div><div class="ttdeci">char read()</div><div class="ttdef"><b>Definition:</b> Parser.h:183</div></div>
+<div class="ttc" id="aclass_parser_html_acc4911ba8e6028b374a253658349e139"><div class="ttname"><a href="class_parser.html#acc4911ba8e6028b374a253658349e139">Parser::skipJSONSpaces</a></div><div class="ttdeci">void skipJSONSpaces()</div><div class="ttdef"><b>Definition:</b> Parser.h:213</div></div>
 <div class="ttc" id="aclass_parser_html_a4fefc70e774d65b8ab23db22a5188d97"><div class="ttname"><a href="class_parser.html#a4fefc70e774d65b8ab23db22a5188d97">Parser::getAvailable</a></div><div class="ttdeci">MemorySize getAvailable() const noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:67</div></div>
-<div class="ttc" id="aclass_parser_html_aec236bee31b7f9da90ac7d964a4c1c15"><div class="ttname"><a href="class_parser.html#aec236bee31b7f9da90ac7d964a4c1c15">Parser::read</a></div><div class="ttdeci">void read(char ch)</div><div class="ttdef"><b>Definition:</b> Parser.h:158</div></div>
+<div class="ttc" id="aclass_parser_html_aec236bee31b7f9da90ac7d964a4c1c15"><div class="ttname"><a href="class_parser.html#aec236bee31b7f9da90ac7d964a4c1c15">Parser::read</a></div><div class="ttdeci">void read(char ch)</div><div class="ttdef"><b>Definition:</b> Parser.h:194</div></div>
+<div class="ttc" id="aclass_parser_html_a16e24cc15f391872ce9daff959dd98b5"><div class="ttname"><a href="class_parser.html#a16e24cc15f391872ce9daff959dd98b5">Parser::readDigit</a></div><div class="ttdeci">unsigned int readDigit()</div><div class="ttdef"><b>Definition:</b> Parser.h:147</div></div>
 <div class="ttc" id="aclass_parser_html_a5286a98473426af04ff6c1275b131a9f"><div class="ttname"><a href="class_parser.html#a5286a98473426af04ff6c1275b131a9f">Parser::peek</a></div><div class="ttdeci">char peek() const</div><div class="ttdef"><b>Definition:</b> Parser.h:88</div></div>
 <div class="ttc" id="aclass_parse_exception_html"><div class="ttname"><a href="class_parse_exception.html">ParseException</a></div><div class="ttdef"><b>Definition:</b> Parser.h:23</div></div>
+<div class="ttc" id="aclass_parser_html_a7c548c04177a83d21734d8ae80ec58ba"><div class="ttname"><a href="class_parser.html#a7c548c04177a83d21734d8ae80ec58ba">Parser::getNumberOfDigits</a></div><div class="ttdeci">unsigned int getNumberOfDigits() const noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:169</div></div>
 <div class="ttc" id="aclass_parser_html_aa8384a5a71972697a4d3a8529b360736"><div class="ttname"><a href="class_parser.html#aa8384a5a71972697a4d3a8529b360736">Parser::peek</a></div><div class="ttdeci">bool peek(char ch) const</div><div class="ttdef"><b>Definition:</b> Parser.h:97</div></div>
 <div class="ttc" id="aclass_parser_html_ae98fc3d382d04719c908ca3b6a78fb24"><div class="ttname"><a href="class_parser.html#ae98fc3d382d04719c908ca3b6a78fb24">Parser::skipUCS4</a></div><div class="ttdeci">void skipUCS4()</div><div class="ttdef"><b>Definition:</b> Parser.h:141</div></div>
 <div class="ttc" id="aclass_parser_html_aa893cde4fdb3dd80c0f1f7b100f3a059"><div class="ttname"><a href="class_parser.html#aa893cde4fdb3dd80c0f1f7b100f3a059">Parser::hasMore</a></div><div class="ttdeci">bool hasMore() const noexcept</div><div class="ttdef"><b>Definition:</b> Parser.h:73</div></div>

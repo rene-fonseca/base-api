@@ -56,6 +56,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a9e688b0a0af79575435a2a6c8b0426a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbcbfebf8f6161d8d98f28b30d3f4620"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#afbcbfebf8f6161d8d98f28b30d3f4620">isGlobalStateInGoodCondition</a> () noexcept</td></tr>
 <tr class="separator:afbcbfebf8f6161d8d98f28b30d3f4620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2537f1de2acab0f42f4e86937dc0a20"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#af2537f1de2acab0f42f4e86937dc0a20">setRuntimeEnvironment</a> (const char *id) noexcept</td></tr>
+<tr class="separator:af2537f1de2acab0f42f4e86937dc0a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffacdc4e8bc8f9530c831ca221fca8a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#a3ffacdc4e8bc8f9530c831ca221fca8a">getRuntimeEnvironment</a> () noexcept</td></tr>
+<tr class="separator:a3ffacdc4e8bc8f9530c831ca221fca8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2625b25f2a82dee0e3ef2865bef8d2b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#a2625b25f2a82dee0e3ef2865bef8d2b9">notImplemented</a> (const char *who)</td></tr>
 <tr class="separator:a2625b25f2a82dee0e3ef2865bef8d2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca872560101313066b10047a02190b71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_runtime.html#aca872560101313066b10047a02190b71">notSupported</a> (const char *who)</td></tr>
@@ -120,6 +124,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns nullptr. </p>
+
+</div>
+</div>
+<a id="a3ffacdc4e8bc8f9530c831ca221fca8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ffacdc4e8bc8f9530c831ca221fca8a">&#9670;&nbsp;</a></span>getRuntimeEnvironment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Runtime::getRuntimeEnvironment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if a runtime environment is used. </p>
 
 </div>
 </div>
@@ -289,6 +319,33 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Triggers failure due to unsupported method/feature. </p>
+
+</div>
+</div>
+<a id="af2537f1de2acab0f42f4e86937dc0a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2537f1de2acab0f42f4e86937dc0a20">&#9670;&nbsp;</a></span>setRuntimeEnvironment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Runtime::setRuntimeEnvironment </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the runtime environment. </p>
 
 </div>
 </div>

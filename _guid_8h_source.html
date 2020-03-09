@@ -106,21 +106,28 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> isNull() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="class_string.html">String</a> toString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> uint8* getBytes() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> guid;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_guid.html">Guid</a>&amp; value);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_guid.html#a817ff7b7be1821a1feb35e54b30f6355">   96</a></span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> <a class="code" href="class_string.html">String</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> toString();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> uint8* getBytes() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> guid;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_guid.html#a794f7e367ba2aa6e425aed412ba6ec09">   94</a></span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; <a class="code" href="class_array.html#ad3aac8573cb33b27021d08f056075b45">operator&lt;&lt;</a>(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_guid.html">Guid</a>&amp; value);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_guid.html#a817ff7b7be1821a1feb35e54b30f6355">  102</a></span>&#160;_COM_AZURE_DEV__BASE__CLING_GET_MIME_BUNDLE(<a class="code" href="class_guid.html">Guid</a>)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_guid_html"><div class="ttname"><a href="class_guid.html">Guid</a></div><div class="ttdef"><b>Definition:</b> Guid.h:27</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:960</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

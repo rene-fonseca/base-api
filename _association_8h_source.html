@@ -61,7 +61,7 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/string/FormatOutputStream.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;base/string/StringOutputStream.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;_COM_AZURE_DEV__BASE__ENTER_NAMESPACE</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
@@ -257,22 +257,66 @@ $(function() {
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <span class="charliteral">&#39;[&#39;</span> &lt;&lt; value.<a class="code" href="class_association.html#a753d6ef52fc6fa81b144f3b149f3e1fe">getKey</a>() &lt;&lt; <span class="charliteral">&#39;]&#39;</span> &lt;&lt; <span class="charliteral">&#39;=&#39;</span> &lt;&lt; value.<a class="code" href="class_association.html#a050be404827aa03483a8e55b80ea3a03">getValue</a>();</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">// TAG: move to proper place</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keyword">namespace </span>association {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keyword">inline</span> <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; getHeaderAsTR(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; text)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;{</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <span class="stringliteral">&quot;&lt;tr&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;th colspan=\&quot;2\&quot; style=\&quot;text-align: center\&quot;&gt;&quot;</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    &lt;&lt; text &lt;&lt; <span class="stringliteral">&quot;&lt;/th&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; getTypeValueAsTR(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, <span class="keyword">const</span> TYPE&amp; value)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;{</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <span class="stringliteral">&quot;&lt;tr&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;td style=\&quot;text-align: right\&quot;&gt;&quot;</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    &lt;&lt; <a class="code" href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a>(Type::getType&lt;TYPE&gt;()) &lt;&lt; <span class="stringliteral">&quot;&lt;/td&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;td style=\&quot;text-align: left\&quot;&gt;&quot;</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    &lt;&lt; <a class="code" href="class_h_t_m_l_encode.html">HTMLEncode&lt;TYPE&gt;::map</a>(value) &lt;&lt; <span class="stringliteral">&quot;&lt;/td&gt;&quot;</span> &lt;&lt; <span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> KEY, <span class="keyword">class</span> VALUE&gt;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<a class="code" href="class_string.html">String</a> getAssociationAsHTML(<span class="keyword">const</span> <a class="code" href="class_association.html">Association&lt;KEY, VALUE&gt;</a>&amp; value)</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;{</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <a class="code" href="class_string_output_stream.html">StringOutputStream</a> stream;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  stream &lt;&lt; <span class="stringliteral">&quot;&lt;table&gt;&quot;</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  association::getHeaderAsTR(stream, <a class="code" href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a>(value));</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  association::getTypeValueAsTR(stream, value.<a class="code" href="class_association.html#a753d6ef52fc6fa81b144f3b149f3e1fe">getKey</a>());</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  association::getTypeValueAsTR(stream, value.<a class="code" href="class_association.html#a050be404827aa03483a8e55b80ea3a03">getValue</a>());</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  stream &lt;&lt; <span class="stringliteral">&quot;&lt;table&gt;&quot;</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  <span class="keywordflow">return</span> stream.<a class="code" href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">getString</a>();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#if (_COM_AZURE_DEV__BASE__COMPILER == _COM_AZURE_DEV__BASE__COMPILER_CLING)</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> KEY, <span class="keyword">class</span> VALUE&gt; \</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;inline ClingMimeBundle _COM_AZURE_DEV__BASE__CLING_GET_MIME_BUNDLE_ID(<span class="keyword">const</span> <a class="code" href="class_association.html">Association&lt;KEY, VALUE&gt;</a>&amp; v) \</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{ \</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  return cling_getHTMLMimeBundle(getAssociationAsHTML(v)); \</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_association_html_a753d6ef52fc6fa81b144f3b149f3e1fe"><div class="ttname"><a href="class_association.html#a753d6ef52fc6fa81b144f3b149f3e1fe">Association::getKey</a></div><div class="ttdeci">const KEY &amp; getKey() const noexcept</div><div class="ttdef"><b>Definition:</b> Association.h:174</div></div>
 <div class="ttc" id="aclass_association_html_a0d0c390dba071dbed66dc46ed5ae9048"><div class="ttname"><a href="class_association.html#a0d0c390dba071dbed66dc46ed5ae9048">Association::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(const Association &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Association.h:242</div></div>
 <div class="ttc" id="aclass_association_html_a050be404827aa03483a8e55b80ea3a03"><div class="ttname"><a href="class_association.html#a050be404827aa03483a8e55b80ea3a03">Association::getValue</a></div><div class="ttdeci">VALUE &amp; getValue() noexcept</div><div class="ttdef"><b>Definition:</b> Association.h:182</div></div>
 <div class="ttc" id="aclass_association_html_aa9efac7dceb816ac09c72fe84a7632d8"><div class="ttname"><a href="class_association.html#aa9efac7dceb816ac09c72fe84a7632d8">Association::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Association &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Association.h:234</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
 <div class="ttc" id="aclass_association_html_a83fd0cd69a37d386abf89af0508b30d5"><div class="ttname"><a href="class_association.html#a83fd0cd69a37d386abf89af0508b30d5">Association::Association</a></div><div class="ttdeci">Association()</div><div class="ttdef"><b>Definition:</b> Association.h:54</div></div>
 <div class="ttc" id="aclass_association_html_a28d10f489d73897156599ba2bf553e44"><div class="ttname"><a href="class_association.html#a28d10f489d73897156599ba2bf553e44">Association::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const Association &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Association.h:258</div></div>
 <div class="ttc" id="aclass_association_html"><div class="ttname"><a href="class_association.html">Association</a></div><div class="ttdoc">Association of value with value.</div><div class="ttdef"><b>Definition:</b> Association.h:31</div></div>
 <div class="ttc" id="aclass_association_html_a902c1c16a357ab2dcf420bfc0dd64e04"><div class="ttname"><a href="class_association.html#a902c1c16a357ab2dcf420bfc0dd64e04">Association::compare</a></div><div class="ttdeci">friend int compare(const Association &amp;left, const Association &amp;right)</div><div class="ttdef"><b>Definition:</b> Association.h:315</div></div>
 <div class="ttc" id="aclass_association_html_a2bdbe6c29e8de2e296dfccd634524190"><div class="ttname"><a href="class_association.html#a2bdbe6c29e8de2e296dfccd634524190">Association::operator!=</a></div><div class="ttdeci">bool operator!=(const Association &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Association.h:226</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
+<div class="ttc" id="aclass_type_info_html_abc13cfedb9611f4b4b1a6a6a283d3453"><div class="ttname"><a href="class_type_info.html#abc13cfedb9611f4b4b1a6a6a283d3453">TypeInfo::getTypename</a></div><div class="ttdeci">static String getTypename() noexcept</div><div class="ttdef"><b>Definition:</b> TypeInfo.h:61</div></div>
+<div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
 <div class="ttc" id="aclass_association_html_a9ff8cdddabaf22b00b68fbaf98b2422a"><div class="ttname"><a href="class_association.html#a9ff8cdddabaf22b00b68fbaf98b2422a">Association::operator==</a></div><div class="ttdeci">bool operator==(const Association &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Association.h:218</div></div>
 <div class="ttc" id="aclass_association_html_a6163a0b2b3537a36fa04587d6c5e9403"><div class="ttname"><a href="class_association.html#a6163a0b2b3537a36fa04587d6c5e9403">Association::setValue</a></div><div class="ttdeci">void setValue(const VALUE &amp;value)</div><div class="ttdef"><b>Definition:</b> Association.h:200</div></div>
 <div class="ttc" id="aclass_association_html_ab1ee10333d90039214932e3baf2341c0"><div class="ttname"><a href="class_association.html#ab1ee10333d90039214932e3baf2341c0">Association::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const Association &amp;compare) const</div><div class="ttdef"><b>Definition:</b> Association.h:250</div></div>
-<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:934</div></div>
+<div class="ttc" id="aclass_h_t_m_l_encode_html"><div class="ttname"><a href="class_h_t_m_l_encode.html">HTMLEncode</a></div><div class="ttdef"><b>Definition:</b> HTML.h:46</div></div>
+<div class="ttc" id="aclass_string_output_stream_html_a5961bae1abf412a65744385e536cc029"><div class="ttname"><a href="class_string_output_stream.html#a5961bae1abf412a65744385e536cc029">StringOutputStream::getString</a></div><div class="ttdeci">const String &amp; getString() const</div></div>
+<div class="ttc" id="aclass_array_html_ad3aac8573cb33b27021d08f056075b45"><div class="ttname"><a href="class_array.html#ad3aac8573cb33b27021d08f056075b45">Array::operator&lt;&lt;</a></div><div class="ttdeci">FormatOutputStream &amp; operator&lt;&lt;(FormatOutputStream &amp;stream, const Array&lt; TYPE &gt; &amp;value)</div><div class="ttdef"><b>Definition:</b> Array.h:960</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

@@ -98,6 +98,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26a61d3f08b3915a1a9fd8b7ecfec5eb"><td class="memItemLeft" align="right" valign="top"><a id="a26a61d3f08b3915a1a9fd8b7ecfec5eb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FormatOutputStream</b> (const <a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;copy)=delete</td></tr>
 <tr class="separator:a26a61d3f08b3915a1a9fd8b7ecfec5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219f47b00feb6bb52cc37080b1858555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_output_stream.html#a219f47b00feb6bb52cc37080b1858555">reset</a> () noexcept</td></tr>
+<tr class="separator:a219f47b00feb6bb52cc37080b1858555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3bf8c1e53c0cf548f12e09b2332633"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_output_stream.html#afa3bf8c1e53c0cf548f12e09b2332633">isANSITerminal</a> ()</td></tr>
 <tr class="separator:afa3bf8c1e53c0cf548f12e09b2332633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac15f307a8948520336a6b2c560bbb223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_output_stream.html#ac15f307a8948520336a6b2c560bbb223">setRadixPosition</a> (unsigned int position) noexcept</td></tr>
@@ -351,7 +353,7 @@ Related Functions</h2></td></tr>
 <div class="textblock"><p><a class="el" href="class_format.html">Format</a> output stream. </p>
 <p><a class="el" href="class_stream.html" title="Stream.">Stream</a> used to stringify types.</p>
 <dl class="section version"><dt>Version</dt><dd>1.4 </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#_a16">testsuite/client.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#_a9">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#_a43">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2server_8cpp-example.html#_a31">testsuite/server.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#_a16">testsuite/client.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#_a10">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#_a43">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2server_8cpp-example.html#_a31">testsuite/server.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae90ce2c655e05817839e9aa8d6ca225d"></a>
@@ -1474,6 +1476,32 @@ template&lt;class TYPE &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Write value to stream. </p>
+
+</div>
+</div>
+<a id="a219f47b00feb6bb52cc37080b1858555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219f47b00feb6bb52cc37080b1858555">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FormatOutputStream::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resets context flags. </p>
 
 </div>
 </div>

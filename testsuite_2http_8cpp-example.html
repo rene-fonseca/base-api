@@ -516,7 +516,8 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// See chapter 6 in RFC</span></div>
-<div class="line">  <span class="keywordtype">void</span> getResponse(<a class="code" href="class_push_interface.html">PushInterface</a>* push) {</div>
+<div class="line">  <span class="keywordtype">void</span> getResponse(<a class="code" href="class_push_interface.html">PushInterface</a>* push)</div>
+<div class="line">  {</div>
 <div class="line">    controlConnection.<a name="a25"></a><a class="code" href="class_stream_socket.html#ae2359c3570860e8b8467d4e8e316f109">wait</a>();</div>
 <div class="line">    </div>
 <div class="line">    <a name="_a26"></a><a class="code" href="class_format_input_stream.html">FormatInputStream</a> instream(controlConnection);</div>
@@ -589,7 +590,7 @@ $(function() {
 <div class="line">        }</div>
 <div class="line">        bassert(</div>
 <div class="line">          (i &lt; end) &amp;&amp; <a name="a30"></a><a class="code" href="class_a_s_c_i_i_traits.html#a6f28ce156ee53ef72ce671c01b18fa27">ASCIITraits::isHexDigit</a>(*i),</div>
-<div class="line">          InvalidResponse(<span class="stringliteral">&quot;Chunk size invalid&quot;</span>)</div>
+<div class="line">          InvalidResponse(<span class="stringliteral">&quot;Chunk size invalid.&quot;</span>)</div>
 <div class="line">        );</div>
 <div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> chunkSize = 0;</div>
 <div class="line">        <span class="keywordflow">while</span> ((i &lt; end) &amp;&amp; <a class="code" href="class_a_s_c_i_i_traits.html#a6f28ce156ee53ef72ce671c01b18fa27">ASCIITraits::isHexDigit</a>(*i)) { <span class="comment">// read chunk size</span></div>
@@ -604,7 +605,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        totalLength += chunkSize;</div>
 <div class="line">        BASSERT(push);</div>
-<div class="line">        <span class="keywordflow">if</span> (push-&gt;<a name="a32"></a>pushBegin(0)) { <span class="comment">// total size is unknown</span></div>
+<div class="line">        <span class="keywordflow">if</span> (push-&gt;<a name="a32"></a><a class="code" href="class_push_interface.html#add0adc89e53b919271278b8cc505c1f1">pushBegin</a>(0)) { <span class="comment">// total size is unknown</span></div>
 <div class="line">          <span class="keywordtype">long</span> <span class="keywordtype">long</span> bytesRead = 0;</div>
 <div class="line">          <span class="keywordflow">while</span> (bytesRead &lt; chunkSize) {</div>
 <div class="line">            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bytesToRead = minimum&lt;long long&gt;(buffer.<a name="a33"></a><a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>(), chunkSize - bytesRead);</div>
@@ -637,7 +638,7 @@ $(function() {
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">if</span> (push) {</div>
-<div class="line">        <span class="keywordflow">if</span> (push-&gt;pushBegin(contentLength)) {</div>
+<div class="line">        <span class="keywordflow">if</span> (push-&gt;<a class="code" href="class_push_interface.html#add0adc89e53b919271278b8cc505c1f1">pushBegin</a>(contentLength)) {</div>
 <div class="line">          <span class="keywordtype">long</span> <span class="keywordtype">long</span> bytesRead = 0;</div>
 <div class="line">          <span class="keywordflow">while</span> (bytesRead &lt; contentLength) {</div>
 <div class="line">            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bytesToRead = minimum&lt;long long&gt;(buffer.<a class="code" href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">getSize</a>(), contentLength - bytesRead);</div>
@@ -715,9 +716,9 @@ $(function() {
 <div class="line">    <span class="keywordflow">if</span> (verbosity &gt;= DEBUG_NORMAL) {</div>
 <div class="line">      fout &lt;&lt; <span class="stringliteral">&quot;DEBUG: Establishing control connection to: &quot;</span></div>
 <div class="line">           &lt;&lt; <span class="stringliteral">&quot;address=&quot;</span> &lt;&lt; endPoint.<a name="a39"></a><a class="code" href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">getAddress</a>() &lt;&lt; <span class="charliteral">&#39; &#39;</span></div>
-<div class="line">           &lt;&lt; <span class="stringliteral">&quot;port=&quot;</span> &lt;&lt; endPoint.<a name="a40"></a><a class="code" href="class_inet_end_point.html#aa99ae24dc2401d68c213a83e9d597556">getPort</a>() &lt;&lt; ENDL;</div>
+<div class="line">           &lt;&lt; <span class="stringliteral">&quot;port=&quot;</span> &lt;&lt; endPoint.<a name="a40"></a><a class="code" href="class_inet_end_point.html#af3477bd5eebe2861a7c733023f5b5732">getPort</a>() &lt;&lt; ENDL;</div>
 <div class="line">    }</div>
-<div class="line">    controlConnection.<a name="a41"></a><a class="code" href="class_stream_socket.html#a6e0aea719fe3e57d2ef4629d5a0c1fce">connect</a>(endPoint.<a class="code" href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">getAddress</a>(), endPoint.<a class="code" href="class_inet_end_point.html#aa99ae24dc2401d68c213a83e9d597556">getPort</a>());</div>
+<div class="line">    controlConnection.<a name="a41"></a><a class="code" href="class_stream_socket.html#a6e0aea719fe3e57d2ef4629d5a0c1fce">connect</a>(endPoint.<a class="code" href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">getAddress</a>(), endPoint.<a class="code" href="class_inet_end_point.html#af3477bd5eebe2861a7c733023f5b5732">getPort</a>());</div>
 <div class="line">    controlConnection.<a name="a42"></a><a class="code" href="class_stream_socket.html#a01819dfd9af1e02e66251e0b3a846b9c">getName</a>();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
@@ -867,7 +868,7 @@ $(function() {
 <div class="line">APPLICATION_STUB(HTTPApplication);</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aclass_a_s_c_i_i_traits_html_a1a63f1408e086cb6b255931e83c0ef8d"><div class="ttname"><a href="class_a_s_c_i_i_traits.html#a1a63f1408e086cb6b255931e83c0ef8d">ASCIITraits::isGraph</a></div><div class="ttdeci">static bool isGraph(char value) noexcept</div><div class="ttdef"><b>Definition:</b> ASCIITraits.h:212</div></div>
-<div class="ttc" id="aclass_h_t_t_p_exception_html"><div class="ttname"><a href="class_h_t_t_p_exception.html">HTTPException</a></div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:31</div></div>
+<div class="ttc" id="aclass_h_t_t_p_exception_html"><div class="ttname"><a href="class_h_t_t_p_exception.html">HTTPException</a></div><div class="ttdef"><b>Definition:</b> HTTPSRequest.h:24</div></div>
 <div class="ttc" id="aclass_file_html_aa36123e54912bf16e4e0ee700519f98a"><div class="ttname"><a href="class_file.html#aa36123e54912bf16e4e0ee700519f98a">File::write</a></div><div class="ttdeci">unsigned int write(const uint8 *buffer, unsigned int size, bool nonblocking=false)</div></div>
 <div class="ttc" id="aclass_inet_end_point_html"><div class="ttname"><a href="class_inet_end_point.html">InetEndPoint</a></div><div class="ttdoc">Internet end point.</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:30</div></div>
 <div class="ttc" id="aclass_i_o_exception_html"><div class="ttname"><a href="class_i_o_exception.html">IOException</a></div><div class="ttdoc">IO exception.</div><div class="ttdef"><b>Definition:</b> IOException.h:32</div></div>
@@ -875,7 +876,7 @@ $(function() {
 <div class="ttc" id="aclass_list_html_a696406735a0196e8e0d090e2d1d72fc6"><div class="ttname"><a href="class_list.html#a696406735a0196e8e0d090e2d1d72fc6">List::getReadEnumerator</a></div><div class="ttdeci">ReadEnumerator getReadEnumerator() const noexcept</div><div class="ttdef"><b>Definition:</b> List.h:618</div></div>
 <div class="ttc" id="aclass_pull_interface_html"><div class="ttname"><a href="class_pull_interface.html">PullInterface</a></div><div class="ttdoc">Pull interface.</div><div class="ttdef"><b>Definition:</b> PullInterface.h:29</div></div>
 <div class="ttc" id="aclass_push_interface_html_a9c1e62e52fd979bd14586b50336402f4"><div class="ttname"><a href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">PushInterface::pushEnd</a></div><div class="ttdeci">virtual void pushEnd()</div></div>
-<div class="ttc" id="aclass_string_html_a65fccc1157873ede654aa52a4d9d1c55"><div class="ttname"><a href="class_string.html#a65fccc1157873ede654aa52a4d9d1c55">String::isProper</a></div><div class="ttdeci">bool isProper() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:483</div></div>
+<div class="ttc" id="aclass_string_html_a65fccc1157873ede654aa52a4d9d1c55"><div class="ttname"><a href="class_string.html#a65fccc1157873ede654aa52a4d9d1c55">String::isProper</a></div><div class="ttdeci">bool isProper() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:526</div></div>
 <div class="ttc" id="aclass_stream_socket_html_a1865861519ed84748e4263954e665f5f"><div class="ttname"><a href="class_stream_socket.html#a1865861519ed84748e4263954e665f5f">StreamSocket::available</a></div><div class="ttdeci">unsigned int available() const</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:352</div></div>
 <div class="ttc" id="aclass_push_interface_html"><div class="ttname"><a href="class_push_interface.html">PushInterface</a></div><div class="ttdoc">Push interface.</div><div class="ttdef"><b>Definition:</b> PushInterface.h:29</div></div>
 <div class="ttc" id="aclass_stream_socket_html_af0bbecc96f41e4dd13fcb993647350bf"><div class="ttname"><a href="class_stream_socket.html#af0bbecc96f41e4dd13fcb993647350bf">StreamSocket::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:116</div></div>
@@ -884,27 +885,27 @@ $(function() {
 <div class="ttc" id="aclass_stream_socket_html_a6e0aea719fe3e57d2ef4629d5a0c1fce"><div class="ttname"><a href="class_stream_socket.html#a6e0aea719fe3e57d2ef4629d5a0c1fce">StreamSocket::connect</a></div><div class="ttdeci">void connect(const InetAddress &amp;address, unsigned short port)</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:127</div></div>
 <div class="ttc" id="aclass_allocator_html"><div class="ttname"><a href="class_allocator.html">Allocator&lt; uint8 &gt;</a></div></div>
 <div class="ttc" id="aclass_inet_address_html_a252f40425847bf9d1fb8d24ab5bfa3b8"><div class="ttname"><a href="class_inet_address.html#a252f40425847bf9d1fb8d24ab5bfa3b8">InetAddress::getAddressesByName</a></div><div class="ttdeci">static List&lt; InetAddress &gt; getAddressesByName(const String &amp;name)</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
-<div class="ttc" id="aclass_string_html_a329ec306ac33605383654cd9c1040709"><div class="ttname"><a href="class_string.html#a329ec306ac33605383654cd9c1040709">String::getEndReadIterator</a></div><div class="ttdeci">ReadIterator getEndReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:562</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
+<div class="ttc" id="aclass_string_html_a329ec306ac33605383654cd9c1040709"><div class="ttname"><a href="class_string.html#a329ec306ac33605383654cd9c1040709">String::getEndReadIterator</a></div><div class="ttdeci">ReadIterator getEndReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:605</div></div>
 <div class="ttc" id="aclass_string_html_aaa820ec17b415ebcb14a57b9b19f3740"><div class="ttname"><a href="class_string.html#aaa820ec17b415ebcb14a57b9b19f3740">String::substring</a></div><div class="ttdeci">String substring(MemorySize start, MemorySize end) const</div></div>
 <div class="ttc" id="aclass_literal_html"><div class="ttname"><a href="class_literal.html">Literal</a></div><div class="ttdoc">A string literal.</div><div class="ttdef"><b>Definition:</b> Literal.h:28</div></div>
-<div class="ttc" id="aclass_inet_end_point_html_aa19ef1f6be976a00e13b544d89c3ba6a"><div class="ttname"><a href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">InetEndPoint::getAddress</a></div><div class="ttdeci">const InetAddress &amp; getAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:119</div></div>
-<div class="ttc" id="aclass_string_html_a304007fdfcd2acdae2f0b56217ae920c"><div class="ttname"><a href="class_string.html#a304007fdfcd2acdae2f0b56217ae920c">String::getBeginReadIterator</a></div><div class="ttdeci">ReadIterator getBeginReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:554</div></div>
+<div class="ttc" id="aclass_inet_end_point_html_aa19ef1f6be976a00e13b544d89c3ba6a"><div class="ttname"><a href="class_inet_end_point.html#aa19ef1f6be976a00e13b544d89c3ba6a">InetEndPoint::getAddress</a></div><div class="ttdeci">const InetAddress &amp; getAddress() const noexcept</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:130</div></div>
+<div class="ttc" id="aclass_string_html_a304007fdfcd2acdae2f0b56217ae920c"><div class="ttname"><a href="class_string.html#a304007fdfcd2acdae2f0b56217ae920c">String::getBeginReadIterator</a></div><div class="ttdeci">ReadIterator getBeginReadIterator() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:597</div></div>
 <div class="ttc" id="aclass_stream_socket_html"><div class="ttname"><a href="class_stream_socket.html">StreamSocket</a></div><div class="ttdoc">Stream socket.</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:33</div></div>
-<div class="ttc" id="aclass_char_traits_html_a8ee60714fc024775be5568d3756f8b89"><div class="ttname"><a href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">CharTraits::isASCII</a></div><div class="ttdeci">static bool isASCII(char character) noexcept</div><div class="ttdef"><b>Definition:</b> String.h:51</div></div>
+<div class="ttc" id="aclass_char_traits_html_a8ee60714fc024775be5568d3756f8b89"><div class="ttname"><a href="class_char_traits.html#a8ee60714fc024775be5568d3756f8b89">CharTraits::isASCII</a></div><div class="ttdeci">static bool isASCII(char character) noexcept</div><div class="ttdef"><b>Definition:</b> String.h:52</div></div>
+<div class="ttc" id="aclass_push_interface_html_add0adc89e53b919271278b8cc505c1f1"><div class="ttname"><a href="class_push_interface.html#add0adc89e53b919271278b8cc505c1f1">PushInterface::pushBegin</a></div><div class="ttdeci">virtual bool pushBegin(uint64 totalSize)</div></div>
 <div class="ttc" id="aclass_url_html"><div class="ttname"><a href="class_url.html">Url</a></div><div class="ttdoc">Uniform Resource Locator (URL)</div><div class="ttdef"><b>Definition:</b> Url.h:38</div></div>
 <div class="ttc" id="aclass_file_html"><div class="ttname"><a href="class_file.html">File</a></div><div class="ttdoc">File.</div><div class="ttdef"><b>Definition:</b> File.h:37</div></div>
 <div class="ttc" id="aclass_a_s_c_i_i_traits_html_a994cbf87b1b86182be7e4675f342dc9f"><div class="ttname"><a href="class_a_s_c_i_i_traits.html#a994cbf87b1b86182be7e4675f342dc9f">ASCIITraits::isASCII</a></div><div class="ttdeci">static bool isASCII(char value) noexcept</div><div class="ttdef"><b>Definition:</b> ASCIITraits.h:230</div></div>
 <div class="ttc" id="aclass_a_s_c_i_i_traits_html_a6f28ce156ee53ef72ce671c01b18fa27"><div class="ttname"><a href="class_a_s_c_i_i_traits.html#a6f28ce156ee53ef72ce671c01b18fa27">ASCIITraits::isHexDigit</a></div><div class="ttdeci">static bool isHexDigit(char value) noexcept</div><div class="ttdef"><b>Definition:</b> ASCIITraits.h:185</div></div>
-<div class="ttc" id="aclass_unsigned_integer_html"><div class="ttname"><a href="class_unsigned_integer.html">UnsignedInteger</a></div><div class="ttdoc">Unsigned integer.</div><div class="ttdef"><b>Definition:</b> UnsignedInteger.h:30</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_unsigned_integer_html"><div class="ttname"><a href="class_unsigned_integer.html">UnsignedInteger</a></div><div class="ttdoc">Unsigned integer.</div><div class="ttdef"><b>Definition:</b> UnsignedInteger.h:31</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
 <div class="ttc" id="aclass_stream_socket_html_a1e68b1fb2f1bcdc7473c004d1f38e202"><div class="ttname"><a href="class_stream_socket.html#a1e68b1fb2f1bcdc7473c004d1f38e202">StreamSocket::shutdownOutputStream</a></div><div class="ttdeci">void shutdownOutputStream()</div><div class="ttdef"><b>Definition:</b> StreamSocket.h:211</div></div>
 <div class="ttc" id="aclass_file_html_a335979c8b00259c29ac1a2784cb4dfd4a646ec9705a761ff7e96b6c4f78720ba5"><div class="ttname"><a href="class_file.html#a335979c8b00259c29ac1a2784cb4dfd4a646ec9705a761ff7e96b6c4f78720ba5">File::TRUNCATE</a></div><div class="ttdeci">@ TRUNCATE</div><div class="ttdef"><b>Definition:</b> File.h:68</div></div>
 <div class="ttc" id="aclass_allocator_html_a813f826a7bcf0ab06e9dafa5cc0730f4"><div class="ttname"><a href="class_allocator.html#a813f826a7bcf0ab06e9dafa5cc0730f4">Allocator::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Allocator.h:533</div></div>
 <div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
-<div class="ttc" id="aclass_string_html_ab31a36bda8c789ba3c0ed37bb16c978c"><div class="ttname"><a href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">String::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:475</div></div>
+<div class="ttc" id="aclass_string_html_ab31a36bda8c789ba3c0ed37bb16c978c"><div class="ttname"><a href="class_string.html#ab31a36bda8c789ba3c0ed37bb16c978c">String::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> String.h:518</div></div>
 <div class="ttc" id="aclass_a_s_c_i_i_traits_html_ad377ef14bade6b70952262afa56c9cbe"><div class="ttname"><a href="class_a_s_c_i_i_traits.html#ad377ef14bade6b70952262afa56c9cbe">ASCIITraits::digitToValue</a></div><div class="ttdeci">static unsigned char digitToValue(char value) noexcept</div><div class="ttdef"><b>Definition:</b> ASCIITraits.h:241</div></div>
-<div class="ttc" id="aclass_inet_end_point_html_aa99ae24dc2401d68c213a83e9d597556"><div class="ttname"><a href="class_inet_end_point.html#aa99ae24dc2401d68c213a83e9d597556">InetEndPoint::getPort</a></div><div class="ttdeci">unsigned short getPort() const noexcept</div><div class="ttdef"><b>Definition:</b> InetEndPoint.h:127</div></div>
 <div class="ttc" id="aclass_array_html_a137f2cae7d1ade1316b2a0d10ffaccde"><div class="ttname"><a href="class_array.html#a137f2cae7d1ade1316b2a0d10ffaccde">Array::getSize</a></div><div class="ttdeci">MemorySize getSize() const noexcept</div><div class="ttdef"><b>Definition:</b> Array.h:339</div></div>
 <div class="ttc" id="aclass_a_s_c_i_i_traits_html_afeb4bada6cdca54bfa2378cbeac630e4"><div class="ttname"><a href="class_a_s_c_i_i_traits.html#afeb4bada6cdca54bfa2378cbeac630e4">ASCIITraits::isControl</a></div><div class="ttdeci">static bool isControl(char value) noexcept</div><div class="ttdef"><b>Definition:</b> ASCIITraits.h:221</div></div>
 <div class="ttc" id="aclass_format_input_stream_html"><div class="ttname"><a href="class_format_input_stream.html">FormatInputStream</a></div><div class="ttdoc">Reader of formatted input.</div><div class="ttdef"><b>Definition:</b> FormatInputStream.h:32</div></div>
@@ -921,6 +922,7 @@ $(function() {
 <div class="ttc" id="aclass_timer_html_a19375c7e1d21fb6bdca3bbfa4cb2ff6a"><div class="ttname"><a href="class_timer.html#a19375c7e1d21fb6bdca3bbfa4cb2ff6a">Timer::start</a></div><div class="ttdeci">void start() noexcept</div><div class="ttdef"><b>Definition:</b> Timer.h:285</div></div>
 <div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">Timer.</div><div class="ttdef"><b>Definition:</b> Timer.h:27</div></div>
 <div class="ttc" id="aclass_file_html_a83cbce54d6c3b8c2f417b51f6b3f488c"><div class="ttname"><a href="class_file.html#a83cbce54d6c3b8c2f417b51f6b3f488c">File::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="aclass_inet_end_point_html_af3477bd5eebe2861a7c733023f5b5732"><div class="ttname"><a href="class_inet_end_point.html#af3477bd5eebe2861a7c733023f5b5732">InetEndPoint::getPort</a></div><div class="ttdeci">static unsigned short getPort(const String &amp;service)</div></div>
 <div class="ttc" id="aclass_array_html"><div class="ttname"><a href="class_array.html">Array&lt; String &gt;</a></div></div>
 <div class="ttc" id="aclass_application_html_a424e991058669da73258a7852c5c60c8ac49a8608f05c4216dd8b525f9b7af726"><div class="ttname"><a href="class_application.html#a424e991058669da73258a7852c5c60c8ac49a8608f05c4216dd8b525f9b7af726">Application::EXIT_CODE_ERROR</a></div><div class="ttdeci">@ EXIT_CODE_ERROR</div><div class="ttdef"><b>Definition:</b> Application.h:77</div></div>
 <div class="ttc" id="aclass_inet_address_html"><div class="ttname"><a href="class_inet_address.html">InetAddress</a></div><div class="ttdoc">Internet Protocol address.</div><div class="ttdef"><b>Definition:</b> InetAddress.h:38</div></div>

@@ -132,215 +132,210 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_date_format_set.html">  115</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_date_format_set.html">DateFormatSet</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="class_string.html">String</a> shortNameOfWeekday[7];</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="class_string.html">String</a> longNameOfWeekday[7];</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="class_string.html">String</a> shortNameOfMonth[12];</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="class_string.html">String</a> longNameOfMonth[12];</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keyword">enum</span> DayFormat {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    D, </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    DD, </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    DDD, </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    DDDD </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  };</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">enum</span> MonthFormat {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    M, </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    MM, </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    MMM, </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    MMMM </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  };</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keyword">enum</span> YearFormat {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    YY, </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    YYYY </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  };</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">enum</span> DateStandardFormat {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    SHORT_DATE_FORMAT,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    MIDDLE_DATE_FORMAT,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    LONG_DATE_FORMAT</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  };</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">char</span> dateSeparator;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">char</span> timeSeparator;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="class_string.html">String</a> am;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="class_string.html">String</a> pm;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="class_string.html">String</a> shortTimeFormat;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="class_string.html">String</a> mediumTimeFormat;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="class_string.html">String</a> longTimeFormat;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="class_string.html">String</a> shortDateFormat;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="class_string.html">String</a> mediumDateFormat;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="class_string.html">String</a> longDateFormat;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">// TAG: need time zone support - specifies local time offset from UTC time</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">//  int getOffset() const noexcept;</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">//  void setOffset(int offset) noexcept;</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">//  String getTimeZone() noexcept; returns (+|-)hh:mm if unknown name</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <a class="code" href="class_date_format_set.html">DateFormatSet</a>() noexcept;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> getDateSeparator() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_date_format_set.html">  116</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_date_format_set.html">DateFormatSet</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="class_string.html">String</a> shortNameOfWeekday[7];</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="class_string.html">String</a> longNameOfWeekday[7];</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="class_string.html">String</a> shortNameOfMonth[12];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="class_string.html">String</a> longNameOfMonth[12];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">enum</span> DayFormat {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    D, </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    DD, </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    DDD, </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    DDDD </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  };</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keyword">enum</span> MonthFormat {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    M, </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    MM, </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    MMM, </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    MMMM </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  };</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keyword">enum</span> YearFormat {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    YY, </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    YYYY </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  };</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keyword">enum</span> DateStandardFormat {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    SHORT_DATE_FORMAT,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    MIDDLE_DATE_FORMAT,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    LONG_DATE_FORMAT</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  };</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">char</span> dateSeparator = <span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">char</span> timeSeparator = <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="class_string.html">String</a> am;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <a class="code" href="class_string.html">String</a> pm;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="class_string.html">String</a> shortTimeFormat;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="class_string.html">String</a> mediumTimeFormat;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="class_string.html">String</a> longTimeFormat;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="class_string.html">String</a> shortDateFormat;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="class_string.html">String</a> mediumDateFormat;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="class_string.html">String</a> longDateFormat;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// TAG: need time zone support - specifies local time offset from UTC time</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="comment">// String getTimeZone() noexcept; returns (+|-)hh:mm if unknown name</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <a class="code" href="class_date_format_set.html">DateFormatSet</a>() noexcept;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a4428bdd291f4fbc3dbb73ab2fd04b870">  179</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> <a class="code" href="class_date_format_set.html#a4428bdd291f4fbc3dbb73ab2fd04b870">getDateSeparator</a>() const noexcept</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> dateSeparator;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> getTimeSeparator() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> timeSeparator;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <a class="code" href="class_string.html">String</a> getShortNameOfWeekday(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> weekday)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    bassert(weekday &lt; 7, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> shortNameOfWeekday[weekday];</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="class_string.html">String</a> getLongNameOfWeekday(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> weekday)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    bassert(weekday &lt; 7, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> longNameOfWeekday[weekday];</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <a class="code" href="class_string.html">String</a> getShortNameOfMonth(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> month)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    bassert(month &lt; 12, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> shortNameOfMonth[month];</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <a class="code" href="class_string.html">String</a> getLongNameOfMonth(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> month)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    bassert(month &lt; 12, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> longNameOfMonth[month];</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getPM() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> pm;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_date_format_set.html#aac68a35ffe48e75b9d3668e562b75e83">  185</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> <a class="code" href="class_date_format_set.html#aac68a35ffe48e75b9d3668e562b75e83">getTimeSeparator</a>() const noexcept</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> timeSeparator;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="class_date_format_set.html#abb8f256cfd85eefd0ea5564793ca81e1">  191</a></span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_date_format_set.html#abb8f256cfd85eefd0ea5564793ca81e1">getShortNameOfWeekday</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> weekday)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    bassert(weekday &lt; 7, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> shortNameOfWeekday[weekday];</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a6dc74342036dbd3ec60bc68d8f78b1d9">  198</a></span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_date_format_set.html#a6dc74342036dbd3ec60bc68d8f78b1d9">getLongNameOfWeekday</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> weekday)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    bassert(weekday &lt; 7, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> longNameOfWeekday[weekday];</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a7f6c28e0bc72effa0b5c04a56d9d2354">  205</a></span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_date_format_set.html#a7f6c28e0bc72effa0b5c04a56d9d2354">getShortNameOfMonth</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> month)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    bassert(month &lt; 12, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> shortNameOfMonth[month];</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  </div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a0418a173f9e5e918dbc5431dfa5501e1">  212</a></span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_date_format_set.html#a0418a173f9e5e918dbc5431dfa5501e1">getLongNameOfMonth</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> month)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    bassert(month &lt; 12, <a class="code" href="class_out_of_domain.html">OutOfDomain</a>(Type::getType&lt;DateFormatSet&gt;()));</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> longNameOfMonth[month];</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getAM() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> am;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  </div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a9e06ebb43cbd491365fed58e4dc5bb14">  219</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#a9e06ebb43cbd491365fed58e4dc5bb14">getPM</a>() const noexcept</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">return</span> pm;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getShortDateFormat() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="class_date_format_set.html#ab08eb989c0655929c271929692dcab62">  225</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#ab08eb989c0655929c271929692dcab62">getAM</a>() const noexcept</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> shortDateFormat;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> am;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordtype">void</span> setShortDateFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getMediumDateFormat() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> mediumDateFormat;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">void</span> setMediumDateFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="class_date_format_set.html#aff3ba00e548a2af30d2eade19b560489">  231</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#aff3ba00e548a2af30d2eade19b560489">getShortDateFormat</a>() const noexcept</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> shortDateFormat;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">void</span> setShortDateFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getLongDateFormat() <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getMediumDateFormat() const noexcept</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> longDateFormat;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> mediumDateFormat;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  }</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordtype">void</span> setLongDateFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getShortTimeFormat() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">return</span> shortTimeFormat;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keywordtype">void</span> setShortTimeFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordtype">void</span> setMediumDateFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  </div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a8e9ca2c6aeaf49188fd54f0671cfc2cd">  248</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#a8e9ca2c6aeaf49188fd54f0671cfc2cd">getLongDateFormat</a>() const noexcept</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> longDateFormat;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  }</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getMediumTimeFormat() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> mediumTimeFormat;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">void</span> setMediumTimeFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getLongTimeFormat() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">return</span> longTimeFormat;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordtype">void</span> setLongDateFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a780fc9bbdb0c8b9c0d16456d57e4a15f">  257</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#a780fc9bbdb0c8b9c0d16456d57e4a15f">getShortTimeFormat</a>() const noexcept</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> shortTimeFormat;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">void</span> setShortTimeFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordtype">void</span> setLongTimeFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;};</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="class_locale.html">  275</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_locale.html">Locale</a> : <span class="keyword">public</span> <a class="code" href="class_date_format_set.html">DateFormatSet</a> {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_locale.html">Locale</a> POSIX;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">//static void enable();</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <a class="code" href="class_locale.html">Locale</a>() noexcept;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_string.html">String</a> getLocale() noexcept;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> setUserLocale() noexcept;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> setASCIILocale() noexcept;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> setLocale(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; locale) noexcept;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> getLocaleSpecific() noexcept;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordtype">char</span> listBegin; <span class="comment">// {</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordtype">char</span> listEnd; <span class="comment">// }</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">char</span> listSeparator; <span class="comment">// ;</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">char</span> vectorBegin; <span class="comment">// (</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">char</span> vectorEnd; <span class="comment">// )</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordtype">char</span> vectorSeparator; <span class="comment">// ,</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">char</span> getListSeparator() <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> listSeparator;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <a class="code" href="class_string.html">String</a> falseMessage;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <a class="code" href="class_string.html">String</a> trueMessage;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; getBoolean(<span class="keywordtype">bool</span> value) <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">if</span> (value) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="keywordflow">return</span> trueMessage;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">return</span> falseMessage;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  }</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;};</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="class_date_format_set.html#a7dbb3fd899db5e9eed1fb2529df98c7a">  266</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#a7dbb3fd899db5e9eed1fb2529df98c7a">getMediumTimeFormat</a>() const noexcept</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> mediumTimeFormat;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">void</span> setMediumTimeFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  </div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="class_date_format_set.html#ae3c7832279433323a8966f2222fc02b6">  275</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_date_format_set.html#ae3c7832279433323a8966f2222fc02b6">getLongTimeFormat</a>() const noexcept</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">return</span> longTimeFormat;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">void</span> setLongTimeFormat(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) noexcept;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;};</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_locale.html">  291</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_locale.html">Locale</a> : <span class="keyword">public</span> <a class="code" href="class_date_format_set.html">DateFormatSet</a> {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="class_locale.html#afea90d32a8cfa7979e69cd6128cea710">  295</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="class_locale.html">Locale</a> <a class="code" href="class_locale.html#afea90d32a8cfa7979e69cd6128cea710">POSIX</a>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <a class="code" href="class_string.html">String</a> falseMessage;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <a class="code" href="class_string.html">String</a> trueMessage;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <a class="code" href="class_locale.html">Locale</a>() noexcept;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  static <a class="code" href="class_string.html">String</a> getLocale() noexcept;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  static <span class="keywordtype">void</span> setUserLocale() noexcept;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  static <span class="keywordtype">void</span> setASCIILocale() noexcept;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  static <span class="keywordtype">bool</span> setLocale(const <a class="code" href="class_string.html">String</a>&amp; locale) noexcept;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  static <span class="keywordtype">void</span> getLocaleSpecific() noexcept;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  </div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="class_locale.html#ad1c6ab60964f7b1292ed8c4195958fa5">  331</a></span>&#160;  inline const <a class="code" href="class_string.html">String</a>&amp; getBoolean(<span class="keywordtype">bool</span> value) const noexcept</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">if</span> (value) {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <span class="keywordflow">return</span> trueMessage;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordflow">return</span> falseMessage;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;};</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_out_of_domain_html"><div class="ttname"><a href="class_out_of_domain.html">OutOfDomain</a></div><div class="ttdoc">Out of domain exception.</div><div class="ttdef"><b>Definition:</b> OutOfDomain.h:29</div></div>
-<div class="ttc" id="aclass_locale_html"><div class="ttname"><a href="class_locale.html">Locale</a></div><div class="ttdoc">Multi-language support.</div><div class="ttdef"><b>Definition:</b> Locale.h:275</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a780fc9bbdb0c8b9c0d16456d57e4a15f"><div class="ttname"><a href="class_date_format_set.html#a780fc9bbdb0c8b9c0d16456d57e4a15f">DateFormatSet::getShortTimeFormat</a></div><div class="ttdeci">const String &amp; getShortTimeFormat() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:257</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a9e06ebb43cbd491365fed58e4dc5bb14"><div class="ttname"><a href="class_date_format_set.html#a9e06ebb43cbd491365fed58e4dc5bb14">DateFormatSet::getPM</a></div><div class="ttdeci">const String &amp; getPM() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:219</div></div>
+<div class="ttc" id="aclass_locale_html"><div class="ttname"><a href="class_locale.html">Locale</a></div><div class="ttdoc">Multi-language support.</div><div class="ttdef"><b>Definition:</b> Locale.h:291</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a5ad315dc0cc85a89977445c5492815e4"><div class="ttname"><a href="class_monetary_format_set.html#a5ad315dc0cc85a89977445c5492815e4">MonetaryFormatSet::signPosition</a></div><div class="ttdeci">SignPosition signPosition</div><div class="ttdef"><b>Definition:</b> Locale.h:91</div></div>
 <div class="ttc" id="aclass_numeric_format_set_html"><div class="ttname"><a href="class_numeric_format_set.html">NumericFormatSet</a></div><div class="ttdef"><b>Definition:</b> Locale.h:22</div></div>
+<div class="ttc" id="aclass_date_format_set_html_aac68a35ffe48e75b9d3668e562b75e83"><div class="ttname"><a href="class_date_format_set.html#aac68a35ffe48e75b9d3668e562b75e83">DateFormatSet::getTimeSeparator</a></div><div class="ttdeci">char getTimeSeparator() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:185</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_ab2385d3b7890a216d3f1b331ea5a33f3a23f8a8c481e2ca063371504239de32eb"><div class="ttname"><a href="class_monetary_format_set.html#ab2385d3b7890a216d3f1b331ea5a33f3a23f8a8c481e2ca063371504239de32eb">MonetaryFormatSet::SIGN_PRECEDES_QUANTITY</a></div><div class="ttdeci">@ SIGN_PRECEDES_QUANTITY</div><div class="ttdef"><b>Definition:</b> Locale.h:72</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a397a1b38cd7259f41e5e41dbb36ad700acbf9e264de53320db88d0e3a0c3d78f0"><div class="ttname"><a href="class_monetary_format_set.html#a397a1b38cd7259f41e5e41dbb36ad700acbf9e264de53320db88d0e3a0c3d78f0">MonetaryFormatSet::SUCCEEDS_QUANTITY_WITH_SPACE</a></div><div class="ttdeci">@ SUCCEEDS_QUANTITY_WITH_SPACE</div><div class="ttdef"><b>Definition:</b> Locale.h:64</div></div>
-<div class="ttc" id="aclass_date_format_set_html"><div class="ttname"><a href="class_date_format_set.html">DateFormatSet</a></div><div class="ttdef"><b>Definition:</b> Locale.h:115</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
+<div class="ttc" id="aclass_date_format_set_html_abb8f256cfd85eefd0ea5564793ca81e1"><div class="ttname"><a href="class_date_format_set.html#abb8f256cfd85eefd0ea5564793ca81e1">DateFormatSet::getShortNameOfWeekday</a></div><div class="ttdeci">String getShortNameOfWeekday(unsigned int weekday) const</div><div class="ttdef"><b>Definition:</b> Locale.h:191</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a7f6c28e0bc72effa0b5c04a56d9d2354"><div class="ttname"><a href="class_date_format_set.html#a7f6c28e0bc72effa0b5c04a56d9d2354">DateFormatSet::getShortNameOfMonth</a></div><div class="ttdeci">String getShortNameOfMonth(unsigned int month) const</div><div class="ttdef"><b>Definition:</b> Locale.h:205</div></div>
+<div class="ttc" id="aclass_date_format_set_html"><div class="ttname"><a href="class_date_format_set.html">DateFormatSet</a></div><div class="ttdef"><b>Definition:</b> Locale.h:116</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a397a1b38cd7259f41e5e41dbb36ad700"><div class="ttname"><a href="class_monetary_format_set.html#a397a1b38cd7259f41e5e41dbb36ad700">MonetaryFormatSet::CurrencyPosition</a></div><div class="ttdeci">CurrencyPosition</div><div class="ttdef"><b>Definition:</b> Locale.h:46</div></div>
 <div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_ab2385d3b7890a216d3f1b331ea5a33f3aea7c3de19c0d5f23c439a85ec33ec9ae"><div class="ttname"><a href="class_monetary_format_set.html#ab2385d3b7890a216d3f1b331ea5a33f3aea7c3de19c0d5f23c439a85ec33ec9ae">MonetaryFormatSet::PARENTHESES</a></div><div class="ttdeci">@ PARENTHESES</div><div class="ttdef"><b>Definition:</b> Locale.h:70</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object.</div><div class="ttdef"><b>Definition:</b> Object.h:28</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a0418a173f9e5e918dbc5431dfa5501e1"><div class="ttname"><a href="class_date_format_set.html#a0418a173f9e5e918dbc5431dfa5501e1">DateFormatSet::getLongNameOfMonth</a></div><div class="ttdeci">String getLongNameOfMonth(unsigned int month) const</div><div class="ttdef"><b>Definition:</b> Locale.h:212</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a8e9ca2c6aeaf49188fd54f0671cfc2cd"><div class="ttname"><a href="class_date_format_set.html#a8e9ca2c6aeaf49188fd54f0671cfc2cd">DateFormatSet::getLongDateFormat</a></div><div class="ttdeci">const String &amp; getLongDateFormat() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:248</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a397a1b38cd7259f41e5e41dbb36ad700a102f74c0a2010cb7675a7c3f1682d07d"><div class="ttname"><a href="class_monetary_format_set.html#a397a1b38cd7259f41e5e41dbb36ad700a102f74c0a2010cb7675a7c3f1682d07d">MonetaryFormatSet::PRECEDES_QUANTITY_WITH_SPACE</a></div><div class="ttdeci">@ PRECEDES_QUANTITY_WITH_SPACE</div><div class="ttdef"><b>Definition:</b> Locale.h:60</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a397a1b38cd7259f41e5e41dbb36ad700a1822baced108539ee017734525102d1a"><div class="ttname"><a href="class_monetary_format_set.html#a397a1b38cd7259f41e5e41dbb36ad700a1822baced108539ee017734525102d1a">MonetaryFormatSet::SUCCEEDS_QUANTITY</a></div><div class="ttdeci">@ SUCCEEDS_QUANTITY</div><div class="ttdef"><b>Definition:</b> Locale.h:56</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html"><div class="ttname"><a href="class_monetary_format_set.html">MonetaryFormatSet</a></div><div class="ttdef"><b>Definition:</b> Locale.h:42</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_ab2385d3b7890a216d3f1b331ea5a33f3a64351197326fab7de86e740c0b440b58"><div class="ttname"><a href="class_monetary_format_set.html#ab2385d3b7890a216d3f1b331ea5a33f3a64351197326fab7de86e740c0b440b58">MonetaryFormatSet::SIGN_PRECEDES_SYMBOL</a></div><div class="ttdeci">@ SIGN_PRECEDES_SYMBOL</div><div class="ttdef"><b>Definition:</b> Locale.h:76</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a7dbb3fd899db5e9eed1fb2529df98c7a"><div class="ttname"><a href="class_date_format_set.html#a7dbb3fd899db5e9eed1fb2529df98c7a">DateFormatSet::getMediumTimeFormat</a></div><div class="ttdeci">const String &amp; getMediumTimeFormat() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:266</div></div>
+<div class="ttc" id="aclass_locale_html_afea90d32a8cfa7979e69cd6128cea710"><div class="ttname"><a href="class_locale.html#afea90d32a8cfa7979e69cd6128cea710">Locale::POSIX</a></div><div class="ttdeci">static const Locale POSIX</div><div class="ttdef"><b>Definition:</b> Locale.h:295</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_ab2385d3b7890a216d3f1b331ea5a33f3"><div class="ttname"><a href="class_monetary_format_set.html#ab2385d3b7890a216d3f1b331ea5a33f3">MonetaryFormatSet::SignPosition</a></div><div class="ttdeci">SignPosition</div><div class="ttdef"><b>Definition:</b> Locale.h:68</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a397a1b38cd7259f41e5e41dbb36ad700a952d0aca1969bb201c2364a8ae2ca794"><div class="ttname"><a href="class_monetary_format_set.html#a397a1b38cd7259f41e5e41dbb36ad700a952d0aca1969bb201c2364a8ae2ca794">MonetaryFormatSet::PRECEDES_QUANTITY</a></div><div class="ttdeci">@ PRECEDES_QUANTITY</div><div class="ttdef"><b>Definition:</b> Locale.h:51</div></div>
+<div class="ttc" id="aclass_date_format_set_html_ae3c7832279433323a8966f2222fc02b6"><div class="ttname"><a href="class_date_format_set.html#ae3c7832279433323a8966f2222fc02b6">DateFormatSet::getLongTimeFormat</a></div><div class="ttdeci">const String &amp; getLongTimeFormat() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:275</div></div>
+<div class="ttc" id="aclass_date_format_set_html_ab08eb989c0655929c271929692dcab62"><div class="ttname"><a href="class_date_format_set.html#ab08eb989c0655929c271929692dcab62">DateFormatSet::getAM</a></div><div class="ttdeci">const String &amp; getAM() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:225</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_ab2385d3b7890a216d3f1b331ea5a33f3acf5978652b1e6557f2f73683fe2eb869"><div class="ttname"><a href="class_monetary_format_set.html#ab2385d3b7890a216d3f1b331ea5a33f3acf5978652b1e6557f2f73683fe2eb869">MonetaryFormatSet::SIGN_SUCCEEDS_QUANTITY</a></div><div class="ttdeci">@ SIGN_SUCCEEDS_QUANTITY</div><div class="ttdef"><b>Definition:</b> Locale.h:74</div></div>
+<div class="ttc" id="aclass_date_format_set_html_aff3ba00e548a2af30d2eade19b560489"><div class="ttname"><a href="class_date_format_set.html#aff3ba00e548a2af30d2eade19b560489">DateFormatSet::getShortDateFormat</a></div><div class="ttdeci">const String &amp; getShortDateFormat() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:231</div></div>
 <div class="ttc" id="aclass_monetary_format_set_html_a7ac98e5083581d94e0949e5095a09f60"><div class="ttname"><a href="class_monetary_format_set.html#a7ac98e5083581d94e0949e5095a09f60">MonetaryFormatSet::currencyPosition</a></div><div class="ttdeci">CurrencyPosition currencyPosition</div><div class="ttdef"><b>Definition:</b> Locale.h:89</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a4428bdd291f4fbc3dbb73ab2fd04b870"><div class="ttname"><a href="class_date_format_set.html#a4428bdd291f4fbc3dbb73ab2fd04b870">DateFormatSet::getDateSeparator</a></div><div class="ttdeci">char getDateSeparator() const noexcept</div><div class="ttdef"><b>Definition:</b> Locale.h:179</div></div>
+<div class="ttc" id="aclass_date_format_set_html_a6dc74342036dbd3ec60bc68d8f78b1d9"><div class="ttname"><a href="class_date_format_set.html#a6dc74342036dbd3ec60bc68d8f78b1d9">DateFormatSet::getLongNameOfWeekday</a></div><div class="ttdeci">String getLongNameOfWeekday(unsigned int weekday) const</div><div class="ttdef"><b>Definition:</b> Locale.h:198</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"></address>

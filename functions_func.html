@@ -106,6 +106,8 @@ $(function() {
 , <a class="el" href="class_hash_set_1_1_hash_set_impl.html#a7b9807ca92e65f82700aa444620057f9">HashSet&lt; TYPE &gt;::HashSetImpl</a>
 , <a class="el" href="class_hash_table.html#a4d80ffa5e7addf735af4c73c4134ae01">HashTable&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_hash_table_1_1_hash_table_impl.html#a7c6006f411dc14d845cc02a15204c013">HashTable&lt; KEY, VALUE &gt;::HashTableImpl</a>
+, <a class="el" href="classhtml_1_1_table_1_1_column.html#a3f6e2363371697feff2e53b1bda144b7">html::Table::Column</a>
+, <a class="el" href="classhtml_1_1_table_1_1_header.html#ab697b88219f03064523036819b3dd0e3">html::Table::Header</a>
 , <a class="el" href="class_large_integer.html#ab998a28a2f8a4bd34971aa128702268d">LargeInteger</a>
 , <a class="el" href="class_large_integer_impl.html#a63faa0f27ca37640e9319ca652b45f95">LargeIntegerImpl</a>
 , <a class="el" href="class_list.html#af674ab3e41526bc1de4aa8bf7d40db11">List&lt; TYPE &gt;</a>
@@ -113,6 +115,7 @@ $(function() {
 , <a class="el" href="class_map.html#a1b19a14e10ee4583648a5f1e4d4620e3">Map&lt; KEY, VALUE &gt;</a>
 , <a class="el" href="class_matrix4x4.html#aa69c7ed519405c49236e0474b0f0f79a">Matrix4x4&lt; TYPE &gt;</a>
 , <a class="el" href="class_matrix.html#adc2fee471bfd9cf697755abcd20c53a6">Matrix&lt; TYPE &gt;</a>
+, <a class="el" href="class_media_blob.html#ad0ebc711a3835e7c7c314167ed5fb9c4">MediaBlob</a>
 , <a class="el" href="class_multiple_sockets.html#a3a69c6fbc2e0d38ecdc8f16e0d348ed6">MultipleSockets</a>
 , <a class="el" href="class_orb_scheme.html#ae7a32a5244ba6299b283bb8e9d0547b0">OrbScheme</a>
 , <a class="el" href="class_orb_skeleton_manager.html#ab2514f9ffc72983b8d122d0bb41d7307">OrbSkeletonManager</a>
@@ -146,6 +149,12 @@ $(function() {
 <li>addCharacterField()
 : <a class="el" href="class_format_output_stream.html#a09fb2978a88510d5fcbd342732ea43c5">FormatOutputStream</a>
 </li>
+<li>addChild()
+: <a class="el" href="class_h_t_m_l_element.html#a4f11c767b233b5d35338be5c21aeef61">HTMLElement</a>
+</li>
+<li>addColumn()
+: <a class="el" href="classhtml_1_1_table_1_1_row.html#a52764de1c39085c962e854bf2b34d9ed">html::Table::Row</a>
+</li>
 <li>addDateField()
 : <a class="el" href="class_format_output_stream.html#aa4eb8c6ec06c07eb200c04288947e0c0">FormatOutputStream</a>
 </li>
@@ -160,6 +169,9 @@ $(function() {
 </li>
 <li>addField()
 : <a class="el" href="class_i_d_l_structure.html#a2649a29e995ae627936eff628be07324">IDLStructure</a>
+</li>
+<li>addHeader()
+: <a class="el" href="classhtml_1_1_table_1_1_row.html#acbe19bc9361c508d05c8cb2405b19fe3">html::Table::Row</a>
 </li>
 <li>addIntegerField()
 : <a class="el" href="class_format_output_stream.html#ad5dbc152eaf834095a6d166a7dddd59e">FormatOutputStream</a>
@@ -176,6 +188,9 @@ $(function() {
 <li>addReference()
 : <a class="el" href="class_reference_counted_object_1_1_reference_impl.html#a6055c2676280a1944e596fd2eecde3d2">ReferenceCountedObject::ReferenceImpl</a>
 </li>
+<li>addRow()
+: <a class="el" href="classhtml_1_1_table.html#a2c29f4a039a2f0fac8ef5376eda11063">html::Table</a>
+</li>
 <li>addSubkey()
 : <a class="el" href="classextension_1_1_registry_key.html#aad53cdbaa690f6862ac106adfd11f13d">extension::RegistryKey</a>
 </li>
@@ -184,6 +199,11 @@ $(function() {
 </li>
 <li>addTest()
 : <a class="el" href="class_unit_test_manager.html#a8423361ff8035e1b1feed0a0334da263">UnitTestManager</a>
+</li>
+<li>addText()
+: <a class="el" href="classhtml_1_1_table_1_1_column.html#a8355c4cd004148d41a1ca5fb07175923">html::Table::Column</a>
+, <a class="el" href="classhtml_1_1_table_1_1_header.html#a44ebe90c76e37d9f37e696a11e3fdfb3">html::Table::Header</a>
+, <a class="el" href="class_h_t_m_l_element.html#a51a63a22448719c06bb4f64d2424f9e9">HTMLElement</a>
 </li>
 <li>addValue()
 : <a class="el" href="class_argument_parser_1_1_enum_option.html#a324ee64963bde3bec0d3f8b791ae016e">ArgumentParser::EnumOption</a>
@@ -239,15 +259,15 @@ $(function() {
 : <a class="el" href="class_a_n_s_i_escape_sequence.html#a089190ce9dd7349c850863a336155826">ANSIEscapeSequence</a>
 </li>
 <li>AnyValue()
-: <a class="el" href="class_any_value.html#a9812abfd8b2ed9a95aa1c3788a0a55b3">AnyValue</a>
+: <a class="el" href="class_any_value.html#a2d8136a77f630c6f93dbfb1a998142d2">AnyValue</a>
 </li>
 <li>append()
 : <a class="el" href="class_array.html#a0cab82ffb63b2767df7f47e7a61b32e1">Array&lt; TYPE &gt;</a>
 , <a class="el" href="class_list.html#a99c43760a19e4c187a41823bdbf149a3">List&lt; TYPE &gt;</a>
-, <a class="el" href="class_list_1_1_list_impl.html#aaea4b5ff88977c3d221542e8329a5206">List&lt; TYPE &gt;::ListImpl</a>
+, <a class="el" href="class_list_1_1_list_impl.html#af588fc9cd3d7769a091a7387536e9f9c">List&lt; TYPE &gt;::ListImpl</a>
 , <a class="el" href="class_menu.html#a88f5471cb0d7257cd2267fda6cc36168">Menu</a>
 , <a class="el" href="class_object_model_1_1_array.html#afffae9593ec5a7fe2f0f2a02dc51b9c8">ObjectModel::Array</a>
-, <a class="el" href="class_string.html#aea983c9a6e0bdd021b500db417a66a6e">String</a>
+, <a class="el" href="class_string.html#a9caf1dfe0e59d2d922422b245e95cd7b">String</a>
 , <a class="el" href="class_wide_string.html#a8197a4d9e3bda8387e09a4fc70b2a51e">WideString</a>
 </li>
 <li>appendChild()
@@ -281,16 +301,16 @@ $(function() {
 : <a class="el" href="class_argument_parser.html#a836709a5ca16611915d10dfd5843b833">ArgumentParser</a>
 </li>
 <li>Array()
-: <a class="el" href="class_array.html#a3e69a5e761c80fd53d817a495e77719f">Array&lt; TYPE &gt;</a>
+: <a class="el" href="class_array.html#a7c6715f934cf74cfc7faa9db2709d0c0">Array&lt; TYPE &gt;</a>
 </li>
 <li>ArrayMap()
-: <a class="el" href="class_array_map.html#a6a39ceffe21eb06e54760c9fd9476ee2">ArrayMap&lt; KEY, VALUE &gt;</a>
+: <a class="el" href="class_array_map.html#a89e5a6224ccb0ba278b66b878fadee58">ArrayMap&lt; KEY, VALUE &gt;</a>
 </li>
 <li>asec()
 : <a class="el" href="class_math.html#a7a392a66c55f65a4a0c8b6a44df843ab">Math</a>
 </li>
 <li>asech()
-: <a class="el" href="class_math.html#a428b782244d84e6d7c981d791e3230e7">Math</a>
+: <a class="el" href="class_math.html#ac5d34b54135293bdedf5fe6fd2a438ce">Math</a>
 </li>
 <li>asin()
 : <a class="el" href="class_math.html#aed43689301c48f5d75d5079da0ad7abb">Math</a>
@@ -309,19 +329,19 @@ $(function() {
 : <a class="el" href="class_large_integer_impl.html#aa76605e95f03d2e0a358131e00e37067">LargeIntegerImpl</a>
 </li>
 <li>Association()
-: <a class="el" href="class_association.html#a156dc6bf8c4ab7e34dd99746bf69ffaa">Association&lt; KEY, VALUE &gt;</a>
+: <a class="el" href="class_association.html#a39f65b008ca2a334ab6180d57ba99e6a">Association&lt; KEY, VALUE &gt;</a>
 </li>
 <li>asyncCancel()
 : <a class="el" href="class_file.html#aea790e0f36f6002b703be9f0af34886c">File</a>
 </li>
 <li>AsynchronousException()
-: <a class="el" href="class_asynchronous_exception.html#aa0a756b78ab9ad8bb4dc6bc91d7150a5">AsynchronousException</a>
+: <a class="el" href="class_asynchronous_exception.html#aa41cda9de0dc27e417f5f012a2cb4f0a">AsynchronousException</a>
 </li>
 <li>AsynchronousReadCompletion()
 : <a class="el" href="class_asynchronous_read_completion.html#a6e4ef859ad8b4be5d24c9fab78782f44">AsynchronousReadCompletion</a>
 </li>
 <li>AsynchronousReadOperation()
-: <a class="el" href="class_asynchronous_read_operation.html#a14aeb6ea28e304b6b4215be79203c6f3">AsynchronousReadOperation</a>
+: <a class="el" href="class_asynchronous_read_operation.html#a4fada726ded581d2818372877454850c">AsynchronousReadOperation</a>
 </li>
 <li>AsynchronousWriteCompletion()
 : <a class="el" href="class_asynchronous_write_completion.html#abe397f0eeaf724595fa8edb6e075f9b1">AsynchronousWriteCompletion</a>

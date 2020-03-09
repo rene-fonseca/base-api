@@ -72,236 +72,236 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="code" href="class_format_output_stream.html">FormatOutputStream</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_date.html">   34</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_date.html">Date</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  int64 date = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580">   44</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_date.html#a1f287427944b9549912b8f8870bf2580">Constants</a> {</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a462ae9c27f450da5e68a7a06dd542eeb">   46</a></span>&#160;    SUNDAY = 0,</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a7015442ec1cf5b2403e92728ad51b47a">   48</a></span>&#160;    MONDAY = 1,</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580acd4108abddc0f5b492d1854f08c2606b">   50</a></span>&#160;    TUESDAY = 2,</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a455b38ff3e03450fafe570005c179cc7">   52</a></span>&#160;    WEDNESDAY = 3,</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a217b895bc77c143f65cfe5159f09aa44">   54</a></span>&#160;    THURSDAY = 4,</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a0ca3ebe3ac3b8a1afb0fd942691e5396">   56</a></span>&#160;    FRIDAY = 5,</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aad239684afbec75002304114d5cb0b46">   58</a></span>&#160;    SATURDAY = 6,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aa561d22dacbd1ccba9776cf547a51133">   61</a></span>&#160;    JANUARY = 0,</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a829a057e550656adf61384434d4ee0a0">   63</a></span>&#160;    FEBRUARY = 1,</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ac5285d9d68c712e23438f8e25a74923b">   65</a></span>&#160;    MARCH = 2,</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ae5216730f008d2740c70f655ad9fb5a2">   67</a></span>&#160;    APRIL = 3,</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ac3598defc5256340b536feef2840d3c6">   69</a></span>&#160;    MAY = 4,</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ab2bc2859e00c5b755626fb9c99f3f637">   71</a></span>&#160;    JUNE = 5,</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580abced3c45e3e9bf1d004d8bb6e2fb3c55">   73</a></span>&#160;    JULY = 6,</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a5b49814360059544ab69206130cf84e3">   75</a></span>&#160;    AUGUST = 7,</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580abea7f9fd232de9a9abddfd9c134dbda7">   77</a></span>&#160;    SEPTEMBER = 8,</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a2a7d1399e760934b0ec5b34a2d1c71c0">   79</a></span>&#160;    OCTOBER = 9,</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580afc53c6dfbdfd9eb9549d4edcde49df5d">   81</a></span>&#160;    NOVEMBER = 10,</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a4703ea8ee02149b98e55c9831a351a33">   83</a></span>&#160;    DECEMBER = 11,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aa4974b7838e19c45e41e45dc0e92da0e">   86</a></span>&#160;    EPOCH_YEAR = 1970,</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a9e463d12a82a314168301ac962dec9f8">   88</a></span>&#160;    EPOCH_WEEKDAY = THURSDAY,</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aafef139f5f8937d6edcc1b7aaf9eaf22">   90</a></span>&#160;    DAYS_PER_NONLEAP_YEAR = 365,</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a6d9de2b1ea5e86b66aa30f1e458dedb3">   92</a></span>&#160;    DAYS_PER_LEAP_YEAR = DAYS_PER_NONLEAP_YEAR + 1,</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a69841bbe95c9c283f7fefec921f56164">   94</a></span>&#160;    DAYS_PER_400_YEARS = (300+4-1)*365 + (100-4+1)*366,</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a7c030ceb44d52f9238a87944562a7e9c">   96</a></span>&#160;    DAYS_PER_WEEK = 7,</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aa3afae612384e7a08a8598bbbd802be3">   98</a></span>&#160;    MONTHS_PER_YEAR = 12,</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aff4e1f626759a8c399720bd91eeb44be">  100</a></span>&#160;    HOURS_PER_DAY = 24,</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ad63fa479e8645b62315d0c96d335871d">  102</a></span>&#160;    MINUTES_PER_HOUR = 60,</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580afbe1ee74d6ad1a739dd11ed4045bbd92">  104</a></span>&#160;    MINUTES_PER_DAY = MINUTES_PER_HOUR * HOURS_PER_DAY,</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a20e1db7327e7d9677971129a288926e9">  106</a></span>&#160;    SECONDS_PER_MINUTE = 60,</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a6d648f6eb632681d8a1bc023592110a2">  108</a></span>&#160;    SECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR,</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a6ac7a451ac41a0754399eb3ad72521d1">  110</a></span>&#160;    SECONDS_PER_DAY = SECONDS_PER_HOUR * HOURS_PER_DAY</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  };</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_date.html#a308ca56bd37a017db1ae79fa2086ef96">  114</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_PER_MONTH_NONLEAP_YEAR[MONTHS_PER_YEAR];</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_date.html#a4c612a423c03518ecb70f6fc54fe0a39">  116</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_PER_MONTH_LEAP_YEAR[MONTHS_PER_YEAR];</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_date.html#a4781358b37c0c7b35690cfddebc8499a">  118</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_BEFORE_FIRST_OF_MONTH_NONLEAP_YEAR[MONTHS_PER_YEAR + 1];</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_date.html#a14d18537d1a7b42b24aa27e2064adf59">  120</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_BEFORE_FIRST_OF_MONTH_LEAP_YEAR[MONTHS_PER_YEAR + 1];</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  </div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html">  122</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="struct_date_1_1_date_time.html">DateTime</a> {</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#a9f68575a15757475412b8fd8ac98fded">  123</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#a9f68575a15757475412b8fd8ac98fded">year</a>; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#a5cfd1d57a06ac5d65426ca62dcee0826">  124</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#a5cfd1d57a06ac5d65426ca62dcee0826">month</a>; </div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#ae85def92d492c99e4462c51bb02ad5e5">  125</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#ae85def92d492c99e4462c51bb02ad5e5">day</a>; </div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#afca27b571ebd3c64a8a8516b2a37ee1e">  126</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#afca27b571ebd3c64a8a8516b2a37ee1e">weekday</a>; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">int</span> dayOfYear; </div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#acc8f5fcd9155c6b0d94c390633f174fc">  128</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#acc8f5fcd9155c6b0d94c390633f174fc">week</a>; </div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#a25717751c15907f04dcd59090cfcd2f5">  129</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#a25717751c15907f04dcd59090cfcd2f5">hour</a>; </div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#a4c44a8648f41413df4b3e11a87cf881e">  130</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#a4c44a8648f41413df4b3e11a87cf881e">minute</a>; </div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#a135f0107dbe6eb722abeadcd7d44decf">  131</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#a135f0107dbe6eb722abeadcd7d44decf">second</a>; </div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="struct_date_1_1_date_time.html#a64b04f741e069cf585cad851e6af39c0">  132</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_date_1_1_date_time.html#a64b04f741e069cf585cad851e6af39c0">millisecond</a>; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  };</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> normalize(<a class="code" href="struct_date_1_1_date_time.html">DateTime</a>&amp; dateTime, <span class="keywordtype">bool</span> redundancy = <span class="keyword">true</span>) noexcept;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_date.html#afc114a9da898570de307c73f7ebc7ff9">  151</a></span>&#160;  static inline <span class="keywordtype">bool</span> isLeapYear(<span class="keywordtype">int</span> year) noexcept</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> (year % 4 == 0) &amp;&amp; ((year % 100 != 0) || (year % 400 == 0));</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  </div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">  159</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">getDaysOfYear</a>(<span class="keywordtype">int</span> year) noexcept</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> isLeapYear(year) ? 366 : 365;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> getDaysOfMonth(<span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> getDayOfWeek(<span class="keywordtype">int</span> day, <span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year) noexcept;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> getWeek(<span class="keywordtype">int</span> day, <span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year) noexcept;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> getDayOfYear(<span class="keywordtype">int</span> day, <span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year) noexcept;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> getNow();</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keyword">static</span> int64 getBias() noexcept;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  static <a class="code" href="class_date.html">Date</a> getTime(</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">int</span> second, <span class="keywordtype">int</span> minute, <span class="keywordtype">int</span> hour, <span class="keywordtype">bool</span> local = false);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  static <a class="code" href="class_date.html">Date</a> getDate(</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">int</span> day, <span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year, <span class="keywordtype">bool</span> local = false);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  static <a class="code" href="class_date.html">Date</a> getDate(</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">int</span> second,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">int</span> minute,</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">int</span> hour,</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">int</span> day,</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">int</span> month,</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">int</span> year,</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">bool</span> local = false);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  static <a class="code" href="class_date.html">Date</a> getDateByJulianDay(<span class="keywordtype">int</span> day) noexcept;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  </div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_date.html#afe07296a2226e950d05b417fb8f51bc2">  257</a></span>&#160;  inline <a class="code" href="class_date.html">Date</a>() noexcept</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  </div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_date.html#a3356060cc600cf227aeed83605ff97d0">  267</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html#a3356060cc600cf227aeed83605ff97d0">Date</a>(int64 _date) noexcept</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    : date(_date)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <a class="code" href="class_date.html">Date</a>(<span class="keyword">const</span> DateTime&amp; dateTime) noexcept;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  </div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">  280</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">Date</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; copy) noexcept</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    : date(copy.date)</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_date.html">   35</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_date.html">Date</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  int64 date = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580">   45</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="class_date.html#a1f287427944b9549912b8f8870bf2580">Constants</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a462ae9c27f450da5e68a7a06dd542eeb">   47</a></span>&#160;    SUNDAY = 0,</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a7015442ec1cf5b2403e92728ad51b47a">   49</a></span>&#160;    MONDAY = 1,</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580acd4108abddc0f5b492d1854f08c2606b">   51</a></span>&#160;    TUESDAY = 2,</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a455b38ff3e03450fafe570005c179cc7">   53</a></span>&#160;    WEDNESDAY = 3,</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a217b895bc77c143f65cfe5159f09aa44">   55</a></span>&#160;    THURSDAY = 4,</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a0ca3ebe3ac3b8a1afb0fd942691e5396">   57</a></span>&#160;    FRIDAY = 5,</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aad239684afbec75002304114d5cb0b46">   59</a></span>&#160;    SATURDAY = 6,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aa561d22dacbd1ccba9776cf547a51133">   62</a></span>&#160;    JANUARY = 0,</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a829a057e550656adf61384434d4ee0a0">   64</a></span>&#160;    FEBRUARY = 1,</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ac5285d9d68c712e23438f8e25a74923b">   66</a></span>&#160;    MARCH = 2,</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ae5216730f008d2740c70f655ad9fb5a2">   68</a></span>&#160;    APRIL = 3,</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ac3598defc5256340b536feef2840d3c6">   70</a></span>&#160;    MAY = 4,</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ab2bc2859e00c5b755626fb9c99f3f637">   72</a></span>&#160;    JUNE = 5,</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580abced3c45e3e9bf1d004d8bb6e2fb3c55">   74</a></span>&#160;    JULY = 6,</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a5b49814360059544ab69206130cf84e3">   76</a></span>&#160;    AUGUST = 7,</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580abea7f9fd232de9a9abddfd9c134dbda7">   78</a></span>&#160;    SEPTEMBER = 8,</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a2a7d1399e760934b0ec5b34a2d1c71c0">   80</a></span>&#160;    OCTOBER = 9,</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580afc53c6dfbdfd9eb9549d4edcde49df5d">   82</a></span>&#160;    NOVEMBER = 10,</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a4703ea8ee02149b98e55c9831a351a33">   84</a></span>&#160;    DECEMBER = 11,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aa4974b7838e19c45e41e45dc0e92da0e">   87</a></span>&#160;    EPOCH_YEAR = 1970,</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a9e463d12a82a314168301ac962dec9f8">   89</a></span>&#160;    EPOCH_WEEKDAY = THURSDAY,</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aafef139f5f8937d6edcc1b7aaf9eaf22">   91</a></span>&#160;    DAYS_PER_NONLEAP_YEAR = 365,</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a6d9de2b1ea5e86b66aa30f1e458dedb3">   93</a></span>&#160;    DAYS_PER_LEAP_YEAR = DAYS_PER_NONLEAP_YEAR + 1,</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a69841bbe95c9c283f7fefec921f56164">   95</a></span>&#160;    DAYS_PER_400_YEARS = (300+4-1)*365 + (100-4+1)*366,</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a7c030ceb44d52f9238a87944562a7e9c">   97</a></span>&#160;    DAYS_PER_WEEK = 7,</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aa3afae612384e7a08a8598bbbd802be3">   99</a></span>&#160;    MONTHS_PER_YEAR = 12,</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580aff4e1f626759a8c399720bd91eeb44be">  101</a></span>&#160;    HOURS_PER_DAY = 24,</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580ad63fa479e8645b62315d0c96d335871d">  103</a></span>&#160;    MINUTES_PER_HOUR = 60,</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580afbe1ee74d6ad1a739dd11ed4045bbd92">  105</a></span>&#160;    MINUTES_PER_DAY = MINUTES_PER_HOUR * HOURS_PER_DAY,</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a20e1db7327e7d9677971129a288926e9">  107</a></span>&#160;    SECONDS_PER_MINUTE = 60,</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a6d648f6eb632681d8a1bc023592110a2">  109</a></span>&#160;    SECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR,</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_date.html#a1f287427944b9549912b8f8870bf2580a6ac7a451ac41a0754399eb3ad72521d1">  111</a></span>&#160;    SECONDS_PER_DAY = SECONDS_PER_HOUR * HOURS_PER_DAY</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  };</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_date.html#a308ca56bd37a017db1ae79fa2086ef96">  115</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_PER_MONTH_NONLEAP_YEAR[MONTHS_PER_YEAR];</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_date.html#a4c612a423c03518ecb70f6fc54fe0a39">  117</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_PER_MONTH_LEAP_YEAR[MONTHS_PER_YEAR];</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_date.html#a4781358b37c0c7b35690cfddebc8499a">  119</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_BEFORE_FIRST_OF_MONTH_NONLEAP_YEAR[MONTHS_PER_YEAR + 1];</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_date.html#a14d18537d1a7b42b24aa27e2064adf59">  121</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DAYS_BEFORE_FIRST_OF_MONTH_LEAP_YEAR[MONTHS_PER_YEAR + 1];</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html">  124</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_date_1_1_date_time.html">DateTime</a> {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#a9f68575a15757475412b8fd8ac98fded">  127</a></span>&#160;    <span class="keywordtype">int</span> year = 0; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#a5cfd1d57a06ac5d65426ca62dcee0826">  128</a></span>&#160;    <span class="keywordtype">int</span> month = 0; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#ae85def92d492c99e4462c51bb02ad5e5">  129</a></span>&#160;    <span class="keywordtype">int</span> day = 0; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#afca27b571ebd3c64a8a8516b2a37ee1e">  130</a></span>&#160;    <span class="keywordtype">int</span> weekday = 0; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">int</span> dayOfYear = 0; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#a25717751c15907f04dcd59090cfcd2f5">  132</a></span>&#160;    <span class="keywordtype">int</span> hour = 0; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#a4c44a8648f41413df4b3e11a87cf881e">  133</a></span>&#160;    <span class="keywordtype">int</span> minute = 0; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#a135f0107dbe6eb722abeadcd7d44decf">  134</a></span>&#160;    <span class="keywordtype">int</span> second = 0; </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_date_1_1_date_time.html#a64b04f741e069cf585cad851e6af39c0">  135</a></span>&#160;    <span class="keywordtype">int</span> millisecond = 0; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  };</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> getWeek(<span class="keyword">const</span> <a class="code" href="class_date_1_1_date_time.html">DateTime</a>&amp; dt) noexcept;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> normalize(<a class="code" href="class_date_1_1_date_time.html">DateTime</a>&amp; dateTime) noexcept;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_date.html#afc114a9da898570de307c73f7ebc7ff9">  155</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_date.html#afc114a9da898570de307c73f7ebc7ff9">isLeapYear</a>(<span class="keywordtype">int</span> year) noexcept</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> (year % 4 == 0) &amp;&amp; ((year % 100 != 0) || (year % 400 == 0));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">  163</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">getDaysOfYear</a>(<span class="keywordtype">int</span> year) noexcept</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> isLeapYear(year) ? 366 : 365;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> getDaysOfMonth(<span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> getNow();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keyword">static</span> int64 getBias();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> getTime(<span class="keywordtype">int</span> second, <span class="keywordtype">int</span> minute, <span class="keywordtype">int</span> hour);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> getDate(<span class="keywordtype">int</span> day, <span class="keywordtype">int</span> month, <span class="keywordtype">int</span> year);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> getDate(</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">int</span> second,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">int</span> minute,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">int</span> hour,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">int</span> day,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">int</span> month,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">int</span> year);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> getDateByJulianDay(<span class="keywordtype">int</span> day) noexcept;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  </div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="class_date.html#afe07296a2226e950d05b417fb8f51bc2">  233</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html#afe07296a2226e950d05b417fb8f51bc2">Date</a>() noexcept</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="class_date.html#a3356060cc600cf227aeed83605ff97d0">  243</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html#a3356060cc600cf227aeed83605ff97d0">Date</a>(int64 _date) noexcept</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    : date(_date)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> isValidDateTime(<span class="keyword">const</span> DateTime&amp; dt);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_date.html">Date</a> makeDate(<span class="keyword">const</span> DateTime&amp; dateTime, <span class="keywordtype">bool</span> local = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  </div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">  262</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">Date</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; copy) noexcept</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    : date(copy.date)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">  270</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html">Date</a>&amp; <a class="code" href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; assign) noexcept</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    date = assign.date;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">  280</a></span>&#160;  <span class="keyword">inline</span> int64 <a class="code" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a>() const noexcept</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> date;</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">  288</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="class_date.html">Date</a>&amp; <a class="code" href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; assign) noexcept</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    date = assign.date;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="class_date.html#a6a372155474f6327d0c9f7258e5af843">  289</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> int64() const noexcept</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">return</span> date;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno"><a class="line" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">  298</a></span>&#160;  <span class="keyword">inline</span> int64 <a class="code" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a>() const noexcept</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> date;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  </div>
-<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="class_date.html#a5f0e43ef8351feb6e569c98d6369de08">  304</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">return</span> date != 0;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">  312</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">addBias</a>(int64 bias) noexcept</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    date += bias;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">int</span> getMillisecond() const noexcept;</div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="class_date.html#a5f0e43ef8351feb6e569c98d6369de08">  295</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> date != 0;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="class_date.html#a4cbeba4861c78f096ffd768330986642">  301</a></span>&#160;  <a class="code" href="class_date.html">Date</a> <a class="code" href="class_date.html#a4cbeba4861c78f096ffd768330986642">getLocalTime</a>() const noexcept</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">// UTC = local time + bias</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">return</span> date - <a class="code" href="class_date.html#a43e9b37bc53fd502404895f3b46e9fde">Date::getBias</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="class_date.html#af39f563e63c53e50c8c0edba6354330e">  308</a></span>&#160;  <a class="code" href="class_date.html">Date</a> <a class="code" href="class_date.html#af39f563e63c53e50c8c0edba6354330e">getUTCTime</a>() const noexcept</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// UTC = local time + bias</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">return</span> date + <a class="code" href="class_date.html#a43e9b37bc53fd502404895f3b46e9fde">Date::getBias</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  </div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">  317</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">addBias</a>(int64 bias) noexcept</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    date += bias;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  }</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordtype">int</span> getSecond() const noexcept;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordtype">int</span> getMinute() const noexcept;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordtype">int</span> getMillisecond() const noexcept;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordtype">int</span> getSecond() const noexcept;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordtype">int</span> getHour() const noexcept;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordtype">int</span> getMinute() const noexcept;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordtype">int</span> getDay() const noexcept;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordtype">int</span> getHour() const noexcept;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordtype">int</span> getDayOfWeek() const noexcept;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordtype">int</span> getDay() const noexcept;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keywordtype">int</span> getDayOfYear() const noexcept;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  </div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <span class="keywordtype">int</span> getMonth() const noexcept;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keywordtype">int</span> getDayOfWeek() const noexcept;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <span class="keywordtype">int</span> getDayOfYear() const noexcept;</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keywordtype">int</span> getYear() const noexcept;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keywordtype">int</span> getMonth() const noexcept;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  </div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  <span class="keywordtype">int</span> getUTCSecond() const noexcept;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  <span class="keywordtype">int</span> getYear() const noexcept;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  </div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordtype">int</span> getUTCMinute() const noexcept;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <span class="keywordtype">int</span> getUTCHour() const noexcept;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="keywordtype">int</span> getUTCDay() const noexcept;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="keywordtype">int</span> getUTCDayOfWeek() const noexcept;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  <span class="keywordtype">int</span> getUTCDayOfYear() const noexcept;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keywordtype">int</span> getUTCMonth() const noexcept;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordtype">int</span> getJulianDay() const noexcept;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  DateTime split(<span class="keywordtype">bool</span> local = false) const noexcept;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <a class="code" href="class_string.html">String</a> getISO8601(<span class="keywordtype">int</span> offset = 0) const;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <a class="code" href="class_string.html">String</a> getISO8601Compact(<span class="keywordtype">int</span> offset = 0) const;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <a class="code" href="class_string.html">String</a> getISO8601_MS() const;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <a class="code" href="class_string.html">String</a> getISO8601_US() const;</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keywordtype">int</span> getUTCYear() const noexcept;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keywordtype">int</span> getJulianDay() const noexcept;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">void</span> split(DateTime&amp; time, <span class="keywordtype">bool</span> local = false) const noexcept;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <span class="comment">// TAG: add support for timezone</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment"></span>  static <a class="code" href="class_date.html">Date</a> parseISO8601(const <a class="code" href="class_string.html">String</a>&amp; text, <span class="keywordtype">bool</span> subsecond = false);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_string_output_stream.html">format</a>(const <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) const;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <a class="code" href="class_wide_string.html">WideString</a> <a class="code" href="class_string_output_stream.html">format</a>(const <a class="code" href="class_wide_string.html">WideString</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>) const;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;};</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <a class="code" href="class_string.html">String</a> <a class="code" href="class_string_output_stream.html">format</a>(</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    const <a class="code" href="class_string.html">String</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>,</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">bool</span> local = true) const;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  </div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <a class="code" href="class_wide_string.html">WideString</a> <a class="code" href="class_string_output_stream.html">format</a>(</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    const <a class="code" href="class_wide_string.html">WideString</a>&amp; <a class="code" href="class_string_output_stream.html">format</a>,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordtype">bool</span> local = true) const;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;};</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; operator&lt;&lt;(</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream,</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  const <a class="code" href="class_date.html">Date</a>&amp; date);</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;template&lt;&gt;</div>
-<div class="line"><a name="l00444"></a><span class="lineno"><a class="line" href="class_is_uninitializeable_3_01_date_01_4.html">  444</a></span>&#160;class <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; : public <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;int64&gt; {</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;};</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00448"></a><span class="lineno"><a class="line" href="class_hash_3_01_date_01_4.html">  448</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_hash.html">Hash</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; {</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> operator()(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; value) noexcept</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  {</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="class_hash.html">Hash&lt;int64&gt;</a> hash;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">return</span> hash(value.<a class="code" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a>());</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  }</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;};</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;_COM_AZURE_DEV__BASE__API <a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; operator&lt;&lt;(<a class="code" href="class_format_output_stream.html">FormatOutputStream</a>&amp; stream, const <a class="code" href="class_date.html">Date</a>&amp; date);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;template&lt;&gt;</div>
+<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="class_is_uninitializeable_3_01_date_01_4.html">  419</a></span>&#160;class <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; : public <a class="code" href="class_is_uninitializeable.html">IsUninitializeable</a>&lt;int64&gt; {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;};</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="class_hash_3_01_date_01_4.html">  423</a></span>&#160;<span class="keyword">class </span>_COM_AZURE_DEV__BASE__API <a class="code" href="class_hash.html">Hash</a>&lt;<a class="code" href="class_date.html">Date</a>&gt; {</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> operator()(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; value) noexcept</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <a class="code" href="class_hash.html">Hash&lt;int64&gt;</a> hash;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">return</span> hash(value.<a class="code" href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">getValue</a>());</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;};</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;_COM_AZURE_DEV__BASE__CLING_GET_MIME_BUNDLE(<a class="code" href="class_date.html">Date</a>)</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;_COM_AZURE_DEV__BASE__LEAVE_NAMESPACE</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_hash_html"><div class="ttname"><a href="class_hash.html">Hash</a></div><div class="ttdoc">Hash function object.</div><div class="ttdef"><b>Definition:</b> Hash.h:30</div></div>
-<div class="ttc" id="aclass_date_html_ae78acd132704a26355d5f6f926fc75f5"><div class="ttname"><a href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">Date::getDaysOfYear</a></div><div class="ttdeci">static int getDaysOfYear(int year) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:159</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_a9f68575a15757475412b8fd8ac98fded"><div class="ttname"><a href="struct_date_1_1_date_time.html#a9f68575a15757475412b8fd8ac98fded">Date::DateTime::year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> Date.h:123</div></div>
-<div class="ttc" id="aclass_date_html_a1f287427944b9549912b8f8870bf2580"><div class="ttname"><a href="class_date.html#a1f287427944b9549912b8f8870bf2580">Date::Constants</a></div><div class="ttdeci">Constants</div><div class="ttdef"><b>Definition:</b> Date.h:44</div></div>
-<div class="ttc" id="aclass_date_html_a5b885bd0bac83e1a670921a163ee7d2a"><div class="ttname"><a href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">Date::addBias</a></div><div class="ttdeci">void addBias(int64 bias) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:312</div></div>
-<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:105</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_a5cfd1d57a06ac5d65426ca62dcee0826"><div class="ttname"><a href="struct_date_1_1_date_time.html#a5cfd1d57a06ac5d65426ca62dcee0826">Date::DateTime::month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> Date.h:124</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html"><div class="ttname"><a href="struct_date_1_1_date_time.html">Date::DateTime</a></div><div class="ttdef"><b>Definition:</b> Date.h:122</div></div>
-<div class="ttc" id="aclass_date_html_a6218352737d8f154fcc3eebe9a7dfa42"><div class="ttname"><a href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">Date::operator=</a></div><div class="ttdeci">Date &amp; operator=(const Date &amp;assign) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:288</div></div>
-<div class="ttc" id="aclass_date_html_afee858b535b4478ebcc2c9d04c19f19c"><div class="ttname"><a href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">Date::getValue</a></div><div class="ttdeci">int64 getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:298</div></div>
-<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:101</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_acc8f5fcd9155c6b0d94c390633f174fc"><div class="ttname"><a href="struct_date_1_1_date_time.html#acc8f5fcd9155c6b0d94c390633f174fc">Date::DateTime::week</a></div><div class="ttdeci">int week</div><div class="ttdef"><b>Definition:</b> Date.h:128</div></div>
+<div class="ttc" id="aclass_date_html_ae78acd132704a26355d5f6f926fc75f5"><div class="ttname"><a href="class_date.html#ae78acd132704a26355d5f6f926fc75f5">Date::getDaysOfYear</a></div><div class="ttdeci">static int getDaysOfYear(int year) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:163</div></div>
+<div class="ttc" id="aclass_date_html_a1f287427944b9549912b8f8870bf2580"><div class="ttname"><a href="class_date.html#a1f287427944b9549912b8f8870bf2580">Date::Constants</a></div><div class="ttdeci">Constants</div><div class="ttdef"><b>Definition:</b> Date.h:45</div></div>
+<div class="ttc" id="aclass_date_html_a4cbeba4861c78f096ffd768330986642"><div class="ttname"><a href="class_date.html#a4cbeba4861c78f096ffd768330986642">Date::getLocalTime</a></div><div class="ttdeci">Date getLocalTime() const noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:301</div></div>
+<div class="ttc" id="aclass_date_html_a5b885bd0bac83e1a670921a163ee7d2a"><div class="ttname"><a href="class_date.html#a5b885bd0bac83e1a670921a163ee7d2a">Date::addBias</a></div><div class="ttdeci">void addBias(int64 bias) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:317</div></div>
+<div class="ttc" id="aclass_format_output_stream_html"><div class="ttname"><a href="class_format_output_stream.html">FormatOutputStream</a></div><div class="ttdoc">Format output stream.</div><div class="ttdef"><b>Definition:</b> FormatOutputStream.h:106</div></div>
+<div class="ttc" id="aclass_date_html_afe07296a2226e950d05b417fb8f51bc2"><div class="ttname"><a href="class_date.html#afe07296a2226e950d05b417fb8f51bc2">Date::Date</a></div><div class="ttdeci">Date() noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:233</div></div>
+<div class="ttc" id="aclass_date_html_a6218352737d8f154fcc3eebe9a7dfa42"><div class="ttname"><a href="class_date.html#a6218352737d8f154fcc3eebe9a7dfa42">Date::operator=</a></div><div class="ttdeci">Date &amp; operator=(const Date &amp;assign) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:270</div></div>
+<div class="ttc" id="aclass_date_1_1_date_time_html"><div class="ttname"><a href="class_date_1_1_date_time.html">Date::DateTime</a></div><div class="ttdef"><b>Definition:</b> Date.h:124</div></div>
+<div class="ttc" id="aclass_date_html_afee858b535b4478ebcc2c9d04c19f19c"><div class="ttname"><a href="class_date.html#afee858b535b4478ebcc2c9d04c19f19c">Date::getValue</a></div><div class="ttdeci">int64 getValue() const noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:280</div></div>
+<div class="ttc" id="aclass_date_html_afc114a9da898570de307c73f7ebc7ff9"><div class="ttname"><a href="class_date.html#afc114a9da898570de307c73f7ebc7ff9">Date::isLeapYear</a></div><div class="ttdeci">static bool isLeapYear(int year) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:155</div></div>
+<div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> String.h:102</div></div>
 <div class="ttc" id="aclass_string_output_stream_html"><div class="ttname"><a href="class_string_output_stream.html">StringOutputStream</a></div><div class="ttdoc">String output stream.</div><div class="ttdef"><b>Definition:</b> StringOutputStream.h:86</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_ae85def92d492c99e4462c51bb02ad5e5"><div class="ttname"><a href="struct_date_1_1_date_time.html#ae85def92d492c99e4462c51bb02ad5e5">Date::DateTime::day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> Date.h:125</div></div>
-<div class="ttc" id="aclass_date_html_a54d09b9384d51d0fb41408d9ca0656fb"><div class="ttname"><a href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">Date::Date</a></div><div class="ttdeci">Date(const Date &amp;copy) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:280</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_a4c44a8648f41413df4b3e11a87cf881e"><div class="ttname"><a href="struct_date_1_1_date_time.html#a4c44a8648f41413df4b3e11a87cf881e">Date::DateTime::minute</a></div><div class="ttdeci">int minute</div><div class="ttdef"><b>Definition:</b> Date.h:130</div></div>
+<div class="ttc" id="aclass_date_html_a54d09b9384d51d0fb41408d9ca0656fb"><div class="ttname"><a href="class_date.html#a54d09b9384d51d0fb41408d9ca0656fb">Date::Date</a></div><div class="ttdeci">Date(const Date &amp;copy) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:262</div></div>
+<div class="ttc" id="aclass_date_html_a43e9b37bc53fd502404895f3b46e9fde"><div class="ttname"><a href="class_date.html#a43e9b37bc53fd502404895f3b46e9fde">Date::getBias</a></div><div class="ttdeci">static int64 getBias()</div></div>
+<div class="ttc" id="aclass_date_html_af39f563e63c53e50c8c0edba6354330e"><div class="ttname"><a href="class_date.html#af39f563e63c53e50c8c0edba6354330e">Date::getUTCTime</a></div><div class="ttdeci">Date getUTCTime() const noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:308</div></div>
 <div class="ttc" id="aclass_wide_string_html"><div class="ttname"><a href="class_wide_string.html">WideString</a></div><div class="ttdoc">Wide-character string.</div><div class="ttdef"><b>Definition:</b> WideString.h:205</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_a135f0107dbe6eb722abeadcd7d44decf"><div class="ttname"><a href="struct_date_1_1_date_time.html#a135f0107dbe6eb722abeadcd7d44decf">Date::DateTime::second</a></div><div class="ttdeci">int second</div><div class="ttdef"><b>Definition:</b> Date.h:131</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_a64b04f741e069cf585cad851e6af39c0"><div class="ttname"><a href="struct_date_1_1_date_time.html#a64b04f741e069cf585cad851e6af39c0">Date::DateTime::millisecond</a></div><div class="ttdeci">int millisecond</div><div class="ttdef"><b>Definition:</b> Date.h:132</div></div>
-<div class="ttc" id="aclass_date_html_a3356060cc600cf227aeed83605ff97d0"><div class="ttname"><a href="class_date.html#a3356060cc600cf227aeed83605ff97d0">Date::Date</a></div><div class="ttdeci">Date(int64 _date) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:267</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_afca27b571ebd3c64a8a8516b2a37ee1e"><div class="ttname"><a href="struct_date_1_1_date_time.html#afca27b571ebd3c64a8a8516b2a37ee1e">Date::DateTime::weekday</a></div><div class="ttdeci">int weekday</div><div class="ttdef"><b>Definition:</b> Date.h:126</div></div>
-<div class="ttc" id="astruct_date_1_1_date_time_html_a25717751c15907f04dcd59090cfcd2f5"><div class="ttname"><a href="struct_date_1_1_date_time.html#a25717751c15907f04dcd59090cfcd2f5">Date::DateTime::hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> Date.h:129</div></div>
-<div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Date and time.</div><div class="ttdef"><b>Definition:</b> Date.h:34</div></div>
+<div class="ttc" id="aclass_date_html_a3356060cc600cf227aeed83605ff97d0"><div class="ttname"><a href="class_date.html#a3356060cc600cf227aeed83605ff97d0">Date::Date</a></div><div class="ttdeci">Date(int64 _date) noexcept</div><div class="ttdef"><b>Definition:</b> Date.h:243</div></div>
+<div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Date and time.</div><div class="ttdef"><b>Definition:</b> Date.h:35</div></div>
 <div class="ttc" id="aclass_is_uninitializeable_html"><div class="ttname"><a href="class_is_uninitializeable.html">IsUninitializeable</a></div><div class="ttdef"><b>Definition:</b> Functor.h:125</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->

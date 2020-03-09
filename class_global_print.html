@@ -51,18 +51,102 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac3723a72024f2c8e852ed4e4aa2d58ed"><td class="memItemLeft" align="right" valign="top"><a id="ac3723a72024f2c8e852ed4e4aa2d58ed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalPrint</b> (const char *text) noexcept</td></tr>
+<tr class="memitem:ac3723a72024f2c8e852ed4e4aa2d58ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_print.html#ac3723a72024f2c8e852ed4e4aa2d58ed">GlobalPrint</a> (const char *text) noexcept</td></tr>
 <tr class="separator:ac3723a72024f2c8e852ed4e4aa2d58ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7f48352ad96fd1bc9fa751afdcf7ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_print.html#a2a7f48352ad96fd1bc9fa751afdcf7ba">~GlobalPrint</a> () noexcept</td></tr>
+<tr class="separator:a2a7f48352ad96fd1bc9fa751afdcf7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0c759e316103779af3beb6f11cda97ea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_print.html#a0c759e316103779af3beb6f11cda97ea">print</a> (const char *text) noexcept</td></tr>
+<tr class="separator:a0c759e316103779af3beb6f11cda97ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a163d0dd3179a9e588d456f788daa4346"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_print.html#a163d0dd3179a9e588d456f788daa4346">printf</a> (const char *text,...) noexcept</td></tr>
 <tr class="separator:a163d0dd3179a9e588d456f788daa4346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used for debugging global initialization issues. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac3723a72024f2c8e852ed4e4aa2d58ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3723a72024f2c8e852ed4e4aa2d58ed">&#9670;&nbsp;</a></span>GlobalPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GlobalPrint::GlobalPrint </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes global print with prefix. </p>
+
+</div>
+</div>
+<a id="a2a7f48352ad96fd1bc9fa751afdcf7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a7f48352ad96fd1bc9fa751afdcf7ba">&#9670;&nbsp;</a></span>~GlobalPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GlobalPrint::~GlobalPrint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructs global print. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c759e316103779af3beb6f11cda97ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c759e316103779af3beb6f11cda97ea">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void GlobalPrint::print </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print to stdout. May be redirected for runtime. </p>
+
+</div>
+</div>
 <a id="a163d0dd3179a9e588d456f788daa4346"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a163d0dd3179a9e588d456f788daa4346">&#9670;&nbsp;</a></span>printf()</h2>
 
@@ -96,7 +180,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Print to stdout. </p>
+<p>Print to stdout. May be redirected for runtime. </p>
 
 </div>
 </div>

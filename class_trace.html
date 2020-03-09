@@ -39,7 +39,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_trace-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -52,116 +51,16 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_trace_8h_source.html">base/Trace.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ad7633ffb37e71fc177aeb7c548e3d33e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trace.html#ad7633ffb37e71fc177aeb7c548e3d33e">Trace</a> (const char *<a class="el" href="class_trace.html#aafa239b3bb0d149ae7b197149d0f5b06">message</a>) noexcept</td></tr>
-<tr class="separator:ad7633ffb37e71fc177aeb7c548e3d33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83836bfb3ebdea9c492f23da66a1411c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trace.html#a83836bfb3ebdea9c492f23da66a1411c">~Trace</a> () noexcept</td></tr>
-<tr class="separator:a83836bfb3ebdea9c492f23da66a1411c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aafa239b3bb0d149ae7b197149d0f5b06"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trace.html#aafa239b3bb0d149ae7b197149d0f5b06">message</a> (const char *message) noexcept</td></tr>
 <tr class="separator:aafa239b3bb0d149ae7b197149d0f5b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98bd2abca0d22b6390e25539324f877f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_trace.html#a98bd2abca0d22b6390e25539324f877f">member</a> (const void *ptr, const char *<a class="el" href="class_trace.html#aafa239b3bb0d149ae7b197149d0f5b06">message</a>) noexcept</td></tr>
-<tr class="separator:a98bd2abca0d22b6390e25539324f877f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tracing interface. </p>
 <p>This class is used for dumping tracing information to the dedicated debugging output stream, standard error, or system log dependent on the platform.</p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad7633ffb37e71fc177aeb7c548e3d33e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7633ffb37e71fc177aeb7c548e3d33e">&#9670;&nbsp;</a></span>Trace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Trace::Trace </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Writes the message. </p>
-
-</div>
-</div>
-<a id="a83836bfb3ebdea9c492f23da66a1411c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83836bfb3ebdea9c492f23da66a1411c">&#9670;&nbsp;</a></span>~Trace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Trace::~Trace </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Writes the message. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a98bd2abca0d22b6390e25539324f877f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98bd2abca0d22b6390e25539324f877f">&#9670;&nbsp;</a></span>member()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Trace::member </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Write pointer and message to standard error. </p>
-
-</div>
-</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aafa239b3bb0d149ae7b197149d0f5b06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafa239b3bb0d149ae7b197149d0f5b06">&#9670;&nbsp;</a></span>message()</h2>
 

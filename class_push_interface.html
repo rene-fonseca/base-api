@@ -57,19 +57,12 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bc540ecf0d7100b86ba0e71770985fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_push_interface.html#a3bc540ecf0d7100b86ba0e71770985fc">flush</a> ()</td></tr>
 <tr class="separator:a3bc540ecf0d7100b86ba0e71770985fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0adc89e53b919271278b8cc505c1f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_push_interface.html#add0adc89e53b919271278b8cc505c1f1">pushBegin</a> (uint64 totalSize)</td></tr>
+<tr class="separator:add0adc89e53b919271278b8cc505c1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a938e5de881940780738c4ae8cf0e878c"><td class="memItemLeft" align="right" valign="top">virtual MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_push_interface.html#a938e5de881940780738c4ae8cf0e878c">push</a> (const uint8 *buffer, MemorySize size)=0</td></tr>
 <tr class="separator:a938e5de881940780738c4ae8cf0e878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1e62e52fd979bd14586b50336402f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_push_interface.html#a9c1e62e52fd979bd14586b50336402f4">pushEnd</a> ()</td></tr>
 <tr class="separator:a9c1e62e52fd979bd14586b50336402f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a046b2d7d85d301caa151b7ed0b8870cf"><td class="memItemLeft" align="right" valign="top"><a id="a046b2d7d85d301caa151b7ed0b8870cf"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>pushBegin</b> (uint64 totalSize)=0</td></tr>
-<tr class="separator:a046b2d7d85d301caa151b7ed0b8870cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a938e5de881940780738c4ae8cf0e878c"><td class="memItemLeft" align="right" valign="top"><a id="a938e5de881940780738c4ae8cf0e878c"></a>
-virtual MemorySize&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (const uint8 *buffer, MemorySize size)=0</td></tr>
-<tr class="separator:a938e5de881940780738c4ae8cf0e878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9240b5ed9be5a9a844d74c3ee7de2126"><td class="memItemLeft" align="right" valign="top"><a id="a9240b5ed9be5a9a844d74c3ee7de2126"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pushEnd</b> ()=0</td></tr>
-<tr class="separator:a9240b5ed9be5a9a844d74c3ee7de2126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Push interface. </p>
@@ -151,6 +144,41 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pushEnd</b> (
 
 <p>Implemented in <a class="el" href="class_c_r_c32.html#a8e1d4677020c3155e6ab88880311ea33">CRC32</a>, <a class="el" href="class_adler32.html#aebe0bd8aed92381c8cfdaf9de38d49d8">Adler32</a>, <a class="el" href="class_s_h_a256.html#a76725e3845159484afb2f38a5368f736">SHA256</a>, <a class="el" href="class_s_h_a512.html#aa9b8101e9f75165b63b36de83b29a367">SHA512</a>, <a class="el" href="class_s_h_a384.html#a07f54e5f0d355a4db5acaf69e031e319">SHA384</a>, <a class="el" href="class_s_h_a1.html#a490bb399dba1de9db5a45342833009c4">SHA1</a>, <a class="el" href="class_b_zip2_deflater.html#ab7fe7db86f706e9a6d3c91cc129e3810">BZip2Deflater</a>, <a class="el" href="class_z_lib_deflater.html#a8b3d4147404fdcc019934036a2471482">ZLibDeflater</a>, <a class="el" href="class_b_zip2_inflater.html#a889a96aafbeecf204e2458d64f869818">BZip2Inflater</a>, <a class="el" href="class_z_lib_inflater.html#a125b616c3f40acca781f6107d13033ae">ZLibInflater</a>, <a class="el" href="class_m_d5_sum.html#a21fe590d3673e600d652cd135e4b63d9">MD5Sum</a>, and <a class="el" href="class_local_connection.html#aefa4ba6ca79fe80e81fba89f4f21a346">LocalConnection</a>.</p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2http_8cpp-example.html#a35">testsuite/http.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="add0adc89e53b919271278b8cc505c1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0adc89e53b919271278b8cc505c1f1">&#9670;&nbsp;</a></span>pushBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool PushInterface::pushBegin </td>
+          <td>(</td>
+          <td class="paramtype">uint64&#160;</td>
+          <td class="paramname"><em>totalSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begins the pushes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">totalSize</td><td>The total number of bytes to be pushed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2http_8cpp-example.html#a32">testsuite/http.cpp</a>.</dd>
 </dl>
 
 </div>

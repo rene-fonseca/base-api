@@ -58,6 +58,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4947fd7183cb168fbca32674c367bb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d74fb32ab9a1188cd192fa56fa904b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_t_t_p_s_request.html#a1d74fb32ab9a1188cd192fa56fa904b4">open</a> (const <a class="el" href="class_string.html">String</a> &amp;method, const <a class="el" href="class_string.html">String</a> &amp;url, const <a class="el" href="class_string.html">String</a> &amp;user=<a class="el" href="class_string.html">String</a>(), const <a class="el" href="class_string.html">String</a> &amp;password=<a class="el" href="class_string.html">String</a>())</td></tr>
 <tr class="separator:a1d74fb32ab9a1188cd192fa56fa904b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a537632dfb6aca39a6957dc036dbce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_t_t_p_s_request.html#a94a537632dfb6aca39a6957dc036dbce">setRequestHeader</a> (const <a class="el" href="class_string.html">String</a> &amp;header)</td></tr>
+<tr class="separator:a94a537632dfb6aca39a6957dc036dbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8614b1c1ae4361c90ef210efb07f4862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_t_t_p_s_request.html#a8614b1c1ae4361c90ef210efb07f4862">setRequestHeader</a> (const <a class="el" href="class_string.html">String</a> &amp;name, const <a class="el" href="class_string.html">String</a> &amp;value)</td></tr>
 <tr class="separator:a8614b1c1ae4361c90ef210efb07f4862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d13f68d1bdb3cb03014653e2fe8aa50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_t_t_p_s_request.html#a2d13f68d1bdb3cb03014653e2fe8aa50">setAgent</a> (const <a class="el" href="class_string.html">String</a> &amp;agent)</td></tr>
@@ -104,6 +106,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fd626c75ee9b44bb464e6619a31c2aa"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_t_t_p_s_request.html#a1fd626c75ee9b44bb464e6619a31c2aa">isSupported</a> () noexcept</td></tr>
 <tr class="separator:a1fd626c75ee9b44bb464e6619a31c2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911383c24bf93587a43559c6b991aa2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_pair.html">StringPair</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_t_t_p_s_request.html#a911383c24bf93587a43559c6b991aa2a">load</a> (const <a class="el" href="class_string.html">String</a> &amp;url, const <a class="el" href="class_string.html">String</a> &amp;method=METHOD_GET, const <a class="el" href="class_string.html">String</a> &amp;body=<a class="el" href="class_string.html">String</a>())</td></tr>
+<tr class="separator:a911383c24bf93587a43559c6b991aa2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -321,6 +325,49 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a911383c24bf93587a43559c6b991aa2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911383c24bf93587a43559c6b991aa2a">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_pair.html">StringPair</a> HTTPSRequest::load </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>method</em> = <code>METHOD_GET</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code><a class="el" href="class_string.html">String</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Simple HTTPS request. Return MIME type and bytes. </p>
+
+</div>
+</div>
 <a id="a1d74fb32ab9a1188cd192fa56fa904b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d74fb32ab9a1188cd192fa56fa904b4">&#9670;&nbsp;</a></span>open()</h2>
 
@@ -415,8 +462,27 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a94a537632dfb6aca39a6957dc036dbce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a537632dfb6aca39a6957dc036dbce">&#9670;&nbsp;</a></span>setRequestHeader() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HTTPSRequest::setRequestHeader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the request header. Call after <a class="el" href="class_h_t_t_p_s_request.html#a1d74fb32ab9a1188cd192fa56fa904b4">open()</a> and before <a class="el" href="class_h_t_t_p_s_request.html#ab066a58a3ada75b1234db9d07f37c903">send()</a>. Do NOT include CRLF. </p>
+
+</div>
+</div>
 <a id="a8614b1c1ae4361c90ef210efb07f4862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8614b1c1ae4361c90ef210efb07f4862">&#9670;&nbsp;</a></span>setRequestHeader()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8614b1c1ae4361c90ef210efb07f4862">&#9670;&nbsp;</a></span>setRequestHeader() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

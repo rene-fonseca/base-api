@@ -54,23 +54,54 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a07eba43d71e8e2d2f7a515b2c1da02ec"><td class="memItemLeft" align="right" valign="top"><a id="a07eba43d71e8e2d2f7a515b2c1da02ec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Subst</b> (const <a class="el" href="class_string.html">String</a> &amp;text, const <a class="el" href="class_memory_span.html">MemorySpan</a> *args, MemorySize numberOfArgs)</td></tr>
-<tr class="separator:a07eba43d71e8e2d2f7a515b2c1da02ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6491fc87266bcc5b0d79b1272b48c114"><td class="memItemLeft" align="right" valign="top"><a id="a6491fc87266bcc5b0d79b1272b48c114"></a>
-MemorySize&#160;</td><td class="memItemRight" valign="bottom"><b>getNumberOfArgs</b> () const noexcept</td></tr>
+<tr class="memitem:a6ba8e9e3dde2947795ab18ec1219eb5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_1_1_subst.html#a6ba8e9e3dde2947795ab18ec1219eb5d">Subst</a> (const <a class="el" href="class_u_t_f8_stringify.html">UTF8Stringify</a> &amp;text, const <a class="el" href="class_u_t_f8_stringify.html">UTF8Stringify</a> *args, MemorySize numberOfArgs)</td></tr>
+<tr class="separator:a6ba8e9e3dde2947795ab18ec1219eb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6491fc87266bcc5b0d79b1272b48c114"><td class="memItemLeft" align="right" valign="top">MemorySize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_1_1_subst.html#a6491fc87266bcc5b0d79b1272b48c114">getNumberOfArgs</a> () const noexcept</td></tr>
 <tr class="separator:a6491fc87266bcc5b0d79b1272b48c114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af95c1092009679b8fc61d58bc3ccb4ac"><td class="memItemLeft" align="right" valign="top"><a id="af95c1092009679b8fc61d58bc3ccb4ac"></a>
-const <a class="el" href="class_memory_span.html">MemorySpan</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getArg</b> (MemorySize i) const</td></tr>
-<tr class="separator:af95c1092009679b8fc61d58bc3ccb4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b7949808d8be5e970544c4df3fcb3e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_const_span.html">ConstSpan</a>&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_1_1_subst.html#ad1b7949808d8be5e970544c4df3fcb3e">getArg</a> (MemorySize i) const</td></tr>
+<tr class="separator:ad1b7949808d8be5e970544c4df3fcb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40f2d4ee6886101064c099738c2c318b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_1_1_subst.html#a40f2d4ee6886101064c099738c2c318b">format</a> () const</td></tr>
 <tr class="separator:a40f2d4ee6886101064c099738c2c318b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d40e87587b782b35903a762b7741ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_format_1_1_subst.html#a1d40e87587b782b35903a762b7741ae0">operator&lt;&lt;</a> (<a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;stream) const</td></tr>
-<tr class="separator:a1d40e87587b782b35903a762b7741ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_string.html" title="String.">String</a> substitution implementation. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6ba8e9e3dde2947795ab18ec1219eb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba8e9e3dde2947795ab18ec1219eb5d">&#9670;&nbsp;</a></span>Subst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Format::Subst::Subst </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_u_t_f8_stringify.html">UTF8Stringify</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_u_t_f8_stringify.html">UTF8Stringify</a> *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>numberOfArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes substitution. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a40f2d4ee6886101064c099738c2c318b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40f2d4ee6886101064c099738c2c318b">&#9670;&nbsp;</a></span>format()</h2>
 
@@ -89,22 +120,56 @@ const <a class="el" href="class_memory_span.html">MemorySpan</a> &amp;&#160;</td
 
 </div>
 </div>
-<a id="a1d40e87587b782b35903a762b7741ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d40e87587b782b35903a762b7741ae0">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<a id="ad1b7949808d8be5e970544c4df3fcb3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b7949808d8be5e970544c4df3fcb3e">&#9670;&nbsp;</a></span>getArg()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a>&amp; Format::Subst::operator&lt;&lt; </td>
+          <td class="memname">const <a class="el" href="class_const_span.html">ConstSpan</a>&lt;char&gt; Format::Subst::getArg </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_format_output_stream.html">FormatOutputStream</a> &amp;&#160;</td>
-          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td class="paramtype">MemorySize&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Write to stream. </p>
+<p>Returns the argument. </p>
+
+</div>
+</div>
+<a id="a6491fc87266bcc5b0d79b1272b48c114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6491fc87266bcc5b0d79b1272b48c114">&#9670;&nbsp;</a></span>getNumberOfArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MemorySize Format::Subst::getNumberOfArgs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of arguments. </p>
 
 </div>
 </div>

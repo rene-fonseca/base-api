@@ -64,6 +64,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f0210b2abb4301c55cb96ade716a897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e17b16daecb4d0f971f9e8fc9645f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_end_point.html#a67e17b16daecb4d0f971f9e8fc9645f9">InetEndPoint</a> (const <a class="el" href="class_inet_address.html">InetAddress</a> &amp;address, const <a class="el" href="class_string.html">String</a> &amp;service)</td></tr>
 <tr class="separator:a67e17b16daecb4d0f971f9e8fc9645f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e10d857267adc2fd38cfb6e1cadca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_end_point.html#a00e10d857267adc2fd38cfb6e1cadca6">InetEndPoint</a> (const <a class="el" href="class_string.html">String</a> &amp;host, unsigned short port)</td></tr>
+<tr class="separator:a00e10d857267adc2fd38cfb6e1cadca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3268e3e495bebc6899e81b611c645758"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_end_point.html#a3268e3e495bebc6899e81b611c645758">InetEndPoint</a> (const <a class="el" href="class_string.html">String</a> &amp;host, const <a class="el" href="class_string.html">String</a> &amp;service)</td></tr>
 <tr class="separator:a3268e3e495bebc6899e81b611c645758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a387a3f7472779027be8074fdee080256"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_end_point.html#a387a3f7472779027be8074fdee080256">InetEndPoint</a> (const <a class="el" href="class_inet_end_point.html">InetEndPoint</a> &amp;copy) noexcept</td></tr>
@@ -87,6 +89,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af3477bd5eebe2861a7c733023f5b5732"><td class="memItemLeft" align="right" valign="top">static unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_end_point.html#af3477bd5eebe2861a7c733023f5b5732">getPort</a> (const <a class="el" href="class_string.html">String</a> &amp;service)</td></tr>
+<tr class="separator:af3477bd5eebe2861a7c733023f5b5732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0b152d600e2a0066fb480fed72c985"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_inet_end_point.html">InetEndPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_inet_end_point.html#adc0b152d600e2a0066fb480fed72c985">getEndPoint</a> (const <a class="el" href="class_string.html">String</a> &amp;endpoint)</td></tr>
 <tr class="separator:adc0b152d600e2a0066fb480fed72c985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -98,7 +102,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ade5075cea94a085c7794f0064e4ad130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade5075cea94a085c7794f0064e4ad130">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5075cea94a085c7794f0064e4ad130">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +128,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a910e4bef4b3a1f616f9cc06bb5e29cf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a910e4bef4b3a1f616f9cc06bb5e29cf5">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a910e4bef4b3a1f616f9cc06bb5e29cf5">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +172,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3f0210b2abb4301c55cb96ade716a897"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0210b2abb4301c55cb96ade716a897">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0210b2abb4301c55cb96ade716a897">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +216,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a67e17b16daecb4d0f971f9e8fc9645f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67e17b16daecb4d0f971f9e8fc9645f9">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e17b16daecb4d0f971f9e8fc9645f9">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,8 +251,44 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a00e10d857267adc2fd38cfb6e1cadca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e10d857267adc2fd38cfb6e1cadca6">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InetEndPoint::InetEndPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes end point from string representations of host and service.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>The host (e.g. '127.0.0.1' or 'www.google.com'). </td></tr>
+    <tr><td class="paramname">port</td><td>The port. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3268e3e495bebc6899e81b611c645758"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3268e3e495bebc6899e81b611c645758">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3268e3e495bebc6899e81b611c645758">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +324,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a387a3f7472779027be8074fdee080256"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a387a3f7472779027be8074fdee080256">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a387a3f7472779027be8074fdee080256">&#9670;&nbsp;</a></span>InetEndPoint() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +374,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the address. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#a10">testsuite/client.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#a14">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#a39">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2ping_8cpp-example.html#a12">testsuite/ping.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#a10">testsuite/client.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#a15">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#a39">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2ping_8cpp-example.html#a12">testsuite/ping.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -367,7 +407,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa99ae24dc2401d68c213a83e9d597556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99ae24dc2401d68c213a83e9d597556">&#9670;&nbsp;</a></span>getPort()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99ae24dc2401d68c213a83e9d597556">&#9670;&nbsp;</a></span>getPort() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +429,34 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the port. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#a11">testsuite/client.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#a15">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#a40">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2ping_8cpp-example.html#a13">testsuite/ping.cpp</a>.</dd>
+
+</div>
+</div>
+<a id="af3477bd5eebe2861a7c733023f5b5732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3477bd5eebe2861a7c733023f5b5732">&#9670;&nbsp;</a></span>getPort() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned short InetEndPoint::getPort </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>service</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the port for the given service. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2client_8cpp-example.html#a11">testsuite/client.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#a16">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2http_8cpp-example.html#a40">testsuite/http.cpp</a>, and <a class="el" href="testsuite_2ping_8cpp-example.html#a13">testsuite/ping.cpp</a>.</dd>
 </dl>
 
 </div>

@@ -66,6 +66,11 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a584950980fa04a12fb0f6bca0598b002"><td class="memItemLeft" align="right" valign="top"><a id="a584950980fa04a12fb0f6bca0598b002"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>DumpOnThrow</b> { <b>DUMP_ON_THROW_NO</b> = 0, 
+<b>DUMP_ON_THROW_EXCEPTION</b>, 
+<b>DUMP_ON_THROW_STACK</b>
+ }</td></tr>
+<tr class="separator:a584950980fa04a12fb0f6bca0598b002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95eff7221f091d76d5d5b340d3f488dd"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#a95eff7221f091d76d5d5b340d3f488dd">ExceptionHandler</a>) (const <a class="el" href="class_exception.html">Exception</a> *exception)</td></tr>
 <tr class="separator:a95eff7221f091d76d5d5b340d3f488dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -95,6 +100,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1276e9cb93984055580283f5a864f8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ecb11cf4127b476dda8a5a1178ed6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#aa3ecb11cf4127b476dda8a5a1178ed6c">setMessage</a> (const char *message) noexcept</td></tr>
 <tr class="separator:aa3ecb11cf4127b476dda8a5a1178ed6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d40ad47fca8a7645f3ed859377b352"><td class="memTemplParams" colspan="2">template&lt;decltype(sizeof(void *)) SIZE&gt; </td></tr>
+<tr class="memitem:a26d40ad47fca8a7645f3ed859377b352"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_exception.html#a26d40ad47fca8a7645f3ed859377b352">setMessage</a> (const char(&amp;_message)[SIZE]) noexcept</td></tr>
+<tr class="separator:a26d40ad47fca8a7645f3ed859377b352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46ba324e8104d9470e416f5f47afba41"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#a46ba324e8104d9470e416f5f47afba41">getThisType</a> () const noexcept</td></tr>
 <tr class="separator:a46ba324e8104d9470e416f5f47afba41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac035e3c84982503c97908cef954a58c0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_type.html">Type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#ac035e3c84982503c97908cef954a58c0">getType</a> () const noexcept</td></tr>
@@ -103,6 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae7f91d6e14c618eced28194595e89b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15743006b2ae1f3de93470d3ceb9b1ef"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#a15743006b2ae1f3de93470d3ceb9b1ef">isCommonException</a> () const noexcept</td></tr>
 <tr class="separator:a15743006b2ae1f3de93470d3ceb9b1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f17afa9e15b6026693d6fb726e0820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_owned_native_string.html">OwnedNativeString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#af4f17afa9e15b6026693d6fb726e0820">getHTML</a> () const</td></tr>
+<tr class="separator:af4f17afa9e15b6026693d6fb726e0820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a966b2ad0488c70d4c6b36e6599a8c0ab"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#a966b2ad0488c70d4c6b36e6599a8c0ab">~Exception</a> () noexcept</td></tr>
 <tr class="separator:a966b2ad0488c70d4c6b36e6599a8c0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -130,6 +140,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a9741a4503b45b34385b8ecac59e51029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64fc7c60d393271d141d82db534d50f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_exception_1_1_stack_trace.html">StackTrace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#af64fc7c60d393271d141d82db534d50f">getStackTrace</a> ()</td></tr>
 <tr class="separator:af64fc7c60d393271d141d82db534d50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a7d8d0f87bfed76b1ff587c2c14abf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exception.html#a93a7d8d0f87bfed76b1ff587c2c14abf">setDumpOnThrow</a> (DumpOnThrow dumpOnThrow) noexcept</td></tr>
+<tr class="separator:a93a7d8d0f87bfed76b1ff587c2c14abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -141,7 +153,7 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>SUPP
 <div class="textblock"><p>The general exception class. </p>
 <p>This is the base class of all exceptions supported by the framework. Normally exceptions do not raise exceptions themselves. It is highly advised against raising objects which are not specializations of <a class="el" href="class_exception.html" title="The general exception class.">Exception</a>. Exceptions allow the developer to handle 'rare' conditions at runtime in a safe manner. An exception doesn't have to be indicating an error but normally does. Uncaught exceptions will terminate the executing context with an error (in the case of the main context the entire application is terminated).</p>
 <dl class="section version"><dt>Version</dt><dd>1.2 </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_array_8cpp-example.html#_a6">testsuite/Array.cpp</a>, <a class="el" href="testsuite_2digest_8cpp-example.html#_a42">testsuite/digest.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#_a52">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#_a11">testsuite/IEEE1394.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#_a22">testsuite/ls.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="testsuite_2_array_8cpp-example.html#_a6">testsuite/Array.cpp</a>, <a class="el" href="testsuite_2digest_8cpp-example.html#_a42">testsuite/digest.cpp</a>, <a class="el" href="testsuite_2ftp_8cpp-example.html#_a53">testsuite/ftp.cpp</a>, <a class="el" href="testsuite_2_i_e_e_e1394_8cpp-example.html#_a11">testsuite/IEEE1394.cpp</a>, and <a class="el" href="testsuite_2ls_8cpp-example.html#_a23">testsuite/ls.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a95eff7221f091d76d5d5b340d3f488dd"></a>
@@ -501,6 +513,24 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>SUPP
 
 </div>
 </div>
+<a id="af4f17afa9e15b6026693d6fb726e0820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f17afa9e15b6026693d6fb726e0820">&#9670;&nbsp;</a></span>getHTML()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_owned_native_string.html">OwnedNativeString</a> Exception::getHTML </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns <a class="el" href="class_h_t_m_l.html">HTML</a> information. </p>
+
+</div>
+</div>
 <a id="a1276e9cb93984055580283f5a864f8e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1276e9cb93984055580283f5a864f8e4">&#9670;&nbsp;</a></span>getMessage()</h2>
 
@@ -851,6 +881,33 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>SUPP
 
 </div>
 </div>
+<a id="a93a7d8d0f87bfed76b1ff587c2c14abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a7d8d0f87bfed76b1ff587c2c14abf">&#9670;&nbsp;</a></span>setDumpOnThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Exception::setDumpOnThrow </td>
+          <td>(</td>
+          <td class="paramtype">DumpOnThrow&#160;</td>
+          <td class="paramname"><em>dumpOnThrow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets whether or not to dump expection on throw. </p>
+
+</div>
+</div>
 <a id="a3cfa1b2c2d170fd1d3684ce4fe75c0e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3cfa1b2c2d170fd1d3684ce4fe75c0e9">&#9670;&nbsp;</a></span>setError()</h2>
 
@@ -906,7 +963,7 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>SUPP
 </div>
 </div>
 <a id="aa3ecb11cf4127b476dda8a5a1178ed6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3ecb11cf4127b476dda8a5a1178ed6c">&#9670;&nbsp;</a></span>setMessage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ecb11cf4127b476dda8a5a1178ed6c">&#9670;&nbsp;</a></span>setMessage() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -919,6 +976,35 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>SUPP
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Associates the exception with the specified message. </p>
+
+</div>
+</div>
+<a id="a26d40ad47fca8a7645f3ed859377b352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d40ad47fca8a7645f3ed859377b352">&#9670;&nbsp;</a></span>setMessage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;decltype(sizeof(void *)) SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exception::setMessage </td>
+          <td>(</td>
+          <td class="paramtype">const char(&amp;)&#160;</td>
+          <td class="paramname"><em>_message</em>[SIZE]</td><td>)</td>
           <td></td>
         </tr>
       </table>
